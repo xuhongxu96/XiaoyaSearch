@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XiaoyaCrawler", "XiaoyaCrawler\XiaoyaCrawler.csproj", "{78657B5A-EB06-491F-A876-03916D7CDA10}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XiaoyaCrawler", "XiaoyaCrawler\XiaoyaCrawler.csproj", "{172DE177-E299-4079-AD24-12EE3E50907C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XiaoyaLogger", "XiaoyaLogger\XiaoyaLogger.csproj", "{10C48295-4E7A-43BC-BC36-6BFAFE7B637B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XiaoyaCommon", "XiaoyaCommon\XiaoyaCommon.csproj", "{1B5DE4B8-6A19-4154-A540-8C7A43B29009}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XiaoyaCrawlerInterface", "XiaoyaCrawlerInterface\XiaoyaCrawlerInterface.csproj", "{B5E9CD5C-AB79-431C-8EA7-0F5A7EEE8866}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +17,22 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{78657B5A-EB06-491F-A876-03916D7CDA10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{78657B5A-EB06-491F-A876-03916D7CDA10}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{78657B5A-EB06-491F-A876-03916D7CDA10}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{78657B5A-EB06-491F-A876-03916D7CDA10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{172DE177-E299-4079-AD24-12EE3E50907C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{172DE177-E299-4079-AD24-12EE3E50907C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{172DE177-E299-4079-AD24-12EE3E50907C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{172DE177-E299-4079-AD24-12EE3E50907C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10C48295-4E7A-43BC-BC36-6BFAFE7B637B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10C48295-4E7A-43BC-BC36-6BFAFE7B637B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10C48295-4E7A-43BC-BC36-6BFAFE7B637B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10C48295-4E7A-43BC-BC36-6BFAFE7B637B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B5DE4B8-6A19-4154-A540-8C7A43B29009}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B5DE4B8-6A19-4154-A540-8C7A43B29009}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B5DE4B8-6A19-4154-A540-8C7A43B29009}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B5DE4B8-6A19-4154-A540-8C7A43B29009}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5E9CD5C-AB79-431C-8EA7-0F5A7EEE8866}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5E9CD5C-AB79-431C-8EA7-0F5A7EEE8866}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5E9CD5C-AB79-431C-8EA7-0F5A7EEE8866}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5E9CD5C-AB79-431C-8EA7-0F5A7EEE8866}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
