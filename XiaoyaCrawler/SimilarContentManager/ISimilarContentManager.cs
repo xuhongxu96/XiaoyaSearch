@@ -4,13 +4,13 @@ using System.Text;
 using System.Threading.Tasks;
 using XiaoyaCrawler.Parser;
 
-namespace XiaoyaCrawler.SimilarContentJudger
+namespace XiaoyaCrawler.SimilarContentManager
 {
     /// <summary>
-    /// Similiar content judger
+    /// Similiar content manager
     /// To judge if two web content is similiar and group their urls
     /// </summary>
-    public interface ISimilarContentJudger
+    public interface ISimilarContentManager
     {
         /// <summary>
         /// Judge if the content has been seen before

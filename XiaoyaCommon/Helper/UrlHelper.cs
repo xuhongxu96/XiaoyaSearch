@@ -6,7 +6,7 @@ namespace XiaoyaCommon.Helper
     {
         public static string UrlToFileName(string url)
         {
-            return HashHelper.GetMd5Hash(url) 
+            return HashHelper.GetStringMd5(url) 
                 + new DateTimeOffset(DateTime.Now).ToUnixTimeMilliseconds().ToString();
         }
     }

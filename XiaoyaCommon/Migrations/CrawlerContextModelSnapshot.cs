@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage;
+using Microsoft.EntityFrameworkCore.Storage.Internal;
 using System;
 using XiaoyaCommon.Data.Crawler;
 
@@ -25,9 +26,17 @@ namespace XiaoyaCommon.Migrations
 
                     b.Property<string>("Charset");
 
+                    b.Property<DateTime>("CreatedAt");
+
+                    b.Property<string>("FileHash");
+
                     b.Property<string>("FilePath");
 
                     b.Property<string>("MimeType");
+
+                    b.Property<TimeSpan>("UpdateInterval");
+
+                    b.Property<DateTime>("UpdatedAt");
 
                     b.Property<string>("Url");
 

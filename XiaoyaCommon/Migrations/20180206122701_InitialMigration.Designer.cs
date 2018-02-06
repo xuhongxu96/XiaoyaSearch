@@ -4,14 +4,15 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage;
+using Microsoft.EntityFrameworkCore.Storage.Internal;
 using System;
 using XiaoyaCommon.Data.Crawler;
 
 namespace XiaoyaCommon.Migrations
 {
     [DbContext(typeof(CrawlerContext))]
-    [Migration("20180203045931_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20180206122701_InitialMigration")]
+    partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -26,9 +27,17 @@ namespace XiaoyaCommon.Migrations
 
                     b.Property<string>("Charset");
 
+                    b.Property<DateTime>("CreatedAt");
+
+                    b.Property<string>("FileHash");
+
                     b.Property<string>("FilePath");
 
                     b.Property<string>("MimeType");
+
+                    b.Property<TimeSpan>("UpdateInterval");
+
+                    b.Property<DateTime>("UpdatedAt");
 
                     b.Property<string>("Url");
 

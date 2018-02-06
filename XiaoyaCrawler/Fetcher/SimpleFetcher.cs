@@ -91,7 +91,8 @@ namespace XiaoyaCrawler.Fetcher
                     FilePath = path,
                     Charset = type.CharSet,
                     MimeType = type.MediaType,
-                });
+                    FileHash = HashHelper.GetFileMd5(path),
+            });
             }
         }
 

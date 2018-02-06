@@ -7,14 +7,14 @@ using XiaoyaCommon.Helper;
 using XiaoyaCrawler.Config;
 using XiaoyaCrawler.Parser;
 
-namespace XiaoyaCrawler.SimilarContentJudger
+namespace XiaoyaCrawler.SimilarContentManager
 {
-    public class SimpleSimilarContentJudger : ISimilarContentJudger
+    public class SimpleSimilarContentManager : ISimilarContentManager
     {
 
         protected CrawlerConfig mConfig;
 
-        public SimpleSimilarContentJudger(CrawlerConfig config)
+        public SimpleSimilarContentManager(CrawlerConfig config)
         {
             mConfig = config;
         }

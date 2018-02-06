@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using XiaoyaCrawler.Config;
 using XiaoyaCrawler.Fetcher;
 using XiaoyaCrawler.Parser;
-using XiaoyaCrawler.SimilarContentJudger;
+using XiaoyaCrawler.SimilarContentManager;
 using XiaoyaCrawler.UrlFilter;
 using XiaoyaCrawler.UrlFrontier;
 using XiaoyaLogger;
@@ -24,7 +24,7 @@ namespace XiaoyaCrawler
         protected IUrlFrontier mUrlFrontier;
         protected IFetcher mFetcher;
         protected IParser mParser;
-        protected ISimilarContentJudger mSimilarContentJudger;
+        protected ISimilarContentManager mSimilarContentJudger;
         protected List<IUrlFilter> mUrlFilters;
 
         protected SemaphoreSlim mFetchSemaphore;
@@ -49,10 +49,10 @@ namespace XiaoyaCrawler
             mUrlFrontier = new SimpleUrlFrontier(config);
             mFetcher = new SimpleFetcher(config);
             mParser = new SimpleParser(config);
-            mSimilarContentJudger = new SimpleSimilarContentJudger(config);
+            mSimilarContentJudger = new SimpleSimilarContentManager(config);
             mUrlFilters = new List<IUrlFilter>
             {
-                new DomainUrlFilter(),
+                new DomainUrlFilter(@"bnu\.edu\.cn"),
                 new DuplicateUrlEliminator(config),
             };
             mRetriedUrlMap = new ConcurrentDictionary<string, int>();
@@ -150,6 +150,7 @@ namespace XiaoyaCrawler
 
         public async Task StartAsync(bool restart = false)
         {
+            mLogger.Log(nameof(Crawler), "Crawler: Running");
             lock (mSyncLock)
             {
                 if (Status == CrawlerStatus.RUNNING)
@@ -199,6 +200,7 @@ namespace XiaoyaCrawler
             {
                 Status = CrawlerStatus.FINISHED;
             }
+            mLogger.Log(nameof(Crawler), "Crawler: Finished");
         }
 
         public async Task StopAsync()
@@ -227,6 +229,7 @@ namespace XiaoyaCrawler
                     mCancellationTokenSource.Dispose();
                 }
             });
+            mLogger.Log(nameof(Crawler), "Crawler: Stopped");
         }
     }
 }
