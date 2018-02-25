@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Threading.Tasks;
-using XiaoyaCommon.Helper;
+using XiaoyaStore.Helper;
 using XiaoyaCrawler.Config;
 using XiaoyaCrawler.Parser;
 

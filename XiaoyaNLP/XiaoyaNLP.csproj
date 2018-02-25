@@ -5,14 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AngleSharp" Version="0.9.9.1" />
-    <PackageReference Include="Selenium.WebDriver" Version="3.8.0" />
+    <None Remove="Resource\30wdict_utf8.txt" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="phantomjs.exe">
+    <Content Include="Resource\30wdict_utf8.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    </Content>
   </ItemGroup>
 
 </Project>

@@ -3,19 +3,22 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Threading.Tasks;
-using XiaoyaCommon.Data.Crawler.Model;
-using XiaoyaCommon.Helper;
+using XiaoyaStore.Data.Model;
+using XiaoyaStore.Helper;
 using XiaoyaCrawler.Config;
+using XiaoyaFileParser;
 
 namespace XiaoyaCrawler.Parser
 {
     public class SimpleParser : IParser
     {
         protected CrawlerConfig mConfig;
+        protected IFileParser mParser;
 
         public SimpleParser(CrawlerConfig config)
         {
             mConfig = config;
+            mParser = new UniversalFileParser();
         }
 
         /// <summary>
@@ -26,16 +29,12 @@ namespace XiaoyaCrawler.Parser
         /// Returns null if cannot parse the file</returns>
         public async Task<ParseResult> ParseAsync(UrlFile urlFile)
         {
-            if (urlFile.MimeType == "text/html")
+            mParser.UrlFile = urlFile;
+            return new ParseResult
             {
-                var content = await File.ReadAllTextAsync(urlFile.FilePath);
-                return new ParseResult
-                {
-                    Content = content,
-                    Urls = await HtmlHelper.GetUrlsAsync(content, urlFile.Url)
-                };
-            }
-            return null;
+                Content = await mParser.GetTextContentAsync(),
+                Urls = await mParser.GetUrlsAsync()
+            };
         }
     }
 }

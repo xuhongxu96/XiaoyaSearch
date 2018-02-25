@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace XiaoyaCommon.Data.Crawler.Model
+namespace XiaoyaStore.Data.Model
 {
     public class UrlFile
     {
@@ -23,6 +23,10 @@ namespace XiaoyaCommon.Data.Crawler.Model
         /// </summary>
         public string FileHash { get; set; }
         /// <summary>
+        /// Text content of file
+        /// </summary>
+        public string Content { get; set; } = null;
+        /// <summary>
         /// Fetched content charset
         /// </summary>
         public string Charset { get; set; }
@@ -30,6 +34,10 @@ namespace XiaoyaCommon.Data.Crawler.Model
         /// Fetched content MIME type
         /// </summary>
         public string MimeType { get; set; }
+        /// <summary>
+        /// Is Indexed
+        /// </summary>
+        public bool IsIndexed { get; set; }
         /// <summary>
         /// DateTime offset between present and last update
         /// </summary>

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace XiaoyaCommon.Helper
+namespace XiaoyaStore.Helper
 {
     public static class UrlHelper
     {

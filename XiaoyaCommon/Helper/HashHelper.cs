@@ -4,7 +4,7 @@ using System.IO;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace XiaoyaCommon.Helper
+namespace XiaoyaStore.Helper
 {
     public static class HashHelper
     {

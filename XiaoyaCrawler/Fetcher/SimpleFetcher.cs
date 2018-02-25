@@ -6,11 +6,12 @@ using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using XiaoyaCommon.Data.Crawler.Model;
-using XiaoyaCommon.Helper;
-using XiaoyaCommon.Store;
+using XiaoyaStore.Data.Model;
+using XiaoyaStore.Helper;
+using XiaoyaStore.Store;
 using XiaoyaCrawler.Config;
 using XiaoyaLogger;
+using XiaoyaFileParser;
 
 namespace XiaoyaCrawler.Fetcher
 {
@@ -77,12 +78,17 @@ namespace XiaoyaCrawler.Fetcher
                 }
                 else
                 {
-                    // Otherwise, directly save it
-                    using (Stream contentStream = await response.Content.ReadAsStreamAsync(),
-                        stream = new FileStream(path, FileMode.Create, FileAccess.Write))
+                    // Otherwise, directly save it if supported by parser
+
+                    if (UniversalFileParser.IsSupported(type.MediaType))
                     {
-                        await contentStream.CopyToAsync(stream);
+                        using (Stream contentStream = await response.Content.ReadAsStreamAsync(),
+                        stream = new FileStream(path, FileMode.Create, FileAccess.Write))
+                        {
+                            await contentStream.CopyToAsync(stream);
+                        }
                     }
+
                 }
                 mLogger.Log(nameof(SimpleFetcher), string.Format("Fetched URL: {0} to {1}", url, path));
                 return await mStore.SaveAsync(new UrlFile
@@ -92,7 +98,7 @@ namespace XiaoyaCrawler.Fetcher
                     Charset = type.CharSet,
                     MimeType = type.MediaType,
                     FileHash = HashHelper.GetFileMd5(path),
-            });
+                });
             }
         }
 

@@ -42,19 +42,20 @@ namespace XiaoyaCrawler
         /// </summary>
         protected RuntimeLogger mLogger;
 
-        public Crawler(CrawlerConfig config)
+        public Crawler(CrawlerConfig config,
+            IUrlFrontier urlFrontier,
+            IFetcher fetcher,
+            IParser parser,
+            ISimilarContentManager similarContentManager,
+            List<IUrlFilter> urlFilters)
         {
             mConfig = config;
             Status = CrawlerStatus.STOPPED;
-            mUrlFrontier = new SimpleUrlFrontier(config);
-            mFetcher = new SimpleFetcher(config);
-            mParser = new SimpleParser(config);
-            mSimilarContentJudger = new SimpleSimilarContentManager(config);
-            mUrlFilters = new List<IUrlFilter>
-            {
-                new DomainUrlFilter(@"bnu\.edu\.cn"),
-                new DuplicateUrlEliminator(config),
-            };
+            mUrlFrontier = urlFrontier;
+            mFetcher = fetcher;
+            mParser = parser;
+            mSimilarContentJudger = similarContentManager;
+            mUrlFilters = urlFilters;
             mRetriedUrlMap = new ConcurrentDictionary<string, int>();
             mLogger = new RuntimeLogger(Path.Combine(config.LogDirectory, "Crawler.Log"));
         }
@@ -70,25 +71,33 @@ namespace XiaoyaCrawler
                     {
                         return;
                     }
-                    var parseResult = await mParser.ParseAsync(urlFile);
-                    if (parseResult == null)
+
+                    try
+                    {
+                        var parseResult = await mParser.ParseAsync(urlFile);
+
+                        await mConfig.UrlFileStore.SaveContentAsync(
+                            urlFile.UrlFileId, parseResult.Content);
+
+                        mSimilarContentJudger.AddContentAsync(url, parseResult.Content);
+
+                        foreach (var filter in mUrlFilters)
+                        {
+                            parseResult.Urls = filter.Filter(parseResult.Urls);
+                        }
+                        foreach (var parsedUrl in parseResult.Urls)
+                        {
+                            mUrlFrontier.PushUrl(parsedUrl);
+                        }
+                        mFetchCount++;
+                        if (mFetchCount % 50 == 0)
+                        {
+                            await SaveCheckPointsAsync();
+                        }
+                    }
+                    catch (NotSupportedException)
                     {
                         File.Delete(urlFile.FilePath);
-                        return;
-                    }
-                    mSimilarContentJudger.AddContentAsync(url, parseResult.Content);
-                    foreach (var filter in mUrlFilters)
-                    {
-                        parseResult.Urls = filter.Filter(parseResult.Urls);
-                    }
-                    foreach (var parsedUrl in parseResult.Urls)
-                    {
-                        mUrlFrontier.PushUrl(parsedUrl);
-                    }
-                    mFetchCount++;
-                    if (mFetchCount % 50 == 0)
-                    {
-                        await SaveCheckPointsAsync();
                     }
                 }
                 catch (Exception e)

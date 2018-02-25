@@ -5,11 +5,23 @@ VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XiaoyaCrawler", "XiaoyaCrawler\XiaoyaCrawler.csproj", "{172DE177-E299-4079-AD24-12EE3E50907C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XiaoyaLogger", "XiaoyaLogger\XiaoyaLogger.csproj", "{10C48295-4E7A-43BC-BC36-6BFAFE7B637B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XiaoyaLogger", "XiaoyaLogger\XiaoyaLogger.csproj", "{10C48295-4E7A-43BC-BC36-6BFAFE7B637B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XiaoyaCommon", "XiaoyaCommon\XiaoyaCommon.csproj", "{1B5DE4B8-6A19-4154-A540-8C7A43B29009}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XiaoyaCommon", "XiaoyaCommon\XiaoyaCommon.csproj", "{1B5DE4B8-6A19-4154-A540-8C7A43B29009}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XiaoyaCrawlerInterface", "XiaoyaCrawlerInterface\XiaoyaCrawlerInterface.csproj", "{B5E9CD5C-AB79-431C-8EA7-0F5A7EEE8866}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XiaoyaCrawlerInterface", "XiaoyaCrawlerInterface\XiaoyaCrawlerInterface.csproj", "{B5E9CD5C-AB79-431C-8EA7-0F5A7EEE8866}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XiaoyaStore", "XiaoyaStore\XiaoyaStore.csproj", "{ADE89A32-4DE0-4979-907C-4E5E408F6A99}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XiaoyaFileParser", "XiaoyaFileParser\XiaoyaFileParser.csproj", "{9E43D0AF-239A-4E5F-B307-2ADAA7C55070}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XiaoyaIndexer", "XiaoyaIndexer\XiaoyaIndexer.csproj", "{BDC60CD3-82BE-4E51-8831-679866E4DC64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XiaoyaNLP", "XiaoyaNLP\XiaoyaNLP.csproj", "{950C86F1-8FA2-41BB-B078-BC4F71ECDD09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XiaoyaNLPUnitTest", "XiaoyaNLPUnitTest\XiaoyaNLPUnitTest.csproj", "{CA5A879C-8D86-4359-B71B-BBD92DF07C92}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XiaoyaStoreUnitTest", "XiaoyaStoreUnitTest\XiaoyaStoreUnitTest.csproj", "{B7BDFFF9-B8AC-4E30-972A-E8E9308D2335}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +45,30 @@ Global
 		{B5E9CD5C-AB79-431C-8EA7-0F5A7EEE8866}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B5E9CD5C-AB79-431C-8EA7-0F5A7EEE8866}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B5E9CD5C-AB79-431C-8EA7-0F5A7EEE8866}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADE89A32-4DE0-4979-907C-4E5E408F6A99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADE89A32-4DE0-4979-907C-4E5E408F6A99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADE89A32-4DE0-4979-907C-4E5E408F6A99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADE89A32-4DE0-4979-907C-4E5E408F6A99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E43D0AF-239A-4E5F-B307-2ADAA7C55070}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E43D0AF-239A-4E5F-B307-2ADAA7C55070}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E43D0AF-239A-4E5F-B307-2ADAA7C55070}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E43D0AF-239A-4E5F-B307-2ADAA7C55070}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDC60CD3-82BE-4E51-8831-679866E4DC64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDC60CD3-82BE-4E51-8831-679866E4DC64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDC60CD3-82BE-4E51-8831-679866E4DC64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDC60CD3-82BE-4E51-8831-679866E4DC64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{950C86F1-8FA2-41BB-B078-BC4F71ECDD09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{950C86F1-8FA2-41BB-B078-BC4F71ECDD09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{950C86F1-8FA2-41BB-B078-BC4F71ECDD09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{950C86F1-8FA2-41BB-B078-BC4F71ECDD09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA5A879C-8D86-4359-B71B-BBD92DF07C92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA5A879C-8D86-4359-B71B-BBD92DF07C92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA5A879C-8D86-4359-B71B-BBD92DF07C92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA5A879C-8D86-4359-B71B-BBD92DF07C92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7BDFFF9-B8AC-4E30-972A-E8E9308D2335}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7BDFFF9-B8AC-4E30-972A-E8E9308D2335}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7BDFFF9-B8AC-4E30-972A-E8E9308D2335}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7BDFFF9-B8AC-4E30-972A-E8E9308D2335}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -6,6 +6,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="CheckPoint\**" />
+    <Compile Remove="Fetched\**" />
+    <Compile Remove="Logs\**" />
+    <EmbeddedResource Remove="CheckPoint\**" />
+    <EmbeddedResource Remove="Fetched\**" />
+    <EmbeddedResource Remove="Logs\**" />
+    <None Remove="CheckPoint\**" />
+    <None Remove="Fetched\**" />
+    <None Remove="Logs\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\XiaoyaCrawler\XiaoyaCrawler.csproj" />
   </ItemGroup>
 

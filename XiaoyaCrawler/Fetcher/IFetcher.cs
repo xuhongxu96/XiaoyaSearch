@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
-using XiaoyaCommon.Data.Crawler.Model;
+using XiaoyaStore.Data.Model;
 
 namespace XiaoyaCrawler.Fetcher
 {

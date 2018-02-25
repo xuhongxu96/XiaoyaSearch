@@ -8,9 +8,7 @@ namespace XiaoyaLogger
     {
 
         private string mLogFileName;
-        private Task mTask = null;
         private object mSyncLock = new object();
-        private TextWriter mWriter = null;
 
         public RuntimeLogger(string logFileName)
         {
