@@ -84,7 +84,7 @@ namespace XiaoyaStoreUnitTest
                         MimeType = "text/html",
                     });
 
-                    await Task.Run(() => Thread.Sleep(3000));
+                    await Task.Run(() => Thread.Sleep(1000));
 
                     await urlFileStore.SaveAsync(new XiaoyaStore.Data.Model.UrlFile
                     {
@@ -177,6 +177,211 @@ namespace XiaoyaStoreUnitTest
             }
         }
 
+        [TestMethod]
+        public async Task TestSaveContent()
+        {
+            var connection = new SqliteConnection("DataSource=:memory:");
+            connection.Open();
 
+            var options = new DbContextOptionsBuilder<XiaoyaSearchContext>()
+                .UseSqlite(connection)
+                .Options;
+
+            try
+            {
+                using (var context = new XiaoyaSearchContext(options))
+                {
+                    context.Database.EnsureCreated();
+                }
+
+                using (var context = new XiaoyaSearchContext(options))
+                {
+                    var urlFileStore = new UrlFileStore(context);
+                    var urlFile = await urlFileStore.SaveAsync(new XiaoyaStore.Data.Model.UrlFile
+                    {
+                        Url = "http://www.bnu.edu.cn",
+                        FilePath = @"D:\a.html",
+                        FileHash = "abcd",
+                        Charset = "utf8",
+                        MimeType = "text/html",
+                    });
+
+                    await urlFileStore.SaveContentAsync(urlFile.UrlFileId, "Hello World!");
+                }
+
+                using (var context = new XiaoyaSearchContext(options))
+                {
+                    Assert.AreEqual(1, context.UrlFiles.Count());
+                    Assert.AreEqual("Hello World!", context.UrlFiles.Single().Content);
+                }
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+        [TestMethod]
+        public async Task TestLoadByUrl()
+        {
+            var connection = new SqliteConnection("DataSource=:memory:");
+            connection.Open();
+
+            var options = new DbContextOptionsBuilder<XiaoyaSearchContext>()
+                .UseSqlite(connection)
+                .Options;
+
+            try
+            {
+                using (var context = new XiaoyaSearchContext(options))
+                {
+                    context.Database.EnsureCreated();
+                }
+
+                using (var context = new XiaoyaSearchContext(options))
+                {
+                    var urlFileStore = new UrlFileStore(context);
+                    await urlFileStore.SaveAsync(new XiaoyaStore.Data.Model.UrlFile
+                    {
+                        Url = "http://www.bnu.edu.cn",
+                        FilePath = @"D:\a.html",
+                        FileHash = "abcd",
+                        Charset = "utf8",
+                        MimeType = "text/html",
+                    });
+                    await urlFileStore.SaveAsync(new XiaoyaStore.Data.Model.UrlFile
+                    {
+                        Url = "http://www.bnu.edu.cn/news",
+                        FilePath = @"D:\b.html",
+                        FileHash = "abcdef",
+                        Charset = "utf8",
+                        MimeType = "text/html",
+                    });
+                }
+
+                using (var context = new XiaoyaSearchContext(options))
+                {
+                    var urlFileStore = new UrlFileStore(context);
+
+                    Assert.AreEqual(2, context.UrlFiles.Count());
+                    Assert.AreEqual(@"D:\a.html", urlFileStore.LoadByUrl("http://www.bnu.edu.cn").FilePath);
+                    Assert.AreEqual(@"D:\b.html", urlFileStore.LoadByUrl("http://www.bnu.edu.cn/news").FilePath);
+                }
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+        [TestMethod]
+        public async Task TestLoadByFilePath()
+        {
+            var connection = new SqliteConnection("DataSource=:memory:");
+            connection.Open();
+
+            var options = new DbContextOptionsBuilder<XiaoyaSearchContext>()
+                .UseSqlite(connection)
+                .Options;
+
+            try
+            {
+                using (var context = new XiaoyaSearchContext(options))
+                {
+                    context.Database.EnsureCreated();
+                }
+
+                using (var context = new XiaoyaSearchContext(options))
+                {
+                    var urlFileStore = new UrlFileStore(context);
+                    await urlFileStore.SaveAsync(new XiaoyaStore.Data.Model.UrlFile
+                    {
+                        Url = "http://www.bnu.edu.cn",
+                        FilePath = @"D:\a.html",
+                        FileHash = "abcd",
+                        Charset = "utf8",
+                        MimeType = "text/html",
+                    });
+                    await urlFileStore.SaveAsync(new XiaoyaStore.Data.Model.UrlFile
+                    {
+                        Url = "http://www.bnu.edu.cn/news",
+                        FilePath = @"D:\b.html",
+                        FileHash = "abcdef",
+                        Charset = "utf8",
+                        MimeType = "text/html",
+                    });
+                }
+
+                using (var context = new XiaoyaSearchContext(options))
+                {
+                    var urlFileStore = new UrlFileStore(context);
+
+                    Assert.AreEqual(2, context.UrlFiles.Count());
+                    Assert.AreEqual(@"http://www.bnu.edu.cn", urlFileStore.LoadByFilePath(@"D:\a.html").Url);
+                    Assert.AreEqual(@"http://www.bnu.edu.cn/news", urlFileStore.LoadByFilePath(@"D:\b.html").Url);
+                }
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+        [TestMethod]
+        public async Task TestLoadForIndex()
+        {
+            var connection = new SqliteConnection("DataSource=:memory:");
+            connection.Open();
+
+            var options = new DbContextOptionsBuilder<XiaoyaSearchContext>()
+                .UseSqlite(connection)
+                .Options;
+
+            try
+            {
+                using (var context = new XiaoyaSearchContext(options))
+                {
+                    context.Database.EnsureCreated();
+                }
+
+                using (var context = new XiaoyaSearchContext(options))
+                {
+                    var urlFileStore = new UrlFileStore(context);
+                    await urlFileStore.SaveAsync(new XiaoyaStore.Data.Model.UrlFile
+                    {
+                        Url = "http://www.bnu.edu.cn",
+                        FilePath = @"D:\a.html",
+                        FileHash = "abcd",
+                        Charset = "utf8",
+                        MimeType = "text/html",
+                    });
+                    await urlFileStore.SaveAsync(new XiaoyaStore.Data.Model.UrlFile
+                    {
+                        Url = "http://www.bnu.edu.cn/news",
+                        FilePath = @"D:\b.html",
+                        FileHash = "abcdef",
+                        Charset = "utf8",
+                        MimeType = "text/html",
+                    });
+                }
+
+                using (var context = new XiaoyaSearchContext(options))
+                {
+                    var urlFileStore = new UrlFileStore(context);
+
+                    Assert.AreEqual(2, context.UrlFiles.Count());
+
+                    var urlFile = await urlFileStore.LoadAnyForIndexAsync();
+                    var urlFile2 = await urlFileStore.LoadAnyForIndexAsync();
+
+                    Assert.AreNotEqual(urlFile.Url, urlFile2.Url);
+                    Assert.IsTrue(context.UrlFiles.All(o => o.IsIndexed));
+                }
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
     }
 }

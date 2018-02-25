@@ -28,7 +28,7 @@ namespace XiaoyaStore.Store
             await mContext.SaveChangesAsync();
         }
 
-        public async Task ClearInvertedIndicesFor(UrlFile urlFile)
+        public async Task ClearInvertedIndicesOf(UrlFile urlFile)
         {
             mContext.RemoveRange(from o in mContext.InvertedIndices
                                  where o.UrlFileId == urlFile.UrlFileId
@@ -41,18 +41,17 @@ namespace XiaoyaStore.Store
             return mContext.InvertedIndices.Where(o => o.Word == word).AsEnumerable();
         }
 
-        public IEnumerable<InvertedIndex> LoadByUrlFilePosition(int urlFileId, int position)
+        public InvertedIndex LoadByUrlFilePosition(int urlFileId, int position)
         {
             return mContext.InvertedIndices
-                .Where(o => o.UrlFileId == urlFileId && o.Position == position)
-                .AsEnumerable();
+                .Where(o => o.UrlFileId == urlFileId && o.Position <= position)
+                .OrderByDescending(o => o.Position)
+                .FirstOrDefault();
         }
 
-        public IEnumerable<InvertedIndex> LoadByUrlFilePosition(UrlFile urlFile, int position)
+        public InvertedIndex LoadByUrlFilePosition(UrlFile urlFile, int position)
         {
-            return mContext.InvertedIndices
-                .Where(o => o.UrlFileId == urlFile.UrlFileId && o.Position == position)
-                .AsEnumerable();
+            return LoadByUrlFilePosition(urlFile.UrlFileId, position);
         }
     }
 }

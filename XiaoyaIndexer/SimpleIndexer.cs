@@ -51,7 +51,7 @@ namespace XiaoyaIndexer
                                           UrlFileId = urlFile.UrlFileId,
                                       };
 
-                await mConfig.InvertedIndexStore.ClearInvertedIndicesFor(urlFile);
+                await mConfig.InvertedIndexStore.ClearInvertedIndicesOf(urlFile);
                 await mConfig.InvertedIndexStore.SaveInvertedIndicesAsync(invertedIndices);
             }
         }
