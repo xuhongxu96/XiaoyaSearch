@@ -10,7 +10,14 @@ namespace XiaoyaStore.Helper
     {
         public static bool FilesAreEqual(string path1, string path2)
         {
-            return File.ReadAllBytes(path1).SequenceEqual(File.ReadAllBytes(path2));
+            try
+            {
+                return File.ReadAllBytes(path1).SequenceEqual(File.ReadAllBytes(path2));
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
     }
 }

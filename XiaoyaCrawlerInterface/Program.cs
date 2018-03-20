@@ -16,34 +16,31 @@ namespace XiaoyaCrawlerInterface
     {
         static void Main(string[] args)
         {
-            using (var context = new XiaoyaSearchContext())
+            var config = new XiaoyaCrawler.Config.CrawlerConfig
             {
-                var config = new XiaoyaCrawler.Config.CrawlerConfig
-                {
-                    InitUrls = new List<string>
+                InitUrls = new List<string>
                 {
                     "http://www.bnu.edu.cn",
                 },
-                    UrlFileStore = new UrlFileStore(context),
-                };
-
-                var urlFilters = new List<IUrlFilter>
-            {
-                new DomainUrlFilter(@"bnu\.edu\.cn"),
-                new DuplicateUrlEliminator(config),
+                UrlFileStore = new UrlFileStore(),
+                UrlFrontierItemStore = new UrlFrontierItemStore(),
             };
 
-                var crawler = new Crawler(
-                    config,
-                    new SimpleUrlFrontier(config),
-                    new SimpleFetcher(config),
-                    new SimpleParser(config),
-                    new SimpleSimilarContentManager(config),
-                    urlFilters
-                );
+            var urlFilters = new List<IUrlFilter>
+            {
+                new DomainUrlFilter(@"bnu\.edu\.cn"),
+            };
 
-                crawler.StartAsync().GetAwaiter().GetResult();
-            }
+            var crawler = new Crawler(
+                config,
+                new SimpleUrlFrontier(config),
+                new SimpleFetcher(config),
+                new SimpleParser(config),
+                new SimpleSimilarContentManager(config),
+                urlFilters
+            );
+
+            crawler.StartAsync().GetAwaiter().GetResult();
         }
     }
 }

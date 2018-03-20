@@ -8,10 +8,9 @@ namespace XiaoyaStore.Store
 {
     public interface IUrlFileStore
     {
-        Task<UrlFile> SaveAsync(UrlFile urlFile);
-        Task<UrlFile> SaveContentAsync(int urlFileId, string content);
+        UrlFile Save(UrlFile urlFile);
         UrlFile LoadByUrl(string url);
         UrlFile LoadByFilePath(string path);
-        Task<UrlFile> LoadAnyForIndexAsync();
+        UrlFile LoadAnyForIndex();
     }
 }

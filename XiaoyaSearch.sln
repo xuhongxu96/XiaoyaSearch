@@ -17,11 +17,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XiaoyaFileParser", "XiaoyaF
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XiaoyaIndexer", "XiaoyaIndexer\XiaoyaIndexer.csproj", "{BDC60CD3-82BE-4E51-8831-679866E4DC64}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XiaoyaNLP", "XiaoyaNLP\XiaoyaNLP.csproj", "{950C86F1-8FA2-41BB-B078-BC4F71ECDD09}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XiaoyaNLP", "XiaoyaNLP\XiaoyaNLP.csproj", "{950C86F1-8FA2-41BB-B078-BC4F71ECDD09}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XiaoyaNLPUnitTest", "XiaoyaNLPUnitTest\XiaoyaNLPUnitTest.csproj", "{CA5A879C-8D86-4359-B71B-BBD92DF07C92}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XiaoyaNLPUnitTest", "XiaoyaNLPUnitTest\XiaoyaNLPUnitTest.csproj", "{CA5A879C-8D86-4359-B71B-BBD92DF07C92}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XiaoyaStoreUnitTest", "XiaoyaStoreUnitTest\XiaoyaStoreUnitTest.csproj", "{B7BDFFF9-B8AC-4E30-972A-E8E9308D2335}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XiaoyaStoreUnitTest", "XiaoyaStoreUnitTest\XiaoyaStoreUnitTest.csproj", "{B7BDFFF9-B8AC-4E30-972A-E8E9308D2335}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XiaoyaCrawlerUnitTest", "XiaoyaCrawlerUnitTest\XiaoyaCrawlerUnitTest.csproj", "{FC2DE6D6-0572-43E4-A382-59C2D54FC19B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{B7BDFFF9-B8AC-4E30-972A-E8E9308D2335}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7BDFFF9-B8AC-4E30-972A-E8E9308D2335}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7BDFFF9-B8AC-4E30-972A-E8E9308D2335}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC2DE6D6-0572-43E4-A382-59C2D54FC19B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC2DE6D6-0572-43E4-A382-59C2D54FC19B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC2DE6D6-0572-43E4-A382-59C2D54FC19B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC2DE6D6-0572-43E4-A382-59C2D54FC19B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

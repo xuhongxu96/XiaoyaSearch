@@ -5,48 +5,64 @@ using System.Linq;
 using System.Threading.Tasks;
 using XiaoyaStore.Data;
 using XiaoyaStore.Data.Model;
+using Microsoft.EntityFrameworkCore;
 
 namespace XiaoyaStore.Store
 {
-    public class InvertedIndexStore : IInvertedIndexStore
+    public class InvertedIndexStore : BaseStore, IInvertedIndexStore
     {
-        protected XiaoyaSearchContext mContext;
-        public InvertedIndexStore(XiaoyaSearchContext context)
+        public InvertedIndexStore(DbContextOptions options = null) : base(options)
+        { }
+
+        public void SaveInvertedIndex(InvertedIndex invertedIndex)
         {
-            mContext = context;
+            using (var context = NewContext())
+            {
+                context.InvertedIndices.Add(invertedIndex);
+                context.SaveChanges();
+            }
         }
 
-        public async Task SaveInvertedIndexAsync(InvertedIndex invertedIndex)
+        public void SaveInvertedIndices(IEnumerable<InvertedIndex> invertedIndices)
         {
-            await mContext.InvertedIndices.AddAsync(invertedIndex);
-            await mContext.SaveChangesAsync();
+            using (var context = NewContext())
+            {
+                context.InvertedIndices.AddRange(invertedIndices);
+                context.SaveChanges();
+            }
         }
 
-        public async Task SaveInvertedIndicesAsync(IEnumerable<InvertedIndex> invertedIndices)
+        public void ClearInvertedIndicesOf(UrlFile urlFile)
         {
-            await mContext.InvertedIndices.AddRangeAsync(invertedIndices);
-            await mContext.SaveChangesAsync();
-        }
-
-        public async Task ClearInvertedIndicesOf(UrlFile urlFile)
-        {
-            mContext.RemoveRange(from o in mContext.InvertedIndices
-                                 where o.UrlFileId == urlFile.UrlFileId
-                                 select o);
-            await mContext.SaveChangesAsync();
+            using (var context = NewContext())
+            {
+                context.RemoveRange(from o in context.InvertedIndices
+                                    where o.UrlFileId == urlFile.UrlFileId
+                                    select o);
+                context.SaveChanges();
+            }
         }
 
         public IEnumerable<InvertedIndex> LoadByWord(string word)
         {
-            return mContext.InvertedIndices.Where(o => o.Word == word).AsEnumerable();
+            using (var context = NewContext())
+            {
+                foreach (var index in context.InvertedIndices.Where(o => o.Word == word))
+                {
+                    yield return index;
+                }
+            }
         }
 
         public InvertedIndex LoadByUrlFilePosition(int urlFileId, int position)
         {
-            return mContext.InvertedIndices
+            using (var context = NewContext())
+            {
+                return context.InvertedIndices
                 .Where(o => o.UrlFileId == urlFileId && o.Position <= position)
                 .OrderByDescending(o => o.Position)
                 .FirstOrDefault();
+            }
         }
 
         public InvertedIndex LoadByUrlFilePosition(UrlFile urlFile, int position)

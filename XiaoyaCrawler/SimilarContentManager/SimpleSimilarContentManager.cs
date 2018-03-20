@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using XiaoyaStore.Helper;
 using XiaoyaCrawler.Config;
 using XiaoyaCrawler.Parser;
+using XiaoyaLogger;
 
 namespace XiaoyaCrawler.SimilarContentManager
 {
@@ -13,9 +14,12 @@ namespace XiaoyaCrawler.SimilarContentManager
     {
 
         protected CrawlerConfig mConfig;
+        protected RuntimeLogger mLogger;
 
         public SimpleSimilarContentManager(CrawlerConfig config)
         {
+            mLogger = new RuntimeLogger(
+                Path.Combine(config.LogDirectory, "SimpleSimilarContentManager.Log"));
             mConfig = config;
         }
 
@@ -24,16 +28,6 @@ namespace XiaoyaCrawler.SimilarContentManager
             await Task.Run(() =>
             {
             });
-        }
-
-        public async Task LoadCheckPoint()
-        {
-            return;
-        }
-
-        public async Task SaveCheckPoint()
-        {
-            return;
         }
     }
 }

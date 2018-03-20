@@ -43,7 +43,7 @@ namespace XiaoyaFileParser
                 var content = await GetContentAsync();
 
                 var document = await mParser.ParseAsync(content);
-                mTextContent = document.TextContent;
+                mTextContent = document.Body.TextContent;
             }
             return mTextContent;
         }

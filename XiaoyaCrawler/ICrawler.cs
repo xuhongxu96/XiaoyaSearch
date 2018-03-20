@@ -7,7 +7,7 @@ namespace XiaoyaCrawler
 {
     public enum CrawlerStatus
     {
-        STOPPED, RUNNING, FINISHED
+        STOPPED, RUNNING
     }
 
     public interface ICrawler

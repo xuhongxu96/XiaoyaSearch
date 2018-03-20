@@ -8,11 +8,26 @@ namespace XiaoyaStore.Data
 {
     public class XiaoyaSearchContext : DbContext
     {
+        public DbSet<UrlFrontierItem> UrlFrontierItems { get; set; }
         public DbSet<UrlFile> UrlFiles { get; set; }
         public DbSet<InvertedIndex> InvertedIndices { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            #region UrlFrontierItem
+
+            modelBuilder.Entity<UrlFrontierItem>()
+                .HasIndex(o => o.Url)
+                .IsUnique();
+
+            modelBuilder.Entity<UrlFrontierItem>()
+                .HasIndex(o => o.PlannedTime);
+
+            modelBuilder.Entity<UrlFrontierItem>()
+                .HasIndex(o => o.IsPopped);
+
+            #endregion
+
             #region UrlFile
 
             modelBuilder.Entity<UrlFile>()
@@ -43,14 +58,12 @@ namespace XiaoyaStore.Data
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
-            {
                 optionsBuilder.UseSqlite("Data Source=Db/XiaoyaSearch.db");
-            }
         }
 
-        public XiaoyaSearchContext() { }
+        public XiaoyaSearchContext() : base() { }
 
-        public XiaoyaSearchContext(DbContextOptions<XiaoyaSearchContext> options)
+        public XiaoyaSearchContext(DbContextOptions options)
             : base(options) { }
     }
 }

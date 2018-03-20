@@ -4,6 +4,7 @@ using System.Text;
 using System.Threading.Tasks;
 using XiaoyaStore.Data.Model;
 using XiaoyaCrawler.Config;
+using XiaoyaLogger;
 
 namespace XiaoyaCrawler.Parser
 {

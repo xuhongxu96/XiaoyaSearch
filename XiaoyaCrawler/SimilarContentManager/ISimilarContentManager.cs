@@ -18,13 +18,5 @@ namespace XiaoyaCrawler.SimilarContentManager
         /// <param name="url">Web url</param>
         /// <param name="content">Web content to be judged</param>
         void AddContentAsync(string url, string content);
-        /// <summary>
-        /// Load check point to recover progress
-        /// </summary>
-        Task LoadCheckPoint();
-        /// <summary>
-        /// Save check point to recover progress
-        /// </summary>
-        Task SaveCheckPoint();
     }
 }

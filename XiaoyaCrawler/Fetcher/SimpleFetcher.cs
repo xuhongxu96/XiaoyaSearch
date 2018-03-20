@@ -17,17 +17,7 @@ namespace XiaoyaCrawler.Fetcher
 {
     public class SimpleFetcher : IFetcher
     {
-        /// <summary>
-        /// Directory to save fetched web files
-        /// </summary>
-        protected string mDirectory;
-        /// <summary>
-        /// Store for url and file path pairs
-        /// </summary>
-        protected IUrlFileStore mStore;
-        /// <summary>
-        /// Logger
-        /// </summary>
+        protected CrawlerConfig mConfig;
         protected RuntimeLogger mLogger;
 
         /// <summary>
@@ -36,13 +26,13 @@ namespace XiaoyaCrawler.Fetcher
         /// <param name="directory">Directory to save fetched web files</param>
         public SimpleFetcher(CrawlerConfig config)
         {
-            mDirectory = config.FetchDirectory;
-            mStore = config.UrlFileStore;
-            mLogger = new RuntimeLogger(Path.Combine(config.LogDirectory, "SimpleFetcher.Log"));
-            if (!Directory.Exists(mDirectory))
+            mLogger = new RuntimeLogger(Path.Combine(config.LogDirectory, "Crawler.Log"));
+            if (!Directory.Exists(config.FetchDirectory))
             {
-                Directory.CreateDirectory(mDirectory);
+                Directory.CreateDirectory(config.FetchDirectory);
             }
+
+            mConfig = config;
         }
 
         /// <summary>
@@ -63,48 +53,60 @@ namespace XiaoyaCrawler.Fetcher
                 return null;
             }
 
-            mLogger.Log(nameof(SimpleFetcher), "Fetching URL: " + url);
             // Target path to save downloaded web file
-            var path = Path.Combine(mDirectory, UrlHelper.UrlToFileName(url));
+            var path = Path.Combine(mConfig.FetchDirectory, UrlHelper.UrlToFileName(url));
             using (var client = new HttpClient())
             {
                 client.Timeout = new TimeSpan(0, 0, 10);
                 var response = await client.GetAsync(url);
+                var statusCode = response.StatusCode;
                 var type = response.Content.Headers.ContentType;
-                if (type.MediaType == "text/html")
+
+                if (statusCode != HttpStatusCode.Accepted
+                    && statusCode != HttpStatusCode.OK)
                 {
-                    // If it is HTML, use PhantomJS to fetch real web page content
-                    File.WriteAllText(path, FetchPageContent(url));
+                    mLogger.Log(nameof(SimpleFetcher), "Status: " + statusCode + " " + url);
+                    return null;
+                }
+
+                if (mConfig.UsePhantomJS && type.MediaType == "text/html")
+                {
+                    // If config is set to use PhantomJS and web content type is HTML, 
+                    // use PhantomJS to fetch real web page content
+                    File.WriteAllText(path, 
+                        FetchPageContentByPhantomJS(url, mConfig.PhantomJSDriverPath));
                 }
                 else
                 {
                     // Otherwise, directly save it if supported by parser
-
                     if (UniversalFileParser.IsSupported(type.MediaType))
                     {
                         using (Stream contentStream = await response.Content.ReadAsStreamAsync(),
-                        stream = new FileStream(path, FileMode.Create, FileAccess.Write))
+                        stream = File.Create(path))
                         {
                             await contentStream.CopyToAsync(stream);
                         }
                     }
-
+                    else
+                    {
+                        return null;
+                    }
                 }
-                mLogger.Log(nameof(SimpleFetcher), string.Format("Fetched URL: {0} to {1}", url, path));
-                return await mStore.SaveAsync(new UrlFile
+
+                return new UrlFile
                 {
                     Url = url,
                     FilePath = path,
                     Charset = type.CharSet,
                     MimeType = type.MediaType,
                     FileHash = HashHelper.GetFileMd5(path),
-                });
+                };
             }
         }
 
-        private static string FetchPageContent(string url)
+        private static string FetchPageContentByPhantomJS(string url, string phantomJsDriverPath)
         {
-            var driver = new PhantomJSDriver(Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location));
+            var driver = new PhantomJSDriver(phantomJsDriverPath);
             try
             {
                 driver.Navigate().GoToUrl(url);

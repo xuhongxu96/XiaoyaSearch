@@ -4,14 +4,4 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <None Remove="Resource\30wdict_utf8.txt" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="Resource\30wdict_utf8.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-
 </Project>

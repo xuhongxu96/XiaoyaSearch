@@ -17,13 +17,5 @@ namespace XiaoyaCrawler.UrlFilter
         /// <param name="urls">Urls to be filtered</param>
         /// <returns>Filtered urls</returns>
         IList<string> Filter(IList<string> urls);
-        /// <summary>
-        /// Load check point to recover progress
-        /// </summary>
-        Task LoadCheckPoint();
-        /// <summary>
-        /// Save check point to recover progress
-        /// </summary>
-        Task SaveCheckPoint();
     }
 }

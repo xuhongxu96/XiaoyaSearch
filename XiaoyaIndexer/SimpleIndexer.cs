@@ -33,7 +33,7 @@ namespace XiaoyaIndexer
 
                 cancellationToken.ThrowIfCancellationRequested();
 
-                var urlFile = await mConfig.UrlFileStore.LoadAnyForIndexAsync();
+                var urlFile = mConfig.UrlFileStore.LoadAnyForIndex();
                 if (urlFile == null)
                 {
                     await Task.Run(() => Thread.Sleep(5000));
@@ -51,8 +51,8 @@ namespace XiaoyaIndexer
                                           UrlFileId = urlFile.UrlFileId,
                                       };
 
-                await mConfig.InvertedIndexStore.ClearInvertedIndicesOf(urlFile);
-                await mConfig.InvertedIndexStore.SaveInvertedIndicesAsync(invertedIndices);
+                mConfig.InvertedIndexStore.ClearInvertedIndicesOf(urlFile);
+                mConfig.InvertedIndexStore.SaveInvertedIndices(invertedIndices);
             }
         }
 

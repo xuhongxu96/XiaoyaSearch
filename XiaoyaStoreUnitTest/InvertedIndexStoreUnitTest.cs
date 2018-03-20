@@ -13,24 +13,29 @@ using XiaoyaStore.Store;
 namespace XiaoyaStoreUnitTest
 {
     [TestClass]
-    public class InvertedIndexUnitTest
+    public class InvertedIndexStoreUnitTest
     {
 
-        private async Task<UrlFile> InitDatabase(XiaoyaSearchContext context)
+        private UrlFile InitDatabase(DbContextOptions<XiaoyaSearchContext> options)
         {
-            var urlFileStore = new UrlFileStore(context);
-            return await urlFileStore.SaveAsync(new XiaoyaStore.Data.Model.UrlFile
+            using (var context = new XiaoyaSearchContext(options))
             {
-                Url = "http://www.bnu.edu.cn",
-                FilePath = @"D:\a.html",
-                FileHash = "abcd",
-                Charset = "utf8",
-                MimeType = "text/html",
-            });
+                var urlFile = new UrlFile
+                {
+                    Url = "http://www.bnu.edu.cn",
+                    FilePath = @"D:\a.html",
+                    FileHash = "abcd",
+                    Charset = "utf8",
+                    MimeType = "text/html",
+                };
+                context.UrlFiles.Add(urlFile);
+                context.SaveChanges();
+                return urlFile;
+            }
         }
 
         [TestMethod]
-        public async Task TestSave()
+        public void TestSave()
         {
             var connection = new SqliteConnection("DataSource=:memory:");
             connection.Open();
@@ -46,19 +51,16 @@ namespace XiaoyaStoreUnitTest
                     context.Database.EnsureCreated();
                 }
 
-                using (var context = new XiaoyaSearchContext(options))
-                {
-                    var urlFile = await InitDatabase(context);
+                var urlFile = InitDatabase(options);
 
-                    var invertedIndexStore = new InvertedIndexStore(context);
-                    var invertedIndex = new InvertedIndex
-                    {
-                        Word = "你好",
-                        Position = 0,
-                        UrlFileId = urlFile.UrlFileId,
-                    };
-                    await invertedIndexStore.SaveInvertedIndexAsync(invertedIndex);
-                }
+                var invertedIndexStore = new InvertedIndexStore(options);
+                var invertedIndex = new InvertedIndex
+                {
+                    Word = "你好",
+                    Position = 0,
+                    UrlFileId = urlFile.UrlFileId,
+                };
+                invertedIndexStore.SaveInvertedIndex(invertedIndex);
 
                 using (var context = new XiaoyaSearchContext(options))
                 {
@@ -73,7 +75,7 @@ namespace XiaoyaStoreUnitTest
         }
 
         [TestMethod]
-        public async Task TestSaveMany()
+        public void TestSaveMany()
         {
             var connection = new SqliteConnection("DataSource=:memory:");
             connection.Open();
@@ -89,12 +91,10 @@ namespace XiaoyaStoreUnitTest
                     context.Database.EnsureCreated();
                 }
 
-                using (var context = new XiaoyaSearchContext(options))
-                {
-                    var urlFile = await InitDatabase(context);
+                var urlFile = InitDatabase(options);
 
-                    var invertedIndexStore = new InvertedIndexStore(context);
-                    var invertedIndices = new List<InvertedIndex>
+                var invertedIndexStore = new InvertedIndexStore(options);
+                var invertedIndices = new List<InvertedIndex>
                     {
                         new InvertedIndex
                         {
@@ -115,13 +115,12 @@ namespace XiaoyaStoreUnitTest
                             UrlFileId = urlFile.UrlFileId,
                         },
                     };
-                    await invertedIndexStore.SaveInvertedIndicesAsync(invertedIndices);
-                }
+                invertedIndexStore.SaveInvertedIndices(invertedIndices);
 
                 using (var context = new XiaoyaSearchContext(options))
                 {
                     Assert.AreEqual(3, context.InvertedIndices.Count());
-                    var invertedIndices = context.InvertedIndices.OrderBy(o => o.Position).ToList();
+                    invertedIndices = context.InvertedIndices.OrderBy(o => o.Position).ToList();
                     Assert.AreEqual("你好", invertedIndices[0].Word);
                     Assert.AreEqual("我们", invertedIndices[1].Word);
                     Assert.AreEqual("是", invertedIndices[2].Word);
@@ -134,7 +133,7 @@ namespace XiaoyaStoreUnitTest
         }
 
         [TestMethod]
-        public async Task TestClear()
+        public void TestClear()
         {
             var connection = new SqliteConnection("DataSource=:memory:");
             connection.Open();
@@ -150,11 +149,10 @@ namespace XiaoyaStoreUnitTest
                     context.Database.EnsureCreated();
                 }
 
+                var urlFile = InitDatabase(options);
+
                 using (var context = new XiaoyaSearchContext(options))
                 {
-                    var urlFile = await InitDatabase(context);
-
-                    var invertedIndexStore = new InvertedIndexStore(context);
                     var invertedIndices = new List<InvertedIndex>
                     {
                         new InvertedIndex
@@ -176,23 +174,21 @@ namespace XiaoyaStoreUnitTest
                             UrlFileId = urlFile.UrlFileId,
                         },
                     };
-                    await invertedIndexStore.SaveInvertedIndicesAsync(invertedIndices);
-
-                    await invertedIndexStore.ClearInvertedIndicesOf(urlFile);
-
-                    var invertedIndex = new InvertedIndex
-                    {
-                        Word = "你好",
-                        Position = 0,
-                        UrlFileId = urlFile.UrlFileId,
-                    };
-                    await invertedIndexStore.SaveInvertedIndexAsync(invertedIndex);
+                    context.InvertedIndices.AddRange(invertedIndices);
+                    context.SaveChanges();
                 }
 
                 using (var context = new XiaoyaSearchContext(options))
                 {
-                    Assert.AreEqual(1, context.InvertedIndices.Count());
-                    Assert.AreEqual("你好", context.InvertedIndices.Single().Word);
+                    Assert.AreEqual(3, context.InvertedIndices.Count());
+                }
+
+                var invertedIndexStore = new InvertedIndexStore(options);
+                invertedIndexStore.ClearInvertedIndicesOf(urlFile);
+
+                using (var context = new XiaoyaSearchContext(options))
+                {
+                    Assert.AreEqual(0, context.InvertedIndices.Count());
                 }
             }
             finally
@@ -202,7 +198,7 @@ namespace XiaoyaStoreUnitTest
         }
 
         [TestMethod]
-        public async Task TestLoadByWord()
+        public void TestLoadByWord()
         {
             var connection = new SqliteConnection("DataSource=:memory:");
             connection.Open();
@@ -218,12 +214,11 @@ namespace XiaoyaStoreUnitTest
                     context.Database.EnsureCreated();
                 }
 
+                var urlFile = InitDatabase(options);
+
                 using (var context = new XiaoyaSearchContext(options))
                 {
-                    var urlFile = await InitDatabase(context);
-
-                    var invertedIndexStore = new InvertedIndexStore(context);
-                    var invertedIndices = new List<InvertedIndex>
+                    var indices = new List<InvertedIndex>
                     {
                         new InvertedIndex
                         {
@@ -250,20 +245,18 @@ namespace XiaoyaStoreUnitTest
                             UrlFileId = urlFile.UrlFileId,
                         },
                     };
-                    await invertedIndexStore.SaveInvertedIndicesAsync(invertedIndices);
+                    context.InvertedIndices.AddRange(indices);
+                    context.SaveChanges();
                 }
 
-                using (var context = new XiaoyaSearchContext(options))
-                {
-                    var invertedIndexStore = new InvertedIndexStore(context);
+                var invertedIndexStore = new InvertedIndexStore(options);
+                var invertedIndices = invertedIndexStore.LoadByWord("你好")
+                    .OrderBy(o => o.Position)
+                    .ToList();
 
-                    var invertedIndices = invertedIndexStore.LoadByWord("你好")
-                        .OrderBy(o => o.Position)
-                        .ToList();
-                    Assert.AreEqual(2, invertedIndices.Count);
-                    Assert.AreEqual(0, invertedIndices[0].Position);
-                    Assert.AreEqual(5, invertedIndices[1].Position);
-                }
+                Assert.AreEqual(2, invertedIndices.Count);
+                Assert.AreEqual(0, invertedIndices[0].Position);
+                Assert.AreEqual(5, invertedIndices[1].Position);
             }
             finally
             {
@@ -272,7 +265,7 @@ namespace XiaoyaStoreUnitTest
         }
 
         [TestMethod]
-        public async Task TestLoadByUrlFilePosition()
+        public void TestLoadByUrlFilePosition()
         {
             var connection = new SqliteConnection("DataSource=:memory:");
             connection.Open();
@@ -290,12 +283,11 @@ namespace XiaoyaStoreUnitTest
 
                 UrlFile urlFile;
 
+                urlFile = InitDatabase(options);
+
                 using (var context = new XiaoyaSearchContext(options))
                 {
-                    urlFile = await InitDatabase(context);
-
-                    var invertedIndexStore = new InvertedIndexStore(context);
-                    var invertedIndices = new List<InvertedIndex>
+                    var indices = new List<InvertedIndex>
                     {
                         new InvertedIndex
                         {
@@ -322,25 +314,23 @@ namespace XiaoyaStoreUnitTest
                             UrlFileId = urlFile.UrlFileId,
                         },
                     };
-                    await invertedIndexStore.SaveInvertedIndicesAsync(invertedIndices);
+                    context.InvertedIndices.AddRange(indices);
+                    context.SaveChanges();
                 }
 
-                using (var context = new XiaoyaSearchContext(options))
-                {
-                    var invertedIndexStore = new InvertedIndexStore(context);
+                var invertedIndexStore = new InvertedIndexStore(options);
 
-                    var invertedIndex = invertedIndexStore.LoadByUrlFilePosition(urlFile, 4);
-                    Assert.AreEqual("是", invertedIndex.Word);
+                var invertedIndex = invertedIndexStore.LoadByUrlFilePosition(urlFile, 4);
+                Assert.AreEqual("是", invertedIndex.Word);
 
-                    invertedIndex = invertedIndexStore.LoadByUrlFilePosition(urlFile, 3);
-                    Assert.AreEqual("我们", invertedIndex.Word);
-                }
+                invertedIndex = invertedIndexStore.LoadByUrlFilePosition(urlFile, 3);
+                Assert.AreEqual("我们", invertedIndex.Word);
             }
             finally
             {
                 connection.Close();
             }
         }
-        
+
     }
 }

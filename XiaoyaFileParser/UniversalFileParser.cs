@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using XiaoyaFileParser.Model;
 using XiaoyaFileParser.Config;
 using XiaoyaStore.Data.Model;
+using System.IO;
 
 namespace XiaoyaFileParser
 {
@@ -17,6 +18,10 @@ namespace XiaoyaFileParser
             set
             {
                 mUrlFile = value;
+                if (!File.Exists(mUrlFile.FilePath))
+                {
+                    throw new FileNotFoundException(mUrlFile.FilePath + "doesn't exist");
+                }
                 mCurrentParser = GetParser(mUrlFile.MimeType, mConfig);
                 mCurrentParser.UrlFile = mUrlFile;
             }

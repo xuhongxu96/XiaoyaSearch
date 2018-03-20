@@ -7,6 +7,7 @@ using XiaoyaStore.Data.Model;
 using XiaoyaStore.Helper;
 using XiaoyaCrawler.Config;
 using XiaoyaFileParser;
+using XiaoyaLogger;
 
 namespace XiaoyaCrawler.Parser
 {

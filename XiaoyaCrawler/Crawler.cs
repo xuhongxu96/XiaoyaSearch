@@ -31,9 +31,7 @@ namespace XiaoyaCrawler
         protected object mSyncLock = new object();
 
         protected CancellationTokenSource mCancellationTokenSource;
-        protected List<Task> mTasks = new List<Task>();
-
-        protected ConcurrentDictionary<string, int> mRetriedUrlMap;
+        protected ConcurrentBag<Task> mTasks = new ConcurrentBag<Task>();
 
         protected int mFetchCount;
 
@@ -56,62 +54,76 @@ namespace XiaoyaCrawler
             mParser = parser;
             mSimilarContentJudger = similarContentManager;
             mUrlFilters = urlFilters;
-            mRetriedUrlMap = new ConcurrentDictionary<string, int>();
             mLogger = new RuntimeLogger(Path.Combine(config.LogDirectory, "Crawler.Log"));
         }
 
         protected async void FetchUrlAsync(string url)
         {
-            var t = Task.Run(async () =>
+            var t = Task.Run(() =>
             {
+                mLogger.Log(nameof(Crawler), "Begin Crawl: " + url);
                 try
                 {
-                    var urlFile = await mFetcher.FetchAsync(url);
+                    // Fetch Url
+                    var urlFile = mFetcher.FetchAsync(url).GetAwaiter().GetResult();
                     if (urlFile == null)
                     {
+                        // Fetched nothing, return.
                         return;
                     }
 
                     try
                     {
-                        var parseResult = await mParser.ParseAsync(urlFile);
+                        // Parse fetched file
+                        var parseResult = mParser.ParseAsync(urlFile).GetAwaiter().GetResult();
 
-                        await mConfig.UrlFileStore.SaveContentAsync(
-                            urlFile.UrlFileId, parseResult.Content);
+                        // Store parsed content
+                        urlFile.Content = parseResult.Content;
+                        mConfig.UrlFileStore.Save(urlFile);
 
+                        // Judge if there are other files that have similar content as this
                         mSimilarContentJudger.AddContentAsync(url, parseResult.Content);
 
+                        // Filter urls
                         foreach (var filter in mUrlFilters)
                         {
                             parseResult.Urls = filter.Filter(parseResult.Urls);
                         }
+                        // Add newly-found urls
                         foreach (var parsedUrl in parseResult.Urls)
                         {
                             mUrlFrontier.PushUrl(parsedUrl);
                         }
-                        mFetchCount++;
-                        if (mFetchCount % 50 == 0)
+                        // Push back this url
+                        if (!parseResult.Urls.Contains(url))
                         {
-                            await SaveCheckPointsAsync();
+                            mUrlFrontier.PushBackUrl(url);
                         }
+
+                        mFetchCount++;
                     }
                     catch (NotSupportedException)
                     {
                         File.Delete(urlFile.FilePath);
                     }
                 }
+                catch (Exception e) when (
+                    e is OperationCanceledException
+                    || e is TaskCanceledException
+                )
+                {
+                    mUrlFrontier.PushUrl(url);
+                }
                 catch (Exception e)
                 {
-                    mLogger.Log(nameof(Crawler), e.Message + "\n---\n" + e.StackTrace);
+                    mLogger.Log(nameof(Crawler), 
+                        url + " Error\r\n" + e.Message + "\r\n---\r\n" + e.StackTrace);
                     // Retry
-                    if (mRetriedUrlMap.GetValueOrDefault(url, 0) < 3)
-                    {
-                        mRetriedUrlMap.AddOrUpdate(url, 1, (_url, oldVal) => oldVal + 1);
-                        mUrlFrontier.PushUrl(url);
-                    }
+                    mUrlFrontier.PushUrl(url);
                 }
                 finally
                 {
+                    mLogger.Log(nameof(Crawler), "End Crawl: " + url);
                     mFetchSemaphore.Release();
                 }
             });
@@ -119,56 +131,14 @@ namespace XiaoyaCrawler
             await t;
         }
 
-        private async Task LoadCheckPointsAsync()
-        {
-            mLogger.Log(nameof(Crawler), "Load Check Points: Begin");
-            await Task.Run(() =>
-            {
-                var loadCheckPointTasks = new List<Task>
-                {
-                    mUrlFrontier.LoadCheckPoint(),
-                    mSimilarContentJudger.LoadCheckPoint()
-                };
-                foreach (var urlFilter in mUrlFilters)
-                {
-                    loadCheckPointTasks.Add(urlFilter.LoadCheckPoint());
-                }
-                Task.WaitAll(loadCheckPointTasks.ToArray());
-            });
-            mLogger.Log(nameof(Crawler), "Load Check Points: End");
-        }
-
-        private async Task SaveCheckPointsAsync()
-        {
-            mLogger.Log(nameof(Crawler), "Save Check Points: Begin");
-            await Task.Run(() =>
-            {
-                var saveCheckPointTasks = new List<Task>
-                {
-                    mUrlFrontier.SaveCheckPoint(),
-                    mSimilarContentJudger.SaveCheckPoint()
-                };
-                foreach (var urlFilter in mUrlFilters)
-                {
-                    saveCheckPointTasks.Add(urlFilter.SaveCheckPoint());
-                }
-                Task.WaitAll(saveCheckPointTasks.ToArray());
-            });
-            mLogger.Log(nameof(Crawler), "Save Check Points: End");
-        }
-
         public async Task StartAsync(bool restart = false)
         {
-            mLogger.Log(nameof(Crawler), "Crawler: Running");
+            mLogger.Log(nameof(Crawler), "Running");
             lock (mSyncLock)
             {
                 if (Status == CrawlerStatus.RUNNING)
                 {
                     return;
-                }
-                else if (Status == CrawlerStatus.FINISHED)
-                {
-                    restart = true;
                 }
                 Status = CrawlerStatus.RUNNING;
             }
@@ -177,39 +147,34 @@ namespace XiaoyaCrawler
             {
                 mUrlFrontier = new SimpleUrlFrontier(mConfig);
             }
-            else
-            {
-                await LoadCheckPointsAsync();
-            }
 
             mTasks.Clear();
             mFetchCount = 0;
             mFetchSemaphore = new SemaphoreSlim(mConfig.MaxFetchingConcurrency);
 
             mCancellationTokenSource = new CancellationTokenSource();
-            var ct = mCancellationTokenSource.Token;
+            var token = mCancellationTokenSource.Token;
             await Task.Run(() =>
             {
                 while (!mUrlFrontier.IsEmpty)
                 {
-                    ct.ThrowIfCancellationRequested();
+                    if (token.IsCancellationRequested)
+                    {
+                        break;
+                    }
 
                     var url = mUrlFrontier.PopUrl();
-                    mFetchSemaphore.Wait();
-                    FetchUrlAsync(url);
-
+                    if (url != null)
+                    {
+                        mFetchSemaphore.Wait();
+                        FetchUrlAsync(url.Url);
+                    }
                     while (mUrlFrontier.IsEmpty && mTasks.Any(o => !o.IsCompleted))
                     {
                         Task.WaitAny(mTasks.ToArray());
                     }
                 }
-            }, ct);
-
-            lock (mSyncLock)
-            {
-                Status = CrawlerStatus.FINISHED;
-            }
-            mLogger.Log(nameof(Crawler), "Crawler: Finished");
+            }, token);
         }
 
         public async Task StopAsync()
@@ -221,6 +186,8 @@ namespace XiaoyaCrawler
                     return;
                 }
             }
+
+            mLogger.Log(nameof(Crawler), "Stopping");
 
             mCancellationTokenSource.Cancel();
             await Task.Run(() =>
@@ -238,7 +205,8 @@ namespace XiaoyaCrawler
                     mCancellationTokenSource.Dispose();
                 }
             });
-            mLogger.Log(nameof(Crawler), "Crawler: Stopped");
+
+            mLogger.Log(nameof(Crawler), "Stopped");
         }
     }
 }

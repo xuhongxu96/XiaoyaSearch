@@ -13,7 +13,7 @@ namespace XiaoyaNLPUnitTest.TextSegmentation
         [TestMethod]
         public void TestMaxMatchSegmenter()
         {
-            var segmenter = new MaxMatchSegmenter("Resource/30wdict_utf8.txt");
+            var segmenter = new MaxMatchSegmenter("../../../../Resources/30wdict_utf8.txt");
             var segments = segmenter.Segment("中文分词中华人民共和国");
             var words = segments.Select(o => o.Text);
 

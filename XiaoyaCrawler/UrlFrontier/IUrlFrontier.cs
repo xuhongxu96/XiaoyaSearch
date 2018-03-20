@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using XiaoyaStore.Data.Model;
 
 namespace XiaoyaCrawler.UrlFrontier
 {
@@ -15,20 +16,17 @@ namespace XiaoyaCrawler.UrlFrontier
         /// Pop next url to be fetched
         /// </summary>
         /// <returns>Url to be fetched</returns>
-        string PopUrl();
+        UrlFrontierItem PopUrl();
         /// <summary>
         /// Push a new url
         /// </summary>
         /// <param name="url">New url</param>
         void PushUrl(string url);
         /// <summary>
-        /// Load check point to recover progress
+        /// Push back a popped url
         /// </summary>
-        Task LoadCheckPoint();
-        /// <summary>
-        /// Save check point to recover progress
-        /// </summary>
-        Task SaveCheckPoint();
+        /// <param name="url">Url</param>
+        void PushBackUrl(string url);
         /// <summary>
         /// Is no url to be fetched
         /// </summary>

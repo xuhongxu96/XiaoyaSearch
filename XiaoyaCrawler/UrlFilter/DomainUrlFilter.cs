@@ -21,15 +21,5 @@ namespace XiaoyaCrawler.UrlFilter
         {
             return urls.Where(o => mDomainPattern.IsMatch(o)).ToList();
         }
-
-        public async Task LoadCheckPoint()
-        {
-            return;
-        }
-
-        public async Task SaveCheckPoint()
-        {
-            return;
-        }
     }
 }
