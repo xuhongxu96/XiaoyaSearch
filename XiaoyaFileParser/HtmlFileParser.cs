@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 using XiaoyaFileParser.Model;
 using XiaoyaFileParser.Config;
 using XiaoyaStore.Data.Model;
+using AngleSharp.Extensions;
 
 namespace XiaoyaFileParser
 {
     public class HtmlFileParser : TextFileParser
     {
         protected HtmlParser mParser = new HtmlParser();
-        protected string mTextContent = null;
 
         public HtmlFileParser() : base() { }
 
@@ -43,7 +43,15 @@ namespace XiaoyaFileParser
                 var content = await GetContentAsync();
 
                 var document = await mParser.ParseAsync(content);
-                mTextContent = document.Body.TextContent;
+
+                var scripts = document.GetElementsByTagName("script");
+
+                foreach (var script in scripts)
+                {
+                    script.Parent.RemoveChild(script);
+                }
+
+                mTextContent = document.Body.Text();
             }
             return mTextContent;
         }

@@ -24,6 +24,11 @@ namespace XiaoyaStore.Store
                     .OrderBy(o => o.UpdatedAt)
                     .FirstOrDefault(o => o.IsIndexed == false);
 
+                if (urlFile == null)
+                {
+                    return null;
+                }
+
                 urlFile.IsIndexed = true;
                 context.SaveChanges();
 
@@ -65,8 +70,7 @@ namespace XiaoyaStore.Store
                 else
                 {
                     // Exists this url, then judge if two fetched file is same
-                    if (oldUrlFile.FileHash != urlFile.FileHash
-                        || (urlFile.Content != "" && oldUrlFile.Content != urlFile.Content))
+                    if (urlFile.Content != "" && oldUrlFile.Content != urlFile.Content)
                     {
                         // Updated
                         var updateInterval = DateTime.Now.Subtract(oldUrlFile.UpdatedAt);

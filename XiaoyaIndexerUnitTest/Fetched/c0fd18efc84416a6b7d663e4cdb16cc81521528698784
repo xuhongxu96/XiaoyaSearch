@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <title>北京师范大学 - Beijing Normal University</title>
+
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="author" content="Beijing Normal University" /> 
+
+    <meta name="description" content="北京师范大学是教育部直属重点大学，是一所以教师教育、教育科学和文理基础学科为主要特色的著名学府。学校的前身是1902年创立的京师大学堂师范馆，1908年改称京师优级师范学堂，独立设校。1912年改名为北京高等师范学校。1923年更名为北京师范大学，成为中国历史上第一所师范大学。1931年、1952年北平女子师范大学、辅仁大学先后并入北京师范大学。" />
+
+    <!-- Bootstrap -->
+
+    <link href="../3/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="../3/css/flexslider.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+
+    <!--[if lt IE 9]>
+
+      <script src="../3/js/html5shiv.js"></script>
+
+      <script src="../3/js/respond.min.js"></script>
+
+    <![endif]-->
+
+    <link href="../3/css/style.css" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <!-- Static navbar -->
+
+    <div class="navbar navbar-up navbar-static-top">
+
+    	<div class="container">
+
+	    	<div class="row">
+
+	    		<div class="col-md-4 link2eng"><a href="http://english.bnu.edu.cn/" target="_blank">ENGLISH VERSION</a></div>
+
+	    		<div class="navbar-right navlist-topright">
+
+	    			<a href="mailto:bnu_chengjianping@bnu.edu.cn">书记信箱</a>
+
+	    			<a href="mailto:xzxx@bnu.edu.cn">校长信箱</a>
+
+	    			<a href="http://www.bnu.edu.cn/xfzc/80823.html">校领导信箱</a>
+
+	    			<a href="../xfzc/52576.html">接待日</a>
+
+	    			<form name="dataForm" action="/cms/search/searchResults.jsp" target="_blank" method="post" accept-Charset="utf-8"  onsubmit="document.charset='utf-8';">
+          <input name="siteID" size="4" value="53" type = "hidden">        
+          <INPUT value="校内搜索" type="image" src="../imgs/searchbtn-bg.png" class="search-submit" />
+          <input title="校内搜索" maxlength=255 size=15  name="query" type="text" class="search-input" /> 
+        </form>
+
+	    		</div>	
+
+	    	</div>
+
+    	</div>
+
+    </div>
+
+    <div class="navbar navbar-default navbar-down navbar-static-top" role="navigation">
+
+		<div class="container">
+
+			<div class="row">
+
+				<div class="nav navbar-header  uni-logo col-md-3">
+
+				  
+
+				  <a href="../"><img src="../3/imgs/BNU-logo.png" class="img-responsive" alt="北京师范大学" /></a>
+
+ 					
+
+ 				  <div class="navbar-toggle visible-xs nomargintop selecttogo select-xs xs-navlist-toggle">
+
+				  	导航
+
+				  </div>
+
+				</div>
+
+				
+
+				<div class="navbar-collapse collapse">
+
+				  <div class="navbar-toggle visible-sm nomargintop selecttogo  select-xs xs-navlist-toggle">
+
+				  	导航
+
+				  </div>
+
+				  <ul class="nav navbar-nav navbar-right col-md-9 navlist visible-lg visible-md">
+
+                  <li class="dropdown">
+
+				    	<a style="border-right: 1px solid rgb(212, 211, 206);" href="http://news.bnu.edu.cn/" target="_blank" class="fisrtmenu">师大新闻</a>
+
+				    	<ul style="display: none;" class="dropdown-menu subnavlist">
+
+			                <li><a href="http://news.bnu.edu.cn/twbd/" target="_blank">图文报道</a></li>
+
+			                <li><a href="http://news.bnu.edu.cn/spkj/" target="_blank">网络电视</a></li>
+
+			                <li><a href="http://bnu.cuepa.cn/" target="_blank">校报在线</a></li>
+
+			                <li><a href="http://news.bnu.edu.cn/mtsd/" target="_blank">媒体师大</a></li>
+
+			            </ul>
+
+				    </li>
+
+				    <li class="dropdown">
+
+				    	<a style="border-right: 1px solid rgb(212, 211, 206);" href="#" class="fisrtmenu">学校概况</a>
+
+				    	<ul style="display: none;" class="dropdown-menu subnavlist">
+
+
+			                <li><a href="http://www.bnu.edu.cn/xxgk/xxjj/index.html">学校简介</a></li>
+
+			                <li><a href="http://www.bnu.edu.cn/xxgk/xsyg/index.html">校史沿革</a></li>
+
+			                <li><a href="http://www.bnu.edu.cn/xxgk/xrxld/index.html">现任校领导</a></li>
+
+			                <li><a href="http://www.bnu.edu.cn/xxgk/lrsj/index.html">历任书记</a></li>
+
+                                                                <li><a href="http://www.bnu.edu.cn/xxgk/lrxz/index.html">历任校长</a></li>
+			                <li><a href="http://www.bnu.edu.cn/xxgk/zmxz/index.html">著名学者</a></li>
+                                                                   <li><a href="http://www.bnu.edu.cn/xxgk/lsmr/index.html">历史名人</a></li>
+
+			            </ul>
+
+				    </li>
+
+				    <li><a href="http://www.bnu.edu.cn/yxsz/" class="fisrtmenu">院系设置</a></li>
+
+				    <li><a href="http://www.bnu.edu.cn/gljg/" class="fisrtmenu">管理机构</a></li>
+
+				    <li><a href="http://hr.bnu.edu.cn/rcgzbgs/dashouye.html" target="_blank" class="fisrtmenu">人才招聘</a></li>
+
+				    <li><a href="http://www.bnu.edu.cn/kxyj/" class="fisrtmenu">科学研究</a></li>
+
+				    <li class="dropdown">
+
+				    	<a href="#" class="dropdown-toggle fisrtmenu">招生就业</a>
+
+				    	<ul style="display: none;" class="dropdown-menu subnavlist">
+
+			                <li><a href="http://admission.bnu.edu.cn/" target="_blank">本科生招生</a></li>
+
+			                <li><a href="http://yz.bnu.edu.cn/" target="_blank">研究生招生</a></li>
+                          <li><a href="http://hr.bnu.edu.cn/bsh/index.htm" target="_blank">博士后</a></li>
+
+			                <li><a href="Http://iso.bnu.edu.cn" target="_blank">留学生招生</a></li>
+
+			                <li><a href="http://www.scett.bnu.edu.cn/" target="_blank">继续教育与教师培训</a></li>
+
+			                <li><a href="http://career.bnu.edu.cn/" target="_blank">就业与创业</a></li>
+
+			            </ul>
+
+			        </li>
+
+				    <li class="dropdown">
+
+				    	<a href="#" class="dropdown-toggle fisrtmenu">合作交流</a>
+
+				    	<ul style="display: none;" class="dropdown-menu subnavlist">
+
+			                <li><a href="http://oiec.bnu.edu.cn/" target="_blank">国际交流与合作</a></li>
+
+			                <li><a href="http://gnhz.bnu.edu.cn/" target="_blank">国内合作</a></li>
+
+			                <li><a href="http://ipo.bnu.edu.cn/gat/index_gat.html" target="_blank">港澳台事务</a></li>
+
+			                <li><a href="http://www.bnuef.org/" target="_blank">教育基金会</a></li>
+
+			            </ul>
+
+			        </li>
+
+				    <li class="dropdown">
+
+				    	<a href="#" class="dropdown-toggle fisrtmenu">图书档案</a>
+
+				    	<ul style="display: none;" class="dropdown-menu subnavlist">
+
+			                <li><a href="http://www.lib.bnu.edu.cn/" target="_blank">图书馆</a></li>
+
+			                <li><a href="http://dangan.bnu.edu.cn" target="_blank">档案馆</a></li>
+
+			            </ul>
+
+			        </li>
+
+				    <li class="dropdown">
+
+				    	<a href="#" class="dropdown-toggle fisrtmenu last">走进师大</a>
+
+				    	<ul style="display: none;" class="dropdown-menu subnavlist subnavlist-last">
+
+			                <li><a href="http://www.bnu.edu.cn/map/" target="_blank">校园地图</a></li>
+
+			                <li><a href="http://news.bnu.edu.cn/sdtk/">校园风光</a></li>
+
+			                <li><a href="http://www.bnu.edu.cn/zjsd/52915.html">校　历</a></li>
+
+			                <li><a href="http://www.bnu.edu.cn/zjsd/52916.html">黄　页</a></li>
+
+			            </ul>
+
+			        </li>
+
+				  </ul>
+
+				</div><!--/.nav-collapse -->
+
+			</div>
+
+		</div>
+
+    </div>
+
+    <div class="navbar navbar-bg hidden-md">
+
+    	<div class="container">
+
+    		<div class="row">
+
+    			<ul class="nav xs-navlist" style="display:none;">
+
+                  	<li class="col-sm-4 col-xs-6"><a style="" href="http://news.bnu.edu.cn/" target="_blank" class="">师大新闻</a></li>
+
+				    <li class="col-sm-4 col-xs-6"><a style="" href="../xxgk/" class="">学校概况</a></li>
+
+				    <li class="col-sm-4 col-xs-6"><a href="http://www.bnu.edu.cn/yxsz/" class="">院系设置</a></li>
+
+				    <li class="col-sm-4 col-xs-6"><a href="http://www.bnu.edu.cn/gljg/" class="">管理机构</a></li>
+
+				    <li class="col-sm-4 col-xs-6"><a href="http://hr.bnu.edu.cn/rcgzbgs/dashouye.html" target="_blank" class="">人才招聘</a></li>
+
+				    <li class="col-sm-4 col-xs-6"><a href="http://www.bnu.edu.cn/kxyj/" class="">科学研究</a></li>
+
+				    <li class="col-sm-4 col-xs-6"><a href="../zsjy/" class="">招生就业</a></li>
+
+				    <li class="col-sm-4 col-xs-6"><a href="../hzjl/" class="">合作交流</a></li>
+
+				    <li class="col-sm-4 col-xs-6"><a href="../tsda/" class="">图书档案</a></li>
+
+				    <li class="col-sm-4 col-xs-6"><a href="../zjsd/" class="">走进师大</a></li>
+
+			        <li class="col-sm-4 col-xs-6"><a href="mailto:bnu_liuchuansheng@bnu.edu.cn">书记信箱</a></li>
+
+	    			<li class="col-sm-4 col-xs-6"><a href="mailto:xzxx@bnu.edu.cn">校长信箱</a></li>
+
+	    			<li class="col-sm-4 col-xs-6"><a href="http://www.bnu.edu.cn/xfzc/80823.html">校领导信箱</a></li>
+
+	    			<li class="col-sm-4 col-xs-6"><a href="http://www.bnu.edu.cn/xfzc/52576.html">接待日</a></li>
+
+				  </ul>
+
+    		</div>
+
+    	</div>
+
+    </div>
+    <div class="main mainbg1">
+	    <div class="container">
+	    	<div class="subcontent row">
+	    		<div class="subtitle">学校各单位学习贯彻落实党的十九大精神</div>
+	    		<div class="subbody">
+	    			<div class="subbody-b col-md-12">
+	    				<div class="subbody-b-nav">当前位置：			<a href="../index.html">首页</a> &raquo; 
+			  学校各单位学习贯彻落实党的十九大精神</div>
+	    				<div class="subbody-b-list">
+		    				<ul>
+            		    					<li><a href="85256.html" target="_blank" title="学校师生热议党的十九大报告" class="">            学校师生热议党的十九大报告 
+    </a><span class="counr">阅读<script src="/cms/web/count.jsp?articleID=85256"></script>次</span><span class="pull-right">2017-10-20&nbsp;&nbsp;</span></li>		    				
+      		    					<li><a href="85255.html" target="_blank" title="学校组织师生员工集中观看中国共产党第十九次全国代表大会开幕会" class="">            学校组织师生员工集中观看中国共产党第十九次全国代表大会开幕会 
+    </a><span class="counr">阅读<script src="/cms/web/count.jsp?articleID=85255"></script>次</span><span class="pull-right">2017-10-18&nbsp;&nbsp;</span></li>		    				
+      		    					<li><a href="85535.html" target="_blank" title="学校召开学习宣传贯彻党的十九大精神大会" class="">            学校召开学习宣传贯彻党的十九大精神大会 
+    </a><span class="counr">阅读<script src="/cms/web/count.jsp?articleID=85535"></script>次</span><span class="pull-right">2017-11-25&nbsp;&nbsp;</span></li>		    				
+      		    					<li><a href="86040.html" target="_blank" title="“新时代新作为”与十九大代表面对面巡讲活动在我校举行" class="">            “新时代新作为”与十九大代表面对面巡讲活动在我校举行 
+    </a><span class="counr">阅读<script src="/cms/web/count.jsp?articleID=86040"></script>次</span><span class="pull-right">2018-01-08&nbsp;&nbsp;</span></li>		    				
+      		    					<li><a href="86039.html" target="_blank" title="学校举办“与十九大代表面对面”专题报告会" class="">            学校举办“与十九大代表面对面”专题报告会 
+    </a><span class="counr">阅读<script src="/cms/web/count.jsp?articleID=86039"></script>次</span><span class="pull-right">2018-01-08&nbsp;&nbsp;</span></li>		    				
+      		    					<li><a href="85877.html" target="_blank" title="党的十九大代表来我校宣讲党的十九大精神" class="">            党的十九大代表来我校宣讲党的十九大精神 
+    </a><span class="counr">阅读<script src="/cms/web/count.jsp?articleID=85877"></script>次</span><span class="pull-right">2017-12-22&nbsp;&nbsp;</span></li>		    				
+      		    					<li><a href="85864.html" target="_blank" title="首都高校学习十九大精神论坛在我校举办" class="">            首都高校学习十九大精神论坛在我校举办 
+    </a><span class="counr">阅读<script src="/cms/web/count.jsp?articleID=85864"></script>次</span><span class="pull-right">2017-12-20&nbsp;&nbsp;</span></li>		    				
+      		    					<li><a href="85863.html" target="_blank" title="学校举办“与十九大代表面对面”专题报告会" class="">            学校举办“与十九大代表面对面”专题报告会 
+    </a><span class="counr">阅读<script src="/cms/web/count.jsp?articleID=85863"></script>次</span><span class="pull-right">2017-12-20&nbsp;&nbsp;</span></li>		    				
+      		    					<li><a href="85838.html" target="_blank" title="实验小学开展学习贯彻党的十九大精神系列活动" class="">            实验小学开展学习贯彻党的十九大精神系列活动 
+    </a><span class="counr">阅读<script src="/cms/web/count.jsp?articleID=85838"></script>次</span><span class="pull-right">2017-12-20&nbsp;&nbsp;</span></li>		    				
+      		    					<li><a href="85744.html" target="_blank" title="党委宣传部、党委保卫部联合举办党的十九大精神学习报告会" class="">            党委宣传部、党委保卫部联合举办党的十九大精神学习报告会 
+    </a><span class="counr">阅读<script src="/cms/web/count.jsp?articleID=85744"></script>次</span><span class="pull-right">2017-12-11&nbsp;&nbsp;</span></li>		    				
+      		    					<li><a href="85673.html" target="_blank" title="学校举办学习党的十九大精神主题知识竞赛" class="">            学校举办学习党的十九大精神主题知识竞赛 
+    </a><span class="counr">阅读<script src="/cms/web/count.jsp?articleID=85673"></script>次</span><span class="pull-right">2017-12-05&nbsp;&nbsp;</span></li>		    				
+      		    					<li><a href="85600.html" target="_blank" title="新闻传播学院举办党的十九大精神宣讲会" class="">            新闻传播学院举办党的十九大精神宣讲会 
+    </a><span class="counr">阅读<script src="/cms/web/count.jsp?articleID=85600"></script>次</span><span class="pull-right">2017-11-29&nbsp;&nbsp;</span></li>		    				
+      		    					<li><a href="85534.html" target="_blank" title="学校举办学习党的十九大精神专题讲座" class="">            学校举办学习党的十九大精神专题讲座 
+    </a><span class="counr">阅读<script src="/cms/web/count.jsp?articleID=85534"></script>次</span><span class="pull-right">2017-11-25&nbsp;&nbsp;</span></li>		    				
+      		    					<li><a href="85533.html" target="_blank" title="经济与工商管理学院举办学习贯彻党的十九大精神系列活动" class="">            经济与工商管理学院举办学习贯彻党的十九大精神系列活动 
+    </a><span class="counr">阅读<script src="/cms/web/count.jsp?articleID=85533"></script>次</span><span class="pull-right">2017-11-25&nbsp;&nbsp;</span></li>		    				
+      		    					<li><a href="85530.html" target="_blank" title="刑事法律科学研究院举办党的十九大精神宣讲报告会" class="">            刑事法律科学研究院举办党的十九大精神宣讲报告会 
+    </a><span class="counr">阅读<script src="/cms/web/count.jsp?articleID=85530"></script>次</span><span class="pull-right">2017-11-24&nbsp;&nbsp;</span></li>		    				
+      		    					<li><a href="85529.html" target="_blank" title="艺术与传媒学院开展学习宣传贯彻党的十九大精神系列活动" class="">            艺术与传媒学院开展学习宣传贯彻党的十九大精神系列活动 
+    </a><span class="counr">阅读<script src="/cms/web/count.jsp?articleID=85529"></script>次</span><span class="pull-right">2017-11-24&nbsp;&nbsp;</span></li>		    				
+      		    					<li><a href="85515.html" target="_blank" title="北京高校辅导员骨干学习贯彻领会党的十九大精神高级研修班在我校成功举办" class="">            北京高校辅导员骨干学习贯彻领会党的十九大精神高级研修班在我校成功举办 
+    </a><span class="counr">阅读<script src="/cms/web/count.jsp?articleID=85515"></script>次</span><span class="pull-right">2017-11-23&nbsp;&nbsp;</span></li>		    				
+      		    					<li><a href="85514.html" target="_blank" title="党的十九大代表王淑芳来校作专题报告" class="">            党的十九大代表王淑芳来校作专题报告 
+    </a><span class="counr">阅读<script src="/cms/web/count.jsp?articleID=85514"></script>次</span><span class="pull-right">2017-11-23&nbsp;&nbsp;</span></li>		    				
+      		    					<li><a href="85513.html" target="_blank" title="政府管理学院举办学习贯彻党的十九大精神座谈会" class="">            政府管理学院举办学习贯彻党的十九大精神座谈会 
+    </a><span class="counr">阅读<script src="/cms/web/count.jsp?articleID=85513"></script>次</span><span class="pull-right">2017-11-23&nbsp;&nbsp;</span></li>		    				
+      		    					<li><a href="85482.html" target="_blank" title="文学院二级党校举行“学习党的十九大精神”主题报告会" class="">            文学院二级党校举行“学习党的十九大精神”主题报告会 
+    </a><span class="counr">阅读<script src="/cms/web/count.jsp?articleID=85482"></script>次</span><span class="pull-right">2017-11-21&nbsp;&nbsp;</span></li>		    				
+</ul>
+		    				<div class="pagenav">
+		    					<div class="pagenav-count col-sm-6">
+		    						<span>当前第 1 页</span>
+		    						<span>总页数： 4 页</span>
+		    						<span>总文章数： 64 篇</span>
+
+		    					</div>
+		    					<div class="pagenav-btn col-sm-6">
+		    						<a href="index.html" >首页</a>&nbsp;&nbsp;		    						<a href="index.html">上一页</a>&nbsp;&nbsp;		    						<a 
+                                href="index1.html">下一页</a>&nbsp;&nbsp;		    						<a 
+                                href="index3.html">末页</a>
+		    					</div>
+		    				</div>
+	    				</div>
+	    			</div>
+	    		</div>
+		    
+	    	</div>
+
+<div class="footercontant  row">
+
+	    		<div class="footercontantline col-md-12">
+
+	    			<span class="col-md-10">&copy; 版权所有 北京师范大学&nbsp;&nbsp;地址：北京市新街口外大街19号&nbsp;&nbsp;邮编：100875&nbsp;&nbsp;京ICP备05066832号-1 &nbsp;&nbsp;京公网安备110402430002号&nbsp;&nbsp;电话查号台：010-58806183&nbsp;&nbsp;后勤服务热线：010-58801111</span>
+
+	    			<span class="col-md-2 right">Site designed by MONOKEROS</span>
+
+	    		</div>
+
+				<div class="footercontantline col-md-12">
+
+					<span class="col-md-9"></span>
+
+					<span class="col-md-3 right"></span>
+
+				</div>
+
+			</div>
+
+		</div>	
+
+	</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+    <script src="../3/js/jquery.min.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+
+    <script src="../3/js/bootstrap.min.js"></script>
+
+    <script src="../3/js/jquery.flexslider-min.js"></script>
+<map name="Map">
+  <area shape="rect" coords="2,3,26,27" href=" http://e.weibo.com/lovebnu/profile" target="_blank">
+  </map>
+<map name="Map2">
+  <area shape="rect" coords="4,5,26,26" href="http://www.bnu.edu.cn/xzdt/51346.html" target="_blank">
+  </map>
+    <script>
+
+
+	  // Can also be used with $(document).ready()
+
+	$(document).ready(function(){
+
+	  $('.xs-navlist-toggle').click(function(){
+	  	$('.xs-navlist').toggle();
+	  });
+
+	  $('.flexslider').flexslider({
+
+	    animation: "slide",
+
+	    slideshowSpeed: 10000
+
+	    //controlsContainer: ".flex-container"
+
+	  });
+
+	  $('.navlist li a.fisrtmenu').hover(function(){
+
+	  	$(this).css("border-right","1px solid #fff");
+
+	  	$(this).parent().prev().children('a').css("border-right","1px solid #fff");
+	  	$('.subnavlist').hide();
+	  	$(this).next('.subnavlist').fadeIn();
+	  	
+
+	  },function(){
+
+	  	$(this).css("border-right","1px solid #d4d3ce");
+	  	$(this).parent().prev().children('a').css("border-right","1px solid #d4d3ce");
+
+	  });
+
+	  $('.navbar-nav').hover(function(){
+	  	$('.subnavlist').hide();
+	  });
+
+	  $('.subnavlist').hover(function(){
+	  	$(this).parent().addClass('active');
+	  }, function(){
+	  	$(this).parent().removeClass('active');
+	  	$(this).fadeOut();
+	  });
+
+	  $(function(){
+
+      // bind change event to select
+
+      $('.selecttogo').bind('change', function () {
+
+          var url = $(this).val(); // get selected value
+
+          if (url) { // require a URL
+
+              window.location = url; // redirect
+
+          }
+
+          return false;
+
+      });
+
+    });
+
+	});
+
+	</script>
+
+
+  </body>
+
+</html></body></html></body></html></body></html>

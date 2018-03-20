@@ -23,7 +23,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XiaoyaNLPUnitTest", "Xiaoya
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XiaoyaStoreUnitTest", "XiaoyaStoreUnitTest\XiaoyaStoreUnitTest.csproj", "{B7BDFFF9-B8AC-4E30-972A-E8E9308D2335}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XiaoyaCrawlerUnitTest", "XiaoyaCrawlerUnitTest\XiaoyaCrawlerUnitTest.csproj", "{FC2DE6D6-0572-43E4-A382-59C2D54FC19B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XiaoyaCrawlerUnitTest", "XiaoyaCrawlerUnitTest\XiaoyaCrawlerUnitTest.csproj", "{FC2DE6D6-0572-43E4-A382-59C2D54FC19B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XiaoyaIndexerUnitTest", "XiaoyaIndexerUnitTest\XiaoyaIndexerUnitTest.csproj", "{DAFE6DED-131E-4098-9A1B-C5CC612E3DDA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,10 @@ Global
 		{FC2DE6D6-0572-43E4-A382-59C2D54FC19B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC2DE6D6-0572-43E4-A382-59C2D54FC19B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC2DE6D6-0572-43E4-A382-59C2D54FC19B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAFE6DED-131E-4098-9A1B-C5CC612E3DDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAFE6DED-131E-4098-9A1B-C5CC612E3DDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAFE6DED-131E-4098-9A1B-C5CC612E3DDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAFE6DED-131E-4098-9A1B-C5CC612E3DDA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

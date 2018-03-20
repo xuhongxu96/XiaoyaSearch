@@ -9,6 +9,8 @@ using XiaoyaFileParser.Model;
 using XiaoyaStore.Store;
 using XiaoyaStore.Data.Model;
 using XiaoyaIndexer.Config;
+using XiaoyaLogger;
+using System.IO;
 
 namespace XiaoyaIndexer
 {
@@ -17,28 +19,38 @@ namespace XiaoyaIndexer
 
         protected CancellationTokenSource mCancellationTokenSource = null;
         protected UniversalFileParser mParser = new UniversalFileParser();
-        protected IndexerConfig mConfig = new IndexerConfig();
-
-        public SimpleIndexer() { }
+        protected IndexerConfig mConfig;
+        protected RuntimeLogger mLogger;
 
         public SimpleIndexer(IndexerConfig config)
         {
+            mLogger = new RuntimeLogger(Path.Combine(config.LogDirectory, "Indexer.Log"));
             mConfig = config;
         }
 
         protected async Task IndexFilesAsync(CancellationToken cancellationToken)
         {
+            int waitSeconds = 1;
             while (true)
             {
-
-                cancellationToken.ThrowIfCancellationRequested();
+                if (cancellationToken.IsCancellationRequested)
+                {
+                    break;
+                }
 
                 var urlFile = mConfig.UrlFileStore.LoadAnyForIndex();
                 if (urlFile == null)
                 {
-                    await Task.Run(() => Thread.Sleep(5000));
+                    await Task.Run(() => Thread.Sleep(waitSeconds * 1000));
+                    if (waitSeconds < 32)
+                    {
+                        waitSeconds *= 2;
+                    }
                     continue;
                 }
+                waitSeconds = 1;
+
+                mLogger.Log(nameof(SimpleIndexer), "Indexing Url: " + urlFile.Url);
 
                 mParser.UrlFile = urlFile;
                 IList<Token> tokens = await mParser.GetTokensAsync();
@@ -53,6 +65,8 @@ namespace XiaoyaIndexer
 
                 mConfig.InvertedIndexStore.ClearInvertedIndicesOf(urlFile);
                 mConfig.InvertedIndexStore.SaveInvertedIndices(invertedIndices);
+
+                mLogger.Log(nameof(SimpleIndexer), "Indexed Url: " + urlFile.Url);
             }
         }
 

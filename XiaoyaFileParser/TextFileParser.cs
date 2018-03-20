@@ -19,12 +19,13 @@ namespace XiaoyaFileParser
             set
             {
                 mUrlFile = value;
-                mContent = mUrlFile.Content;
+                mTextContent = mUrlFile.Content;
             }
         }
 
         protected FileParserConfig mConfig = new FileParserConfig();
         protected string mContent = null;
+        protected string mTextContent = null;
 
         public TextFileParser() { }
 
@@ -63,7 +64,11 @@ namespace XiaoyaFileParser
 
         public virtual async Task<string> GetTextContentAsync()
         {
-            return await GetContentAsync();
+            if (mTextContent == null)
+            {
+                mTextContent = await GetContentAsync();
+            }
+            return mTextContent;
         }
 
         public virtual async Task<IList<string>> GetUrlsAsync()

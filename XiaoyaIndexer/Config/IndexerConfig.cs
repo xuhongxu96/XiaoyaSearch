@@ -7,6 +7,8 @@ namespace XiaoyaIndexer.Config
 {
     public class IndexerConfig
     {
+        public string LogDirectory { get; set; } = "Logs";
+
         public IUrlFileStore UrlFileStore { get; set; }
         public IInvertedIndexStore InvertedIndexStore { get; set; }
     }

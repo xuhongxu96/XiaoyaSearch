@@ -35,7 +35,7 @@ namespace XiaoyaStoreUnitTest
                 {
                     Url = "http://www.bnu.edu.cn",
                     FilePath = @"D:\a.html",
-                    FileHash = "abcd",
+                    Content = "abcd",
                     Charset = "utf8",
                     MimeType = "text/html",
                 });
@@ -74,7 +74,7 @@ namespace XiaoyaStoreUnitTest
                 {
                     Url = "http://www.bnu.edu.cn",
                     FilePath = @"D:\a.html",
-                    FileHash = "abcd",
+                    Content = "abcd",
                     Charset = "utf8",
                     MimeType = "text/html",
                 });
@@ -85,7 +85,7 @@ namespace XiaoyaStoreUnitTest
                 {
                     Url = "http://www.bnu.edu.cn/news",
                     FilePath = @"D:\b.html",
-                    FileHash = "abcdef",
+                    Content = "abcdef",
                     Charset = "utf8",
                     MimeType = "text/html",
                 });
@@ -129,7 +129,7 @@ namespace XiaoyaStoreUnitTest
                 {
                     Url = "http://www.bnu.edu.cn",
                     FilePath = @"D:\a.html",
-                    FileHash = "abcd",
+                    Content = "abcd",
                     Charset = "utf8",
                     MimeType = "text/html",
                 });
@@ -145,7 +145,7 @@ namespace XiaoyaStoreUnitTest
                 {
                     Url = "http://www.bnu.edu.cn",
                     FilePath = @"D:\b.html",
-                    FileHash = "abcdef",
+                    Content = "abcdef",
                     Charset = "utf8",
                     MimeType = "text/html",
                 });
@@ -185,7 +185,7 @@ namespace XiaoyaStoreUnitTest
                 {
                     Url = "http://www.bnu.edu.cn",
                     FilePath = @"D:\a.html",
-                    FileHash = "abcd",
+                    Content = "abcd",
                     Charset = "utf8",
                     MimeType = "text/html",
                 });
@@ -193,7 +193,7 @@ namespace XiaoyaStoreUnitTest
                 {
                     Url = "http://www.bnu.edu.cn/news",
                     FilePath = @"D:\b.html",
-                    FileHash = "abcdef",
+                    Content = "abcdef",
                     Charset = "utf8",
                     MimeType = "text/html",
                 });
@@ -234,7 +234,7 @@ namespace XiaoyaStoreUnitTest
                 {
                     Url = "http://www.bnu.edu.cn",
                     FilePath = @"D:\a.html",
-                    FileHash = "abcd",
+                    Content = "abcd",
                     Charset = "utf8",
                     MimeType = "text/html",
                 });
@@ -242,7 +242,7 @@ namespace XiaoyaStoreUnitTest
                 {
                     Url = "http://www.bnu.edu.cn/news",
                     FilePath = @"D:\b.html",
-                    FileHash = "abcdef",
+                    Content = "abcdef",
                     Charset = "utf8",
                     MimeType = "text/html",
                 });
@@ -283,7 +283,7 @@ namespace XiaoyaStoreUnitTest
                 {
                     Url = "http://www.bnu.edu.cn",
                     FilePath = @"D:\a.html",
-                    FileHash = "abcd",
+                    Content = "abcd",
                     Charset = "utf8",
                     MimeType = "text/html",
                 });
@@ -291,7 +291,7 @@ namespace XiaoyaStoreUnitTest
                 {
                     Url = "http://www.bnu.edu.cn/news",
                     FilePath = @"D:\b.html",
-                    FileHash = "abcdef",
+                    Content = "abcdef",
                     Charset = "utf8",
                     MimeType = "text/html",
                 });

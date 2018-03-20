@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\XiaoyaFileParser\XiaoyaFileParser.csproj" />
+    <ProjectReference Include="..\XiaoyaLogger\XiaoyaLogger.csproj" />
     <ProjectReference Include="..\XiaoyaStore\XiaoyaStore.csproj" />
   </ItemGroup>
 

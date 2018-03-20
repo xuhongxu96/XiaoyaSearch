@@ -22,7 +22,6 @@ namespace XiaoyaCrawlerUnitTest
     [TestClass]
     public class CrawlerUnitTest
     {
-
         private string logDir = Path.Combine(Path.GetTempPath(), "Logs");
         private string fetchDir = Path.Combine(Path.GetTempPath(), "Fetched");
 
@@ -95,11 +94,16 @@ namespace XiaoyaCrawlerUnitTest
 
             await crawler.StopAsync();
 
+            var urlFileCount = 0;
+
             using (var context = new XiaoyaSearchContext(options))
             {
-                Assert.IsTrue(context.UrlFiles.Count() > 0);
+                urlFileCount = context.UrlFiles.Count();
+                Assert.IsTrue(urlFileCount > 0);
                 Assert.IsTrue(context.UrlFrontierItems.Count() > 0);
             }
+
+            Assert.AreEqual(urlFileCount, Directory.GetFiles(fetchDir).Length);
 
             lock (RuntimeLogger.ReadLock)
             {

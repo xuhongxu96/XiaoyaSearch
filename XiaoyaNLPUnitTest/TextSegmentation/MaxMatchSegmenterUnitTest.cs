@@ -14,12 +14,18 @@ namespace XiaoyaNLPUnitTest.TextSegmentation
         public void TestMaxMatchSegmenter()
         {
             var segmenter = new MaxMatchSegmenter("../../../../Resources/30wdict_utf8.txt");
-            var segments = segmenter.Segment("中文分词中华人民共和国");
+            var segments = segmenter.Segment("中文分词中华人民共和国Hello World!你\n好，我 们");
             var words = segments.Select(o => o.Text);
 
             Assert.IsTrue(words.Contains("中文"));
             Assert.IsTrue(words.Contains("分词"));
             Assert.IsTrue(words.Contains("中华人民共和国"));
+            Assert.IsTrue(words.Contains("你"));
+            Assert.IsTrue(words.Contains("好"));
+            Assert.IsTrue(words.Contains("我"));
+            Assert.IsTrue(words.Contains("们"));
+            Assert.IsTrue(words.Contains("Hello"));
+            Assert.IsTrue(words.Contains("World"));
 
             foreach (var segment in segments)
             {

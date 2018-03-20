@@ -1,0 +1,61 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.3.0" />
+    <PackageReference Include="MSTest.TestAdapter" Version="1.1.18" />
+    <PackageReference Include="MSTest.TestFramework" Version="1.1.18" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\XiaoyaIndexer\XiaoyaIndexer.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Fetched\2bd90fa7bac4f6c45e6d641267abf65a1521528697570">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Fetched\4adb4c6b07f9269e5c5e24a6eaa8bdc61521528698656">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Fetched\633f9c718a944a7ac30af43925a610971521528710686">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Fetched\87ab38521134eb207f371918b257dd031521528695469">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Fetched\926f3be16330aeeb3aa33eb42d760aed1521528695450">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Fetched\ab27aa43dfb1066430a6dc8b418a34171521528698651">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Fetched\b829b43ef09a8cbad500e16bcbf62d1a1521528695613">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Fetched\c0fd18efc84416a6b7d663e4cdb16cc81521528698784">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Fetched\c43dc64881791dd118b30fc5727c9b801521528698584">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Fetched\d8d8be3710754556c8914c5414605ff51521528698653">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Fetched\dc42c0b2e41ea268a2706084c66d19d41521528705317">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Fetched\dcdf7f2ed50fe8b26fe13f996595a8121521528695420">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="XiaoyaSearch.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
