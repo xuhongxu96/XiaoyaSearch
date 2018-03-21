@@ -37,7 +37,7 @@ namespace XiaoyaIndexerUnitTest
             Directory.CreateDirectory(fetchDir);
             foreach (var file in Directory.EnumerateFiles("Fetched"))
             {
-                File.Copy(file, Path.Combine(fetchDir, Path.GetFileName(file)));
+                File.Copy(file, Path.Combine(fetchDir, Path.GetFileName(file)), true);
             }
 
             var options = new DbContextOptionsBuilder<XiaoyaSearchContext>()
@@ -53,7 +53,13 @@ namespace XiaoyaIndexerUnitTest
 
             using (var context = new XiaoyaSearchContext(options))
             {
+                context.Database.EnsureCreated();
+
+                context.RemoveRange(context.UrlFiles);
                 context.RemoveRange(context.InvertedIndices);
+                context.SaveChanges();
+
+                context.Database.ExecuteSqlCommand(File.ReadAllText("init.sql"));
             }
 
             IIndexer indexer = new SimpleIndexer(config);
@@ -63,7 +69,10 @@ namespace XiaoyaIndexerUnitTest
                 indexer.CreateIndexAsync().GetAwaiter().GetResult();
             });
 
-            Thread.Sleep(20000);
+            while (!indexer.IsWaiting)
+            {
+                Thread.Sleep(5000);
+            }
 
             indexer.StopIndex();
 
@@ -71,19 +80,17 @@ namespace XiaoyaIndexerUnitTest
             {
                 foreach (var urlFile in context.UrlFiles)
                 {
+                    Assert.IsTrue(urlFile.IsIndexed);
+
                     var id = urlFile.UrlFileId;
-                    if (urlFile.IsIndexed && urlFile.Content.Trim() != "")
+                    if (urlFile.Content.Trim() != "")
                     {
                         var indices = context.InvertedIndices
                             .Where(o => o.UrlFileId == id);
+
                         Assert.AreNotEqual(0, indices.Count());
                     }
                 }
-                var BNUFile = context.UrlFiles.Single(o => o.Url == "http://www.bnu.edu.cn");
-                var BNUIndices = context.InvertedIndices
-                    .Where(o => o.UrlFileId == BNUFile.UrlFileId)
-                    .ToList();
-                Assert.IsTrue((from index in BNUIndices select index.Word).Contains("北京师范大学"));
             }
         }
     }

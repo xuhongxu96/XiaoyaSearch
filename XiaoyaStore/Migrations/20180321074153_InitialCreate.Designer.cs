@@ -11,7 +11,7 @@ using XiaoyaStore.Data;
 namespace XiaoyaStore.Migrations
 {
     [DbContext(typeof(XiaoyaSearchContext))]
-    [Migration("20180318061249_InitialCreate")]
+    [Migration("20180321074153_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -19,6 +19,23 @@ namespace XiaoyaStore.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "2.0.2-rtm-10011");
+
+            modelBuilder.Entity("XiaoyaStore.Data.Model.IndexStat", b =>
+                {
+                    b.Property<int>("IndexStatId")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<long>("Count");
+
+                    b.Property<string>("Word");
+
+                    b.HasKey("IndexStatId");
+
+                    b.HasIndex("Word")
+                        .IsUnique();
+
+                    b.ToTable("IndexStats");
+                });
 
             modelBuilder.Entity("XiaoyaStore.Data.Model.InvertedIndex", b =>
                 {
@@ -106,7 +123,8 @@ namespace XiaoyaStore.Migrations
                     b.Property<DateTime>("UpdatedAt")
                         .IsConcurrencyToken();
 
-                    b.Property<string>("Url");
+                    b.Property<string>("Url")
+                        .IsConcurrencyToken();
 
                     b.HasKey("UrlFrontierItemId");
 

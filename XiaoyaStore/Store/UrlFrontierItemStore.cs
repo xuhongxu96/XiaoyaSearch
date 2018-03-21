@@ -41,11 +41,8 @@ namespace XiaoyaStore.Store
                 {
                     context.SaveChanges();
                 }
-                catch (DbUpdateConcurrencyException e)
-                {
-                    e.Entries.Single().Reload();
-                    context.SaveChanges();
-                }
+                catch (DbUpdateConcurrencyException)
+                { }
             }
         }
 

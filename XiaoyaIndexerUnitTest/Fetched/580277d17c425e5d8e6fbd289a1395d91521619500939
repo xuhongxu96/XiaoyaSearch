@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <title>北京师范大学 - Beijing Normal University</title>
+
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="author" content="Beijing Normal University" /> 
+
+    <meta name="description" content="北京师范大学是教育部直属重点大学，是一所以教师教育、教育科学和文理基础学科为主要特色的著名学府。学校的前身是1902年创立的京师大学堂师范馆，1908年改称京师优级师范学堂，独立设校。1912年改名为北京高等师范学校。1923年更名为北京师范大学，成为中国历史上第一所师范大学。1931年、1952年北平女子师范大学、辅仁大学先后并入北京师范大学。" />
+
+    <!-- Bootstrap -->
+
+    <link href="../3/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="../3/css/flexslider.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+
+    <!--[if lt IE 9]>
+
+      <script src="../3/js/html5shiv.js"></script>
+
+      <script src="../3/js/respond.min.js"></script>
+
+    <![endif]-->
+
+    <link href="../3/css/style.css" rel="stylesheet">
+<style type="text/css">
+.zhengwen_lf p {
+	margin-left: 0px;
+	text-indent: 0px;
+	text-align: left;
+	line-height: 2em;
+	padding: 0px;
+}
+</style>
+<script src="/cms/web/writeLog.jsp?articleID=86401"></script>
+  </head>
+
+    <!-- Static navbar -->
+
+    <div class="navbar navbar-up navbar-static-top">
+
+    	<div class="container">
+
+	    	<div class="row">
+
+	    		<div class="col-md-4 link2eng"><a href="http://english.bnu.edu.cn/" target="_blank">ENGLISH VERSION</a></div>
+
+	    		<div class="navbar-right navlist-topright">
+
+	    			<a href="mailto:bnu_chengjianping@bnu.edu.cn">书记信箱</a>
+
+	    			<a href="mailto:xzxx@bnu.edu.cn">校长信箱</a>
+
+	    			<a href="http://www.bnu.edu.cn/xfzc/80823.html">校领导信箱</a>
+
+	    			<a href="../xfzc/52576.html">接待日</a>
+
+	    			<form name="dataForm" action="/cms/search/searchResults.jsp" target="_blank" method="post" accept-Charset="utf-8"  onsubmit="document.charset='utf-8';">
+          <input name="siteID" size="4" value="53" type = "hidden">        
+          <INPUT value="校内搜索" type="image" src="../imgs/searchbtn-bg.png" class="search-submit" />
+          <input title="校内搜索" maxlength=255 size=15  name="query" type="text" class="search-input" /> 
+        </form>
+
+	    		</div>	
+
+	    	</div>
+
+    	</div>
+
+    </div>
+
+    <div class="navbar navbar-default navbar-down navbar-static-top" role="navigation">
+
+		<div class="container">
+
+			<div class="row">
+
+				<div class="nav navbar-header  uni-logo col-md-3">
+
+				  
+
+				  <a href="../"><img src="../3/imgs/BNU-logo.png" class="img-responsive" alt="北京师范大学" /></a>
+
+ 					
+
+ 				  <div class="navbar-toggle visible-xs nomargintop selecttogo select-xs xs-navlist-toggle">
+
+				  	导航
+
+				  </div>
+
+				</div>
+
+				
+
+				<div class="navbar-collapse collapse">
+
+				  <div class="navbar-toggle visible-sm nomargintop selecttogo  select-xs xs-navlist-toggle">
+
+				  	导航
+
+				  </div>
+
+				  <ul class="nav navbar-nav navbar-right col-md-9 navlist visible-lg visible-md">
+
+                  <li class="dropdown">
+
+				    	<a style="border-right: 1px solid rgb(212, 211, 206);" href="http://news.bnu.edu.cn/" target="_blank" class="fisrtmenu">师大新闻</a>
+
+				    	<ul style="display: none;" class="dropdown-menu subnavlist">
+
+			                <li><a href="http://news.bnu.edu.cn/twbd/" target="_blank">图文报道</a></li>
+
+			                <li><a href="http://news.bnu.edu.cn/spkj/" target="_blank">网络电视</a></li>
+
+			                <li><a href="http://bnu.cuepa.cn/" target="_blank">校报在线</a></li>
+
+			                <li><a href="http://news.bnu.edu.cn/mtsd/" target="_blank">媒体师大</a></li>
+
+			            </ul>
+
+				    </li>
+
+				    <li class="dropdown">
+
+				    	<a style="border-right: 1px solid rgb(212, 211, 206);" href="#" class="fisrtmenu">学校概况</a>
+
+				    	<ul style="display: none;" class="dropdown-menu subnavlist">
+
+
+			                <li><a href="http://www.bnu.edu.cn/xxgk/xxjj/index.html">学校简介</a></li>
+
+			                <li><a href="http://www.bnu.edu.cn/xxgk/xsyg/index.html">校史沿革</a></li>
+
+			                <li><a href="http://www.bnu.edu.cn/xxgk/xrxld/index.html">现任校领导</a></li>
+
+			                <li><a href="http://www.bnu.edu.cn/xxgk/lrsj/index.html">历任书记</a></li>
+
+                                                                <li><a href="http://www.bnu.edu.cn/xxgk/lrxz/index.html">历任校长</a></li>
+			                <li><a href="http://www.bnu.edu.cn/xxgk/zmxz/index.html">著名学者</a></li>
+                                                                   <li><a href="http://www.bnu.edu.cn/xxgk/lsmr/index.html">历史名人</a></li>
+
+			            </ul>
+
+				    </li>
+
+				    <li><a href="http://www.bnu.edu.cn/yxsz/" class="fisrtmenu">院系设置</a></li>
+
+				    <li><a href="http://www.bnu.edu.cn/gljg/" class="fisrtmenu">管理机构</a></li>
+
+				    <li><a href="http://hr.bnu.edu.cn/rcgzbgs/dashouye.html" target="_blank" class="fisrtmenu">人才招聘</a></li>
+
+				    <li><a href="http://www.bnu.edu.cn/kxyj/" class="fisrtmenu">科学研究</a></li>
+
+				    <li class="dropdown">
+
+				    	<a href="#" class="dropdown-toggle fisrtmenu">招生就业</a>
+
+				    	<ul style="display: none;" class="dropdown-menu subnavlist">
+
+			                <li><a href="http://admission.bnu.edu.cn/" target="_blank">本科生招生</a></li>
+
+			                <li><a href="http://yz.bnu.edu.cn/" target="_blank">研究生招生</a></li>
+                          <li><a href="http://hr.bnu.edu.cn/bsh/index.htm" target="_blank">博士后</a></li>
+
+			                <li><a href="Http://iso.bnu.edu.cn" target="_blank">留学生招生</a></li>
+
+			                <li><a href="http://www.scett.bnu.edu.cn/" target="_blank">继续教育与教师培训</a></li>
+
+			                <li><a href="http://career.bnu.edu.cn/" target="_blank">就业与创业</a></li>
+
+			            </ul>
+
+			        </li>
+
+				    <li class="dropdown">
+
+				    	<a href="#" class="dropdown-toggle fisrtmenu">合作交流</a>
+
+				    	<ul style="display: none;" class="dropdown-menu subnavlist">
+
+			                <li><a href="http://oiec.bnu.edu.cn/" target="_blank">国际交流与合作</a></li>
+
+			                <li><a href="http://gnhz.bnu.edu.cn/" target="_blank">国内合作</a></li>
+
+			                <li><a href="http://ipo.bnu.edu.cn/gat/index_gat.html" target="_blank">港澳台事务</a></li>
+
+			                <li><a href="http://www.bnuef.org/" target="_blank">教育基金会</a></li>
+
+			            </ul>
+
+			        </li>
+
+				    <li class="dropdown">
+
+				    	<a href="#" class="dropdown-toggle fisrtmenu">图书档案</a>
+
+				    	<ul style="display: none;" class="dropdown-menu subnavlist">
+
+			                <li><a href="http://www.lib.bnu.edu.cn/" target="_blank">图书馆</a></li>
+
+			                <li><a href="http://dangan.bnu.edu.cn" target="_blank">档案馆</a></li>
+
+			            </ul>
+
+			        </li>
+
+				    <li class="dropdown">
+
+				    	<a href="#" class="dropdown-toggle fisrtmenu last">走进师大</a>
+
+				    	<ul style="display: none;" class="dropdown-menu subnavlist subnavlist-last">
+
+			                <li><a href="http://www.bnu.edu.cn/map/" target="_blank">校园地图</a></li>
+
+			                <li><a href="http://news.bnu.edu.cn/sdtk/">校园风光</a></li>
+
+			                <li><a href="http://www.bnu.edu.cn/zjsd/52915.html">校　历</a></li>
+
+			                <li><a href="http://www.bnu.edu.cn/zjsd/52916.html">黄　页</a></li>
+
+			            </ul>
+
+			        </li>
+
+				  </ul>
+
+				</div><!--/.nav-collapse -->
+
+			</div>
+
+		</div>
+
+    </div>
+
+    <div class="navbar navbar-bg hidden-md">
+
+    	<div class="container">
+
+    		<div class="row">
+
+    			<ul class="nav xs-navlist" style="display:none;">
+
+                  	<li class="col-sm-4 col-xs-6"><a style="" href="http://news.bnu.edu.cn/" target="_blank" class="">师大新闻</a></li>
+
+				    <li class="col-sm-4 col-xs-6"><a style="" href="../xxgk/" class="">学校概况</a></li>
+
+				    <li class="col-sm-4 col-xs-6"><a href="http://www.bnu.edu.cn/yxsz/" class="">院系设置</a></li>
+
+				    <li class="col-sm-4 col-xs-6"><a href="http://www.bnu.edu.cn/gljg/" class="">管理机构</a></li>
+
+				    <li class="col-sm-4 col-xs-6"><a href="http://hr.bnu.edu.cn/rcgzbgs/dashouye.html" target="_blank" class="">人才招聘</a></li>
+
+				    <li class="col-sm-4 col-xs-6"><a href="http://www.bnu.edu.cn/kxyj/" class="">科学研究</a></li>
+
+				    <li class="col-sm-4 col-xs-6"><a href="../zsjy/" class="">招生就业</a></li>
+
+				    <li class="col-sm-4 col-xs-6"><a href="../hzjl/" class="">合作交流</a></li>
+
+				    <li class="col-sm-4 col-xs-6"><a href="../tsda/" class="">图书档案</a></li>
+
+				    <li class="col-sm-4 col-xs-6"><a href="../zjsd/" class="">走进师大</a></li>
+
+			        <li class="col-sm-4 col-xs-6"><a href="mailto:bnu_liuchuansheng@bnu.edu.cn">书记信箱</a></li>
+
+	    			<li class="col-sm-4 col-xs-6"><a href="mailto:xzxx@bnu.edu.cn">校长信箱</a></li>
+
+	    			<li class="col-sm-4 col-xs-6"><a href="http://www.bnu.edu.cn/xfzc/80823.html">校领导信箱</a></li>
+
+	    			<li class="col-sm-4 col-xs-6"><a href="http://www.bnu.edu.cn/xfzc/52576.html">接待日</a></li>
+
+				  </ul>
+
+    		</div>
+
+    	</div>
+
+    </div>
+    <div class="main mainbg1">
+	    <div class="container">
+	    	<div class="subcontent row">
+	    		<div class="subtitle">新版中文主页上线试运行</div>
+	    		<div class="subbody">
+	    			<div class="subbody-b col-md-10">
+	    				<div class="subbody-b-nav">当前位置：			<a href="../index.html">首页</a> &raquo; 
+			  新版中文主页上线试运行</div>
+<div class="subbody-b-content">
+	    					<h2>关于学校新版中文主页上线试运行的通知</h2>
+	    					<div class="postmeta">发布时间：2018-03-20　<span>阅读<script src="/cms/web/count.jsp?articleID=86401"></script>次</span></div><div class="zhengwen_lf"><p>广大师生、校友，关心和支持学校改革发展的朋友们：<br />
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 学校现行中文主页已陪伴大家走过了五年的时光，成为展示学校办学实力和社会形象的重要窗口。随着&ldquo;双一流&rdquo;建设步伐的加快，学校决定对中文主页进行改版升级，以更好地展现北京师范大学的历史底蕴和时代风貌，提高学校品牌形象的网络传播力。<br />
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 学校新版中文主页由党委宣传部、信息网络中心等联合开发，沿用师大蓝为主色调，采用扁平化设计和响应式布局，自动适应电脑、平板、手机等设备。首页包括头图、头条关注、综合新闻、学术动态、北师故事、通知公告等栏目。经过前端设计开发、后端融合调试等工作，新版主页已基本满足使用需求，现上线试运行，欢迎广大师生校友提出宝贵意见和建议。试运行计划为期一周（3月21日-27日），其间新旧主页同步运行。新主页正式上线后，相关新闻栏目由党委宣传部（新闻中心）统一运维，原&ldquo;北师大快讯&rdquo;调整为&ldquo;头条关注&rdquo;和&ldquo;综合新闻&rdquo;，投稿邮箱调整为<a href="mailto:xwzx@bnu.edu.cn">xwzx@bnu.edu.cn</a>。<br />
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 新故相推，日生不滞；木铎金声，激越百年。进入新时代，在建设综合性、研究型、教师教育领先的中国特色世界一流大学的历史征程中，学校主页将与你相伴、一路同行！</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 主页试运行地址：<a href="http://zhuye.bnu.edu.cn">http://zhuye.bnu.edu.cn</a><br />
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 意见建议反馈及投稿邮箱：<a href="mailto:xwzx@bnu.edu.cn">xwzx@bnu.edu.cn</a> <br />
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 联系电话：58807173、58805293、58808001</p>
+<p style="text-align: right"><br />
+党委办公室/校长办公室<br />
+<br />
+党委宣传部（新闻中心）<br />
+<br />
+信息网络中心<br />
+<br />
+2018年3月21日<br />
+&nbsp;</p></div>
+<br><div style="text-align: right">&nbsp;&nbsp;&nbsp;&nbsp;</div>
+<br />
+         <br /><br />
+		    				<div class="pagenav">
+		    					<div class="pagenav-count col-xs-6">
+		    					</div>
+		    				</div>
+	    				</div>
+	    			</div>
+<div class="subbody-c col-md-2 bg-blue col-sm-12">
+                    <div class="sidebar">
+                                                                 
+                        <div class="col-md-12 col-sm-4 nopadding">
+                        <span><a href="http://media.bnu.edu.cn/" target="_blank"> <img src="../imgs/weixin.png"/></a></span>
+                        <span><a href="http://news.bnu.edu.cn/lxyz/" target="_blank"> <img src="../imgs/lxyz.png"/></a></span>
+                        <span><a href="http://news.bnu.edu.cn/sswgh/" target="_blank"><img src="../imgs/shisanwu.png"/></a></span>
+                        <span><a href="http://qigongjiang.bnu.edu.cn" target="_blank"><img src="../imgs/qigongjiang.png"/></a></span>
+                       
+						</div>
+						<div class="col-md-12 col-sm-4 nopadding"> 
+							<span class="morelinks">快速登录</span>
+							<span><a href="http://portal.bnu.edu.cn/" target="_blank">信息门户</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://xxgk.bnu.edu.cn/" target="_blank">信息公开</a></span><span><a href="http://172.16.181.40/xwxxgl/" target="_blank">校务信息</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://cas.bnu.edu.cn/cas/login?service=http%3A%2F%2Fone.bnu.edu.cn%2Fdcp%2Findex.jsp" target="_blank">管理系统</a></span>
+							<span><a href="http://email.bnu.edu.cn/" target="_blank">教师邮箱</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://stu.mail.bnu.edu.cn/" target="_blank">学生邮箱</a></span>
+							<span class="split visible-md visible-lg"><img src="../imgs/split.png" class="img-responsive" /></span>
+						</div>
+						<div class="col-md-12 col-sm-4 nopadding"> 
+							<span class="morelinks">常用链接</span>
+<span>　<a href="http://www.bnuef.org/" target="_blank">教育基金会</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://info.bnu.edu.cn/" target="_blank">信息网络服务</a></span>
+<span><a href="http://xqb.bnu.edu.cn/xiaoguo.html" target="_blank">新校区建设指挥部</a></span>
+							<span>
+<a href="http://xyh.bnu.edu.cn/" target="_blank">校友总会</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://xuefeng.bnu.edu.cn/" target="_blank">学风建设</a></span>
+<span><a href="http://www.bnu.edu.cn/jsjyjykx/52918.html">教师教育机构</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://www.bnu.edu.cn/jsjyjykx/52919.html">教育科学期刊</a></span>
+							<span>&nbsp;<a href="http://xinqing100.bnu.edu.cn/" target="_blank">京师心晴</a></span>
+							
+							<span><a href="http://ipv6te.bnu.edu.cn/" target="_blank">IPv6教师教育创新支持系统</a></span>
+	
+<span>
+<table width="90%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="48%" align="right"><img src="../3/imgs/weibo.jpg" width="28" height="28" usemap="#Map"></td>
+    <td width="4%">&nbsp;</td>
+    <td width="48%" align="left"><img src="../3/imgs/weixin.jpg" width="28" height="28" usemap="#Map2"></td>
+  </tr>
+</table>
+</span>			  
+</div>
+<div style="clear:both"></div>		    	    </div>	
+		    	</div>
+	    		</div>
+		    
+	    	</div>
+
+<div class="footercontant  row">
+
+	    		<div class="footercontantline col-md-12">
+
+	    			<span class="col-md-10">&copy; 版权所有 北京师范大学&nbsp;&nbsp;地址：北京市新街口外大街19号&nbsp;&nbsp;邮编：100875&nbsp;&nbsp;京ICP备05066832号-1 &nbsp;&nbsp;京公网安备110402430002号&nbsp;&nbsp;电话查号台：010-58806183&nbsp;&nbsp;后勤服务热线：010-58801111</span>
+
+	    			<span class="col-md-2 right">Site designed by MONOKEROS</span>
+
+	    		</div>
+
+				<div class="footercontantline col-md-12">
+
+					<span class="col-md-9"></span>
+
+					<span class="col-md-3 right"></span>
+
+				</div>
+
+			</div>
+
+		</div>	
+
+	</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+    <script src="../3/js/jquery.min.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+
+    <script src="../3/js/bootstrap.min.js"></script>
+
+    <script src="../3/js/jquery.flexslider-min.js"></script>
+<map name="Map">
+  <area shape="rect" coords="2,3,26,27" href=" http://e.weibo.com/lovebnu/profile" target="_blank">
+  </map>
+<map name="Map2">
+  <area shape="rect" coords="4,5,26,26" href="http://www.bnu.edu.cn/xzdt/51346.html" target="_blank">
+  </map>
+    <script>
+
+
+	  // Can also be used with $(document).ready()
+
+	$(document).ready(function(){
+
+	  $('.xs-navlist-toggle').click(function(){
+	  	$('.xs-navlist').toggle();
+	  });
+
+	  $('.flexslider').flexslider({
+
+	    animation: "slide",
+
+	    slideshowSpeed: 10000
+
+	    //controlsContainer: ".flex-container"
+
+	  });
+
+	  $('.navlist li a.fisrtmenu').hover(function(){
+
+	  	$(this).css("border-right","1px solid #fff");
+
+	  	$(this).parent().prev().children('a').css("border-right","1px solid #fff");
+	  	$('.subnavlist').hide();
+	  	$(this).next('.subnavlist').fadeIn();
+	  	
+
+	  },function(){
+
+	  	$(this).css("border-right","1px solid #d4d3ce");
+	  	$(this).parent().prev().children('a').css("border-right","1px solid #d4d3ce");
+
+	  });
+
+	  $('.navbar-nav').hover(function(){
+	  	$('.subnavlist').hide();
+	  });
+
+	  $('.subnavlist').hover(function(){
+	  	$(this).parent().addClass('active');
+	  }, function(){
+	  	$(this).parent().removeClass('active');
+	  	$(this).fadeOut();
+	  });
+
+	  $(function(){
+
+      // bind change event to select
+
+      $('.selecttogo').bind('change', function () {
+
+          var url = $(this).val(); // get selected value
+
+          if (url) { // require a URL
+
+              window.location = url; // redirect
+
+          }
+
+          return false;
+
+      });
+
+    });
+
+	});
+
+	</script>
+
+
+  </body>
+
+</html></body></html></body></html></body></html>

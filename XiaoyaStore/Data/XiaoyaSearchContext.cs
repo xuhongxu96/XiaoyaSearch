@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using EntityFrameworkCore.Triggers;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -11,6 +12,7 @@ namespace XiaoyaStore.Data
         public DbSet<UrlFrontierItem> UrlFrontierItems { get; set; }
         public DbSet<UrlFile> UrlFiles { get; set; }
         public DbSet<InvertedIndex> InvertedIndices { get; set; }
+        public DbSet<IndexStat> IndexStats { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -51,6 +53,14 @@ namespace XiaoyaStore.Data
 
             modelBuilder.Entity<InvertedIndex>()
                .HasIndex(o => new { o.UrlFileId, o.Position });
+
+            #endregion
+
+            #region IndexStat
+
+            modelBuilder.Entity<IndexStat>()
+                .HasIndex(o => o.Word)
+                .IsUnique();
 
             #endregion
         }

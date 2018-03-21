@@ -19,6 +19,22 @@ namespace XiaoyaStore.Store
             using (var context = NewContext())
             {
                 context.InvertedIndices.Add(invertedIndex);
+
+                var stat = context.IndexStats.SingleOrDefault(o => o.Word == invertedIndex.Word);
+                if (stat == null)
+                {
+                    stat = new IndexStat
+                    {
+                        Word = invertedIndex.Word,
+                        Count = 1,
+                    };
+                    context.IndexStats.Add(stat);
+                }
+                else
+                {
+                    stat.Count++;
+                }
+
                 context.SaveChanges();
             }
         }
@@ -28,6 +44,88 @@ namespace XiaoyaStore.Store
             using (var context = NewContext())
             {
                 context.InvertedIndices.AddRange(invertedIndices);
+
+                var groupedIndices = invertedIndices.GroupBy(o => o.Word)
+                    .Select(g => new
+                    {
+                        Word = g.Key,
+                        Count = g.Count(),
+                    });
+
+                foreach (var index in groupedIndices)
+                {
+                    var stat = context.IndexStats.SingleOrDefault(o => o.Word == index.Word);
+                    if (stat == null)
+                    {
+                        stat = new IndexStat
+                        {
+                            Word = index.Word,
+                            Count = index.Count,
+                        };
+                        context.IndexStats.Add(stat);
+                    }
+                    else
+                    {
+                        stat.Count += index.Count;
+                    }
+                }
+
+                context.SaveChanges();
+            }
+        }
+
+        public void ClearAndSaveInvertedIndices(UrlFile urlFile, IEnumerable<InvertedIndex> invertedIndices)
+        {
+            using (var context = NewContext())
+            {
+                var toBeRemovedIndices = from o in context.InvertedIndices
+                                         where o.UrlFileId == urlFile.UrlFileId
+                                         select o;
+
+                var groupedRemovedIndices = toBeRemovedIndices.GroupBy(o => o.Word)
+                    .Select(g => new
+                    {
+                        Word = g.Key,
+                        Count = g.Count(),
+                    });
+
+                foreach (var index in groupedRemovedIndices)
+                {
+                    var stat = context.IndexStats.SingleOrDefault(o => o.Word == index.Word);
+                    if (stat != null && stat.Count > 0)
+                    {
+                        stat.Count -= index.Count;
+                    }
+                }
+
+                context.RemoveRange(toBeRemovedIndices);
+                context.InvertedIndices.AddRange(invertedIndices);
+
+                var groupedIndices = invertedIndices.GroupBy(o => o.Word)
+                    .Select(g => new
+                    {
+                        Word = g.Key,
+                        Count = g.Count(),
+                    });
+
+                foreach (var index in groupedIndices)
+                {
+                    var stat = context.IndexStats.SingleOrDefault(o => o.Word == index.Word);
+                    if (stat == null)
+                    {
+                        stat = new IndexStat
+                        {
+                            Word = index.Word,
+                            Count = index.Count,
+                        };
+                        context.IndexStats.Add(stat);
+                    }
+                    else
+                    {
+                        stat.Count += index.Count;
+                    }
+                }
+
                 context.SaveChanges();
             }
         }
@@ -36,9 +134,26 @@ namespace XiaoyaStore.Store
         {
             using (var context = NewContext())
             {
-                context.RemoveRange(from o in context.InvertedIndices
-                                    where o.UrlFileId == urlFile.UrlFileId
-                                    select o);
+                var toBeRemovedIndices = from o in context.InvertedIndices
+                                         where o.UrlFileId == urlFile.UrlFileId
+                                         select o;
+                var groupedRemovedIndices = toBeRemovedIndices.GroupBy(o => o.Word)
+                    .Select(g => new
+                    {
+                        Word = g.Key,
+                        Count = g.Count(),
+                    });
+
+                foreach (var index in groupedRemovedIndices)
+                {
+                    var stat = context.IndexStats.SingleOrDefault(o => o.Word == index.Word);
+                    if (stat != null && stat.Count > 0)
+                    {
+                        stat.Count -= index.Count;
+                    }
+                }
+
+                context.RemoveRange(toBeRemovedIndices);
                 context.SaveChanges();
             }
         }

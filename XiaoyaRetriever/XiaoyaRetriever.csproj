@@ -13,9 +13,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\XiaoyaCommon\XiaoyaCommon.csproj" />
-    <ProjectReference Include="..\XiaoyaFileParser\XiaoyaFileParser.csproj" />
-    <ProjectReference Include="..\XiaoyaLogger\XiaoyaLogger.csproj" />
     <ProjectReference Include="..\XiaoyaStore\XiaoyaStore.csproj" />
   </ItemGroup>
 

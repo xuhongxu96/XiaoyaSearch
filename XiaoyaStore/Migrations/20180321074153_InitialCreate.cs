@@ -9,6 +9,20 @@ namespace XiaoyaStore.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
+                name: "IndexStats",
+                columns: table => new
+                {
+                    IndexStatId = table.Column<int>(nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Count = table.Column<long>(nullable: false),
+                    Word = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_IndexStats", x => x.IndexStatId);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "InvertedIndices",
                 columns: table => new
                 {
@@ -64,6 +78,12 @@ namespace XiaoyaStore.Migrations
                 });
 
             migrationBuilder.CreateIndex(
+                name: "IX_IndexStats_Word",
+                table: "IndexStats",
+                column: "Word",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
                 name: "IX_InvertedIndices_Word",
                 table: "InvertedIndices",
                 column: "Word");
@@ -110,6 +130,9 @@ namespace XiaoyaStore.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "IndexStats");
+
             migrationBuilder.DropTable(
                 name: "InvertedIndices");
 

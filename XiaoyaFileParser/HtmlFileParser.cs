@@ -51,7 +51,7 @@ namespace XiaoyaFileParser
                     script.Parent.RemoveChild(script);
                 }
 
-                mTextContent = document.Body.Text();
+                mTextContent = document.Body.Text().Trim();
             }
             return mTextContent;
         }

@@ -21,6 +21,7 @@ namespace XiaoyaIndexer
         protected UniversalFileParser mParser = new UniversalFileParser();
         protected IndexerConfig mConfig;
         protected RuntimeLogger mLogger;
+        public bool IsWaiting { get; private set; } = false;
 
         public SimpleIndexer(IndexerConfig config)
         {
@@ -41,6 +42,7 @@ namespace XiaoyaIndexer
                 var urlFile = mConfig.UrlFileStore.LoadAnyForIndex();
                 if (urlFile == null)
                 {
+                    IsWaiting = true;
                     await Task.Run(() => Thread.Sleep(waitSeconds * 1000));
                     if (waitSeconds < 32)
                     {
@@ -48,6 +50,7 @@ namespace XiaoyaIndexer
                     }
                     continue;
                 }
+                IsWaiting = false;
                 waitSeconds = 1;
 
                 mLogger.Log(nameof(SimpleIndexer), "Indexing Url: " + urlFile.Url);
@@ -63,8 +66,7 @@ namespace XiaoyaIndexer
                                           UrlFileId = urlFile.UrlFileId,
                                       };
 
-                mConfig.InvertedIndexStore.ClearInvertedIndicesOf(urlFile);
-                mConfig.InvertedIndexStore.SaveInvertedIndices(invertedIndices);
+                mConfig.InvertedIndexStore.ClearAndSaveInvertedIndices(urlFile, invertedIndices);
 
                 mLogger.Log(nameof(SimpleIndexer), "Indexed Url: " + urlFile.Url);
             }

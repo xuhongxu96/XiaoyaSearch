@@ -308,13 +308,21 @@ window.location="http://www.bnu.edu.cn/ie6.html";
     </div>
     <div class="main mainbg">
 	    <div class="container bg-white">
+         <table width="60%" border="0" align="center">
+  <tr>
+    <td height="35"><MARQUEE scrollDelay=150 class="STYLE4">
+        <strong><a href="http://www.bnu.edu.cn/zysx/" target="_blank"> 关于学校新版中文主页上线试运行的通知
+    </a>&nbsp;&nbsp;&nbsp;&nbsp;</strong>        
+    </MARQUEE></td>
+  </tr>
+</table>
 		    <div class="mainslide row">
 
 		    	<div class="slider flexslider col-md-12">
 
 		    		<ul class="slides">
 		    			<li>
-<a href="#" title=""><img src="images/content/2018-03/20180320084254632205.jpg" alt="3月27日形象图--尺寸更改" class="img-responsive" /></a>
+<a href="#" title=""><img src="images/content/2018-03/20180321081610602182.jpg" alt="3月27日形象图--尺寸更改" class="img-responsive" /></a>
 		    			</li>
 
 			    	</ul>
@@ -333,6 +341,12 @@ window.location="http://www.bnu.edu.cn/ie6.html";
 		    		<div class="boxlist">
 		    			<ul class="">
 		    						    				<li><a href="http://www.bnu.edu.cn/xxgswxxgclsddsjdjs/" target="blank" alt="学校各单位学习贯彻落实党的十九大精神">            学校各单位学习贯彻落实党的十九大精神 
+    </a></li>
+		    				<li><a href="bsdkx/86406.html" target="blank" alt="孙红培到二附中调研">            孙红培到二附中调研 
+    </a></li>
+		    				<li><a href="bsdkx/86404.html" target="blank" alt="周作宇会见香港冯燊均国学基金会代表">            周作宇会见香港冯燊均国学基金会代表 
+    </a></li>
+		    				<li><a href="bsdkx/86402.html" target="blank" alt="国家卫计委与我校心理学部联合举办“加强心理健康人才发展”联学联做活动">            国家卫计委与我校心理学部联合举办“加强心理健康人才发展”联学联做活动 
     </a></li>
 		    				<li><a href="bsdkx/86363.html" target="blank" alt="青海师范大学领导来校商洽对口帮扶事宜">            青海师范大学领导来校商洽对口帮扶事宜 
     </a></li>
@@ -376,12 +390,6 @@ window.location="http://www.bnu.edu.cn/ie6.html";
     </a></li>
 		    				<li><a href="bsdkx/86321.html" target="blank" alt="郝芳华检查学校实验室安全并召开现场工作会">            郝芳华检查学校实验室安全并召开现场工作会 
     </a></li>
-		    				<li><a href="bsdkx/86319.html" target="blank" alt="教育部调研我校中美创客交流中心工作">            教育部调研我校中美创客交流中心工作 
-    </a></li>
-		    				<li><a href="bsdkx/86317.html" target="blank" alt="日本横滨市立大学代表团访问我校">            日本横滨市立大学代表团访问我校 
-    </a></li>
-		    				<li><a href="bsdkx/86313.html" target="blank" alt="李晓兵主持召开各分管部门负责人会议研究部署新学期工作">            李晓兵主持召开各分管部门负责人会议研究部署新学期工作 
-    </a></li>
 	    			  </ul>
 		    		</div>
 		    	</div>
@@ -392,7 +400,13 @@ window.location="http://www.bnu.edu.cn/ie6.html";
 		    		</div>
 		    		<div class="boxlist">
 		    			<ul class="">
-						                        <li><a href="xzdt/86399.html" target="blank" alt="[预告]03.24 京师人文宗教讲堂——中医系列讲座（29）">            [预告]03.24 京师人文宗教讲堂——中医系列讲座（29） 
+						                        <li><a href="xzdt/86412.html" target="blank" alt="[预告]03.29 学术讲座——创新的真相">            [预告]03.29 学术讲座——创新的真相 
+    </a></li>
+                        <li><a href="xzdt/86410.html" target="blank" alt="[预告]03.27 京师大讲堂——第三代水稻小麦杂交育种技术的前世今生">            [预告]03.27 京师大讲堂——第三代水稻小麦杂交育种技术的前世今生 
+    </a></li>
+                        <li><a href="xzdt/86408.html" target="blank" alt="[预告]03.23 京师外哲讲坛——The (Un)Refutation of Idealism">            [预告]03.23 京师外哲讲坛——The (Un)Refutation of Idealism 
+    </a></li>
+                        <li><a href="xzdt/86399.html" target="blank" alt="[预告]03.24 京师人文宗教讲堂——中医系列讲座（29）">            [预告]03.24 京师人文宗教讲堂——中医系列讲座（29） 
     </a></li>
                         <li><a href="xzdt/86379.html" target="blank" alt="[预告]03.24 名家圆桌之“思想与学术40年”——青年专场">            [预告]03.24 名家圆桌之“思想与学术40年”——青年专场 
     </a></li>
@@ -402,17 +416,11 @@ window.location="http://www.bnu.edu.cn/ie6.html";
     </a></li>
                         <li><a href="xzdt/86354.html" target="blank" alt="[成果]物理学系马天星教授及其博士生张陆峰等发现狄拉克费米体系新的相图">            [成果]物理学系马天星教授及其博士生张陆峰等发现狄拉克费米体系新的相图 
     </a></li>
-                        <li><a href="xzdt/86351.html" target="blank" alt="[预告]03.20 全球院前沿知识讲座——陆面过程研究：模式和数据">            [预告]03.20 全球院前沿知识讲座——陆面过程研究：模式和数据 
-    </a></li>
-                        <li><a href="xzdt/86339.html" target="blank" alt="[预告]03.20 京师大讲堂：生命与人文艺术主题——舌尖上的历史与文化之管见">            [预告]03.20 京师大讲堂：生命与人文艺术主题——舌尖上的历史与文化之管见 
-    </a></li>
                         <li><a href="xzdt/86326.html" target="blank" alt="[通知]关于举办“认知科学和心灵哲学前沿问题研究”研讨班的通知">            [通知]关于举办“认知科学和心灵哲学前沿问题研究”研讨班的通知 
     </a></li>
                         <li><a href="xzdt/86324.html" target="blank" alt="[成果]新学期新闻传播学院创新“马克思主义新闻观”课程">            [成果]新学期新闻传播学院创新“马克思主义新闻观”课程 
     </a></li>
                         <li><a href="xzdt/86286.html" target="blank" alt="[活动]董奇出席北京师范大学-国家林业局东北虎豹监测与研究中心揭牌">            [活动]董奇出席北京师范大学-国家林业局东北虎豹监测与研究中心揭牌 
-    </a></li>
-                        <li><a href="xzdt/86284.html" target="blank" alt="[会议]郝芳华参加东北虎豹国家公园自然资源监测系统专家论证会">            [会议]郝芳华参加东北虎豹国家公园自然资源监测系统专家论证会 
     </a></li>
  		    			</ul>
 		    		</div>

@@ -19,6 +19,23 @@ namespace XiaoyaStore.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "2.0.2-rtm-10011");
 
+            modelBuilder.Entity("XiaoyaStore.Data.Model.IndexStat", b =>
+                {
+                    b.Property<int>("IndexStatId")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<long>("Count");
+
+                    b.Property<string>("Word");
+
+                    b.HasKey("IndexStatId");
+
+                    b.HasIndex("Word")
+                        .IsUnique();
+
+                    b.ToTable("IndexStats");
+                });
+
             modelBuilder.Entity("XiaoyaStore.Data.Model.InvertedIndex", b =>
                 {
                     b.Property<int>("InvertedIndexId")
@@ -105,7 +122,8 @@ namespace XiaoyaStore.Migrations
                     b.Property<DateTime>("UpdatedAt")
                         .IsConcurrencyToken();
 
-                    b.Property<string>("Url");
+                    b.Property<string>("Url")
+                        .IsConcurrencyToken();
 
                     b.HasKey("UrlFrontierItemId");
 
