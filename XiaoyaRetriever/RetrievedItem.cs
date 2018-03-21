@@ -7,7 +7,6 @@ namespace XiaoyaRetriever
 {
     public class RetrievedItem
     {
-        public int UrlFileId { get; set; }
-        public int Position { get; set; }
+        public IEnumerable<InvertedIndex> Index { get; set; }
     }
 }

@@ -33,6 +33,10 @@ namespace XiaoyaStore.Store
                 else
                 {
                     stat.Count++;
+                    if (stat.Count > long.MaxValue / 2)
+                    {
+                        stat.Count = long.MaxValue / 2;
+                    }
                 }
 
                 context.SaveChanges();
@@ -67,6 +71,11 @@ namespace XiaoyaStore.Store
                     else
                     {
                         stat.Count += index.Count;
+                    }
+
+                    if (stat.Count > long.MaxValue / 2)
+                    {
+                        stat.Count = long.MaxValue / 2;
                     }
                 }
 
@@ -123,6 +132,11 @@ namespace XiaoyaStore.Store
                     else
                     {
                         stat.Count += index.Count;
+                    }
+
+                    if (stat.Count > long.MaxValue / 2)
+                    {
+                        stat.Count = long.MaxValue / 2;
                     }
                 }
 
