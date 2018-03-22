@@ -7,7 +7,7 @@ using XiaoyaStore.Data.Model;
 
 namespace XiaoyaStore.Store
 {
-    public class IndexStatStore : BaseStore
+    public class IndexStatStore : BaseStore, IIndexStatStore
     {
         public IndexStatStore(DbContextOptions options = null) : base(options)
         { }

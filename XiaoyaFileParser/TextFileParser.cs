@@ -19,6 +19,7 @@ namespace XiaoyaFileParser
             set
             {
                 mUrlFile = value;
+                mContent = null;
                 mTextContent = mUrlFile.Content;
             }
         }

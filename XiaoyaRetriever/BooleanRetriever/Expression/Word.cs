@@ -8,26 +8,46 @@ using XiaoyaStore.Store;
 
 namespace XiaoyaRetriever.BooleanRetriever.Expression
 {
-    public class Word : IExpression
+    public class Word : Expression
     {
         public string Value { get; private set; }
-        public long Frequency { get; private set; }
-        public bool IsIncluded => true;
+
+        protected long mFrequency;
+        public override long Frequency => mFrequency;
+
+        public override bool IsIncluded => true;
 
         protected RetrieverConfig mConfig;
 
-        public Word(string value, RetrieverConfig config)
+        public Word(string value)
         {
             Value = value;
-            Frequency = config.IndexStatStore.LoadByWord(value).Count;
-
-            mConfig = config;
         }
 
-        public IEnumerable<InvertedIndex> Retrieve()
+        public override IEnumerable<RetrievedUrlFilePositions> Retrieve()
         {
-            return from index in mConfig.InvertedIndexStore.LoadByWord(Value)
-                   select index;
+            var indices = mConfig.InvertedIndexStore.LoadByWord(Value);
+            return from index in indices
+                   group new WordPosition
+                   {
+                       Word = index.Word,
+                       Position = index.Position,
+                   } by index.UrlFileId into g
+                   select new RetrievedUrlFilePositions(g.Key, g);
+        }
+
+        public override void SetConfig(RetrieverConfig config)
+        {
+            var stat = config.IndexStatStore.LoadByWord(Value);
+            if (stat == null)
+            {
+                mFrequency = 0;
+            }
+            else
+            {
+                mFrequency = stat.Count;
+            }
+            mConfig = config;
         }
     }
 }

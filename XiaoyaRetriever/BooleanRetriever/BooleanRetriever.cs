@@ -2,14 +2,25 @@
 using System.Collections.Generic;
 using System.Text;
 using XiaoyaRetriever.BooleanRetriever.Expression;
+using XiaoyaRetriever.Config;
 using XiaoyaStore.Data.Model;
 
 namespace XiaoyaRetriever.BooleanRetriever
 {
     public class BooleanRetriever
     {
-        public IEnumerable<InvertedIndex> Retrieve(IExpression expression)
+
+        protected RetrieverConfig mConfig;
+
+        public BooleanRetriever(RetrieverConfig config)
         {
+            mConfig = config;
+        }
+
+        public IEnumerable<RetrievedUrlFilePositions> Retrieve(Expression.Expression expression)
+        {
+            expression.SetConfig(mConfig);
+
             if (expression.IsIncluded)
             {
                 return expression.Retrieve();

@@ -57,6 +57,7 @@ namespace XiaoyaIndexerUnitTest
 
                 context.RemoveRange(context.UrlFiles);
                 context.RemoveRange(context.InvertedIndices);
+                context.RemoveRange(context.IndexStats);
                 context.SaveChanges();
 
                 context.Database.ExecuteSqlCommand(File.ReadAllText("init.sql"));

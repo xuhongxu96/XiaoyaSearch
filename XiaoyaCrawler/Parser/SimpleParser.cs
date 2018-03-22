@@ -14,12 +14,10 @@ namespace XiaoyaCrawler.Parser
     public class SimpleParser : IParser
     {
         protected CrawlerConfig mConfig;
-        protected IFileParser mParser;
 
         public SimpleParser(CrawlerConfig config)
         {
             mConfig = config;
-            mParser = new UniversalFileParser();
         }
 
         /// <summary>
@@ -30,7 +28,11 @@ namespace XiaoyaCrawler.Parser
         /// Returns null if cannot parse the file</returns>
         public async Task<ParseResult> ParseAsync(UrlFile urlFile)
         {
-            mParser.UrlFile = urlFile;
+            var mParser = new UniversalFileParser
+            {
+                UrlFile = urlFile
+            };
+            
             return new ParseResult
             {
                 Content = await mParser.GetTextContentAsync(),

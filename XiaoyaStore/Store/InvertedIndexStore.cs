@@ -176,7 +176,8 @@ namespace XiaoyaStore.Store
         {
             using (var context = NewContext())
             {
-                foreach (var index in context.InvertedIndices.Where(o => o.Word == word))
+                var indices = context.InvertedIndices.Where(o => o.Word == word);
+                foreach (var index in indices)
                 {
                     yield return index;
                 }
