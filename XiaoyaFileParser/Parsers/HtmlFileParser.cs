@@ -8,7 +8,7 @@ using XiaoyaFileParser.Config;
 using XiaoyaStore.Data.Model;
 using AngleSharp.Extensions;
 
-namespace XiaoyaFileParser
+namespace XiaoyaFileParser.Parsers
 {
     public class HtmlFileParser : TextFileParser
     {

@@ -16,8 +16,4 @@
     <ProjectReference Include="..\XiaoyaStore\XiaoyaStore.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Helpers\" />
-  </ItemGroup>
-
 </Project>

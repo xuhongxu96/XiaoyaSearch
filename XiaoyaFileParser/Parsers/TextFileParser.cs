@@ -8,7 +8,7 @@ using XiaoyaFileParser.Config;
 using XiaoyaNLP.TextSegmentation;
 using XiaoyaStore.Data.Model;
 
-namespace XiaoyaFileParser
+namespace XiaoyaFileParser.Parsers
 {
     public class TextFileParser : IFileParser
     {

@@ -6,6 +6,7 @@ using XiaoyaFileParser.Model;
 using XiaoyaFileParser.Config;
 using XiaoyaStore.Data.Model;
 using System.IO;
+using XiaoyaFileParser.Parsers;
 
 namespace XiaoyaFileParser
 {
