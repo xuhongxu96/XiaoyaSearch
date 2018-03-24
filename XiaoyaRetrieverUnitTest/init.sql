@@ -1,9 +1,9 @@
--- Script Date: 3/22/2018 2:22 PM  - ErikEJ.SqlCeScripting version 3.5.2.75
+-- Script Date: 3/22/2018 9:40 PM  - ErikEJ.SqlCeScripting version 3.5.2.75
 -- Database information:
 -- Database: C:\Users\xuhongxu\Source\Repos\XiaoyaSearch\XiaoyaIndexerUnitTest\bin\Debug\netcoreapp2.0\XiaoyaSearch.db
 -- ServerVersion: 3.22.0
--- DatabaseSize: 492 KB
--- Created: 3/21/2018 3:58 PM
+-- DatabaseSize: 496 KB
+-- Created: 3/22/2018 9:39 PM
 
 -- User Table information:
 -- Number of tables: 4
@@ -4162,10658 +4162,10658 @@ INSERT INTO [UrlFiles] ([UrlFileId],[Charset],[Content],[CreatedAt],[FileHash],[
 
 	    			Site designed by MONOKEROS','2018-03-22 14:17:15.6830129','1b922a6f843443c3f2a22e57f12566b4','C:\Users\xuhongxu\AppData\Local\Temp\Fetched\b829b43ef09a8cbad500e16bcbf62d1a1521699430696',1,'text/html','3.00:00:00','2018-03-22 14:17:15.6830117','http://www.bnu.edu.cn/kxyj/');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37162,5460,157,'物资');
+1,5460,157,'物资');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37163,5811,157,'信息');
+2,5811,157,'信息');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37164,5804,157,'门户');
+3,5804,157,'门户');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37165,5802,157,'信息');
+4,5802,157,'信息');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37166,5791,157,'登录');
+5,5791,157,'登录');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37167,5462,157,'供货商');
+6,5462,157,'供货商');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37168,5467,157,'公告');
+7,5467,157,'公告');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37169,5465,157,'遴选');
+8,5465,157,'遴选');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37170,5813,157,'公开');
+9,5813,157,'公开');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37171,5789,157,'快速');
+10,5789,157,'快速');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37172,5815,157,'校务');
+11,5815,157,'校务');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37173,5902,157,'信息网');
+12,5902,157,'信息网');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37174,5824,157,'管理系统');
+13,5824,157,'管理系统');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37175,5837,157,'教师');
+14,5837,157,'教师');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37176,5839,157,'邮箱');
+15,5839,157,'邮箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37177,5846,157,'学生');
+16,5846,157,'学生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37178,5848,157,'邮箱');
+17,5848,157,'邮箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37179,5885,157,'常用');
+18,5885,157,'常用');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37180,5887,157,'链接');
+19,5887,157,'链接');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37181,5906,157,'服务');
+20,5906,157,'服务');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37182,5892,157,'教育');
+21,5892,157,'教育');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37183,5894,157,'基金会');
+22,5894,157,'基金会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37184,5905,157,'络');
+23,5905,157,'络');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37185,5458,157,'食堂');
+24,5458,157,'食堂');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37186,5817,157,'信息');
+25,5817,157,'信息');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37187,5452,157,'北京师范大学');
+26,5452,157,'北京师范大学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37188,5177,157,'的');
+27,5177,157,'的');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37189,5394,157,'服务网点');
+28,5394,157,'服务网点');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37190,5171,157,'标记');
+29,5171,157,'标记');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37191,5173,157,'的');
+30,5173,157,'的');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37192,5174,157,'GSA');
+31,5174,157,'GSA');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37193,5910,157,'新');
+32,5910,157,'新');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37194,5178,157,'药盒');
+33,5178,157,'药盒');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37195,5180,157,'及其');
+34,5180,157,'及其');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37196,5182,157,'制备');
+35,5182,157,'制备');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37197,5184,157,'方法');
+36,5184,157,'方法');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37198,5187,157,'专利转让');
+37,5187,157,'专利转让');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37199,5191,157,'公示');
+38,5191,157,'公示');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37200,5243,157,'北京师范大学');
+39,5243,157,'北京师范大学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37201,5249,157,'校内');
+40,5249,157,'校内');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37202,5251,157,'合作');
+41,5251,157,'合作');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37203,5253,157,'服务网点');
+42,5253,157,'服务网点');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37204,5257,157,'招标公告');
+43,5257,157,'招标公告');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37205,5262,157,'第二');
+44,5262,157,'第二');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37206,5264,157,'次');
+45,5264,157,'次');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37207,5316,157,'北京师范大学');
+46,5316,157,'北京师范大学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37208,5322,157,'校内');
+47,5322,157,'校内');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37209,5324,157,'合作');
+48,5324,157,'合作');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37210,5326,157,'服务网点');
+49,5326,157,'服务网点');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37211,5330,157,'招标公告');
+50,5330,157,'招标公告');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37212,5384,157,'北京师范大学');
+51,5384,157,'北京师范大学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37213,5390,157,'校内');
+52,5390,157,'校内');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37214,5392,157,'合作');
+53,5392,157,'合作');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37215,5398,157,'招标公告');
+54,5398,157,'招标公告');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37216,5911,157,'校区');
+55,5911,157,'校区');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37217,6139,157,'号');
+56,6139,157,'号');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37218,5915,157,'指挥部');
+57,5915,157,'指挥部');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37219,6166,157,'号');
+58,6166,157,'号');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37220,6168,157,'1');
+59,6168,157,'1');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37221,6172,157,'京');
+60,6172,157,'京');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37222,6173,157,'公网');
+61,6173,157,'公网');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37223,6175,157,'安');
+62,6175,157,'安');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37224,6176,157,'备');
+63,6176,157,'备');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37225,6177,157,'110402430002');
+64,6177,157,'110402430002');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37226,6189,157,'号');
+65,6189,157,'号');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37227,6192,157,'电话');
+66,6192,157,'电话');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37228,6194,157,'查号台');
+67,6194,157,'查号台');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37229,6198,157,'010');
+68,6198,157,'010');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37230,6202,157,'58806183');
+69,6202,157,'58806183');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37231,6212,157,'后勤服务');
+70,6212,157,'后勤服务');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37232,6216,157,'热线');
+71,6216,157,'热线');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37233,6219,157,'010');
+72,6219,157,'010');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37234,6223,157,'58801111');
+73,6223,157,'58801111');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37235,6243,157,'Site');
+74,6243,157,'Site');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37236,6248,157,'designed');
+75,6248,157,'designed');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37237,6257,157,'by');
+76,6257,157,'by');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37238,6260,157,'MONOKEROS');
+77,6260,157,'MONOKEROS');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37239,6414,157,'是');
+78,6414,157,'是');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37240,6415,157,'第');
+79,6415,157,'第');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37241,6446,157,'位');
+80,6446,157,'位');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37242,6447,157,'访问者');
+81,6447,157,'访问者');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37243,5168,157,'99m');
+82,5168,157,'99m');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37244,6158,157,'05066832');
+83,6158,157,'05066832');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37245,5913,157,'建设');
+84,5913,157,'建设');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37246,6157,157,'备');
+85,6157,157,'备');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37247,6153,157,'京');
+86,6153,157,'京');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37248,5929,157,'校友总会');
+87,5929,157,'校友总会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37249,5938,157,'学风');
+88,5938,157,'学风');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37250,5940,157,'建设');
+89,5940,157,'建设');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37251,5944,157,'教师教育');
+90,5944,157,'教师教育');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37252,5948,157,'机构');
+91,5948,157,'机构');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37253,5955,157,'教育科');
+92,5955,157,'教育科');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37254,5958,157,'学期');
+93,5958,157,'学期');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37255,5960,157,'刊');
+94,5960,157,'刊');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37256,5971,157,'京师');
+95,5971,157,'京师');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37257,5973,157,'心晴');
+96,5973,157,'心晴');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37258,5993,157,'IPv6');
+97,5993,157,'IPv6');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37259,5997,157,'教师教育');
+98,5997,157,'教师教育');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37260,6001,157,'创新');
+99,6001,157,'创新');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37261,6003,157,'支持');
+100,6003,157,'支持');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37262,6005,157,'系统');
+101,6005,157,'系统');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37263,6112,157,'版权所有');
+102,6112,157,'版权所有');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37264,6117,157,'北京师范大学');
+103,6117,157,'北京师范大学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37265,6125,157,'地址');
+104,6125,157,'地址');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37266,6128,157,'北京市');
+105,6128,157,'北京市');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37267,6131,157,'新街口');
+106,6131,157,'新街口');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37268,6134,157,'外');
+107,6134,157,'外');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37269,6135,157,'大街');
+108,6135,157,'大街');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37270,6137,157,'19');
+109,6137,157,'19');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37271,6142,157,'邮编');
+110,6142,157,'邮编');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37272,6145,157,'100875');
+111,6145,157,'100875');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37273,6154,157,'ICP');
+112,6154,157,'ICP');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37274,6413,157,'您');
+113,6413,157,'您');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37275,5166,157,'锝');
+114,5166,157,'锝');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37276,5162,157,'用于');
+115,5162,157,'用于');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37277,2732,157,'体育');
+116,2732,157,'体育');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37278,2734,157,'支教');
+117,2734,157,'支教');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37279,2736,157,'项目');
+118,2736,157,'项目');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37280,2738,157,'首场');
+119,2738,157,'首场');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37281,2740,157,'宣讲会');
+120,2740,157,'宣讲会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37282,2743,157,'在');
+121,2743,157,'在');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37283,2744,157,'我校');
+122,2744,157,'我校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37284,2746,157,'举行');
+123,2746,157,'举行');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37285,2779,157,'BNU');
+124,2779,157,'BNU');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37286,2783,157,'1');
+125,2783,157,'1');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37287,2784,157,'极地');
+126,2784,157,'极地');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37288,2786,157,'观测');
+127,2786,157,'观测');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37289,2788,157,'小');
+128,2788,157,'小');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37290,2789,157,'卫星');
+129,2789,157,'卫星');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37291,2791,157,'完成');
+130,2791,157,'完成');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37292,2793,157,'总体');
+131,2793,157,'总体');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37293,2795,157,'方案设计');
+132,2795,157,'方案设计');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37294,2799,157,'评审');
+133,2799,157,'评审');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37295,2832,157,'研究生');
+134,2832,157,'研究生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37296,2835,157,'党员');
+135,2835,157,'党员');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37297,2837,157,'开展');
+136,2837,157,'开展');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37298,2840,157,'学雷锋');
+137,2840,157,'学雷锋');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37299,2844,157,'志愿服务');
+138,2844,157,'志愿服务');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37300,2848,157,'月');
+139,2848,157,'月');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37301,2849,157,'活动');
+140,2849,157,'活动');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37302,2882,157,'孙红');
+141,2882,157,'孙红');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37303,2884,157,'培');
+142,2884,157,'培');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37304,2885,157,'到');
+143,2885,157,'到');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37305,2886,157,'二');
+144,2886,157,'二');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37306,2730,157,'基金');
+145,2730,157,'基金');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37307,2728,157,'发展');
+146,2728,157,'发展');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37308,2726,157,'女排');
+147,2726,157,'女排');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37309,2725,157,'琪');
+148,2725,157,'琪');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37310,2567,157,'观看');
+149,2567,157,'观看');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37311,2569,157,'十三');
+150,2569,157,'十三');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37312,2571,157,'届');
+151,2571,157,'届');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37313,2572,157,'全国人大');
+152,2572,157,'全国人大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37314,2576,157,'一次');
+153,2576,157,'一次');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37315,2578,157,'会议');
+154,2578,157,'会议');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37316,2580,157,'闭幕会');
+155,2580,157,'闭幕会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37317,2583,157,'和');
+156,2583,157,'和');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37318,2584,157,'总理');
+157,2584,157,'总理');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37319,2586,157,'记者会');
+158,2586,157,'记者会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37320,2620,157,'学校');
+159,2620,157,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37321,2622,157,'开展');
+160,2622,157,'开展');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37322,2624,157,'本科生');
+161,2624,157,'本科生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37323,2627,157,'学术');
+162,2627,157,'学术');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37324,2887,157,'附中');
+163,2887,157,'附中');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37325,2629,157,'规范');
+164,2629,157,'规范');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37326,2634,157,'列');
+165,2634,157,'列');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37327,2635,157,'活动');
+166,2635,157,'活动');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37328,2668,157,'学校');
+167,2668,157,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37329,2670,157,'召开');
+168,2670,157,'召开');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37330,2672,157,'2018');
+169,2672,157,'2018');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37331,2676,157,'年春');
+170,2676,157,'年春');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37332,2678,157,'季');
+171,2678,157,'季');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37333,2679,157,'学期');
+172,2679,157,'学期');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37334,2681,157,'研究生');
+173,2681,157,'研究生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37335,2684,157,'党支部');
+174,2684,157,'党支部');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37336,2687,157,'书记');
+175,2687,157,'书记');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37337,2689,157,'工作会');
+176,2689,157,'工作会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37338,2723,157,'惠');
+177,2723,157,'惠');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37339,2724,157,'若');
+178,2724,157,'若');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37340,2631,157,'教育系');
+179,2631,157,'教育系');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37341,2889,157,'调研');
+180,2889,157,'调研');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37342,2922,157,'周');
+181,2922,157,'周');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37343,2923,157,'作');
+182,2923,157,'作');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37344,3084,157,'学校');
+183,3084,157,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37345,3086,157,'举办');
+184,3086,157,'举办');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37346,3088,157,'第三届');
+185,3088,157,'第三届');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37347,3091,157,'中美');
+186,3091,157,'中美');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37348,3093,157,'智慧');
+187,3093,157,'智慧');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37349,3095,157,'教育');
+188,3095,157,'教育');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37350,3097,157,'大会');
+189,3097,157,'大会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37351,3130,157,'史培军');
+190,3130,157,'史培军');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37352,3133,157,'主持');
+191,3133,157,'主持');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37353,3135,157,'召开');
+192,3135,157,'召开');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37354,3137,157,'新学');
+193,3137,157,'新学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37355,3139,157,'期');
+194,3139,157,'期');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37356,3140,157,'国有资产');
+195,3140,157,'国有资产');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37357,3144,157,'工作会');
+196,3144,157,'工作会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37358,3051,157,'事宜');
+197,3051,157,'事宜');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37359,3147,157,'议');
+198,3147,157,'议');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37360,3181,157,'培');
+199,3181,157,'培');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37361,3182,157,'到');
+200,3182,157,'到');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37362,3183,157,'心理学');
+201,3183,157,'心理学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37363,3186,157,'部');
+202,3186,157,'部');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37364,3187,157,'调研');
+203,3187,157,'调研');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37365,3220,157,'庞');
+204,3220,157,'庞');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37366,3221,157,'丽娟');
+205,3221,157,'丽娟');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37367,3223,157,'教授');
+206,3223,157,'教授');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37368,3225,157,'当选');
+207,3225,157,'当选');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37369,3227,157,'为');
+208,3227,157,'为');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37370,3228,157,'十三');
+209,3228,157,'十三');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37371,3230,157,'届');
+210,3230,157,'届');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37372,3231,157,'全国人大常委会');
+211,3231,157,'全国人大常委会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37373,3238,157,'委员');
+212,3238,157,'委员');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37374,3179,157,'孙红');
+213,3179,157,'孙红');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37375,2566,157,'生');
+214,2566,157,'生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37376,3049,157,'帮扶');
+215,3049,157,'帮扶');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37377,3045,157,'商洽');
+216,3045,157,'商洽');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37378,2924,157,'宇');
+217,2924,157,'宇');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37379,2925,157,'会见');
+218,2925,157,'会见');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37380,2927,157,'香港');
+219,2927,157,'香港');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37381,2929,157,'冯');
+220,2929,157,'冯');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37382,2930,157,'燊');
+221,2930,157,'燊');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37383,2931,157,'均');
+222,2931,157,'均');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37384,2932,157,'国学');
+223,2932,157,'国学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37385,2934,157,'基金会');
+224,2934,157,'基金会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37386,2937,157,'代表');
+225,2937,157,'代表');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37387,2970,157,'国家');
+226,2970,157,'国家');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37388,2972,157,'卫');
+227,2972,157,'卫');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37389,2973,157,'计委');
+228,2973,157,'计委');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37390,2975,157,'与');
+229,2975,157,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37391,2976,157,'我校');
+230,2976,157,'我校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37392,3047,157,'对口');
+231,3047,157,'对口');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37393,2978,157,'心理学');
+232,2978,157,'心理学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37394,2982,157,'联合');
+233,2982,157,'联合');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37395,2984,157,'举办');
+234,2984,157,'举办');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37396,2987,157,'加强');
+235,2987,157,'加强');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37397,2989,157,'心理健康');
+236,2989,157,'心理健康');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37398,2993,157,'人才');
+237,2993,157,'人才');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37399,2995,157,'发展');
+238,2995,157,'发展');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37400,2998,157,'联');
+239,2998,157,'联');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37401,2999,157,'学联');
+240,2999,157,'学联');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37402,3001,157,'做活');
+241,3001,157,'做活');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37403,3003,157,'动');
+242,3003,157,'动');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37404,3035,157,'青海');
+243,3035,157,'青海');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37405,3037,157,'师范大学');
+244,3037,157,'师范大学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37406,3041,157,'领导');
+245,3041,157,'领导');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37407,3043,157,'来校');
+246,3043,157,'来校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37408,2981,157,'部');
+247,2981,157,'部');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37409,2563,157,'组织学');
+248,2563,157,'组织学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37410,2561,157,'学校');
+249,2561,157,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37411,2528,157,'来访');
+250,2528,157,'来访');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37412,945,157,'人才招聘');
+251,945,157,'人才招聘');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37413,961,157,'科学研究');
+252,961,157,'科学研究');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37414,990,157,'招生就业');
+253,990,157,'招生就业');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37415,1030,157,'本科生');
+254,1030,157,'本科生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37416,1033,157,'招生');
+255,1033,157,'招生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37417,1058,157,'研究生');
+256,1058,157,'研究生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37418,1061,157,'招生');
+257,1061,157,'招生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37419,1091,157,'博士后');
+258,1091,157,'博士后');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37420,1117,157,'留学生');
+259,1117,157,'留学生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37421,1120,157,'招生');
+260,1120,157,'招生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37422,1145,157,'继续教育');
+261,1145,157,'继续教育');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37423,1149,157,'与');
+262,1149,157,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37424,1150,157,'教师培训');
+263,1150,157,'教师培训');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37425,1177,157,'就业');
+264,1177,157,'就业');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37426,929,157,'管理机构');
+265,929,157,'管理机构');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37427,1179,157,'与');
+266,1179,157,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37428,1241,157,'合作交流');
+267,1241,157,'合作交流');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37429,1281,157,'国际交流');
+268,1281,157,'国际交流');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37430,1285,157,'与');
+269,1285,157,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37431,1286,157,'合作');
+270,1286,157,'合作');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37432,1311,157,'国内');
+271,1311,157,'国内');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37433,1313,157,'合作');
+272,1313,157,'合作');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37434,1338,157,'港澳台');
+273,1338,157,'港澳台');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37435,1341,157,'事务');
+274,1341,157,'事务');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37436,1366,157,'教育');
+275,1366,157,'教育');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37437,1368,157,'基金会');
+276,1368,157,'基金会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37438,1430,157,'图书');
+277,1430,157,'图书');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37439,1432,157,'档案');
+278,1432,157,'档案');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37440,1470,157,'图书馆');
+279,1470,157,'图书馆');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37441,1496,157,'档案馆');
+280,1496,157,'档案馆');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37442,1180,157,'创业');
+281,1180,157,'创业');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37443,1558,157,'走进');
+282,1558,157,'走进');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37444,913,157,'院系设置');
+283,913,157,'院系设置');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37445,795,157,'学者');
+284,795,157,'学者');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37446,8,157,'VERSION');
+285,8,157,'VERSION');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37447,38,157,'书记');
+286,38,157,'书记');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37448,40,157,'信箱');
+287,40,157,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37449,54,157,'校长');
+288,54,157,'校长');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37450,56,157,'信箱');
+289,56,157,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37451,70,157,'校领导');
+290,70,157,'校领导');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37452,73,157,'信箱');
+291,73,157,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37453,87,157,'接待日');
+292,87,157,'接待日');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37454,277,157,'导航');
+293,277,157,'导航');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37455,334,157,'导航');
+294,334,157,'导航');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37456,391,157,'师大');
+295,391,157,'师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37457,393,157,'新闻');
+296,393,157,'新闻');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37458,431,157,'图文报道');
+297,431,157,'图文报道');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37459,458,157,'网络电视');
+298,458,157,'网络电视');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37460,866,157,'历史名人');
+299,866,157,'历史名人');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37461,485,157,'校报');
+300,485,157,'校报');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37462,512,157,'媒体');
+301,512,157,'媒体');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37463,514,157,'师大');
+302,514,157,'师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37464,572,157,'学校');
+303,572,157,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37465,574,157,'概况');
+304,574,157,'概况');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37466,614,157,'学校简介');
+305,614,157,'学校简介');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37467,641,157,'校史');
+306,641,157,'校史');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37468,643,157,'沿革');
+307,643,157,'沿革');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37469,668,157,'现任');
+308,668,157,'现任');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37470,670,157,'校领导');
+309,670,157,'校领导');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37471,696,157,'历任');
+310,696,157,'历任');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37472,698,157,'书记');
+311,698,157,'书记');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37473,768,157,'历任');
+312,768,157,'历任');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37474,770,157,'校长');
+313,770,157,'校长');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37475,793,157,'著名');
+314,793,157,'著名');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37476,487,157,'在线');
+315,487,157,'在线');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37477,3272,157,'汉字');
+316,3272,157,'汉字');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37478,1560,157,'师大');
+317,1560,157,'师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37479,1600,157,'地图');
+318,1600,157,'地图');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37480,2128,157,'通知');
+319,2128,157,'通知');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37481,2297,157,'北师大');
+320,2297,157,'北师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37482,2300,157,'快讯');
+321,2300,157,'快讯');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37483,2313,157,'更多');
+322,2313,157,'更多');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37484,2380,157,'学校');
+323,2380,157,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37485,2382,157,'各');
+324,2382,157,'各');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37486,2383,157,'单位');
+325,2383,157,'单位');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37487,2385,157,'学习贯彻');
+326,2385,157,'学习贯彻');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37488,2389,157,'落实');
+327,2389,157,'落实');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37489,2391,157,'党');
+328,2391,157,'党');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37490,2392,157,'的');
+329,2392,157,'的');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37491,2393,157,'十九');
+330,2393,157,'十九');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37492,2395,157,'大');
+331,2395,157,'大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37493,2396,157,'精神');
+332,2396,157,'精神');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37494,2127,157,'的');
+333,2127,157,'的');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37495,2429,157,'董奇');
+334,2429,157,'董奇');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37496,2433,157,'蒙古国');
+335,2433,157,'蒙古国');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37497,2436,157,'立');
+336,2436,157,'立');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37498,2437,157,'师范大学');
+337,2437,157,'师范大学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37499,2441,157,'校长');
+338,2441,157,'校长');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37500,2443,157,'一行');
+339,2443,157,'一行');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37501,2476,157,'学校');
+340,2476,157,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37502,2478,157,'开展');
+341,2478,157,'开展');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37503,2480,157,'消防');
+342,2480,157,'消防');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37504,2482,157,'安全');
+343,2482,157,'安全');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37505,2484,157,'专项');
+344,2484,157,'专项');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37506,2486,157,'检查');
+345,2486,157,'检查');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37507,2519,157,'台湾');
+346,2519,157,'台湾');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37508,2521,157,'师范大学');
+347,2521,157,'师范大学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37509,2525,157,'代表团');
+348,2525,157,'代表团');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37510,2431,157,'会见');
+349,2431,157,'会见');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37511,1598,157,'校园');
+350,1598,157,'校园');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37512,2124,157,'试运行');
+351,2124,157,'试运行');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37513,2120,157,'主页');
+352,2120,157,'主页');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37514,1625,157,'校园风光');
+353,1625,157,'校园风光');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37515,1652,157,'校');
+354,1652,157,'校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37516,1654,157,'历');
+355,1654,157,'历');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37517,1678,157,'黄');
+356,1678,157,'黄');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37518,1680,157,'页');
+357,1680,157,'页');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37519,1815,157,'师大');
+358,1815,157,'师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37520,1817,157,'新闻');
+359,1817,157,'新闻');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37521,1831,157,'学校');
+360,1831,157,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37522,1833,157,'概况');
+361,1833,157,'概况');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37523,1847,157,'院系设置');
+362,1847,157,'院系设置');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37524,1863,157,'管理机构');
+363,1863,157,'管理机构');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37525,1879,157,'人才招聘');
+364,1879,157,'人才招聘');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37526,1895,157,'科学研究');
+365,1895,157,'科学研究');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37527,1911,157,'招生就业');
+366,1911,157,'招生就业');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37528,2122,157,'上线');
+367,2122,157,'上线');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37529,1927,157,'合作交流');
+368,1927,157,'合作交流');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37530,1945,157,'档案');
+369,1945,157,'档案');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37531,1959,157,'走进');
+370,1959,157,'走进');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37532,1961,157,'师大');
+371,1961,157,'师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37533,1978,157,'书记');
+372,1978,157,'书记');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37534,1980,157,'信箱');
+373,1980,157,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37535,1994,157,'校长');
+374,1994,157,'校长');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37536,1996,157,'信箱');
+375,1996,157,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37537,2010,157,'校领导');
+376,2010,157,'校领导');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37538,2013,157,'信箱');
+377,2013,157,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37539,2027,157,'接待日');
+378,2027,157,'接待日');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37540,2112,157,'关于');
+379,2112,157,'关于');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37541,2114,157,'学校');
+380,2114,157,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37542,2116,157,'新版');
+381,2116,157,'新版');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37543,2118,157,'中文');
+382,2118,157,'中文');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37544,1943,157,'图书');
+383,1943,157,'图书');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37545,3274,157,'之美');
+384,3274,157,'之美');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37546,3277,157,'2018');
+385,3277,157,'2018');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37547,3281,157,'全球');
+386,3281,157,'全球');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37548,4398,157,'发现');
+387,4398,157,'发现');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37549,4400,157,'狄拉克');
+388,4400,157,'狄拉克');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37550,4403,157,'费米');
+389,4403,157,'费米');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37551,4405,157,'体系');
+390,4405,157,'体系');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37552,4407,157,'新');
+391,4407,157,'新');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37553,4408,157,'的');
+392,4408,157,'的');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37554,4409,157,'相图');
+393,4409,157,'相图');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37555,4457,157,'通知');
+394,4457,157,'通知');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37556,4460,157,'关于');
+395,4460,157,'关于');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37557,4462,157,'举办');
+396,4462,157,'举办');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37558,4465,157,'认知科学');
+397,4465,157,'认知科学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37559,4469,157,'和心');
+398,4469,157,'和心');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37560,4471,157,'灵');
+399,4471,157,'灵');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37561,4472,157,'哲学');
+400,4472,157,'哲学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37562,4397,157,'等');
+401,4397,157,'等');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37563,4474,157,'前沿');
+402,4474,157,'前沿');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37564,4478,157,'研究');
+403,4478,157,'研究');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37565,4481,157,'研讨班');
+404,4481,157,'研讨班');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37566,4484,157,'的');
+405,4484,157,'的');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37567,4485,157,'通知');
+406,4485,157,'通知');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37568,4533,157,'成果');
+407,4533,157,'成果');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37569,4536,157,'新学');
+408,4536,157,'新学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37570,4538,157,'期');
+409,4538,157,'期');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37571,4539,157,'新闻');
+410,4539,157,'新闻');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37572,4541,157,'传播学');
+411,4541,157,'传播学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37573,4544,157,'院');
+412,4544,157,'院');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37574,4545,157,'创新');
+413,4545,157,'创新');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37575,4548,157,'马克思主义');
+414,4548,157,'马克思主义');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37576,4553,157,'新闻');
+415,4553,157,'新闻');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37577,4555,157,'观');
+416,4555,157,'观');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37578,4476,157,'问题');
+417,4476,157,'问题');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37579,4557,157,'课程');
+418,4557,157,'课程');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37580,4396,157,'峰');
+419,4396,157,'峰');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37581,4394,157,'张');
+420,4394,157,'张');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37582,4238,157,'名家');
+421,4238,157,'名家');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37583,4240,157,'讲坛');
+422,4240,157,'讲坛');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37584,4243,157,'66');
+423,4243,157,'66');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37585,4248,157,'教育');
+424,4248,157,'教育');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37586,4250,157,'对');
+425,4250,157,'对');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37587,4251,157,'收入');
+426,4251,157,'收入');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37588,4254,157,'健康');
+427,4254,157,'健康');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37589,4256,157,'和');
+428,4256,157,'和');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37590,4257,157,'吸烟');
+429,4257,157,'吸烟');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37591,4259,157,'的');
+430,4259,157,'的');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37592,4260,157,'因果');
+431,4260,157,'因果');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37593,4262,157,'效应');
+432,4262,157,'效应');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37594,4310,157,'通知');
+433,4310,157,'通知');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37595,4313,157,'关于');
+434,4313,157,'关于');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37596,4395,157,'陆');
+435,4395,157,'陆');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37597,4315,157,'举办');
+436,4315,157,'举办');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37598,4320,157,'亚洲');
+437,4320,157,'亚洲');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37599,4322,157,'科技');
+438,4322,157,'科技');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37600,4324,157,'减灾');
+439,4324,157,'减灾');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37601,4326,157,'大会');
+440,4326,157,'大会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37602,4328,157,'的');
+441,4328,157,'的');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37603,4329,157,'通知');
+442,4329,157,'通知');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37604,4377,157,'成果');
+443,4377,157,'成果');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37605,4380,157,'物理学');
+444,4380,157,'物理学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37606,4383,157,'系');
+445,4383,157,'系');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37607,4384,157,'马');
+446,4384,157,'马');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37608,4385,157,'天星');
+447,4385,157,'天星');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37609,4387,157,'教授');
+448,4387,157,'教授');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37610,4389,157,'及其');
+449,4389,157,'及其');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37611,4391,157,'博士生');
+450,4391,157,'博士生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37612,4317,157,'第二届');
+451,4317,157,'第二届');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37613,4235,157,'经管');
+452,4235,157,'经管');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37614,4609,157,'通知公告');
+453,4609,157,'通知公告');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37615,4706,157,'2018');
+454,4706,157,'2018');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37616,4931,157,'配电');
+455,4931,157,'配电');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37617,4933,157,'设施');
+456,4933,157,'设施');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37618,4935,157,'残值');
+457,4935,157,'残值');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37619,4937,157,'处置');
+458,4937,157,'处置');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37620,4939,157,'项目招标');
+459,4939,157,'项目招标');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37621,4943,157,'公告');
+460,4943,157,'公告');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37622,4995,157,'北京师范大学');
+461,4995,157,'北京师范大学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37623,5001,157,'后勤');
+462,5001,157,'后勤');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37624,5003,157,'管理处');
+463,5003,157,'管理处');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37625,5006,157,'电力');
+464,5006,157,'电力');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37626,5008,157,'增容');
+465,5008,157,'增容');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37627,5010,157,'材料采购');
+466,5010,157,'材料采购');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37628,5014,157,'招标公告');
+467,5014,157,'招标公告');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37629,5068,157,'北京师范大学');
+468,5068,157,'北京师范大学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37630,4925,157,'北京师范大学');
+469,4925,157,'北京师范大学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37631,5074,157,'热力');
+470,5074,157,'热力');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37632,5077,157,'2017');
+471,5077,157,'2017');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37633,5082,157,'2020');
+472,5082,157,'2020');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37634,5086,157,'年度');
+473,5086,157,'年度');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37635,5088,157,'五金');
+474,5088,157,'五金');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37636,5090,157,'水暖');
+475,5090,157,'水暖');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37637,5092,157,'维修');
+476,5092,157,'维修');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37638,5094,157,'材料');
+477,5094,157,'材料');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37639,5096,157,'供货商');
+478,5096,157,'供货商');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37640,5099,157,'入围');
+479,5099,157,'入围');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37641,5101,157,'评选');
+480,5101,157,'评选');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37642,5103,157,'项目招标');
+481,5103,157,'项目招标');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37643,5107,157,'公告');
+482,5107,157,'公告');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37644,5160,157,'一');
+483,5160,157,'一');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37645,5161,157,'种');
+484,5161,157,'种');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37646,5076,157,'部');
+485,5076,157,'部');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37647,4624,157,'更多');
+486,4624,157,'更多');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37648,4873,157,'公示');
+487,4873,157,'公示');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37649,4868,157,'专利权');
+488,4868,157,'专利权');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37650,4710,157,'年');
+489,4710,157,'年');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37651,4711,157,'新年');
+490,4711,157,'新年');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37652,4713,157,'贺词');
+491,4713,157,'贺词');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37653,4765,157,'关于');
+492,4765,157,'关于');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37654,4767,157,'北师大');
+493,4767,157,'北师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37655,4770,157,'沙河');
+494,4770,157,'沙河');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37656,4772,157,'新');
+495,4772,157,'新');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37657,4773,157,'校区');
+496,4773,157,'校区');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37658,4775,157,'G');
+497,4775,157,'G');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37659,4776,157,'区');
+498,4776,157,'区');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37660,4777,157,'燃气');
+499,4777,157,'燃气');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37661,4779,157,'工程监理');
+500,4779,157,'工程监理');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37662,4783,157,'的');
+501,4783,157,'的');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37663,4784,157,'询价');
+502,4784,157,'询价');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37664,4871,157,'转让');
+503,4871,157,'转让');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37665,4786,157,'公告');
+504,4786,157,'公告');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37666,4841,157,'一');
+505,4841,157,'一');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37667,4842,157,'种');
+506,4842,157,'种');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37668,4843,157,'用于');
+507,4843,157,'用于');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37669,4845,157,'制备');
+508,4845,157,'制备');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37670,4847,157,'锝');
+509,4847,157,'锝');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37671,4849,157,'99m');
+510,4849,157,'99m');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37672,4852,157,'标记');
+511,4852,157,'标记');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37673,4854,157,'的');
+512,4854,157,'的');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37674,4855,157,'GSA');
+513,4855,157,'GSA');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37675,4858,157,'的');
+514,4858,157,'的');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37676,4859,157,'药盒');
+515,4859,157,'药盒');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37677,4861,157,'及其');
+516,4861,157,'及其');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37678,4863,157,'制备');
+517,4863,157,'制备');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37679,4865,157,'方法');
+518,4865,157,'方法');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37680,4838,157,'关于');
+519,4838,157,'关于');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37681,5164,157,'制备');
+520,5164,157,'制备');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37682,4233,157,'京师');
+521,4233,157,'京师');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37683,4229,157,'大讲堂');
+522,4229,157,'大讲堂');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37684,3480,157,'与');
+523,3480,157,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37685,3481,157,'教师培训');
+524,3481,157,'教师培训');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37686,3485,157,'学院');
+525,3485,157,'学院');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37687,3487,157,'召开');
+526,3487,157,'召开');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37688,3489,157,'专题');
+527,3489,157,'专题');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37689,3491,157,'学习会');
+528,3491,157,'学习会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37690,3525,157,'陈');
+529,3525,157,'陈');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37691,3526,157,'丽');
+530,3526,157,'丽');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37692,3527,157,'参加人');
+531,3527,157,'参加人');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37693,3530,157,'事');
+532,3530,157,'事');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37694,3531,157,'处');
+533,3531,157,'处');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37695,3533,157,'社会科学');
+534,3533,157,'社会科学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37696,3537,157,'处');
+535,3537,157,'处');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37697,3538,157,'党支部');
+536,3538,157,'党支部');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37698,3476,157,'继续教育');
+537,3476,157,'继续教育');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37699,3541,157,'联合');
+538,3541,157,'联合');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37700,3545,157,'工作会');
+539,3545,157,'工作会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37701,3579,157,'学校');
+540,3579,157,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37702,3581,157,'召开');
+541,3581,157,'召开');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37703,3583,157,'新学');
+542,3583,157,'新学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37704,3585,157,'期');
+543,3585,157,'期');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37705,3586,157,'党校工作');
+544,3586,157,'党校工作');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37706,3590,157,'会议');
+545,3590,157,'会议');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37707,3660,157,'学术');
+546,3660,157,'学术');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37708,3662,157,'动态');
+547,3662,157,'动态');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37709,3675,157,'更多');
+548,3675,157,'更多');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37710,3753,157,'预告');
+549,3753,157,'预告');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37711,3756,157,'03');
+550,3756,157,'03');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37712,3758,157,'.27');
+551,3758,157,'.27');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37713,3762,157,'学术讲座');
+552,3762,157,'学术讲座');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37714,3543,157,'学习');
+553,3543,157,'学习');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37715,3768,157,'青藏高原');
+554,3768,157,'青藏高原');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37716,3442,157,'工作会');
+555,3442,157,'工作会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37717,3438,157,'学院');
+556,3438,157,'学院');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37718,3283,157,'青年');
+557,3283,157,'青年');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37719,3285,157,'设计');
+558,3285,157,'设计');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37720,3287,157,'大赛');
+559,3287,157,'大赛');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37721,3289,157,'正式');
+560,3289,157,'正式');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37722,3291,157,'启动');
+561,3291,157,'启动');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37723,3324,157,'学校');
+562,3324,157,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37724,3326,157,'召开');
+563,3326,157,'召开');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37725,3328,157,'2018');
+564,3328,157,'2018');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37726,3332,157,'年春');
+565,3332,157,'年春');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37727,3334,157,'季');
+566,3334,157,'季');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37728,3335,157,'学期');
+567,3335,157,'学期');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37729,3337,157,'本科生');
+568,3337,157,'本科生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37730,3340,157,'班长');
+569,3340,157,'班长');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37731,3342,157,'工作会');
+570,3342,157,'工作会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37732,3440,157,'专题');
+571,3440,157,'专题');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37733,3376,157,'我校');
+572,3376,157,'我校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37734,3380,157,'位');
+573,3380,157,'位');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37735,3381,157,'教师');
+574,3381,157,'教师');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37736,3383,157,'入选');
+575,3383,157,'入选');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37737,3385,157,'第三');
+576,3385,157,'第三');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37738,3387,157,'批');
+577,3387,157,'批');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37739,3388,157,'国家');
+578,3388,157,'国家');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37740,3391,157,'万');
+579,3391,157,'万');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37741,3392,157,'人');
+580,3392,157,'人');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37742,3393,157,'计划');
+581,3393,157,'计划');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37743,3427,157,'学校');
+582,3427,157,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37744,3429,157,'召开');
+583,3429,157,'召开');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37745,3431,157,'2018');
+584,3431,157,'2018');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37746,3435,157,'年');
+585,3435,157,'年');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37747,3436,157,'孔子');
+586,3436,157,'孔子');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37748,3378,157,'12');
+587,3378,157,'12');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37749,4232,157,'暨');
+588,4232,157,'暨');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37750,3772,157,'与');
+589,3772,157,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37751,3775,157,'季风');
+590,3775,157,'季风');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37752,4065,157,'03');
+591,4065,157,'03');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37753,4067,157,'.24');
+592,4067,157,'.24');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37754,4071,157,'京师');
+593,4071,157,'京师');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37755,4073,157,'人文');
+594,4073,157,'人文');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37756,4075,157,'宗教');
+595,4075,157,'宗教');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37757,4077,157,'讲堂');
+596,4077,157,'讲堂');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37758,4081,157,'中医系');
+597,4081,157,'中医系');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37759,4084,157,'列');
+598,4084,157,'列');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37760,4085,157,'讲座');
+599,4085,157,'讲座');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37761,4088,157,'29');
+600,4088,157,'29');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37762,4137,157,'预告');
+601,4137,157,'预告');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37763,4140,157,'03');
+602,4140,157,'03');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37764,4142,157,'.24');
+603,4142,157,'.24');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37765,4146,157,'名家');
+604,4146,157,'名家');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37766,4062,157,'预告');
+605,4062,157,'预告');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37767,4148,157,'圆桌');
+606,4148,157,'圆桌');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37768,4152,157,'思想');
+607,4152,157,'思想');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37769,4154,157,'与');
+608,4154,157,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37770,4155,157,'学术');
+609,4155,157,'学术');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37771,4157,157,'40');
+610,4157,157,'40');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37772,4159,157,'年');
+611,4159,157,'年');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37773,4163,157,'青年');
+612,4163,157,'青年');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37774,4165,157,'专场');
+613,4165,157,'专场');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37775,4213,157,'预告');
+614,4213,157,'预告');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37776,4216,157,'03');
+615,4216,157,'03');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37777,4218,157,'.23');
+616,4218,157,'.23');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37778,4222,157,'瀚');
+617,4222,157,'瀚');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37779,4223,157,'德');
+618,4223,157,'德');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37780,4224,157,'经济学');
+619,4224,157,'经济学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37781,4227,157,'名家');
+620,4227,157,'名家');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37782,4150,157,'之');
+621,4150,157,'之');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37783,3773,157,'东亚');
+622,3773,157,'东亚');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37784,4008,157,'Idealism');
+623,4008,157,'Idealism');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37785,3994,157,'Refutation');
+624,3994,157,'Refutation');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37786,3823,157,'预告');
+625,3823,157,'预告');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37787,3826,157,'03');
+626,3826,157,'03');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37788,3828,157,'.29');
+627,3828,157,'.29');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37789,3832,157,'学术讲座');
+628,3832,157,'学术讲座');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37790,3838,157,'创新');
+629,3838,157,'创新');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37791,3840,157,'的');
+630,3840,157,'的');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37792,3841,157,'真相');
+631,3841,157,'真相');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37793,3889,157,'预告');
+632,3889,157,'预告');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37794,3892,157,'03');
+633,3892,157,'03');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37795,3894,157,'.27');
+634,3894,157,'.27');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37796,3898,157,'京师');
+635,3898,157,'京师');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37797,3900,157,'大讲堂');
+636,3900,157,'大讲堂');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37798,3905,157,'第三');
+637,3905,157,'第三');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37799,3907,157,'代');
+638,3907,157,'代');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37800,4005,157,'of');
+639,4005,157,'of');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37801,3908,157,'水稻');
+640,3908,157,'水稻');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37802,3912,157,'杂交育种');
+641,3912,157,'杂交育种');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37803,3916,157,'技术');
+642,3916,157,'技术');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37804,3918,157,'的');
+643,3918,157,'的');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37805,3919,157,'前世');
+644,3919,157,'前世');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37806,3921,157,'今生');
+645,3921,157,'今生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37807,3969,157,'预告');
+646,3969,157,'预告');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37808,3972,157,'03');
+647,3972,157,'03');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37809,3974,157,'.23');
+648,3974,157,'.23');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37810,3978,157,'京师');
+649,3978,157,'京师');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37811,3980,157,'外');
+650,3980,157,'外');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37812,3981,157,'哲');
+651,3981,157,'哲');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37813,3982,157,'讲坛');
+652,3982,157,'讲坛');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37814,3986,157,'The');
+653,3986,157,'The');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37815,3991,157,'Un');
+654,3991,157,'Un');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37816,3910,157,'小麦');
+655,3910,157,'小麦');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37817,0,157,'ENGLISH');
+656,0,157,'ENGLISH');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37818,5460,158,'物资');
+657,5460,158,'物资');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37819,5811,158,'信息');
+658,5811,158,'信息');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37820,5804,158,'门户');
+659,5804,158,'门户');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37821,5802,158,'信息');
+660,5802,158,'信息');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37822,5791,158,'登录');
+661,5791,158,'登录');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37823,5462,158,'供货商');
+662,5462,158,'供货商');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37824,5467,158,'公告');
+663,5467,158,'公告');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37825,5465,158,'遴选');
+664,5465,158,'遴选');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37826,5813,158,'公开');
+665,5813,158,'公开');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37827,5789,158,'快速');
+666,5789,158,'快速');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37828,5815,158,'校务');
+667,5815,158,'校务');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37829,5902,158,'信息网');
+668,5902,158,'信息网');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37830,5824,158,'管理系统');
+669,5824,158,'管理系统');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37831,5837,158,'教师');
+670,5837,158,'教师');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37832,5839,158,'邮箱');
+671,5839,158,'邮箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37833,5846,158,'学生');
+672,5846,158,'学生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37834,5848,158,'邮箱');
+673,5848,158,'邮箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37835,5885,158,'常用');
+674,5885,158,'常用');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37836,5887,158,'链接');
+675,5887,158,'链接');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37837,5906,158,'服务');
+676,5906,158,'服务');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37838,5892,158,'教育');
+677,5892,158,'教育');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37839,5894,158,'基金会');
+678,5894,158,'基金会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37840,5905,158,'络');
+679,5905,158,'络');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37841,5458,158,'食堂');
+680,5458,158,'食堂');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37842,5817,158,'信息');
+681,5817,158,'信息');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37843,5452,158,'北京师范大学');
+682,5452,158,'北京师范大学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37844,5177,158,'的');
+683,5177,158,'的');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37845,5394,158,'服务网点');
+684,5394,158,'服务网点');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37846,5171,158,'标记');
+685,5171,158,'标记');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37847,5173,158,'的');
+686,5173,158,'的');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37848,5174,158,'GSA');
+687,5174,158,'GSA');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37849,5910,158,'新');
+688,5910,158,'新');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37850,5178,158,'药盒');
+689,5178,158,'药盒');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37851,5180,158,'及其');
+690,5180,158,'及其');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37852,5182,158,'制备');
+691,5182,158,'制备');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37853,5184,158,'方法');
+692,5184,158,'方法');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37854,5187,158,'专利转让');
+693,5187,158,'专利转让');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37855,5191,158,'公示');
+694,5191,158,'公示');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37856,5243,158,'北京师范大学');
+695,5243,158,'北京师范大学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37857,5249,158,'校内');
+696,5249,158,'校内');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37858,5251,158,'合作');
+697,5251,158,'合作');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37859,5253,158,'服务网点');
+698,5253,158,'服务网点');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37860,5257,158,'招标公告');
+699,5257,158,'招标公告');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37861,5262,158,'第二');
+700,5262,158,'第二');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37862,5264,158,'次');
+701,5264,158,'次');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37863,5316,158,'北京师范大学');
+702,5316,158,'北京师范大学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37864,5322,158,'校内');
+703,5322,158,'校内');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37865,5324,158,'合作');
+704,5324,158,'合作');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37866,5326,158,'服务网点');
+705,5326,158,'服务网点');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37867,5330,158,'招标公告');
+706,5330,158,'招标公告');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37868,5384,158,'北京师范大学');
+707,5384,158,'北京师范大学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37869,5390,158,'校内');
+708,5390,158,'校内');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37870,5392,158,'合作');
+709,5392,158,'合作');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37871,5398,158,'招标公告');
+710,5398,158,'招标公告');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37872,5911,158,'校区');
+711,5911,158,'校区');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37873,6139,158,'号');
+712,6139,158,'号');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37874,5915,158,'指挥部');
+713,5915,158,'指挥部');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37875,6166,158,'号');
+714,6166,158,'号');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37876,6168,158,'1');
+715,6168,158,'1');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37877,6172,158,'京');
+716,6172,158,'京');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37878,6173,158,'公网');
+717,6173,158,'公网');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37879,6175,158,'安');
+718,6175,158,'安');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37880,6176,158,'备');
+719,6176,158,'备');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37881,6177,158,'110402430002');
+720,6177,158,'110402430002');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37882,6189,158,'号');
+721,6189,158,'号');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37883,6192,158,'电话');
+722,6192,158,'电话');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37884,6194,158,'查号台');
+723,6194,158,'查号台');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37885,6198,158,'010');
+724,6198,158,'010');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37886,6202,158,'58806183');
+725,6202,158,'58806183');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37887,6212,158,'后勤服务');
+726,6212,158,'后勤服务');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37888,6216,158,'热线');
+727,6216,158,'热线');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37889,6219,158,'010');
+728,6219,158,'010');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37890,6223,158,'58801111');
+729,6223,158,'58801111');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37891,6243,158,'Site');
+730,6243,158,'Site');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37892,6248,158,'designed');
+731,6248,158,'designed');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37893,6257,158,'by');
+732,6257,158,'by');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37894,6260,158,'MONOKEROS');
+733,6260,158,'MONOKEROS');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37895,6414,158,'是');
+734,6414,158,'是');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37896,6415,158,'第');
+735,6415,158,'第');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37897,6446,158,'位');
+736,6446,158,'位');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37898,6447,158,'访问者');
+737,6447,158,'访问者');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37899,5168,158,'99m');
+738,5168,158,'99m');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37900,6158,158,'05066832');
+739,6158,158,'05066832');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37901,5913,158,'建设');
+740,5913,158,'建设');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37902,6157,158,'备');
+741,6157,158,'备');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37903,6153,158,'京');
+742,6153,158,'京');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37904,5929,158,'校友总会');
+743,5929,158,'校友总会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37905,5938,158,'学风');
+744,5938,158,'学风');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37906,5940,158,'建设');
+745,5940,158,'建设');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37907,5944,158,'教师教育');
+746,5944,158,'教师教育');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37908,5948,158,'机构');
+747,5948,158,'机构');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37909,5955,158,'教育科');
+748,5955,158,'教育科');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37910,5958,158,'学期');
+749,5958,158,'学期');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37911,5960,158,'刊');
+750,5960,158,'刊');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37912,5971,158,'京师');
+751,5971,158,'京师');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37913,5973,158,'心晴');
+752,5973,158,'心晴');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37914,5993,158,'IPv6');
+753,5993,158,'IPv6');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37915,5997,158,'教师教育');
+754,5997,158,'教师教育');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37916,6001,158,'创新');
+755,6001,158,'创新');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37917,6003,158,'支持');
+756,6003,158,'支持');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37918,6005,158,'系统');
+757,6005,158,'系统');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37919,6112,158,'版权所有');
+758,6112,158,'版权所有');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37920,6117,158,'北京师范大学');
+759,6117,158,'北京师范大学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37921,6125,158,'地址');
+760,6125,158,'地址');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37922,6128,158,'北京市');
+761,6128,158,'北京市');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37923,6131,158,'新街口');
+762,6131,158,'新街口');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37924,6134,158,'外');
+763,6134,158,'外');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37925,6135,158,'大街');
+764,6135,158,'大街');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37926,6137,158,'19');
+765,6137,158,'19');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37927,6142,158,'邮编');
+766,6142,158,'邮编');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37928,6145,158,'100875');
+767,6145,158,'100875');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37929,6154,158,'ICP');
+768,6154,158,'ICP');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37930,6413,158,'您');
+769,6413,158,'您');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37931,5166,158,'锝');
+770,5166,158,'锝');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37932,5162,158,'用于');
+771,5162,158,'用于');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37933,2732,158,'体育');
+772,2732,158,'体育');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37934,2734,158,'支教');
+773,2734,158,'支教');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37935,2736,158,'项目');
+774,2736,158,'项目');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37936,2738,158,'首场');
+775,2738,158,'首场');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37937,2740,158,'宣讲会');
+776,2740,158,'宣讲会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37938,2743,158,'在');
+777,2743,158,'在');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37939,2744,158,'我校');
+778,2744,158,'我校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37940,2746,158,'举行');
+779,2746,158,'举行');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37941,2779,158,'BNU');
+780,2779,158,'BNU');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37942,2783,158,'1');
+781,2783,158,'1');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37943,2784,158,'极地');
+782,2784,158,'极地');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37944,2786,158,'观测');
+783,2786,158,'观测');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37945,2788,158,'小');
+784,2788,158,'小');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37946,2789,158,'卫星');
+785,2789,158,'卫星');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37947,2791,158,'完成');
+786,2791,158,'完成');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37948,2793,158,'总体');
+787,2793,158,'总体');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37949,2795,158,'方案设计');
+788,2795,158,'方案设计');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37950,2799,158,'评审');
+789,2799,158,'评审');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37951,2832,158,'研究生');
+790,2832,158,'研究生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37952,2835,158,'党员');
+791,2835,158,'党员');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37953,2837,158,'开展');
+792,2837,158,'开展');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37954,2840,158,'学雷锋');
+793,2840,158,'学雷锋');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37955,2844,158,'志愿服务');
+794,2844,158,'志愿服务');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37956,2848,158,'月');
+795,2848,158,'月');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37957,2849,158,'活动');
+796,2849,158,'活动');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37958,2882,158,'孙红');
+797,2882,158,'孙红');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37959,2884,158,'培');
+798,2884,158,'培');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37960,2885,158,'到');
+799,2885,158,'到');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37961,2886,158,'二');
+800,2886,158,'二');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37962,2730,158,'基金');
+801,2730,158,'基金');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37963,2728,158,'发展');
+802,2728,158,'发展');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37964,2726,158,'女排');
+803,2726,158,'女排');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37965,2725,158,'琪');
+804,2725,158,'琪');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37966,2567,158,'观看');
+805,2567,158,'观看');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37967,2569,158,'十三');
+806,2569,158,'十三');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37968,2571,158,'届');
+807,2571,158,'届');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37969,2572,158,'全国人大');
+808,2572,158,'全国人大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37970,2576,158,'一次');
+809,2576,158,'一次');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37971,2578,158,'会议');
+810,2578,158,'会议');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37972,2580,158,'闭幕会');
+811,2580,158,'闭幕会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37973,2583,158,'和');
+812,2583,158,'和');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37974,2584,158,'总理');
+813,2584,158,'总理');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37975,2586,158,'记者会');
+814,2586,158,'记者会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37976,2620,158,'学校');
+815,2620,158,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37977,2622,158,'开展');
+816,2622,158,'开展');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37978,2624,158,'本科生');
+817,2624,158,'本科生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37979,2627,158,'学术');
+818,2627,158,'学术');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37980,2887,158,'附中');
+819,2887,158,'附中');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37981,2629,158,'规范');
+820,2629,158,'规范');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37982,2634,158,'列');
+821,2634,158,'列');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37983,2635,158,'活动');
+822,2635,158,'活动');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37984,2668,158,'学校');
+823,2668,158,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37985,2670,158,'召开');
+824,2670,158,'召开');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37986,2672,158,'2018');
+825,2672,158,'2018');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37987,2676,158,'年春');
+826,2676,158,'年春');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37988,2678,158,'季');
+827,2678,158,'季');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37989,2679,158,'学期');
+828,2679,158,'学期');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37990,2681,158,'研究生');
+829,2681,158,'研究生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37991,2684,158,'党支部');
+830,2684,158,'党支部');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37992,2687,158,'书记');
+831,2687,158,'书记');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37993,2689,158,'工作会');
+832,2689,158,'工作会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37994,2723,158,'惠');
+833,2723,158,'惠');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37995,2724,158,'若');
+834,2724,158,'若');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37996,2631,158,'教育系');
+835,2631,158,'教育系');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37997,2889,158,'调研');
+836,2889,158,'调研');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37998,2922,158,'周');
+837,2922,158,'周');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-37999,2923,158,'作');
+838,2923,158,'作');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38000,3084,158,'学校');
+839,3084,158,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38001,3086,158,'举办');
+840,3086,158,'举办');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38002,3088,158,'第三届');
+841,3088,158,'第三届');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38003,3091,158,'中美');
+842,3091,158,'中美');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38004,3093,158,'智慧');
+843,3093,158,'智慧');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38005,3095,158,'教育');
+844,3095,158,'教育');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38006,3097,158,'大会');
+845,3097,158,'大会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38007,3130,158,'史培军');
+846,3130,158,'史培军');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38008,3133,158,'主持');
+847,3133,158,'主持');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38009,3135,158,'召开');
+848,3135,158,'召开');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38010,3137,158,'新学');
+849,3137,158,'新学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38011,3139,158,'期');
+850,3139,158,'期');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38012,3140,158,'国有资产');
+851,3140,158,'国有资产');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38013,3144,158,'工作会');
+852,3144,158,'工作会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38014,3051,158,'事宜');
+853,3051,158,'事宜');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38015,3147,158,'议');
+854,3147,158,'议');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38016,3181,158,'培');
+855,3181,158,'培');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38017,3182,158,'到');
+856,3182,158,'到');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38018,3183,158,'心理学');
+857,3183,158,'心理学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38019,3186,158,'部');
+858,3186,158,'部');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38020,3187,158,'调研');
+859,3187,158,'调研');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38021,3220,158,'庞');
+860,3220,158,'庞');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38022,3221,158,'丽娟');
+861,3221,158,'丽娟');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38023,3223,158,'教授');
+862,3223,158,'教授');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38024,3225,158,'当选');
+863,3225,158,'当选');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38025,3227,158,'为');
+864,3227,158,'为');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38026,3228,158,'十三');
+865,3228,158,'十三');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38027,3230,158,'届');
+866,3230,158,'届');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38028,3231,158,'全国人大常委会');
+867,3231,158,'全国人大常委会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38029,3238,158,'委员');
+868,3238,158,'委员');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38030,3179,158,'孙红');
+869,3179,158,'孙红');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38031,2566,158,'生');
+870,2566,158,'生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38032,3049,158,'帮扶');
+871,3049,158,'帮扶');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38033,3045,158,'商洽');
+872,3045,158,'商洽');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38034,2924,158,'宇');
+873,2924,158,'宇');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38035,2925,158,'会见');
+874,2925,158,'会见');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38036,2927,158,'香港');
+875,2927,158,'香港');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38037,2929,158,'冯');
+876,2929,158,'冯');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38038,2930,158,'燊');
+877,2930,158,'燊');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38039,2931,158,'均');
+878,2931,158,'均');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38040,2932,158,'国学');
+879,2932,158,'国学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38041,2934,158,'基金会');
+880,2934,158,'基金会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38042,2937,158,'代表');
+881,2937,158,'代表');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38043,2970,158,'国家');
+882,2970,158,'国家');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38044,2972,158,'卫');
+883,2972,158,'卫');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38045,2973,158,'计委');
+884,2973,158,'计委');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38046,2975,158,'与');
+885,2975,158,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38047,2976,158,'我校');
+886,2976,158,'我校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38048,3047,158,'对口');
+887,3047,158,'对口');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38049,2978,158,'心理学');
+888,2978,158,'心理学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38050,2982,158,'联合');
+889,2982,158,'联合');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38051,2984,158,'举办');
+890,2984,158,'举办');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38052,2987,158,'加强');
+891,2987,158,'加强');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38053,2989,158,'心理健康');
+892,2989,158,'心理健康');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38054,2993,158,'人才');
+893,2993,158,'人才');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38055,2995,158,'发展');
+894,2995,158,'发展');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38056,2998,158,'联');
+895,2998,158,'联');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38057,2999,158,'学联');
+896,2999,158,'学联');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38058,3001,158,'做活');
+897,3001,158,'做活');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38059,3003,158,'动');
+898,3003,158,'动');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38060,3035,158,'青海');
+899,3035,158,'青海');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38061,3037,158,'师范大学');
+900,3037,158,'师范大学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38062,3041,158,'领导');
+901,3041,158,'领导');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38063,3043,158,'来校');
+902,3043,158,'来校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38064,2981,158,'部');
+903,2981,158,'部');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38065,2563,158,'组织学');
+904,2563,158,'组织学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38066,2561,158,'学校');
+905,2561,158,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38067,2528,158,'来访');
+906,2528,158,'来访');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38068,945,158,'人才招聘');
+907,945,158,'人才招聘');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38069,961,158,'科学研究');
+908,961,158,'科学研究');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38070,990,158,'招生就业');
+909,990,158,'招生就业');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38071,1030,158,'本科生');
+910,1030,158,'本科生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38072,1033,158,'招生');
+911,1033,158,'招生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38073,1058,158,'研究生');
+912,1058,158,'研究生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38074,1061,158,'招生');
+913,1061,158,'招生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38075,1091,158,'博士后');
+914,1091,158,'博士后');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38076,1117,158,'留学生');
+915,1117,158,'留学生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38077,1120,158,'招生');
+916,1120,158,'招生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38078,1145,158,'继续教育');
+917,1145,158,'继续教育');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38079,1149,158,'与');
+918,1149,158,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38080,1150,158,'教师培训');
+919,1150,158,'教师培训');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38081,1177,158,'就业');
+920,1177,158,'就业');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38082,929,158,'管理机构');
+921,929,158,'管理机构');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38083,1179,158,'与');
+922,1179,158,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38084,1241,158,'合作交流');
+923,1241,158,'合作交流');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38085,1281,158,'国际交流');
+924,1281,158,'国际交流');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38086,1285,158,'与');
+925,1285,158,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38087,1286,158,'合作');
+926,1286,158,'合作');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38088,1311,158,'国内');
+927,1311,158,'国内');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38089,1313,158,'合作');
+928,1313,158,'合作');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38090,1338,158,'港澳台');
+929,1338,158,'港澳台');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38091,1341,158,'事务');
+930,1341,158,'事务');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38092,1366,158,'教育');
+931,1366,158,'教育');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38093,1368,158,'基金会');
+932,1368,158,'基金会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38094,1430,158,'图书');
+933,1430,158,'图书');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38095,1432,158,'档案');
+934,1432,158,'档案');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38096,1470,158,'图书馆');
+935,1470,158,'图书馆');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38097,1496,158,'档案馆');
+936,1496,158,'档案馆');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38098,1180,158,'创业');
+937,1180,158,'创业');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38099,1558,158,'走进');
+938,1558,158,'走进');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38100,913,158,'院系设置');
+939,913,158,'院系设置');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38101,795,158,'学者');
+940,795,158,'学者');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38102,8,158,'VERSION');
+941,8,158,'VERSION');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38103,38,158,'书记');
+942,38,158,'书记');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38104,40,158,'信箱');
+943,40,158,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38105,54,158,'校长');
+944,54,158,'校长');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38106,56,158,'信箱');
+945,56,158,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38107,70,158,'校领导');
+946,70,158,'校领导');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38108,73,158,'信箱');
+947,73,158,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38109,87,158,'接待日');
+948,87,158,'接待日');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38110,277,158,'导航');
+949,277,158,'导航');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38111,334,158,'导航');
+950,334,158,'导航');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38112,391,158,'师大');
+951,391,158,'师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38113,393,158,'新闻');
+952,393,158,'新闻');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38114,431,158,'图文报道');
+953,431,158,'图文报道');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38115,458,158,'网络电视');
+954,458,158,'网络电视');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38116,866,158,'历史名人');
+955,866,158,'历史名人');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38117,485,158,'校报');
+956,485,158,'校报');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38118,512,158,'媒体');
+957,512,158,'媒体');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38119,514,158,'师大');
+958,514,158,'师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38120,572,158,'学校');
+959,572,158,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38121,574,158,'概况');
+960,574,158,'概况');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38122,614,158,'学校简介');
+961,614,158,'学校简介');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38123,641,158,'校史');
+962,641,158,'校史');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38124,643,158,'沿革');
+963,643,158,'沿革');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38125,668,158,'现任');
+964,668,158,'现任');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38126,670,158,'校领导');
+965,670,158,'校领导');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38127,696,158,'历任');
+966,696,158,'历任');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38128,698,158,'书记');
+967,698,158,'书记');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38129,768,158,'历任');
+968,768,158,'历任');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38130,770,158,'校长');
+969,770,158,'校长');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38131,793,158,'著名');
+970,793,158,'著名');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38132,487,158,'在线');
+971,487,158,'在线');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38133,3272,158,'汉字');
+972,3272,158,'汉字');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38134,1560,158,'师大');
+973,1560,158,'师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38135,1600,158,'地图');
+974,1600,158,'地图');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38136,2128,158,'通知');
+975,2128,158,'通知');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38137,2297,158,'北师大');
+976,2297,158,'北师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38138,2300,158,'快讯');
+977,2300,158,'快讯');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38139,2313,158,'更多');
+978,2313,158,'更多');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38140,2380,158,'学校');
+979,2380,158,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38141,2382,158,'各');
+980,2382,158,'各');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38142,2383,158,'单位');
+981,2383,158,'单位');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38143,2385,158,'学习贯彻');
+982,2385,158,'学习贯彻');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38144,2389,158,'落实');
+983,2389,158,'落实');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38145,2391,158,'党');
+984,2391,158,'党');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38146,2392,158,'的');
+985,2392,158,'的');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38147,2393,158,'十九');
+986,2393,158,'十九');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38148,2395,158,'大');
+987,2395,158,'大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38149,2396,158,'精神');
+988,2396,158,'精神');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38150,2127,158,'的');
+989,2127,158,'的');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38151,2429,158,'董奇');
+990,2429,158,'董奇');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38152,2433,158,'蒙古国');
+991,2433,158,'蒙古国');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38153,2436,158,'立');
+992,2436,158,'立');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38154,2437,158,'师范大学');
+993,2437,158,'师范大学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38155,2441,158,'校长');
+994,2441,158,'校长');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38156,2443,158,'一行');
+995,2443,158,'一行');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38157,2476,158,'学校');
+996,2476,158,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38158,2478,158,'开展');
+997,2478,158,'开展');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38159,2480,158,'消防');
+998,2480,158,'消防');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38160,2482,158,'安全');
+999,2482,158,'安全');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38161,2484,158,'专项');
+1000,2484,158,'专项');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38162,2486,158,'检查');
+1001,2486,158,'检查');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38163,2519,158,'台湾');
+1002,2519,158,'台湾');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38164,2521,158,'师范大学');
+1003,2521,158,'师范大学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38165,2525,158,'代表团');
+1004,2525,158,'代表团');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38166,2431,158,'会见');
+1005,2431,158,'会见');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38167,1598,158,'校园');
+1006,1598,158,'校园');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38168,2124,158,'试运行');
+1007,2124,158,'试运行');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38169,2120,158,'主页');
+1008,2120,158,'主页');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38170,1625,158,'校园风光');
+1009,1625,158,'校园风光');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38171,1652,158,'校');
+1010,1652,158,'校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38172,1654,158,'历');
+1011,1654,158,'历');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38173,1678,158,'黄');
+1012,1678,158,'黄');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38174,1680,158,'页');
+1013,1680,158,'页');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38175,1815,158,'师大');
+1014,1815,158,'师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38176,1817,158,'新闻');
+1015,1817,158,'新闻');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38177,1831,158,'学校');
+1016,1831,158,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38178,1833,158,'概况');
+1017,1833,158,'概况');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38179,1847,158,'院系设置');
+1018,1847,158,'院系设置');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38180,1863,158,'管理机构');
+1019,1863,158,'管理机构');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38181,1879,158,'人才招聘');
+1020,1879,158,'人才招聘');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38182,1895,158,'科学研究');
+1021,1895,158,'科学研究');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38183,1911,158,'招生就业');
+1022,1911,158,'招生就业');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38184,2122,158,'上线');
+1023,2122,158,'上线');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38185,1927,158,'合作交流');
+1024,1927,158,'合作交流');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38186,1945,158,'档案');
+1025,1945,158,'档案');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38187,1959,158,'走进');
+1026,1959,158,'走进');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38188,1961,158,'师大');
+1027,1961,158,'师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38189,1978,158,'书记');
+1028,1978,158,'书记');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38190,1980,158,'信箱');
+1029,1980,158,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38191,1994,158,'校长');
+1030,1994,158,'校长');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38192,1996,158,'信箱');
+1031,1996,158,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38193,2010,158,'校领导');
+1032,2010,158,'校领导');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38194,2013,158,'信箱');
+1033,2013,158,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38195,2027,158,'接待日');
+1034,2027,158,'接待日');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38196,2112,158,'关于');
+1035,2112,158,'关于');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38197,2114,158,'学校');
+1036,2114,158,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38198,2116,158,'新版');
+1037,2116,158,'新版');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38199,2118,158,'中文');
+1038,2118,158,'中文');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38200,1943,158,'图书');
+1039,1943,158,'图书');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38201,3274,158,'之美');
+1040,3274,158,'之美');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38202,3277,158,'2018');
+1041,3277,158,'2018');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38203,3281,158,'全球');
+1042,3281,158,'全球');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38204,4398,158,'发现');
+1043,4398,158,'发现');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38205,4400,158,'狄拉克');
+1044,4400,158,'狄拉克');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38206,4403,158,'费米');
+1045,4403,158,'费米');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38207,4405,158,'体系');
+1046,4405,158,'体系');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38208,4407,158,'新');
+1047,4407,158,'新');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38209,4408,158,'的');
+1048,4408,158,'的');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38210,4409,158,'相图');
+1049,4409,158,'相图');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38211,4457,158,'通知');
+1050,4457,158,'通知');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38212,4460,158,'关于');
+1051,4460,158,'关于');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38213,4462,158,'举办');
+1052,4462,158,'举办');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38214,4465,158,'认知科学');
+1053,4465,158,'认知科学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38215,4469,158,'和心');
+1054,4469,158,'和心');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38216,4471,158,'灵');
+1055,4471,158,'灵');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38217,4472,158,'哲学');
+1056,4472,158,'哲学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38218,4397,158,'等');
+1057,4397,158,'等');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38219,4474,158,'前沿');
+1058,4474,158,'前沿');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38220,4478,158,'研究');
+1059,4478,158,'研究');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38221,4481,158,'研讨班');
+1060,4481,158,'研讨班');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38222,4484,158,'的');
+1061,4484,158,'的');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38223,4485,158,'通知');
+1062,4485,158,'通知');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38224,4533,158,'成果');
+1063,4533,158,'成果');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38225,4536,158,'新学');
+1064,4536,158,'新学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38226,4538,158,'期');
+1065,4538,158,'期');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38227,4539,158,'新闻');
+1066,4539,158,'新闻');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38228,4541,158,'传播学');
+1067,4541,158,'传播学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38229,4544,158,'院');
+1068,4544,158,'院');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38230,4545,158,'创新');
+1069,4545,158,'创新');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38231,4548,158,'马克思主义');
+1070,4548,158,'马克思主义');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38232,4553,158,'新闻');
+1071,4553,158,'新闻');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38233,4555,158,'观');
+1072,4555,158,'观');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38234,4476,158,'问题');
+1073,4476,158,'问题');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38235,4557,158,'课程');
+1074,4557,158,'课程');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38236,4396,158,'峰');
+1075,4396,158,'峰');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38237,4394,158,'张');
+1076,4394,158,'张');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38238,4238,158,'名家');
+1077,4238,158,'名家');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38239,4240,158,'讲坛');
+1078,4240,158,'讲坛');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38240,4243,158,'66');
+1079,4243,158,'66');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38241,4248,158,'教育');
+1080,4248,158,'教育');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38242,4250,158,'对');
+1081,4250,158,'对');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38243,4251,158,'收入');
+1082,4251,158,'收入');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38244,4254,158,'健康');
+1083,4254,158,'健康');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38245,4256,158,'和');
+1084,4256,158,'和');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38246,4257,158,'吸烟');
+1085,4257,158,'吸烟');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38247,4259,158,'的');
+1086,4259,158,'的');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38248,4260,158,'因果');
+1087,4260,158,'因果');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38249,4262,158,'效应');
+1088,4262,158,'效应');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38250,4310,158,'通知');
+1089,4310,158,'通知');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38251,4313,158,'关于');
+1090,4313,158,'关于');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38252,4395,158,'陆');
+1091,4395,158,'陆');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38253,4315,158,'举办');
+1092,4315,158,'举办');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38254,4320,158,'亚洲');
+1093,4320,158,'亚洲');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38255,4322,158,'科技');
+1094,4322,158,'科技');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38256,4324,158,'减灾');
+1095,4324,158,'减灾');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38257,4326,158,'大会');
+1096,4326,158,'大会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38258,4328,158,'的');
+1097,4328,158,'的');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38259,4329,158,'通知');
+1098,4329,158,'通知');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38260,4377,158,'成果');
+1099,4377,158,'成果');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38261,4380,158,'物理学');
+1100,4380,158,'物理学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38262,4383,158,'系');
+1101,4383,158,'系');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38263,4384,158,'马');
+1102,4384,158,'马');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38264,4385,158,'天星');
+1103,4385,158,'天星');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38265,4387,158,'教授');
+1104,4387,158,'教授');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38266,4389,158,'及其');
+1105,4389,158,'及其');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38267,4391,158,'博士生');
+1106,4391,158,'博士生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38268,4317,158,'第二届');
+1107,4317,158,'第二届');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38269,4235,158,'经管');
+1108,4235,158,'经管');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38270,4609,158,'通知公告');
+1109,4609,158,'通知公告');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38271,4706,158,'2018');
+1110,4706,158,'2018');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38272,4931,158,'配电');
+1111,4931,158,'配电');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38273,4933,158,'设施');
+1112,4933,158,'设施');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38274,4935,158,'残值');
+1113,4935,158,'残值');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38275,4937,158,'处置');
+1114,4937,158,'处置');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38276,4939,158,'项目招标');
+1115,4939,158,'项目招标');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38277,4943,158,'公告');
+1116,4943,158,'公告');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38278,4995,158,'北京师范大学');
+1117,4995,158,'北京师范大学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38279,5001,158,'后勤');
+1118,5001,158,'后勤');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38280,5003,158,'管理处');
+1119,5003,158,'管理处');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38281,5006,158,'电力');
+1120,5006,158,'电力');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38282,5008,158,'增容');
+1121,5008,158,'增容');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38283,5010,158,'材料采购');
+1122,5010,158,'材料采购');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38284,5014,158,'招标公告');
+1123,5014,158,'招标公告');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38285,5068,158,'北京师范大学');
+1124,5068,158,'北京师范大学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38286,4925,158,'北京师范大学');
+1125,4925,158,'北京师范大学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38287,5074,158,'热力');
+1126,5074,158,'热力');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38288,5077,158,'2017');
+1127,5077,158,'2017');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38289,5082,158,'2020');
+1128,5082,158,'2020');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38290,5086,158,'年度');
+1129,5086,158,'年度');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38291,5088,158,'五金');
+1130,5088,158,'五金');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38292,5090,158,'水暖');
+1131,5090,158,'水暖');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38293,5092,158,'维修');
+1132,5092,158,'维修');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38294,5094,158,'材料');
+1133,5094,158,'材料');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38295,5096,158,'供货商');
+1134,5096,158,'供货商');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38296,5099,158,'入围');
+1135,5099,158,'入围');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38297,5101,158,'评选');
+1136,5101,158,'评选');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38298,5103,158,'项目招标');
+1137,5103,158,'项目招标');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38299,5107,158,'公告');
+1138,5107,158,'公告');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38300,5160,158,'一');
+1139,5160,158,'一');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38301,5161,158,'种');
+1140,5161,158,'种');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38302,5076,158,'部');
+1141,5076,158,'部');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38303,4624,158,'更多');
+1142,4624,158,'更多');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38304,4873,158,'公示');
+1143,4873,158,'公示');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38305,4868,158,'专利权');
+1144,4868,158,'专利权');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38306,4710,158,'年');
+1145,4710,158,'年');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38307,4711,158,'新年');
+1146,4711,158,'新年');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38308,4713,158,'贺词');
+1147,4713,158,'贺词');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38309,4765,158,'关于');
+1148,4765,158,'关于');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38310,4767,158,'北师大');
+1149,4767,158,'北师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38311,4770,158,'沙河');
+1150,4770,158,'沙河');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38312,4772,158,'新');
+1151,4772,158,'新');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38313,4773,158,'校区');
+1152,4773,158,'校区');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38314,4775,158,'G');
+1153,4775,158,'G');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38315,4776,158,'区');
+1154,4776,158,'区');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38316,4777,158,'燃气');
+1155,4777,158,'燃气');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38317,4779,158,'工程监理');
+1156,4779,158,'工程监理');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38318,4783,158,'的');
+1157,4783,158,'的');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38319,4784,158,'询价');
+1158,4784,158,'询价');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38320,4871,158,'转让');
+1159,4871,158,'转让');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38321,4786,158,'公告');
+1160,4786,158,'公告');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38322,4841,158,'一');
+1161,4841,158,'一');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38323,4842,158,'种');
+1162,4842,158,'种');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38324,4843,158,'用于');
+1163,4843,158,'用于');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38325,4845,158,'制备');
+1164,4845,158,'制备');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38326,4847,158,'锝');
+1165,4847,158,'锝');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38327,4849,158,'99m');
+1166,4849,158,'99m');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38328,4852,158,'标记');
+1167,4852,158,'标记');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38329,4854,158,'的');
+1168,4854,158,'的');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38330,4855,158,'GSA');
+1169,4855,158,'GSA');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38331,4858,158,'的');
+1170,4858,158,'的');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38332,4859,158,'药盒');
+1171,4859,158,'药盒');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38333,4861,158,'及其');
+1172,4861,158,'及其');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38334,4863,158,'制备');
+1173,4863,158,'制备');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38335,4865,158,'方法');
+1174,4865,158,'方法');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38336,4838,158,'关于');
+1175,4838,158,'关于');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38337,5164,158,'制备');
+1176,5164,158,'制备');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38338,4233,158,'京师');
+1177,4233,158,'京师');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38339,4229,158,'大讲堂');
+1178,4229,158,'大讲堂');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38340,3480,158,'与');
+1179,3480,158,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38341,3481,158,'教师培训');
+1180,3481,158,'教师培训');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38342,3485,158,'学院');
+1181,3485,158,'学院');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38343,3487,158,'召开');
+1182,3487,158,'召开');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38344,3489,158,'专题');
+1183,3489,158,'专题');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38345,3491,158,'学习会');
+1184,3491,158,'学习会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38346,3525,158,'陈');
+1185,3525,158,'陈');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38347,3526,158,'丽');
+1186,3526,158,'丽');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38348,3527,158,'参加人');
+1187,3527,158,'参加人');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38349,3530,158,'事');
+1188,3530,158,'事');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38350,3531,158,'处');
+1189,3531,158,'处');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38351,3533,158,'社会科学');
+1190,3533,158,'社会科学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38352,3537,158,'处');
+1191,3537,158,'处');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38353,3538,158,'党支部');
+1192,3538,158,'党支部');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38354,3476,158,'继续教育');
+1193,3476,158,'继续教育');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38355,3541,158,'联合');
+1194,3541,158,'联合');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38356,3545,158,'工作会');
+1195,3545,158,'工作会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38357,3579,158,'学校');
+1196,3579,158,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38358,3581,158,'召开');
+1197,3581,158,'召开');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38359,3583,158,'新学');
+1198,3583,158,'新学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38360,3585,158,'期');
+1199,3585,158,'期');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38361,3586,158,'党校工作');
+1200,3586,158,'党校工作');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38362,3590,158,'会议');
+1201,3590,158,'会议');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38363,3660,158,'学术');
+1202,3660,158,'学术');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38364,3662,158,'动态');
+1203,3662,158,'动态');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38365,3675,158,'更多');
+1204,3675,158,'更多');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38366,3753,158,'预告');
+1205,3753,158,'预告');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38367,3756,158,'03');
+1206,3756,158,'03');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38368,3758,158,'.27');
+1207,3758,158,'.27');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38369,3762,158,'学术讲座');
+1208,3762,158,'学术讲座');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38370,3543,158,'学习');
+1209,3543,158,'学习');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38371,3768,158,'青藏高原');
+1210,3768,158,'青藏高原');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38372,3442,158,'工作会');
+1211,3442,158,'工作会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38373,3438,158,'学院');
+1212,3438,158,'学院');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38374,3283,158,'青年');
+1213,3283,158,'青年');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38375,3285,158,'设计');
+1214,3285,158,'设计');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38376,3287,158,'大赛');
+1215,3287,158,'大赛');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38377,3289,158,'正式');
+1216,3289,158,'正式');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38378,3291,158,'启动');
+1217,3291,158,'启动');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38379,3324,158,'学校');
+1218,3324,158,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38380,3326,158,'召开');
+1219,3326,158,'召开');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38381,3328,158,'2018');
+1220,3328,158,'2018');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38382,3332,158,'年春');
+1221,3332,158,'年春');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38383,3334,158,'季');
+1222,3334,158,'季');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38384,3335,158,'学期');
+1223,3335,158,'学期');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38385,3337,158,'本科生');
+1224,3337,158,'本科生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38386,3340,158,'班长');
+1225,3340,158,'班长');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38387,3342,158,'工作会');
+1226,3342,158,'工作会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38388,3440,158,'专题');
+1227,3440,158,'专题');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38389,3376,158,'我校');
+1228,3376,158,'我校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38390,3380,158,'位');
+1229,3380,158,'位');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38391,3381,158,'教师');
+1230,3381,158,'教师');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38392,3383,158,'入选');
+1231,3383,158,'入选');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38393,3385,158,'第三');
+1232,3385,158,'第三');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38394,3387,158,'批');
+1233,3387,158,'批');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38395,3388,158,'国家');
+1234,3388,158,'国家');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38396,3391,158,'万');
+1235,3391,158,'万');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38397,3392,158,'人');
+1236,3392,158,'人');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38398,3393,158,'计划');
+1237,3393,158,'计划');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38399,3427,158,'学校');
+1238,3427,158,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38400,3429,158,'召开');
+1239,3429,158,'召开');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38401,3431,158,'2018');
+1240,3431,158,'2018');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38402,3435,158,'年');
+1241,3435,158,'年');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38403,3436,158,'孔子');
+1242,3436,158,'孔子');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38404,3378,158,'12');
+1243,3378,158,'12');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38405,4232,158,'暨');
+1244,4232,158,'暨');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38406,3772,158,'与');
+1245,3772,158,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38407,3775,158,'季风');
+1246,3775,158,'季风');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38408,4065,158,'03');
+1247,4065,158,'03');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38409,4067,158,'.24');
+1248,4067,158,'.24');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38410,4071,158,'京师');
+1249,4071,158,'京师');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38411,4073,158,'人文');
+1250,4073,158,'人文');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38412,4075,158,'宗教');
+1251,4075,158,'宗教');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38413,4077,158,'讲堂');
+1252,4077,158,'讲堂');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38414,4081,158,'中医系');
+1253,4081,158,'中医系');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38415,4084,158,'列');
+1254,4084,158,'列');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38416,4085,158,'讲座');
+1255,4085,158,'讲座');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38417,4088,158,'29');
+1256,4088,158,'29');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38418,4137,158,'预告');
+1257,4137,158,'预告');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38419,4140,158,'03');
+1258,4140,158,'03');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38420,4142,158,'.24');
+1259,4142,158,'.24');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38421,4146,158,'名家');
+1260,4146,158,'名家');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38422,4062,158,'预告');
+1261,4062,158,'预告');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38423,4148,158,'圆桌');
+1262,4148,158,'圆桌');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38424,4152,158,'思想');
+1263,4152,158,'思想');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38425,4154,158,'与');
+1264,4154,158,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38426,4155,158,'学术');
+1265,4155,158,'学术');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38427,4157,158,'40');
+1266,4157,158,'40');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38428,4159,158,'年');
+1267,4159,158,'年');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38429,4163,158,'青年');
+1268,4163,158,'青年');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38430,4165,158,'专场');
+1269,4165,158,'专场');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38431,4213,158,'预告');
+1270,4213,158,'预告');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38432,4216,158,'03');
+1271,4216,158,'03');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38433,4218,158,'.23');
+1272,4218,158,'.23');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38434,4222,158,'瀚');
+1273,4222,158,'瀚');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38435,4223,158,'德');
+1274,4223,158,'德');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38436,4224,158,'经济学');
+1275,4224,158,'经济学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38437,4227,158,'名家');
+1276,4227,158,'名家');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38438,4150,158,'之');
+1277,4150,158,'之');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38439,3773,158,'东亚');
+1278,3773,158,'东亚');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38440,4008,158,'Idealism');
+1279,4008,158,'Idealism');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38441,3994,158,'Refutation');
+1280,3994,158,'Refutation');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38442,3823,158,'预告');
+1281,3823,158,'预告');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38443,3826,158,'03');
+1282,3826,158,'03');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38444,3828,158,'.29');
+1283,3828,158,'.29');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38445,3832,158,'学术讲座');
+1284,3832,158,'学术讲座');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38446,3838,158,'创新');
+1285,3838,158,'创新');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38447,3840,158,'的');
+1286,3840,158,'的');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38448,3841,158,'真相');
+1287,3841,158,'真相');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38449,3889,158,'预告');
+1288,3889,158,'预告');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38450,3892,158,'03');
+1289,3892,158,'03');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38451,3894,158,'.27');
+1290,3894,158,'.27');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38452,3898,158,'京师');
+1291,3898,158,'京师');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38453,3900,158,'大讲堂');
+1292,3900,158,'大讲堂');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38454,3905,158,'第三');
+1293,3905,158,'第三');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38455,3907,158,'代');
+1294,3907,158,'代');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38456,4005,158,'of');
+1295,4005,158,'of');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38457,3908,158,'水稻');
+1296,3908,158,'水稻');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38458,3912,158,'杂交育种');
+1297,3912,158,'杂交育种');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38459,3916,158,'技术');
+1298,3916,158,'技术');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38460,3918,158,'的');
+1299,3918,158,'的');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38461,3919,158,'前世');
+1300,3919,158,'前世');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38462,3921,158,'今生');
+1301,3921,158,'今生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38463,3969,158,'预告');
+1302,3969,158,'预告');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38464,3972,158,'03');
+1303,3972,158,'03');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38465,3974,158,'.23');
+1304,3974,158,'.23');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38466,3978,158,'京师');
+1305,3978,158,'京师');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38467,3980,158,'外');
+1306,3980,158,'外');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38468,3981,158,'哲');
+1307,3981,158,'哲');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38469,3982,158,'讲坛');
+1308,3982,158,'讲坛');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38470,3986,158,'The');
+1309,3986,158,'The');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38471,3991,158,'Un');
+1310,3991,158,'Un');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38472,3910,158,'小麦');
+1311,3910,158,'小麦');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38473,0,158,'ENGLISH');
+1312,0,158,'ENGLISH');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38474,4684,159,'研究院');
+1313,4684,159,'研究院');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38475,4779,159,'版权所有');
+1314,4779,159,'版权所有');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38476,4784,159,'北京师范大学');
+1315,4784,159,'北京师范大学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38477,4460,159,'传播');
+1316,4460,159,'传播');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38478,4795,159,'北京市');
+1317,4795,159,'北京市');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38479,4798,159,'新街口');
+1318,4798,159,'新街口');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38480,4801,159,'外');
+1319,4801,159,'外');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38481,4802,159,'大街');
+1320,4802,159,'大街');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38482,4681,159,'新材料');
+1321,4681,159,'新材料');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38483,4792,159,'地址');
+1322,4792,159,'地址');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38484,4631,159,'研究院');
+1323,4631,159,'研究院');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38485,4515,159,'传统文化');
+1324,4515,159,'传统文化');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38486,4625,159,'北京');
+1325,4625,159,'北京');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38487,4575,159,'研究所');
+1326,4575,159,'研究所');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38488,4574,159,'理');
+1327,4574,159,'理');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38489,4571,159,'信息处');
+1328,4571,159,'信息处');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38490,4569,159,'中文');
+1329,4569,159,'中文');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38491,4519,159,'研究院');
+1330,4519,159,'研究院');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38492,4804,159,'19');
+1331,4804,159,'19');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38493,4514,159,'与');
+1332,4514,159,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38494,4512,159,'古籍');
+1333,4512,159,'古籍');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38495,4462,159,'研究院');
+1334,4462,159,'研究院');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38496,4627,159,'文化发展');
+1335,4627,159,'文化发展');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38497,4806,159,'号');
+1336,4806,159,'号');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38498,4840,159,'公网');
+1337,4840,159,'公网');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38499,4812,159,'100875');
+1338,4812,159,'100875');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38500,4927,159,'MONOKEROS');
+1339,4927,159,'MONOKEROS');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38501,4924,159,'by');
+1340,4924,159,'by');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38502,4915,159,'designed');
+1341,4915,159,'designed');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38503,4910,159,'Site');
+1342,4910,159,'Site');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38504,4890,159,'58801111');
+1343,4890,159,'58801111');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38505,4886,159,'010');
+1344,4886,159,'010');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38506,4883,159,'热线');
+1345,4883,159,'热线');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38507,4869,159,'58806183');
+1346,4869,159,'58806183');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38508,4865,159,'010');
+1347,4865,159,'010');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38509,4861,159,'查号台');
+1348,4861,159,'查号台');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38510,4809,159,'邮编');
+1349,4809,159,'邮编');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38511,4859,159,'电话');
+1350,4859,159,'电话');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38512,4844,159,'110402430002');
+1351,4844,159,'110402430002');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38513,4843,159,'备');
+1352,4843,159,'备');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38514,4842,159,'安');
+1353,4842,159,'安');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38515,4839,159,'京');
+1354,4839,159,'京');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38516,4835,159,'1');
+1355,4835,159,'1');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38517,4833,159,'号');
+1356,4833,159,'号');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38518,4825,159,'05066832');
+1357,4825,159,'05066832');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38519,4824,159,'备');
+1358,4824,159,'备');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38520,4821,159,'ICP');
+1359,4821,159,'ICP');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38521,4820,159,'京');
+1360,4820,159,'京');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38522,4856,159,'号');
+1361,4856,159,'号');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38523,4879,159,'后勤服务');
+1362,4879,159,'后勤服务');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38524,4459,159,'与');
+1363,4459,159,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38525,4455,159,'文化');
+1364,4455,159,'文化');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38526,1879,159,'人才招聘');
+1365,1879,159,'人才招聘');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38527,1863,159,'管理机构');
+1366,1863,159,'管理机构');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38528,1847,159,'院系设置');
+1367,1847,159,'院系设置');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38529,1833,159,'概况');
+1368,1833,159,'概况');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38530,1831,159,'学校');
+1369,1831,159,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38531,1817,159,'新闻');
+1370,1817,159,'新闻');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38532,1815,159,'师大');
+1371,1815,159,'师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38533,1680,159,'页');
+1372,1680,159,'页');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38534,1678,159,'黄');
+1373,1678,159,'黄');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38535,1654,159,'历');
+1374,1654,159,'历');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38536,1652,159,'校');
+1375,1652,159,'校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38537,1895,159,'科学研究');
+1376,1895,159,'科学研究');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38538,1625,159,'校园风光');
+1377,1625,159,'校园风光');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38539,1598,159,'校园');
+1378,1598,159,'校园');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38540,1560,159,'师大');
+1379,1560,159,'师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38541,1558,159,'走进');
+1380,1558,159,'走进');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38542,1496,159,'档案馆');
+1381,1496,159,'档案馆');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38543,1470,159,'图书馆');
+1382,1470,159,'图书馆');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38544,1432,159,'档案');
+1383,1432,159,'档案');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38545,1430,159,'图书');
+1384,1430,159,'图书');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38546,1368,159,'基金会');
+1385,1368,159,'基金会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38547,1366,159,'教育');
+1386,1366,159,'教育');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38548,1341,159,'事务');
+1387,1341,159,'事务');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38549,1338,159,'港澳台');
+1388,1338,159,'港澳台');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38550,1600,159,'地图');
+1389,1600,159,'地图');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38551,1313,159,'合作');
+1390,1313,159,'合作');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38552,1911,159,'招生就业');
+1391,1911,159,'招生就业');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38553,1943,159,'图书');
+1392,1943,159,'图书');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38554,2375,159,'部');
+1393,2375,159,'部');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38555,2372,159,'心理学');
+1394,2372,159,'心理学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38556,2324,159,'部');
+1395,2324,159,'部');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38557,2321,159,'科学学');
+1396,2321,159,'科学学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38558,2319,159,'地理');
+1397,2319,159,'地理');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38559,2271,159,'部');
+1398,2271,159,'部');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38560,2268,159,'教育学');
+1399,2268,159,'教育学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38561,2169,159,'系');
+1400,2169,159,'系');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38562,2166,159,'学院');
+1401,2166,159,'学院');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38563,2151,159,'院系设置');
+1402,2151,159,'院系设置');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38564,2139,159,'首页');
+1403,2139,159,'首页');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38565,1927,159,'合作交流');
+1404,1927,159,'合作交流');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38566,2133,159,'位置');
+1405,2133,159,'位置');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38567,2097,159,'院系设置');
+1406,2097,159,'院系设置');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38568,2027,159,'接待日');
+1407,2027,159,'接待日');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38569,2013,159,'信箱');
+1408,2013,159,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38570,2010,159,'校领导');
+1409,2010,159,'校领导');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38571,1996,159,'信箱');
+1410,1996,159,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38572,1994,159,'校长');
+1411,1994,159,'校长');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38573,1980,159,'信箱');
+1412,1980,159,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38574,1978,159,'书记');
+1413,1978,159,'书记');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38575,1961,159,'师大');
+1414,1961,159,'师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38576,1959,159,'走进');
+1415,1959,159,'走进');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38577,1945,159,'档案');
+1416,1945,159,'档案');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38578,2131,159,'当前');
+1417,2131,159,'当前');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38579,2423,159,'哲学');
+1418,2423,159,'哲学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38580,1311,159,'国内');
+1419,1311,159,'国内');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38581,1285,159,'与');
+1420,1285,159,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38582,668,159,'现任');
+1421,668,159,'现任');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38583,643,159,'沿革');
+1422,643,159,'沿革');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38584,641,159,'校史');
+1423,641,159,'校史');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38585,614,159,'学校简介');
+1424,614,159,'学校简介');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38586,574,159,'概况');
+1425,574,159,'概况');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38587,572,159,'学校');
+1426,572,159,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38588,514,159,'师大');
+1427,514,159,'师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38589,512,159,'媒体');
+1428,512,159,'媒体');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38590,487,159,'在线');
+1429,487,159,'在线');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38591,485,159,'校报');
+1430,485,159,'校报');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38592,458,159,'网络电视');
+1431,458,159,'网络电视');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38593,670,159,'校领导');
+1432,670,159,'校领导');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38594,431,159,'图文报道');
+1433,431,159,'图文报道');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38595,391,159,'师大');
+1434,391,159,'师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38596,334,159,'导航');
+1435,334,159,'导航');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38597,277,159,'导航');
+1436,277,159,'导航');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38598,87,159,'接待日');
+1437,87,159,'接待日');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38599,73,159,'信箱');
+1438,73,159,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38600,70,159,'校领导');
+1439,70,159,'校领导');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38601,56,159,'信箱');
+1440,56,159,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38602,54,159,'校长');
+1441,54,159,'校长');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38603,40,159,'信箱');
+1442,40,159,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38604,38,159,'书记');
+1443,38,159,'书记');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38605,8,159,'VERSION');
+1444,8,159,'VERSION');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38606,393,159,'新闻');
+1445,393,159,'新闻');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38607,1286,159,'合作');
+1446,1286,159,'合作');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38608,696,159,'历任');
+1447,696,159,'历任');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38609,768,159,'历任');
+1448,768,159,'历任');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38610,1281,159,'国际交流');
+1449,1281,159,'国际交流');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38611,1241,159,'合作交流');
+1450,1241,159,'合作交流');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38612,1180,159,'创业');
+1451,1180,159,'创业');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38613,1179,159,'与');
+1452,1179,159,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38614,1177,159,'就业');
+1453,1177,159,'就业');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38615,1150,159,'教师培训');
+1454,1150,159,'教师培训');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38616,1149,159,'与');
+1455,1149,159,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38617,1145,159,'继续教育');
+1456,1145,159,'继续教育');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38618,1120,159,'招生');
+1457,1120,159,'招生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38619,1117,159,'留学生');
+1458,1117,159,'留学生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38620,1091,159,'博士后');
+1459,1091,159,'博士后');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38621,698,159,'书记');
+1460,698,159,'书记');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38622,1061,159,'招生');
+1461,1061,159,'招生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38623,1033,159,'招生');
+1462,1033,159,'招生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38624,1030,159,'本科生');
+1463,1030,159,'本科生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38625,990,159,'招生就业');
+1464,990,159,'招生就业');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38626,961,159,'科学研究');
+1465,961,159,'科学研究');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38627,945,159,'人才招聘');
+1466,945,159,'人才招聘');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38628,929,159,'管理机构');
+1467,929,159,'管理机构');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38629,913,159,'院系设置');
+1468,913,159,'院系设置');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38630,866,159,'历史名人');
+1469,866,159,'历史名人');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38631,795,159,'学者');
+1470,795,159,'学者');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38632,793,159,'著名');
+1471,793,159,'著名');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38633,770,159,'校长');
+1472,770,159,'校长');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38634,1058,159,'研究生');
+1473,1058,159,'研究生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38635,2425,159,'学院');
+1474,2425,159,'学院');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38636,2474,159,'经济');
+1475,2474,159,'经济');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38637,2476,159,'与');
+1476,2476,159,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38638,4110,159,'与');
+1477,4110,159,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38639,4108,159,'经济');
+1478,4108,159,'经济');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38640,4008,159,'所');
+1479,4008,159,'所');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38641,4004,159,'研究院');
+1480,4004,159,'研究院');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38642,3963,159,'学院');
+1481,3963,159,'学院');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38643,3962,159,'德');
+1482,3962,159,'德');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38644,3961,159,'瀚');
+1483,3961,159,'瀚');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38645,3912,159,'学院');
+1484,3912,159,'学院');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38646,3911,159,'耘');
+1485,3911,159,'耘');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38647,3910,159,'励');
+1486,3910,159,'励');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38648,3861,159,'学院');
+1487,3861,159,'学院');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38649,4111,159,'资源管理');
+1488,4111,159,'资源管理');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38650,3857,159,'教师教育');
+1489,3857,159,'教师教育');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38651,3713,159,'教师培训');
+1490,3713,159,'教师培训');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38652,3712,159,'与');
+1491,3712,159,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38653,3708,159,'继续教育');
+1492,3708,159,'继续教育');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38654,3659,159,'学院');
+1493,3659,159,'学院');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38655,3657,159,'传媒');
+1494,3657,159,'传媒');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38656,3656,159,'与');
+1495,3656,159,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38657,3654,159,'艺术');
+1496,3654,159,'艺术');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38658,3605,159,'学院');
+1497,3605,159,'学院');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38659,3601,159,'公共政策');
+1498,3601,159,'公共政策');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38660,3600,159,'与');
+1499,3600,159,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38661,3596,159,'社会发展');
+1500,3596,159,'社会发展');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38662,3717,159,'学院');
+1501,3717,159,'学院');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38663,3547,159,'学院');
+1502,3547,159,'学院');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38664,4115,159,'研究院');
+1503,4115,159,'研究院');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38665,4169,159,'科学研究');
+1504,4169,159,'科学研究');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38666,4406,159,'中心');
+1505,4406,159,'中心');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38667,4404,159,'创新');
+1506,4404,159,'创新');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38668,4402,159,'协同');
+1507,4402,159,'协同');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38669,4400,159,'监测');
+1508,4400,159,'监测');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38670,4398,159,'质量');
+1509,4398,159,'质量');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38671,4394,159,'基础教育');
+1510,4394,159,'基础教育');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38672,4392,159,'中国');
+1511,4392,159,'中国');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38673,4344,159,'院');
+1512,4344,159,'院');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38674,4340,159,'科学研究');
+1513,4340,159,'科学研究');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38675,4338,159,'系统');
+1514,4338,159,'系统');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38676,4336,159,'地球');
+1515,4336,159,'地球');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38677,4165,159,'刑事法律');
+1516,4165,159,'刑事法律');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38678,4335,159,'与');
+1517,4335,159,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38679,4331,159,'全球');
+1518,4331,159,'全球');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38680,4281,159,'研究院');
+1519,4281,159,'研究院');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38681,4279,159,'管理');
+1520,4279,159,'管理');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38682,4277,159,'应急');
+1521,4277,159,'应急');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38683,4276,159,'与');
+1522,4276,159,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38684,4274,159,'减灾');
+1523,4274,159,'减灾');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38685,4226,159,'院');
+1524,4226,159,'院');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38686,4225,159,'究');
+1525,4225,159,'究');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38687,4223,159,'学研');
+1526,4223,159,'学研');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38688,4221,159,'水科');
+1527,4221,159,'水科');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38689,4173,159,'院');
+1528,4173,159,'院');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38690,4333,159,'变化');
+1529,4333,159,'变化');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38691,3543,159,'政府管理');
+1530,3543,159,'政府管理');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38692,3495,159,'院');
+1531,3495,159,'院');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38693,3492,159,'技术学');
+1532,3492,159,'技术学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38694,2909,159,'传播学');
+1533,2909,159,'传播学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38695,2907,159,'新闻');
+1534,2907,159,'新闻');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38696,2859,159,'院');
+1535,2859,159,'院');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38697,2857,159,'学学');
+1536,2857,159,'学学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38698,2855,159,'言文');
+1537,2855,159,'言文');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38699,2852,159,'外国语');
+1538,2852,159,'外国语');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38700,2804,159,'院');
+1539,2804,159,'院');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38701,2801,159,'文化学');
+1540,2801,159,'文化学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38702,2799,159,'汉语');
+1541,2799,159,'汉语');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38703,2749,159,'文学院');
+1542,2749,159,'文学院');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38704,2701,159,'院');
+1543,2701,159,'院');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38705,2912,159,'院');
+1544,2912,159,'院');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38706,2698,159,'运动学');
+1545,2698,159,'运动学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38707,2695,159,'体育');
+1546,2695,159,'体育');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38708,2647,159,'院');
+1547,2647,159,'院');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38709,2644,159,'社会学');
+1548,2644,159,'社会学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38710,2640,159,'研究院');
+1549,2640,159,'研究院');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38711,2636,159,'社会管理');
+1550,2636,159,'社会管理');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38712,2634,159,'中国');
+1551,2634,159,'中国');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38713,2585,159,'学院');
+1552,2585,159,'学院');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38714,2580,159,'马克思主义');
+1553,2580,159,'马克思主义');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38715,2530,159,'法学院');
+1554,2530,159,'法学院');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38716,2482,159,'院');
+1555,2482,159,'院');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38717,2477,159,'工商管理学');
+1556,2477,159,'工商管理学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38718,2697,159,'与');
+1557,2697,159,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38719,2960,159,'历史学');
+1558,2960,159,'历史学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38720,2963,159,'院');
+1559,2963,159,'院');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38721,3011,159,'数学科');
+1560,3011,159,'数学科');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38722,3491,159,'与');
+1561,3491,159,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38723,3488,159,'核科学');
+1562,3488,159,'核科学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38724,3440,159,'院');
+1563,3440,159,'院');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38725,3437,159,'技术学');
+1564,3437,159,'技术学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38726,3436,159,'与');
+1565,3436,159,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38727,3434,159,'科学');
+1566,3434,159,'科学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38728,3432,159,'信息');
+1567,3432,159,'信息');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38729,3383,159,'学院');
+1568,3383,159,'学院');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38730,3379,159,'生命科学');
+1569,3379,159,'生命科学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38731,3331,159,'院');
+1570,3331,159,'院');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38732,3328,159,'环境学');
+1571,3328,159,'环境学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38733,3278,159,'研究院');
+1572,3278,159,'研究院');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38734,3276,159,'核算');
+1573,3276,159,'核算');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38735,3274,159,'国民');
+1574,3274,159,'国民');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38736,3272,159,'院');
+1575,3272,159,'院');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38737,3269,159,'统计学');
+1576,3269,159,'统计学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38738,3218,159,'科学学院');
+1577,3218,159,'科学学院');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38739,3216,159,'系统');
+1578,3216,159,'系统');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38740,3166,159,'天文系');
+1579,3166,159,'天文系');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38741,3117,159,'学院');
+1580,3117,159,'学院');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38742,3115,159,'化学');
+1581,3115,159,'化学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38743,3067,159,'系');
+1582,3067,159,'系');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38744,3064,159,'物理学');
+1583,3064,159,'物理学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38745,3016,159,'院');
+1584,3016,159,'院');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38746,3014,159,'学学');
+1585,3014,159,'学学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38747,4457,159,'创新');
+1586,4457,159,'创新');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38748,0,159,'ENGLISH');
+1587,0,159,'ENGLISH');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38749,6645,160,'香港浸会大学');
+1588,6645,160,'香港浸会大学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38750,6498,160,'平台');
+1589,6498,160,'平台');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38751,6638,160,'北京师范大学');
+1590,6638,160,'北京师范大学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38752,6494,160,'合作办学');
+1591,6494,160,'合作办学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38753,6651,160,'联合国');
+1592,6651,160,'联合国');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38754,6706,160,'分校');
+1593,6706,160,'分校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38755,6655,160,'学院');
+1594,6655,160,'学院');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38756,6704,160,'珠海');
+1595,6704,160,'珠海');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38757,6800,160,'版权所有');
+1596,6800,160,'版权所有');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38758,6490,160,'基础教育');
+1597,6490,160,'基础教育');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38759,6805,160,'北京师范大学');
+1598,6805,160,'北京师范大学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38760,6654,160,'际');
+1599,6654,160,'际');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38761,6441,160,'中学');
+1600,6441,160,'中学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38762,6266,160,'中学');
+1601,6266,160,'中学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38763,6437,160,'第三');
+1602,6437,160,'第三');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38764,6431,160,'北京师范大学');
+1603,6431,160,'北京师范大学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38765,6382,160,'中学');
+1604,6382,160,'中学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38766,6380,160,'附属');
+1605,6380,160,'附属');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38767,6378,160,'第二');
+1606,6378,160,'第二');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38768,6372,160,'北京师范大学');
+1607,6372,160,'北京师范大学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38769,6323,160,'中学');
+1608,6323,160,'中学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38770,6321,160,'附属');
+1609,6321,160,'附属');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38771,6315,160,'北京师范大学');
+1610,6315,160,'北京师范大学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38772,6813,160,'地址');
+1611,6813,160,'地址');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38773,6264,160,'实验');
+1612,6264,160,'实验');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38774,6262,160,'附属');
+1613,6262,160,'附属');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38775,6256,160,'北京师范大学');
+1614,6256,160,'北京师范大学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38776,6439,160,'附属');
+1615,6439,160,'附属');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38777,6816,160,'北京市');
+1616,6816,160,'北京市');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38778,6856,160,'1');
+1617,6856,160,'1');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38779,6822,160,'外');
+1618,6822,160,'外');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38780,6207,160,'小学');
+1619,6207,160,'小学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38781,6948,160,'MONOKEROS');
+1620,6948,160,'MONOKEROS');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38782,6945,160,'by');
+1621,6945,160,'by');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38783,6936,160,'designed');
+1622,6936,160,'designed');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38784,6911,160,'58801111');
+1623,6911,160,'58801111');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38785,6907,160,'010');
+1624,6907,160,'010');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38786,6904,160,'热线');
+1625,6904,160,'热线');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38787,6900,160,'后勤服务');
+1626,6900,160,'后勤服务');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38788,6890,160,'58806183');
+1627,6890,160,'58806183');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38789,6886,160,'010');
+1628,6886,160,'010');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38790,6882,160,'查号台');
+1629,6882,160,'查号台');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38791,6880,160,'电话');
+1630,6880,160,'电话');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38792,6877,160,'号');
+1631,6877,160,'号');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38793,6819,160,'新街口');
+1632,6819,160,'新街口');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38794,6865,160,'110402430002');
+1633,6865,160,'110402430002');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38795,6863,160,'安');
+1634,6863,160,'安');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38796,6861,160,'公网');
+1635,6861,160,'公网');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38797,6860,160,'京');
+1636,6860,160,'京');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38798,6854,160,'号');
+1637,6854,160,'号');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38799,6846,160,'05066832');
+1638,6846,160,'05066832');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38800,6845,160,'备');
+1639,6845,160,'备');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38801,6842,160,'ICP');
+1640,6842,160,'ICP');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38802,6841,160,'京');
+1641,6841,160,'京');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38803,6833,160,'100875');
+1642,6833,160,'100875');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38804,6830,160,'邮编');
+1643,6830,160,'邮编');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38805,6827,160,'号');
+1644,6827,160,'号');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38806,6825,160,'19');
+1645,6825,160,'19');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38807,6823,160,'大街');
+1646,6823,160,'大街');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38808,6864,160,'备');
+1647,6864,160,'备');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38809,6931,160,'Site');
+1648,6931,160,'Site');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38810,6205,160,'实验');
+1649,6205,160,'实验');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38811,6149,160,'幼儿园');
+1650,6149,160,'幼儿园');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38812,2166,160,'机关部');
+1651,2166,160,'机关部');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38813,2151,160,'管理机构');
+1652,2151,160,'管理机构');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38814,2139,160,'首页');
+1653,2139,160,'首页');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38815,2133,160,'位置');
+1654,2133,160,'位置');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38816,2131,160,'当前');
+1655,2131,160,'当前');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38817,2097,160,'管理机构');
+1656,2097,160,'管理机构');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38818,2027,160,'接待日');
+1657,2027,160,'接待日');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38819,2013,160,'信箱');
+1658,2013,160,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38820,2010,160,'校领导');
+1659,2010,160,'校领导');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38821,1996,160,'信箱');
+1660,1996,160,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38822,1994,160,'校长');
+1661,1994,160,'校长');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38823,1980,160,'信箱');
+1662,1980,160,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38824,1978,160,'书记');
+1663,1978,160,'书记');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38825,1961,160,'师大');
+1664,1961,160,'师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38826,2169,160,'处');
+1665,2169,160,'处');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38827,1959,160,'走进');
+1666,1959,160,'走进');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38828,1943,160,'图书');
+1667,1943,160,'图书');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38829,1927,160,'合作交流');
+1668,1927,160,'合作交流');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38830,1911,160,'招生就业');
+1669,1911,160,'招生就业');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38831,1895,160,'科学研究');
+1670,1895,160,'科学研究');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38832,1879,160,'人才招聘');
+1671,1879,160,'人才招聘');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38833,1863,160,'管理机构');
+1672,1863,160,'管理机构');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38834,1847,160,'院系设置');
+1673,1847,160,'院系设置');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38835,1833,160,'概况');
+1674,1833,160,'概况');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38836,1831,160,'学校');
+1675,1831,160,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38837,1817,160,'新闻');
+1676,1817,160,'新闻');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38838,1815,160,'师大');
+1677,1815,160,'师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38839,1680,160,'页');
+1678,1680,160,'页');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38840,1678,160,'黄');
+1679,1678,160,'黄');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38841,1654,160,'历');
+1680,1654,160,'历');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38842,1945,160,'档案');
+1681,1945,160,'档案');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38843,2268,160,'党委办');
+1682,2268,160,'党委办');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38844,2271,160,'公');
+1683,2271,160,'公');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38845,2272,160,'室');
+1684,2272,160,'室');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38846,3031,160,'指挥部');
+1685,3031,160,'指挥部');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38847,3029,160,'建设');
+1686,3029,160,'建设');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38848,3027,160,'校区');
+1687,3027,160,'校区');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38849,3026,160,'新');
+1688,3026,160,'新');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38850,2998,160,'人事处');
+1689,2998,160,'人事处');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38851,2916,160,'党校');
+1690,2916,160,'党校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38852,2888,160,'基建处');
+1691,2888,160,'基建处');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38853,2837,160,'研究生院');
+1692,2837,160,'研究生院');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38854,2787,160,'组织部');
+1693,2787,160,'组织部');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38855,2785,160,'党委');
+1694,2785,160,'党委');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38856,2735,160,'管理处');
+1695,2735,160,'管理处');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38857,2731,160,'国有资产');
+1696,2731,160,'国有资产');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38858,2681,160,'教务处');
+1697,2681,160,'教务处');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38859,2598,160,'研究室');
+1698,2598,160,'研究室');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38860,2596,160,'校史');
+1699,2596,160,'校史');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38861,2569,160,'处');
+1700,2569,160,'处');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38862,2565,160,'保卫部');
+1701,2565,160,'保卫部');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38863,2274,160,'校长');
+1702,2274,160,'校长');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38864,2276,160,'办公室');
+1703,2276,160,'办公室');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38865,2326,160,'发展规划');
+1704,2326,160,'发展规划');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38866,2330,160,'与');
+1705,2330,160,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38867,2331,160,'学科建设');
+1706,2331,160,'学科建设');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38868,2335,160,'处');
+1707,2335,160,'处');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38869,1652,160,'校');
+1708,1652,160,'校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38870,2383,160,'孔子');
+1709,2383,160,'孔子');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38871,2389,160,'处');
+1710,2389,160,'处');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38872,2415,160,'督察');
+1711,2415,160,'督察');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38873,2417,160,'督办');
+1712,2417,160,'督办');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38874,2419,160,'办公室');
+1713,2419,160,'办公室');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38875,2480,160,'共建');
+1714,2480,160,'共建');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38876,2482,160,'办公室');
+1715,2482,160,'办公室');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38877,2385,160,'学院管理');
+1716,2385,160,'学院管理');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38878,1625,160,'校园风光');
+1717,1625,160,'校园风光');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38879,1600,160,'地图');
+1718,1600,160,'地图');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38880,1598,160,'校园');
+1719,1598,160,'校园');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38881,795,160,'学者');
+1720,795,160,'学者');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38882,793,160,'著名');
+1721,793,160,'著名');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38883,770,160,'校长');
+1722,770,160,'校长');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38884,768,160,'历任');
+1723,768,160,'历任');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38885,698,160,'书记');
+1724,698,160,'书记');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38886,696,160,'历任');
+1725,696,160,'历任');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38887,670,160,'校领导');
+1726,670,160,'校领导');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38888,668,160,'现任');
+1727,668,160,'现任');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38889,643,160,'沿革');
+1728,643,160,'沿革');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38890,641,160,'校史');
+1729,641,160,'校史');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38891,614,160,'学校简介');
+1730,614,160,'学校简介');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38892,574,160,'概况');
+1731,574,160,'概况');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38893,572,160,'学校');
+1732,572,160,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38894,514,160,'师大');
+1733,514,160,'师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38895,512,160,'媒体');
+1734,512,160,'媒体');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38896,487,160,'在线');
+1735,487,160,'在线');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38897,485,160,'校报');
+1736,485,160,'校报');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38898,8,160,'VERSION');
+1737,8,160,'VERSION');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38899,38,160,'书记');
+1738,38,160,'书记');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38900,40,160,'信箱');
+1739,40,160,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38901,54,160,'校长');
+1740,54,160,'校长');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38902,56,160,'信箱');
+1741,56,160,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38903,70,160,'校领导');
+1742,70,160,'校领导');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38904,866,160,'历史名人');
+1743,866,160,'历史名人');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38905,73,160,'信箱');
+1744,73,160,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38906,277,160,'导航');
+1745,277,160,'导航');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38907,334,160,'导航');
+1746,334,160,'导航');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38908,391,160,'师大');
+1747,391,160,'师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38909,393,160,'新闻');
+1748,393,160,'新闻');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38910,431,160,'图文报道');
+1749,431,160,'图文报道');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38911,458,160,'网络电视');
+1750,458,160,'网络电视');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38912,87,160,'接待日');
+1751,87,160,'接待日');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38913,3092,160,'全国');
+1752,3092,160,'全国');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38914,913,160,'院系设置');
+1753,913,160,'院系设置');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38915,945,160,'人才招聘');
+1754,945,160,'人才招聘');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38916,1560,160,'师大');
+1755,1560,160,'师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38917,1558,160,'走进');
+1756,1558,160,'走进');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38918,1496,160,'档案馆');
+1757,1496,160,'档案馆');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38919,1470,160,'图书馆');
+1758,1470,160,'图书馆');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38920,1432,160,'档案');
+1759,1432,160,'档案');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38921,1430,160,'图书');
+1760,1430,160,'图书');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38922,1368,160,'基金会');
+1761,1368,160,'基金会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38923,1366,160,'教育');
+1762,1366,160,'教育');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38924,1341,160,'事务');
+1763,1341,160,'事务');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38925,1338,160,'港澳台');
+1764,1338,160,'港澳台');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38926,1313,160,'合作');
+1765,1313,160,'合作');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38927,1311,160,'国内');
+1766,1311,160,'国内');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38928,1286,160,'合作');
+1767,1286,160,'合作');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38929,1285,160,'与');
+1768,1285,160,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38930,1281,160,'国际交流');
+1769,1281,160,'国际交流');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38931,1241,160,'合作交流');
+1770,1241,160,'合作交流');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38932,1180,160,'创业');
+1771,1180,160,'创业');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38933,961,160,'科学研究');
+1772,961,160,'科学研究');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38934,990,160,'招生就业');
+1773,990,160,'招生就业');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38935,1030,160,'本科生');
+1774,1030,160,'本科生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38936,1033,160,'招生');
+1775,1033,160,'招生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38937,1058,160,'研究生');
+1776,1058,160,'研究生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38938,1061,160,'招生');
+1777,1061,160,'招生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38939,929,160,'管理机构');
+1778,929,160,'管理机构');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38940,1091,160,'博士后');
+1779,1091,160,'博士后');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38941,1120,160,'招生');
+1780,1120,160,'招生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38942,1145,160,'继续教育');
+1781,1145,160,'继续教育');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38943,1149,160,'与');
+1782,1149,160,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38944,1150,160,'教师培训');
+1783,1150,160,'教师培训');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38945,1177,160,'就业');
+1784,1177,160,'就业');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38946,1179,160,'与');
+1785,1179,160,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38947,1117,160,'留学生');
+1786,1117,160,'留学生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38948,6199,160,'北京师范大学');
+1787,6199,160,'北京师范大学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38949,3094,160,'干部教育');
+1788,3094,160,'干部教育');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38950,3102,160,'办公室');
+1789,3102,160,'办公室');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38951,5173,160,'学生');
+1790,5173,160,'学生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38952,5124,160,'中心');
+1791,5124,160,'中心');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38953,5122,160,'核算');
+1792,5122,160,'核算');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38954,5039,160,'基金会');
+1793,5039,160,'基金会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38955,5037,160,'教育');
+1794,5037,160,'教育');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38956,5010,160,'中心');
+1795,5010,160,'中心');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38957,5008,160,'管理');
+1796,5008,160,'管理');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38958,5006,160,'资助');
+1797,5006,160,'资助');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38959,5004,160,'学生');
+1798,5004,160,'学生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38960,4953,160,'校友会');
+1799,4953,160,'校友会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38961,4949,160,'办公室');
+1800,4949,160,'办公室');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38962,4947,160,'工作');
+1801,4947,160,'工作');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38963,4945,160,'校友');
+1802,4945,160,'校友');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38964,4897,160,'室');
+1803,4897,160,'室');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38965,5175,160,'心理咨询');
+1804,5175,160,'心理咨询');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38966,4896,160,'公');
+1805,4896,160,'公');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38967,4891,160,'对外');
+1806,4891,160,'对外');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38968,4842,160,'中心');
+1807,4842,160,'中心');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38969,4840,160,'指导');
+1808,4840,160,'指导');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38970,4838,160,'创业');
+1809,4838,160,'创业');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38971,4837,160,'与');
+1810,4837,160,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38972,4833,160,'学生就业');
+1811,4833,160,'学生就业');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38973,4782,160,'服务中心');
+1812,4782,160,'服务中心');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38974,4778,160,'人力资源');
+1813,4778,160,'人力资源');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38975,4727,160,'服务中心');
+1814,4727,160,'服务中心');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38976,4725,160,'资源');
+1815,4725,160,'资源');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38977,4723,160,'公共');
+1816,4723,160,'公共');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38978,4674,160,'中心');
+1817,4674,160,'中心');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38979,4672,160,'测试');
+1818,4672,160,'测试');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38980,4670,160,'分析');
+1819,4670,160,'分析');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38981,4893,160,'联络办');
+1820,4893,160,'联络办');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38982,5179,160,'与');
+1821,5179,160,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38983,5180,160,'服务中心');
+1822,5180,160,'服务中心');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38984,5231,160,'大学');
+1823,5231,160,'大学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38985,6147,160,'实验');
+1824,6147,160,'实验');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38986,6141,160,'北京师范大学');
+1825,6141,160,'北京师范大学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38987,6041,160,'学校');
+1826,6041,160,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38988,6039,160,'附属');
+1827,6039,160,'附属');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38989,5999,160,'院');
+1828,5999,160,'院');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38990,5997,160,'校医');
+1829,5997,160,'校医');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38991,5946,160,'有限公司');
+1830,5946,160,'有限公司');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38992,5942,160,'资产经营');
+1831,5942,160,'资产经营');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38993,5938,160,'北京师大');
+1832,5938,160,'北京师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38994,5889,160,'学报');
+1833,5889,160,'学报');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38995,5887,160,'理科');
+1834,5887,160,'理科');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38996,5837,160,'档案馆');
+1835,5837,160,'档案馆');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38997,5786,160,'出版集团');
+1836,5786,160,'出版集团');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38998,5737,160,'学报');
+1837,5737,160,'学报');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-38999,5735,160,'文科');
+1838,5735,160,'文科');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39000,5685,160,'图书馆');
+1839,5685,160,'图书馆');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39001,5586,160,'院');
+1840,5586,160,'院');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39002,5233,160,'科技园');
+1841,5233,160,'科技园');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39003,5236,160,'建设管理');
+1842,5236,160,'建设管理');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39004,5240,160,'中心');
+1843,5240,160,'中心');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39005,5281,160,'群众组织');
+1844,5281,160,'群众组织');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39006,5383,160,'校工');
+1845,5383,160,'校工');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39007,5385,160,'会');
+1846,5385,160,'会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39008,4621,160,'中心');
+1847,4621,160,'中心');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39009,5433,160,'校学生会');
+1848,5433,160,'校学生会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39010,5485,160,'研究生会');
+1849,5485,160,'研究生会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39011,5536,160,'校团委');
+1850,5536,160,'校团委');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39012,5578,160,'馆');
+1851,5578,160,'馆');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39013,5579,160,'社');
+1852,5579,160,'社');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39014,5581,160,'产业');
+1853,5581,160,'产业');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39015,5584,160,'校医');
+1854,5584,160,'校医');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39016,5484,160,'校');
+1855,5484,160,'校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39017,4619,160,'发展');
+1856,4619,160,'发展');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39018,4617,160,'教师');
+1857,4617,160,'教师');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39019,4568,160,'中心');
+1858,4568,160,'中心');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39020,3889,160,'国内');
+1859,3889,160,'国内');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39021,3839,160,'合作处');
+1860,3839,160,'合作处');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39022,3838,160,'与');
+1861,3838,160,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39023,3834,160,'国际交流');
+1862,3834,160,'国际交流');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39024,3784,160,'工作处');
+1863,3784,160,'工作处');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39025,3781,160,'本科生');
+1864,3781,160,'本科生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39026,3698,160,'办公室');
+1865,3698,160,'办公室');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39027,3695,160,'委员会');
+1866,3695,160,'委员会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39028,3691,160,'资产管理');
+1867,3691,160,'资产管理');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39029,3688,160,'经营性');
+1868,3688,160,'经营性');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39030,3662,160,'处');
+1869,3662,160,'处');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39031,3658,160,'社会科学');
+1870,3658,160,'社会科学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39032,3608,160,'办公室');
+1871,3608,160,'办公室');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39033,3604,160,'纪检监察');
+1872,3604,160,'纪检监察');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39034,3554,160,'管理处');
+1873,3554,160,'管理处');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39035,3552,160,'产业');
+1874,3552,160,'产业');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39036,3504,160,'处');
+1875,3504,160,'处');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39037,3185,160,'财经');
+1876,3185,160,'财经');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39038,3187,160,'处');
+1877,3187,160,'处');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39039,3235,160,'后勤');
+1878,3235,160,'后勤');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39040,3237,160,'管理处');
+1879,3237,160,'管理处');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39041,3287,160,'党委');
+1880,3287,160,'党委');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39042,3289,160,'宣传部');
+1881,3289,160,'宣传部');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39043,3891,160,'合作');
+1882,3891,160,'合作');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39044,3293,160,'新闻');
+1883,3293,160,'新闻');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39045,3345,160,'审计处');
+1884,3345,160,'审计处');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39046,3395,160,'离退休');
+1885,3395,160,'离退休');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39047,3398,160,'工作处');
+1886,3398,160,'工作处');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39048,3448,160,'党委');
+1887,3448,160,'党委');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39049,3450,160,'统战部');
+1888,3450,160,'统战部');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39050,3500,160,'科学技术');
+1889,3500,160,'科学技术');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39051,3295,160,'中心');
+1890,3295,160,'中心');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39052,3098,160,'培训基地');
+1891,3098,160,'培训基地');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39053,3893,160,'办公室');
+1892,3893,160,'办公室');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39054,3982,160,'港澳台');
+1893,3982,160,'港澳台');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39055,4567,160,'络');
+1894,4567,160,'络');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39056,4564,160,'信息网');
+1895,4564,160,'信息网');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39057,4464,160,'中心');
+1896,4464,160,'中心');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39058,4462,160,'教辅');
+1897,4462,160,'教辅');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39059,4461,160,'及');
+1898,4461,160,'及');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39060,4459,160,'平台');
+1899,4459,160,'平台');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39061,4455,160,'公共服务');
+1900,4455,160,'公共服务');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39062,4381,160,'分会');
+1901,4381,160,'分会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39063,4377,160,'教育管理');
+1902,4377,160,'教育管理');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39064,4373,160,'出国留学');
+1903,4373,160,'出国留学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39065,4372,160,'会');
+1904,4372,160,'会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39066,4367,160,'高等教育学');
+1905,4367,160,'高等教育学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39067,4365,160,'中国');
+1906,4365,160,'中国');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39068,4338,160,'基地');
+1907,4338,160,'基地');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39069,4336,160,'研修');
+1908,4336,160,'研修');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39070,4335,160,'和');
+1909,4335,160,'和');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39071,4333,160,'培训');
+1910,4333,160,'培训');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39072,3985,160,'事务');
+1911,3985,160,'事务');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39073,3987,160,'办公室');
+1912,3987,160,'办公室');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39074,4070,160,'全国');
+1913,4070,160,'全国');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39075,4072,160,'教师');
+1914,4072,160,'教师');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39076,4074,160,'志愿服务');
+1915,4074,160,'志愿服务');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39077,4078,160,'联盟');
+1916,4078,160,'联盟');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39078,3921,160,'武装部');
+1917,3921,160,'武装部');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39079,4080,160,'办公室');
+1918,4080,160,'办公室');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39080,4133,160,'工作处');
+1919,4133,160,'工作处');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39081,4162,160,'学生');
+1920,4162,160,'学生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39082,4164,160,'国际');
+1921,4164,160,'国际');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39083,4166,160,'教育中心');
+1922,4166,160,'教育中心');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39084,4250,160,'.');
+1923,4250,160,'.');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39085,4330,160,'辅导员');
+1924,4330,160,'辅导员');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39086,4130,160,'研究生');
+1925,4130,160,'研究生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39087,0,160,'ENGLISH');
+1926,0,160,'ENGLISH');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39088,520,161,'月');
+1927,520,161,'月');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39089,531,161,'jpg');
+1928,531,161,'jpg');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39090,528,161,'格式');
+1929,528,161,'格式');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39091,527,161,'片');
+1930,527,161,'片');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39092,535,161,'tif');
+1931,535,161,'tif');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39093,525,161,'版图');
+1932,525,161,'版图');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39094,523,161,'高清');
+1933,523,161,'高清');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39095,519,161,'5');
+1934,519,161,'5');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39096,498,161,'申请');
+1935,498,161,'申请');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39097,514,161,'2012');
+1936,514,161,'2012');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39098,511,161,'时间');
+1937,511,161,'时间');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39099,509,161,'制作');
+1938,509,161,'制作');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39100,504,161,'下载');
+1939,504,161,'下载');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39101,501,161,'申请单');
+1940,501,161,'申请单');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39102,548,161,'矢量图');
+1941,548,161,'矢量图');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39103,497,161,'需');
+1942,497,161,'需');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39104,495,161,'下载');
+1943,495,161,'下载');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39105,494,161,'版');
+1944,494,161,'版');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39106,518,161,'年');
+1945,518,161,'年');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39107,552,161,'点击');
+1946,552,161,'点击');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39108,586,161,'制作');
+1947,586,161,'制作');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39109,569,161,'矢量图');
+1948,569,161,'矢量图');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39110,492,161,'高清');
+1949,492,161,'高清');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39111,668,161,'中心');
+1950,668,161,'中心');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39112,667,161,'络');
+1951,667,161,'络');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39113,664,161,'信息网');
+1952,664,161,'信息网');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39114,651,161,'版权所有');
+1953,651,161,'版权所有');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39115,605,161,'mxd');
+1954,605,161,'mxd');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39116,602,161,'格式');
+1955,602,161,'格式');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39117,600,161,'矢量');
+1956,600,161,'矢量');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39118,554,161,'查看');
+1957,554,161,'查看');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39119,597,161,'月');
+1958,597,161,'月');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39120,595,161,'年');
+1959,595,161,'年');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39121,591,161,'2012');
+1960,591,161,'2012');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39122,588,161,'时间');
+1961,588,161,'时间');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39123,581,161,'下载');
+1962,581,161,'下载');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39124,578,161,'申请单');
+1963,578,161,'申请单');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39125,575,161,'申请');
+1964,575,161,'申请');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39126,574,161,'需');
+1965,574,161,'需');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39127,572,161,'下载');
+1966,572,161,'下载');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39128,596,161,'5');
+1967,596,161,'5');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39129,658,161,'北京师范大学');
+1968,658,161,'北京师范大学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39130,469,161,'下载');
+1969,469,161,'下载');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39131,463,161,'示意图');
+1970,463,161,'示意图');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39132,77,161,'校园');
+1971,77,161,'校园');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39133,79,161,'基础');
+1972,79,161,'基础');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39134,81,161,'地理信息');
+1973,81,161,'地理信息');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39135,85,161,'图件');
+1974,85,161,'图件');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39136,88,161,'包括');
+1975,88,161,'包括');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39137,91,161,'平面图');
+1976,91,161,'平面图');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39138,95,161,'影像');
+1977,95,161,'影像');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39139,97,161,'图');
+1978,97,161,'图');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39140,99,161,'三维');
+1979,99,161,'三维');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39141,101,161,'示意图');
+1980,101,161,'示意图');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39142,105,161,'基于');
+1981,105,161,'基于');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39143,107,161,'ArcGis');
+1982,107,161,'ArcGis');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39144,113,161,'平台');
+1983,113,161,'平台');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39145,115,161,'的');
+1984,115,161,'的');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39146,116,161,'校园');
+1985,116,161,'校园');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39147,118,161,'矢量图');
+1986,118,161,'矢量图');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39148,122,161,'供');
+1987,122,161,'供');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39149,123,161,'校内');
+1988,123,161,'校内');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39150,125,161,'单位');
+1989,125,161,'单位');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39151,127,161,'使用');
+1990,127,161,'使用');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39152,134,161,'如');
+1991,134,161,'如');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39153,135,161,'您');
+1992,135,161,'您');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39154,136,161,'在');
+1993,136,161,'在');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39155,137,161,'使用');
+1994,137,161,'使用');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39156,139,161,'中');
+1995,139,161,'中');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39157,140,161,'遇到');
+1996,140,161,'遇到');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39158,142,161,'问题');
+1997,142,161,'问题');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39159,71,161,'北京师范大学');
+1998,71,161,'北京师范大学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39160,145,161,'请');
+1999,145,161,'请');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39161,70,161,'布');
+2000,70,161,'布');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39162,66,161,'制作');
+2001,66,161,'制作');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39163,6,161,'校园');
+2002,6,161,'校园');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39164,8,161,'基础');
+2003,8,161,'基础');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39165,10,161,'地理信息');
+2004,10,161,'地理信息');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39166,14,161,'图件');
+2005,14,161,'图件');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39167,16,161,'说明');
+2006,16,161,'说明');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39168,22,161,'为了');
+2007,22,161,'为了');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39169,24,161,'进一步');
+2008,24,161,'进一步');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39170,27,161,'统一');
+2009,27,161,'统一');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39171,29,161,'学校');
+2010,29,161,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39172,31,161,'校园');
+2011,31,161,'校园');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39173,33,161,'地图');
+2012,33,161,'地图');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39174,35,161,'信息');
+2013,35,161,'信息');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39175,37,161,'数据');
+2014,37,161,'数据');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39176,39,161,'规范');
+2015,39,161,'规范');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39177,41,161,'和');
+2016,41,161,'和');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39178,42,161,'标准');
+2017,42,161,'标准');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39179,45,161,'并');
+2018,45,161,'并');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39180,46,161,'及时');
+2019,46,161,'及时');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39181,48,161,'更新');
+2020,48,161,'更新');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39182,50,161,'和');
+2021,50,161,'和');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39183,51,161,'共享');
+2022,51,161,'共享');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39184,53,161,'相关');
+2023,53,161,'相关');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39185,55,161,'数据');
+2024,55,161,'数据');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39186,58,161,'学校');
+2025,58,161,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39187,60,161,'信息网');
+2026,60,161,'信息网');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39188,63,161,'络');
+2027,63,161,'络');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39189,64,161,'中心');
+2028,64,161,'中心');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39190,68,161,'并发');
+2029,68,161,'并发');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39191,467,161,'点击');
+2030,467,161,'点击');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39192,146,161,'拨打');
+2031,146,161,'拨打');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39193,150,161,'58808113');
+2032,150,161,'58808113');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39194,381,161,'申请单');
+2033,381,161,'申请单');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39195,384,161,'下载');
+2034,384,161,'下载');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39196,389,161,'制作');
+2035,389,161,'制作');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39197,391,161,'时间');
+2036,391,161,'时间');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39198,394,161,'2012');
+2037,394,161,'2012');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39199,398,161,'年');
+2038,398,161,'年');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39200,399,161,'5');
+2039,399,161,'5');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39201,400,161,'月');
+2040,400,161,'月');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39202,403,161,'影像');
+2041,403,161,'影像');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39203,405,161,'来源');
+2042,405,161,'来源');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39204,408,161,'GeoEye');
+2043,408,161,'GeoEye');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39205,416,161,'影像');
+2044,416,161,'影像');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39206,418,161,'拍摄');
+2045,418,161,'拍摄');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39207,420,161,'时间');
+2046,420,161,'时间');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39208,423,161,'2011');
+2047,423,161,'2011');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39209,427,161,'年');
+2048,427,161,'年');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39210,428,161,'10');
+2049,428,161,'10');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39211,430,161,'月');
+2050,430,161,'月');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39212,431,161,'13');
+2051,431,161,'13');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39213,433,161,'日');
+2052,433,161,'日');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39214,436,161,'高清');
+2053,436,161,'高清');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39215,438,161,'版图');
+2054,438,161,'版图');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39216,440,161,'片');
+2055,440,161,'片');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39217,441,161,'格式');
+2056,441,161,'格式');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39218,444,161,'jpg');
+2057,444,161,'jpg');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39219,448,161,'tif');
+2058,448,161,'tif');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39220,461,161,'三维');
+2059,461,161,'三维');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39221,378,161,'申请');
+2060,378,161,'申请');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39222,148,161,'电话');
+2061,148,161,'电话');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39223,377,161,'需');
+2062,377,161,'需');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39224,374,161,'版');
+2063,374,161,'版');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39225,257,161,'平面图');
+2064,257,161,'平面图');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39226,261,161,'点击');
+2065,261,161,'点击');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39227,263,161,'下载');
+2066,263,161,'下载');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39228,286,161,'高清');
+2067,286,161,'高清');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39229,288,161,'版');
+2068,288,161,'版');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39230,289,161,'下载');
+2069,289,161,'下载');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39231,291,161,'需');
+2070,291,161,'需');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39232,292,161,'申请');
+2071,292,161,'申请');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39233,295,161,'申请单');
+2072,295,161,'申请单');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39234,298,161,'下载');
+2073,298,161,'下载');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39235,303,161,'制作');
+2074,303,161,'制作');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39236,305,161,'时间');
+2075,305,161,'时间');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39237,308,161,'2014');
+2076,308,161,'2014');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39238,312,161,'年');
+2077,312,161,'年');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39239,313,161,'8');
+2078,313,161,'8');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39240,314,161,'月');
+2079,314,161,'月');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39241,317,161,'高清');
+2080,317,161,'高清');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39242,319,161,'版图');
+2081,319,161,'版图');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39243,321,161,'片');
+2082,321,161,'片');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39244,322,161,'格式');
+2083,322,161,'格式');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39245,325,161,'jpg');
+2084,325,161,'jpg');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39246,329,161,'tif');
+2085,329,161,'tif');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39247,343,161,'影像');
+2086,343,161,'影像');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39248,345,161,'图');
+2087,345,161,'图');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39249,347,161,'点击');
+2088,347,161,'点击');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39250,349,161,'下载');
+2089,349,161,'下载');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39251,372,161,'高清');
+2090,372,161,'高清');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39252,375,161,'下载');
+2091,375,161,'下载');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39253,0,161,'北京师范大学');
+2092,0,161,'北京师范大学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39254,4012,162,'1');
+2093,4012,162,'1');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39255,4010,162,'号');
+2094,4010,162,'号');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39256,4002,162,'05066832');
+2095,4002,162,'05066832');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39257,4001,162,'备');
+2096,4001,162,'备');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39258,3998,162,'ICP');
+2097,3998,162,'ICP');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39259,3997,162,'京');
+2098,3997,162,'京');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39260,3986,162,'邮编');
+2099,3986,162,'邮编');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39261,3983,162,'号');
+2100,3983,162,'号');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39262,3981,162,'19');
+2101,3981,162,'19');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39263,3979,162,'大街');
+2102,3979,162,'大街');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39264,4016,162,'京');
+2103,4016,162,'京');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39265,3978,162,'外');
+2104,3978,162,'外');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39266,3975,162,'新街口');
+2105,3975,162,'新街口');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39267,3989,162,'100875');
+2106,3989,162,'100875');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39268,4017,162,'公网');
+2107,4017,162,'公网');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39269,4042,162,'010');
+2108,4042,162,'010');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39270,4020,162,'备');
+2109,4020,162,'备');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39271,4021,162,'110402430002');
+2110,4021,162,'110402430002');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39272,4033,162,'号');
+2111,4033,162,'号');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39273,4036,162,'电话');
+2112,4036,162,'电话');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39274,4038,162,'查号台');
+2113,4038,162,'查号台');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39275,4046,162,'58806183');
+2114,4046,162,'58806183');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39276,4056,162,'后勤服务');
+2115,4056,162,'后勤服务');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39277,4060,162,'热线');
+2116,4060,162,'热线');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39278,4063,162,'010');
+2117,4063,162,'010');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39279,4067,162,'58801111');
+2118,4067,162,'58801111');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39280,4087,162,'Site');
+2119,4087,162,'Site');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39281,4092,162,'designed');
+2120,4092,162,'designed');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39282,4104,162,'MONOKEROS');
+2121,4104,162,'MONOKEROS');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39283,3972,162,'北京市');
+2122,3972,162,'北京市');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39284,4019,162,'安');
+2123,4019,162,'安');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39285,4101,162,'by');
+2124,4101,162,'by');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39286,3969,162,'地址');
+2125,3969,162,'地址');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39287,3956,162,'版权所有');
+2126,3956,162,'版权所有');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39288,1286,162,'合作');
+2127,1286,162,'合作');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39289,1285,162,'与');
+2128,1285,162,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39290,1281,162,'国际交流');
+2129,1281,162,'国际交流');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39291,1241,162,'合作交流');
+2130,1241,162,'合作交流');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39292,1180,162,'创业');
+2131,1180,162,'创业');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39293,1179,162,'与');
+2132,1179,162,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39294,1177,162,'就业');
+2133,1177,162,'就业');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39295,1150,162,'教师培训');
+2134,1150,162,'教师培训');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39296,1149,162,'与');
+2135,1149,162,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39297,1145,162,'继续教育');
+2136,1145,162,'继续教育');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39298,1120,162,'招生');
+2137,1120,162,'招生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39299,1117,162,'留学生');
+2138,1117,162,'留学生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39300,1091,162,'博士后');
+2139,1091,162,'博士后');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39301,1061,162,'招生');
+2140,1061,162,'招生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39302,1058,162,'研究生');
+2141,1058,162,'研究生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39303,1311,162,'国内');
+2142,1311,162,'国内');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39304,1033,162,'招生');
+2143,1033,162,'招生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39305,1313,162,'合作');
+2144,1313,162,'合作');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39306,1341,162,'事务');
+2145,1341,162,'事务');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39307,1680,162,'页');
+2146,1680,162,'页');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39308,1678,162,'黄');
+2147,1678,162,'黄');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39309,1654,162,'历');
+2148,1654,162,'历');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39310,1652,162,'校');
+2149,1652,162,'校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39311,1625,162,'校园风光');
+2150,1625,162,'校园风光');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39312,1600,162,'地图');
+2151,1600,162,'地图');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39313,1598,162,'校园');
+2152,1598,162,'校园');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39314,1560,162,'师大');
+2153,1560,162,'师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39315,1558,162,'走进');
+2154,1558,162,'走进');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39316,1496,162,'档案馆');
+2155,1496,162,'档案馆');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39317,1470,162,'图书馆');
+2156,1470,162,'图书馆');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39318,1432,162,'档案');
+2157,1432,162,'档案');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39319,1430,162,'图书');
+2158,1430,162,'图书');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39320,1368,162,'基金会');
+2159,1368,162,'基金会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39321,1366,162,'教育');
+2160,1366,162,'教育');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39322,1338,162,'港澳台');
+2161,1338,162,'港澳台');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39323,1030,162,'本科生');
+2162,1030,162,'本科生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39324,990,162,'招生就业');
+2163,990,162,'招生就业');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39325,961,162,'科学研究');
+2164,961,162,'科学研究');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39326,485,162,'校报');
+2165,485,162,'校报');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39327,458,162,'网络电视');
+2166,458,162,'网络电视');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39328,431,162,'图文报道');
+2167,431,162,'图文报道');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39329,393,162,'新闻');
+2168,393,162,'新闻');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39330,391,162,'师大');
+2169,391,162,'师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39331,334,162,'导航');
+2170,334,162,'导航');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39332,277,162,'导航');
+2171,277,162,'导航');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39333,87,162,'接待日');
+2172,87,162,'接待日');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39334,73,162,'信箱');
+2173,73,162,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39335,70,162,'校领导');
+2174,70,162,'校领导');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39336,56,162,'信箱');
+2175,56,162,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39337,54,162,'校长');
+2176,54,162,'校长');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39338,40,162,'信箱');
+2177,40,162,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39339,38,162,'书记');
+2178,38,162,'书记');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39340,8,162,'VERSION');
+2179,8,162,'VERSION');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39341,487,162,'在线');
+2180,487,162,'在线');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39342,512,162,'媒体');
+2181,512,162,'媒体');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39343,514,162,'师大');
+2182,514,162,'师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39344,572,162,'学校');
+2183,572,162,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39345,945,162,'人才招聘');
+2184,945,162,'人才招聘');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39346,929,162,'管理机构');
+2185,929,162,'管理机构');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39347,913,162,'院系设置');
+2186,913,162,'院系设置');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39348,866,162,'历史名人');
+2187,866,162,'历史名人');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39349,795,162,'学者');
+2188,795,162,'学者');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39350,793,162,'著名');
+2189,793,162,'著名');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39351,770,162,'校长');
+2190,770,162,'校长');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39352,1815,162,'师大');
+2191,1815,162,'师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39353,768,162,'历任');
+2192,768,162,'历任');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39354,696,162,'历任');
+2193,696,162,'历任');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39355,670,162,'校领导');
+2194,670,162,'校领导');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39356,668,162,'现任');
+2195,668,162,'现任');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39357,643,162,'沿革');
+2196,643,162,'沿革');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39358,641,162,'校史');
+2197,641,162,'校史');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39359,614,162,'学校简介');
+2198,614,162,'学校简介');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39360,574,162,'概况');
+2199,574,162,'概况');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39361,698,162,'书记');
+2200,698,162,'书记');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39362,1817,162,'新闻');
+2201,1817,162,'新闻');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39363,1831,162,'学校');
+2202,1831,162,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39364,1833,162,'概况');
+2203,1833,162,'概况');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39365,3310,162,'周谷城');
+2204,3310,162,'周谷城');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39366,3261,162,'秀峰');
+2205,3261,162,'秀峰');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39367,3260,162,'杨');
+2206,3260,162,'杨');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39368,3212,162,'南');
+2207,3212,162,'南');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39369,3211,162,'图');
+2208,3211,162,'图');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39370,3210,162,'楚');
+2209,3210,162,'楚');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39371,3160,162,'白寿彝');
+2210,3160,162,'白寿彝');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39372,3110,162,'钟敬文');
+2211,3110,162,'钟敬文');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39373,3061,162,'启功');
+2212,3061,162,'启功');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39374,2959,162,'历史名人');
+2213,2959,162,'历史名人');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39375,2867,162,'学者');
+2214,2867,162,'学者');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39376,2865,162,'著名');
+2215,2865,162,'著名');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39377,2824,162,'校长');
+2216,2824,162,'校长');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39378,2822,162,'历任');
+2217,2822,162,'历任');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39379,2722,162,'校长');
+2218,2722,162,'校长');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39380,3360,162,'杨明');
+2219,3360,162,'杨明');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39381,3362,162,'轩');
+2220,3362,162,'轩');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39382,3410,162,'李');
+2221,3410,162,'李');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39383,3413,162,'达');
+2222,3413,162,'达');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39384,3861,162,'梁启超');
+2223,3861,162,'梁启超');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39385,3811,162,'李大钊');
+2224,3811,162,'李大钊');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39386,3761,162,'钱玄同');
+2225,3761,162,'钱玄同');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39387,3712,162,'鲁迅');
+2226,3712,162,'鲁迅');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39388,3664,162,'熙');
+2227,3664,162,'熙');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39389,3663,162,'锦');
+2228,3663,162,'锦');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39390,3662,162,'黎');
+2229,3662,162,'黎');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39391,2720,162,'历任');
+2230,2720,162,'历任');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39392,3614,162,'惠');
+2231,3614,162,'惠');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39393,3612,162,'张');
+2232,3612,162,'张');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39394,3564,162,'勋');
+2233,3564,162,'勋');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39395,3562,162,'李建');
+2234,3562,162,'李建');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39396,3513,162,'敦礼');
+2235,3513,162,'敦礼');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39397,3512,162,'袁');
+2236,3512,162,'袁');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39398,3464,162,'垣');
+2237,3464,162,'垣');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39399,3461,162,'陈');
+2238,3461,162,'陈');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39400,3613,162,'贻');
+2239,3613,162,'贻');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39401,3961,162,'北京师范大学');
+2240,3961,162,'北京师范大学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39402,2679,162,'书记');
+2241,2679,162,'书记');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39403,2577,162,'书记');
+2242,2577,162,'书记');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39404,2010,162,'校领导');
+2243,2010,162,'校领导');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39405,1996,162,'信箱');
+2244,1996,162,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39406,1994,162,'校长');
+2245,1994,162,'校长');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39407,1980,162,'信箱');
+2246,1980,162,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39408,1978,162,'书记');
+2247,1978,162,'书记');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39409,1961,162,'师大');
+2248,1961,162,'师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39410,1959,162,'走进');
+2249,1959,162,'走进');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39411,1945,162,'档案');
+2250,1945,162,'档案');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39412,1943,162,'图书');
+2251,1943,162,'图书');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39413,1927,162,'合作交流');
+2252,1927,162,'合作交流');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39414,1911,162,'招生就业');
+2253,1911,162,'招生就业');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39415,1895,162,'科学研究');
+2254,1895,162,'科学研究');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39416,1879,162,'人才招聘');
+2255,1879,162,'人才招聘');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39417,1863,162,'管理机构');
+2256,1863,162,'管理机构');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39418,1847,162,'院系设置');
+2257,1847,162,'院系设置');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39419,2013,162,'信箱');
+2258,2013,162,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39420,2027,162,'接待日');
+2259,2027,162,'接待日');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39421,2097,162,'学校');
+2260,2097,162,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39422,2099,162,'概况');
+2261,2099,162,'概况');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39423,2575,162,'历任');
+2262,2575,162,'历任');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39424,2470,162,'校领导');
+2263,2470,162,'校领导');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39425,2468,162,'现任');
+2264,2468,162,'现任');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39426,2427,162,'沿革');
+2265,2427,162,'沿革');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39427,2425,162,'校史');
+2266,2425,162,'校史');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39428,2419,162,'北京师范大学');
+2267,2419,162,'北京师范大学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39429,2319,162,'沿革');
+2268,2319,162,'沿革');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39430,2677,162,'历任');
+2269,2677,162,'历任');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39431,2317,162,'校史');
+2270,2317,162,'校史');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39432,2268,162,'北京师范大学');
+2271,2268,162,'北京师范大学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39433,2166,162,'学校简介');
+2272,2166,162,'学校简介');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39434,2153,162,'概况');
+2273,2153,162,'概况');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39435,2151,162,'学校');
+2274,2151,162,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39436,2139,162,'首页');
+2275,2139,162,'首页');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39437,2133,162,'位置');
+2276,2133,162,'位置');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39438,2131,162,'当前');
+2277,2131,162,'当前');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39439,2274,162,'学校简介');
+2278,2274,162,'学校简介');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39440,0,162,'ENGLISH');
+2279,0,162,'ENGLISH');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39441,2772,163,'by');
+2280,2772,163,'by');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39442,2654,163,'号');
+2281,2654,163,'号');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39443,2657,163,'邮编');
+2282,2657,163,'邮编');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39444,2660,163,'100875');
+2283,2660,163,'100875');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39445,2668,163,'京');
+2284,2668,163,'京');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39446,2669,163,'ICP');
+2285,2669,163,'ICP');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39447,2672,163,'备');
+2286,2672,163,'备');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39448,2673,163,'05066832');
+2287,2673,163,'05066832');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39449,2681,163,'号');
+2288,2681,163,'号');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39450,2683,163,'1');
+2289,2683,163,'1');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39451,2687,163,'京');
+2290,2687,163,'京');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39452,2688,163,'公网');
+2291,2688,163,'公网');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39453,2690,163,'安');
+2292,2690,163,'安');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39454,2691,163,'备');
+2293,2691,163,'备');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39455,2692,163,'110402430002');
+2294,2692,163,'110402430002');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39456,2704,163,'号');
+2295,2704,163,'号');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39457,2707,163,'电话');
+2296,2707,163,'电话');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39458,2709,163,'查号台');
+2297,2709,163,'查号台');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39459,2652,163,'19');
+2298,2652,163,'19');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39460,2717,163,'58806183');
+2299,2717,163,'58806183');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39461,2727,163,'后勤服务');
+2300,2727,163,'后勤服务');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39462,2731,163,'热线');
+2301,2731,163,'热线');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39463,2734,163,'010');
+2302,2734,163,'010');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39464,2738,163,'58801111');
+2303,2738,163,'58801111');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39465,2758,163,'Site');
+2304,2758,163,'Site');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39466,2763,163,'designed');
+2305,2763,163,'designed');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39467,2775,163,'MONOKEROS');
+2306,2775,163,'MONOKEROS');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39468,2713,163,'010');
+2307,2713,163,'010');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39469,2650,163,'大街');
+2308,2650,163,'大街');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39470,2646,163,'新街口');
+2309,2646,163,'新街口');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39471,795,163,'学者');
+2310,795,163,'学者');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39472,866,163,'历史名人');
+2311,866,163,'历史名人');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39473,913,163,'院系设置');
+2312,913,163,'院系设置');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39474,929,163,'管理机构');
+2313,929,163,'管理机构');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39475,945,163,'人才招聘');
+2314,945,163,'人才招聘');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39476,961,163,'科学研究');
+2315,961,163,'科学研究');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39477,990,163,'招生就业');
+2316,990,163,'招生就业');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39478,1030,163,'本科生');
+2317,1030,163,'本科生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39479,1033,163,'招生');
+2318,1033,163,'招生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39480,1058,163,'研究生');
+2319,1058,163,'研究生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39481,1061,163,'招生');
+2320,1061,163,'招生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39482,1091,163,'博士后');
+2321,1091,163,'博士后');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39483,793,163,'著名');
+2322,793,163,'著名');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39484,1117,163,'留学生');
+2323,1117,163,'留学生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39485,1145,163,'继续教育');
+2324,1145,163,'继续教育');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39486,1149,163,'与');
+2325,1149,163,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39487,1150,163,'教师培训');
+2326,1150,163,'教师培训');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39488,1177,163,'就业');
+2327,1177,163,'就业');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39489,1179,163,'与');
+2328,1179,163,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39490,1180,163,'创业');
+2329,1180,163,'创业');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39491,1241,163,'合作交流');
+2330,1241,163,'合作交流');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39492,1281,163,'国际交流');
+2331,1281,163,'国际交流');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39493,1285,163,'与');
+2332,1285,163,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39494,1286,163,'合作');
+2333,1286,163,'合作');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39495,1311,163,'国内');
+2334,1311,163,'国内');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39496,1313,163,'合作');
+2335,1313,163,'合作');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39497,1120,163,'招生');
+2336,1120,163,'招生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39498,1338,163,'港澳台');
+2337,1338,163,'港澳台');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39499,770,163,'校长');
+2338,770,163,'校长');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39500,698,163,'书记');
+2339,698,163,'书记');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39501,8,163,'VERSION');
+2340,8,163,'VERSION');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39502,38,163,'书记');
+2341,38,163,'书记');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39503,40,163,'信箱');
+2342,40,163,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39504,54,163,'校长');
+2343,54,163,'校长');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39505,56,163,'信箱');
+2344,56,163,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39506,70,163,'校领导');
+2345,70,163,'校领导');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39507,73,163,'信箱');
+2346,73,163,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39508,87,163,'接待日');
+2347,87,163,'接待日');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39509,277,163,'导航');
+2348,277,163,'导航');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39510,334,163,'导航');
+2349,334,163,'导航');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39511,391,163,'师大');
+2350,391,163,'师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39512,393,163,'新闻');
+2351,393,163,'新闻');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39513,768,163,'历任');
+2352,768,163,'历任');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39514,431,163,'图文报道');
+2353,431,163,'图文报道');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39515,485,163,'校报');
+2354,485,163,'校报');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39516,487,163,'在线');
+2355,487,163,'在线');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39517,512,163,'媒体');
+2356,512,163,'媒体');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39518,514,163,'师大');
+2357,514,163,'师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39519,572,163,'学校');
+2358,572,163,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39520,574,163,'概况');
+2359,574,163,'概况');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39521,614,163,'学校简介');
+2360,614,163,'学校简介');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39522,641,163,'校史');
+2361,641,163,'校史');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39523,643,163,'沿革');
+2362,643,163,'沿革');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39524,668,163,'现任');
+2363,668,163,'现任');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39525,670,163,'校领导');
+2364,670,163,'校领导');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39526,696,163,'历任');
+2365,696,163,'历任');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39527,458,163,'网络电视');
+2366,458,163,'网络电视');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39528,1341,163,'事务');
+2367,1341,163,'事务');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39529,1366,163,'教育');
+2368,1366,163,'教育');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39530,1368,163,'基金会');
+2369,1368,163,'基金会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39531,2010,163,'校领导');
+2370,2010,163,'校领导');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39532,2013,163,'信箱');
+2371,2013,163,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39533,2027,163,'接待日');
+2372,2027,163,'接待日');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39534,2097,163,'招生就业');
+2373,2097,163,'招生就业');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39535,2131,163,'当前');
+2374,2131,163,'当前');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39536,2133,163,'位置');
+2375,2133,163,'位置');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39537,2139,163,'首页');
+2376,2139,163,'首页');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39538,2151,163,'招生就业');
+2377,2151,163,'招生就业');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39539,2166,163,'招生就业');
+2378,2166,163,'招生就业');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39540,2268,163,'本科生');
+2379,2268,163,'本科生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39541,2271,163,'招生');
+2380,2271,163,'招生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39542,2320,163,'研究生');
+2381,2320,163,'研究生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39543,1996,163,'信箱');
+2382,1996,163,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39544,2323,163,'招生');
+2383,2323,163,'招生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39545,2422,163,'留学生');
+2384,2422,163,'留学生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39546,2425,163,'招生');
+2385,2425,163,'招生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39547,2474,163,'继续教育');
+2386,2474,163,'继续教育');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39548,2478,163,'与');
+2387,2478,163,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39549,2479,163,'教师培训');
+2388,2479,163,'教师培训');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39550,2530,163,'就业');
+2389,2530,163,'就业');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39551,2532,163,'与');
+2390,2532,163,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39552,2533,163,'创业');
+2391,2533,163,'创业');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39553,2627,163,'版权所有');
+2392,2627,163,'版权所有');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39554,2632,163,'北京师范大学');
+2393,2632,163,'北京师范大学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39555,2640,163,'地址');
+2394,2640,163,'地址');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39556,2643,163,'北京市');
+2395,2643,163,'北京市');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39557,2372,163,'博士后');
+2396,2372,163,'博士后');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39558,1994,163,'校长');
+2397,1994,163,'校长');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39559,1980,163,'信箱');
+2398,1980,163,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39560,1978,163,'书记');
+2399,1978,163,'书记');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39561,1430,163,'图书');
+2400,1430,163,'图书');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39562,1432,163,'档案');
+2401,1432,163,'档案');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39563,1470,163,'图书馆');
+2402,1470,163,'图书馆');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39564,1496,163,'档案馆');
+2403,1496,163,'档案馆');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39565,1558,163,'走进');
+2404,1558,163,'走进');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39566,1560,163,'师大');
+2405,1560,163,'师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39567,1598,163,'校园');
+2406,1598,163,'校园');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39568,1600,163,'地图');
+2407,1600,163,'地图');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39569,1625,163,'校园风光');
+2408,1625,163,'校园风光');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39570,1652,163,'校');
+2409,1652,163,'校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39571,1654,163,'历');
+2410,1654,163,'历');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39572,1678,163,'黄');
+2411,1678,163,'黄');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39573,1680,163,'页');
+2412,1680,163,'页');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39574,1815,163,'师大');
+2413,1815,163,'师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39575,1817,163,'新闻');
+2414,1817,163,'新闻');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39576,1831,163,'学校');
+2415,1831,163,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39577,1833,163,'概况');
+2416,1833,163,'概况');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39578,1847,163,'院系设置');
+2417,1847,163,'院系设置');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39579,1863,163,'管理机构');
+2418,1863,163,'管理机构');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39580,1879,163,'人才招聘');
+2419,1879,163,'人才招聘');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39581,1895,163,'科学研究');
+2420,1895,163,'科学研究');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39582,1911,163,'招生就业');
+2421,1911,163,'招生就业');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39583,1927,163,'合作交流');
+2422,1927,163,'合作交流');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39584,1943,163,'图书');
+2423,1943,163,'图书');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39585,1945,163,'档案');
+2424,1945,163,'档案');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39586,1959,163,'走进');
+2425,1959,163,'走进');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39587,1961,163,'师大');
+2426,1961,163,'师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39588,2649,163,'外');
+2427,2649,163,'外');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39589,0,163,'ENGLISH');
+2428,0,163,'ENGLISH');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39590,3702,164,'作');
+2429,3702,164,'作');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39591,3700,164,'来校');
+2430,3700,164,'来校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39592,3698,164,'淑芳');
+2431,3698,164,'淑芳');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39593,3697,164,'王');
+2432,3697,164,'王');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39594,3695,164,'代表');
+2433,3695,164,'代表');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39595,3637,164,'2017');
+2434,3637,164,'2017');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39596,3692,164,'十九');
+2435,3692,164,'十九');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39597,3691,164,'的');
+2436,3691,164,'的');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39598,3690,164,'党');
+2437,3690,164,'党');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39599,3645,164,'23');
+2438,3645,164,'23');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39600,3642,164,'11');
+2439,3642,164,'11');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39601,3703,164,'专题');
+2440,3703,164,'专题');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39602,3636,164,'次');
+2441,3636,164,'次');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39603,3694,164,'大');
+2442,3694,164,'大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39604,3705,164,'报告');
+2443,3705,164,'报告');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39605,3774,164,'学院');
+2444,3774,164,'学院');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39606,3716,164,'次');
+2445,3716,164,'次');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39607,3801,164,'次');
+2446,3801,164,'次');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39608,3634,164,'阅读');
+2447,3634,164,'阅读');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39609,3799,164,'阅读');
+2448,3799,164,'阅读');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39610,3789,164,'座谈会');
+2449,3789,164,'座谈会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39611,3787,164,'精神');
+2450,3787,164,'精神');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39612,3786,164,'大');
+2451,3786,164,'大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39613,3784,164,'十九');
+2452,3784,164,'十九');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39614,3783,164,'的');
+2453,3783,164,'的');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39615,3782,164,'党');
+2454,3782,164,'党');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39616,3778,164,'学习贯彻');
+2455,3778,164,'学习贯彻');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39617,3776,164,'举办');
+2456,3776,164,'举办');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39618,3770,164,'政府管理');
+2457,3770,164,'政府管理');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39619,3725,164,'23');
+2458,3725,164,'23');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39620,3722,164,'11');
+2459,3722,164,'11');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39621,3717,164,'2017');
+2460,3717,164,'2017');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39622,3714,164,'阅读');
+2461,3714,164,'阅读');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39623,3625,164,'举办');
+2462,3625,164,'举办');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39624,3548,164,'24');
+2463,3548,164,'24');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39625,3621,164,'我校');
+2464,3621,164,'我校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39626,3528,164,'活动');
+2465,3528,164,'活动');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39627,3526,164,'系列');
+2466,3526,164,'系列');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39628,3524,164,'精神');
+2467,3524,164,'精神');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39629,3523,164,'大');
+2468,3523,164,'大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39630,3521,164,'十九');
+2469,3521,164,'十九');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39631,3520,164,'的');
+2470,3520,164,'的');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39632,3519,164,'党');
+2471,3519,164,'党');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39633,3517,164,'贯彻');
+2472,3517,164,'贯彻');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39634,3513,164,'学习宣传');
+2473,3513,164,'学习宣传');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39635,3511,164,'开展');
+2474,3511,164,'开展');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39636,3509,164,'学院');
+2475,3509,164,'学院');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39637,3507,164,'传媒');
+2476,3507,164,'传媒');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39638,3506,164,'与');
+2477,3506,164,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39639,3504,164,'艺术');
+2478,3504,164,'艺术');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39640,3459,164,'24');
+2479,3459,164,'24');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39641,3537,164,'阅读');
+2480,3537,164,'阅读');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39642,3623,164,'成功');
+2481,3623,164,'成功');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39643,3539,164,'次');
+2482,3539,164,'次');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39644,3545,164,'11');
+2483,3545,164,'11');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39645,3620,164,'在');
+2484,3620,164,'在');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39646,3617,164,'研修班');
+2485,3617,164,'研修班');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39647,3615,164,'高级');
+2486,3615,164,'高级');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39648,3613,164,'精神');
+2487,3613,164,'精神');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39649,3612,164,'大');
+2488,3612,164,'大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39650,3610,164,'十九');
+2489,3610,164,'十九');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39651,3609,164,'的');
+2490,3609,164,'的');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39652,3608,164,'党');
+2491,3608,164,'党');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39653,3606,164,'领会');
+2492,3606,164,'领会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39654,3602,164,'学习贯彻');
+2493,3602,164,'学习贯彻');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39655,3600,164,'骨干');
+2494,3600,164,'骨干');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39656,3597,164,'辅导员');
+2495,3597,164,'辅导员');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39657,3595,164,'高校');
+2496,3595,164,'高校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39658,3593,164,'北京');
+2497,3593,164,'北京');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39659,3802,164,'2017');
+2498,3802,164,'2017');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39660,3540,164,'2017');
+2499,3540,164,'2017');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39661,3807,164,'11');
+2500,3807,164,'11');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39662,3898,164,'21');
+2501,3898,164,'21');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39663,3855,164,'文学院');
+2502,3855,164,'文学院');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39664,4256,164,'1');
+2503,4256,164,'1');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39665,4254,164,'号');
+2504,4254,164,'号');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39666,4246,164,'05066832');
+2505,4246,164,'05066832');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39667,4245,164,'备');
+2506,4245,164,'备');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39668,4242,164,'ICP');
+2507,4242,164,'ICP');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39669,4241,164,'京');
+2508,4241,164,'京');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39670,4260,164,'京');
+2509,4260,164,'京');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39671,4233,164,'100875');
+2510,4233,164,'100875');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39672,4225,164,'19');
+2511,4225,164,'19');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39673,4223,164,'大街');
+2512,4223,164,'大街');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39674,4222,164,'外');
+2513,4222,164,'外');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39675,4219,164,'新街口');
+2514,4219,164,'新街口');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39676,4216,164,'北京市');
+2515,4216,164,'北京市');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39677,4213,164,'地址');
+2516,4213,164,'地址');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39678,4230,164,'邮编');
+2517,4230,164,'邮编');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39679,4261,164,'公网');
+2518,4261,164,'公网');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39680,4263,164,'安');
+2519,4263,164,'安');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39681,4264,164,'备');
+2520,4264,164,'备');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39682,3456,164,'11');
+2521,3456,164,'11');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39683,4348,164,'MONOKEROS');
+2522,4348,164,'MONOKEROS');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39684,4345,164,'by');
+2523,4345,164,'by');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39685,4336,164,'designed');
+2524,4336,164,'designed');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39686,4331,164,'Site');
+2525,4331,164,'Site');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39687,4311,164,'58801111');
+2526,4311,164,'58801111');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39688,4307,164,'010');
+2527,4307,164,'010');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39689,4304,164,'热线');
+2528,4304,164,'热线');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39690,4300,164,'后勤服务');
+2529,4300,164,'后勤服务');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39691,4290,164,'58806183');
+2530,4290,164,'58806183');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39692,4286,164,'010');
+2531,4286,164,'010');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39693,4282,164,'查号台');
+2532,4282,164,'查号台');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39694,4280,164,'电话');
+2533,4280,164,'电话');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39695,4277,164,'号');
+2534,4277,164,'号');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39696,4265,164,'110402430002');
+2535,4265,164,'110402430002');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39697,4205,164,'北京师范大学');
+2536,4205,164,'北京师范大学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39698,4200,164,'版权所有');
+2537,4200,164,'版权所有');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39699,4099,164,'页');
+2538,4099,164,'页');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39700,4098,164,'末');
+2539,4098,164,'末');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39701,3895,164,'11');
+2540,3895,164,'11');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39702,3890,164,'2017');
+2541,3890,164,'2017');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39703,3889,164,'次');
+2542,3889,164,'次');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39704,3887,164,'阅读');
+2543,3887,164,'阅读');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39705,3877,164,'报告会');
+2544,3877,164,'报告会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39706,3875,164,'主题');
+2545,3875,164,'主题');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39707,3872,164,'精神');
+2546,3872,164,'精神');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39708,3871,164,'大');
+2547,3871,164,'大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39709,3869,164,'十九');
+2548,3869,164,'十九');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39710,3868,164,'的');
+2549,3868,164,'的');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39711,3867,164,'党');
+2550,3867,164,'党');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39712,3865,164,'学习');
+2551,3865,164,'学习');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39713,3862,164,'举行');
+2552,3862,164,'举行');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39714,3860,164,'党校');
+2553,3860,164,'党校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39715,3858,164,'二级');
+2554,3858,164,'二级');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39716,3953,164,'当前');
+2555,3953,164,'当前');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39717,3810,164,'23');
+2556,3810,164,'23');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39718,3955,164,'第');
+2557,3955,164,'第');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39719,3959,164,'页');
+2558,3959,164,'页');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39720,4083,164,'页');
+2559,4083,164,'页');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39721,4082,164,'一');
+2560,4082,164,'一');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39722,4081,164,'下');
+2561,4081,164,'下');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39723,4066,164,'页');
+2562,4066,164,'页');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39724,4064,164,'上一');
+2563,4064,164,'上一');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39725,4048,164,'首页');
+2564,4048,164,'首页');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39726,4005,164,'篇');
+2565,4005,164,'篇');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39727,4002,164,'64');
+2566,4002,164,'64');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39728,3999,164,'数');
+2567,3999,164,'数');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39729,3997,164,'文章');
+2568,3997,164,'文章');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39730,3996,164,'总');
+2569,3996,164,'总');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39731,3981,164,'页');
+2570,3981,164,'页');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39732,3979,164,'4');
+2571,3979,164,'4');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39733,3975,164,'页数');
+2572,3975,164,'页数');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39734,3974,164,'总');
+2573,3974,164,'总');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39735,3957,164,'1');
+2574,3957,164,'1');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39736,4227,164,'号');
+2575,4227,164,'号');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39737,3451,164,'2017');
+2576,3451,164,'2017');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39738,3448,164,'阅读');
+2577,3448,164,'阅读');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39739,2174,164,'落实');
+2578,2174,164,'落实');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39740,2176,164,'党');
+2579,2176,164,'党');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39741,2177,164,'的');
+2580,2177,164,'的');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39742,2178,164,'十九');
+2581,2178,164,'十九');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39743,2180,164,'大');
+2582,2180,164,'大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39744,2181,164,'精神');
+2583,2181,164,'精神');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39745,2243,164,'学校');
+2584,2243,164,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39746,2245,164,'师生');
+2585,2245,164,'师生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39747,2170,164,'学习贯彻');
+2586,2170,164,'学习贯彻');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39748,2247,164,'热');
+2587,2247,164,'热');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39749,2249,164,'党');
+2588,2249,164,'党');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39750,2250,164,'的');
+2589,2250,164,'的');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39751,2251,164,'十九');
+2590,2251,164,'十九');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39752,2253,164,'大报');
+2591,2253,164,'大报');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39753,2255,164,'告');
+2592,2255,164,'告');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39754,2263,164,'阅读');
+2593,2263,164,'阅读');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39755,2265,164,'次');
+2594,2265,164,'次');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39756,2266,164,'2017');
+2595,2266,164,'2017');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39757,2248,164,'议');
+2596,2248,164,'议');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39758,2271,164,'10');
+2597,2271,164,'10');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39759,2168,164,'单位');
+2598,2168,164,'单位');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39760,2165,164,'学校');
+2599,2165,164,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39761,1994,164,'校长');
+2600,1994,164,'校长');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39762,1996,164,'信箱');
+2601,1996,164,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39763,2010,164,'校领导');
+2602,2010,164,'校领导');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39764,2013,164,'信箱');
+2603,2013,164,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39765,2027,164,'接待日');
+2604,2027,164,'接待日');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39766,2097,164,'学校');
+2605,2097,164,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39767,2099,164,'各');
+2606,2099,164,'各');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39768,2100,164,'单位');
+2607,2100,164,'单位');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39769,2167,164,'各');
+2608,2167,164,'各');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39770,2102,164,'学习贯彻');
+2609,2102,164,'学习贯彻');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39771,2108,164,'党');
+2610,2108,164,'党');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39772,2109,164,'的');
+2611,2109,164,'的');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39773,2110,164,'十九');
+2612,2110,164,'十九');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39774,2112,164,'大');
+2613,2112,164,'大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39775,2113,164,'精神');
+2614,2113,164,'精神');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39776,2145,164,'当前');
+2615,2145,164,'当前');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39777,2147,164,'位置');
+2616,2147,164,'位置');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39778,2153,164,'首页');
+2617,2153,164,'首页');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39779,2106,164,'落实');
+2618,2106,164,'落实');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39780,1980,164,'信箱');
+2619,1980,164,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39781,2274,164,'20');
+2620,2274,164,'20');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39782,2321,164,'组织');
+2621,2321,164,'组织');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39783,2429,164,'大会');
+2622,2429,164,'大会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39784,2438,164,'阅读');
+2623,2438,164,'阅读');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39785,2440,164,'次');
+2624,2440,164,'次');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39786,2441,164,'2017');
+2625,2441,164,'2017');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39787,2446,164,'11');
+2626,2446,164,'11');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39788,2449,164,'25');
+2627,2449,164,'25');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39789,2495,164,'新时代');
+2628,2495,164,'新时代');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39790,2498,164,'新作');
+2629,2498,164,'新作');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39791,2427,164,'精神');
+2630,2427,164,'精神');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39792,2500,164,'为');
+2631,2500,164,'为');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39793,2503,164,'十九');
+2632,2503,164,'十九');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39794,2505,164,'大');
+2633,2505,164,'大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39795,2506,164,'代表');
+2634,2506,164,'代表');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39796,2508,164,'面对面');
+2635,2508,164,'面对面');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39797,2511,164,'巡');
+2636,2511,164,'巡');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39798,2512,164,'讲');
+2637,2512,164,'讲');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39799,2513,164,'活动');
+2638,2513,164,'活动');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39800,2515,164,'在');
+2639,2515,164,'在');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39801,2502,164,'与');
+2640,2502,164,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39802,2319,164,'学校');
+2641,2319,164,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39803,2426,164,'大');
+2642,2426,164,'大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39804,2423,164,'的');
+2643,2423,164,'的');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39805,2323,164,'师生员工');
+2644,2323,164,'师生员工');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39806,2327,164,'集中');
+2645,2327,164,'集中');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39807,2329,164,'观看');
+2646,2329,164,'观看');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39808,2331,164,'中国共产党');
+2647,2331,164,'中国共产党');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39809,2336,164,'第十九');
+2648,2336,164,'第十九');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39810,2339,164,'次');
+2649,2339,164,'次');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39811,2340,164,'全国代表大会');
+2650,2340,164,'全国代表大会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39812,2346,164,'开幕会');
+2651,2346,164,'开幕会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39813,2424,164,'十九');
+2652,2424,164,'十九');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39814,2356,164,'阅读');
+2653,2356,164,'阅读');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39815,2359,164,'2017');
+2654,2359,164,'2017');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39816,2364,164,'10');
+2655,2364,164,'10');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39817,2367,164,'18');
+2656,2367,164,'18');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39818,2412,164,'学校');
+2657,2412,164,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39819,2414,164,'召开');
+2658,2414,164,'召开');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39820,2416,164,'学习宣传');
+2659,2416,164,'学习宣传');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39821,2420,164,'贯彻');
+2660,2420,164,'贯彻');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39822,2422,164,'党');
+2661,2422,164,'党');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39823,2358,164,'次');
+2662,2358,164,'次');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39824,1978,164,'书记');
+2663,1978,164,'书记');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39825,1961,164,'师大');
+2664,1961,164,'师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39826,1959,164,'走进');
+2665,1959,164,'走进');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39827,643,164,'沿革');
+2666,643,164,'沿革');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39828,668,164,'现任');
+2667,668,164,'现任');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39829,670,164,'校领导');
+2668,670,164,'校领导');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39830,696,164,'历任');
+2669,696,164,'历任');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39831,698,164,'书记');
+2670,698,164,'书记');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39832,768,164,'历任');
+2671,768,164,'历任');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39833,770,164,'校长');
+2672,770,164,'校长');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39834,793,164,'著名');
+2673,793,164,'著名');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39835,641,164,'校史');
+2674,641,164,'校史');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39836,795,164,'学者');
+2675,795,164,'学者');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39837,913,164,'院系设置');
+2676,913,164,'院系设置');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39838,929,164,'管理机构');
+2677,929,164,'管理机构');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39839,945,164,'人才招聘');
+2678,945,164,'人才招聘');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39840,961,164,'科学研究');
+2679,961,164,'科学研究');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39841,990,164,'招生就业');
+2680,990,164,'招生就业');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39842,1030,164,'本科生');
+2681,1030,164,'本科生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39843,1033,164,'招生');
+2682,1033,164,'招生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39844,1058,164,'研究生');
+2683,1058,164,'研究生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39845,866,164,'历史名人');
+2684,866,164,'历史名人');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39846,1061,164,'招生');
+2685,1061,164,'招生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39847,614,164,'学校简介');
+2686,614,164,'学校简介');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39848,572,164,'学校');
+2687,572,164,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39849,8,164,'VERSION');
+2688,8,164,'VERSION');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39850,38,164,'书记');
+2689,38,164,'书记');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39851,40,164,'信箱');
+2690,40,164,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39852,54,164,'校长');
+2691,54,164,'校长');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39853,56,164,'信箱');
+2692,56,164,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39854,70,164,'校领导');
+2693,70,164,'校领导');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39855,73,164,'信箱');
+2694,73,164,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39856,87,164,'接待日');
+2695,87,164,'接待日');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39857,574,164,'概况');
+2696,574,164,'概况');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39858,277,164,'导航');
+2697,277,164,'导航');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39859,391,164,'师大');
+2698,391,164,'师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39860,393,164,'新闻');
+2699,393,164,'新闻');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39861,431,164,'图文报道');
+2700,431,164,'图文报道');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39862,458,164,'网络电视');
+2701,458,164,'网络电视');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39863,485,164,'校报');
+2702,485,164,'校报');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39864,487,164,'在线');
+2703,487,164,'在线');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39865,512,164,'媒体');
+2704,512,164,'媒体');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39866,514,164,'师大');
+2705,514,164,'师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39867,334,164,'导航');
+2706,334,164,'导航');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39868,1091,164,'博士后');
+2707,1091,164,'博士后');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39869,1117,164,'留学生');
+2708,1117,164,'留学生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39870,1120,164,'招生');
+2709,1120,164,'招生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39871,1600,164,'地图');
+2710,1600,164,'地图');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39872,1625,164,'校园风光');
+2711,1625,164,'校园风光');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39873,1652,164,'校');
+2712,1652,164,'校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39874,1654,164,'历');
+2713,1654,164,'历');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39875,1678,164,'黄');
+2714,1678,164,'黄');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39876,1680,164,'页');
+2715,1680,164,'页');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39877,1815,164,'师大');
+2716,1815,164,'师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39878,1817,164,'新闻');
+2717,1817,164,'新闻');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39879,1598,164,'校园');
+2718,1598,164,'校园');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39880,1831,164,'学校');
+2719,1831,164,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39881,1847,164,'院系设置');
+2720,1847,164,'院系设置');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39882,1863,164,'管理机构');
+2721,1863,164,'管理机构');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39883,1879,164,'人才招聘');
+2722,1879,164,'人才招聘');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39884,1895,164,'科学研究');
+2723,1895,164,'科学研究');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39885,1911,164,'招生就业');
+2724,1911,164,'招生就业');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39886,1927,164,'合作交流');
+2725,1927,164,'合作交流');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39887,1943,164,'图书');
+2726,1943,164,'图书');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39888,1945,164,'档案');
+2727,1945,164,'档案');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39889,1833,164,'概况');
+2728,1833,164,'概况');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39890,1560,164,'师大');
+2729,1560,164,'师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39891,1558,164,'走进');
+2730,1558,164,'走进');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39892,1496,164,'档案馆');
+2731,1496,164,'档案馆');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39893,1145,164,'继续教育');
+2732,1145,164,'继续教育');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39894,1149,164,'与');
+2733,1149,164,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39895,1150,164,'教师培训');
+2734,1150,164,'教师培训');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39896,1177,164,'就业');
+2735,1177,164,'就业');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39897,1179,164,'与');
+2736,1179,164,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39898,1180,164,'创业');
+2737,1180,164,'创业');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39899,1241,164,'合作交流');
+2738,1241,164,'合作交流');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39900,1281,164,'国际交流');
+2739,1281,164,'国际交流');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39901,1285,164,'与');
+2740,1285,164,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39902,1286,164,'合作');
+2741,1286,164,'合作');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39903,1311,164,'国内');
+2742,1311,164,'国内');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39904,1313,164,'合作');
+2743,1313,164,'合作');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39905,1338,164,'港澳台');
+2744,1338,164,'港澳台');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39906,1341,164,'事务');
+2745,1341,164,'事务');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39907,1366,164,'教育');
+2746,1366,164,'教育');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39908,1368,164,'基金会');
+2747,1368,164,'基金会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39909,1430,164,'图书');
+2748,1430,164,'图书');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39910,1432,164,'档案');
+2749,1432,164,'档案');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39911,1470,164,'图书馆');
+2750,1470,164,'图书馆');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39912,2516,164,'我校');
+2751,2516,164,'我校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39913,3450,164,'次');
+2752,3450,164,'次');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39914,2518,164,'举行');
+2753,2518,164,'举行');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39915,2529,164,'次');
+2754,2529,164,'次');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39916,3115,164,'2017');
+2755,3115,164,'2017');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39917,3120,164,'12');
+2756,3120,164,'12');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39918,3123,164,'05');
+2757,3123,164,'05');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39919,3168,164,'新闻');
+2758,3168,164,'新闻');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39920,3170,164,'传播学');
+2759,3170,164,'传播学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39921,3173,164,'院');
+2760,3173,164,'院');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39922,3174,164,'举办');
+2761,3174,164,'举办');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39923,3176,164,'党');
+2762,3176,164,'党');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39924,3114,164,'次');
+2763,3114,164,'次');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39925,3177,164,'的');
+2764,3177,164,'的');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39926,3180,164,'大');
+2765,3180,164,'大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39927,3181,164,'精神');
+2766,3181,164,'精神');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39928,3183,164,'宣讲会');
+2767,3183,164,'宣讲会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39929,3193,164,'阅读');
+2768,3193,164,'阅读');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39930,3195,164,'次');
+2769,3195,164,'次');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39931,3196,164,'2017');
+2770,3196,164,'2017');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39932,3201,164,'11');
+2771,3201,164,'11');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39933,3204,164,'29');
+2772,3204,164,'29');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39934,3178,164,'十九');
+2773,3178,164,'十九');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39935,3249,164,'学校');
+2774,3249,164,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39936,3112,164,'阅读');
+2775,3112,164,'阅读');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39937,3101,164,'知识');
+2776,3101,164,'知识');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39938,3015,164,'大');
+2777,3015,164,'大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39939,3016,164,'精神');
+2778,3016,164,'精神');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39940,3018,164,'学习');
+2779,3018,164,'学习');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39941,3020,164,'报告会');
+2780,3020,164,'报告会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39942,3030,164,'阅读');
+2781,3030,164,'阅读');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39943,3032,164,'次');
+2782,3032,164,'次');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39944,3033,164,'2017');
+2783,3033,164,'2017');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39945,3038,164,'12');
+2784,3038,164,'12');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39946,3103,164,'竞赛');
+2785,3103,164,'竞赛');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39947,3041,164,'11');
+2786,3041,164,'11');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39948,3088,164,'举办');
+2787,3088,164,'举办');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39949,3090,164,'学习');
+2788,3090,164,'学习');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39950,3092,164,'党');
+2789,3092,164,'党');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39951,3093,164,'的');
+2790,3093,164,'的');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39952,3094,164,'十九');
+2791,3094,164,'十九');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39953,3096,164,'大');
+2792,3096,164,'大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39954,3097,164,'精神');
+2793,3097,164,'精神');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39955,3099,164,'主题');
+2794,3099,164,'主题');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39956,3086,164,'学校');
+2795,3086,164,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39957,3013,164,'十九');
+2796,3013,164,'十九');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39958,3251,164,'举办');
+2797,3251,164,'举办');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39959,3255,164,'党');
+2798,3255,164,'党');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39960,3351,164,'系列');
+2799,3351,164,'系列');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39961,3353,164,'活动');
+2800,3353,164,'活动');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39962,3362,164,'阅读');
+2801,3362,164,'阅读');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39963,3364,164,'次');
+2802,3364,164,'次');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39964,3365,164,'2017');
+2803,3365,164,'2017');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39965,3370,164,'11');
+2804,3370,164,'11');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39966,3373,164,'25');
+2805,3373,164,'25');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39967,3418,164,'刑事法律');
+2806,3418,164,'刑事法律');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39968,3349,164,'精神');
+2807,3349,164,'精神');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39969,3422,164,'科学研究');
+2808,3422,164,'科学研究');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39970,3427,164,'举办');
+2809,3427,164,'举办');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39971,3429,164,'党');
+2810,3429,164,'党');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39972,3430,164,'的');
+2811,3430,164,'的');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39973,3431,164,'十九');
+2812,3431,164,'十九');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39974,3433,164,'大');
+2813,3433,164,'大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39975,3434,164,'精神');
+2814,3434,164,'精神');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39976,3436,164,'宣讲');
+2815,3436,164,'宣讲');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39977,3438,164,'报告会');
+2816,3438,164,'报告会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39978,3426,164,'院');
+2817,3426,164,'院');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39979,3253,164,'学习');
+2818,3253,164,'学习');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39980,3348,164,'大');
+2819,3348,164,'大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39981,3345,164,'的');
+2820,3345,164,'的');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39982,3256,164,'的');
+2821,3256,164,'的');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39983,3257,164,'十九');
+2822,3257,164,'十九');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39984,3259,164,'大');
+2823,3259,164,'大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39985,3260,164,'精神');
+2824,3260,164,'精神');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39986,3262,164,'专题');
+2825,3262,164,'专题');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39987,3264,164,'讲座');
+2826,3264,164,'讲座');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39988,3273,164,'阅读');
+2827,3273,164,'阅读');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39989,3275,164,'次');
+2828,3275,164,'次');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39990,3346,164,'十九');
+2829,3346,164,'十九');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39991,3276,164,'2017');
+2830,3276,164,'2017');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39992,3284,164,'25');
+2831,3284,164,'25');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39993,3329,164,'经济');
+2832,3329,164,'经济');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39994,3331,164,'与');
+2833,3331,164,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39995,3332,164,'工商管理学');
+2834,3332,164,'工商管理学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39996,3337,164,'院');
+2835,3337,164,'院');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39997,3338,164,'举办');
+2836,3338,164,'举办');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39998,3340,164,'学习贯彻');
+2837,3340,164,'学习贯彻');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-39999,3344,164,'党');
+2838,3344,164,'党');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40000,3281,164,'11');
+2839,3281,164,'11');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40001,3012,164,'的');
+2840,3012,164,'的');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40002,3011,164,'党');
+2841,3011,164,'党');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40003,3009,164,'举办');
+2842,3009,164,'举办');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40004,2673,164,'来');
+2843,2673,164,'来');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40005,2674,164,'我校');
+2844,2674,164,'我校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40006,2676,164,'宣讲');
+2845,2676,164,'宣讲');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40007,2678,164,'党');
+2846,2678,164,'党');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40008,2679,164,'的');
+2847,2679,164,'的');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40009,2680,164,'十九');
+2848,2680,164,'十九');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40010,2682,164,'大');
+2849,2682,164,'大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40011,2683,164,'精神');
+2850,2683,164,'精神');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40012,2671,164,'代表');
+2851,2671,164,'代表');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40013,2692,164,'阅读');
+2852,2692,164,'阅读');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40014,2695,164,'2017');
+2853,2695,164,'2017');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40015,2700,164,'12');
+2854,2700,164,'12');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40016,2703,164,'22');
+2855,2703,164,'22');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40017,2748,164,'首都');
+2856,2748,164,'首都');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40018,2750,164,'高校');
+2857,2750,164,'高校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40019,2752,164,'学习');
+2858,2752,164,'学习');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40020,2754,164,'十九');
+2859,2754,164,'十九');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40021,2756,164,'大');
+2860,2756,164,'大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40022,2694,164,'次');
+2861,2694,164,'次');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40023,2757,164,'精神');
+2862,2757,164,'精神');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40024,2670,164,'大');
+2863,2670,164,'大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40025,2667,164,'的');
+2864,2667,164,'的');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40026,2530,164,'2018');
+2865,2530,164,'2018');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40027,2535,164,'01');
+2866,2535,164,'01');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40028,2538,164,'08');
+2867,2538,164,'08');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40029,2583,164,'学校');
+2868,2583,164,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40030,2585,164,'举办');
+2869,2585,164,'举办');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40031,2588,164,'与');
+2870,2588,164,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40032,2589,164,'十九');
+2871,2589,164,'十九');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40033,2591,164,'大');
+2872,2591,164,'大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40034,2668,164,'十九');
+2873,2668,164,'十九');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40035,2592,164,'代表');
+2874,2592,164,'代表');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40036,2598,164,'专题');
+2875,2598,164,'专题');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40037,2600,164,'报告会');
+2876,2600,164,'报告会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40038,2610,164,'阅读');
+2877,2610,164,'阅读');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40039,2612,164,'次');
+2878,2612,164,'次');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40040,2613,164,'2018');
+2879,2613,164,'2018');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40041,2618,164,'01');
+2880,2618,164,'01');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40042,2621,164,'08');
+2881,2621,164,'08');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40043,2666,164,'党');
+2882,2666,164,'党');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40044,2594,164,'面对面');
+2883,2594,164,'面对面');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40045,2759,164,'论坛');
+2884,2759,164,'论坛');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40046,2761,164,'在');
+2885,2761,164,'在');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40047,2762,164,'我校');
+2886,2762,164,'我校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40048,2918,164,'学习贯彻');
+2887,2918,164,'学习贯彻');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40049,2922,164,'党');
+2888,2922,164,'党');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40050,2923,164,'的');
+2889,2923,164,'的');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40051,2924,164,'十九');
+2890,2924,164,'十九');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40052,2926,164,'大');
+2891,2926,164,'大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40053,2927,164,'精神');
+2892,2927,164,'精神');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40054,2929,164,'系列');
+2893,2929,164,'系列');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40055,2931,164,'活动');
+2894,2931,164,'活动');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40056,2916,164,'开展');
+2895,2916,164,'开展');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40057,2940,164,'阅读');
+2896,2940,164,'阅读');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40058,2943,164,'2017');
+2897,2943,164,'2017');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40059,2948,164,'12');
+2898,2948,164,'12');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40060,2951,164,'20');
+2899,2951,164,'20');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40061,2996,164,'党委');
+2900,2996,164,'党委');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40062,2998,164,'宣传部');
+2901,2998,164,'宣传部');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40063,3002,164,'党委');
+2902,3002,164,'党委');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40064,3004,164,'保卫部');
+2903,3004,164,'保卫部');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40065,3007,164,'联合');
+2904,3007,164,'联合');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40066,2942,164,'次');
+2905,2942,164,'次');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40067,2914,164,'小学');
+2906,2914,164,'小学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40068,2912,164,'实验');
+2907,2912,164,'实验');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40069,2867,164,'20');
+2908,2867,164,'20');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40070,2764,164,'举办');
+2909,2764,164,'举办');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40071,2773,164,'阅读');
+2910,2773,164,'阅读');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40072,2775,164,'次');
+2911,2775,164,'次');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40073,2776,164,'2017');
+2912,2776,164,'2017');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40074,2781,164,'12');
+2913,2781,164,'12');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40075,2784,164,'20');
+2914,2784,164,'20');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40076,2829,164,'学校');
+2915,2829,164,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40077,2831,164,'举办');
+2916,2831,164,'举办');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40078,2834,164,'与');
+2917,2834,164,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40079,2835,164,'十九');
+2918,2835,164,'十九');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40080,2837,164,'大');
+2919,2837,164,'大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40081,2838,164,'代表');
+2920,2838,164,'代表');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40082,2840,164,'面对面');
+2921,2840,164,'面对面');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40083,2844,164,'专题');
+2922,2844,164,'专题');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40084,2846,164,'报告会');
+2923,2846,164,'报告会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40085,2856,164,'阅读');
+2924,2856,164,'阅读');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40086,2858,164,'次');
+2925,2858,164,'次');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40087,2859,164,'2017');
+2926,2859,164,'2017');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40088,2864,164,'12');
+2927,2864,164,'12');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40089,2527,164,'阅读');
+2928,2527,164,'阅读');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40090,0,164,'ENGLISH');
+2929,0,164,'ENGLISH');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40091,2558,165,'by');
+2930,2558,165,'by');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40092,2455,165,'ICP');
+2931,2455,165,'ICP');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40093,2458,165,'备');
+2932,2458,165,'备');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40094,2459,165,'05066832');
+2933,2459,165,'05066832');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40095,2467,165,'号');
+2934,2467,165,'号');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40096,2469,165,'1');
+2935,2469,165,'1');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40097,2473,165,'京');
+2936,2473,165,'京');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40098,2474,165,'公网');
+2937,2474,165,'公网');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40099,2476,165,'安');
+2938,2476,165,'安');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40100,2477,165,'备');
+2939,2477,165,'备');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40101,2478,165,'110402430002');
+2940,2478,165,'110402430002');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40102,2490,165,'号');
+2941,2490,165,'号');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40103,2493,165,'电话');
+2942,2493,165,'电话');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40104,2495,165,'查号台');
+2943,2495,165,'查号台');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40105,2499,165,'010');
+2944,2499,165,'010');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40106,2503,165,'58806183');
+2945,2503,165,'58806183');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40107,2454,165,'京');
+2946,2454,165,'京');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40108,2517,165,'热线');
+2947,2517,165,'热线');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40109,2520,165,'010');
+2948,2520,165,'010');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40110,2524,165,'58801111');
+2949,2524,165,'58801111');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40111,2544,165,'Site');
+2950,2544,165,'Site');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40112,2549,165,'designed');
+2951,2549,165,'designed');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40113,2561,165,'MONOKEROS');
+2952,2561,165,'MONOKEROS');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40114,2513,165,'后勤服务');
+2953,2513,165,'后勤服务');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40115,2446,165,'100875');
+2954,2446,165,'100875');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40116,2440,165,'号');
+2955,2440,165,'号');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40117,793,165,'著名');
+2956,793,165,'著名');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40118,795,165,'学者');
+2957,795,165,'学者');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40119,866,165,'历史名人');
+2958,866,165,'历史名人');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40120,913,165,'院系设置');
+2959,913,165,'院系设置');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40121,929,165,'管理机构');
+2960,929,165,'管理机构');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40122,945,165,'人才招聘');
+2961,945,165,'人才招聘');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40123,961,165,'科学研究');
+2962,961,165,'科学研究');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40124,990,165,'招生就业');
+2963,990,165,'招生就业');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40125,1030,165,'本科生');
+2964,1030,165,'本科生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40126,1033,165,'招生');
+2965,1033,165,'招生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40127,1058,165,'研究生');
+2966,1058,165,'研究生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40128,1061,165,'招生');
+2967,1061,165,'招生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40129,1091,165,'博士后');
+2968,1091,165,'博士后');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40130,1117,165,'留学生');
+2969,1117,165,'留学生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40131,1120,165,'招生');
+2970,1120,165,'招生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40132,1145,165,'继续教育');
+2971,1145,165,'继续教育');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40133,1149,165,'与');
+2972,1149,165,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40134,1150,165,'教师培训');
+2973,1150,165,'教师培训');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40135,1177,165,'就业');
+2974,1177,165,'就业');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40136,1179,165,'与');
+2975,1179,165,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40137,1180,165,'创业');
+2976,1180,165,'创业');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40138,1241,165,'合作交流');
+2977,1241,165,'合作交流');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40139,1281,165,'国际交流');
+2978,1281,165,'国际交流');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40140,1285,165,'与');
+2979,1285,165,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40141,1286,165,'合作');
+2980,1286,165,'合作');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40142,770,165,'校长');
+2981,770,165,'校长');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40143,1311,165,'国内');
+2982,1311,165,'国内');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40144,768,165,'历任');
+2983,768,165,'历任');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40145,696,165,'历任');
+2984,696,165,'历任');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40146,8,165,'VERSION');
+2985,8,165,'VERSION');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40147,38,165,'书记');
+2986,38,165,'书记');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40148,40,165,'信箱');
+2987,40,165,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40149,54,165,'校长');
+2988,54,165,'校长');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40150,56,165,'信箱');
+2989,56,165,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40151,70,165,'校领导');
+2990,70,165,'校领导');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40152,73,165,'信箱');
+2991,73,165,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40153,87,165,'接待日');
+2992,87,165,'接待日');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40154,277,165,'导航');
+2993,277,165,'导航');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40155,334,165,'导航');
+2994,334,165,'导航');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40156,391,165,'师大');
+2995,391,165,'师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40157,393,165,'新闻');
+2996,393,165,'新闻');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40158,431,165,'图文报道');
+2997,431,165,'图文报道');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40159,458,165,'网络电视');
+2998,458,165,'网络电视');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40160,485,165,'校报');
+2999,485,165,'校报');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40161,487,165,'在线');
+3000,487,165,'在线');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40162,512,165,'媒体');
+3001,512,165,'媒体');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40163,514,165,'师大');
+3002,514,165,'师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40164,572,165,'学校');
+3003,572,165,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40165,574,165,'概况');
+3004,574,165,'概况');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40166,614,165,'学校简介');
+3005,614,165,'学校简介');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40167,641,165,'校史');
+3006,641,165,'校史');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40168,643,165,'沿革');
+3007,643,165,'沿革');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40169,668,165,'现任');
+3008,668,165,'现任');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40170,670,165,'校领导');
+3009,670,165,'校领导');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40171,698,165,'书记');
+3010,698,165,'书记');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40172,1313,165,'合作');
+3011,1313,165,'合作');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40173,1338,165,'港澳台');
+3012,1338,165,'港澳台');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40174,1341,165,'事务');
+3013,1341,165,'事务');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40175,1980,165,'信箱');
+3014,1980,165,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40176,1994,165,'校长');
+3015,1994,165,'校长');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40177,1996,165,'信箱');
+3016,1996,165,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40178,2010,165,'校领导');
+3017,2010,165,'校领导');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40179,2013,165,'信箱');
+3018,2013,165,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40180,2027,165,'接待日');
+3019,2027,165,'接待日');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40181,2097,165,'图书');
+3020,2097,165,'图书');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40182,2099,165,'档案');
+3021,2099,165,'档案');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40183,2131,165,'当前');
+3022,2131,165,'当前');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40184,2133,165,'位置');
+3023,2133,165,'位置');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40185,2139,165,'首页');
+3024,2139,165,'首页');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40186,2151,165,'图书');
+3025,2151,165,'图书');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40187,2153,165,'档案');
+3026,2153,165,'档案');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40188,2166,165,'图书');
+3027,2166,165,'图书');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40189,2168,165,'档案');
+3028,2168,165,'档案');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40190,2268,165,'图书馆');
+3029,2268,165,'图书馆');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40191,2318,165,'档案馆');
+3030,2318,165,'档案馆');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40192,2413,165,'版权所有');
+3031,2413,165,'版权所有');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40193,2418,165,'北京师范大学');
+3032,2418,165,'北京师范大学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40194,2426,165,'地址');
+3033,2426,165,'地址');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40195,2429,165,'北京市');
+3034,2429,165,'北京市');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40196,2432,165,'新街口');
+3035,2432,165,'新街口');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40197,2435,165,'外');
+3036,2435,165,'外');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40198,2436,165,'大街');
+3037,2436,165,'大街');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40199,2438,165,'19');
+3038,2438,165,'19');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40200,1978,165,'书记');
+3039,1978,165,'书记');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40201,1961,165,'师大');
+3040,1961,165,'师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40202,1959,165,'走进');
+3041,1959,165,'走进');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40203,1945,165,'档案');
+3042,1945,165,'档案');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40204,1366,165,'教育');
+3043,1366,165,'教育');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40205,1368,165,'基金会');
+3044,1368,165,'基金会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40206,1430,165,'图书');
+3045,1430,165,'图书');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40207,1432,165,'档案');
+3046,1432,165,'档案');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40208,1470,165,'图书馆');
+3047,1470,165,'图书馆');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40209,1496,165,'档案馆');
+3048,1496,165,'档案馆');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40210,1558,165,'走进');
+3049,1558,165,'走进');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40211,1560,165,'师大');
+3050,1560,165,'师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40212,1598,165,'校园');
+3051,1598,165,'校园');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40213,1600,165,'地图');
+3052,1600,165,'地图');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40214,1625,165,'校园风光');
+3053,1625,165,'校园风光');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40215,1652,165,'校');
+3054,1652,165,'校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40216,2443,165,'邮编');
+3055,2443,165,'邮编');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40217,1654,165,'历');
+3056,1654,165,'历');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40218,1680,165,'页');
+3057,1680,165,'页');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40219,1815,165,'师大');
+3058,1815,165,'师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40220,1817,165,'新闻');
+3059,1817,165,'新闻');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40221,1831,165,'学校');
+3060,1831,165,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40222,1833,165,'概况');
+3061,1833,165,'概况');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40223,1847,165,'院系设置');
+3062,1847,165,'院系设置');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40224,1863,165,'管理机构');
+3063,1863,165,'管理机构');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40225,1879,165,'人才招聘');
+3064,1879,165,'人才招聘');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40226,1895,165,'科学研究');
+3065,1895,165,'科学研究');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40227,1911,165,'招生就业');
+3066,1911,165,'招生就业');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40228,1927,165,'合作交流');
+3067,1927,165,'合作交流');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40229,1943,165,'图书');
+3068,1943,165,'图书');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40230,1678,165,'黄');
+3069,1678,165,'黄');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40231,0,165,'ENGLISH');
+3070,0,165,'ENGLISH');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40232,2660,166,'by');
+3071,2660,166,'by');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40233,2548,166,'100875');
+3072,2548,166,'100875');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40234,2556,166,'京');
+3073,2556,166,'京');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40235,2557,166,'ICP');
+3074,2557,166,'ICP');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40236,2560,166,'备');
+3075,2560,166,'备');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40237,2561,166,'05066832');
+3076,2561,166,'05066832');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40238,2569,166,'号');
+3077,2569,166,'号');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40239,2571,166,'1');
+3078,2571,166,'1');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40240,2575,166,'京');
+3079,2575,166,'京');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40241,2576,166,'公网');
+3080,2576,166,'公网');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40242,2578,166,'安');
+3081,2578,166,'安');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40243,2579,166,'备');
+3082,2579,166,'备');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40244,2580,166,'110402430002');
+3083,2580,166,'110402430002');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40245,2592,166,'号');
+3084,2592,166,'号');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40246,2595,166,'电话');
+3085,2595,166,'电话');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40247,2597,166,'查号台');
+3086,2597,166,'查号台');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40248,2601,166,'010');
+3087,2601,166,'010');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40249,2545,166,'邮编');
+3088,2545,166,'邮编');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40250,2615,166,'后勤服务');
+3089,2615,166,'后勤服务');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40251,2619,166,'热线');
+3090,2619,166,'热线');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40252,2622,166,'010');
+3091,2622,166,'010');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40253,2626,166,'58801111');
+3092,2626,166,'58801111');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40254,2646,166,'Site');
+3093,2646,166,'Site');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40255,2651,166,'designed');
+3094,2651,166,'designed');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40256,2663,166,'MONOKEROS');
+3095,2663,166,'MONOKEROS');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40257,2605,166,'58806183');
+3096,2605,166,'58806183');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40258,2542,166,'号');
+3097,2542,166,'号');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40259,2538,166,'大街');
+3098,2538,166,'大街');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40260,795,166,'学者');
+3099,795,166,'学者');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40261,866,166,'历史名人');
+3100,866,166,'历史名人');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40262,913,166,'院系设置');
+3101,913,166,'院系设置');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40263,929,166,'管理机构');
+3102,929,166,'管理机构');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40264,945,166,'人才招聘');
+3103,945,166,'人才招聘');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40265,961,166,'科学研究');
+3104,961,166,'科学研究');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40266,990,166,'招生就业');
+3105,990,166,'招生就业');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40267,1030,166,'本科生');
+3106,1030,166,'本科生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40268,1033,166,'招生');
+3107,1033,166,'招生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40269,1058,166,'研究生');
+3108,1058,166,'研究生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40270,1061,166,'招生');
+3109,1061,166,'招生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40271,1091,166,'博士后');
+3110,1091,166,'博士后');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40272,793,166,'著名');
+3111,793,166,'著名');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40273,1117,166,'留学生');
+3112,1117,166,'留学生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40274,1145,166,'继续教育');
+3113,1145,166,'继续教育');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40275,1149,166,'与');
+3114,1149,166,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40276,1150,166,'教师培训');
+3115,1150,166,'教师培训');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40277,1177,166,'就业');
+3116,1177,166,'就业');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40278,1179,166,'与');
+3117,1179,166,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40279,1180,166,'创业');
+3118,1180,166,'创业');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40280,1241,166,'合作交流');
+3119,1241,166,'合作交流');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40281,1281,166,'国际交流');
+3120,1281,166,'国际交流');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40282,1285,166,'与');
+3121,1285,166,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40283,1286,166,'合作');
+3122,1286,166,'合作');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40284,1311,166,'国内');
+3123,1311,166,'国内');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40285,1313,166,'合作');
+3124,1313,166,'合作');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40286,1120,166,'招生');
+3125,1120,166,'招生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40287,1338,166,'港澳台');
+3126,1338,166,'港澳台');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40288,770,166,'校长');
+3127,770,166,'校长');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40289,698,166,'书记');
+3128,698,166,'书记');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40290,8,166,'VERSION');
+3129,8,166,'VERSION');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40291,38,166,'书记');
+3130,38,166,'书记');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40292,40,166,'信箱');
+3131,40,166,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40293,54,166,'校长');
+3132,54,166,'校长');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40294,56,166,'信箱');
+3133,56,166,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40295,70,166,'校领导');
+3134,70,166,'校领导');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40296,73,166,'信箱');
+3135,73,166,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40297,87,166,'接待日');
+3136,87,166,'接待日');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40298,277,166,'导航');
+3137,277,166,'导航');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40299,334,166,'导航');
+3138,334,166,'导航');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40300,391,166,'师大');
+3139,391,166,'师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40301,393,166,'新闻');
+3140,393,166,'新闻');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40302,768,166,'历任');
+3141,768,166,'历任');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40303,431,166,'图文报道');
+3142,431,166,'图文报道');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40304,485,166,'校报');
+3143,485,166,'校报');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40305,487,166,'在线');
+3144,487,166,'在线');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40306,512,166,'媒体');
+3145,512,166,'媒体');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40307,514,166,'师大');
+3146,514,166,'师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40308,572,166,'学校');
+3147,572,166,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40309,574,166,'概况');
+3148,574,166,'概况');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40310,614,166,'学校简介');
+3149,614,166,'学校简介');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40311,641,166,'校史');
+3150,641,166,'校史');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40312,643,166,'沿革');
+3151,643,166,'沿革');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40313,668,166,'现任');
+3152,668,166,'现任');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40314,670,166,'校领导');
+3153,670,166,'校领导');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40315,696,166,'历任');
+3154,696,166,'历任');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40316,458,166,'网络电视');
+3155,458,166,'网络电视');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40317,2540,166,'19');
+3156,2540,166,'19');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40318,1341,166,'事务');
+3157,1341,166,'事务');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40319,1368,166,'基金会');
+3158,1368,166,'基金会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40320,1996,166,'信箱');
+3159,1996,166,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40321,2010,166,'校领导');
+3160,2010,166,'校领导');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40322,2013,166,'信箱');
+3161,2013,166,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40323,2027,166,'接待日');
+3162,2027,166,'接待日');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40324,2097,166,'走进');
+3163,2097,166,'走进');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40325,2099,166,'师大');
+3164,2099,166,'师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40326,2131,166,'当前');
+3165,2131,166,'当前');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40327,2133,166,'位置');
+3166,2133,166,'位置');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40328,2139,166,'首页');
+3167,2139,166,'首页');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40329,2151,166,'走进');
+3168,2151,166,'走进');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40330,2153,166,'师大');
+3169,2153,166,'师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40331,2166,166,'走进');
+3170,2166,166,'走进');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40332,1994,166,'校长');
+3171,1994,166,'校长');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40333,2168,166,'师大');
+3172,2168,166,'师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40334,2270,166,'地图');
+3173,2270,166,'地图');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40335,2319,166,'校园风光');
+3174,2319,166,'校园风光');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40336,2370,166,'校');
+3175,2370,166,'校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40337,2372,166,'历');
+3176,2372,166,'历');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40338,2420,166,'黄');
+3177,2420,166,'黄');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40339,2422,166,'页');
+3178,2422,166,'页');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40340,2515,166,'版权所有');
+3179,2515,166,'版权所有');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40341,2520,166,'北京师范大学');
+3180,2520,166,'北京师范大学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40342,2528,166,'地址');
+3181,2528,166,'地址');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40343,2531,166,'北京市');
+3182,2531,166,'北京市');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40344,2534,166,'新街口');
+3183,2534,166,'新街口');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40345,2537,166,'外');
+3184,2537,166,'外');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40346,2268,166,'校园');
+3185,2268,166,'校园');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40347,1366,166,'教育');
+3186,1366,166,'教育');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40348,1980,166,'信箱');
+3187,1980,166,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40349,1961,166,'师大');
+3188,1961,166,'师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40350,1430,166,'图书');
+3189,1430,166,'图书');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40351,1432,166,'档案');
+3190,1432,166,'档案');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40352,1470,166,'图书馆');
+3191,1470,166,'图书馆');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40353,1496,166,'档案馆');
+3192,1496,166,'档案馆');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40354,1558,166,'走进');
+3193,1558,166,'走进');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40355,1560,166,'师大');
+3194,1560,166,'师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40356,1598,166,'校园');
+3195,1598,166,'校园');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40357,1600,166,'地图');
+3196,1600,166,'地图');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40358,1625,166,'校园风光');
+3197,1625,166,'校园风光');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40359,1652,166,'校');
+3198,1652,166,'校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40360,1654,166,'历');
+3199,1654,166,'历');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40361,1678,166,'黄');
+3200,1678,166,'黄');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40362,1978,166,'书记');
+3201,1978,166,'书记');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40363,1680,166,'页');
+3202,1680,166,'页');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40364,1817,166,'新闻');
+3203,1817,166,'新闻');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40365,1831,166,'学校');
+3204,1831,166,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40366,1833,166,'概况');
+3205,1833,166,'概况');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40367,1847,166,'院系设置');
+3206,1847,166,'院系设置');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40368,1863,166,'管理机构');
+3207,1863,166,'管理机构');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40369,1879,166,'人才招聘');
+3208,1879,166,'人才招聘');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40370,1895,166,'科学研究');
+3209,1895,166,'科学研究');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40371,1911,166,'招生就业');
+3210,1911,166,'招生就业');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40372,1927,166,'合作交流');
+3211,1927,166,'合作交流');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40373,1943,166,'图书');
+3212,1943,166,'图书');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40374,1945,166,'档案');
+3213,1945,166,'档案');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40375,1959,166,'走进');
+3214,1959,166,'走进');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40376,1815,166,'师大');
+3215,1815,166,'师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40377,0,166,'ENGLISH');
+3216,0,166,'ENGLISH');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40378,3412,167,'新');
+3217,3412,167,'新');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40379,3389,167,'链接');
+3218,3389,167,'链接');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40380,3394,167,'教育');
+3219,3394,167,'教育');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40381,3396,167,'基金会');
+3220,3396,167,'基金会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40382,3404,167,'信息网');
+3221,3404,167,'信息网');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40383,3407,167,'络');
+3222,3407,167,'络');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40384,3408,167,'服务');
+3223,3408,167,'服务');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40385,3387,167,'常用');
+3224,3387,167,'常用');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40386,3431,167,'校友总会');
+3225,3431,167,'校友总会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40387,3415,167,'建设');
+3226,3415,167,'建设');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40388,3417,167,'指挥部');
+3227,3417,167,'指挥部');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40389,3440,167,'学风');
+3228,3440,167,'学风');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40390,3442,167,'建设');
+3229,3442,167,'建设');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40391,3446,167,'教师教育');
+3230,3446,167,'教师教育');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40392,3450,167,'机构');
+3231,3450,167,'机构');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40393,3457,167,'教育科');
+3232,3457,167,'教育科');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40394,3350,167,'邮箱');
+3233,3350,167,'邮箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40395,3413,167,'校区');
+3234,3413,167,'校区');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40396,2904,167,'信息网');
+3235,2904,167,'信息网');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40397,3304,167,'信息');
+3236,3304,167,'信息');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40398,3341,167,'邮箱');
+3237,3341,167,'邮箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40399,2907,167,'络');
+3238,2907,167,'络');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40400,2908,167,'中心');
+3239,2908,167,'中心');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40401,2914,167,'2018');
+3240,2914,167,'2018');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40402,2918,167,'年');
+3241,2918,167,'年');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40403,2919,167,'3');
+3242,2919,167,'3');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40404,2920,167,'月');
+3243,2920,167,'月');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40405,2921,167,'21');
+3244,2921,167,'21');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40406,2923,167,'日');
+3245,2923,167,'日');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40407,3348,167,'学生');
+3246,3348,167,'学生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40408,3291,167,'快速');
+3247,3291,167,'快速');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40409,3460,167,'学期');
+3248,3460,167,'学期');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40410,3306,167,'门户');
+3249,3306,167,'门户');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40411,3313,167,'信息');
+3250,3313,167,'信息');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40412,3315,167,'公开');
+3251,3315,167,'公开');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40413,3317,167,'校务');
+3252,3317,167,'校务');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40414,3319,167,'信息');
+3253,3319,167,'信息');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40415,3326,167,'管理系统');
+3254,3326,167,'管理系统');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40416,3339,167,'教师');
+3255,3339,167,'教师');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40417,3293,167,'登录');
+3256,3293,167,'登录');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40418,3462,167,'刊');
+3257,3462,167,'刊');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40419,3647,167,'北京市');
+3258,3647,167,'北京市');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40420,3475,167,'心晴');
+3259,3475,167,'心晴');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40421,3692,167,'公网');
+3260,3692,167,'公网');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40422,3694,167,'安');
+3261,3694,167,'安');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40423,3695,167,'备');
+3262,3695,167,'备');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40424,3696,167,'110402430002');
+3263,3696,167,'110402430002');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40425,3708,167,'号');
+3264,3708,167,'号');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40426,3711,167,'电话');
+3265,3711,167,'电话');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40427,3713,167,'查号台');
+3266,3713,167,'查号台');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40428,3717,167,'010');
+3267,3717,167,'010');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40429,3721,167,'58806183');
+3268,3721,167,'58806183');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40430,3731,167,'后勤服务');
+3269,3731,167,'后勤服务');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40431,3735,167,'热线');
+3270,3735,167,'热线');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40432,3738,167,'010');
+3271,3738,167,'010');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40433,3742,167,'58801111');
+3272,3742,167,'58801111');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40434,3762,167,'Site');
+3273,3762,167,'Site');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40435,3767,167,'designed');
+3274,3767,167,'designed');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40436,3776,167,'by');
+3275,3776,167,'by');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40437,3779,167,'MONOKEROS');
+3276,3779,167,'MONOKEROS');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40438,3691,167,'京');
+3277,3691,167,'京');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40439,3473,167,'京师');
+3278,3473,167,'京师');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40440,3687,167,'1');
+3279,3687,167,'1');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40441,3676,167,'备');
+3280,3676,167,'备');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40442,3495,167,'IPv6');
+3281,3495,167,'IPv6');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40443,3499,167,'教师教育');
+3282,3499,167,'教师教育');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40444,3503,167,'创新');
+3283,3503,167,'创新');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40445,3505,167,'支持');
+3284,3505,167,'支持');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40446,3507,167,'系统');
+3285,3507,167,'系统');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40447,3631,167,'版权所有');
+3286,3631,167,'版权所有');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40448,3636,167,'北京师范大学');
+3287,3636,167,'北京师范大学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40449,3644,167,'地址');
+3288,3644,167,'地址');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40450,3650,167,'新街口');
+3289,3650,167,'新街口');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40451,3653,167,'外');
+3290,3653,167,'外');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40452,3654,167,'大街');
+3291,3654,167,'大街');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40453,3656,167,'19');
+3292,3656,167,'19');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40454,3658,167,'号');
+3293,3658,167,'号');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40455,3661,167,'邮编');
+3294,3661,167,'邮编');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40456,3664,167,'100875');
+3295,3664,167,'100875');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40457,3672,167,'京');
+3296,3672,167,'京');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40458,3673,167,'ICP');
+3297,3673,167,'ICP');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40459,3685,167,'号');
+3298,3685,167,'号');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40460,3677,167,'05066832');
+3299,3677,167,'05066832');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40461,2897,167,'中心');
+3300,2897,167,'中心');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40462,2891,167,'宣传部');
+3301,2891,167,'宣传部');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40463,2234,167,'师生');
+3302,2234,167,'师生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40464,2237,167,'校友');
+3303,2237,167,'校友');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40465,2240,167,'关心');
+3304,2240,167,'关心');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40466,2242,167,'和');
+3305,2242,167,'和');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40467,2243,167,'支持');
+3306,2243,167,'支持');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40468,2245,167,'学校');
+3307,2245,167,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40469,2247,167,'改革');
+3308,2247,167,'改革');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40470,2249,167,'发展');
+3309,2249,167,'发展');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40471,2251,167,'的');
+3310,2251,167,'的');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40472,2232,167,'广大');
+3311,2232,167,'广大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40473,2252,167,'朋友');
+3312,2252,167,'朋友');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40474,2267,167,'学校');
+3313,2267,167,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40475,2269,167,'现行');
+3314,2269,167,'现行');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40476,2271,167,'中文');
+3315,2271,167,'中文');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40477,2273,167,'主页');
+3316,2273,167,'主页');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40478,2275,167,'已');
+3317,2275,167,'已');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40479,2276,167,'陪伴');
+3318,2276,167,'陪伴');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40480,2278,167,'大家');
+3319,2278,167,'大家');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40481,2280,167,'走过');
+3320,2280,167,'走过');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40482,2282,167,'了');
+3321,2282,167,'了');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40483,2254,167,'们');
+3322,2254,167,'们');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40484,2231,167,'次');
+3323,2231,167,'次');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40485,2229,167,'阅读');
+3324,2229,167,'阅读');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40486,2226,167,'20');
+3325,2226,167,'20');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40487,2138,167,'当前');
+3326,2138,167,'当前');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40488,2140,167,'位置');
+3327,2140,167,'位置');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40489,2146,167,'首页');
+3328,2146,167,'首页');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40490,2158,167,'新版');
+3329,2158,167,'新版');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40491,2160,167,'中文');
+3330,2160,167,'中文');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40492,2162,167,'主页');
+3331,2162,167,'主页');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40493,2164,167,'上线');
+3332,2164,167,'上线');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40494,2166,167,'试运行');
+3333,2166,167,'试运行');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40495,2183,167,'关于');
+3334,2183,167,'关于');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40496,2185,167,'学校');
+3335,2185,167,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40497,2187,167,'新版');
+3336,2187,167,'新版');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40498,2189,167,'中文');
+3337,2189,167,'中文');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40499,2191,167,'主页');
+3338,2191,167,'主页');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40500,2193,167,'上线');
+3339,2193,167,'上线');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40501,2195,167,'试运行');
+3340,2195,167,'试运行');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40502,2198,167,'的');
+3341,2198,167,'的');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40503,2199,167,'通知');
+3342,2199,167,'通知');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40504,2213,167,'发布');
+3343,2213,167,'发布');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40505,2215,167,'时间');
+3344,2215,167,'时间');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40506,2218,167,'2018');
+3345,2218,167,'2018');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40507,2223,167,'03');
+3346,2223,167,'03');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40508,2283,167,'五');
+3347,2283,167,'五');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40509,2284,167,'年');
+3348,2284,167,'年');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40510,2285,167,'的');
+3349,2285,167,'的');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40511,2286,167,'时光');
+3350,2286,167,'时光');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40512,2338,167,'升级');
+3351,2338,167,'升级');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40513,2341,167,'以');
+3352,2341,167,'以');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40514,2342,167,'更好');
+3353,2342,167,'更好');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40515,2344,167,'地');
+3354,2344,167,'地');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40516,2345,167,'展现');
+3355,2345,167,'展现');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40517,2347,167,'北京师范大学');
+3356,2347,167,'北京师范大学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40518,2353,167,'的');
+3357,2353,167,'的');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40519,2354,167,'历史');
+3358,2354,167,'历史');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40520,2356,167,'底蕴');
+3359,2356,167,'底蕴');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40521,2358,167,'和');
+3360,2358,167,'和');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40522,2359,167,'时代');
+3361,2359,167,'时代');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40523,2361,167,'风貌');
+3362,2361,167,'风貌');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40524,2364,167,'提高');
+3363,2364,167,'提高');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40525,2366,167,'学校');
+3364,2366,167,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40526,2368,167,'品牌');
+3365,2368,167,'品牌');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40527,2370,167,'形象');
+3366,2370,167,'形象');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40528,2372,167,'的');
+3367,2372,167,'的');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40529,2373,167,'网络');
+3368,2373,167,'网络');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40530,2375,167,'传播');
+3369,2375,167,'传播');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40531,2377,167,'力');
+3370,2377,167,'力');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40532,2390,167,'学校');
+3371,2390,167,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40533,2336,167,'改版');
+3372,2336,167,'改版');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40534,2105,167,'试运行');
+3373,2105,167,'试运行');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40535,2334,167,'进行');
+3374,2334,167,'进行');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40536,2330,167,'中文');
+3375,2330,167,'中文');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40537,2289,167,'成为');
+3376,2289,167,'成为');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40538,2291,167,'展示');
+3377,2291,167,'展示');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40539,2293,167,'学校');
+3378,2293,167,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40540,2295,167,'办学');
+3379,2295,167,'办学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40541,2297,167,'实力');
+3380,2297,167,'实力');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40542,2299,167,'和');
+3381,2299,167,'和');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40543,2300,167,'社会');
+3382,2300,167,'社会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40544,2302,167,'形象');
+3383,2302,167,'形象');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40545,2304,167,'的');
+3384,2304,167,'的');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40546,2305,167,'重要');
+3385,2305,167,'重要');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40547,2307,167,'窗口');
+3386,2307,167,'窗口');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40548,2310,167,'随着');
+3387,2310,167,'随着');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40549,2313,167,'双一');
+3388,2313,167,'双一');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40550,2315,167,'流');
+3389,2315,167,'流');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40551,2317,167,'建设');
+3390,2317,167,'建设');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40552,2319,167,'步伐');
+3391,2319,167,'步伐');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40553,2321,167,'的');
+3392,2321,167,'的');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40554,2322,167,'加快');
+3393,2322,167,'加快');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40555,2325,167,'学校');
+3394,2325,167,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40556,2327,167,'决定');
+3395,2327,167,'决定');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40557,2329,167,'对');
+3396,2329,167,'对');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40558,2332,167,'主页');
+3397,2332,167,'主页');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40559,2392,167,'新版');
+3398,2392,167,'新版');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40560,2103,167,'上线');
+3399,2103,167,'上线');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40561,2099,167,'中文');
+3400,2099,167,'中文');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40562,696,167,'历任');
+3401,696,167,'历任');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40563,698,167,'书记');
+3402,698,167,'书记');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40564,768,167,'历任');
+3403,768,167,'历任');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40565,770,167,'校长');
+3404,770,167,'校长');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40566,793,167,'著名');
+3405,793,167,'著名');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40567,795,167,'学者');
+3406,795,167,'学者');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40568,866,167,'历史名人');
+3407,866,167,'历史名人');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40569,913,167,'院系设置');
+3408,913,167,'院系设置');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40570,929,167,'管理机构');
+3409,929,167,'管理机构');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40571,670,167,'校领导');
+3410,670,167,'校领导');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40572,945,167,'人才招聘');
+3411,945,167,'人才招聘');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40573,990,167,'招生就业');
+3412,990,167,'招生就业');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40574,1030,167,'本科生');
+3413,1030,167,'本科生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40575,1033,167,'招生');
+3414,1033,167,'招生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40576,1058,167,'研究生');
+3415,1058,167,'研究生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40577,1061,167,'招生');
+3416,1061,167,'招生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40578,1091,167,'博士后');
+3417,1091,167,'博士后');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40579,1117,167,'留学生');
+3418,1117,167,'留学生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40580,1120,167,'招生');
+3419,1120,167,'招生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40581,1145,167,'继续教育');
+3420,1145,167,'继续教育');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40582,961,167,'科学研究');
+3421,961,167,'科学研究');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40583,668,167,'现任');
+3422,668,167,'现任');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40584,643,167,'沿革');
+3423,643,167,'沿革');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40585,641,167,'校史');
+3424,641,167,'校史');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40586,8,167,'VERSION');
+3425,8,167,'VERSION');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40587,38,167,'书记');
+3426,38,167,'书记');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40588,40,167,'信箱');
+3427,40,167,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40589,54,167,'校长');
+3428,54,167,'校长');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40590,56,167,'信箱');
+3429,56,167,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40591,70,167,'校领导');
+3430,70,167,'校领导');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40592,73,167,'信箱');
+3431,73,167,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40593,87,167,'接待日');
+3432,87,167,'接待日');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40594,277,167,'导航');
+3433,277,167,'导航');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40595,334,167,'导航');
+3434,334,167,'导航');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40596,391,167,'师大');
+3435,391,167,'师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40597,393,167,'新闻');
+3436,393,167,'新闻');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40598,431,167,'图文报道');
+3437,431,167,'图文报道');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40599,458,167,'网络电视');
+3438,458,167,'网络电视');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40600,485,167,'校报');
+3439,485,167,'校报');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40601,487,167,'在线');
+3440,487,167,'在线');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40602,512,167,'媒体');
+3441,512,167,'媒体');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40603,514,167,'师大');
+3442,514,167,'师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40604,572,167,'学校');
+3443,572,167,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40605,574,167,'概况');
+3444,574,167,'概况');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40606,614,167,'学校简介');
+3445,614,167,'学校简介');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40607,1149,167,'与');
+3446,1149,167,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40608,1150,167,'教师培训');
+3447,1150,167,'教师培训');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40609,1177,167,'就业');
+3448,1177,167,'就业');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40610,1179,167,'与');
+3449,1179,167,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40611,1817,167,'新闻');
+3450,1817,167,'新闻');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40612,1831,167,'学校');
+3451,1831,167,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40613,1833,167,'概况');
+3452,1833,167,'概况');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40614,1847,167,'院系设置');
+3453,1847,167,'院系设置');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40615,1863,167,'管理机构');
+3454,1863,167,'管理机构');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40616,1879,167,'人才招聘');
+3455,1879,167,'人才招聘');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40617,1895,167,'科学研究');
+3456,1895,167,'科学研究');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40618,1911,167,'招生就业');
+3457,1911,167,'招生就业');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40619,1927,167,'合作交流');
+3458,1927,167,'合作交流');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40620,1943,167,'图书');
+3459,1943,167,'图书');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40621,1945,167,'档案');
+3460,1945,167,'档案');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40622,1959,167,'走进');
+3461,1959,167,'走进');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40623,1961,167,'师大');
+3462,1961,167,'师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40624,1978,167,'书记');
+3463,1978,167,'书记');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40625,1980,167,'信箱');
+3464,1980,167,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40626,1994,167,'校长');
+3465,1994,167,'校长');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40627,1996,167,'信箱');
+3466,1996,167,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40628,2010,167,'校领导');
+3467,2010,167,'校领导');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40629,2013,167,'信箱');
+3468,2013,167,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40630,2027,167,'接待日');
+3469,2027,167,'接待日');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40631,2097,167,'新版');
+3470,2097,167,'新版');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40632,1815,167,'师大');
+3471,1815,167,'师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40633,2101,167,'主页');
+3472,2101,167,'主页');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40634,1680,167,'页');
+3473,1680,167,'页');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40635,1654,167,'历');
+3474,1654,167,'历');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40636,1180,167,'创业');
+3475,1180,167,'创业');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40637,1241,167,'合作交流');
+3476,1241,167,'合作交流');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40638,1281,167,'国际交流');
+3477,1281,167,'国际交流');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40639,1285,167,'与');
+3478,1285,167,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40640,1286,167,'合作');
+3479,1286,167,'合作');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40641,1311,167,'国内');
+3480,1311,167,'国内');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40642,1313,167,'合作');
+3481,1313,167,'合作');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40643,1338,167,'港澳台');
+3482,1338,167,'港澳台');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40644,1341,167,'事务');
+3483,1341,167,'事务');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40645,1366,167,'教育');
+3484,1366,167,'教育');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40646,1368,167,'基金会');
+3485,1368,167,'基金会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40647,1430,167,'图书');
+3486,1430,167,'图书');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40648,1432,167,'档案');
+3487,1432,167,'档案');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40649,1470,167,'图书馆');
+3488,1470,167,'图书馆');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40650,1496,167,'档案馆');
+3489,1496,167,'档案馆');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40651,1558,167,'走进');
+3490,1558,167,'走进');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40652,1560,167,'师大');
+3491,1560,167,'师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40653,1598,167,'校园');
+3492,1598,167,'校园');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40654,1600,167,'地图');
+3493,1600,167,'地图');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40655,1625,167,'校园风光');
+3494,1625,167,'校园风光');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40656,1652,167,'校');
+3495,1652,167,'校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40657,1678,167,'黄');
+3496,1678,167,'黄');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40658,2895,167,'新闻');
+3497,2895,167,'新闻');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40659,2394,167,'中文');
+3498,2394,167,'中文');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40660,2398,167,'由');
+3499,2398,167,'由');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40661,2674,167,'故');
+3500,2674,167,'故');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40662,2675,167,'相');
+3501,2675,167,'相');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40663,2676,167,'推');
+3502,2676,167,'推');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40664,2678,167,'日');
+3503,2678,167,'日');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40665,2679,167,'生');
+3504,2679,167,'生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40666,2680,167,'不');
+3505,2680,167,'不');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40667,2681,167,'滞');
+3506,2681,167,'滞');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40668,2683,167,'木铎');
+3507,2683,167,'木铎');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40669,2685,167,'金声');
+3508,2685,167,'金声');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40670,2673,167,'新');
+3509,2673,167,'新');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40671,2688,167,'激越');
+3510,2688,167,'激越');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40672,2693,167,'进入');
+3511,2693,167,'进入');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40673,2695,167,'新时代');
+3512,2695,167,'新时代');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40674,2699,167,'在建');
+3513,2699,167,'在建');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40675,2701,167,'设');
+3514,2701,167,'设');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40676,2702,167,'综合性');
+3515,2702,167,'综合性');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40677,2706,167,'研究型');
+3516,2706,167,'研究型');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40678,2710,167,'教师教育');
+3517,2710,167,'教师教育');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40679,2714,167,'领先');
+3518,2714,167,'领先');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40680,2716,167,'的');
+3519,2716,167,'的');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40681,2690,167,'百年');
+3520,2690,167,'百年');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40682,2659,167,'cn');
+3521,2659,167,'cn');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40683,2658,167,'.');
+3522,2658,167,'.');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40684,2655,167,'edu');
+3523,2655,167,'edu');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40685,2606,167,'中心');
+3524,2606,167,'中心');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40686,2609,167,'统一');
+3525,2609,167,'统一');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40687,2611,167,'运');
+3526,2611,167,'运');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40688,2612,167,'维');
+3527,2612,167,'维');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40689,2614,167,'原');
+3528,2614,167,'原');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40690,2616,167,'北师大');
+3529,2616,167,'北师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40691,2619,167,'快讯');
+3530,2619,167,'快讯');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40692,2622,167,'调整');
+3531,2622,167,'调整');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40693,2624,167,'为');
+3532,2624,167,'为');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40694,2626,167,'头条');
+3533,2626,167,'头条');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40695,2628,167,'关注');
+3534,2628,167,'关注');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40696,2631,167,'和');
+3535,2631,167,'和');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40697,2633,167,'综合');
+3536,2633,167,'综合');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40698,2635,167,'新闻');
+3537,2635,167,'新闻');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40699,2639,167,'投稿');
+3538,2639,167,'投稿');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40700,2641,167,'邮箱');
+3539,2641,167,'邮箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40701,2643,167,'调整');
+3540,2643,167,'调整');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40702,2645,167,'为');
+3541,2645,167,'为');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40703,2646,167,'xwzx');
+3542,2646,167,'xwzx');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40704,2651,167,'bnu');
+3543,2651,167,'bnu');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40705,2654,167,'.');
+3544,2654,167,'.');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40706,2717,167,'中国');
+3545,2717,167,'中国');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40707,2719,167,'特色');
+3546,2719,167,'特色');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40708,2721,167,'世界');
+3547,2721,167,'世界');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40709,2723,167,'一流');
+3548,2723,167,'一流');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40710,2802,167,'建议');
+3549,2802,167,'建议');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40711,2804,167,'反馈');
+3550,2804,167,'反馈');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40712,2806,167,'及');
+3551,2806,167,'及');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40713,2807,167,'投稿');
+3552,2807,167,'投稿');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40714,2809,167,'邮箱');
+3553,2809,167,'邮箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40715,2812,167,'xwzx');
+3554,2812,167,'xwzx');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40716,2817,167,'bnu');
+3555,2817,167,'bnu');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40717,2820,167,'.');
+3556,2820,167,'.');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40718,2821,167,'edu');
+3557,2821,167,'edu');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40719,2824,167,'.');
+3558,2824,167,'.');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40720,2825,167,'cn');
+3559,2825,167,'cn');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40721,2839,167,'联系电话');
+3560,2839,167,'联系电话');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40722,2844,167,'58807173');
+3561,2844,167,'58807173');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40723,2853,167,'58805293');
+3562,2853,167,'58805293');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40724,2862,167,'58808001');
+3563,2862,167,'58808001');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40725,2874,167,'党委办');
+3564,2874,167,'党委办');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40726,2877,167,'公');
+3565,2877,167,'公');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40727,2878,167,'室');
+3566,2878,167,'室');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40728,2880,167,'校长');
+3567,2880,167,'校长');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40729,2882,167,'办公室');
+3568,2882,167,'办公室');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40730,2889,167,'党委');
+3569,2889,167,'党委');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40731,2800,167,'意见');
+3570,2800,167,'意见');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40732,2604,167,'新闻');
+3571,2604,167,'新闻');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40733,2787,167,'cn');
+3572,2787,167,'cn');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40734,2783,167,'edu');
+3573,2783,167,'edu');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40735,2725,167,'大学');
+3574,2725,167,'大学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40736,2727,167,'的');
+3575,2727,167,'的');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40737,2728,167,'历史');
+3576,2728,167,'历史');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40738,2730,167,'征程');
+3577,2730,167,'征程');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40739,2732,167,'中');
+3578,2732,167,'中');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40740,2734,167,'学校');
+3579,2734,167,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40741,2736,167,'主页');
+3580,2736,167,'主页');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40742,2738,167,'将');
+3581,2738,167,'将');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40743,2739,167,'与');
+3582,2739,167,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40744,2740,167,'你');
+3583,2740,167,'你');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40745,2741,167,'相伴');
+3584,2741,167,'相伴');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40746,2744,167,'一路');
+3585,2744,167,'一路');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40747,2746,167,'同行');
+3586,2746,167,'同行');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40748,2758,167,'主页');
+3587,2758,167,'主页');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40749,2760,167,'试运行');
+3588,2760,167,'试运行');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40750,2763,167,'地址');
+3589,2763,167,'地址');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40751,2766,167,'http');
+3590,2766,167,'http');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40752,2773,167,'zhuye');
+3591,2773,167,'zhuye');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40753,2778,167,'.');
+3592,2778,167,'.');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40754,2779,167,'bnu');
+3593,2779,167,'bnu');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40755,2782,167,'.');
+3594,2782,167,'.');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40756,2786,167,'.');
+3595,2786,167,'.');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40757,2396,167,'主页');
+3596,2396,167,'主页');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40758,2600,167,'宣传部');
+3597,2600,167,'宣传部');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40759,2597,167,'由');
+3598,2597,167,'由');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40760,2453,167,'等');
+3599,2453,167,'等');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40761,2454,167,'设备');
+3600,2454,167,'设备');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40762,2457,167,'首页');
+3601,2457,167,'首页');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40763,2459,167,'包括');
+3602,2459,167,'包括');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40764,2461,167,'头');
+3603,2461,167,'头');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40765,2462,167,'图');
+3604,2462,167,'图');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40766,2464,167,'头条');
+3605,2464,167,'头条');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40767,2466,167,'关注');
+3606,2466,167,'关注');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40768,2469,167,'综合');
+3607,2469,167,'综合');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40769,2451,167,'手机');
+3608,2451,167,'手机');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40770,2471,167,'新闻');
+3609,2471,167,'新闻');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40771,2476,167,'动态');
+3610,2476,167,'动态');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40772,2479,167,'北');
+3611,2479,167,'北');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40773,2480,167,'师');
+3612,2480,167,'师');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40774,2481,167,'故事');
+3613,2481,167,'故事');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40775,2484,167,'通知公告');
+3614,2484,167,'通知公告');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40776,2488,167,'等');
+3615,2488,167,'等');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40777,2489,167,'栏目');
+3616,2489,167,'栏目');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40778,2492,167,'经过');
+3617,2492,167,'经过');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40779,2494,167,'前端');
+3618,2494,167,'前端');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40780,2474,167,'学术');
+3619,2474,167,'学术');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40781,2448,167,'平板');
+3620,2448,167,'平板');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40782,2445,167,'电脑');
+3621,2445,167,'电脑');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40783,2443,167,'适应');
+3622,2443,167,'适应');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40784,2399,167,'党委');
+3623,2399,167,'党委');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40785,2401,167,'宣传部');
+3624,2401,167,'宣传部');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40786,2405,167,'信息网');
+3625,2405,167,'信息网');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40787,2408,167,'络');
+3626,2408,167,'络');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40788,2409,167,'中心');
+3627,2409,167,'中心');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40789,2411,167,'等');
+3628,2411,167,'等');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40790,2412,167,'联合');
+3629,2412,167,'联合');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40791,2414,167,'开发');
+3630,2414,167,'开发');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40792,2417,167,'沿用');
+3631,2417,167,'沿用');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40793,2419,167,'师大');
+3632,2419,167,'师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40794,2421,167,'蓝');
+3633,2421,167,'蓝');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40795,2422,167,'为主');
+3634,2422,167,'为主');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40796,2424,167,'色调');
+3635,2424,167,'色调');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40797,2427,167,'采用');
+3636,2427,167,'采用');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40798,2429,167,'扁平化');
+3637,2429,167,'扁平化');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40799,2432,167,'设计');
+3638,2432,167,'设计');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40800,2434,167,'和');
+3639,2434,167,'和');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40801,2435,167,'响应');
+3640,2435,167,'响应');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40802,2437,167,'式');
+3641,2437,167,'式');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40803,2438,167,'布局');
+3642,2438,167,'布局');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40804,2441,167,'自动');
+3643,2441,167,'自动');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40805,2496,167,'设计开发');
+3644,2496,167,'设计开发');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40806,2501,167,'后');
+3645,2501,167,'后');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40807,2502,167,'端');
+3646,2502,167,'端');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40808,2503,167,'融合');
+3647,2503,167,'融合');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40809,2557,167,'一');
+3648,2557,167,'一');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40810,2558,167,'周');
+3649,2558,167,'周');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40811,2560,167,'3');
+3650,2560,167,'3');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40812,2561,167,'月');
+3651,2561,167,'月');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40813,2562,167,'21');
+3652,2562,167,'21');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40814,2564,167,'日');
+3653,2564,167,'日');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40815,2566,167,'27');
+3654,2566,167,'27');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40816,2568,167,'日');
+3655,2568,167,'日');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40817,2571,167,'其间');
+3656,2571,167,'其间');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40818,2573,167,'新旧');
+3657,2573,167,'新旧');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40819,2575,167,'主页');
+3658,2575,167,'主页');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40820,2577,167,'同步');
+3659,2577,167,'同步');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40821,2579,167,'运行');
+3660,2579,167,'运行');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40822,2582,167,'新');
+3661,2582,167,'新');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40823,2583,167,'主页');
+3662,2583,167,'主页');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40824,2585,167,'正式');
+3663,2585,167,'正式');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40825,2587,167,'上线');
+3664,2587,167,'上线');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40826,2589,167,'后');
+3665,2589,167,'后');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40827,2591,167,'相关');
+3666,2591,167,'相关');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40828,2593,167,'新闻');
+3667,2593,167,'新闻');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40829,2595,167,'栏目');
+3668,2595,167,'栏目');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40830,2555,167,'为期');
+3669,2555,167,'为期');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40831,2598,167,'党委');
+3670,2598,167,'党委');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40832,2553,167,'计划');
+3671,2553,167,'计划');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40833,2547,167,'建议');
+3672,2547,167,'建议');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40834,2505,167,'调试');
+3673,2505,167,'调试');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40835,2507,167,'等');
+3674,2507,167,'等');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40836,2508,167,'工作');
+3675,2508,167,'工作');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40837,2511,167,'新版');
+3676,2511,167,'新版');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40838,2513,167,'主页');
+3677,2513,167,'主页');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40839,2515,167,'已');
+3678,2515,167,'已');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40840,2516,167,'基本');
+3679,2516,167,'基本');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40841,2518,167,'满足');
+3680,2518,167,'满足');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40842,2520,167,'使用');
+3681,2520,167,'使用');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40843,2522,167,'需求');
+3682,2522,167,'需求');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40844,2525,167,'现');
+3683,2525,167,'现');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40845,2526,167,'上线');
+3684,2526,167,'上线');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40846,2528,167,'试运行');
+3685,2528,167,'试运行');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40847,2532,167,'欢迎');
+3686,2532,167,'欢迎');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40848,2534,167,'广大');
+3687,2534,167,'广大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40849,2536,167,'师生');
+3688,2536,167,'师生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40850,2538,167,'校友');
+3689,2538,167,'校友');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40851,2540,167,'提出');
+3690,2540,167,'提出');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40852,2542,167,'宝贵');
+3691,2542,167,'宝贵');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40853,2544,167,'意见');
+3692,2544,167,'意见');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40854,2546,167,'和');
+3693,2546,167,'和');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40855,2550,167,'试运行');
+3694,2550,167,'试运行');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40856,0,167,'ENGLISH');
+3695,0,167,'ENGLISH');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40857,2667,168,'by');
+3696,2667,168,'by');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40858,2555,168,'100875');
+3697,2555,168,'100875');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40859,2563,168,'京');
+3698,2563,168,'京');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40860,2564,168,'ICP');
+3699,2564,168,'ICP');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40861,2567,168,'备');
+3700,2567,168,'备');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40862,2568,168,'05066832');
+3701,2568,168,'05066832');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40863,2576,168,'号');
+3702,2576,168,'号');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40864,2578,168,'1');
+3703,2578,168,'1');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40865,2582,168,'京');
+3704,2582,168,'京');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40866,2583,168,'公网');
+3705,2583,168,'公网');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40867,2585,168,'安');
+3706,2585,168,'安');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40868,2586,168,'备');
+3707,2586,168,'备');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40869,2587,168,'110402430002');
+3708,2587,168,'110402430002');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40870,2599,168,'号');
+3709,2599,168,'号');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40871,2602,168,'电话');
+3710,2602,168,'电话');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40872,2604,168,'查号台');
+3711,2604,168,'查号台');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40873,2608,168,'010');
+3712,2608,168,'010');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40874,2552,168,'邮编');
+3713,2552,168,'邮编');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40875,2622,168,'后勤服务');
+3714,2622,168,'后勤服务');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40876,2626,168,'热线');
+3715,2626,168,'热线');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40877,2629,168,'010');
+3716,2629,168,'010');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40878,2633,168,'58801111');
+3717,2633,168,'58801111');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40879,2653,168,'Site');
+3718,2653,168,'Site');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40880,2658,168,'designed');
+3719,2658,168,'designed');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40881,2670,168,'MONOKEROS');
+3720,2670,168,'MONOKEROS');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40882,2612,168,'58806183');
+3721,2612,168,'58806183');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40883,2549,168,'号');
+3722,2549,168,'号');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40884,2545,168,'大街');
+3723,2545,168,'大街');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40885,795,168,'学者');
+3724,795,168,'学者');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40886,866,168,'历史名人');
+3725,866,168,'历史名人');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40887,913,168,'院系设置');
+3726,913,168,'院系设置');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40888,929,168,'管理机构');
+3727,929,168,'管理机构');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40889,945,168,'人才招聘');
+3728,945,168,'人才招聘');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40890,961,168,'科学研究');
+3729,961,168,'科学研究');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40891,990,168,'招生就业');
+3730,990,168,'招生就业');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40892,1030,168,'本科生');
+3731,1030,168,'本科生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40893,1033,168,'招生');
+3732,1033,168,'招生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40894,1058,168,'研究生');
+3733,1058,168,'研究生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40895,1061,168,'招生');
+3734,1061,168,'招生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40896,1091,168,'博士后');
+3735,1091,168,'博士后');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40897,1117,168,'留学生');
+3736,1117,168,'留学生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40898,1120,168,'招生');
+3737,1120,168,'招生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40899,1145,168,'继续教育');
+3738,1145,168,'继续教育');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40900,1149,168,'与');
+3739,1149,168,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40901,1150,168,'教师培训');
+3740,1150,168,'教师培训');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40902,1177,168,'就业');
+3741,1177,168,'就业');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40903,1179,168,'与');
+3742,1179,168,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40904,1180,168,'创业');
+3743,1180,168,'创业');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40905,1241,168,'合作交流');
+3744,1241,168,'合作交流');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40906,1281,168,'国际交流');
+3745,1281,168,'国际交流');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40907,1285,168,'与');
+3746,1285,168,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40908,1286,168,'合作');
+3747,1286,168,'合作');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40909,1311,168,'国内');
+3748,1311,168,'国内');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40910,793,168,'著名');
+3749,793,168,'著名');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40911,770,168,'校长');
+3750,770,168,'校长');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40912,768,168,'历任');
+3751,768,168,'历任');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40913,698,168,'书记');
+3752,698,168,'书记');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40914,8,168,'VERSION');
+3753,8,168,'VERSION');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40915,38,168,'书记');
+3754,38,168,'书记');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40916,40,168,'信箱');
+3755,40,168,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40917,54,168,'校长');
+3756,54,168,'校长');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40918,56,168,'信箱');
+3757,56,168,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40919,70,168,'校领导');
+3758,70,168,'校领导');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40920,73,168,'信箱');
+3759,73,168,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40921,87,168,'接待日');
+3760,87,168,'接待日');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40922,277,168,'导航');
+3761,277,168,'导航');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40923,334,168,'导航');
+3762,334,168,'导航');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40924,391,168,'师大');
+3763,391,168,'师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40925,393,168,'新闻');
+3764,393,168,'新闻');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40926,1313,168,'合作');
+3765,1313,168,'合作');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40927,431,168,'图文报道');
+3766,431,168,'图文报道');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40928,485,168,'校报');
+3767,485,168,'校报');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40929,487,168,'在线');
+3768,487,168,'在线');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40930,512,168,'媒体');
+3769,512,168,'媒体');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40931,514,168,'师大');
+3770,514,168,'师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40932,572,168,'学校');
+3771,572,168,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40933,574,168,'概况');
+3772,574,168,'概况');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40934,614,168,'学校简介');
+3773,614,168,'学校简介');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40935,641,168,'校史');
+3774,641,168,'校史');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40936,643,168,'沿革');
+3775,643,168,'沿革');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40937,668,168,'现任');
+3776,668,168,'现任');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40938,670,168,'校领导');
+3777,670,168,'校领导');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40939,696,168,'历任');
+3778,696,168,'历任');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40940,458,168,'网络电视');
+3779,458,168,'网络电视');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40941,1338,168,'港澳台');
+3780,1338,168,'港澳台');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40942,1341,168,'事务');
+3781,1341,168,'事务');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40943,1366,168,'教育');
+3782,1366,168,'教育');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40944,1994,168,'校长');
+3783,1994,168,'校长');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40945,1996,168,'信箱');
+3784,1996,168,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40946,2010,168,'校领导');
+3785,2010,168,'校领导');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40947,2013,168,'信箱');
+3786,2013,168,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40948,2027,168,'接待日');
+3787,2027,168,'接待日');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40949,2097,168,'合作交流');
+3788,2097,168,'合作交流');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40950,2131,168,'当前');
+3789,2131,168,'当前');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40951,2133,168,'位置');
+3790,2133,168,'位置');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40952,2139,168,'首页');
+3791,2139,168,'首页');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40953,2151,168,'合作交流');
+3792,2151,168,'合作交流');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40954,2166,168,'合作交流');
+3793,2166,168,'合作交流');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40955,2268,168,'国际交流');
+3794,2268,168,'国际交流');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40956,1980,168,'信箱');
+3795,1980,168,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40957,2272,168,'与');
+3796,2272,168,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40958,2322,168,'国内');
+3797,2322,168,'国内');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40959,2324,168,'合作');
+3798,2324,168,'合作');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40960,2373,168,'港澳台');
+3799,2373,168,'港澳台');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40961,2376,168,'事务');
+3800,2376,168,'事务');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40962,2425,168,'教育');
+3801,2425,168,'教育');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40963,2427,168,'基金会');
+3802,2427,168,'基金会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40964,2522,168,'版权所有');
+3803,2522,168,'版权所有');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40965,2527,168,'北京师范大学');
+3804,2527,168,'北京师范大学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40966,2535,168,'地址');
+3805,2535,168,'地址');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40967,2538,168,'北京市');
+3806,2538,168,'北京市');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40968,2541,168,'新街口');
+3807,2541,168,'新街口');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40969,2544,168,'外');
+3808,2544,168,'外');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40970,2273,168,'合作');
+3809,2273,168,'合作');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40971,2547,168,'19');
+3810,2547,168,'19');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40972,1978,168,'书记');
+3811,1978,168,'书记');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40973,1959,168,'走进');
+3812,1959,168,'走进');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40974,1368,168,'基金会');
+3813,1368,168,'基金会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40975,1430,168,'图书');
+3814,1430,168,'图书');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40976,1432,168,'档案');
+3815,1432,168,'档案');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40977,1470,168,'图书馆');
+3816,1470,168,'图书馆');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40978,1496,168,'档案馆');
+3817,1496,168,'档案馆');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40979,1558,168,'走进');
+3818,1558,168,'走进');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40980,1560,168,'师大');
+3819,1560,168,'师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40981,1598,168,'校园');
+3820,1598,168,'校园');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40982,1600,168,'地图');
+3821,1600,168,'地图');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40983,1625,168,'校园风光');
+3822,1625,168,'校园风光');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40984,1652,168,'校');
+3823,1652,168,'校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40985,1654,168,'历');
+3824,1654,168,'历');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40986,1961,168,'师大');
+3825,1961,168,'师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40987,1678,168,'黄');
+3826,1678,168,'黄');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40988,1815,168,'师大');
+3827,1815,168,'师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40989,1817,168,'新闻');
+3828,1817,168,'新闻');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40990,1831,168,'学校');
+3829,1831,168,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40991,1833,168,'概况');
+3830,1833,168,'概况');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40992,1847,168,'院系设置');
+3831,1847,168,'院系设置');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40993,1863,168,'管理机构');
+3832,1863,168,'管理机构');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40994,1879,168,'人才招聘');
+3833,1879,168,'人才招聘');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40995,1895,168,'科学研究');
+3834,1895,168,'科学研究');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40996,1911,168,'招生就业');
+3835,1911,168,'招生就业');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40997,1927,168,'合作交流');
+3836,1927,168,'合作交流');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40998,1943,168,'图书');
+3837,1943,168,'图书');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-40999,1945,168,'档案');
+3838,1945,168,'档案');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41000,1680,168,'页');
+3839,1680,168,'页');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41001,0,168,'ENGLISH');
+3840,0,168,'ENGLISH');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41002,5937,169,'4');
+3841,5937,169,'4');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41003,5933,169,'实验室');
+3842,5933,169,'实验室');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41004,5931,169,'重点');
+3843,5931,169,'重点');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41005,5928,169,'北京市');
+3844,5928,169,'北京市');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41006,5920,169,'研究中心');
+3845,5920,169,'研究中心');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41007,5925,169,'12');
+3846,5925,169,'12');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41008,5918,169,'工程');
+3847,5918,169,'工程');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41009,5915,169,'教育部');
+3848,5915,169,'教育部');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41010,5914,169,'个');
+3849,5914,169,'个');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41011,5913,169,'5');
+3850,5913,169,'5');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41012,5909,169,'实验室');
+3851,5909,169,'实验室');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41013,5927,169,'个');
+3852,5927,169,'个');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41014,5938,169,'个');
+3853,5938,169,'个');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41015,5947,169,'1');
+3854,5947,169,'1');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41016,5942,169,'工程中心');
+3855,5942,169,'工程中心');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41017,5948,169,'个');
+3856,5948,169,'个');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41018,5949,169,'北京');
+3857,5949,169,'北京');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41019,5951,169,'高等学校');
+3858,5951,169,'高等学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41020,5958,169,'创新');
+3859,5958,169,'创新');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41021,5960,169,'中心');
+3860,5960,169,'中心');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41022,5963,169,'此外');
+3861,5963,169,'此外');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41023,5966,169,'学校');
+3862,5966,169,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41024,5968,169,'还');
+3863,5968,169,'还');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41025,5969,169,'建有');
+3864,5969,169,'建有');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41026,5971,169,'校级');
+3865,5971,169,'校级');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41027,5973,169,'重点');
+3866,5973,169,'重点');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41028,5907,169,'联合');
+3867,5907,169,'联合');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41029,5939,169,'北京市');
+3868,5939,169,'北京市');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41030,5955,169,'高精尖');
+3869,5955,169,'高精尖');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41031,5873,169,'个');
+3870,5873,169,'个');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41032,5899,169,'教育部');
+3871,5899,169,'教育部');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41033,5836,169,'国家级');
+3872,5836,169,'国家级');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41034,5840,169,'部');
+3873,5840,169,'部');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41035,5841,169,'市级');
+3874,5841,169,'市级');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41036,5843,169,'重点');
+3875,5843,169,'重点');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41037,5845,169,'实验室');
+3876,5845,169,'实验室');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41038,5849,169,'工程中心');
+3877,5849,169,'工程中心');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41039,5853,169,'等');
+3878,5853,169,'等');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41040,5854,169,'42');
+3879,5854,169,'42');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41041,5856,169,'个');
+3880,5856,169,'个');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41042,5858,169,'其中包括');
+3881,5858,169,'其中包括');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41043,5862,169,'4');
+3882,5862,169,'4');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41044,5863,169,'个');
+3883,5863,169,'个');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41045,5864,169,'国家');
+3884,5864,169,'国家');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41046,5866,169,'重点');
+3885,5866,169,'重点');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41047,5868,169,'实验室');
+3886,5868,169,'实验室');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41048,5872,169,'1');
+3887,5872,169,'1');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41049,5975,169,'实验室');
+3888,5975,169,'实验室');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41050,5874,169,'国家');
+3889,5874,169,'国家');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41051,5876,169,'工程');
+3890,5876,169,'工程');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41052,5878,169,'实验室');
+3891,5878,169,'实验室');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41053,5882,169,'7');
+3892,5882,169,'7');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41054,5883,169,'个');
+3893,5883,169,'个');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41055,5884,169,'教育部');
+3894,5884,169,'教育部');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41056,5887,169,'重点');
+3895,5887,169,'重点');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41057,5889,169,'实验室');
+3896,5889,169,'实验室');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41058,5893,169,'1');
+3897,5893,169,'1');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41059,5894,169,'个');
+3898,5894,169,'个');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41060,5895,169,'移动');
+3899,5895,169,'移动');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41061,5897,169,'学习');
+3900,5897,169,'学习');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41062,5903,169,'中国移动');
+3901,5903,169,'中国移动');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41063,5978,169,'70');
+3902,5978,169,'70');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41064,6206,169,'监测');
+3903,6206,169,'监测');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41065,6042,169,'点击');
+3904,6042,169,'点击');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41066,6506,169,'号');
+3905,6506,169,'号');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41067,6509,169,'邮编');
+3906,6509,169,'邮编');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41068,6512,169,'100875');
+3907,6512,169,'100875');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41069,6520,169,'京');
+3908,6520,169,'京');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41070,6521,169,'ICP');
+3909,6521,169,'ICP');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41071,6524,169,'备');
+3910,6524,169,'备');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41072,6525,169,'05066832');
+3911,6525,169,'05066832');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41073,6533,169,'号');
+3912,6533,169,'号');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41074,6535,169,'1');
+3913,6535,169,'1');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41075,6539,169,'京');
+3914,6539,169,'京');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41076,6540,169,'公网');
+3915,6540,169,'公网');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41077,6542,169,'安');
+3916,6542,169,'安');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41078,6543,169,'备');
+3917,6543,169,'备');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41079,6504,169,'19');
+3918,6504,169,'19');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41080,6544,169,'110402430002');
+3919,6544,169,'110402430002');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41081,6559,169,'电话');
+3920,6559,169,'电话');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41082,6561,169,'查号台');
+3921,6561,169,'查号台');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41083,6565,169,'010');
+3922,6565,169,'010');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41084,6569,169,'58806183');
+3923,6569,169,'58806183');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41085,6579,169,'后勤服务');
+3924,6579,169,'后勤服务');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41086,6583,169,'热线');
+3925,6583,169,'热线');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41087,6586,169,'010');
+3926,6586,169,'010');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41088,6590,169,'58801111');
+3927,6590,169,'58801111');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41089,6610,169,'Site');
+3928,6610,169,'Site');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41090,6615,169,'designed');
+3929,6615,169,'designed');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41091,6624,169,'by');
+3930,6624,169,'by');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41092,6627,169,'MONOKEROS');
+3931,6627,169,'MONOKEROS');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41093,5834,169,'建成');
+3932,5834,169,'建成');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41094,6556,169,'号');
+3933,6556,169,'号');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41095,6502,169,'大街');
+3934,6502,169,'大街');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41096,6498,169,'新街口');
+3935,6498,169,'新街口');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41097,6495,169,'北京市');
+3936,6495,169,'北京市');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41098,6044,169,'进入');
+3937,6044,169,'进入');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41099,6047,169,'重点');
+3938,6047,169,'重点');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41100,6049,169,'实验室');
+3939,6049,169,'实验室');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41101,6053,169,'工程中心');
+3940,6053,169,'工程中心');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41102,6057,169,'等');
+3941,6057,169,'等');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41103,6059,169,'列表');
+3942,6059,169,'列表');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41104,6121,169,'2011');
+3943,6121,169,'2011');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41105,6125,169,'国家');
+3944,6125,169,'国家');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41106,6127,169,'协同');
+3945,6127,169,'协同');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41107,6129,169,'创新');
+3946,6129,169,'创新');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41108,6131,169,'中心');
+3947,6131,169,'中心');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41109,6198,169,'中国');
+3948,6198,169,'中国');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41110,6200,169,'基础教育');
+3949,6200,169,'基础教育');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41111,6204,169,'质量');
+3950,6204,169,'质量');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41112,6208,169,'协同');
+3951,6208,169,'协同');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41113,6210,169,'创新');
+3952,6210,169,'创新');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41114,6212,169,'中心');
+3953,6212,169,'中心');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41115,6273,169,'北京市');
+3954,6273,169,'北京市');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41116,6276,169,'高精尖');
+3955,6276,169,'高精尖');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41117,6279,169,'创新');
+3956,6279,169,'创新');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41118,6281,169,'中心');
+3957,6281,169,'中心');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41119,6348,169,'未来');
+3958,6348,169,'未来');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41120,6350,169,'教育');
+3959,6350,169,'教育');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41121,6352,169,'高精尖');
+3960,6352,169,'高精尖');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41122,6355,169,'创新');
+3961,6355,169,'创新');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41123,6357,169,'中心');
+3962,6357,169,'中心');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41124,6479,169,'版权所有');
+3963,6479,169,'版权所有');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41125,6484,169,'北京师范大学');
+3964,6484,169,'北京师范大学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41126,6492,169,'地址');
+3965,6492,169,'地址');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41127,5980,169,'个');
+3966,5980,169,'个');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41128,6501,169,'外');
+3967,6501,169,'外');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41129,5833,169,'已');
+3968,5833,169,'已');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41130,5798,169,'等');
+3969,5798,169,'等');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41131,2255,169,'6');
+3970,2255,169,'6');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41132,2256,169,'所');
+3971,2256,169,'所');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41133,2257,169,'高校');
+3972,2257,169,'高校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41134,2259,169,'之一');
+3973,2259,169,'之一');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41135,2262,169,'现有');
+3974,2262,169,'现有');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41136,2264,169,'本科');
+3975,2264,169,'本科');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41137,2266,169,'专业');
+3976,2266,169,'专业');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41138,2268,169,'64');
+3977,2268,169,'64');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41139,2270,169,'个');
+3978,2270,169,'个');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41140,2254,169,'的');
+3979,2254,169,'的');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41141,2272,169,'硕士学位');
+3980,2272,169,'硕士学位');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41142,2278,169,'二级');
+3981,2278,169,'二级');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41143,2280,169,'学科点');
+3982,2280,169,'学科点');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41144,2283,169,'146');
+3983,2283,169,'146');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41145,2286,169,'个');
+3984,2286,169,'个');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41146,2288,169,'博士');
+3985,2288,169,'博士');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41147,2290,169,'学位');
+3986,2290,169,'学位');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41148,2292,169,'授权');
+3987,2292,169,'授权');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41149,2294,169,'二级');
+3988,2294,169,'二级');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41150,2296,169,'学科点');
+3989,2296,169,'学科点');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41151,2276,169,'授权');
+3990,2276,169,'授权');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41152,2299,169,'109');
+3991,2299,169,'109');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41153,2251,169,'审批权');
+3992,2251,169,'审批权');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41154,2247,169,'本科');
+3993,2247,169,'本科');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41155,2140,169,'首页');
+3994,2140,169,'首页');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41156,2152,169,'科学研究');
+3995,2152,169,'科学研究');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41157,2173,169,'重点学科');
+3996,2173,169,'重点学科');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41158,2204,169,'北京师范大学');
+3997,2204,169,'北京师范大学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41159,2210,169,'学科');
+3998,2210,169,'学科');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41160,2212,169,'综合');
+3999,2212,169,'综合');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41161,2214,169,'实力');
+4000,2214,169,'实力');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41162,2216,169,'位居');
+4001,2216,169,'位居');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41163,2218,169,'全国');
+4002,2218,169,'全国');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41164,2249,169,'专业');
+4003,2249,169,'专业');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41165,2220,169,'高校');
+4004,2220,169,'高校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41166,2225,169,'2002');
+4005,2225,169,'2002');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41167,2229,169,'年');
+4006,2229,169,'年');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41168,2231,169,'北京师范大学');
+4007,2231,169,'北京师范大学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41169,2237,169,'成为');
+4008,2237,169,'成为');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41170,2239,169,'首');
+4009,2239,169,'首');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41171,2240,169,'批');
+4010,2240,169,'批');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41172,2241,169,'拥有');
+4011,2241,169,'拥有');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41173,2243,169,'自主');
+4012,2243,169,'自主');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41174,2245,169,'设置');
+4013,2245,169,'设置');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41175,2222,169,'前列');
+4014,2222,169,'前列');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41176,2134,169,'位置');
+4015,2134,169,'位置');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41177,2302,169,'个');
+4016,2302,169,'个');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41178,2307,169,'流动站');
+4017,2307,169,'流动站');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41179,2357,169,'批');
+4018,2357,169,'批');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41180,2358,169,'国家');
+4019,2358,169,'国家');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41181,2360,169,'重点学科');
+4020,2360,169,'重点学科');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41182,2365,169,'2');
+4021,2365,169,'2');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41183,2366,169,'个');
+4022,2366,169,'个');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41184,2367,169,'二级');
+4023,2367,169,'二级');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41185,2369,169,'学科');
+4024,2369,169,'学科');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41186,2371,169,'获');
+4025,2371,169,'获');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41187,2372,169,'批');
+4026,2372,169,'批');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41188,2356,169,'获');
+4027,2356,169,'获');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41189,2373,169,'国家');
+4028,2373,169,'国家');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41190,2378,169,'培育');
+4029,2378,169,'培育');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41191,2381,169,'学科');
+4030,2381,169,'学科');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41192,2384,169,'现有');
+4031,2384,169,'现有');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41193,2386,169,'5');
+4032,2386,169,'5');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41194,2387,169,'个');
+4033,2387,169,'个');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41195,2388,169,'一级');
+4034,2388,169,'一级');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41196,2390,169,'学科');
+4035,2390,169,'学科');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41197,2392,169,'北京市');
+4036,2392,169,'北京市');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41198,2395,169,'重点学科');
+4037,2395,169,'重点学科');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41199,2375,169,'重点');
+4038,2375,169,'重点');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41200,2304,169,'博士后');
+4039,2304,169,'博士后');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41201,2354,169,'学科');
+4040,2354,169,'学科');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41202,2351,169,'个');
+4041,2351,169,'个');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41203,2310,169,'25');
+4042,2310,169,'25');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41204,2312,169,'个');
+4043,2312,169,'个');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41205,2314,169,'博士');
+4044,2314,169,'博士');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41206,2316,169,'学位');
+4045,2316,169,'学位');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41207,2318,169,'授权');
+4046,2318,169,'授权');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41208,2320,169,'一级');
+4047,2320,169,'一级');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41209,2322,169,'学科');
+4048,2322,169,'学科');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41210,2324,169,'24');
+4049,2324,169,'24');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41211,2326,169,'个');
+4050,2326,169,'个');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41212,2352,169,'二级');
+4051,2352,169,'二级');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41213,2328,169,'硕士学位');
+4052,2328,169,'硕士学位');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41214,2334,169,'一级');
+4053,2334,169,'一级');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41215,2336,169,'学科');
+4054,2336,169,'学科');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41216,2338,169,'37');
+4055,2338,169,'37');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41217,2340,169,'个');
+4056,2340,169,'个');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41218,2342,169,'5');
+4057,2342,169,'5');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41219,2343,169,'个');
+4058,2343,169,'个');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41220,2344,169,'一级');
+4059,2344,169,'一级');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41221,2346,169,'学科');
+4060,2346,169,'学科');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41222,2349,169,'11');
+4061,2349,169,'11');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41223,2332,169,'授权');
+4062,2332,169,'授权');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41224,2132,169,'当前');
+4063,2132,169,'当前');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41225,2097,169,'科学研究');
+4064,2097,169,'科学研究');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41226,2027,169,'接待日');
+4065,2027,169,'接待日');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41227,670,169,'校领导');
+4066,670,169,'校领导');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41228,696,169,'历任');
+4067,696,169,'历任');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41229,698,169,'书记');
+4068,698,169,'书记');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41230,768,169,'历任');
+4069,768,169,'历任');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41231,770,169,'校长');
+4070,770,169,'校长');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41232,793,169,'著名');
+4071,793,169,'著名');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41233,795,169,'学者');
+4072,795,169,'学者');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41234,866,169,'历史名人');
+4073,866,169,'历史名人');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41235,913,169,'院系设置');
+4074,913,169,'院系设置');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41236,668,169,'现任');
+4075,668,169,'现任');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41237,929,169,'管理机构');
+4076,929,169,'管理机构');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41238,961,169,'科学研究');
+4077,961,169,'科学研究');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41239,990,169,'招生就业');
+4078,990,169,'招生就业');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41240,1030,169,'本科生');
+4079,1030,169,'本科生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41241,1033,169,'招生');
+4080,1033,169,'招生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41242,1058,169,'研究生');
+4081,1058,169,'研究生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41243,1061,169,'招生');
+4082,1061,169,'招生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41244,1091,169,'博士后');
+4083,1091,169,'博士后');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41245,1117,169,'留学生');
+4084,1117,169,'留学生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41246,1120,169,'招生');
+4085,1120,169,'招生');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41247,945,169,'人才招聘');
+4086,945,169,'人才招聘');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41248,1145,169,'继续教育');
+4087,1145,169,'继续教育');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41249,643,169,'沿革');
+4088,643,169,'沿革');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41250,614,169,'学校简介');
+4089,614,169,'学校简介');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41251,8,169,'VERSION');
+4090,8,169,'VERSION');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41252,38,169,'书记');
+4091,38,169,'书记');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41253,40,169,'信箱');
+4092,40,169,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41254,54,169,'校长');
+4093,54,169,'校长');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41255,56,169,'信箱');
+4094,56,169,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41256,70,169,'校领导');
+4095,70,169,'校领导');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41257,73,169,'信箱');
+4096,73,169,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41258,87,169,'接待日');
+4097,87,169,'接待日');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41259,277,169,'导航');
+4098,277,169,'导航');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41260,641,169,'校史');
+4099,641,169,'校史');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41261,334,169,'导航');
+4100,334,169,'导航');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41262,393,169,'新闻');
+4101,393,169,'新闻');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41263,431,169,'图文报道');
+4102,431,169,'图文报道');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41264,458,169,'网络电视');
+4103,458,169,'网络电视');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41265,485,169,'校报');
+4104,485,169,'校报');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41266,487,169,'在线');
+4105,487,169,'在线');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41267,512,169,'媒体');
+4106,512,169,'媒体');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41268,514,169,'师大');
+4107,514,169,'师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41269,572,169,'学校');
+4108,572,169,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41270,574,169,'概况');
+4109,574,169,'概况');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41271,391,169,'师大');
+4110,391,169,'师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41272,1149,169,'与');
+4111,1149,169,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41273,1150,169,'教师培训');
+4112,1150,169,'教师培训');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41274,1177,169,'就业');
+4113,1177,169,'就业');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41275,1815,169,'师大');
+4114,1815,169,'师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41276,1817,169,'新闻');
+4115,1817,169,'新闻');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41277,1831,169,'学校');
+4116,1831,169,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41278,1833,169,'概况');
+4117,1833,169,'概况');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41279,1847,169,'院系设置');
+4118,1847,169,'院系设置');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41280,1863,169,'管理机构');
+4119,1863,169,'管理机构');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41281,1879,169,'人才招聘');
+4120,1879,169,'人才招聘');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41282,1895,169,'科学研究');
+4121,1895,169,'科学研究');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41283,1911,169,'招生就业');
+4122,1911,169,'招生就业');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41284,1680,169,'页');
+4123,1680,169,'页');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41285,1927,169,'合作交流');
+4124,1927,169,'合作交流');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41286,1945,169,'档案');
+4125,1945,169,'档案');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41287,1959,169,'走进');
+4126,1959,169,'走进');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41288,1961,169,'师大');
+4127,1961,169,'师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41289,1978,169,'书记');
+4128,1978,169,'书记');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41290,1980,169,'信箱');
+4129,1980,169,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41291,1994,169,'校长');
+4130,1994,169,'校长');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41292,1996,169,'信箱');
+4131,1996,169,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41293,2010,169,'校领导');
+4132,2010,169,'校领导');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41294,2013,169,'信箱');
+4133,2013,169,'信箱');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41295,1943,169,'图书');
+4134,1943,169,'图书');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41296,1678,169,'黄');
+4135,1678,169,'黄');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41297,1654,169,'历');
+4136,1654,169,'历');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41298,1652,169,'校');
+4137,1652,169,'校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41299,1179,169,'与');
+4138,1179,169,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41300,1180,169,'创业');
+4139,1180,169,'创业');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41301,1241,169,'合作交流');
+4140,1241,169,'合作交流');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41302,1281,169,'国际交流');
+4141,1281,169,'国际交流');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41303,1285,169,'与');
+4142,1285,169,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41304,1286,169,'合作');
+4143,1286,169,'合作');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41305,1311,169,'国内');
+4144,1311,169,'国内');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41306,1313,169,'合作');
+4145,1313,169,'合作');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41307,1338,169,'港澳台');
+4146,1338,169,'港澳台');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41308,1341,169,'事务');
+4147,1341,169,'事务');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41309,1366,169,'教育');
+4148,1366,169,'教育');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41310,1368,169,'基金会');
+4149,1368,169,'基金会');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41311,1430,169,'图书');
+4150,1430,169,'图书');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41312,1432,169,'档案');
+4151,1432,169,'档案');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41313,1470,169,'图书馆');
+4152,1470,169,'图书馆');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41314,1496,169,'档案馆');
+4153,1496,169,'档案馆');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41315,1558,169,'走进');
+4154,1558,169,'走进');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41316,1560,169,'师大');
+4155,1560,169,'师大');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41317,1598,169,'校园');
+4156,1598,169,'校园');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41318,1600,169,'地图');
+4157,1600,169,'地图');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41319,1625,169,'校园风光');
+4158,1625,169,'校园风光');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41320,2400,169,'9');
+4159,2400,169,'9');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41321,5831,169,'我校');
+4160,5831,169,'我校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41322,2401,169,'个');
+4161,2401,169,'个');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41323,2404,169,'学科');
+4162,2404,169,'学科');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41324,4903,169,'重点');
+4163,4903,169,'重点');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41325,4905,169,'研究');
+4164,4905,169,'研究');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41326,4907,169,'基地');
+4165,4907,169,'基地');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41327,4909,169,'有效');
+4166,4909,169,'有效');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41328,4911,169,'地带');
+4167,4911,169,'地带');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41329,4913,169,'动');
+4168,4913,169,'动');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41330,4914,169,'了');
+4169,4914,169,'了');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41331,4915,169,'全校');
+4170,4915,169,'全校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41332,4917,169,'哲学');
+4171,4917,169,'哲学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41333,4900,169,'建设');
+4172,4900,169,'建设');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41334,4919,169,'社会科学');
+4173,4919,169,'社会科学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41335,4924,169,'发展');
+4174,4924,169,'发展');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41336,4927,169,'成为');
+4175,4927,169,'成为');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41337,4929,169,'学校');
+4176,4929,169,'学校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41338,4931,169,'学术创新');
+4177,4931,169,'学术创新');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41339,4935,169,'的');
+4178,4935,169,'的');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41340,4937,169,'标杆');
+4179,4937,169,'标杆');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41341,4941,169,'提升');
+4180,4941,169,'提升');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41342,4943,169,'质量');
+4181,4943,169,'质量');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41343,4945,169,'的');
+4182,4945,169,'的');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41344,4923,169,'的');
+4183,4923,169,'的');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41345,4947,169,'旗舰');
+4184,4947,169,'旗舰');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41346,4899,169,'的');
+4185,4899,169,'的');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41347,4897,169,'几');
+4186,4897,169,'几');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41348,4853,169,'社会科学');
+4187,4853,169,'社会科学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41349,4857,169,'重点');
+4188,4857,169,'重点');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41350,4859,169,'研究');
+4189,4859,169,'研究');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41351,4861,169,'基地');
+4190,4861,169,'基地');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41352,4863,169,'7');
+4191,4863,169,'7');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41353,4864,169,'个');
+4192,4864,169,'个');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41354,4866,169,'数量');
+4193,4866,169,'数量');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41355,4868,169,'位居');
+4194,4868,169,'位居');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41356,4870,169,'全国');
+4195,4870,169,'全国');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41357,4898,169,'年');
+4196,4898,169,'年');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41358,4872,169,'高校');
+4197,4872,169,'高校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41359,4877,169,'北京市');
+4198,4877,169,'北京市');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41360,4880,169,'哲学');
+4199,4880,169,'哲学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41361,4882,169,'社会科学');
+4200,4882,169,'社会科学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41362,4886,169,'重点');
+4201,4886,169,'重点');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41363,4888,169,'研究');
+4202,4888,169,'研究');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41364,4890,169,'基地');
+4203,4890,169,'基地');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41365,4892,169,'2');
+4204,4892,169,'2');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41366,4893,169,'个');
+4205,4893,169,'个');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41367,4895,169,'经过');
+4206,4895,169,'经过');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41368,4874,169,'前列');
+4207,4874,169,'前列');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41369,4851,169,'人文');
+4208,4851,169,'人文');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41370,4960,169,'教育部');
+4209,4960,169,'教育部');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41371,4965,169,'社会科学');
+4210,4965,169,'社会科学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41372,5403,169,'与');
+4211,5403,169,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41373,5404,169,'文化研究');
+4212,5404,169,'文化研究');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41374,5408,169,'中心');
+4213,5408,169,'中心');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41375,5465,169,'教师教育');
+4214,5465,169,'教师教育');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41376,5469,169,'研究中心');
+4215,5469,169,'研究中心');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41377,5524,169,'北京市');
+4216,5524,169,'北京市');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41378,5527,169,'哲学');
+4217,5527,169,'哲学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41379,5529,169,'社会科学');
+4218,5529,169,'社会科学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41380,5533,169,'重点');
+4219,5533,169,'重点');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41381,5401,169,'价值');
+4220,5401,169,'价值');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41382,5535,169,'研究');
+4221,5535,169,'研究');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41383,5602,169,'北京');
+4222,5602,169,'北京');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41384,5604,169,'文化发展');
+4223,5604,169,'文化发展');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41385,5608,169,'研究院');
+4224,5608,169,'研究院');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41386,5666,169,'首都');
+4225,5666,169,'首都');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41387,5668,169,'教育经济');
+4226,5668,169,'教育经济');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41388,5672,169,'研究院');
+4227,5672,169,'研究院');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41389,5788,169,'重点');
+4228,5788,169,'重点');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41390,5790,169,'实验室');
+4229,5790,169,'实验室');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41391,5794,169,'工程中心');
+4230,5794,169,'工程中心');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41392,5537,169,'基地');
+4231,5537,169,'基地');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41393,4963,169,'人文');
+4232,4963,169,'人文');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41394,5321,169,'研究中心');
+4233,5321,169,'研究中心');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41395,5318,169,'史学');
+4234,5318,169,'史学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41396,4969,169,'重点');
+4235,4969,169,'重点');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41397,4971,169,'研究');
+4236,4971,169,'研究');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41398,4973,169,'基地');
+4237,4973,169,'基地');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41399,5038,169,'国际');
+4238,5038,169,'国际');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41400,5040,169,'与');
+4239,5040,169,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41401,5041,169,'比较');
+4240,5041,169,'比较');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41402,5043,169,'教育研究');
+4241,5043,169,'教育研究');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41403,5047,169,'院');
+4242,5047,169,'院');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41404,5103,169,'发展');
+4243,5103,169,'发展');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41405,5320,169,'史');
+4244,5320,169,'史');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41406,5105,169,'心理');
+4245,5105,169,'心理');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41407,5186,169,'文艺学');
+4246,5186,169,'文艺学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41408,5189,169,'研究中心');
+4247,5189,169,'研究中心');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41409,5248,169,'民俗');
+4248,5248,169,'民俗');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41410,5250,169,'典籍');
+4249,5250,169,'典籍');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41411,5252,169,'文字');
+4250,5252,169,'文字');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41412,5254,169,'研究中心');
+4251,5254,169,'研究中心');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41413,5313,169,'史学');
+4252,5313,169,'史学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41414,5315,169,'理论');
+4253,5315,169,'理论');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41415,5317,169,'与');
+4254,5317,169,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41416,5107,169,'研究所');
+4255,5107,169,'研究所');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41417,4848,169,'教育部');
+4256,4848,169,'教育部');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41418,4846,169,'其中');
+4257,4846,169,'其中');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41419,4843,169,'基地');
+4258,4843,169,'基地');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41420,2833,169,'重点学科');
+4259,2833,169,'重点学科');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41421,2890,169,'马克思主义');
+4260,2890,169,'马克思主义');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41422,2895,169,'哲学');
+4261,2895,169,'哲学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41423,2952,169,'民俗学');
+4262,2952,169,'民俗学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41424,3031,169,'史学');
+4263,3031,169,'史学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41425,3033,169,'理论');
+4264,3033,169,'理论');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41426,3035,169,'及');
+4265,3035,169,'及');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41427,3036,169,'史学');
+4266,3036,169,'史学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41428,3038,169,'史');
+4267,3038,169,'史');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41429,2831,169,'国家');
+4268,2831,169,'国家');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41430,3094,169,'中国');
+4269,3094,169,'中国');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41431,3154,169,'理论物理');
+4270,3154,169,'理论物理');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41432,3234,169,'物理化学');
+4271,3234,169,'物理化学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41433,3293,169,'细胞生物学');
+4272,3293,169,'细胞生物学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41434,3353,169,'生态学');
+4273,3353,169,'生态学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41435,3432,169,'系统');
+4274,3432,169,'系统');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41436,3434,169,'理论');
+4275,3434,169,'理论');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41437,3491,169,'环境科学');
+4276,3491,169,'环境科学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41438,3550,169,'教育经济');
+4277,3550,169,'教育经济');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41439,3554,169,'与');
+4278,3554,169,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41440,3096,169,'古代史');
+4279,3096,169,'古代史');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41441,3555,169,'管理');
+4280,3555,169,'管理');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41442,2829,169,'学科');
+4281,2829,169,'学科');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41443,2773,169,'地理学');
+4282,2773,169,'地理学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41444,2406,169,'北京市');
+4283,2406,169,'北京市');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41445,2409,169,'重点学科');
+4284,2409,169,'重点学科');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41446,2414,169,'1');
+4285,2414,169,'1');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41447,2415,169,'个');
+4286,2415,169,'个');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41448,2416,169,'交叉');
+4287,2416,169,'交叉');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41449,2418,169,'学科');
+4288,2418,169,'学科');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41450,2420,169,'北京市');
+4289,2420,169,'北京市');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41451,2423,169,'重点学科');
+4290,2423,169,'重点学科');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41452,2437,169,'国家');
+4291,2437,169,'国家');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41453,2827,169,'二级');
+4292,2827,169,'二级');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41454,2439,169,'重点学科');
+4293,2439,169,'重点学科');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41455,2447,169,'学科');
+4294,2447,169,'学科');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41456,2449,169,'国家');
+4295,2449,169,'国家');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41457,2451,169,'重点学科');
+4296,2451,169,'重点学科');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41458,2518,169,'教育学');
+4297,2518,169,'教育学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41459,2576,169,'心理学');
+4298,2576,169,'心理学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41460,2655,169,'中国语');
+4299,2655,169,'中国语');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41461,2658,169,'言文');
+4300,2658,169,'言文');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41462,2660,169,'学');
+4301,2660,169,'学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41463,2716,169,'数学');
+4302,2716,169,'数学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41464,2445,169,'一级');
+4303,2445,169,'一级');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41465,3611,169,'北京市');
+4304,3611,169,'北京市');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41466,3614,169,'重点学科');
+4305,3614,169,'重点学科');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41467,3620,169,'交叉');
+4306,3620,169,'交叉');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41468,4333,169,'物理');
+4307,4333,169,'物理');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41469,4390,169,'无机化学');
+4308,4390,169,'无机化学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41470,4449,169,'有机化学');
+4309,4449,169,'有机化学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41471,4529,169,'环境工程');
+4310,4529,169,'环境工程');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41472,4588,169,'英语');
+4311,4588,169,'英语');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41473,4590,169,'语言文学');
+4312,4590,169,'语言文学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41474,4649,169,'体育');
+4313,4649,169,'体育');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41475,4651,169,'人文');
+4314,4651,169,'人文');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41476,4653,169,'社会学');
+4315,4653,169,'社会学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41477,4330,169,'凝聚态');
+4316,4330,169,'凝聚态');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41478,4732,169,'天体');
+4317,4732,169,'天体');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41479,4794,169,'重点');
+4318,4794,169,'重点');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41480,4796,169,'研究');
+4319,4796,169,'研究');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41481,4798,169,'基地');
+4320,4798,169,'基地');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41482,4833,169,'我校');
+4321,4833,169,'我校');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41483,4835,169,'现有');
+4322,4835,169,'现有');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41484,4837,169,'9');
+4323,4837,169,'9');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41485,4838,169,'个');
+4324,4838,169,'个');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41486,4839,169,'重点');
+4325,4839,169,'重点');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41487,4841,169,'研究');
+4326,4841,169,'研究');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41488,4734,169,'物理');
+4327,4734,169,'物理');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41489,4250,169,'世界经济');
+4328,4250,169,'世界经济');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41490,4193,169,'哲学');
+4329,4193,169,'哲学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41491,4191,169,'外国');
+4330,4191,169,'外国');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41492,3622,169,'学科');
+4331,3622,169,'学科');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41493,3624,169,'北京市');
+4332,3624,169,'北京市');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41494,3627,169,'重点学科');
+4333,3627,169,'重点学科');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41495,3694,169,'自然资源');
+4334,3694,169,'自然资源');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41496,3749,169,'一级');
+4335,3749,169,'一级');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41497,3751,169,'学科');
+4336,3751,169,'学科');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41498,3753,169,'北京市');
+4337,3753,169,'北京市');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41499,3756,169,'重点学科');
+4338,3756,169,'重点学科');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41500,3813,169,'中国史');
+4339,3813,169,'中国史');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41501,3871,169,'生物学');
+4340,3871,169,'生物学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41502,3950,169,'公共管理');
+4341,3950,169,'公共管理');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41503,4009,169,'艺术学');
+4342,4009,169,'艺术学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41504,4012,169,'理论');
+4343,4012,169,'理论');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41505,4069,169,'戏剧');
+4344,4069,169,'戏剧');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41506,4071,169,'与');
+4345,4071,169,'与');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41507,4072,169,'影视');
+4346,4072,169,'影视');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41508,4074,169,'学');
+4347,4074,169,'学');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41509,4127,169,'二级');
+4348,4127,169,'二级');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41510,4129,169,'学科');
+4349,4129,169,'学科');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41511,4131,169,'北京市');
+4350,4131,169,'北京市');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41512,4134,169,'重点学科');
+4351,4134,169,'重点学科');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41513,2402,169,'二级');
+4352,2402,169,'二级');
 INSERT INTO [InvertedIndices] ([InvertedIndexId],[Position],[UrlFileId],[Word]) VALUES (
-41514,0,169,'ENGLISH');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1005,2,'访问者');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1006,2,'小');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1007,2,'卫星');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1008,2,'完成');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1009,2,'总体');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1010,2,'方案设计');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1011,2,'评审');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1012,2,'党员');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1013,2,'学雷锋');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1014,3,'志愿服务');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1015,9,'月');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1016,2,'观测');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1017,4,'孙红');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1018,4,'到');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1019,2,'二');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1020,2,'附中');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1021,4,'调研');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1022,3,'周');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1023,3,'作');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1024,2,'宇');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1025,2,'香港');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1026,2,'冯');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1027,2,'燊');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1028,4,'培');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1029,2,'极地');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1030,19,'1');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1031,2,'BNU');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1032,4,'列');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1033,8,'活动');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1034,13,'召开');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1035,14,'2018');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1036,4,'年春');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1037,4,'季');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1038,7,'学期');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1039,4,'党支部');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1040,10,'工作会');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1041,3,'惠');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1042,2,'若');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1043,2,'琪');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1044,2,'女排');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1045,8,'发展');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1046,2,'基金');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1047,4,'体育');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1048,2,'支教');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1049,2,'项目');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1050,2,'首场');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1051,3,'宣讲会');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1052,6,'在');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1053,12,'我校');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1054,4,'举行');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1055,2,'国学');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1056,7,'代表');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1057,12,'国家');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1058,2,'卫');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1059,3,'国有资产');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1060,3,'议');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1061,2,'庞');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1062,2,'丽娟');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1063,4,'教授');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1064,2,'当选');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1065,5,'为');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1066,2,'全国人大常委会');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1067,2,'委员');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1068,2,'汉字');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1069,2,'之美');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1070,3,'全球');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1071,4,'青年');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1072,3,'设计');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1073,2,'大赛');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1074,3,'正式');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1075,2,'启动');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1076,2,'班长');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1077,9,'12');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1078,4,'位');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1079,7,'教师');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1080,2,'入选');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1081,5,'第三');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1082,6,'期');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1083,2,'教育系');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1084,6,'新学');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1085,2,'史培军');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1086,2,'计委');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1087,6,'心理学');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1088,10,'部');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1089,7,'联合');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1090,19,'举办');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1091,2,'加强');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1092,2,'心理健康');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1093,2,'人才');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1094,2,'联');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1095,2,'学联');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1096,2,'做活');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1097,3,'动');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1098,2,'青海');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1099,2,'领导');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1100,3,'来校');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1101,2,'商洽');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1102,2,'对口');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1103,2,'帮扶');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1104,2,'事宜');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1105,2,'第三届');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1106,2,'中美');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1107,2,'智慧');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1108,5,'大会');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1109,2,'主持');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1110,3,'规范');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1111,7,'学术');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1112,2,'记者会');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1113,24,'人才招聘');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1114,29,'科学研究');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1115,27,'招生就业');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1116,18,'本科生');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1117,39,'招生');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1118,18,'研究生');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1119,14,'博士后');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1120,13,'留学生');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1121,16,'继续教育');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1122,74,'与');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1123,16,'教师培训');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1124,13,'就业');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1125,14,'创业');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1126,27,'合作交流');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1127,14,'国际交流');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1128,33,'合作');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1129,14,'国内');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1130,14,'港澳台');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1131,14,'事务');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1132,22,'教育');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1133,19,'基金会');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1134,27,'图书');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1135,27,'档案');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1136,26,'管理机构');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1137,14,'图书馆');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1138,26,'院系设置');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1139,13,'学者');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1140,12,'ENGLISH');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1141,12,'VERSION');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1142,40,'书记');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1143,72,'信箱');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1144,42,'校长');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1145,37,'校领导');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1146,24,'接待日');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1147,24,'导航');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1148,64,'师大');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1149,36,'新闻');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1150,12,'图文报道');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1151,12,'网络电视');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1152,12,'校报');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1153,12,'在线');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1154,12,'媒体');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1155,68,'学校');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1156,26,'概况');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1157,14,'学校简介');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1158,15,'校史');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1159,14,'沿革');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1160,13,'现任');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1161,28,'历任');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1162,13,'著名');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1163,13,'历史名人');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1164,5,'批');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1165,14,'档案馆');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1166,17,'校园');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1167,2,'蒙古国');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1168,2,'立');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1169,6,'师范大学');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1170,2,'一行');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1171,8,'开展');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1172,2,'消防');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1173,2,'安全');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1174,2,'专项');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1175,2,'检查');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1176,2,'台湾');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1177,2,'代表团');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1178,2,'来访');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1179,2,'组织学');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1180,3,'生');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1181,3,'观看');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1182,4,'十三');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1183,4,'届');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1184,2,'全国人大');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1185,2,'一次');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1186,4,'会议');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1187,2,'闭幕会');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1188,13,'和');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1189,2,'总理');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1190,4,'会见');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1191,27,'走进');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1192,2,'董奇');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1193,23,'大');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1194,14,'地图');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1195,13,'校园风光');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1196,14,'校');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1197,13,'历');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1198,13,'黄');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1199,18,'页');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1200,11,'关于');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1201,7,'新版');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1202,9,'中文');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1203,13,'主页');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1204,7,'上线');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1205,8,'试运行');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1206,59,'的');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1207,11,'通知');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1208,5,'北师大');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1209,3,'快讯');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1210,6,'更多');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1211,4,'各');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1212,5,'单位');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1213,8,'学习贯彻');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1214,4,'落实');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1215,20,'党');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1216,24,'十九');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1217,18,'精神');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1218,2,'万');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1219,2,'均');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1220,3,'计划');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1221,2,'增容');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1222,2,'材料采购');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1223,8,'招标公告');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1224,2,'热力');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1225,20,'2017');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1226,2,'2020');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1227,2,'年度');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1228,2,'五金');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1229,2,'水暖');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1230,2,'维修');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1231,2,'材料');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1232,4,'供货商');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1233,2,'入围');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1234,2,'评选');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1235,2,'专利转让');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1236,7,'校内');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1237,6,'服务网点');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1238,3,'第二');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1239,24,'次');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1240,2,'食堂');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1241,2,'物资');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1242,2,'遴选');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1243,3,'快速');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1244,2,'电力');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1245,3,'登录');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1246,5,'管理处');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1247,4,'项目招标');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1248,2,'区');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1249,2,'燃气');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1250,2,'工程监理');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1251,2,'询价');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1252,8,'公告');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1253,6,'一');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1254,4,'种');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1255,4,'用于');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1256,8,'制备');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1257,4,'锝');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1258,4,'99m');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1259,4,'标记');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1260,4,'GSA');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1261,4,'药盒');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1262,4,'方法');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1263,2,'专利权');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1264,2,'转让');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1265,4,'公示');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1266,41,'北京师范大学');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1267,2,'配电');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1268,2,'设施');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1269,2,'残值');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1270,2,'处置');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1271,3,'后勤');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1272,2,'G');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1273,11,'信息');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1274,3,'公开');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1275,36,'号');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1276,12,'邮编');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1277,12,'100875');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1278,24,'京');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1279,12,'ICP');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1280,24,'备');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1281,12,'05066832');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1282,12,'公网');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1283,12,'安');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1284,12,'110402430002');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1285,13,'电话');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1286,12,'查号台');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1287,24,'010');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1288,12,'58806183');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1289,12,'后勤服务');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1290,12,'热线');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1291,12,'58801111');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1292,12,'Site');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1293,12,'designed');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1294,12,'by');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1295,12,'MONOKEROS');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1296,3,'您');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1297,2,'是');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1298,12,'19');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1299,3,'门户');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1300,12,'大街');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1301,24,'北京市');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1302,2,'人');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1303,3,'管理系统');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1304,8,'邮箱');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1305,6,'学生');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1306,3,'常用');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1307,3,'链接');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1308,8,'信息网');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1309,8,'络');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1310,3,'服务');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1311,9,'建设');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1312,4,'指挥部');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1313,3,'校友总会');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1314,3,'学风');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1315,9,'教师教育');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1316,3,'机构');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1317,3,'教育科');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1318,3,'刊');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1319,3,'心晴');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1320,3,'IPv6');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1321,4,'支持');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1322,6,'系统');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1323,13,'版权所有');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1324,13,'地址');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1325,12,'新街口');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1326,6,'校区');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1327,3,'校务');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1328,2,'贺词');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1329,2,'代');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1330,2,'水稻');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1331,2,'小麦');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1332,2,'杂交育种');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1333,2,'技术');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1334,2,'前世');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1335,2,'今生');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1336,4,'.23');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1337,14,'外');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1338,2,'哲');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1339,4,'讲坛');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1340,2,'The');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1341,2,'Un');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1342,2,'Refutation');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1343,2,'of');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1344,2,'Idealism');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1345,4,'.24');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1346,5,'人文');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1347,2,'宗教');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1348,2,'讲堂');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1349,2,'中医系');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1350,3,'讲座');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1351,3,'29');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1352,4,'大讲堂');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1353,6,'名家');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1354,11,'京师');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1355,14,'创新');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1356,2,'沙河');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1357,15,'年');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1358,3,'孔子');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1359,19,'学院');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1360,8,'专题');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1361,2,'学习会');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1362,3,'陈');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1363,2,'丽');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1364,2,'参加人');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1365,2,'事');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1366,11,'处');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1367,8,'社会科学');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1368,8,'学习');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1369,2,'党校工作');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1370,3,'动态');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1371,14,'预告');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1372,15,'03');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1373,4,'.27');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1374,4,'学术讲座');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1375,2,'青藏高原');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1376,2,'东亚');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1377,2,'季风');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1378,2,'.29');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1379,2,'真相');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1380,2,'圆桌');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1381,3,'第');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1382,2,'思想');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1383,2,'峰');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1384,9,'等');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1385,2,'发现');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1386,2,'狄拉克');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1387,2,'费米');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1388,2,'体系');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1389,10,'新');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1390,2,'相图');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1391,2,'认知科学');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1392,2,'灵');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1393,8,'哲学');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1394,2,'前沿');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1395,3,'问题');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1396,9,'研究');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1397,2,'研讨班');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1398,4,'传播学');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1399,23,'院');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1400,4,'马克思主义');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1401,2,'观');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1402,2,'课程');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1403,3,'通知公告');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1404,2,'新年');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1405,2,'之');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1406,2,'陆');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1407,3,'张');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1408,2,'和心');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1409,6,'及其');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1410,2,'40');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1411,2,'博士生');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1412,2,'专场');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1413,3,'瀚');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1414,3,'德');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1415,2,'经济学');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1416,2,'暨');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1417,2,'经管');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1418,3,'对');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1419,2,'收入');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1420,2,'健康');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1421,2,'吸烟');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1422,2,'66');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1423,2,'效应');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1424,2,'第二届');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1425,2,'亚洲');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1426,2,'科技');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1427,3,'减灾');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1428,4,'成果');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1429,3,'物理学');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1430,4,'系');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1431,2,'因果');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1432,2,'马');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1433,2,'天星');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1434,3,'管理');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1435,1,'变化');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1436,2,'刑事法律');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1437,1,'究');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1438,1,'学研');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1439,1,'水科');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1440,1,'地球');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1441,1,'资源管理');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1442,2,'所');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1443,1,'应急');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1444,1,'汉语');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1445,22,'中心');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1446,3,'质量');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1447,2,'监测');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1448,3,'协同');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1449,1,'文化学');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1450,2,'传播');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1451,1,'古籍');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1452,1,'传统文化');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1453,1,'信息处');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1454,1,'理');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1455,2,'研究所');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1456,4,'北京');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1457,2,'文化发展');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1458,1,'新材料');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1459,3,'基础教育');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1460,1,'耘');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1461,1,'文化');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1462,2,'传媒');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1463,2,'学学');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1464,1,'地理');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1465,1,'科学学');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1466,2,'言文');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1467,3,'经济');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1468,2,'工商管理学');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1469,1,'法学院');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1470,6,'中国');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1471,1,'社会管理');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1472,11,'研究院');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1473,2,'社会学');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1474,1,'外国语');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1475,1,'运动学');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1476,2,'文学院');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1477,1,'励');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1478,2,'教育学');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1479,12,'首页');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1480,10,'位置');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1481,2,'政府管理');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1482,2,'艺术');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1483,1,'公共政策');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1484,1,'社会发展');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1485,1,'核科学');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1486,2,'技术学');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1487,1,'科学');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1488,11,'当前');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1489,1,'环境学');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1490,1,'生命科学');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1491,1,'国民');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1492,1,'统计学');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1493,1,'科学学院');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1494,1,'天文系');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1495,1,'化学');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1496,1,'数学科');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1497,1,'历史学');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1498,2,'核算');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1499,1,'有限公司');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1500,1,'联合国');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1501,1,'资助');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1502,1,'校友会');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1503,1,'际');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1504,2,'工作');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1505,3,'校友');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1506,1,'联络办');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1507,1,'指导');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1508,1,'心理咨询');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1509,1,'学生就业');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1510,1,'珠海');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1511,1,'人力资源');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1512,3,'服务中心');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1513,1,'资源');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1514,1,'分校');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1515,1,'对外');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1516,2,'大学');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1517,1,'科技园');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1518,1,'建设管理');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1519,1,'资产经营');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1520,1,'北京师大');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1521,4,'实验');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1522,1,'理科');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1523,1,'出版集团');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1524,2,'学报');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1525,1,'文科');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1526,1,'幼儿园');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1527,2,'校医');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1528,5,'附属');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1529,2,'小学');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1530,1,'合作办学');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1531,1,'香港浸会大学');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1532,1,'社');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1533,1,'馆');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1534,1,'高等教育学');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1535,1,'研究生会');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1536,1,'校学生会');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1537,1,'校工');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1538,1,'群众组织');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1539,4,'中学');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1540,1,'公共');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1541,1,'校团委');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1542,1,'分析');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1543,5,'宣传部');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1544,1,'审计处');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1545,1,'离退休');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1546,3,'工作处');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1547,1,'统战部');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1548,1,'科学技术');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1549,2,'产业');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1550,1,'纪检监察');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1551,1,'经营性');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1552,1,'资产管理');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1553,1,'委员会');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1554,1,'合作处');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1555,1,'武装部');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1556,1,'教育管理');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1557,1,'出国留学');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1558,1,'联盟');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1559,2,'国际');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1560,1,'教育中心');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1561,8,'.');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1562,2,'辅导员');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1563,1,'培训');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1564,2,'会');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1565,1,'研修');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1566,8,'基地');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1567,1,'测试');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1568,1,'分会');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1569,1,'财经');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1570,1,'研究室');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1571,1,'干部教育');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1572,1,'培训基地');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1573,1,'教辅');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1574,3,'及');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1575,1,'机关部');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1576,2,'党委办');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1577,3,'公');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1578,3,'室');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1579,1,'发展规划');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1580,1,'学科建设');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1581,1,'学院管理');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1582,1,'督察');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1583,1,'督办');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1584,11,'办公室');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1585,2,'保卫部');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1586,1,'人事处');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1587,1,'共建');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1588,4,'全国');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1589,2,'党校');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1590,1,'基建处');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1591,1,'组织部');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1592,1,'研究生院');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1593,1,'公共服务');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1594,3,'平台');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1595,1,'教务处');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1596,8,'党委');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1597,2,'数据');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1598,1,'ArcGis');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1599,2,'基础');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1600,2,'地理信息');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1601,1,'基于');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1602,2,'示意图');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1603,2,'图件');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1604,1,'说明');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1605,2,'三维');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1606,4,'图');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1607,4,'影像');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1608,1,'为了');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1609,1,'标准');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1610,2,'包括');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1611,1,'布');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1612,1,'并发');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1613,5,'制作');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1614,1,'进一步');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1615,2,'统一');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1616,1,'更新');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1617,1,'及时');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1618,1,'并');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1619,2,'平面图');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1620,2,'相关');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1621,1,'共享');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1622,1,'供');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1623,4,'格式');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1624,3,'jpg');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1625,3,'tif');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1626,3,'2012');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1627,6,'5');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1628,1,'来源');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1629,1,'GeoEye');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1630,1,'拍摄');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1631,2,'2011');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1632,3,'10');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1633,1,'13');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1634,5,'日');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1635,1,'查看');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1636,1,'矢量');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1637,3,'矢量图');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1638,3,'片');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1639,3,'版图');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1640,1,'mxd');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1641,1,'2014');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1642,1,'8');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1643,3,'使用');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1644,1,'如');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1645,2,'中');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1646,1,'遇到');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1647,1,'拨打');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1648,1,'58808113');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1649,5,'点击');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1650,1,'请');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1651,6,'高清');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1652,3,'版');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1653,4,'需');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1654,4,'申请');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1655,4,'申请单');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1656,6,'时间');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1657,11,'下载');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1658,1,'启功');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1659,1,'钟敬文');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1660,1,'白寿彝');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1661,1,'楚');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1662,1,'梁启超');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1663,1,'李大钊');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1664,1,'钱玄同');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1665,1,'鲁迅');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1666,1,'熙');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1667,1,'锦');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1668,1,'南');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1669,1,'贻');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1670,1,'黎');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1671,1,'秀峰');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1672,1,'周谷城');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1673,1,'杨明');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1674,1,'轩');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1675,1,'李');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1676,1,'杨');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1677,1,'垣');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1678,1,'袁');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1679,1,'敦礼');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1680,1,'李建');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1681,1,'勋');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1682,1,'达');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1683,1,'高级');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1684,1,'骨干');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1685,1,'末');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1686,12,'11');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1687,1,'领会');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1688,3,'23');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1689,1,'成功');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1690,1,'篇');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1691,2,'64');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1692,1,'数');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1693,1,'文章');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1694,3,'4');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1695,1,'页数');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1696,1,'研修班');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1697,2,'总');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1698,8,'二级');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1699,1,'座谈会');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1700,1,'报告');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1701,1,'淑芳');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1702,1,'王');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1703,1,'下');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1704,3,'21');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1705,1,'上一');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1706,2,'贯彻');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1707,1,'05');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1708,21,'阅读');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1709,3,'面对面');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1710,1,'新作');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1711,5,'20');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1712,1,'组织');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1713,1,'师生员工');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1714,1,'集中');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1715,2,'新时代');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1716,1,'中国共产党');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1717,1,'第十九');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1718,1,'全国代表大会');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1719,1,'开幕会');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1720,1,'18');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1721,3,'24');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1722,2,'学习宣传');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1723,1,'告');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1724,1,'大报');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1725,4,'25');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1726,1,'热');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1727,1,'巡');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1728,2,'主题');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1729,3,'系列');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1730,1,'知识');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1731,1,'论坛');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1732,1,'竞赛');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1733,2,'首都');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1734,5,'高校');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1735,2,'宣讲');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1736,1,'来');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1737,5,'报告会');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1738,2,'08');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1739,2,'01');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1740,1,'讲');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1741,3,'师生');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1742,1,'22');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1743,1,'发布');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1744,2,'xwzx');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1745,1,'改革');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1746,1,'推');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1747,1,'相');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1748,1,'关心');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1749,3,'cn');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1750,1,'故');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1751,2,'广大');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1752,3,'edu');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1753,3,'bnu');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1754,1,'不');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1755,1,'运行');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1756,1,'木铎');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1757,1,'58808001');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1758,1,'58805293');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1759,1,'58807173');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1760,1,'联系电话');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1761,1,'反馈');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1762,1,'zhuye');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1763,1,'http');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1764,1,'同行');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1765,1,'一路');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1766,1,'相伴');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1767,1,'你');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1768,1,'将');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1769,1,'朋友');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1770,1,'征程');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1771,1,'一流');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1772,1,'世界');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1773,1,'特色');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1774,1,'领先');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1775,1,'研究型');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1776,1,'综合性');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1777,1,'设');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1778,1,'在建');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1779,1,'百年');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1780,1,'激越');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1781,1,'金声');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1782,1,'滞');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1783,1,'们');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1784,2,'进入');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1785,3,'已');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1786,2,'经过');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1787,2,'栏目');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1788,1,'故事');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1789,1,'师');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1790,1,'北');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1791,1,'原');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1792,3,'综合');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1793,2,'关注');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1794,1,'前端');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1795,2,'头条');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1796,1,'设备');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1797,1,'手机');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1798,1,'平板');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1799,1,'电脑');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1800,1,'适应');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1801,1,'自动');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1802,1,'布局');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1803,1,'式');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1804,1,'头');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1805,1,'设计开发');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1806,2,'后');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1807,1,'端');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1808,1,'同步');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1809,1,'新旧');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1810,1,'现行');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1811,1,'27');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1812,2,'3');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1813,1,'运');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1814,1,'为期');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1815,1,'维');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1816,2,'建议');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1817,2,'意见');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1818,1,'宝贵');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1819,1,'提出');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1820,1,'欢迎');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1821,1,'现');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1822,1,'需求');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1823,1,'满足');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1824,1,'基本');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1825,1,'调试');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1826,1,'融合');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1827,1,'响应');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1828,2,'调整');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1829,1,'其间');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1830,1,'采用');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1831,1,'步伐');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1832,1,'流');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1833,1,'双一');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1834,1,'随着');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1835,1,'窗口');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1836,1,'重要');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1837,2,'形象');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1838,1,'社会');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1839,2,'实力');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1840,1,'办学');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1841,1,'展示');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1842,3,'成为');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1843,1,'时光');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1844,1,'五');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1845,2,'了');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1846,1,'走过');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1847,1,'大家');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1848,1,'陪伴');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1849,1,'扁平化');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1850,1,'加快');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1851,1,'决定');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1852,1,'改版');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1853,1,'为主');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1854,1,'进行');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1855,1,'蓝');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1856,1,'沿用');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1857,1,'开发');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1858,2,'投稿');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1859,2,'由');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1860,1,'力');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1861,1,'网络');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1862,1,'品牌');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1863,1,'色调');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1864,1,'风貌');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1865,1,'提高');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1866,1,'以');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1867,1,'更好');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1868,1,'地');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1869,1,'升级');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1870,2,'历史');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1871,1,'底蕴');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1872,1,'时代');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1873,1,'展现');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1874,1,'比较');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1875,1,'70');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1876,1,'旗舰');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1877,1,'列表');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1878,1,'标杆');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1879,1,'学术创新');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1880,1,'教育研究');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1881,1,'未来');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1882,12,'重点学科');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1883,1,'全校');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1884,1,'提升');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1885,1,'市级');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1886,1,'文艺学');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1887,1,'心理');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1888,1,'建成');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1889,1,'42');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1890,1,'其中包括');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1891,9,'实验室');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1892,2,'工程');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1893,1,'移动');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1894,1,'中国移动');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1895,1,'高等学校');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1896,3,'高精尖');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1897,2,'7');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1898,1,'还');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1899,1,'文化研究');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1900,1,'价值');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1901,1,'文字');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1902,1,'典籍');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1903,1,'民俗');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1904,5,'研究中心');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1905,1,'国家级');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1906,1,'建有');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1907,1,'校级');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1908,4,'工程中心');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1909,1,'此外');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1910,2,'前列');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1911,1,'生物学');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1912,1,'中国史');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1913,1,'自然资源');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1914,2,'教育经济');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1915,1,'环境科学');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1916,1,'生态学');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1917,1,'公共管理');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1918,1,'细胞生物学');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1919,1,'理论物理');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1920,1,'古代史');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1921,2,'史');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1922,4,'理论');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1923,4,'史学');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1924,1,'民俗学');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1925,1,'物理化学');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1926,1,'地理学');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1927,1,'艺术学');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1928,1,'影视');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1929,2,'位居');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1930,5,'教育部');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1931,1,'其中');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1932,1,'数量');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1933,1,'天体');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1934,1,'语言文学');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1935,1,'戏剧');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1936,1,'英语');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1937,1,'有机化学');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1938,1,'无机化学');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1939,2,'物理');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1940,1,'凝聚态');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1941,1,'世界经济');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1942,1,'外国');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1943,1,'环境工程');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1944,1,'数学');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1945,15,'学科');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1946,1,'中国语');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1947,2,'学');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1948,1,'拥有');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1949,1,'自主');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1950,1,'设置');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1951,2,'本科');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1952,2,'专业');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1953,1,'审批权');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1954,1,'地带');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1955,1,'6');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1956,1,'之一');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1957,3,'现有');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1958,25,'个');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1959,2,'硕士学位');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1960,4,'授权');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1961,2,'学科点');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1962,1,'首');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1963,2,'博士');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1964,1,'几');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1965,1,'146');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1966,2,'交叉');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1967,2,'9');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1968,1,'培育');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1969,15,'重点');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1970,2,'2');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1971,1,'2002');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1972,2,'获');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1973,1,'37');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1974,6,'一级');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1975,1,'流动站');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1976,1,'有效');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1977,1,'109');
-INSERT INTO [IndexStats] ([IndexStatId],[Count],[Word]) VALUES (
-1978,2,'学位');
+4353,0,169,'ENGLISH');
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+1,2,'访问者',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+2,2,'小',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+3,2,'卫星',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+4,2,'完成',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+5,2,'总体',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+6,2,'方案设计',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+7,2,'评审',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+8,2,'党员',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+9,2,'学雷锋',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+10,3,'志愿服务',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+11,4,'月',9);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+12,2,'观测',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+13,2,'孙红',4);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+14,2,'到',4);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+15,2,'二',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+16,2,'附中',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+17,2,'调研',4);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+18,3,'周',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+19,3,'作',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+20,2,'宇',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+21,2,'香港',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+22,2,'冯',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+23,2,'燊',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+24,2,'培',4);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+25,2,'极地',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+26,12,'1',19);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+27,2,'BNU',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+28,2,'列',4);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+29,3,'活动',8);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+30,3,'召开',13);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+31,4,'2018',14);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+32,2,'年春',4);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+33,2,'季',4);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+34,3,'学期',7);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+35,2,'党支部',4);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+36,2,'工作会',10);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+37,3,'惠',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+38,2,'若',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+39,2,'琪',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+40,2,'女排',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+41,5,'发展',8);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+42,2,'基金',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+43,4,'体育',4);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+44,2,'支教',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+45,2,'项目',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+46,2,'首场',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+47,3,'宣讲会',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+48,4,'在',6);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+49,4,'我校',12);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+50,3,'举行',4);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+51,2,'国学',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+52,3,'代表',7);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+53,3,'国家',12);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+54,2,'卫',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+55,3,'国有资产',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+56,3,'议',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+57,2,'庞',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+58,2,'丽娟',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+59,2,'教授',4);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+60,2,'当选',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+61,4,'为',5);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+62,2,'全国人大常委会',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+63,2,'委员',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+64,2,'汉字',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+65,2,'之美',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+66,3,'全球',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+67,2,'青年',4);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+68,3,'设计',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+69,2,'大赛',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+70,3,'正式',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+71,2,'启动',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+72,2,'班长',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+73,4,'12',9);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+74,2,'位',4);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+75,4,'教师',7);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+76,2,'入选',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+77,3,'第三',5);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+78,2,'期',6);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+79,2,'教育系',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+80,2,'新学',6);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+81,2,'史培军',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+82,2,'计委',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+83,4,'心理学',6);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+84,4,'部',10);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+85,5,'联合',7);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+86,3,'举办',19);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+87,2,'加强',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+88,2,'心理健康',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+89,2,'人才',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+90,2,'联',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+91,2,'学联',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+92,2,'做活',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+93,3,'动',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+94,2,'青海',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+95,2,'领导',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+96,3,'来校',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+97,2,'商洽',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+98,2,'对口',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+99,2,'帮扶',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+100,2,'事宜',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+101,2,'第三届',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+102,2,'中美',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+103,2,'智慧',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+104,3,'大会',5);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+105,2,'主持',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+106,3,'规范',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+107,3,'学术',7);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+108,2,'记者会',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+109,12,'人才招聘',24);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+110,12,'科学研究',29);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+111,12,'招生就业',27);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+112,12,'本科生',18);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+113,12,'招生',39);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+114,12,'研究生',18);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+115,12,'博士后',14);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+116,12,'留学生',13);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+117,12,'继续教育',16);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+118,12,'与',74);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+119,12,'教师培训',16);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+120,12,'就业',13);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+121,12,'创业',14);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+122,12,'合作交流',27);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+123,12,'国际交流',14);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+124,12,'合作',33);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+125,12,'国内',14);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+126,12,'港澳台',14);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+127,12,'事务',14);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+128,12,'教育',22);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+129,12,'基金会',19);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+130,12,'图书',27);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+131,12,'档案',27);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+132,12,'管理机构',26);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+133,12,'图书馆',14);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+134,12,'院系设置',26);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+135,12,'学者',13);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+136,12,'ENGLISH',12);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+137,12,'VERSION',12);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+138,12,'书记',40);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+139,12,'信箱',72);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+140,12,'校长',42);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+141,12,'校领导',37);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+142,12,'接待日',24);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+143,12,'导航',24);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+144,12,'师大',64);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+145,12,'新闻',36);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+146,12,'图文报道',12);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+147,12,'网络电视',12);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+148,12,'校报',12);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+149,12,'在线',12);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+150,12,'媒体',12);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+151,13,'学校',68);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+152,12,'概况',26);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+153,12,'学校简介',14);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+154,12,'校史',15);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+155,12,'沿革',14);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+156,12,'现任',13);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+157,12,'历任',28);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+158,12,'著名',13);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+159,12,'历史名人',13);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+160,3,'批',5);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+161,12,'档案馆',14);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+162,13,'校园',17);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+163,2,'蒙古国',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+164,2,'立',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+165,2,'师范大学',6);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+166,2,'一行',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+167,3,'开展',8);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+168,2,'消防',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+169,2,'安全',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+170,2,'专项',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+171,2,'检查',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+172,2,'台湾',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+173,2,'代表团',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+174,2,'来访',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+175,2,'组织学',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+176,3,'生',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+177,3,'观看',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+178,2,'十三',4);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+179,2,'届',4);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+180,2,'全国人大',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+181,2,'一次',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+182,2,'会议',4);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+183,2,'闭幕会',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+184,5,'和',13);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+185,2,'总理',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+186,2,'会见',4);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+187,12,'走进',27);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+188,2,'董奇',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+189,3,'大',23);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+190,13,'地图',14);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+191,12,'校园风光',13);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+192,12,'校',14);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+193,12,'历',13);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+194,12,'黄',13);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+195,12,'页',18);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+196,3,'关于',11);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+197,3,'新版',7);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+198,4,'中文',9);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+199,3,'主页',13);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+200,3,'上线',7);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+201,3,'试运行',8);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+202,6,'的',59);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+203,3,'通知',11);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+204,3,'北师大',5);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+205,3,'快讯',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+206,2,'更多',6);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+207,3,'各',4);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+208,4,'单位',5);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+209,3,'学习贯彻',8);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+210,3,'落实',4);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+211,3,'党',20);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+212,3,'十九',24);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+213,3,'精神',18);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+214,2,'万',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+215,2,'均',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+216,3,'计划',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+217,2,'增容',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+218,2,'材料采购',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+219,2,'招标公告',8);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+220,2,'热力',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+221,3,'2017',20);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+222,2,'2020',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+223,2,'年度',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+224,2,'五金',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+225,2,'水暖',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+226,2,'维修',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+227,2,'材料',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+228,2,'供货商',4);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+229,2,'入围',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+230,2,'评选',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+231,2,'专利转让',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+232,3,'校内',7);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+233,2,'服务网点',6);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+234,3,'第二',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+235,4,'次',24);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+236,2,'食堂',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+237,2,'物资',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+238,2,'遴选',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+239,3,'快速',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+240,2,'电力',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+241,3,'登录',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+242,3,'管理处',5);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+243,2,'项目招标',4);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+244,2,'区',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+245,2,'燃气',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+246,2,'工程监理',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+247,2,'询价',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+248,2,'公告',8);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+249,4,'一',6);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+250,2,'种',4);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+251,2,'用于',4);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+252,2,'制备',8);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+253,2,'锝',4);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+254,2,'99m',4);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+255,2,'标记',4);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+256,2,'GSA',4);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+257,2,'药盒',4);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+258,2,'方法',4);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+259,2,'专利权',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+260,2,'转让',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+261,2,'公示',4);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+262,13,'北京师范大学',41);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+263,2,'配电',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+264,2,'设施',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+265,2,'残值',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+266,2,'处置',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+267,3,'后勤',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+268,2,'G',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+269,5,'信息',11);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+270,3,'公开',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+271,12,'号',36);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+272,12,'邮编',12);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+273,12,'100875',12);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+274,12,'京',24);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+275,12,'ICP',12);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+276,12,'备',24);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+277,12,'05066832',12);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+278,12,'公网',12);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+279,12,'安',12);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+280,12,'110402430002',12);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+281,13,'电话',13);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+282,12,'查号台',12);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+283,12,'010',24);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+284,12,'58806183',12);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+285,12,'后勤服务',12);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+286,12,'热线',12);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+287,12,'58801111',12);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+288,12,'Site',12);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+289,12,'designed',12);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+290,12,'by',12);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+291,12,'MONOKEROS',12);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+292,3,'您',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+293,2,'是',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+294,12,'19',12);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+295,3,'门户',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+296,12,'大街',12);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+297,12,'北京市',24);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+298,2,'人',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+299,3,'管理系统',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+300,3,'邮箱',8);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+301,4,'学生',6);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+302,3,'常用',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+303,3,'链接',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+304,5,'信息网',8);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+305,5,'络',8);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+306,3,'服务',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+307,5,'建设',9);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+308,4,'指挥部',4);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+309,3,'校友总会',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+310,3,'学风',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+311,5,'教师教育',9);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+312,3,'机构',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+313,3,'教育科',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+314,3,'刊',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+315,3,'心晴',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+316,3,'IPv6',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+317,3,'支持',4);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+318,5,'系统',6);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+319,13,'版权所有',13);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+320,12,'地址',13);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+321,12,'新街口',12);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+322,4,'校区',6);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+323,3,'校务',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+324,2,'贺词',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+325,2,'代',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+326,2,'水稻',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+327,2,'小麦',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+328,2,'杂交育种',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+329,2,'技术',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+330,2,'前世',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+331,2,'今生',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+332,2,'.23',4);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+333,12,'外',14);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+334,2,'哲',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+335,2,'讲坛',4);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+336,2,'The',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+337,2,'Un',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+338,2,'Refutation',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+339,2,'of',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+340,2,'Idealism',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+341,2,'.24',4);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+342,3,'人文',5);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+343,2,'宗教',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+344,2,'讲堂',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+345,2,'中医系',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+346,3,'讲座',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+347,3,'29',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+348,2,'大讲堂',4);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+349,2,'名家',6);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+350,3,'京师',11);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+351,5,'创新',14);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+352,2,'沙河',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+353,5,'年',15);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+354,3,'孔子',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+355,5,'学院',19);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+356,3,'专题',8);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+357,2,'学习会',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+358,3,'陈',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+359,2,'丽',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+360,2,'参加人',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+361,2,'事',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+362,3,'处',11);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+363,4,'社会科学',8);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+364,4,'学习',8);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+365,2,'党校工作',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+366,3,'动态',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+367,2,'预告',14);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+368,3,'03',15);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+369,2,'.27',4);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+370,2,'学术讲座',4);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+371,2,'青藏高原',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+372,2,'东亚',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+373,2,'季风',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+374,2,'.29',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+375,2,'真相',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+376,2,'圆桌',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+377,3,'第',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+378,2,'思想',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+379,2,'峰',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+380,4,'等',9);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+381,2,'发现',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+382,2,'狄拉克',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+383,2,'费米',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+384,2,'体系',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+385,4,'新',10);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+386,2,'相图',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+387,2,'认知科学',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+388,2,'灵',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+389,4,'哲学',8);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+390,2,'前沿',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+391,3,'问题',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+392,3,'研究',9);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+393,2,'研讨班',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+394,4,'传播学',4);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+395,6,'院',23);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+396,4,'马克思主义',4);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+397,2,'观',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+398,2,'课程',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+399,3,'通知公告',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+400,2,'新年',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+401,2,'之',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+402,2,'陆',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+403,3,'张',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+404,2,'和心',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+405,2,'及其',6);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+406,2,'40',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+407,2,'博士生',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+408,2,'专场',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+409,3,'瀚',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+410,3,'德',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+411,2,'经济学',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+412,2,'暨',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+413,2,'经管',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+414,3,'对',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+415,2,'收入',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+416,2,'健康',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+417,2,'吸烟',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+418,2,'66',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+419,2,'效应',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+420,2,'第二届',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+421,2,'亚洲',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+422,2,'科技',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+423,3,'减灾',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+424,2,'成果',4);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+425,3,'物理学',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+426,3,'系',4);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+427,2,'因果',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+428,2,'马',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+429,2,'天星',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+430,3,'管理',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+431,1,'变化',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+432,2,'刑事法律',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+433,1,'究',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+434,1,'学研',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+435,1,'水科',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+436,1,'地球',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+437,1,'资源管理',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+438,2,'所',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+439,1,'应急',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+440,1,'汉语',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+441,5,'中心',22);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+442,2,'质量',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+443,2,'监测',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+444,2,'协同',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+445,1,'文化学',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+446,2,'传播',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+447,1,'古籍',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+448,1,'传统文化',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+449,1,'信息处',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+450,1,'理',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+451,2,'研究所',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+452,3,'北京',4);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+453,2,'文化发展',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+454,1,'新材料',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+455,3,'基础教育',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+456,1,'耘',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+457,1,'文化',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+458,2,'传媒',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+459,1,'学学',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+460,1,'地理',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+461,1,'科学学',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+462,2,'言文',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+463,2,'经济',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+464,2,'工商管理学',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+465,1,'法学院',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+466,4,'中国',6);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+467,1,'社会管理',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+468,2,'研究院',11);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+469,2,'社会学',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+470,1,'外国语',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+471,1,'运动学',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+472,2,'文学院',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+473,1,'励',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+474,2,'教育学',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+475,10,'首页',12);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+476,10,'位置',10);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+477,2,'政府管理',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+478,2,'艺术',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+479,1,'公共政策',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+480,1,'社会发展',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+481,1,'核科学',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+482,1,'技术学',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+483,1,'科学',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+484,10,'当前',11);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+485,1,'环境学',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+486,1,'生命科学',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+487,1,'国民',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+488,1,'统计学',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+489,1,'科学学院',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+490,1,'天文系',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+491,1,'化学',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+492,1,'数学科',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+493,1,'历史学',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+494,2,'核算',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+495,1,'有限公司',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+496,1,'联合国',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+497,1,'资助',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+498,1,'校友会',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+499,1,'际',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+500,2,'工作',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+501,2,'校友',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+502,1,'联络办',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+503,1,'指导',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+504,1,'心理咨询',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+505,1,'学生就业',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+506,1,'珠海',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+507,1,'人力资源',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+508,1,'服务中心',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+509,1,'资源',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+510,1,'分校',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+511,1,'对外',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+512,2,'大学',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+513,1,'科技园',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+514,1,'建设管理',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+515,1,'资产经营',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+516,1,'北京师大',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+517,2,'实验',4);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+518,1,'理科',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+519,1,'出版集团',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+520,1,'学报',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+521,1,'文科',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+522,1,'幼儿园',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+523,1,'校医',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+524,1,'附属',5);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+525,2,'小学',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+526,1,'合作办学',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+527,1,'香港浸会大学',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+528,1,'社',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+529,1,'馆',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+530,1,'高等教育学',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+531,1,'研究生会',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+532,1,'校学生会',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+533,1,'校工',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+534,1,'群众组织',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+535,1,'中学',4);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+536,1,'公共',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+537,1,'校团委',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+538,1,'分析',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+539,3,'宣传部',5);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+540,1,'审计处',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+541,1,'离退休',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+542,1,'工作处',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+543,1,'统战部',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+544,1,'科学技术',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+545,1,'产业',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+546,1,'纪检监察',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+547,1,'经营性',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+548,1,'资产管理',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+549,1,'委员会',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+550,1,'合作处',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+551,1,'武装部',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+552,1,'教育管理',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+553,1,'出国留学',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+554,1,'联盟',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+555,2,'国际',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+556,1,'教育中心',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+557,2,'.',8);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+558,2,'辅导员',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+559,1,'培训',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+560,1,'会',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+561,1,'研修',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+562,2,'基地',8);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+563,1,'测试',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+564,1,'分会',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+565,1,'财经',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+566,1,'研究室',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+567,1,'干部教育',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+568,1,'培训基地',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+569,1,'教辅',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+570,3,'及',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+571,1,'机关部',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+572,2,'党委办',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+573,2,'公',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+574,2,'室',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+575,1,'发展规划',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+576,1,'学科建设',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+577,1,'学院管理',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+578,1,'督察',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+579,1,'督办',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+580,2,'办公室',11);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+581,2,'保卫部',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+582,1,'人事处',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+583,1,'共建',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+584,2,'全国',4);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+585,2,'党校',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+586,1,'基建处',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+587,1,'组织部',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+588,1,'研究生院',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+589,1,'公共服务',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+590,2,'平台',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+591,1,'教务处',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+592,3,'党委',8);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+593,1,'数据',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+594,1,'ArcGis',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+595,1,'基础',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+596,1,'地理信息',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+597,1,'基于',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+598,1,'示意图',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+599,1,'图件',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+600,1,'说明',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+601,1,'三维',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+602,3,'图',4);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+603,1,'影像',4);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+604,1,'为了',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+605,1,'标准',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+606,2,'包括',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+607,1,'布',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+608,1,'并发',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+609,1,'制作',5);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+610,1,'进一步',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+611,2,'统一',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+612,1,'更新',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+613,1,'及时',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+614,1,'并',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+615,1,'平面图',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+616,2,'相关',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+617,1,'共享',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+618,1,'供',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+619,1,'格式',4);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+620,1,'jpg',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+621,1,'tif',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+622,1,'2012',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+623,2,'5',6);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+624,1,'来源',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+625,1,'GeoEye',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+626,1,'拍摄',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+627,2,'2011',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+628,2,'10',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+629,1,'13',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+630,2,'日',5);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+631,1,'查看',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+632,1,'矢量',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+633,1,'矢量图',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+634,1,'片',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+635,1,'版图',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+636,1,'mxd',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+637,1,'2014',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+638,1,'8',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+639,2,'使用',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+640,1,'如',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+641,2,'中',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+642,1,'遇到',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+643,1,'拨打',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+644,1,'58808113',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+645,2,'点击',5);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+646,1,'请',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+647,1,'高清',6);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+648,1,'版',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+649,1,'需',4);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+650,1,'申请',4);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+651,1,'申请单',4);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+652,2,'时间',6);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+653,1,'下载',11);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+654,1,'启功',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+655,1,'钟敬文',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+656,1,'白寿彝',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+657,1,'楚',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+658,1,'梁启超',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+659,1,'李大钊',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+660,1,'钱玄同',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+661,1,'鲁迅',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+662,1,'熙',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+663,1,'锦',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+664,1,'南',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+665,1,'贻',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+666,1,'黎',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+667,1,'秀峰',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+668,1,'周谷城',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+669,1,'杨明',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+670,1,'轩',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+671,1,'李',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+672,1,'杨',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+673,1,'垣',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+674,1,'袁',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+675,1,'敦礼',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+676,1,'李建',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+677,1,'勋',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+678,1,'达',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+679,1,'高级',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+680,1,'骨干',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+681,1,'末',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+682,2,'11',12);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+683,1,'领会',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+684,1,'23',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+685,1,'成功',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+686,1,'篇',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+687,2,'64',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+688,1,'数',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+689,1,'文章',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+690,2,'4',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+691,1,'页数',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+692,1,'研修班',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+693,1,'总',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+694,2,'二级',8);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+695,1,'座谈会',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+696,1,'报告',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+697,1,'淑芳',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+698,1,'王',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+699,1,'下',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+700,2,'21',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+701,1,'上一',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+702,1,'贯彻',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+703,1,'05',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+704,2,'阅读',21);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+705,1,'面对面',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+706,1,'新作',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+707,2,'20',5);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+708,1,'组织',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+709,1,'师生员工',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+710,1,'集中',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+711,2,'新时代',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+712,1,'中国共产党',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+713,1,'第十九',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+714,1,'全国代表大会',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+715,1,'开幕会',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+716,1,'18',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+717,2,'24',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+718,1,'学习宣传',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+719,1,'告',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+720,1,'大报',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+721,2,'25',4);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+722,1,'热',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+723,1,'巡',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+724,1,'主题',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+725,1,'系列',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+726,1,'知识',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+727,1,'论坛',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+728,1,'竞赛',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+729,2,'首都',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+730,2,'高校',5);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+731,1,'宣讲',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+732,1,'来',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+733,1,'报告会',5);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+734,1,'08',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+735,1,'01',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+736,1,'讲',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+737,2,'师生',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+738,1,'22',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+739,1,'发布',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+740,1,'xwzx',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+741,1,'改革',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+742,1,'推',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+743,1,'相',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+744,1,'关心',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+745,1,'cn',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+746,1,'故',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+747,1,'广大',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+748,1,'edu',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+749,1,'bnu',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+750,1,'不',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+751,1,'运行',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+752,1,'木铎',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+753,1,'58808001',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+754,1,'58805293',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+755,1,'58807173',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+756,1,'联系电话',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+757,1,'反馈',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+758,1,'zhuye',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+759,1,'http',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+760,1,'同行',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+761,1,'一路',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+762,1,'相伴',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+763,1,'你',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+764,1,'将',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+765,1,'朋友',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+766,1,'征程',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+767,1,'一流',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+768,1,'世界',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+769,1,'特色',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+770,1,'领先',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+771,1,'研究型',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+772,1,'综合性',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+773,1,'设',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+774,1,'在建',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+775,1,'百年',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+776,1,'激越',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+777,1,'金声',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+778,1,'滞',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+779,1,'们',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+780,2,'进入',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+781,2,'已',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+782,2,'经过',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+783,1,'栏目',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+784,1,'故事',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+785,1,'师',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+786,1,'北',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+787,1,'原',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+788,2,'综合',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+789,1,'关注',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+790,1,'前端',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+791,1,'头条',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+792,1,'设备',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+793,1,'手机',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+794,1,'平板',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+795,1,'电脑',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+796,1,'适应',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+797,1,'自动',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+798,1,'布局',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+799,1,'式',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+800,1,'头',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+801,1,'设计开发',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+802,1,'后',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+803,1,'端',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+804,1,'同步',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+805,1,'新旧',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+806,1,'现行',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+807,1,'27',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+808,1,'3',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+809,1,'运',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+810,1,'为期',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+811,1,'维',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+812,1,'建议',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+813,1,'意见',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+814,1,'宝贵',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+815,1,'提出',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+816,1,'欢迎',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+817,1,'现',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+818,1,'需求',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+819,1,'满足',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+820,1,'基本',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+821,1,'调试',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+822,1,'融合',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+823,1,'响应',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+824,1,'调整',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+825,1,'其间',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+826,1,'采用',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+827,1,'步伐',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+828,1,'流',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+829,1,'双一',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+830,1,'随着',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+831,1,'窗口',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+832,1,'重要',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+833,1,'形象',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+834,1,'社会',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+835,2,'实力',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+836,1,'办学',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+837,1,'展示',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+838,2,'成为',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+839,1,'时光',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+840,1,'五',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+841,2,'了',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+842,1,'走过',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+843,1,'大家',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+844,1,'陪伴',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+845,1,'扁平化',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+846,1,'加快',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+847,1,'决定',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+848,1,'改版',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+849,1,'为主',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+850,1,'进行',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+851,1,'蓝',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+852,1,'沿用',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+853,1,'开发',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+854,1,'投稿',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+855,1,'由',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+856,1,'力',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+857,1,'网络',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+858,1,'品牌',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+859,1,'色调',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+860,1,'风貌',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+861,1,'提高',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+862,1,'以',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+863,1,'更好',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+864,1,'地',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+865,1,'升级',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+866,1,'历史',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+867,1,'底蕴',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+868,1,'时代',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+869,1,'展现',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+870,1,'比较',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+871,1,'70',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+872,1,'旗舰',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+873,1,'列表',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+874,1,'标杆',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+875,1,'学术创新',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+876,1,'教育研究',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+877,1,'未来',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+878,1,'重点学科',12);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+879,1,'全校',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+880,1,'提升',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+881,1,'市级',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+882,1,'文艺学',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+883,1,'心理',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+884,1,'建成',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+885,1,'42',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+886,1,'其中包括',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+887,1,'实验室',9);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+888,1,'工程',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+889,1,'移动',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+890,1,'中国移动',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+891,1,'高等学校',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+892,1,'高精尖',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+893,1,'7',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+894,1,'还',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+895,1,'文化研究',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+896,1,'价值',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+897,1,'文字',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+898,1,'典籍',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+899,1,'民俗',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+900,1,'研究中心',5);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+901,1,'国家级',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+902,1,'建有',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+903,1,'校级',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+904,1,'工程中心',4);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+905,1,'此外',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+906,1,'前列',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+907,1,'生物学',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+908,1,'中国史',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+909,1,'自然资源',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+910,1,'教育经济',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+911,1,'环境科学',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+912,1,'生态学',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+913,1,'公共管理',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+914,1,'细胞生物学',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+915,1,'理论物理',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+916,1,'古代史',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+917,1,'史',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+918,1,'理论',4);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+919,1,'史学',4);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+920,1,'民俗学',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+921,1,'物理化学',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+922,1,'地理学',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+923,1,'艺术学',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+924,1,'影视',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+925,1,'位居',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+926,1,'教育部',5);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+927,1,'其中',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+928,1,'数量',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+929,1,'天体',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+930,1,'语言文学',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+931,1,'戏剧',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+932,1,'英语',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+933,1,'有机化学',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+934,1,'无机化学',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+935,1,'物理',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+936,1,'凝聚态',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+937,1,'世界经济',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+938,1,'外国',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+939,1,'环境工程',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+940,1,'数学',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+941,1,'学科',15);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+942,1,'中国语',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+943,1,'学',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+944,1,'拥有',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+945,1,'自主',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+946,1,'设置',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+947,1,'本科',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+948,1,'专业',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+949,1,'审批权',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+950,1,'地带',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+951,1,'6',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+952,1,'之一',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+953,1,'现有',3);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+954,1,'个',25);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+955,1,'硕士学位',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+956,1,'授权',4);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+957,1,'学科点',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+958,1,'首',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+959,1,'博士',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+960,1,'几',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+961,1,'146',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+962,1,'交叉',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+963,1,'9',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+964,1,'培育',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+965,1,'重点',15);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+966,1,'2',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+967,1,'2002',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+968,1,'获',2);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+969,1,'37',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+970,1,'一级',6);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+971,1,'流动站',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+972,1,'有效',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+973,1,'109',1);
+INSERT INTO [IndexStats] ([IndexStatId],[DocumentFrequency],[Word],[WordFrequency]) VALUES (
+974,1,'学位',2);
 COMMIT;
 

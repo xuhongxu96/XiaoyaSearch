@@ -45,7 +45,7 @@ namespace XiaoyaFileParser.Parsers
             {
                 result.Add(new Token
                 {
-                    Text = segment.Text,
+                    Text = segment.Text.ToLower(),
                     Position = segment.Position,
                     Length = segment.Length,
                 });

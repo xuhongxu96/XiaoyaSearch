@@ -8,6 +8,7 @@ namespace XiaoyaStore.Data.Model
     {
         public int IndexStatId { get; set; }
         public string Word { get; set; }
-        public Int64 Count { get; set; }
+        public long WordFrequency { get; set; }
+        public long DocumentFrequency { get; set; }
     }
 }

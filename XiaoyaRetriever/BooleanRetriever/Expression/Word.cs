@@ -45,7 +45,7 @@ namespace XiaoyaRetriever.BooleanRetriever.Expression
             }
             else
             {
-                mFrequency = stat.Count;
+                mFrequency = stat.WordFrequency;
             }
             mConfig = config;
         }

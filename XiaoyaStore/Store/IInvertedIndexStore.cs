@@ -10,8 +10,6 @@ namespace XiaoyaStore.Store
         InvertedIndex LoadByUrlFilePosition(int urlFileId, int position);
         InvertedIndex LoadByUrlFilePosition(UrlFile urlFile, int position);
         IEnumerable<InvertedIndex> LoadByWord(string word);
-        void SaveInvertedIndex(InvertedIndex invertedIndex);
-        void SaveInvertedIndices(IEnumerable<InvertedIndex> invertedIndices);
         void ClearAndSaveInvertedIndices(UrlFile urlFile, IEnumerable<InvertedIndex> invertedIndices);
     }
 }

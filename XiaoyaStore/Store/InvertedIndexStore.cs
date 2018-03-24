@@ -14,75 +14,6 @@ namespace XiaoyaStore.Store
         public InvertedIndexStore(DbContextOptions options = null) : base(options)
         { }
 
-        public void SaveInvertedIndex(InvertedIndex invertedIndex)
-        {
-            using (var context = NewContext())
-            {
-                context.InvertedIndices.Add(invertedIndex);
-
-                var stat = context.IndexStats.SingleOrDefault(o => o.Word == invertedIndex.Word);
-                if (stat == null)
-                {
-                    stat = new IndexStat
-                    {
-                        Word = invertedIndex.Word,
-                        Count = 1,
-                    };
-                    context.IndexStats.Add(stat);
-                }
-                else
-                {
-                    stat.Count++;
-                    if (stat.Count > long.MaxValue / 2)
-                    {
-                        stat.Count = long.MaxValue / 2;
-                    }
-                }
-
-                context.SaveChanges();
-            }
-        }
-
-        public void SaveInvertedIndices(IEnumerable<InvertedIndex> invertedIndices)
-        {
-            using (var context = NewContext())
-            {
-                context.InvertedIndices.AddRange(invertedIndices);
-
-                var groupedIndices = invertedIndices.GroupBy(o => o.Word)
-                    .Select(g => new
-                    {
-                        Word = g.Key,
-                        Count = g.Count(),
-                    });
-
-                foreach (var index in groupedIndices)
-                {
-                    var stat = context.IndexStats.SingleOrDefault(o => o.Word == index.Word);
-                    if (stat == null)
-                    {
-                        stat = new IndexStat
-                        {
-                            Word = index.Word,
-                            Count = index.Count,
-                        };
-                        context.IndexStats.Add(stat);
-                    }
-                    else
-                    {
-                        stat.Count += index.Count;
-                    }
-
-                    if (stat.Count > long.MaxValue / 2)
-                    {
-                        stat.Count = long.MaxValue / 2;
-                    }
-                }
-
-                context.SaveChanges();
-            }
-        }
-
         public void ClearAndSaveInvertedIndices(UrlFile urlFile, IEnumerable<InvertedIndex> invertedIndices)
         {
             using (var context = NewContext())
@@ -101,9 +32,10 @@ namespace XiaoyaStore.Store
                 foreach (var index in groupedRemovedIndices)
                 {
                     var stat = context.IndexStats.SingleOrDefault(o => o.Word == index.Word);
-                    if (stat != null && stat.Count > 0)
+                    if (stat != null && stat.WordFrequency > 0)
                     {
-                        stat.Count -= index.Count;
+                        stat.WordFrequency -= index.Count;
+                        stat.DocumentFrequency--;
                     }
                 }
 
@@ -125,18 +57,25 @@ namespace XiaoyaStore.Store
                         stat = new IndexStat
                         {
                             Word = index.Word,
-                            Count = index.Count,
+                            WordFrequency = index.Count,
+                            DocumentFrequency = 1,
                         };
                         context.IndexStats.Add(stat);
                     }
                     else
                     {
-                        stat.Count += index.Count;
+                        stat.WordFrequency += index.Count;
+                        stat.DocumentFrequency++;
                     }
 
-                    if (stat.Count > long.MaxValue / 2)
+                    if (stat.WordFrequency > long.MaxValue / 2)
                     {
-                        stat.Count = long.MaxValue / 2;
+                        stat.WordFrequency = long.MaxValue / 2;
+                    }
+
+                    if (stat.DocumentFrequency > long.MaxValue - 1)
+                    {
+                        stat.DocumentFrequency = long.MaxValue - 1;
                     }
                 }
 
@@ -161,9 +100,9 @@ namespace XiaoyaStore.Store
                 foreach (var index in groupedRemovedIndices)
                 {
                     var stat = context.IndexStats.SingleOrDefault(o => o.Word == index.Word);
-                    if (stat != null && stat.Count > 0)
+                    if (stat != null && stat.WordFrequency > 0)
                     {
-                        stat.Count -= index.Count;
+                        stat.WordFrequency -= index.Count;
                     }
                 }
 
