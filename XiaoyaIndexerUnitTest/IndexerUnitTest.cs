@@ -53,14 +53,20 @@ namespace XiaoyaIndexerUnitTest
 
             using (var context = new XiaoyaSearchContext(options))
             {
-                context.Database.EnsureCreated();
+                if (context.Database.EnsureCreated())
+                {
+                    context.Database.ExecuteSqlCommand(File.ReadAllText("init.sql"));
+                }
 
-                context.RemoveRange(context.UrlFiles);
+                foreach (var urlFile in context.UrlFiles)
+                {
+                    urlFile.IsIndexed = false;
+                }
+
                 context.RemoveRange(context.InvertedIndices);
                 context.RemoveRange(context.IndexStats);
+                context.RemoveRange(context.UrlFileIndexStats);
                 context.SaveChanges();
-
-                context.Database.ExecuteSqlCommand(File.ReadAllText("init.sql"));
             }
 
             IIndexer indexer = new SimpleIndexer(config);
@@ -72,7 +78,7 @@ namespace XiaoyaIndexerUnitTest
 
             while (!indexer.IsWaiting)
             {
-                Thread.Sleep(5000);
+                Thread.Sleep(1000);
             }
 
             indexer.StopIndex();

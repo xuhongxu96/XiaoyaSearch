@@ -16,6 +16,14 @@ namespace XiaoyaStore.Store
         public UrlFileStore(DbContextOptions options = null) : base(options)
         { }
 
+        public int Count()
+        {
+            using (var context = NewContext())
+            {
+                return context.UrlFiles.Count();
+            }
+        }
+
         public UrlFile LoadAnyForIndex()
         {
             using (var context = NewContext())

@@ -107,6 +107,21 @@ namespace XiaoyaStoreUnitTest
                     Assert.IsNotNull(stat);
                     Assert.AreEqual(1, stat.WordFrequency);
                     Assert.AreEqual(1, stat.DocumentFrequency);
+
+                    var urlFileStat = context.UrlFileIndexStats
+                        .SingleOrDefault(o => o.UrlFileId == urlFile.UrlFileId && o.Word == "你好");
+                    Assert.IsNotNull(urlFileStat);
+                    Assert.AreEqual(2, urlFileStat.WordFrequency);
+
+                    urlFileStat = context.UrlFileIndexStats
+                        .SingleOrDefault(o => o.UrlFileId == urlFile.UrlFileId && o.Word == "我们");
+                    Assert.IsNotNull(urlFileStat);
+                    Assert.AreEqual(1, urlFileStat.WordFrequency);
+
+                    urlFileStat = context.UrlFileIndexStats
+                        .SingleOrDefault(o => o.UrlFileId == urlFile.UrlFileId && o.Word == "是");
+                    Assert.IsNotNull(urlFileStat);
+                    Assert.AreEqual(1, urlFileStat.WordFrequency);
                 }
 
                 invertedIndices = new List<InvertedIndex>
@@ -154,6 +169,21 @@ namespace XiaoyaStoreUnitTest
                     Assert.IsNotNull(stat);
                     Assert.AreEqual(1, stat.WordFrequency);
                     Assert.AreEqual(1, stat.DocumentFrequency);
+
+                    var urlFileStat = context.UrlFileIndexStats
+                        .SingleOrDefault(o => o.UrlFileId == urlFile.UrlFileId && o.Word == "你");
+                    Assert.IsNotNull(urlFileStat);
+                    Assert.AreEqual(1, urlFileStat.WordFrequency);
+
+                    urlFileStat = context.UrlFileIndexStats
+                        .SingleOrDefault(o => o.UrlFileId == urlFile.UrlFileId && o.Word == "我");
+                    Assert.IsNotNull(urlFileStat);
+                    Assert.AreEqual(1, urlFileStat.WordFrequency);
+
+                    urlFileStat = context.UrlFileIndexStats
+                        .SingleOrDefault(o => o.UrlFileId == urlFile.UrlFileId && o.Word == "是");
+                    Assert.IsNotNull(urlFileStat);
+                    Assert.AreEqual(1, urlFileStat.WordFrequency);
                 }
 
                 using (var context = new XiaoyaSearchContext(options))
@@ -215,6 +245,21 @@ namespace XiaoyaStoreUnitTest
                     Assert.IsNotNull(stat);
                     Assert.AreEqual(2, stat.WordFrequency);
                     Assert.AreEqual(2, stat.DocumentFrequency);
+
+                    var urlFileStat = context.UrlFileIndexStats
+                        .SingleOrDefault(o => o.UrlFileId == urlFile.UrlFileId && o.Word == "你");
+                    Assert.IsNotNull(urlFileStat);
+                    Assert.AreEqual(1, urlFileStat.WordFrequency);
+
+                    urlFileStat = context.UrlFileIndexStats
+                        .SingleOrDefault(o => o.UrlFileId == urlFile.UrlFileId && o.Word == "我");
+                    Assert.IsNotNull(urlFileStat);
+                    Assert.AreEqual(1, urlFileStat.WordFrequency);
+
+                    urlFileStat = context.UrlFileIndexStats
+                        .SingleOrDefault(o => o.UrlFileId == urlFile.UrlFileId && o.Word == "是");
+                    Assert.IsNotNull(urlFileStat);
+                    Assert.AreEqual(1, urlFileStat.WordFrequency);
                 }
             }
             finally

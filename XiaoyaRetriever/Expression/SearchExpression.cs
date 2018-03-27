@@ -4,17 +4,17 @@ using System.Text;
 using XiaoyaRetriever.Config;
 using XiaoyaStore.Data.Model;
 
-namespace XiaoyaRetriever.BooleanRetriever.Expression
+namespace XiaoyaRetriever.Expression
 {
-    public abstract class Expression
+    public abstract class SearchExpression
     {
         public abstract long Frequency { get; }
         public abstract bool IsIncluded { get; }
+        public virtual bool IsParsedFromFreeText => false;
 
         public abstract void SetConfig(RetrieverConfig config);
-        public abstract IEnumerable<RetrievedUrlFilePositions> Retrieve();
 
-        public static implicit operator Expression(string w)
+        public static implicit operator SearchExpression(string w)
         {
             return new Word(w);
         }

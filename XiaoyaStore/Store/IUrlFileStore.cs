@@ -12,5 +12,6 @@ namespace XiaoyaStore.Store
         UrlFile LoadByUrl(string url);
         UrlFile LoadByFilePath(string path);
         UrlFile LoadAnyForIndex();
+        int Count();
     }
 }

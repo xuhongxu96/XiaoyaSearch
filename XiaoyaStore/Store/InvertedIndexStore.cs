@@ -32,11 +32,34 @@ namespace XiaoyaStore.Store
                 foreach (var index in groupedRemovedIndices)
                 {
                     var stat = context.IndexStats.SingleOrDefault(o => o.Word == index.Word);
-                    if (stat != null && stat.WordFrequency > 0)
+                    if (stat != null)
                     {
                         stat.WordFrequency -= index.Count;
                         stat.DocumentFrequency--;
+
+                        if (stat.WordFrequency < 0)
+                        {
+                            stat.WordFrequency = 0;
+                        }
+                        
+                        if (stat.DocumentFrequency < 0)
+                        {
+                            stat.DocumentFrequency = 0;
+                        }
                     }
+
+                    var urlFileStat = context.UrlFileIndexStats
+                        .SingleOrDefault(o => o.UrlFileId == urlFile.UrlFileId && o.Word == index.Word);
+                    if (urlFileStat != null && urlFileStat.WordFrequency > 0)
+                    {
+                        urlFileStat.WordFrequency -= index.Count;
+
+                        if (urlFileStat.WordFrequency < 0)
+                        {
+                            urlFileStat.WordFrequency = 0;
+                        }
+                    }
+
                 }
 
                 context.RemoveRange(toBeRemovedIndices);
@@ -73,9 +96,31 @@ namespace XiaoyaStore.Store
                         stat.WordFrequency = long.MaxValue / 2;
                     }
 
-                    if (stat.DocumentFrequency > long.MaxValue - 1)
+                    if (stat.DocumentFrequency > long.MaxValue / 2)
                     {
-                        stat.DocumentFrequency = long.MaxValue - 1;
+                        stat.DocumentFrequency = long.MaxValue / 2;
+                    }
+
+                    var urlFileStat = context.UrlFileIndexStats
+                        .SingleOrDefault(o => o.UrlFileId == urlFile.UrlFileId && o.Word == index.Word);
+                    if (urlFileStat == null)
+                    {
+                        urlFileStat = new UrlFileIndexStat
+                        {
+                            UrlFileId = urlFile.UrlFileId,
+                            Word = index.Word,
+                            WordFrequency = index.Count,
+                        };
+                        context.UrlFileIndexStats.Add(urlFileStat);
+                    }
+                    else
+                    {
+                        urlFileStat.WordFrequency += index.Count;
+                    }
+
+                    if (urlFileStat.WordFrequency > long.MaxValue / 2)
+                    {
+                        urlFileStat.WordFrequency = long.MaxValue / 2;
                     }
                 }
 
@@ -100,9 +145,32 @@ namespace XiaoyaStore.Store
                 foreach (var index in groupedRemovedIndices)
                 {
                     var stat = context.IndexStats.SingleOrDefault(o => o.Word == index.Word);
-                    if (stat != null && stat.WordFrequency > 0)
+                    if (stat != null)
                     {
                         stat.WordFrequency -= index.Count;
+                        stat.DocumentFrequency--;
+
+                        if (stat.WordFrequency < 0)
+                        {
+                            stat.WordFrequency = 0;
+                        }
+
+                        if (stat.DocumentFrequency < 0)
+                        {
+                            stat.DocumentFrequency = 0;
+                        }
+                    }
+
+                    var urlFileStat = context.UrlFileIndexStats
+                       .SingleOrDefault(o => o.UrlFileId == urlFile.UrlFileId && o.Word == index.Word);
+                    if (urlFileStat != null && urlFileStat.WordFrequency > 0)
+                    {
+                        urlFileStat.WordFrequency -= index.Count;
+
+                        if (urlFileStat.WordFrequency < 0)
+                        {
+                            urlFileStat.WordFrequency = 0;
+                        }
                     }
                 }
 
@@ -116,6 +184,32 @@ namespace XiaoyaStore.Store
             using (var context = NewContext())
             {
                 var indices = context.InvertedIndices.Where(o => o.Word == word);
+                foreach (var index in indices)
+                {
+                    yield return index;
+                }
+            }
+        }
+
+        public IEnumerable<InvertedIndex> LoadByWordInUrlFile(int urlFileId, string word)
+        {
+            using (var context = NewContext())
+            {
+                var indices = context.InvertedIndices
+                    .Where(o => o.UrlFileId == urlFileId && o.Word == word);
+                foreach (var index in indices)
+                {
+                    yield return index;
+                }
+            }
+        }
+
+        public IEnumerable<InvertedIndex> LoadByWordInUrlFile(UrlFile urlFile, string word)
+        {
+            using (var context = NewContext())
+            {
+                var indices = context.InvertedIndices
+                    .Where(o => o.UrlFileId == urlFile.UrlFileId && o.Word == word);
                 foreach (var index in indices)
                 {
                     yield return index;

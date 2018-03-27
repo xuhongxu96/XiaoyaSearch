@@ -8,13 +8,14 @@ using XiaoyaRetriever;
 using XiaoyaRetriever.BooleanRetriever;
 using XiaoyaRetriever.Config;
 using XiaoyaRetriever.Expression;
+using XiaoyaRetriever.InexactTopKRetriever;
 using XiaoyaStore.Data;
 using XiaoyaStore.Store;
 
 namespace XiaoyaRetrieverUnitTest
 {
     [TestClass]
-    public class BooleanRetrieverUnitTest
+    public class InexactTopKRetrieverUnitTest
     {
         private IEnumerable<string> GetUrls(XiaoyaSearchContext context, IEnumerable<int> urlFileIds)
         {
@@ -43,7 +44,7 @@ namespace XiaoyaRetrieverUnitTest
                 }
             }
 
-            var retriever = new BooleanRetriever(new RetrieverConfig
+            var retriever = new InexactTopKRetriever(new RetrieverConfig
             {
                 IndexStatStore = new IndexStatStore(options),
                 InvertedIndexStore = new InvertedIndexStore(options),
@@ -51,27 +52,13 @@ namespace XiaoyaRetrieverUnitTest
                 UrlFileStore = new UrlFileStore(options),
             });
 
-            SearchExpression expression = new Or
+            SearchExpression expression = new And
             {
-                new And
-                {
-                    "指挥部", "北京师范大学"
-                },
-                new And
-                {
-                    "协同", "未来"
-                }
+                "北京师范大学"
             };
 
             var urlFileIds = retriever.Retrieve(expression);
-            Assert.AreEqual(5, urlFileIds.Count());
-
-            using (var context = new XiaoyaSearchContext(options))
-            {
-                Assert.IsTrue(GetUrls(context, urlFileIds)
-                        .Contains("http://www.bnu.edu.cn/kxyj/")
-                    );
-            }
+            Assert.AreEqual(13, urlFileIds.Count());
 
 
             expression = new And
@@ -89,15 +76,6 @@ namespace XiaoyaRetrieverUnitTest
                         .Contains("http://www.bnu.edu.cn/kxyj/")
                     );
             }
-
-
-            expression = new And
-            {
-                "北京师范大学"
-            };
-
-            urlFileIds = retriever.Retrieve(expression);
-            Assert.AreEqual(13, urlFileIds.Count());
         }
 
         [TestMethod]
@@ -117,7 +95,7 @@ namespace XiaoyaRetrieverUnitTest
                 }
             }
 
-            var retriever = new BooleanRetriever(new RetrieverConfig
+            var retriever = new InexactTopKRetriever(new RetrieverConfig
             {
                 IndexStatStore = new IndexStatStore(options),
                 InvertedIndexStore = new InvertedIndexStore(options),

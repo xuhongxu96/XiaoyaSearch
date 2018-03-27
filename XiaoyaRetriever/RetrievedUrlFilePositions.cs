@@ -9,6 +9,7 @@ namespace XiaoyaRetriever
     public class RetrievedUrlFilePositions : IEnumerable<WordPosition>
     {
         public int UrlFileId { get; set; }
+        public double Score { get; set; } = 0;
         protected HashSet<WordPosition> mPositions;
 
         public RetrievedUrlFilePositions(int urlFileId)

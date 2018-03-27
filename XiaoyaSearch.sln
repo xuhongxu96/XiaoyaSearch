@@ -29,7 +29,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XiaoyaIndexerUnitTest", "Xi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XiaoyaRetriever", "XiaoyaRetriever\XiaoyaRetriever.csproj", "{2DD92F18-E9B6-4E6A-A9AE-852D552E9469}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XiaoyaRetrieverUnitTest", "XiaoyaRetrieverUnitTest\XiaoyaRetrieverUnitTest.csproj", "{154D7552-6408-4D35-9F7A-B7DBC18463A4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XiaoyaRetrieverUnitTest", "XiaoyaRetrieverUnitTest\XiaoyaRetrieverUnitTest.csproj", "{154D7552-6408-4D35-9F7A-B7DBC18463A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XiaoyaRanker", "XiaoyaRanker\XiaoyaRanker.csproj", "{6AC454AC-A88B-4368-9EF3-884B39EA4F69}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XiaoyaQueryParser", "XiaoyaQueryParser\XiaoyaQueryParser.csproj", "{15C56A0E-2013-4280-8767-0281BEA24026}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -93,6 +97,14 @@ Global
 		{154D7552-6408-4D35-9F7A-B7DBC18463A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{154D7552-6408-4D35-9F7A-B7DBC18463A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{154D7552-6408-4D35-9F7A-B7DBC18463A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AC454AC-A88B-4368-9EF3-884B39EA4F69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AC454AC-A88B-4368-9EF3-884B39EA4F69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AC454AC-A88B-4368-9EF3-884B39EA4F69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AC454AC-A88B-4368-9EF3-884B39EA4F69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15C56A0E-2013-4280-8767-0281BEA24026}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15C56A0E-2013-4280-8767-0281BEA24026}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15C56A0E-2013-4280-8767-0281BEA24026}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15C56A0E-2013-4280-8767-0281BEA24026}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
