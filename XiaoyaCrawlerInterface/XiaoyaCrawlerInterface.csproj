@@ -26,6 +26,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="IPValverde.ArgumentParser" Version="1.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\XiaoyaCrawler\XiaoyaCrawler.csproj" />
   </ItemGroup>
 

@@ -73,7 +73,9 @@ namespace XiaoyaStore.Data
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
+            {
                 optionsBuilder.UseSqlite("Data Source=Db/XiaoyaSearch.db");
+            }
         }
 
         public XiaoyaSearchContext() : base() { }

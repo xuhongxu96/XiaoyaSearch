@@ -81,7 +81,6 @@ namespace XiaoyaLogger
 
             await Task.Run(() =>
             {
-
                 while (true)
                 {
                     token.ThrowIfCancellationRequested();
@@ -112,6 +111,13 @@ namespace XiaoyaLogger
 
                                 try
                                 {
+                                    if (new FileInfo(fileName).Length >= 50 * 1024 * 1024)
+                                    {
+                                        File.Move(fileName,
+                                            Path.Combine(Path.GetDirectoryName(fileName),
+                                            Path.GetFileNameWithoutExtension(fileName) +
+                                            "." + DateTime.Now + "." + Path.GetExtension(fileName)));
+                                    }
                                     writer = File.AppendText(fileName);
                                 }
                                 catch (IOException)
