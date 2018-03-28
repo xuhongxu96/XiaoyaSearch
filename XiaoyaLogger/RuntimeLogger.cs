@@ -111,7 +111,8 @@ namespace XiaoyaLogger
 
                                 try
                                 {
-                                    if (new FileInfo(fileName).Length >= 50 * 1024 * 1024)
+                                    if (File.Exists(fileName)
+                                        && new FileInfo(fileName).Length >= 50 * 1024 * 1024)
                                     {
                                         File.Move(fileName,
                                             Path.Combine(Path.GetDirectoryName(fileName),
@@ -129,6 +130,8 @@ namespace XiaoyaLogger
                             }
 
                             writer.Write(data.content);
+                            Console.WriteLine(data.content);
+
                             flushCount++;
 
                             if (flushCount % 50 == 0)

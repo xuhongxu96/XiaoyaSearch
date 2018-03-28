@@ -10,29 +10,25 @@ namespace XiaoyaCrawlerInterface
         [Argument("-InitUrls",
             Alias = "-i",
             DefaultValue = "http://www.bnu.edu.cn",
-            Name = "Initial Urls (Separated by comma without spaces)",
             Required = true)]
-        public string InitUrl;
+        public string InitUrl { get; set; }
 
         [Argument("-FetchDir",
             Alias = "-f",
             DefaultValue = "Fetch",
-            Name = "Directory to save fetched web files",
             Required = true)]
-        public string FetchDir;
+        public string FetchDir { get; set; }
 
         [Argument("-LogDir",
             Alias = "-l",
             DefaultValue = "Logs",
-            Name = "Directory to save logs",
             Required = true)]
-        public string LogDir;
+        public string LogDir { get; set; }
 
         [Argument("-DbDir",
             Alias = "-d",
             DefaultValue = "Db",
-            Name = "Directory to save database",
             Required = true)]
-        public string DbDir;
+        public string DbDir { get; set; }
     }
 }

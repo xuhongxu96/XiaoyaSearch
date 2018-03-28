@@ -21,6 +21,11 @@ namespace XiaoyaCrawlerInterface
         {
             var arguments = Parser.ParseArguments<CrawlerArguments>(args);
 
+            if (!Directory.Exists(arguments.DbDir))
+            {
+                Directory.CreateDirectory(arguments.DbDir);
+            }
+
             var options = new DbContextOptionsBuilder<XiaoyaSearchContext>()
                 .UseSqlite("Data Source=" + Path.Combine(arguments.DbDir, "XiaoyaSearch.db"))
                 .Options;
