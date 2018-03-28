@@ -123,7 +123,7 @@ namespace XiaoyaCrawler
                     mErrorLogger.Log(nameof(Crawler), 
                         url + " Error\r\n" + e.Message + "\r\n---\r\n" + e.StackTrace);
                     // Retry
-                    mUrlFrontier.PushUrl(url);
+                    mUrlFrontier.PushUrl(url, true);
                 }
                 finally
                 {

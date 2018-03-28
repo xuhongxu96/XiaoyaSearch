@@ -401,6 +401,71 @@ namespace XiaoyaStoreUnitTest
         }
 
         [TestMethod]
+        public void TestLoadByWordInUrlFileOrderByPosition()
+        {
+            var connection = new SqliteConnection("DataSource=:memory:");
+            connection.Open();
+
+            var options = new DbContextOptionsBuilder<XiaoyaSearchContext>()
+                .UseSqlite(connection)
+                .Options;
+
+            try
+            {
+                using (var context = new XiaoyaSearchContext(options))
+                {
+                    context.Database.EnsureCreated();
+                }
+
+                var urlFile = InitDatabase(options);
+
+                using (var context = new XiaoyaSearchContext(options))
+                {
+                    var indices = new List<InvertedIndex>
+                    {
+                        new InvertedIndex
+                        {
+                            Word = "你好",
+                            Position = 0,
+                            UrlFileId = urlFile.UrlFileId,
+                        },
+                        new InvertedIndex
+                        {
+                            Word = "我们",
+                            Position = 2,
+                            UrlFileId = urlFile.UrlFileId,
+                        },
+                        new InvertedIndex
+                        {
+                            Word = "是",
+                            Position = 4,
+                            UrlFileId = urlFile.UrlFileId,
+                        },
+                        new InvertedIndex
+                        {
+                            Word = "你好",
+                            Position = 5,
+                            UrlFileId = urlFile.UrlFileId + 1,
+                        },
+                    };
+                    context.InvertedIndices.AddRange(indices);
+                    context.SaveChanges();
+                }
+
+                var invertedIndexStore = new InvertedIndexStore(options);
+                var invertedIndices = invertedIndexStore.LoadByWordInUrlFileOrderByPosition(urlFile, "你好")
+                    .ToList();
+
+                Assert.AreEqual(1, invertedIndices.Count);
+                Assert.AreEqual(0, invertedIndices[0].Position);
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+        [TestMethod]
         public void TestLoadByUrlFilePosition()
         {
             var connection = new SqliteConnection("DataSource=:memory:");

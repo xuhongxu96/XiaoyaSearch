@@ -77,9 +77,9 @@ namespace XiaoyaCrawler.UrlFrontier
         /// Push back a popped url
         /// </summary>
         /// <param name="url">Url</param>
-        public void PushBackUrl(string url)
+        public void PushBackUrl(string url, bool failed = false)
         {
-            mConfig.UrlFrontierItemStore.PushBack(url);
+            mConfig.UrlFrontierItemStore.PushBack(url, failed);
             mLogger.Log(nameof(SimpleUrlFrontier), "Pushed Back Url: " + url);
         }
     }

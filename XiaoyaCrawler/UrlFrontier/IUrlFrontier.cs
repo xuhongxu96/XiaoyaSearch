@@ -21,7 +21,7 @@ namespace XiaoyaCrawler.UrlFrontier
         /// Push a new url
         /// </summary>
         /// <param name="url">New url</param>
-        void PushUrl(string url);
+        void PushUrl(string url, bool failed = false);
         /// <summary>
         /// Push back a popped url
         /// </summary>

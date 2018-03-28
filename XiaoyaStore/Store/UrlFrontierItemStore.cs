@@ -102,7 +102,7 @@ namespace XiaoyaStore.Store
             }
         }
 
-        public UrlFrontierItem PushBack(string url)
+        public UrlFrontierItem PushBack(string url, bool failed = false)
         {
             using (var context = NewContext())
             {
@@ -115,7 +115,7 @@ namespace XiaoyaStore.Store
                 }
 
                 var urlFile = context.UrlFiles.SingleOrDefault(o => o.Url == url);
-                if (urlFile == null)
+                if (failed || urlFile == null)
                 {
                     // Failed to fetch last time
                     item.FailedTimes++;

@@ -206,17 +206,9 @@ namespace XiaoyaStore.Store
             }
         }
 
-        public IEnumerable<InvertedIndex> LoadByWordInUrlFile(UrlFile urlFile, string word)
+        public IEnumerable<InvertedIndex> LoadByWordInUrlFileOrderByPosition(UrlFile urlFile, string word)
         {
-            using (var context = NewContext())
-            {
-                var indices = context.InvertedIndices
-                    .Where(o => o.UrlFileId == urlFile.UrlFileId && o.Word == word);
-                foreach (var index in indices)
-                {
-                    yield return index;
-                }
-            }
+            return LoadByWordInUrlFileOrderByPosition(urlFile.UrlFileId, word);
         }
 
         public InvertedIndex LoadByUrlFilePosition(int urlFileId, int position)

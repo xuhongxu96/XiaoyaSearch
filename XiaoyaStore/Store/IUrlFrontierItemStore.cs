@@ -9,9 +9,9 @@ namespace XiaoyaStore.Store
         int Count();
         void Init(IEnumerable<string> initUrls);
         void Restart();
-        UrlFrontierItem PopUrlForCrawl(bool strictPlannedTime);
+        UrlFrontierItem PopUrlForCrawl(bool strictPlannedTime = true);
         UrlFrontierItem LoadByUrl(string url);
         UrlFrontierItem Save(string url);
-        UrlFrontierItem PushBack(string url);
+        UrlFrontierItem PushBack(string url, bool failed = false);
     }
 }
