@@ -55,8 +55,8 @@ namespace XiaoyaCrawler
             mParser = parser;
             mSimilarContentJudger = similarContentManager;
             mUrlFilters = urlFilters;
-            mLogger = new RuntimeLogger(Path.Combine(config.LogDirectory, "Crawler.Log"));
-            mErrorLogger = new RuntimeLogger(Path.Combine(config.LogDirectory, "Error.Log"));
+            mLogger = new RuntimeLogger(Path.Combine(config.LogDirectory, "Crawler.Log"), true);
+            mErrorLogger = new RuntimeLogger(Path.Combine(config.LogDirectory, "Error.Log"), true);
         }
 
         protected async void FetchUrlAsync(string url)

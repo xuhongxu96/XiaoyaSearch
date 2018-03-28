@@ -14,9 +14,11 @@ namespace XiaoyaLogger
         {
             public string fileName;
             public string content;
+            public bool doWriteToConsole;
         }
 
         private string mLogFileName;
+        private bool mDoWriteToConsole;
 
         private static BlockingCollection<LogData> queue = new BlockingCollection<LogData>();
         private static CancellationTokenSource cancellationTokenSource = null;
@@ -35,13 +37,14 @@ namespace XiaoyaLogger
             WriteAsync();
         }
 
-        public RuntimeLogger(string logFileName)
+        public RuntimeLogger(string logFileName, bool doWriteToConsole = false)
         {
             if (!Directory.Exists(Path.GetDirectoryName(logFileName)))
             {
                 Directory.CreateDirectory(Path.GetDirectoryName(logFileName));
             }
             mLogFileName = logFileName;
+            mDoWriteToConsole = doWriteToConsole;
         }
 
         public void Log(string className, string message)
@@ -57,6 +60,7 @@ namespace XiaoyaLogger
             {
                 fileName = mLogFileName,
                 content = content,
+                doWriteToConsole = mDoWriteToConsole,
             });
         }
 
@@ -130,9 +134,12 @@ namespace XiaoyaLogger
                             }
 
                             writer.Write(data.content);
-                            Console.WriteLine(data.content);
-
                             flushCount++;
+
+                            if (data.doWriteToConsole)
+                            {
+                                Console.WriteLine(data.content);
+                            }
 
                             if (flushCount % 50 == 0)
                             {
