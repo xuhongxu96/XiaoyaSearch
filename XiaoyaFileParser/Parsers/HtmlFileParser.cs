@@ -13,7 +13,7 @@ namespace XiaoyaFileParser.Parsers
 {
     public class HtmlFileParser : TextFileParser
     {
-        static readonly Regex sTrimmer = new Regex(@"\s+");
+        static readonly Regex sTrimmer = new Regex(@"\s\s+");
 
         protected HtmlParser mParser = new HtmlParser();
 
