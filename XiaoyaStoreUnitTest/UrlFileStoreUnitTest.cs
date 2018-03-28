@@ -104,6 +104,55 @@ namespace XiaoyaStoreUnitTest
             }
         }
 
+        [TestMethod]
+        public void TestCount()
+        {
+            var connection = new SqliteConnection("DataSource=:memory:");
+            connection.Open();
+
+            var options = new DbContextOptionsBuilder<XiaoyaSearchContext>()
+                .UseSqlite(connection)
+                .Options;
+
+            try
+            {
+                using (var context = new XiaoyaSearchContext(options))
+                {
+                    context.Database.EnsureCreated();
+                }
+
+                var urlFileStore = new UrlFileStore(options);
+                urlFileStore.Save(new XiaoyaStore.Data.Model.UrlFile
+                {
+                    Url = "http://www.bnu.edu.cn",
+                    FilePath = @"D:\a.html",
+                    Content = "abcd",
+                    Charset = "utf8",
+                    MimeType = "text/html",
+                });
+
+                Thread.Sleep(1000);
+
+                urlFileStore.Save(new XiaoyaStore.Data.Model.UrlFile
+                {
+                    Url = "http://www.bnu.edu.cn/news",
+                    FilePath = @"D:\b.html",
+                    Content = "abcdef",
+                    Charset = "utf8",
+                    MimeType = "text/html",
+                });
+
+                using (var context = new XiaoyaSearchContext(options))
+                {
+                    Assert.AreEqual(2, urlFileStore.Count());
+                }
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
         /// <summary>
         /// Test if UpdateInterval is updated correctly
         /// </summary>
