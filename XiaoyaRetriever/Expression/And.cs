@@ -63,9 +63,10 @@ namespace XiaoyaRetriever.Expression
                 foreach (var operand in mOperands)
                 {
                     if (operand is Word) continue;
-                    if (operand is Not notExp)
+                    if (operand is Not notExp
+                        && notExp.Operand is And andExp)
                     {
-                        if (notExp.Operand is Word) continue;
+                        return andExp.All(o => o is Word);
                     }
                     return false;
                 }

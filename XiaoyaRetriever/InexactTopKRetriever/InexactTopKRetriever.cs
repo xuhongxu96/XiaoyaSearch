@@ -30,8 +30,21 @@ namespace XiaoyaRetriever.InexactTopKRetriever
 
         protected IEnumerable<int> RetrieveNot(Not not)
         {
-            return (from index in mConfig.UrlFileIndexStatStore.LoadByWord((not.Operand as Word).Value)
-                    select index.UrlFileId);
+            IEnumerable<int> result = null;
+            foreach (var word in not.Operand as And)
+            {
+                var nextIndices = from index in mConfig.UrlFileIndexStatStore.LoadByWord((word as Word).Value)
+                                  select index.UrlFileId;
+                if (result == null)
+                {
+                    result = nextIndices;
+                }
+                else
+                {
+                    result.Intersect(nextIndices);
+                }
+            }
+            return result;
         }
 
         protected IEnumerable<int> RetrieveExpression(SearchExpression expression)

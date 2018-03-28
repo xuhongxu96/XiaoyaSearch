@@ -8,17 +8,20 @@ namespace XiaoyaQueryParser.QueryParser
 {
     public class SimpleQueryParser
     {
-        protected QueryParserConfig mConfig;
+        protected QueryParserConfig mConfig = new QueryParserConfig();
+
+        public SimpleQueryParser()
+        { }
 
         public SimpleQueryParser(QueryParserConfig config)
         {
-            mConfig = config; 
+            mConfig = config;
         }
 
         public SearchExpression Parse(string query)
         {
             var result = new And();
-            var rawTerms = query.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+            var rawTerms = query.ToLower().Split(' ', StringSplitOptions.RemoveEmptyEntries);
 
             foreach (var rawTerm in rawTerms)
             {

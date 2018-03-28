@@ -4,6 +4,8 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using XiaoyaQueryParser.Config;
+using XiaoyaQueryParser.QueryParser;
 using XiaoyaRetriever;
 using XiaoyaRetriever.BooleanRetriever;
 using XiaoyaRetriever.Config;
@@ -64,10 +66,50 @@ namespace XiaoyaRetrieverUnitTest
             expression = new And
             {
                 "北京师范大学",
-                new Not("协同"),
+                new Not(new And
+                {
+                    "协同",
+                    "创新",
+                })
             };
 
             urlFileIds = retriever.Retrieve(expression);
+            Assert.AreEqual(11, urlFileIds.Count());
+
+            using (var context = new XiaoyaSearchContext(options))
+            {
+                Assert.IsFalse(GetUrls(context, urlFileIds)
+                        .Contains("http://www.bnu.edu.cn/kxyj/")
+                    );
+            }
+        }
+
+        [TestMethod]
+        public void TestRetrieveWithQueryParser()
+        {
+            var options = new DbContextOptionsBuilder<XiaoyaSearchContext>()
+                .UseSqlite("Data Source=XiaoyaSearch.db")
+                .Options;
+
+            using (var context = new XiaoyaSearchContext(options))
+            {
+                if (context.Database.EnsureCreated())
+                {
+                    context.Database.ExecuteSqlCommand(File.ReadAllText("init.sql"));
+                }
+            }
+
+            var retriever = new InexactTopKRetriever(new RetrieverConfig
+            {
+                IndexStatStore = new IndexStatStore(options),
+                InvertedIndexStore = new InvertedIndexStore(options),
+                UrlFileIndexStatStore = new UrlFileIndexStatStore(options),
+                UrlFileStore = new UrlFileStore(options),
+            });
+
+            var expression = new SimpleQueryParser();
+
+            var urlFileIds = retriever.Retrieve(expression.Parse("北京师范大学 -协同创新"));
             Assert.AreEqual(11, urlFileIds.Count());
 
             using (var context = new XiaoyaSearchContext(options))
@@ -114,7 +156,11 @@ namespace XiaoyaRetrieverUnitTest
                     "指挥部",
                     "指挥部",
                     "指挥部",
-                    new Not("未来"),
+                    new Not(new And
+                    {
+                        "协同",
+                        "创新",
+                    })
                 };
 
                 var urlFileIds = retriever.Retrieve(expression);
