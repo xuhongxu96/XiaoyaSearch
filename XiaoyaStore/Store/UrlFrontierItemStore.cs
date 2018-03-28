@@ -161,7 +161,8 @@ namespace XiaoyaStore.Store
             {
                 var item = context.UrlFrontierItems
                 .OrderBy(o => o.PlannedTime)
-                .Where(o => o.IsPopped == false)
+                .Where(o => o.IsPopped == false
+                            && o.PlannedTime <= DateTime.Now)
                 .FirstOrDefault();
 
                 if (item == null)

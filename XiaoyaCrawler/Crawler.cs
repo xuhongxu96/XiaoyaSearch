@@ -39,6 +39,7 @@ namespace XiaoyaCrawler
         /// Logger
         /// </summary>
         protected RuntimeLogger mLogger;
+        protected RuntimeLogger mErrorLogger;
 
         public Crawler(CrawlerConfig config,
             IUrlFrontier urlFrontier,
@@ -55,6 +56,7 @@ namespace XiaoyaCrawler
             mSimilarContentJudger = similarContentManager;
             mUrlFilters = urlFilters;
             mLogger = new RuntimeLogger(Path.Combine(config.LogDirectory, "Crawler.Log"));
+            mErrorLogger = new RuntimeLogger(Path.Combine(config.LogDirectory, "Error.Log"));
         }
 
         protected async void FetchUrlAsync(string url)
@@ -116,7 +118,9 @@ namespace XiaoyaCrawler
                 }
                 catch (Exception e)
                 {
-                    mLogger.Log(nameof(Crawler), 
+                    mLogger.Log(nameof(Crawler),
+                        url + " Error\r\n" + e.Message + "\r\n---\r\n" + e.StackTrace);
+                    mErrorLogger.Log(nameof(Crawler), 
                         url + " Error\r\n" + e.Message + "\r\n---\r\n" + e.StackTrace);
                     // Retry
                     mUrlFrontier.PushUrl(url);

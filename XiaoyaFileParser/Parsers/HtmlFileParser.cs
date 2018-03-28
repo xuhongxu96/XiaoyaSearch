@@ -7,11 +7,14 @@ using XiaoyaFileParser.Model;
 using XiaoyaFileParser.Config;
 using XiaoyaStore.Data.Model;
 using AngleSharp.Extensions;
+using System.Text.RegularExpressions;
 
 namespace XiaoyaFileParser.Parsers
 {
     public class HtmlFileParser : TextFileParser
     {
+        static readonly Regex sTrimmer = new Regex(@"\s+");
+
         protected HtmlParser mParser = new HtmlParser();
 
         public HtmlFileParser() : base() { }
@@ -52,6 +55,7 @@ namespace XiaoyaFileParser.Parsers
                 }
 
                 mTextContent = document.Body.Text().Trim();
+                mTextContent = sTrimmer.Replace(mTextContent, "\n");
             }
             return mTextContent;
         }

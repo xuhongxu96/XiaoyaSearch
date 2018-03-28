@@ -112,12 +112,12 @@ namespace XiaoyaLogger
                                 try
                                 {
                                     if (File.Exists(fileName)
-                                        && new FileInfo(fileName).Length >= 50 * 1024 * 1024)
+                                        && new FileInfo(fileName).Length >= 10 * 1024 * 1024)
                                     {
                                         File.Move(fileName,
                                             Path.Combine(Path.GetDirectoryName(fileName),
                                             Path.GetFileNameWithoutExtension(fileName) +
-                                            "." + DateTime.Now + "." + Path.GetExtension(fileName)));
+                                            "." + DateTime.Now.ToBinary().ToString() + Path.GetExtension(fileName)));
                                     }
                                     writer = File.AppendText(fileName);
                                 }
