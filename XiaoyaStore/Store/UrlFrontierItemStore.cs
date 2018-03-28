@@ -155,14 +155,14 @@ namespace XiaoyaStore.Store
             }
         }
 
-        public UrlFrontierItem PopUrlForCrawl()
+        public UrlFrontierItem PopUrlForCrawl(bool strictPlannedTime = true)
         {
             using (var context = NewContext())
             {
                 var item = context.UrlFrontierItems
                 .OrderBy(o => o.PlannedTime)
                 .Where(o => o.IsPopped == false
-                            && o.PlannedTime <= DateTime.Now)
+                            && (!strictPlannedTime || o.PlannedTime <= DateTime.Now))
                 .FirstOrDefault();
 
                 if (item == null)

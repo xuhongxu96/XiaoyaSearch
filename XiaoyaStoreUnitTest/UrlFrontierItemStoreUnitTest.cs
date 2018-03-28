@@ -253,15 +253,15 @@ namespace XiaoyaStoreUnitTest
                     Assert.AreEqual(2, context.UrlFrontierItems.Count());
                 }
 
-                var item = urlFrontierItemStore.PopUrlForCrawl();
+                var item = urlFrontierItemStore.PopUrlForCrawl(false);
                 Assert.AreEqual("http://baidu.com", item.Url);
                 Assert.IsTrue(item.IsPopped);
 
-                item = urlFrontierItemStore.PopUrlForCrawl();
+                item = urlFrontierItemStore.PopUrlForCrawl(false);
                 Assert.AreEqual("http://xuhongxu.com", item.Url);
                 Assert.IsTrue(item.IsPopped);
 
-                item = urlFrontierItemStore.PopUrlForCrawl();
+                item = urlFrontierItemStore.PopUrlForCrawl(false);
                 Assert.IsNull(item);
             }
             finally
@@ -299,7 +299,7 @@ namespace XiaoyaStoreUnitTest
                     Assert.AreEqual(2, context.UrlFrontierItems.Count());
                 }
 
-                var item = urlFrontierItemStore.PopUrlForCrawl();
+                var item = urlFrontierItemStore.PopUrlForCrawl(false);
                 Assert.AreEqual("http://baidu.com", item.Url);
                 Assert.IsTrue(item.IsPopped);
 
@@ -309,11 +309,11 @@ namespace XiaoyaStoreUnitTest
                 Assert.IsTrue(item.PlannedTime > DateTime.Now);
                 Assert.IsFalse(item.IsPopped);
 
-                item = urlFrontierItemStore.PopUrlForCrawl();
+                item = urlFrontierItemStore.PopUrlForCrawl(false);
                 Assert.AreEqual("http://xuhongxu.com", item.Url);
                 Assert.IsTrue(item.IsPopped);
 
-                item = urlFrontierItemStore.PopUrlForCrawl();
+                item = urlFrontierItemStore.PopUrlForCrawl(false);
                 Assert.AreEqual("http://baidu.com", item.Url);
                 Assert.IsTrue(item.IsPopped);
             }
@@ -352,7 +352,7 @@ namespace XiaoyaStoreUnitTest
                     Assert.AreEqual(2, context.UrlFrontierItems.Count());
                 }
 
-                var item = urlFrontierItemStore.PopUrlForCrawl();
+                var item = urlFrontierItemStore.PopUrlForCrawl(false);
                 Assert.AreEqual("http://baidu.com", item.Url);
                 Assert.IsTrue(item.IsPopped);
 
@@ -372,11 +372,11 @@ namespace XiaoyaStoreUnitTest
                 Assert.IsTrue(item.PlannedTime > DateTime.Now);
                 Assert.IsFalse(item.IsPopped);
 
-                item = urlFrontierItemStore.PopUrlForCrawl();
+                item = urlFrontierItemStore.PopUrlForCrawl(false);
                 Assert.AreEqual("http://xuhongxu.com", item.Url);
                 Assert.IsTrue(item.IsPopped);
 
-                item = urlFrontierItemStore.PopUrlForCrawl();
+                item = urlFrontierItemStore.PopUrlForCrawl(false);
                 Assert.AreEqual("http://baidu.com", item.Url);
                 Assert.IsTrue(item.IsPopped);
             }
@@ -439,7 +439,7 @@ namespace XiaoyaStoreUnitTest
                 }
 
                 var urlFrontierItemStore = new UrlFrontierItemStore(options);
-                var item = urlFrontierItemStore.PopUrlForCrawl();
+                var item = urlFrontierItemStore.PopUrlForCrawl(false);
                 Assert.AreEqual("a", item.Url);
 
                 var urlFileStore = new UrlFileStore(options);
@@ -454,22 +454,22 @@ namespace XiaoyaStoreUnitTest
 
                 urlFrontierItemStore.PushBack("a");
 
-                item = urlFrontierItemStore.PopUrlForCrawl();
+                item = urlFrontierItemStore.PopUrlForCrawl(false);
                 Assert.AreEqual("b", item.Url);
 
                 item = urlFrontierItemStore.PushBack("b");
                 Assert.AreEqual(1, item.FailedTimes);
 
-                item = urlFrontierItemStore.PopUrlForCrawl();
+                item = urlFrontierItemStore.PopUrlForCrawl(false);
                 Assert.AreEqual("c", item.Url);
 
-                item = urlFrontierItemStore.PopUrlForCrawl();
+                item = urlFrontierItemStore.PopUrlForCrawl(false);
                 Assert.AreEqual("b", item.Url);
 
-                item = urlFrontierItemStore.PopUrlForCrawl();
+                item = urlFrontierItemStore.PopUrlForCrawl(false);
                 Assert.AreEqual("a", item.Url);
 
-                item = urlFrontierItemStore.PopUrlForCrawl();
+                item = urlFrontierItemStore.PopUrlForCrawl(false);
                 Assert.IsNull(item);
             }
             finally
