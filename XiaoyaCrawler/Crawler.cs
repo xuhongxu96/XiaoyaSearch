@@ -114,7 +114,7 @@ namespace XiaoyaCrawler
                     || e is TaskCanceledException
                 )
                 {
-                    mUrlFrontier.PushUrl(url);
+                    mUrlFrontier.PushBackUrl(url);
                 }
                 catch (Exception e)
                 {
@@ -123,7 +123,7 @@ namespace XiaoyaCrawler
                     mErrorLogger.Log(nameof(Crawler), 
                         url + " Error\r\n" + e.Message + "\r\n---\r\n" + e.StackTrace);
                     // Retry
-                    mUrlFrontier.PushUrl(url, true);
+                    mUrlFrontier.PushBackUrl(url, true);
                 }
                 finally
                 {
