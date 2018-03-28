@@ -8,7 +8,7 @@ using XiaoyaStore.Data.Model;
 
 namespace XiaoyaRetriever.BooleanRetriever
 {
-    public class BooleanRetriever
+    public class BooleanRetriever : IRetriever
     {
         protected RetrieverConfig mConfig;
 

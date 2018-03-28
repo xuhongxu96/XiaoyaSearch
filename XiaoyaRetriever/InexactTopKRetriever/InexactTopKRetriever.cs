@@ -9,7 +9,7 @@ using XiaoyaStore.Data.Model;
 
 namespace XiaoyaRetriever.InexactTopKRetriever
 {
-    public class InexactTopKRetriever
+    public class InexactTopKRetriever : IRetriever
     {
         protected readonly int[] WORD_FREQUENCY_THRESHOLDS_FOR_TIERS = new int[] { int.MaxValue, 20, 10, 2, 1 };
 

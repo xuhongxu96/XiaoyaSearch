@@ -191,12 +191,14 @@ namespace XiaoyaStore.Store
             }
         }
 
-        public IEnumerable<InvertedIndex> LoadByWordInUrlFile(int urlFileId, string word)
+        public IEnumerable<InvertedIndex> LoadByWordInUrlFileOrderByPosition(int urlFileId, string word)
         {
             using (var context = NewContext())
             {
                 var indices = context.InvertedIndices
-                    .Where(o => o.UrlFileId == urlFileId && o.Word == word);
+                    .Where(o => o.UrlFileId == urlFileId && o.Word == word)
+                    .OrderBy(o => o.Position);
+
                 foreach (var index in indices)
                 {
                     yield return index;

@@ -9,9 +9,9 @@ using XiaoyaCrawler.Fetcher;
 using XiaoyaCrawler.Parser;
 using XiaoyaCrawler.SimilarContentManager;
 using XiaoyaStore.Data;
-using IPValverde.ArgumentParser;
 using Microsoft.EntityFrameworkCore;
 using System.IO;
+using XiaoyaCommon.ArgumentParser;
 
 namespace XiaoyaCrawlerInterface
 {

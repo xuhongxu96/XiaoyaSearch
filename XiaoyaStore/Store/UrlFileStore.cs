@@ -52,6 +52,14 @@ namespace XiaoyaStore.Store
             }
         }
 
+        public UrlFile LoadById(int id)
+        {
+            using (var context = NewContext())
+            {
+                return context.UrlFiles.SingleOrDefault(o => o.UrlFileId == id);
+            }
+        }
+
         public UrlFile LoadByUrl(string url)
         {
             using (var context = NewContext())
