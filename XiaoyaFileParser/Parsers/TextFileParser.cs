@@ -7,6 +7,8 @@ using XiaoyaFileParser.Model;
 using XiaoyaFileParser.Config;
 using XiaoyaNLP.TextSegmentation;
 using XiaoyaStore.Data.Model;
+using System.Linq;
+using static XiaoyaFileParser.Model.Token;
 
 namespace XiaoyaFileParser.Parsers
 {
@@ -19,12 +21,14 @@ namespace XiaoyaFileParser.Parsers
             set
             {
                 mUrlFile = value;
+                mTitle = null;
                 mContent = null;
                 mTextContent = mUrlFile.Content;
             }
         }
 
         protected FileParserConfig mConfig = new FileParserConfig();
+        protected string mTitle = null;
         protected string mContent = null;
         protected string mTextContent = null;
 
@@ -38,6 +42,7 @@ namespace XiaoyaFileParser.Parsers
         public virtual async Task<IList<Token>> GetTokensAsync()
         {
             var textContent = await GetTextContentAsync();
+            var title = await GetTitleAsync();
 
             var result = new List<Token>();
 
@@ -48,6 +53,18 @@ namespace XiaoyaFileParser.Parsers
                     Text = segment.Text.ToLower(),
                     Position = segment.Position,
                     Length = segment.Length,
+                    Type = TokenType.Body,
+                });
+            }
+
+            foreach (var segment in mConfig.TextSegmenter.Segment(title))
+            {
+                result.Add(new Token
+                {
+                    Text = segment.Text.ToLower(),
+                    Position = segment.Position,
+                    Length = segment.Length,
+                    Type = TokenType.Title,
                 });
             }
 
@@ -75,6 +92,18 @@ namespace XiaoyaFileParser.Parsers
         public virtual async Task<IList<string>> GetUrlsAsync()
         {
             return await Task.Run(() => new List<string>());
+        }
+
+        public virtual async Task<string> GetTitleAsync()
+        {
+            return await Task.Run(() =>
+            {
+                if (mTitle == null)
+                {
+                    mTitle = File.ReadLines(UrlFile.FilePath).FirstOrDefault();
+                }
+                return mTitle;
+            });
         }
     }
 }

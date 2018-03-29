@@ -28,15 +28,15 @@ namespace XiaoyaCrawler.Parser
         /// Returns null if cannot parse the file</returns>
         public async Task<ParseResult> ParseAsync(UrlFile urlFile)
         {
-            var mParser = new UniversalFileParser
+            IFileParser parser = new UniversalFileParser
             {
                 UrlFile = urlFile
             };
             
             return new ParseResult
             {
-                Content = await mParser.GetTextContentAsync(),
-                Urls = await mParser.GetUrlsAsync()
+                Content = await parser.GetTextContentAsync(),
+                Urls = await parser.GetUrlsAsync(),
             };
         }
     }

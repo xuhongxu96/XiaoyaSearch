@@ -50,10 +50,19 @@ namespace XiaoyaStore.Store
         {
             using (var context = NewContext())
             {
+                // Pop all urls
                 foreach (var item in context.UrlFrontierItems.Where(o => o.IsPopped))
                 {
                     item.IsPopped = false;
                 }
+
+                // Don't plan too late
+                foreach (var item in context.UrlFrontierItems
+                    .Where(o => o.PlannedTime > DateTime.Now.AddMonths(3)))
+                {
+                    item.PlannedTime = DateTime.Now.AddMonths(3);
+                }
+
                 try
                 {
                     context.SaveChanges();
@@ -119,7 +128,7 @@ namespace XiaoyaStore.Store
                 {
                     // Failed to fetch last time
                     item.FailedTimes++;
-                    item.PlannedTime = DateTime.Now.AddHours(item.FailedTimes * 2);
+                    item.PlannedTime = DateTime.Now.AddDays(item.FailedTimes * 2);
                     item.IsPopped = false;
                     item.UpdatedAt = DateTime.Now;
                 }
@@ -130,6 +139,12 @@ namespace XiaoyaStore.Store
                     item.PlannedTime = DateTime.Now.Add(urlFile.UpdateInterval);
                     item.IsPopped = false;
                     item.UpdatedAt = DateTime.Now;
+                }
+
+                // Don't plan too late
+                if (item.PlannedTime > DateTime.Now.AddMonths(3))
+                {
+                    item.PlannedTime = DateTime.Now.AddMonths(3);
                 }
 
                 try

@@ -59,5 +59,18 @@ namespace XiaoyaFileParser.Parsers
             }
             return mTextContent;
         }
+
+        public override async Task<string> GetTitleAsync()
+        {
+            if (mTitle == null)
+            {
+                var content = await GetContentAsync();
+
+                var document = await mParser.ParseAsync(content);
+
+                mTitle = document.Title;
+            }
+            return mTitle;
+        }
     }
 }

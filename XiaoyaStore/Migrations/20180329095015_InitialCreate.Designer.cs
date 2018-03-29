@@ -7,11 +7,12 @@ using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.EntityFrameworkCore.Storage.Internal;
 using System;
 using XiaoyaStore.Data;
+using XiaoyaStore.Data.Model;
 
 namespace XiaoyaStore.Migrations
 {
     [DbContext(typeof(XiaoyaSearchContext))]
-    [Migration("20180321074153_InitialCreate")]
+    [Migration("20180329095015_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -25,9 +26,11 @@ namespace XiaoyaStore.Migrations
                     b.Property<int>("IndexStatId")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<long>("Count");
+                    b.Property<long>("DocumentFrequency");
 
                     b.Property<string>("Word");
+
+                    b.Property<long>("WordFrequency");
 
                     b.HasKey("IndexStatId");
 
@@ -42,6 +45,8 @@ namespace XiaoyaStore.Migrations
                     b.Property<int>("InvertedIndexId")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<int>("IndexType");
+
                     b.Property<int>("Position");
 
                     b.Property<int>("UrlFileId");
@@ -50,9 +55,8 @@ namespace XiaoyaStore.Migrations
 
                     b.HasKey("InvertedIndexId");
 
-                    b.HasIndex("Word");
-
-                    b.HasIndex("UrlFileId", "Position");
+                    b.HasIndex("UrlFileId", "Word", "Position", "IndexType")
+                        .IsUnique();
 
                     b.ToTable("InvertedIndices");
                 });
@@ -95,13 +99,33 @@ namespace XiaoyaStore.Migrations
                     b.HasIndex("FilePath")
                         .IsUnique();
 
-                    b.HasIndex("UpdatedAt")
-                        .IsUnique();
+                    b.HasIndex("UpdatedAt");
 
                     b.HasIndex("Url")
                         .IsUnique();
 
                     b.ToTable("UrlFiles");
+                });
+
+            modelBuilder.Entity("XiaoyaStore.Data.Model.UrlFileIndexStat", b =>
+                {
+                    b.Property<int>("UrlFileIndexStatId")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int>("UrlFileId");
+
+                    b.Property<string>("Word");
+
+                    b.Property<long>("WordFrequency");
+
+                    b.HasKey("UrlFileIndexStatId");
+
+                    b.HasIndex("WordFrequency");
+
+                    b.HasIndex("Word", "UrlFileId")
+                        .IsUnique();
+
+                    b.ToTable("UrlFileIndexStats");
                 });
 
             modelBuilder.Entity("XiaoyaStore.Data.Model.UrlFrontierItem", b =>
@@ -128,12 +152,10 @@ namespace XiaoyaStore.Migrations
 
                     b.HasKey("UrlFrontierItemId");
 
-                    b.HasIndex("IsPopped");
-
-                    b.HasIndex("PlannedTime");
-
                     b.HasIndex("Url")
                         .IsUnique();
+
+                    b.HasIndex("PlannedTime", "IsPopped");
 
                     b.ToTable("UrlFrontierItems");
                 });

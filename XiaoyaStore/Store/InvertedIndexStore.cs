@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using XiaoyaStore.Data;
 using XiaoyaStore.Data.Model;
 using Microsoft.EntityFrameworkCore;
+using static XiaoyaStore.Data.Model.InvertedIndex;
 
 namespace XiaoyaStore.Store
 {
@@ -179,11 +180,11 @@ namespace XiaoyaStore.Store
             }
         }
 
-        public IEnumerable<InvertedIndex> LoadByWord(string word)
+        public IEnumerable<InvertedIndex> LoadByWord(string word, InvertedIndexType indexType = InvertedIndexType.Body)
         {
             using (var context = NewContext())
             {
-                var indices = context.InvertedIndices.Where(o => o.Word == word);
+                var indices = context.InvertedIndices.Where(o => o.Word == word && o.IndexType == indexType);
                 foreach (var index in indices)
                 {
                     yield return index;
@@ -191,12 +192,12 @@ namespace XiaoyaStore.Store
             }
         }
 
-        public IEnumerable<InvertedIndex> LoadByWordInUrlFileOrderByPosition(int urlFileId, string word)
+        public IEnumerable<InvertedIndex> LoadByWordInUrlFileOrderByPosition(int urlFileId, string word, InvertedIndexType indexType = InvertedIndexType.Body)
         {
             using (var context = NewContext())
             {
                 var indices = context.InvertedIndices
-                    .Where(o => o.UrlFileId == urlFileId && o.Word == word)
+                    .Where(o => o.UrlFileId == urlFileId && o.Word == word && o.IndexType == indexType)
                     .OrderBy(o => o.Position);
 
                 foreach (var index in indices)
@@ -206,23 +207,23 @@ namespace XiaoyaStore.Store
             }
         }
 
-        public IEnumerable<InvertedIndex> LoadByWordInUrlFileOrderByPosition(UrlFile urlFile, string word)
+        public IEnumerable<InvertedIndex> LoadByWordInUrlFileOrderByPosition(UrlFile urlFile, string word, InvertedIndexType indexType = InvertedIndexType.Body)
         {
             return LoadByWordInUrlFileOrderByPosition(urlFile.UrlFileId, word);
         }
 
-        public InvertedIndex LoadByUrlFilePosition(int urlFileId, int position)
+        public InvertedIndex LoadByUrlFilePosition(int urlFileId, int position, InvertedIndexType indexType = InvertedIndexType.Body)
         {
             using (var context = NewContext())
             {
                 return context.InvertedIndices
-                .Where(o => o.UrlFileId == urlFileId && o.Position <= position)
+                .Where(o => o.UrlFileId == urlFileId && o.IndexType == indexType && o.Position <= position)
                 .OrderByDescending(o => o.Position)
                 .FirstOrDefault();
             }
         }
 
-        public InvertedIndex LoadByUrlFilePosition(UrlFile urlFile, int position)
+        public InvertedIndex LoadByUrlFilePosition(UrlFile urlFile, int position, InvertedIndexType indexType = InvertedIndexType.Body)
         {
             return LoadByUrlFilePosition(urlFile.UrlFileId, position);
         }

@@ -14,8 +14,9 @@ namespace XiaoyaStore.Migrations
                 {
                     IndexStatId = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Count = table.Column<long>(nullable: false),
-                    Word = table.Column<string>(nullable: true)
+                    DocumentFrequency = table.Column<long>(nullable: false),
+                    Word = table.Column<string>(nullable: true),
+                    WordFrequency = table.Column<long>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -28,6 +29,7 @@ namespace XiaoyaStore.Migrations
                 {
                     InvertedIndexId = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
+                    IndexType = table.Column<int>(nullable: false),
                     Position = table.Column<int>(nullable: false),
                     UrlFileId = table.Column<int>(nullable: false),
                     Word = table.Column<string>(nullable: true)
@@ -35,6 +37,21 @@ namespace XiaoyaStore.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_InvertedIndices", x => x.InvertedIndexId);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "UrlFileIndexStats",
+                columns: table => new
+                {
+                    UrlFileIndexStatId = table.Column<int>(nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    UrlFileId = table.Column<int>(nullable: false),
+                    Word = table.Column<string>(nullable: true),
+                    WordFrequency = table.Column<long>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_UrlFileIndexStats", x => x.UrlFileIndexStatId);
                 });
 
             migrationBuilder.CreateTable(
@@ -84,14 +101,21 @@ namespace XiaoyaStore.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_InvertedIndices_Word",
+                name: "IX_InvertedIndices_UrlFileId_Word_Position_IndexType",
                 table: "InvertedIndices",
-                column: "Word");
+                columns: new[] { "UrlFileId", "Word", "Position", "IndexType" },
+                unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_InvertedIndices_UrlFileId_Position",
-                table: "InvertedIndices",
-                columns: new[] { "UrlFileId", "Position" });
+                name: "IX_UrlFileIndexStats_WordFrequency",
+                table: "UrlFileIndexStats",
+                column: "WordFrequency");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_UrlFileIndexStats_Word_UrlFileId",
+                table: "UrlFileIndexStats",
+                columns: new[] { "Word", "UrlFileId" },
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_UrlFiles_FilePath",
@@ -102,8 +126,7 @@ namespace XiaoyaStore.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_UrlFiles_UpdatedAt",
                 table: "UrlFiles",
-                column: "UpdatedAt",
-                unique: true);
+                column: "UpdatedAt");
 
             migrationBuilder.CreateIndex(
                 name: "IX_UrlFiles_Url",
@@ -112,20 +135,15 @@ namespace XiaoyaStore.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_UrlFrontierItems_IsPopped",
-                table: "UrlFrontierItems",
-                column: "IsPopped");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_UrlFrontierItems_PlannedTime",
-                table: "UrlFrontierItems",
-                column: "PlannedTime");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_UrlFrontierItems_Url",
                 table: "UrlFrontierItems",
                 column: "Url",
                 unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_UrlFrontierItems_PlannedTime_IsPopped",
+                table: "UrlFrontierItems",
+                columns: new[] { "PlannedTime", "IsPopped" });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -135,6 +153,9 @@ namespace XiaoyaStore.Migrations
 
             migrationBuilder.DropTable(
                 name: "InvertedIndices");
+
+            migrationBuilder.DropTable(
+                name: "UrlFileIndexStats");
 
             migrationBuilder.DropTable(
                 name: "UrlFiles");

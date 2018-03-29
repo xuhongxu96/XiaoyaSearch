@@ -72,7 +72,7 @@ namespace XiaoyaCrawler
                     {
                         // Fetched nothing
                         // Push back this url
-                        mUrlFrontier.PushBackUrl(url);
+                        mUrlFrontier.PushBackUrl(url, true);
                         return;
                     }
 
@@ -83,6 +83,7 @@ namespace XiaoyaCrawler
 
                         // Store parsed content
                         urlFile.Content = parseResult.Content;
+
                         mConfig.UrlFileStore.Save(urlFile);
 
                         // Judge if there are other files that have similar content as this

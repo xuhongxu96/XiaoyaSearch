@@ -6,6 +6,11 @@ namespace XiaoyaStore.Data.Model
 {
     public class InvertedIndex
     {
+        public enum InvertedIndexType
+        {
+            Body, Title
+        }
+
         /// <summary>
         /// Id
         /// </summary>
@@ -22,5 +27,9 @@ namespace XiaoyaStore.Data.Model
         /// Position the word occurs in the UrlFile
         /// </summary>
         public int Position { get; set; }
+        /// <summary>
+        /// Type
+        /// </summary>
+        public InvertedIndexType IndexType { get; set; } = InvertedIndexType.Body;
     }
 }

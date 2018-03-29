@@ -11,6 +11,8 @@ using XiaoyaStore.Data.Model;
 using XiaoyaIndexer.Config;
 using XiaoyaLogger;
 using System.IO;
+using static XiaoyaStore.Data.Model.InvertedIndex;
+using static XiaoyaFileParser.Model.Token;
 
 namespace XiaoyaIndexer
 {
@@ -27,6 +29,18 @@ namespace XiaoyaIndexer
         {
             mLogger = new RuntimeLogger(Path.Combine(config.LogDirectory, "Indexer.Log"));
             mConfig = config;
+        }
+
+        protected static InvertedIndexType ConvertType(TokenType type)
+        {
+            switch(type)
+            {
+                case TokenType.Body:
+                default:
+                    return InvertedIndexType.Body;
+                case TokenType.Title:
+                    return InvertedIndexType.Title;
+            }
         }
 
         protected async Task IndexFilesAsync(CancellationToken cancellationToken)
@@ -64,6 +78,7 @@ namespace XiaoyaIndexer
                                           Word = token.Text,
                                           Position = token.Position,
                                           UrlFileId = urlFile.UrlFileId,
+                                          IndexType = ConvertType(token.Type),
                                       };
 
                 mConfig.InvertedIndexStore.ClearAndSaveInvertedIndices(urlFile, invertedIndices);

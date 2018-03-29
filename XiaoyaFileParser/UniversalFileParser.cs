@@ -38,6 +38,11 @@ namespace XiaoyaFileParser
             mConfig = config;
         }
 
+        public async Task<string> GetTitleAsync()
+        {
+            return await mCurrentParser?.GetTitleAsync();
+        }
+
         public async Task<string> GetContentAsync()
         {
             return await mCurrentParser?.GetContentAsync();
