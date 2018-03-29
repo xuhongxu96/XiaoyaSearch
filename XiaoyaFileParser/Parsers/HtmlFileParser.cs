@@ -32,8 +32,10 @@ namespace XiaoyaFileParser.Parsers
             foreach (var link in links)
             {
                 var href = link.GetAttribute("href");
-                var absoluteUrl = new Uri(new Uri(UrlFile.Url), href);
-                result.Add(absoluteUrl.ToString());
+                if (Uri.TryCreate(new Uri(UrlFile.Url), href, out Uri absoluteUrl))
+                {
+                    result.Add(absoluteUrl.ToString());
+                }
             }
 
             return result;
