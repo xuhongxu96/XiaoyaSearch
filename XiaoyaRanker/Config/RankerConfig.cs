@@ -7,9 +7,9 @@ namespace XiaoyaRanker.Config
 {
     public class RankerConfig
     {
-        public UrlFileStore UrlFileStore { get; set; }
-        public UrlFileIndexStatStore UrlFileIndexStatStore { get; set; }
-        public IndexStatStore IndexStatStore { get; set; }
-        public InvertedIndexStore InvertedIndexStore { get; set; }
+        public IUrlFileStore UrlFileStore { get; set; }
+        public IUrlFileIndexStatStore UrlFileIndexStatStore { get; set; }
+        public IIndexStatStore IndexStatStore { get; set; }
+        public IInvertedIndexStore InvertedIndexStore { get; set; }
     }
 }

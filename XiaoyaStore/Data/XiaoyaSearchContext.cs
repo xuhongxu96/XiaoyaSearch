@@ -46,7 +46,8 @@ namespace XiaoyaStore.Data
             #region InvertedIndex
 
             modelBuilder.Entity<InvertedIndex>()
-               .HasIndex(o => new { o.UrlFileId, o.Word, o.Position });
+               .HasIndex(o => new { o.UrlFileId, o.Word, o.Position })
+               .IsUnique();
 
             #endregion
 
@@ -61,8 +62,11 @@ namespace XiaoyaStore.Data
             #region UrlFileIndexStat
 
             modelBuilder.Entity<UrlFileIndexStat>()
-                .HasIndex(o => new { o.Word, o.WordFrequency, o.UrlFileId })
+                .HasIndex(o => new { o.Word, o.UrlFileId })
                 .IsUnique();
+
+            modelBuilder.Entity<UrlFileIndexStat>()
+                .HasIndex(o => o.WordFrequency);
 
             #endregion
         }
