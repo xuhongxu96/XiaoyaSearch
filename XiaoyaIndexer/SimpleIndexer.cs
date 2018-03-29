@@ -14,6 +14,7 @@ using System.IO;
 using static XiaoyaStore.Data.Model.InvertedIndex;
 using static XiaoyaFileParser.Model.Token;
 using System.Collections.Concurrent;
+using Microsoft.EntityFrameworkCore;
 
 namespace XiaoyaIndexer
 {
@@ -30,7 +31,7 @@ namespace XiaoyaIndexer
 
         public SimpleIndexer(IndexerConfig config)
         {
-            mLogger = new RuntimeLogger(Path.Combine(config.LogDirectory, "Indexer.Log"));
+            mLogger = new RuntimeLogger(Path.Combine(config.LogDirectory, "Indexer.Log"), true);
             mConfig = config;
 
             mConfig.UrlFileStore.RestartIndex();
@@ -53,37 +54,57 @@ namespace XiaoyaIndexer
             }
         }
 
-        protected async Task IndexFile(UrlFile urlFile)
+        protected void IndexFile(UrlFile urlFile)
         {
-            try
+            mTasks.Add(Task.Run(() =>
             {
-                mLogger.Log(nameof(SimpleIndexer), "Indexing Url: " + urlFile.Url);
-                UniversalFileParser parser = new UniversalFileParser
+                try
                 {
-                    UrlFile = urlFile
-                };
-                IList<Token> tokens = await parser.GetTokensAsync();
+                    mLogger.Log(nameof(SimpleIndexer), "Indexing Url: " + urlFile.Url);
+                    UniversalFileParser parser = new UniversalFileParser
+                    {
+                        UrlFile = urlFile
+                    };
+                    IList<Token> tokens = parser.GetTokensAsync().GetAwaiter().GetResult();
 
-                var invertedIndices = from token in tokens
-                                      select new InvertedIndex
-                                      {
-                                          Word = token.Text,
-                                          Position = token.Position,
-                                          UrlFileId = urlFile.UrlFileId,
-                                          IndexType = ConvertType(token.Type),
-                                      };
+                    var invertedIndices = from token in tokens
+                                          select new InvertedIndex
+                                          {
+                                              Word = token.Text,
+                                              Position = token.Position,
+                                              UrlFileId = urlFile.UrlFileId,
+                                              IndexType = ConvertType(token.Type),
+                                          };
+                    int failedTimes = 0;
+                    while (failedTimes != -1)
+                    {
+                        try
+                        {
+                            lock (mSyncLock)
+                            {
+                                mConfig.InvertedIndexStore.ClearAndSaveInvertedIndices(urlFile, invertedIndices);
+                            }
+                            failedTimes = -1;
+                        }
+                        catch (DbUpdateConcurrencyException)
+                        {
+                            Thread.Sleep(5000);
+                            failedTimes++;
+                            if (failedTimes == 10)
+                            {
+                                mLogger.Log(nameof(SimpleIndexer), "Failed to Index Url: " + urlFile.Url);
+                                throw;
+                            }
+                        }
+                    }
 
-                lock (mSyncLock)
-                {
-                    mConfig.InvertedIndexStore.ClearAndSaveInvertedIndices(urlFile, invertedIndices);
+                    mLogger.Log(nameof(SimpleIndexer), "Indexed Url: " + urlFile.Url);
                 }
-
-                mLogger.Log(nameof(SimpleIndexer), "Indexed Url: " + urlFile.Url);
-            }
-            finally
-            {
-                mIndexSemaphore.Release();
-            }
+                finally
+                {
+                    mIndexSemaphore.Release();
+                }
+            }));
         }
 
         protected async Task IndexFilesAsync(CancellationToken cancellationToken)
@@ -98,7 +119,6 @@ namespace XiaoyaIndexer
                     break;
                 }
 
-                mIndexSemaphore.Wait();
                 var urlFile = mConfig.UrlFileStore.LoadAnyForIndex();
                 if (urlFile == null)
                 {
@@ -113,7 +133,8 @@ namespace XiaoyaIndexer
                 IsWaiting = false;
                 waitSeconds = 1;
 
-                mTasks.Add(IndexFile(urlFile));
+                mIndexSemaphore.Wait();
+                IndexFile(urlFile);
             }
         }
 

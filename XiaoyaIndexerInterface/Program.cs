@@ -40,6 +40,7 @@ namespace XiaoyaIndexerInterface
                 LogDirectory = arguments.LogDir,
                 UrlFileStore = new UrlFileStore(options),
                 InvertedIndexStore = new InvertedIndexStore(options),
+                MaxIndexingConcurrency = 10,
             };
 
             var indexer = new SimpleIndexer(config);

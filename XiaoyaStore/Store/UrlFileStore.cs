@@ -51,7 +51,15 @@ namespace XiaoyaStore.Store
                 }
 
                 urlFile.IndexStatus = UrlFile.UrlFileIndexStatus.Indexing;
-                context.SaveChanges();
+
+                try
+                {
+                    context.SaveChanges();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    return null;
+                }
 
                 return urlFile;
             }

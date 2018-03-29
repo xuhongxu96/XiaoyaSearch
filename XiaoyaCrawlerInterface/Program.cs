@@ -53,7 +53,7 @@ namespace XiaoyaCrawlerInterface
                 UrlFrontierItemStore = new UrlFrontierItemStore(options),
                 FetchDirectory = arguments.FetchDir,
                 LogDirectory = arguments.LogDir,
-                MaxFetchingConcurrency = 100,
+                MaxFetchingConcurrency = 10,
             };
 
             var urlFilters = new List<IUrlFilter>
