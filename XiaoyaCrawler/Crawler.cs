@@ -70,7 +70,9 @@ namespace XiaoyaCrawler
                     var urlFile = mFetcher.FetchAsync(url).GetAwaiter().GetResult();
                     if (urlFile == null)
                     {
-                        // Fetched nothing, return.
+                        // Fetched nothing
+                        // Push back this url
+                        mUrlFrontier.PushBackUrl(url);
                         return;
                     }
 
