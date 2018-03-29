@@ -23,7 +23,7 @@ namespace XiaoyaCrawlerUnitTest
     public class CrawlerUnitTest
     {
         private string logDir = Path.Combine(Path.GetTempPath(), "Logs");
-        private string fetchDir = Path.Combine(Path.GetTempPath(), "Fetched");
+        private string fetchDir = "Fetched";
 
         [TestMethod]
         public async Task TestCrawler()
@@ -72,8 +72,7 @@ namespace XiaoyaCrawlerUnitTest
 
             var urlFilters = new List<IUrlFilter>
             {
-                new DomainUrlFilter(@"^http\://(www\.)?bnu\.edu\.cn(/[a-zA-Z0-9/]*)?$"),
-                //new DomainUrlFilter(@"^http\://(www\.)?bnu\.edu\.cn/?$"),
+                new DomainUrlFilter(@"bnu\.edu\.cn(/[a-zA-Z0-9/]*)?$"),
             };
 
             var crawler = new Crawler(
@@ -90,7 +89,7 @@ namespace XiaoyaCrawlerUnitTest
                 crawler.StartAsync().GetAwaiter().GetResult();
             });
 
-            Thread.Sleep(20000);
+            Thread.Sleep(8000);
 
             await crawler.StopAsync();
 

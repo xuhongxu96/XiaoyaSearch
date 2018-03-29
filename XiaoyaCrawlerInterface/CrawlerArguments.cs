@@ -25,10 +25,16 @@ namespace XiaoyaCrawlerInterface
             Required = true)]
         public string LogDir { get; set; }
 
-        [Argument("-DbDir",
+        [Argument("-DbType",
             Alias = "-d",
-            DefaultValue = "Db",
+            DefaultValue ="sqlite",
             Required = true)]
-        public string DbDir { get; set; }
+        public string DbType { get; set; }
+
+        [Argument("-DbConnectionString",
+            Alias = "-c",
+            DefaultValue = "Data Source=Db/XiaoyaSearch.db",
+            Required = false)]
+        public string DbConnectionString { get; set; }
     }
 }

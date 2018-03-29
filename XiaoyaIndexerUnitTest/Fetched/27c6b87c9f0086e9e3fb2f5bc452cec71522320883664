@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport"  maximum-scale="1.0">
+<title>北京师范大学国内合作办公室</title>
+<link href="css/base.css" type="text/css" rel="stylesheet" />
+<link href="css/style.css" type="text/css" rel="stylesheet" />
+<!-----背景自适应图片切换---------->
+<link rel="stylesheet" type="text/css" href="css/bgstretcher.css" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bgstretcher.js"></script>
+<script type="text/javascript" src="js/bg.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+</head>
+
+<body>
+
+
+<div id="homepage">
+    <div class="top">
+        <div id="home-top">
+            <div class="logo">
+                <a href="index.htm"><img src="images/logo.png" /></a>
+            </div>
+            <div class="top-links">
+                <div class="animate-area">
+                 
+                                       
+				    <div class="sum animate">
+                        <span><a href="qyhz/index.htm">区域合作</a></span>
+                       					    <div class="aa-content">
+                                             <a href="qyhz/hzjj/index.htm">合作简介</a>
+                                                <a href="qyhz/gzdt/index.htm">工作动态 </a>
+                                                     </div>
+						                    </div>
+                                      
+				    <div class="sum animate">
+                        <span><a href="http://hzbx.bnu.edu.cn/">合作办学</a></span>
+                                           </div>
+                                      
+				    <div class="sum animate">
+                        <span><a href="gjydbx/index.htm">高教异地办学</a></span>
+                                           </div>
+                                      
+				    <div class="sum animate">
+                        <span><a href="gywm/index.htm">关于我们</a></span>
+                       					    <div class="aa-content">
+                                             <a href="gywm/bgsjj/index.htm">办公室简介</a>
+                                                <a href="gywm/jgsz/index.htm">机构设置</a>
+                                                     </div>
+						                    </div>
+                                </div>
+                <div class="links">
+                        <div class="search">
+                            <form name="dataForm" action="/cms/search/searchResults.jsp" target="_blank" method="post" accept-charset="utf-8" onsubmit="document.charset='utf-8';">
+                                <input name="siteID" value="119" type ="hidden">
+                                <input class="notxt" value="搜索" name="query" type="text" id="keywords" onFocus="if(value==defaultValue){value='';}" onBlur="if(!value){value=defaultValue;}"
+                                 onclick="if(this.value=='站内搜索'){this.value='';this.form.keywords.style.color='#3c98cc'}">
+                                <input class="notxt1" name="Submit" type="submit" value="" />
+                            </form>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="yuanxun">
+                <img src="images/yuanxun.png">
+            </div>
+    </div>    <!-- 内容开始 -->
+    <div class="content">
+        <div id="home-content">
+            <div class="row mode01">
+                <div class="col lf">
+                    <div class="tabArticleList01" id="tab01">
+                        <ul class="tabMenu01">
+                            <li class="active"><a href="xwsd/bmkx/index.htm">新闻速递</a></li>
+                            <li><a href="xwsd/tzgg/index.htm">通知公告</a></li>
+                        </ul>
+                        <dl class="tabList01">
+                            <dd class="dd01" style="display:block">
+                                <div class="topNews">
+                                   								    <div class="newsPic"><img src="images/content/2018-03/20180321091704593801.jpg"></div>
+                                    <div class="newsInfo">
+                                        <h2><a href="xwsd/bmkx/45827.htm">[媒体聚焦]北京师范大学基础教育合作办学平台：艺体搭建新丝路</a></h2>
+                                        <span>2018-03-21</span>
+                                        <p>            “一带一路”看教育：娃娃们大有作为 
+    </p>
+                                    </div>
+									                                </div>
+                                <ul class="newsList">
+                                                                       <li><span class="rightDate">03-21</span><a href="xwsd/bmkx/45890.htm">            为祖国点赞——国内合作办公室党支部集中观影《厉害了，我的... 
+    </a></li>
+                                                                       <li><span class="rightDate">02-12</span><a href="xwsd/bmkx/44944.htm">            我校基础教育合作办学平台“一带一路”艺体共享计划海外首站... 
+    </a></li>
+                                                                       <li><span class="rightDate">12-25</span><a href="xwsd/bmkx/41984.htm">            [媒体聚焦]基础教育课程改革全面深化：学校个性化发展，教... 
+    </a></li>
+                                                                   </ul>
+                                <a href="xwsd/bmkx/index.htm" class="more"><span>更多</span></a>
+                            </dd>
+                            <dd class="dd02" style="display:none;">
+                                 <ul class="newsList">
+                                                                         <li><span class="rightDate">03-21</span><a href="xwsd/tzgg/45887.htm">            “木铎之音”2018全国幼儿园园长领导力提升高级研修班邀... 
+    </a></li>
+                                                                       <li><span class="rightDate">03-12</span><a href="xwsd/tzgg/45437.htm">            关于举办“第八期京师校园足球初级教练员培训班”的邀请函 
+    </a></li>
+                                                                       <li><span class="rightDate">03-09</span><a href="xwsd/tzgg/45304.htm">            2018年北京师范大学国内合作办公室新校筹建人员招聘公告 
+    </a></li>
+                                                                       <li><span class="rightDate">12-25</span><a href="xwsd/tzgg/41995.htm">            关于举办“第二期京师校园足球中级教练员培训班”的邀请函 
+    </a></li>
+                                                                       <li><span class="rightDate">12-07</span><a href="xwsd/tzgg/41087.htm">            关于举办“京师足球学校2018冬季海外精英训练营”的通知 
+    </a></li>
+                                                                       <li><span class="rightDate">12-06</span><a href="xwsd/tzgg/41001.htm">            北京师范大学基础教育合作办学平台 2017年冬季教师专场... 
+    </a></li>
+                                                                   </ul>
+                                <a href="xwsd/tzgg/index.htm" class="more"><span>更多</span></a>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="col md">
+                    <div class="articleList">
+                        <div class="trainTitle">
+                            <h2><a href="pxgl/index.htm">培训管理</a></h2>
+                        </div>
+                        <ul class="trainList">
+						                              <li><a href="pxgl/xyb/38646.htm">            培训公告 
+    </a></li>
+                                                      <li><a href="pxgl/xyb/38652.htm">            北京师范大学培训项目申请表 
+    </a></li>
+                                                      <li><a href="pxgl/xyb/38648.htm">            北京师范大学合同审批表 
+    </a></li>
+                                                      <li><a href="pxgl/xyb/38650.htm">            北京师范大学使用校印审批表 
+    </a></li>
+                                                      <li><a href="pxgl/lct/38656.htm">            培训项目审批流程图 
+    </a></li>
+                                                      <li><a href="pxgl/htspb/38654.htm">            北京师范大学2017年度第一学期培训项... 
+    </a></li>
+                                                  </ul>
+                        <a href="pxgl/index.htm" class="more"><span>更多</span></a>
+                    </div>
+                </div>
+                <div class="col rt">
+                    <div class="articleList">
+                        <div class="trainTitle">
+                            <h2><a href="pphd/index.htm">品牌活动</a></h2>
+                        </div>
+                        <ul class="activeList">
+                            														<li><a href="pphd/jsjcjycxlt/index.htm"><img src="images/20171026120436608073.jpg"></a></li>
+																												<li><a href="pphd/lybks/index.htm"><img src="images/20171027110020748997.png"></a></li>
+																												<li><a href="pphd/jsjzxt/index.htm"><img src="images/20171027150211494507.png"></a></li>
+																																										                        </ul>
+                        <a href="pphd/index.htm" class="moreActive"><img src="images/active_more.png"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 内容结束 -->
+   
+ <div class="footer">
+            <div id="home-footer">
+                <div class="footerLf">
+                    <div class="friendLinks">
+                        <h2>支持机构：</h2>
+                        <ul>
+						                              <li><a href="http://www.moe.gov.cn/" target="_black">教育部</a></li>
+                                                      <li><a href="http://www.bnu.edu.cn/" target="_black">北京师范大学</a></li>
+                                                      <li><a href="http://hzbx.bnu.edu.cn/" target="_black">北京师范大学基础教育对外合作办学部</a></li>
+                                                      <li><a href="http://www.chinahaolaoshi.org/index.shtml" target="_black">中国好老师</a></li>
+                                                  </ul>
+                    </div>
+                    <div class="copyRight">联系方式：010-58803826  010-58802500&nbsp;&nbsp; 传真：010-58802500&nbsp;&nbsp;         办公地址：北京市海淀区新街口外大街19号京师大厦1101室&nbsp;&nbsp;邮编：100875</div>
+                </div>
+                <div class="footerRt">
+				                 </div>
+            </div>
+    </div>   
+</div><div id="slide-arrow-box">
+    <a id="cclb-btn-prev" class="slide-arrow slide-arrow-prev"></a>
+    <a id="cclb-btn-next" class="slide-arrow slide-arrow-next"></a>
+</div>
+
+<script type="text/javascript">
+     tab('#tab01');
+</script>
+</body></html>

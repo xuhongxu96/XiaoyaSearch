@@ -1,0 +1,197 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>北京师范大学信息公开网站</title>
+<link href="images/bnu2013.css" rel="stylesheet" type="text/css" />
+<script src="js/daohang.js" type="text/javascript"></script>
+<script src="js/focus.js" type="text/javascript"></script>	
+<!--[if lt IE 8]>
+<style type="text/css">
+li a{display:inline-block;}
+li a{display:block;}
+</style>
+<![endif]-->
+<script src="js/jquery-1.3.2.js" type="text/javascript"></script>
+<script type="text/javascript">
+function initMenu() {
+  $('#menu ul').hide();
+  $('#menu ul:first').show();
+  $('#menu li a').click(
+    function() {
+      var checkElement = $(this).next();
+      if((checkElement.is('ul')) && (checkElement.is(':visible'))) {
+        return false;
+        }
+      if((checkElement.is('ul')) && (!checkElement.is(':visible'))) {
+        $('#menu ul:visible').slideUp('normal');
+        checkElement.slideDown('normal');
+        return false;
+        }
+      }
+    );
+  }
+$(document).ready(function() {initMenu();});
+</script>
+<style type="text/css">
+<!--
+.biaoti {
+	font-size: 14px;
+	line-height: 35px;
+	font-weight: bold;
+	color: #006699;
+	background-color: #D9F2FF;
+	border-bottom-width: 3px;
+	border-bottom-style: solid;
+	border-bottom-color: #0099FF;
+	text-align: left;
+	text-indent: 15px;
+}
+-->
+</style>
+</head>
+
+<body>
+
+<div style="width:1001px; margin:0px auto;">
+<table width="1001" border="0" align="center" cellpadding="0" cellspacing="0" class="bodybg">
+  <tr>
+    <td height="111" align="center" valign="top" class="toplf" bgcolor="#FFFFFF"><table width="1001" border="0" align="center" cellpadding="0" cellspacing="0" >
+      <tr>
+        <td width="219" align="left">&nbsp;</td>
+        <td width="782" height="111" align="right" valign="top">&nbsp;</td>
+      </tr>
+      </table></td>
+  </tr>
+  <tr>
+    <td align="center" valign="middle" bgcolor="#FFFFFF" class="newsbox">
+    <table width="973" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="200" align="left" valign="top">
+    <ul class="ul_daohangrsc">     
+<li><a href="http://www.bnu.edu.cn/" target="_blank">学校主页</a></li>
+<li><a href="zcfg/index.htm">政策法规</a></li>
+<li><a href="gzzd/index.htm">信息公开制度</a></li>
+<li><a href="xxgkzn/index.htm">信息公开指南</a></li>
+<li><a href="sqyjd/index.htm">申请与监督</a></li>
+<li><a href="#">信息公开受理</a></li>
+    </ul>
+　部门：北京师范大学党委办公室/<br />
+　　　　校长办公室<br />
+　地址：北京市海淀区新街口外大<br />
+　　　　街19号主楼A403</br>
+　邮编：100875<br />
+　电话：010-58807960<br />
+　邮箱：xxgk@bnu.edu.cn</td>
+    <td width="623" valign="top" bgcolor="#FFFFFF" class="zhengwen_m"><table width="100%">
+      <tr>
+        <td height="248" align="left" valign="top" class="link_m"><table width="99%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td width="80%" class="biaoti">师大快讯</td>
+              <td width="20%"  class="biaoti" ><a href="http://www.bnu.edu.cn/bsdkx/index.html" target="_blank">more</a></td>
+            </tr>
+            <tr>
+              <td height="72" colspan="2"><ul class="ul_list">
+                                <li><a href="http://www.bnu.edu.cn/bsdkx/index.html" target="_blank" title="学校各单位学习贯彻落实党的十九大精神 " >            学校各单位学习贯彻落实党的十九大精神  
+    &nbsp;<span class="newtime">&nbsp;(2017-12-08)&nbsp;&nbsp;</span></a></li>
+                                <li><a href="http://www.bnu.edu.cn/bsdkx/85954.html" target="_blank" title="地表过程与资源生态国家重点实验室年度学术委员会会议顺利召开" >            地表过程与资源生态国家重点实验室年度学术委员会会议... 
+    &nbsp;<span class="newtime">&nbsp;(2017-12-28)&nbsp;&nbsp;</span></a></li>
+                                <li><a href="http://www.bnu.edu.cn/bsdkx/85952.html" target="_blank" title="人工智能与教育发展研讨会暨互联网教育智能技术及应用国家工程实验室技术委员会第一次会议在我校召开" >            人工智能与教育发展研讨会暨互联网教育智能技术及应用... 
+    &nbsp;<span class="newtime">&nbsp;(2017-12-28)&nbsp;&nbsp;</span></a></li>
+                                <li><a href="http://www.bnu.edu.cn/bsdkx/85950.html" target="_blank" title="我校后勤足球队晋级中国足协五人制甲级联赛全国决赛" >            我校后勤足球队晋级中国足协五人制甲级联赛全国决赛 
+    &nbsp;<span class="newtime">&nbsp;(2017-12-27)&nbsp;&nbsp;</span></a></li>
+                                <li><a href="http://www.bnu.edu.cn/bsdkx/85942.html" target="_blank" title="我校学生在第二届首都高校大学生阅读演讲比赛中荣获佳绩" >            我校学生在第二届首都高校大学生阅读演讲比赛中荣获佳... 
+    &nbsp;<span class="newtime">&nbsp;(2017-12-27)&nbsp;&nbsp;</span></a></li>
+                                <li><a href="http://www.bnu.edu.cn/bsdkx/85940.html" target="_blank" title="学校发布《2017中国劳动力市场发展报告》" >            学校发布《2017中国劳动力市场发展报告》 
+    &nbsp;<span class="newtime">&nbsp;(2017-12-27)&nbsp;&nbsp;</span></a></li>
+                              </ul></td>
+            </tr>
+            <tr>
+              <td  class="biaoti">通知公告</td>
+              <td  class="biaoti"><a href="http://www.bnu.edu.cn/tzgg/index.html" target="_blank">more</a></td>
+            </tr>
+            <tr>
+              <td colspan="2"><ul class="ul_list">
+                                <li><a href="docs/20171231160833038183.pdf" target="_blank" title="一流大学建设高校建设方案" >            一流大学建设高校建设方案 
+    &nbsp;<span class="newtime">&nbsp;(2017-12-29)&nbsp;&nbsp;</span></a></li>
+                                <li><a href="http://www.bnu.edu.cn/tzgg/85757.html" target="_blank" title="关于北师大沙河新校区G区燃气工程监理的询价公告" >            关于北师大沙河新校区G区燃气工程监理的询价公告 
+    &nbsp;<span class="newtime">&nbsp;(2017-12-13)&nbsp;&nbsp;</span></a></li>
+                                <li><a href="http://www.bnu.edu.cn/tzgg/85478.html" target="_blank" title="关于“一种用于制备锝-99m标记的GSA的药盒及其制备方法”专利权转让公示" >            关于“一种用于制备锝-99m标记的GSA的药盒及其... 
+    &nbsp;<span class="newtime">&nbsp;(2017-12-08)&nbsp;&nbsp;</span></a></li>
+                                <li><a href="http://www.bnu.edu.cn/tzgg/85152.html" target="_blank" title="北京师范大学配电设施残值处置项目招标公告" >            北京师范大学配电设施残值处置项目招标公告 
+    &nbsp;<span class="newtime">&nbsp;(2017-12-08)&nbsp;&nbsp;</span></a></li>
+                                <li><a href="http://www.bnu.edu.cn/tzgg/85150.html" target="_blank" title="北京师范大学后勤管理处电力增容材料采购招标公告" >            北京师范大学后勤管理处电力增容材料采购招标公告 
+    &nbsp;<span class="newtime">&nbsp;(2017-12-08)&nbsp;&nbsp;</span></a></li>
+                                <li><a href="http://www.bnu.edu.cn/tzgg/85148.html" target="_blank" title="北京师范大学热力部2017-2020年度五金水暖维修材料供货商入围评选项目招标公告" >            北京师范大学热力部2017-2020年度五金水暖维... 
+    &nbsp;<span class="newtime">&nbsp;(2017-12-08)&nbsp;&nbsp;</span></a></li>
+                              </ul></td>
+            </tr>
+        </table></td>
+      </tr>
+      <tr>
+        <td height="17" align="right" valign="top" class="link_m">&nbsp;</td>
+      </tr>
+      <tr>
+        <td height="35" align="right" valign="top" class="link_m"><a href="http://oa.bnu.edu.cn/bnuoa/application/oa/information/view/news_list.jsp?colId=ff8080810beea0e6010bef1009a30081&amp;colName=学校通知公告" target="_blank">查看校内通知公告请点击此处 &raquo;</a></td>
+      </tr>
+    </table>
+    <table width="100%" border="0" cellspacing="1" cellpadding="0" bgcolor="#FFFFFF" class="topboxlf">
+            <tr>
+              <td bgcolor="#D9F2FF"><h1>重要链接</h1></td>
+            </tr>
+            <tr>
+    <td height="35" align="left" valign="middle" class="link_m">　　<a href="http://one.bnu.edu.cn/" target="_blank">信息门户</a>　｜　<a href="http://www.bnu.edu.cn/xfzc/80823.html" target="_blank">校领导信箱</a>　｜　<a href="http://www.bnu.edu.cn/xfzc/52576.html" target="_blank">校领导接待日</a></td>
+            </tr>
+          </table>    </td>
+    <td width="150" align="center" valign="top" bgcolor="#D9F2FF">
+    <table width="100%"><tr><td bgcolor="#1876B3"><span class="h4">信息公开目录</span></td></tr>
+    <tr><td align="center" valign="top"><ul class="mulu">
+<li><a href="http://xxgk.bnu.edu.cn/xxgkml/ndbg/">年度报告</a></li>
+<li><a href="http://xxgk.bnu.edu.cn/xxgkml/xqgk/">校情概况</a></li>
+<li><a href="http://xxgk.bnu.edu.cn/xxgkml/xxfw/dwcwkjy/index.htm">学校发文</a></li>
+<li><a href="http://xxgk.bnu.edu.cn/xxgkml/fzgh/index.htm">发展规划</a></li>
+<li><a href="http://xxgk.bnu.edu.cn/xxgkml/xkzy/bkzy/index.htm">学科专业</a></li>
+<li><a href="http://xxgk.bnu.edu.cn/xxgkml/zsgz/bkszs/index.htm">招生工作</a></li>
+<li><a href="http://xxgk.bnu.edu.cn/xxgkml/jxpy/jwc/index.htm">教学培养</a></li>
+<li><a href="http://xxgk.bnu.edu.cn/xxgkml/xsgz/xsgl/index.htm">学生工作</a></li>
+<li><a href="http://xxgk.bnu.edu.cn/xxgkml/kxyj/kxjzc/index.htm">科学研究</a></li>
+<li><a href="http://xxgk.bnu.edu.cn/xxgkml/zzrs/zzgz/index.htm">组织人事</a></li>
+<li><a href="http://xxgk.bnu.edu.cn/xxgkml/hzjl/gjh/index.htm">合作交流</a></li>
+<li><a href="http://xxgk.bnu.edu.cn/xxgkml/cwzc/cwgl/index.htm">财务资产</a></li>
+<li><a href="http://xxgk.bnu.edu.cn/xxgkml/tjbz/xxh/index.htm">条件保障</a></li>
+<li><a href="http://xxgk.bnu.edu.cn/xxgkml/msgz/index.htm">民生工作</a></li>
+<li><a href="http://xxgk.bnu.edu.cn/xxgkml/jdgz/index.htm">监督工作</a></li>
+<li><a href="http://xxgk.bnu.edu.cn/xxgkml/gkgz/index.htm">工会工作</a></li>
+<li><a href="http://xxgk.bnu.edu.cn/xxgkml/gzzd1/fzgh1/index.htm">规章制度</a></li>
+<li><a href="http://xxgk.bnu.edu.cn/xxgkml/qtxx/index.htm">其它信息</a></li>
+
+    </ul>
+    
+    <br>
+    
+         </td></tr></table>    </td>
+  </tr>
+</table>
+
+      </td>
+  </tr>
+  <tr>
+    <td align="center" valign="middle" bgcolor="#FFFFFF"><table width="100%" border="0" cellspacing="10" cellpadding="0">
+          <tr>
+            <td height="35" align="center" valign="middle" bgcolor="#005AAB"><table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+      <tr>
+        <td height="26" align="center" valign="middle">&nbsp;&nbsp;&nbsp;&nbsp;版权所有&copy; 北京师范大学党委办公室/校长办公室　地址：北京市新街口外大街19号　邮编：100875　<a href="mailto:xxgk@bnu.edu.cn">意见箱</a></td>
+        <td align="right" valign="middle">&nbsp;</td>
+      </tr>
+    </table></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+</div>
+</body>
+</html>
+</body></html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>北京师范大学新闻网</title>
+    <link href="../../css/version_20160404_index.css" rel="stylesheet" />
+    <script src="../../images/version_20160404/jquery-1.11.1.min.js" type="text/javascript"></script>
+</head>
+<body>
+<style>
+.content ul li {
+    margin-left: 20px;
+    line-height: 32px;
+    font-size: 18px;
+    color: orange;
+    list-style-type: square;
+}
+.left .title {
+    margin-top: 5px;        
+    margin-bottom: 10px;
+    padding: 5px;
+    font-family: 宋体;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 24px;
+    color: rgb(17, 58, 112);
+}
+.square {
+    width: 12px;
+    height: 24px;
+    display: block;
+    background-color: rgb(17, 58, 112);
+    float: left;
+}
+.square_s {
+    width: 12px;
+    height: 12px;
+    display: block;
+    background-color: rgb(17, 58, 112);
+    float: left;
+}
+a {
+   text-decoration: none;
+}
+a:hover {
+   text-decoration: underline;
+}
+.content .left .box {
+   margin-top: 10px;
+   width: 288px;
+   height: 60px;
+   background-color: #fff;
+   text-align: left;
+}
+.content .left .box img {
+   margin-top: 2px;
+   height: 45px;
+   float: left;
+}
+.content .left .box div {
+   line-height: 25px;
+   text-align: left;
+}
+.content .left .box div a {
+   color: #000;
+}
+
+.content .left {
+    height: 720px;
+    border-top: 1px dashed;
+    padding: 5px;
+    width: 286px;
+}
+.search-row {
+    clear: both;
+}
+</style>
+<!-- banner begin -->
+<div class="banner"><img src="../../images/version_20160404/banner.png" /></div>
+<!-- banner end -->
+<!-- nav begin -->
+<ul class="nav">
+    <li><a href="http://news.bnu.edu.cn/" target="_blank">首页</a></li>
+    <li><a href="../../twbd/index.htm" target="_blank">京师要闻</a></li>
+    <li><a href="../../xwzh/yxxw/index.htm" target="_blank">综合新闻</a></li>
+    <li><a href="../../xzkd/index.htm" target="_blank">学术速递</a></li>
+    <li><a href="../../xrgd/index.htm" target="_blank">观点集萃</a></li>
+    <li><a href="../../mdjt/index.htm" target="_blank">木铎讲堂</a></li>
+    <li><a href="../../bsrw/xzfc/index.htm" target="_blank">北师人物</a></li>
+    <li><a href="../../xyfcgb/index.htm" target="_blank">校友风采</a></li>
+    <li><a href="../../jjxy/index.htm" target="_blank">菁菁校园</a></li>
+</ul>
+<!-- nav end -->
+<!-- search begin -->
+<div class="search-row">
+<span style="float: left">当前位置：北师大新闻网 &gt; 两会委员建言献策一</span>
+<form  name="dataForm" action="/cms/search/searchResults.jsp" target="_blank" method="post" accept-Charset="utf-8"  onsubmit="document.charset='utf-8';" style=" MARGIN:0px;PADDING:0px"> 
+    <input type="submit" style="margin-top: 15px;width:24px; height: 24px; border: 0px solid; background: url('../../images/version_20160404/search_button.png') no-repeat;float:right;" value="">        <input type="text" class="search" name="query" />
+</form>
+</div>
+<!-- search end -->
+<div class="content">
+<div class="right" style="height: 720px;background-color:#F2F5F8;">
+<img src="../../images/version_20160404/content_title.png" width="620px">
+<ul style="padding:5px;">
+ <li>
+<A              title="文章标题：钟秉林委员：高考改革要尊重学生自主选择权" 
+                  href="140701.htm" 
+                   target="_blank"  >            钟秉林委员：高考改革要尊重学生自主选择权 
+    </A>
+</li>
+<li>
+<A              title="文章标题：庞丽娟委员：关于尽快出台《学前教育法》的建议" 
+                  href="140700.htm" 
+                   target="_blank"  >            庞丽娟委员：关于尽快出台《学前教育法》的建议 
+    </A>
+</li>
+<li>
+<A              title="文章标题：葛剑平委员：以“两河”为纽带构建生态经济协同发展区" 
+                  href="140699.htm" 
+                   target="_blank"  >            葛剑平委员：以“两河”为纽带构建生态经济协同发展区 
+    </A>
+</li>
+<li>
+<A              title="文章标题：葛剑平委员：众创空间存盲目跟风乱象" 
+                  href="140470.htm" 
+                   target="_blank"  >            葛剑平委员：众创空间存盲目跟风乱象 
+    </A>
+</li>
+<li>
+<A              title="文章标题：张大勇委员：禁止或控制穿山甲鳞片入药" 
+                  href="140366.htm" 
+                   target="_blank"  >            张大勇委员：禁止或控制穿山甲鳞片入药 
+    </A>
+</li>
+<li>
+<A              title="文章标题：葛剑平委员：建设“双一流大学”不能靠高薪买“雇佣军”" 
+                  href="140332.htm" 
+                   target="_blank"  >            葛剑平委员：建设“双一流大学”不能靠高薪买“雇佣军” 
+    </A>
+</li>
+<li>
+<A              title="文章标题：庞丽娟委员：学前教育投入结构和性质要优化" 
+                  href="140331.htm" 
+                   target="_blank"  >            庞丽娟委员：学前教育投入结构和性质要优化 
+    </A>
+</li>
+<li>
+<A              title="文章标题：庞丽娟委员：推动学前教育立法 解根本性发展难题" 
+                  href="140330.htm" 
+                   target="_blank"  >            庞丽娟委员：推动学前教育立法 解根本性发展难题 
+    </A>
+</li>
+<li>
+<A              title="文章标题：刘焱委员：让普惠性幼儿园真正惠及千家万户" 
+                  href="140248.htm" 
+                   target="_blank"  >            刘焱委员：让普惠性幼儿园真正惠及千家万户 
+    </A>
+</li>
+<li>
+<A              title="文章标题：葛剑平委员： 国家公园体制建设需理顺五种关系" 
+                  href="140247.htm" 
+                   target="_blank"  >            葛剑平委员： 国家公园体制建设需理顺五种关系 
+    </A>
+</li>
+<li>
+<A              title="文章标题：钟秉林委员：民促法修改，民办教育面临几大利好" 
+                  href="140243.htm" 
+                   target="_blank"  >            钟秉林委员：民促法修改，民办教育面临几大利好 
+    </A>
+</li>
+<li>
+<A              title="文章标题：刘川生委员：思政工作怎样接地气、入人心" 
+                  href="140242.htm" 
+                   target="_blank"  >            刘川生委员：思政工作怎样接地气、入人心 
+    </A>
+</li>
+</ul>
+ <DIV style="height:30px;width:100%; color:#333333;text-align:center;" >
+ <DIV class=show_page>
+			  <FORM name=pageForm action="" method=post>
+共<B>12</B>篇新闻，&nbsp;&nbsp;<a href="index.htm">最前页</a>&nbsp;
+<a href="index.htm">上一页</a>&nbsp;
+<a href="index.htm">下一页</a>&nbsp;
+<a href="index.htm">最后页</a>&nbsp;&nbsp;
+页次：<STRONG><FONT color=red>1</FONT>/1</STRONG>页 
+转到<select name="page" onchange="javascript:PageFormSubmit()">
+<option value="index.htm" selected>1</option>
+</select>页
+</form>
+<SCRIPT language=JavaScript>
+function PageFormSubmit()
+{
+document.location.href=document.pageForm.page.options[document.pageForm.page.selectedIndex].value;
+}
+</SCRIPT>	</DIV><!-- 分页结束 -->
+</div>
+</div>
+<div class="left" style="height: auto;border:1px dashed #999;">
+<tr><td>
+    <div class="box" style="text-align: center;">
+        <img src="../../images/content/2017-06/20170618093821260785.jpg" width="52px" height="35px"/>
+        <div><a href="../../twbd/144893.htm" target="_blank">
+        [要闻]            学校党委召开常委会 研究部署巡视整改工作 
+            </a></div>
+    </div>			
+<tr><td>
+    <div class="box" style="text-align: center;">
+        <img src="" width="52px" height="35px"/>
+        <div><a href="../../bsrw/xzfc/143681.htm" target="_blank">
+         [人物]            陈一冰：奥运冠军的师大第一课 
+            </a></div>
+    </div>			
+<tr><td>
+    <div class="box" style="text-align: center;">
+        <img src="" width="52px" height="35px"/>
+        <div><a href="../../xrgd/139363.htm" target="_blank">
+        [观点]            姚建彬：国家层面交往推动中外文学交流（文学聚焦） 
+            </a></div>
+    </div>			
+<tr><td>
+    <div class="box" style="text-align: center;">
+        <img src="../../images/content/2016-06/20160603083720283474.jpg" width="52px" height="35px"/>
+        <div><a href="../../mdjt/129313.htm" target="_blank">
+        [讲堂]            楼宇烈：互联网大潮下中国传统文化的传播文化要“走出去”首... 
+            </a></div>
+    </div>			
+</div>
+</div>
+</div>
+<!-- footer begin -->
+<div class="footer"><img src="../../images/version_20160404/footer.png"/></div>
+<!-- footer begin -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#zhxw_a").mouseover(function() {
+            $("#zhxw").css("display", "block");
+            $("#ztxw").css("display", "none");
+        });
+        $("#ztxw_a").mouseover(function() {
+            $("#zhxw").css("display", "none");
+            $("#ztxw").css("display", "block");
+        });
+    });
+</script>
+</body>
+</html>
+</body></html>

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace XiaoyaStore.Data.Model
@@ -46,10 +47,22 @@ namespace XiaoyaStore.Data.Model
         [ConcurrencyCheck]
         public bool IsIndexed { get; set; }
         /// <summary>
-        /// DateTime offset between present and last update
+        /// Seconds offset between present and last update
         /// </summary>
         [ConcurrencyCheck]
-        public TimeSpan UpdateInterval { get; set; }
+        public int UpdateIntervalSeconds { get; set; }
+        /// <summary>
+        /// Timespan between present and last update
+        /// </summary>
+        [NotMapped]
+        public TimeSpan UpdateInterval
+        {
+            get => TimeSpan.FromSeconds(UpdateIntervalSeconds);
+            set
+            {
+                UpdateIntervalSeconds = value.Seconds;
+            }
+        }
         /// <summary>
         /// Updated at
         /// </summary>

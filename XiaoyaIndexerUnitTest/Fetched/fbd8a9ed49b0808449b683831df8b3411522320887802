@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>北京师范大学新闻网</title>
+    <script src="../../images/version_20160805/jquery-1.11.1.min.js" type="text/javascript"></script>
+    <!-- Bootstrap -->
+	<!-- 新 Bootstrap 核心 CSS 文件 -->
+	<link rel="stylesheet" href="../../images/version_20160805/bootstrap/css/bootstrap.min.css">
+	<!-- layout -->
+    <link href="../../images/version_20160805/css/version_20160802_index.css" rel="stylesheet" />	
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="./jquery/html5shiv.min.js"></script>
+      <script src="./jquery/respond.min.js"></script>
+    <![endif]-->
+<style>
+.left .box {
+   margin-top: 10px;
+   width: 288px;
+   height: 60px;
+   background-color: #fff;
+   text-align: left;
+}
+.left .box img {
+   margin-top: 2px;
+   height: 45px;
+   float: left;
+}
+.left .box div {
+   line-height: 25px;
+   text-align: left;
+}
+.left .box div a {
+   color: #000;
+}
+.left {
+    height: auto;
+}
+.left .row {
+    background-color: #fff;
+}
+.search-row {
+    clear: both;
+}
+.right ul li {
+    margin-left: 20px;
+    line-height: 32px;
+    font-size: 18px;
+    color: orange;
+    list-style-type: square;
+}
+.right ul li a {
+  height: 20px;
+  line-height: 20px;
+  color: #000;
+  text-decoration: none;
+}
+.navbar-default .navbar-nav>li>a {
+  margin-left: 10px;
+}
+</style>
+</head>
+<body>
+<!-- banner begin -->
+<div class="container-fluid"><img class="img-responsive" src="../../images/version_20160404/banner.png"/></div>
+<!-- banner end -->
+<!-- nav begin -->
+<nav class="navbar navbar-default" style="margin-bottom:10px;max-width:960px;border:0px;background-color:#EAF1F9;">
+<div class="container-fluid">
+<!-- Brand and toggle get grouped for better mobile display -->
+<div class="navbar-header" style="margin-right:0px">
+  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	<span class="sr-only">Toggle navigation</span>
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+  </button>
+  <a class="navbar-brand" href="#"></a>
+</div>
+<!-- Collect the nav links, forms, and other content for toggling -->
+<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-right:0px">
+<ul class="nav navbar-nav">
+    <li><a href="http://news.bnu.edu.cn/" target="_blank">首页</a></li>
+    <li><a href="../../twbd/index.htm" target="_blank">京师要闻</a></li>
+    <li><a href="../../xwzh/yxxw/index.htm" target="_blank">综合新闻</a></li>
+    <li><a href="../../xzkd/index.htm" target="_blank">学术速递</a></li>
+    <li><a href="../../xrgd/index.htm" target="_blank">观点集萃</a></li>
+    <li><a href="../../mdjt/index.htm" target="_blank">木铎讲堂</a></li>
+    <li><a href="../../bsrw/xzfc/index.htm" target="_blank">北师人物</a></li>
+    <li><a href="../../xyfcgb/index.htm" target="_blank">校友风采</a></li>
+    <li><a href="../../jjxy/index.htm" target="_blank">菁菁校园</a></li>
+</ul>
+</div>
+</div>
+</nav>
+<!-- nav end -->
+<!-- search begin -->
+<div class="container-fluid" style="margin-bottom:10px;">
+<span style="float: left">当前位置：新闻网 &gt; 2016毕业季</span>
+<form name="dataForm" action="/cms/search/searchResults.jsp" target="_blank" method="post" accept-Charset="utf-8"  onsubmit="document.charset='utf-8';" style=" MARGIN:0px;PADDING:0px"> 
+    <button type="submit" class="form-control btn" style="width:32px;height:32px;padding:6px;border:1px solid #ccc;float:right;" value=""> <span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+	<input type="text" class="form-control" style="width:30%;height:32px;float:right;" name="query" />
+</form>
+</div>
+<!-- search end -->
+<div class="container-fluid right">
+<div class="col-md-8" style="padding-bottom:20px;height:auto;background-color:#F2F5F8;">
+<img class="img-responsive" src="../../images/version_20160404/content_title.png" style="margin-left:-15px;">
+ <div  style="height:auto;width:100%" cellSpacing=0 cellPadding=0 class="STYLE3">
+<ul style="padding:5px;min-height:600px;">
+ <li>
+<A              title="文章标题：敢为天下先”、“厚积薄发 久久为功”——董奇校长对2016届毕业生的殷殷寄语" 
+                  href="130439.htm" 
+                   target="_blank"  >            敢为天下先”、“厚积薄发 久久为功”——董奇校长对2016届毕业生的殷殷寄语 
+    </A>
+</li>
+<li>
+<A              title="文章标题：我校2016年毕业生晚会成功举行" 
+                  href="130293.htm" 
+                   target="_blank"  >            我校2016年毕业生晚会成功举行 
+    </A>
+</li>
+<li>
+<A              title="文章标题：毕业快闪丨师大送你一场最盛大的离别" 
+                  href="http://mp.weixin.qq.com/s?__biz=MzA5MzMxMTExOQ==&mid=2651960380&idx=1&sn=4962507f80d9dcde3fcf8d252cee1b0e&scene=1&srcid=0623Gg24R3kXGli1OWT0qGPI#wechat_redirect" 
+                   target="_blank"  >            毕业快闪丨师大送你一场最盛大的离别 
+    </A>
+</li>
+<li>
+<A              title="文章标题：学校隆重举行2016届国防生毕业典礼" 
+                  href="131243.htm" 
+                   target="_blank"  >            学校隆重举行2016届国防生毕业典礼 
+    </A>
+</li>
+<li>
+<A              title="文章标题：我校2016届研究生毕业典礼暨学位授予仪式隆重举行" 
+                  href="130429.htm" 
+                   target="_blank"  >            我校2016届研究生毕业典礼暨学位授予仪式隆重举行 
+    </A>
+</li>
+<li>
+<A              title="文章标题：校领导与2016届本科毕业生集体合影" 
+                  href="130422.htm" 
+                   target="_blank"  >            校领导与2016届本科毕业生集体合影 
+    </A>
+</li>
+<li>
+<A              title="文章标题：毕业红毯秀现场照，致敬最美的你们！" 
+                  href="http://mp.weixin.qq.com/s?__biz=MjM5MTg4NjM2MQ==&mid=2657834394&idx=1&sn=9a99f21aa669fe7e24f8ac50ba43d070&scene=1&srcid=0624nDAKhRxiiuiKJsB4taQ9#wechat_redirect" 
+                   target="_blank"  >            毕业红毯秀现场照，致敬最美的你们！ 
+    </A>
+</li>
+<li>
+<A              title="文章标题：青春里的书与军装" 
+                  href="130410.htm" 
+                   target="_blank"  >            青春里的书与军装 
+    </A>
+</li>
+<li>
+<A              title="文章标题：良剑期乎断" 
+                  href="130409.htm" 
+                   target="_blank"  >            良剑期乎断 
+    </A>
+</li>
+<li>
+<A              title="文章标题：愿我们永远是少年" 
+                  href="130408.htm" 
+                   target="_blank"  >            愿我们永远是少年 
+    </A>
+</li>
+<li>
+<A              title="文章标题：做有创造有梦想的动画———首届两部三校“动漫高端人才联合培养实验班”毕业展侧记" 
+                  href="130407.htm" 
+                   target="_blank"  >            做有创造有梦想的动画———首届两部三校“动漫高端人才联合培养实验班”毕业展侧记 
+    </A>
+</li>
+<li>
+<A              title="文章标题：2016“光影师大”毕业生摄影展在图书馆开幕" 
+                  href="130384.htm" 
+                   target="_blank"  >            2016“光影师大”毕业生摄影展在图书馆开幕 
+    </A>
+</li>
+</ul>
+ <DIV style="height:auto;width:100%; color:#333333;text-align:center;" >
+
+ <DIV class=show_page>
+			  <FORM name=pageForm action="" method=post>
+共<B>12</B>篇新闻，&nbsp;&nbsp;<a href="index.htm">最前页</a>&nbsp;
+<a href="index.htm">上一页</a>&nbsp;
+<a href="index.htm">下一页</a>&nbsp;
+<a href="index.htm">最后页</a>&nbsp;&nbsp;
+页次：<STRONG><FONT color=red>1</FONT>/1</STRONG>页 
+转到<select name="page" onchange="javascript:PageFormSubmit()">
+<option value="index.htm" selected>1</option>
+</select>页
+</form>
+<SCRIPT language=JavaScript>
+function PageFormSubmit()
+{
+document.location.href=document.pageForm.page.options[document.pageForm.page.selectedIndex].value;
+}
+</SCRIPT>	 </DIV><!-- 分页结束 -->
+</div>
+ </div>
+</div>
+<div class="col-md-4 left">
+	<div class="row" style="height: auto;border:1px dashed #999;">
+	    <div class="box" style="text-align: center;">
+        <img class="img-responsive" src="../../images/content/2017-03/20170329093256156580.jpg" width="52px" height="35px"/>
+        <div><a href="../../twbd/141117.htm" target="_blank">
+        [要闻]            【视频】学校召开全校干部大会 部署新学期工作 
+            </a></div>
+    </div>			
+				<div class="box" style="text-align: center;">
+			<img class="img-responsive" src="../../images/content/2016-07/20160718105148076334.jpg" width="52px" height="35px"/>
+			<div><a href="../../bsrw/xzfc/131448.htm" target="_blank">
+			 [人物]            陆子龙：墨西哥小伙儿的北师大成长之旅 
+    			</a></div>
+		</div>			
+				<div class="box" style="text-align: center;">
+			<img class="img-responsive" src="" width="52px" height="35px"/>
+			<div><a href="../../xrgd/139363.htm" target="_blank">
+			[观点]            姚建彬：国家层面交往推动中外文学交流（文学聚焦） 
+    			</a></div>
+		</div>			
+				<div class="box" style="text-align: center;">
+			<img class="img-responsive" src="../../images/content/2016-06/20160603083720283474.jpg" width="52px" height="35px"/>
+			<div><a href="../../mdjt/129313.htm" target="_blank">
+			[讲堂]            楼宇烈：互联网大潮下中国传统文化的传播文化要“走出去”首... 
+    			</a></div>
+		</div>			
+		</div>
+</div>
+</div>
+</div>
+</div>
+<!-- footer begin -->
+<div class="container-fluid"><img class="img-responsive" src="../../images/version_20160404/footer.png"/></div>
+<!-- footer begin -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#zhxw_a").mouseover(function() {
+            $("#zhxw").css("display", "block");
+            $("#ztxw").css("display", "none");
+        });
+        $("#ztxw_a").mouseover(function() {
+            $("#zhxw").css("display", "none");
+            $("#ztxw").css("display", "block");
+        });
+    });
+</script>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="../../images/version_20160805/jquery/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="../../images/version_20160805/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
+</body></html>

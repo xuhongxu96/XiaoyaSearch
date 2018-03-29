@@ -1,0 +1,293 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>启功教师奖</title>
+<link href="images/index.css" rel="stylesheet" type="text/css" />
+<META content="MSHTML 6.00.6000.17063" name=GENERATOR>
+<SCRIPT src="http://sdxs.bnu.edu.cn/images/flashobj.js" type=text/javascript></SCRIPT>
+<link href="images/gonghui.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-image: url(http://qigongjiang.bnu.edu.cn/images/bg1.gif);
+}
+.heizi {
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #0066CC;
+}
+-->
+</style>
+</head>
+
+<body>
+<div style="width:1000px; margin:0px auto;">
+<table width="1000" border="0" align="center" cellpadding="0" cellspacing="0" background="images/bg.jpg">
+  <tr>
+    <td height="175"><iframe width="1000" height="180" frameborder="0" src="http://qigongjiang.bnu.edu.cn/top.html" scrolling="No"></iframe> </td>
+  </tr>
+  <tr>
+    <td height="175">
+    
+    <table width="878" height="298" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" class="mid1">
+      <tr>
+        <td width="25" height="298">&nbsp;</td>
+        <td width="662"><div align="center">
+          <script type="text/javascript">
+		var imgUrl=new Array();
+		var imgLink=new Array();
+		var imgName=new Array();
+		var n=1;
+						imgUrl[n] = "images/content/2016-12/20161205155512063240.jpg";
+		imgLink[n] = "#";
+		var vTitle='“启功教师奖”新闻发布会';
+		if (vTitle.length>40)
+		vTitle=vTitle.substring(0,40)+"...";
+		imgName[n] = vTitle;
+		n++;
+								imgUrl[n] = "images/content/2015-09/20150928083429509579.jpg";
+		imgLink[n] = "#";
+		var vTitle='启功教师奖颁奖大会';
+		if (vTitle.length>40)
+		vTitle=vTitle.substring(0,40)+"...";
+		imgName[n] = vTitle;
+		n++;
+								imgUrl[n] = "images/content/2015-04/20150429222036402138.jpg";
+		imgLink[n] = "#";
+		var vTitle='习近平视察北京师范大学';
+		if (vTitle.length>40)
+		vTitle=vTitle.substring(0,40)+"...";
+		imgName[n] = vTitle;
+		n++;
+								imgUrl[n] = "images/content/2015-04/20150430004841984472.jpg";
+		imgLink[n] = "#";
+		var vTitle='启功教师奖奖评选';
+		if (vTitle.length>40)
+		vTitle=vTitle.substring(0,40)+"...";
+		imgName[n] = vTitle;
+		n++;
+								imgUrl[n] = "images/content/2015-04/20150430005029383561.jpg";
+		imgLink[n] = "#";
+		var vTitle='习近平在北京师范大学考察时号召全国广大教师做党和人民满意的好老师';
+		if (vTitle.length>40)
+		vTitle=vTitle.substring(0,40)+"...";
+		imgName[n] = vTitle;
+		n++;
+								imgUrl[n] = "images/content/2015-05/20150510160525540661.jpg";
+		imgLink[n] = "#";
+		var vTitle='习近平在北京师范大学考察时号召全国广大教师做党和人民满意的好老师';
+		if (vTitle.length>40)
+		vTitle=vTitle.substring(0,40)+"...";
+		imgName[n] = vTitle;
+		n++;
+								imgUrl[n] = "images/content/2015-05/20150510160454973517.jpg";
+		imgLink[n] = "#";
+		var vTitle='习近平在北京师范大学考察时号召全国广大教师做党和人民满意的好老师';
+		if (vTitle.length>40)
+		vTitle=vTitle.substring(0,40)+"...";
+		imgName[n] = vTitle;
+		n++;
+				
+											
+				var texts = "";
+				var links = "";
+				var pics = "";
+				var count=1;
+				for(var h=1; h<n; h++) {
+				if (count>6)
+				break;
+				if ((imgUrl[h] !="") && (imgLink[h] !="") && (imgUrl[h].indexOf(".jpg") > 0)){
+					if (imgName[h].length > 40)
+					imgName[h] = imgName[h].substring(0, 40) + "...";
+					texts += imgName[h] + "|";
+					links += imgLink[h] + "|";
+					pics += imgUrl[h] + "|";
+					count++;
+					}
+				}
+				texts = texts.substring(0, texts.length-1);
+				links = links.substring(0, links.length-1);
+				pics = pics.substring(0, pics.length-1);
+				var focus_width=610  //图片宽度
+				var focus_height=240  //图片高度
+				var text_height=0    //文字高度
+				var swf_height = focus_height+text_height
+				document.write('<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ focus_width +'" height="'+ swf_height +'">');
+				
+document.write('<param name="allowScriptAccess" value="sameDomain"><param name="movie" value="images/focus.swf"><param name="quality" value="high"> <param name="bgcolor" value= "#BEBFC3"> <param name="wmode" value="transparent"> ');				
+				document.write('<param name="menu" value="false"><param name=wmode value="opaque">');
+				
+				document.write('<param name="FlashVars" value="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'">');
+				
+				document.write('<embed src="images/focus.swf" wmode="opaque"  FlashVars="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'" menu="false" wmode="transparent" quality="high" width="'+ focus_width +'" height="'+ swf_height +'" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />'); document.write('</object>'); 
+        </script>
+        </div></td>
+        <td width="191"><iframe width="155" height="240" frameborder="0" src="zhuanlan.html" scrolling="No" align="left"></iframe></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td><table width="878" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" class="mid2">
+      <tr>
+        <td height="241" valign="bottom"><table width="878" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td height="36" width="50%"><table width="95%" border="0" align="left" cellpadding="0" cellspacing="0">
+              <tr>
+                <td width="82%"><h1><a href="http://qigongjiang.bnu.edu.cn/dtxx">动态信息</a></h1></td>
+                <td width="18%" class="bai"><a href="http://qigongjiang.bnu.edu.cn/dtxx">更多&gt;&gt;</a></td>
+              </tr>
+            </table>            </td>
+            <td  width="50%"><table width="95%" border="0" align="left" cellpadding="0" cellspacing="0">
+              <tr>
+                <td width="82%"><h1><a href="http://qigongjiang.bnu.edu.cn/tzgg">通知公告</a></h1></td>
+                <td width="18%" class="bai"><a href="http://qigongjiang.bnu.edu.cn/tzgg">更多&gt;&gt;</a></td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td height="180" valign="top">
+              <table width="90%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td>
+     <ul class="ul_list">
+					                       <li><a href="http://www.bnu.edu.cn/bsdkx/76166.html" target="_blank" title="习近平在北京师范大学考察时号召全国广大教师做党和人民满意的好老师" >            习近平在北京师范大学考察时号召全国广大教师做党和人民满意... 
+    &nbsp;</a></li>
+                                  <li><a href="http://www.bnu.edu.cn/bsdkx/79231.html" target="_blank" title="北京师范大学隆重举行“启功教师奖”颁奖大会" >            北京师范大学隆重举行“启功教师奖”颁奖大会 
+    &nbsp;</a></li>
+                                  <li><a href="http://www.bnu.edu.cn/bsdkx/79235.html" target="_blank" title="“启功教师奖”获奖教师参加国务院总理李克强会见全国优秀教师代表活动" >            “启功教师奖”获奖教师参加国务院总理李克强会见全国优秀教... 
+    &nbsp;</a></li>
+                                  <li><a href="http://www.bnu.edu.cn/bsdkx/78509.html" target="_blank" title="北京师范大学召开“启功教师奖”调研交流会" >            北京师范大学召开“启功教师奖”调研交流会 
+    &nbsp;</a></li>
+                                  <li><a href="http://www.bnu.edu.cn/bsdkx/78379.html" target="_blank" title="首届“启功教师奖”走访调研活动顺利进行" >            首届“启功教师奖”走访调研活动顺利进行 
+    &nbsp;</a></li>
+                                </ul>    </td>
+  </tr>
+</table>            </td>
+            <td valign="top">
+              <table width="90%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td>
+     <ul class="ul_list">
+					                       <li><a href="tzgg/197.html" target="_blank" title="首届中国启功教师奖评选公告" >            首届中国启功教师奖评选公告 
+    &nbsp;</a></li>
+                                  <li><a href="docs/20150429222637680223.doc" target="_blank" title="报名表下载" >            报名表下载 
+    &nbsp;</a></li>
+                                  <li><a href="http://xsc.bnu.edu.cn/tzgg/105029.html" target="_blank" title="关于招募“中国启功教师奖”调研工作学生志愿者的通知" >            关于招募“中国启功教师奖”调研工作学生志愿者的通知 
+    &nbsp;</a></li>
+                                </ul>    </td>
+  </tr>
+</table>            </td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td><table width="878" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" class="mid3">
+      <tr>
+        <td height="221" valign="top"><table width="878" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td  height="30" valign="top"><table width="98%" border="0" align="left" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td width="91%" height="30" valign="middle"><h1><a href="http://qigongjiang.bnu.edu.cn/xfhd">寻访活动</a></h1></td>
+                  <td width="9%" valign="middle" class="bai"><a href="http://qigongjiang.bnu.edu.cn/xfhd">更多&gt;&gt;</a></td>
+                </tr>
+            </table></td>
+            </tr>
+          <tr><br />
+
+          <td height="191" valign="top"><table width="814" border="0" align="center" cellpadding="1" cellspacing="2" background="images/gundong_back.jpg">
+            <tr>
+              <td height="182" align="center"><div id="jcsj" style="overflow:hidden;height:180px;width:800px;" align="center">
+                <table width="90%" height="114" border="0" cellpadding="0" cellspacing="0"  id="Table39">
+                  <tr>
+                    <td height="114" id="jcsj1"><table width="760px" border="0" align="center" cellpadding="0" cellspacing="4" id="Table40">
+                        <tr>                          <td width="25%" height="157"><div align="center"><a href="xfhd/2186.html" target="_blank"><img src="images/content/2015-06/20150617191031765824.jpg" width="150" height="100" border="0" class="text_pic" /></a><br />
+                                    <span class="aa"><a href="xfhd/2186.html" target="_blank" title="贵州铜江县佘国权老师与学生一起就餐">            贵州铜江县佘国权老师与学... 
+    </a></span></div></td>
+                                                    <td width="25%" height="157"><div align="center"><a href="xfhd/2185.html" target="_blank"><img src="images/content/2015-06/20150617190749072630.jpg" width="150" height="100" border="0" class="text_pic" /></a><br />
+                                    <span class="aa"><a href="xfhd/2185.html" target="_blank" title="贵州毕节市赫章县黄训录老师与学生一起做课外活动">            贵州毕节市赫章县黄训录老... 
+    </a></span></div></td>
+                                                    <td width="25%" height="157"><div align="center"><a href="xfhd/2183.html" target="_blank"><img src="images/content/2015-06/20150617185423343223.jpg" width="150" height="100" border="0" class="text_pic" /></a><br />
+                                    <span class="aa"><a href="xfhd/2183.html" target="_blank" title="陕西省陇县张存贵老师指导学生学习">            陕西省陇县张存贵老师指导... 
+    </a></span></div></td>
+                                                    <td width="25%" height="157"><div align="center"><a href="xfhd/2182.html" target="_blank"><img src="images/content/2015-06/20150617185020167092.jpg" width="150" height="100" border="0" class="text_pic" /></a><br />
+                                    <span class="aa"><a href="xfhd/2182.html" target="_blank" title="陕西省汉中市勉县唐自银老师背孩子上学 ">            陕西省汉中市勉县唐自银老... 
+    </a></span></div></td>
+                                                    <td width="25%" height="157"><div align="center"><a href="xfhd/2180.html" target="_blank"><img src="images/content/2015-06/20150617183124923499.jpg" width="150" height="100" border="0" class="text_pic" /></a><br />
+                                    <span class="aa"><a href="xfhd/2180.html" target="_blank" title="海南省儋州市王金花老师与调研队合影">            海南省儋州市王金花老师与... 
+    </a></span></div></td>
+                                                    <td width="25%" height="157"><div align="center"><a href="xfhd/2178.html" target="_blank"><img src="images/content/2015-06/20150617182106467018.jpg" width="150" height="100" border="0" class="text_pic" /></a><br />
+                                    <span class="aa"><a href="xfhd/2178.html" target="_blank" title="山西静乐县孟毅亮老师教学生写字">            山西静乐县孟毅亮老师教学... 
+    </a></span></div></td>
+                                                    <td width="25%" height="157"><div align="center"><a href="xfhd/2177.html" target="_blank"><img src="images/content/2015-06/20150617180743413839.jpg" width="150" height="100" border="0" class="text_pic" /></a><br />
+                                    <span class="aa"><a href="xfhd/2177.html" target="_blank" title="内蒙古兴安盟乌兰浩特市斯日古楞老师与学生一起">            内蒙古兴安盟乌兰浩特市斯... 
+    </a></span></div></td>
+                                                    <td width="25%" height="157"><div align="center"><a href="xfhd/2176.html" target="_blank"><img src="images/content/2015-06/20150617180029571647.jpg" width="150" height="100" border="0" class="text_pic" /></a><br />
+                                    <span class="aa"><a href="xfhd/2176.html" target="_blank" title="内蒙古赤峰市姚玉梅老师与学生交流">            内蒙古赤峰市姚玉梅老师与... 
+    </a></span></div></td>
+                                                    <td width="25%" height="157"><div align="center"><a href="xfhd/2175.html" target="_blank"><img src="images/content/2015-06/20150617174821783458.jpg" width="150" height="100" border="0" class="text_pic" /></a><br />
+                                    <span class="aa"><a href="xfhd/2175.html" target="_blank" title="【调研手记】“良心活”的教育">            【调研手记】“良心活”的... 
+    </a></span></div></td>
+                                                    <td width="25%" height="157"><div align="center"><a href="xfhd/2174.html" target="_blank"><img src="images/content/2015-06/20150617174134845373.jpg" width="150" height="100" border="0" class="text_pic" /></a><br />
+                                    <span class="aa"><a href="xfhd/2174.html" target="_blank" title="广西平南县罗慧兰老师与调研队合影">            广西平南县罗慧兰老师与调... 
+    </a></span></div></td>
+                                                    <td width="25%" height="157"><div align="center"><a href="xfhd/2172.html" target="_blank"><img src="images/content/2015-06/20150617171812414849.jpg" width="150" height="100" border="0" class="text_pic" /></a><br />
+                                    <span class="aa"><a href="xfhd/2172.html" target="_blank" title="湖北保康县乔永斌老师与学生一起做游戏">            湖北保康县乔永斌老师与学... 
+    </a></span></div></td>
+                                                    <td width="25%" height="157"><div align="center"><a href="xfhd/2169.html" target="_blank"><img src="images/content/2015-06/20150617165450323355.jpg" width="150" height="100" border="0" class="text_pic" /></a><br />
+                                    <span class="aa"><a href="xfhd/2169.html" target="_blank" title="江西上饶县王小红老师与调研队合影">            江西上饶县王小红老师与调... 
+    </a></span></div></td>
+                                                    <td width="25%" height="157"><div align="center"><a href="xfhd/2168.html" target="_blank"><img src="images/content/2015-06/20150617164541868188.jpg" width="150" height="100" border="0" class="text_pic" /></a><br />
+                                    <span class="aa"><a href="xfhd/2168.html" target="_blank" title="福建莆田市郭秋维老师课堂教学">            福建莆田市郭秋维老师课堂... 
+    </a></span></div></td>
+                                                    <td width="25%" height="157"><div align="center"><a href="xfhd/2027.html" target="_blank"><img src="images/content/2015-06/20150605005357925265.jpg" width="150" height="100" border="0" class="text_pic" /></a><br />
+                                    <span class="aa"><a href="xfhd/2027.html" target="_blank" title="【调研手记】坚强的臂膀，质朴的心">            【调研手记】坚强的臂膀，... 
+    </a></span></div></td>
+                                                    <td width="25%" height="157"><div align="center"><a href="xfhd/2028.html" target="_blank"><img src="images/content/2015-06/20150604232953001713.jpg" width="150" height="100" border="0" class="text_pic" /></a><br />
+                                    <span class="aa"><a href="xfhd/2028.html" target="_blank" title="灵山县邓朝军老师接受调研队采访">            灵山县邓朝军老师接受调研... 
+    </a></span></div></td>
+                                                    <td width="25%" height="157"><div align="center"><a href="xfhd/2162.html" target="_blank"><img src="images/content/2015-06/20150617161558679982.jpg" width="150" height="100" border="0" class="text_pic" /></a><br />
+                                    <span class="aa"><a href="xfhd/2162.html" target="_blank" title="广西灵山县邓朝军老师课堂教学">            广西灵山县邓朝军老师课堂... 
+    </a></span></div></td>
+                                                    <td width="25%" height="157"><div align="center"><a href="xfhd/1883.html" target="_blank"><img src="images/content/2015-05/20150521230117869607.jpg" width="150" height="100" border="0" class="text_pic" /></a><br />
+                                    <span class="aa"><a href="xfhd/1883.html" target="_blank" title="滦平县孙国福老师校园环境">            滦平县孙国福老师校园环境 
+    </a></span></div></td>
+                                                    <td width="25%" height="157"><div align="center"><a href="xfhd/1884.html" target="_blank"><img src="images/content/2015-05/20150521230355839848.jpg" width="150" height="100" border="0" class="text_pic" /></a><br />
+                                    <span class="aa"><a href="xfhd/1884.html" target="_blank" title="滦平县孙国福老师班级环境">            滦平县孙国福老师班级环境 
+    </a></span></div></td>
+                                                    <td width="25%" height="157"><div align="center"><a href="xfhd/1342.html" target="_blank"><img src="images/content/2015-05/20150508190545552746.jpg" width="150" height="100" border="0" class="text_pic" /></a><br />
+                                    <span class="aa"><a href="xfhd/1342.html" target="_blank" title="滦平县孙国福老师课堂教学">            滦平县孙国福老师课堂教学 
+    </a></span></div></td>
+                                                    <td width="25%" height="157"><div align="center"><a href="xfhd/1344.html" target="_blank"><img src="images/content/2015-05/20150508190653963953.jpg" width="150" height="100" border="0" class="text_pic" /></a><br />
+                                    <span class="aa"><a href="xfhd/1344.html" target="_blank" title="围场县李广老师班级环境">            围场县李广老师班级环境 
+    </a></span></div></td>
+                          </tr>
+                    </table></td>
+                    <td id="jcsj2"></td>
+                  </tr>
+                </table>
+              </div>
+                 </td>
+            </tr>
+          </table></td>
+        </tr>
+            
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td><iframe width="1000" height="110" frameborder="0" src="http://qigongjiang.bnu.edu.cn/end.html" scrolling="No"></iframe></td>
+  </tr>
+</table>
+</div>
+</body>
+</html>
+</body></html>

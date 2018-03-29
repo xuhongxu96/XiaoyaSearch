@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="zh-hans" dir="ltr">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+<link rel="shortcut icon" href="http://www.lib.bnu.edu.cn/sites/default/files/bnu_128x128.ico" type="image/vnd.microsoft.icon" />
+<link rel="alternate" type="application/rss+xml" title="北京师范大学图书馆  RSS" href="http://www.lib.bnu.edu.cn/rss.xml" />
+<meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+  <meta name=”renderer” content=”webkit”>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>北京师范大学图书馆  | 北京师范大学图书馆</title>  
+  <link type="text/css" rel="stylesheet" href="http://www.lib.bnu.edu.cn/sites/default/files/css/css_xE-rWrJf-fncB6ztZfd2huxqgxu4WO-qwma6Xer30m4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="http://www.lib.bnu.edu.cn/sites/default/files/css/css_YJo600u5DslEXHHEBzo7Whs7zYvH8oZK7MuO9r6-Ktg.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="http://www.lib.bnu.edu.cn/sites/default/files/css/css_vZ_wrMQ9Og-YPPxa1q4us3N7DsZMJa-14jShHgRoRNo.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="http://www.lib.bnu.edu.cn/sites/default/files/css/css_KEG0mEDulnqsCmXKUygp4zJdX7ZKbUw-1Ept19xUfnI.css" media="all" />
+<link type="text/css" rel="stylesheet" href="http://www.lib.bnu.edu.cn/sites/default/files/css/css_IrlXigqBUWPfV9mS3QQ6Y0gfVVtSyl7VrpmF1ArhOxA.css" media="all" />
+<link type="text/css" rel="stylesheet" href="http://www.lib.bnu.edu.cn/sites/default/files/css/css_URS3Qk4T6uGo-yNBMS7NvbCGqFNDtobkbBNx2zudcco.css" media="all" />
+  <script type="text/javascript" src="http://www.lib.bnu.edu.cn/sites/default/files/js/js_PsxjjgTj6dkLbafZnYxuhFI7liNjQhYSXBHI-ko_UBs.js"></script>
+<script type="text/javascript" src="http://www.lib.bnu.edu.cn/sites/default/files/js/js_2JW3jYCoRILH5VQGWX7Nx0NoOj_EvZtUz6-c7GOs0J4.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+document.createElement( "picture" );
+//--><!]]>
+</script>
+<script type="text/javascript" src="http://www.lib.bnu.edu.cn/sites/default/files/js/js_RmzUW7Gw8HcQJa0jLlJWVrpsvfP5_qoRfSefKluFbtI.js"></script>
+<script type="text/javascript" src="http://www.lib.bnu.edu.cn/sites/default/files/js/js_084FK06VFQXEWudKYDB456GkFGAH39Gw5ZYdpdu00CA.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var _hmt = _hmt || [];_hmt.push(["_setAccount", "bff6ab004699e21e414c64743558fa48"]);_hmt.push(["_trackPageview"]);(function() {var hm = document.createElement('script');hm.src = '//hm.baidu.com/hm.js?bff6ab004699e21e414c64743558fa48';hm.type = 'text/javascript';var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(hm, s);})()
+//--><!]]>
+</script>
+<script type="text/javascript" src="http://www.lib.bnu.edu.cn/sites/default/files/js/js_nSaK5PUj7u9AE0OOb-U20XYJ2biKxCKqhfhD4bLO0YE.js"></script>
+<script type="text/javascript" src="http://www.lib.bnu.edu.cn/sites/default/files/js/js_z5mn2t5Aleim0r3tFVm94AOkDl89gRtRjpE5n0WAl-s.js"></script>
+<script type="text/javascript" src="http://www.lib.bnu.edu.cn/sites/default/files/js/js_43n5FBy8pZxQHxPXkf-sQF7ZiacVZke14b0VlvSA554.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"bnu","theme_token":"UYVuyvHXSsMaxruoVq6VX3DpnquQdrOiYexUbZFFeKQ","jquery_version":"1.7","js":{"sites\/all\/modules\/picture\/picturefill2\/picturefill.min.js":1,"sites\/all\/modules\/picture\/picture.min.js":1,"profiles\/events\/modules\/contrib\/jquery_update\/replace\/jquery\/1.7\/jquery.min.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/tipsy\/javascripts\/jquery.tipsy.js":1,"sites\/all\/modules\/tipsy\/javascripts\/tipsy.js":1,"sites\/default\/modules\/views_slideshow\/js\/views_slideshow.js":1,"profiles\/events\/modules\/contrib\/jquery_update\/replace\/ui\/external\/jquery.cookie.js":1,"profiles\/events\/modules\/contrib\/jquery_update\/replace\/misc\/jquery.form.min.js":1,"misc\/ajax.js":1,"profiles\/events\/modules\/contrib\/jquery_update\/js\/jquery_update.js":1,"0":1,"sites\/all\/modules\/lazyloader\/jquery.lazyloader.js":1,"sites\/default\/modules\/spam_blackhole\/spam_blackhole.js":1,"profiles\/events\/modules\/contrib\/caption_filter\/js\/caption-filter.js":1,"misc\/progress.js":1,"public:\/\/languages\/zh-hans_ZuNCO40mHxBnpwx95XB--_9d-k6Lv90fu8DQua4j7Kc.js":1,"sites\/all\/modules\/iframe\/iframe.js":1,"sites\/all\/libraries\/jquery.cycle\/jquery.cycle.all.js":1,"sites\/default\/modules\/views_slideshow\/contrib\/views_slideshow_cycle\/js\/views_slideshow_cycle.js":1,"profiles\/events\/modules\/contrib\/views\/js\/base.js":1,"profiles\/events\/modules\/contrib\/views\/js\/ajax_view.js":1,"sites\/all\/modules\/baidu_analytics\/baidu_analytics.js":1,"1":1,"sites\/default\/modules\/searchtabs\/searchtabs.js":1,"sites\/all\/modules\/bnu_wechat\/js\/bnu_wechat.js":1,"sites\/all\/modules\/quicktabs\/js\/quicktabs.js":1,"sites\/all\/libraries\/superfish\/jquery.hoverIntent.minified.js":1,"sites\/all\/libraries\/superfish\/sfsmallscreen.js":1,"sites\/all\/libraries\/superfish\/supposition.js":1,"sites\/all\/libraries\/superfish\/superfish.js":1,"sites\/all\/libraries\/superfish\/supersubs.js":1,"sites\/all\/modules\/superfish\/superfish.js":1,"sites\/default\/themes\/bnu\/js\/bnu_general.js":1,"sites\/default\/themes\/omega\/omega\/js\/jquery.formalize.js":1,"sites\/default\/themes\/omega\/omega\/js\/omega-mediaqueries.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/all\/modules\/tipsy\/stylesheets\/tipsy.css":1,"sites\/default\/modules\/views_slideshow\/views_slideshow.css":1,"modules\/comment\/comment.css":1,"profiles\/events\/modules\/contrib\/date\/date_api\/date.css":1,"profiles\/events\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"sites\/all\/modules\/picture\/picture_wysiwyg.css":1,"modules\/search\/search.css":1,"sites\/default\/modules\/searchtabs\/searchtabs.css":1,"modules\/user\/user.css":1,"profiles\/events\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/lazyloader\/lazyloader.css":1,"profiles\/events\/modules\/contrib\/caption_filter\/caption-filter.css":1,"profiles\/events\/modules\/contrib\/ctools\/css\/ctools.css":1,"profiles\/events\/modules\/contrib\/panels\/css\/panels.css":1,"sites\/all\/modules\/rate\/rate.css":1,"sites\/all\/modules\/taxonomy_access\/taxonomy_access.css":1,"sites\/default\/modules\/views_slideshow\/contrib\/views_slideshow_cycle\/views_slideshow_cycle.css":1,"sites\/all\/modules\/bnu_wechat\/css\/bnu_wechat.css":1,"sites\/all\/modules\/quicktabs\/css\/quicktabs.css":1,"sites\/all\/libraries\/superfish\/css\/superfish.css":1,"sites\/all\/libraries\/superfish\/style\/simple\/simple.css":1,"sites\/default\/themes\/omega\/alpha\/css\/alpha-reset.css":1,"sites\/default\/themes\/omega\/alpha\/css\/alpha-mobile.css":1,"sites\/default\/themes\/omega\/alpha\/css\/alpha-alpha.css":1,"sites\/default\/themes\/omega\/omega\/css\/formalize.css":1,"sites\/default\/themes\/omega\/omega\/css\/omega-text.css":1,"sites\/default\/themes\/omega\/omega\/css\/omega-branding.css":1,"sites\/default\/themes\/omega\/omega\/css\/omega-menu.css":1,"sites\/default\/themes\/omega\/omega\/css\/omega-forms.css":1,"sites\/default\/themes\/omega\/omega\/css\/omega-visuals.css":1,"sites\/default\/themes\/bnu\/css\/global.css":1}},"spam_blackhole":{"base_url":"","dummy_url":"http:\/\/www.example.com"},"tipsy":{"custom_selectors":[{"selector":".tipsy","options":{"fade":1,"gravity":"w","delayIn":0,"delayOut":0,"trigger":"hover","opacity":"0.8","offset":0,"html":0,"tooltip_content":{"source":"attribute","selector":"title"}}}]},"better_exposed_filters":{"views":{"links_list":{"displays":{"block_4":{"filters":[]},"block":{"filters":[]},"block_5":{"filters":[]},"block_1":{"filters":[]}}},"slide":{"displays":{"block":{"filters":[]}}},"news_list":{"displays":{"block":{"filters":[]}}},"_lian_jie":{"displays":{"block":{"filters":[]}}}}},"viewsSlideshow":{"slide-block":{"methods":{"goToSlide":["viewsSlideshowPager","viewsSlideshowSlideCounter","viewsSlideshowCycle"],"nextSlide":["viewsSlideshowPager","viewsSlideshowSlideCounter","flexsliderViewsSlideshow","viewsSlideshowCycle"],"pause":["viewsSlideshowControls","flexsliderViewsSlideshow","viewsSlideshowCycle"],"play":["viewsSlideshowControls","flexsliderViewsSlideshow","viewsSlideshowCycle"],"previousSlide":["viewsSlideshowPager","viewsSlideshowSlideCounter","flexsliderViewsSlideshow","viewsSlideshowCycle"],"transitionBegin":["viewsSlideshowPager","viewsSlideshowSlideCounter"],"transitionEnd":[]},"paused":0}},"viewsSlideshowPager":{"slide-block":{"bottom":{"type":"viewsSlideshowPagerFields"}}},"viewsSlideshowPagerFields":{"slide-block":{"bottom":{"activatePauseOnHover":0}}},"viewsSlideshowCycle":{"#views_slideshow_cycle_main_slide-block":{"num_divs":5,"id_prefix":"#views_slideshow_cycle_main_","div_prefix":"#views_slideshow_cycle_div_","vss_id":"slide-block","effect":"scrollLeft","transition_advanced":1,"timeout":5000,"speed":700,"delay":0,"sync":1,"random":0,"pause":1,"pause_on_click":1,"action_advanced":0,"start_paused":0,"remember_slide":0,"remember_slide_days":1,"pause_in_middle":0,"pause_when_hidden":0,"pause_when_hidden_type":"full","amount_allowed_visible":"","nowrap":0,"fixed_height":1,"items_per_slide":1,"wait_for_image_load":1,"wait_for_image_load_timeout":3000,"cleartype":0,"cleartypenobg":0,"advanced_options":"{}"}},"views":{"ajax_path":"\/views\/ajax","ajaxViews":{"views_dom_id:257b332d15638e6a4b5cfd5deeef39d8":{"view_name":"links_list","view_display_id":"block","view_args":"","view_path":"node","view_base_path":null,"view_dom_id":"257b332d15638e6a4b5cfd5deeef39d8","pager_element":0}}},"baidu_analytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls|xml|z|zip"},"superfish":{"1":{"id":"1","sf":{"animation":{"opacity":"show","height":"show"},"speed":"\u0027normal\u0027","autoArrows":true,"dropShadows":false,"disableHI":false},"plugins":{"smallscreen":{"mode":"window_width","addSelected":false,"menuClasses":false,"hyperlinkClasses":false,"title":"\u5bfc\u822a"},"supposition":true,"bgiframe":false,"supersubs":{"minWidth":"12","maxWidth":"27","extraWidth":1}}}},"quicktabs":{"qt_searchtabs_bnu":{"name":"searchtabs_bnu","tabs":[{"bid":"searchtabs_delta_searchtabs_primoform","hide_title":1},{"bid":"searchtabs_delta_searchtabs_sfxform","hide_title":1},{"bid":"searchtabs_delta_searchtabs_baiduform","hide_title":1}],"better_exposed_filters":{"views":{"links_list":{"displays":{"block_4":{"filters":[]}}}}}},"qt_front_page_content_list_tabs2":{"name":"front_page_content_list_tabs2","tabs":[{"bid":"views_delta_news_list-block","hide_title":1},{"bid":"views_delta__dong_tai-block","hide_title":1},{"bid":"views_delta_lecture-block_2","hide_title":1}],"ajaxPageState":{"jquery_version":"1.7"}},"qt_front_page_content_list_tabs":{"name":"front_page_content_list_tabs","tabs":[{"bid":"block_delta_2","hide_title":1},{"bid":"block_delta_3","hide_title":1}],"better_exposed_filters":{"views":{"links_list":{"displays":{"block_1":{"filters":[]}}}}}}},"ajax":{"quicktabs-tab-front_page_content_list_tabs2-0":{"progress":{"message":"","type":"throbber"},"event":"click","url":"\/quicktabs\/ajax\/front_page_content_list_tabs2\/0\/block\/views_delta_news_list-block\/1"},"quicktabs-tab-front_page_content_list_tabs2-1":{"progress":{"message":"","type":"throbber"},"event":"click","url":"\/quicktabs\/ajax\/front_page_content_list_tabs2\/1\/block\/views_delta__dong_tai-block\/1"},"quicktabs-tab-front_page_content_list_tabs2-2":{"progress":{"message":"","type":"throbber"},"event":"click","url":"\/quicktabs\/ajax\/front_page_content_list_tabs2\/2\/block\/views_delta_lecture-block_2\/1"}},"omega":{"layouts":{"primary":"normal","order":[],"queries":[]}}});
+//--><!]]>
+</script>
+  <!--[if lt IE 9]><script src="http://www.lib.bnu.edu.cn/sites/default/files/js/html5.js"></script><![endif]-->
+</head>
+<body class="html front not-logged-in page-node i18n-zh-hans">
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible element-focusable">跳转到主要内容</a>
+  </div>
+    <div class="page clearfix" id="page">
+      <header id="section-header" class="section section-header">
+  <div id="zone-user-wrapper" class="zone-wrapper zone-user-wrapper clearfix">  
+  <div id="zone-user" class="zone zone-user clearfix container-12">
+    <div class="grid-6 region region-user-first" id="region-user-first">
+  <div class="region-inner region-user-first-inner">
+    <div class="block block-views block-links-list-block-4 block-views-links-list-block-4 odd block-without-title" id="block-views-links-list-block-4">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <div class="view view-links-list view-id-links_list view-display-id-block_4 view-dom-id-5a125f8d2d1016d1aa03acfe5986821c">
+        
+  
+  
+      <div class="view-content">
+        <div class="roleview">
+      
+              
+  <div>        <div class="field-wrapper">
+
+  <span class="field field-name-field-url field-type-link-field field-label-hidden">
+    <a href="http://www.lib.bnu.edu.cn/frontpage/visitor" target="_blank">访客</a>  </span>
+</div>  </div>  </div>
+  <div class="roleview">
+      
+              
+  <div>        <div class="field-wrapper">
+
+  <span class="field field-name-field-url field-type-link-field field-label-hidden">
+    <a href="http://www.lib.bnu.edu.cn/frontpage/student" target="_blank">学生</a>  </span>
+</div>  </div>  </div>
+  <div class="roleview">
+      
+              
+  <div>        <div class="field-wrapper">
+
+  <span class="field field-name-field-url field-type-link-field field-label-hidden">
+    <a href="http://www.lib.bnu.edu.cn/frontpage/teacher" target="_blank">教师</a>  </span>
+</div>  </div>  </div>
+  <div class="roleview">
+      
+              
+  <div>        <div class="field-wrapper">
+
+  <span class="field field-name-field-url field-type-link-field field-label-hidden">
+    <a href="http://www.lib.bnu.edu.cn/frontpage/librarian" target="_blank">馆员</a>  </span>
+</div>  </div>  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>    </div>
+  </div>
+</div>  </div>
+</div>
+<div class="grid-6 region region-user-second" id="region-user-second">
+  <div class="region-inner region-user-second-inner">
+    <div class="block block-system block-menu block-user-menu block-system-user-menu odd block-without-title" id="block-system-user-menu">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <ul class="menu"><li class="first leaf"><a href="http://www.bnu.edu.cn" title="学校主页">北京师范大学</a></li>
+<li class="leaf"><a href="/sitemap">站内地图</a></li>
+<li class="leaf"><a href="/search/node" id="menu_search_link">站内搜索</a></li>
+<li class="last leaf"><a href="https://bnu-primo.hosted.exlibrisgroup.com/primo-explore/account?vid=86BNU&amp;sortby=rank&amp;lang=zh_CN" title="">ID登录</a></li>
+</ul>    </div>
+  </div>
+</div>  </div>
+</div>
+  </div>
+</div><div id="zone-branding-wrapper" class="zone-wrapper zone-branding-wrapper clearfix">  
+  <div id="zone-branding" class="zone zone-branding clearfix container-12">
+    <div class="grid-4 region region-branding" id="region-branding">
+  <div class="region-inner region-branding-inner">
+        <div class="branding-data clearfix">
+            <div class="logo-img">
+        <a href="/" rel="home" title="" class="active"><img src="http://www.lib.bnu.edu.cn/sites/default/themes/bnu/logo.png" alt="" id="logo" /></a>      </div>
+                </div>
+            <nav class="navigation">
+          </nav>
+    <?php// endif; ?>
+      </div>
+</div>
+<div class="grid-8 region region-menu" id="region-menu">
+  <div class="region-inner region-menu-inner">
+    <section class="block block-superfish block-1 block-superfish-1 odd" id="block-superfish-1">
+  <div class="block-inner clearfix">
+              <h2 class="block-title">导航</h2>
+            
+    <div class="content clearfix">
+      <ul id="superfish-1" class="menu sf-menu sf-menu-news sf-horizontal sf-style-simple sf-total-items-5 sf-parent-items-4 sf-single-items-1"><li id="menu-5365-1" class="active-trail first odd sf-item-1 sf-depth-1 sf-no-children"><a href="/" name="HOMEPAGE" class="sf-depth-1 active">首页</a></li><li id="menu-5714-1" class="active-trail middle even sf-item-2 sf-depth-1 sf-total-children-6 sf-parent-children-0 sf-single-children-6 menuparent"><a href="/" name="RESOURCE" title="" class="sf-depth-1 menuparent active">资源</a><ul><li id="menu-8758-1" class="first odd sf-item-1 sf-depth-2 sf-no-children"><a href="https://bnu-primo.hosted.exlibrisgroup.com/primo-explore/search?vid=86BNU&amp;sortby=rank&amp;lang=zh_CN" title="" class="sf-depth-2">木铎搜索</a></li><li id="menu-5715-1" class="middle even sf-item-2 sf-depth-2 sf-no-children"><a href="/content/%E5%8F%A4%E7%B1%8D%E7%9B%AE%E5%BD%95" class="sf-depth-2">古籍资源</a></li><li id="menu-5716-1" class="middle odd sf-item-3 sf-depth-2 sf-no-children"><a href="/content/%E7%89%B9%E8%89%B2%E8%B5%84%E6%BA%90%E7%9B%AE%E5%BD%95" class="sf-depth-2">特色资源</a></li><li id="menu-8760-1" class="middle even sf-item-4 sf-depth-2 sf-no-children"><a href="http://search.lib.bnu.edu.cn:8080/V/" title="" class="sf-depth-2">数据库</a></li><li id="menu-8761-1" class="middle odd sf-item-5 sf-depth-2 sf-no-children"><a href="http://search.lib.bnu.edu.cn:9003/ej/ej.htm" title="" class="sf-depth-2">电子期刊</a></li><li id="menu-8763-1" class="last even sf-item-6 sf-depth-2 sf-no-children"><a href="/content/duo-mei-ti-zi-yuan" class="sf-depth-2">多媒体资源</a></li></ul></li><li id="menu-8755-1" class="middle odd sf-item-3 sf-depth-1 sf-total-children-4 sf-parent-children-4 sf-single-children-0 menuparent"><a href="/content/jie-yue-gui-ze" class="sf-depth-1 menuparent">服务</a><ul><li id="menu-36107-1" class="first odd sf-item-1 sf-depth-2 sf-total-children-7 sf-parent-children-0 sf-single-children-7 menuparent"><a href="/content/jie-yue-gui-ze" title="" class="sf-depth-2 menuparent">借阅服务</a><ul><li id="menu-36031-1" class="first odd sf-item-1 sf-depth-3 sf-no-children"><a href="/content/jie-yue-gui-ze" class="sf-depth-3">借阅规则</a></li><li id="menu-36050-1" class="middle even sf-item-2 sf-depth-3 sf-no-children"><a href="/content/tu-shu-jie-yue" class="sf-depth-3">图书借阅</a></li><li id="menu-36051-1" class="middle odd sf-item-3 sf-depth-3 sf-no-children"><a href="/content/jie-yue-zheng-jian-0" class="sf-depth-3">借阅证件</a></li><li id="menu-36052-1" class="middle even sf-item-4 sf-depth-3 sf-no-children"><a href="/content/jie-yue-she-bei-yu-she-shi" class="sf-depth-3">借阅设备与设施</a></li><li id="menu-5719-1" class="middle odd sf-item-5 sf-depth-3 sf-no-children"><a href="/content/%E5%88%86%E9%A6%86%E5%80%9F%E9%98%85%E6%9C%8D%E5%8A%A1-0" class="sf-depth-3">分馆服务</a></li><li id="menu-35724-1" class="middle even sf-item-6 sf-depth-3 sf-no-children"><a href="/content/du-zhe-zheng-qia-mi-ma-shi-yong" class="sf-depth-3">读者证卡密码使用</a></li><li id="menu-10418-1" class="last odd sf-item-7 sf-depth-3 sf-no-children"><a href="/content/guan-ji-hu-jie-wen-xian-chuan-di" class="sf-depth-3">馆际互借&amp;文献传递</a></li></ul></li><li id="menu-17184-1" class="middle even sf-item-2 sf-depth-2 sf-total-children-5 sf-parent-children-0 sf-single-children-5 menuparent"><a href="/content/ke-yan-fu-wu" class="sf-depth-2 menuparent">科研服务</a><ul><li id="menu-8765-1" class="first odd sf-item-1 sf-depth-3 sf-no-children"><a href="/content/ke-ji-cha-xin-0" class="sf-depth-3">科技查新</a></li><li id="menu-8772-1" class="middle even sf-item-2 sf-depth-3 sf-no-children"><a href="/content/lun-wen-shou-lu-yin-yong-zheng-ming" class="sf-depth-3">论文收录引用证明</a></li><li id="menu-8773-1" class="middle odd sf-item-3 sf-depth-3 sf-no-children"><a href="/content/ding-ti-fu-wu" class="sf-depth-3">定题服务</a></li><li id="menu-8774-1" class="middle even sf-item-4 sf-depth-3 sf-no-children"><a href="/content/ke-yan-chan-chu-tong-ji-fen-xi" title="" class="sf-depth-3">科研产出统计分析</a></li><li id="menu-8775-1" class="last odd sf-item-5 sf-depth-3 sf-no-children"><a href="http://librarian.lib.bnu.edu.cn/" title="" class="sf-depth-3">学科服务</a></li></ul></li><li id="menu-22786-1" class="middle odd sf-item-3 sf-depth-2 sf-total-children-6 sf-parent-children-0 sf-single-children-6 menuparent"><a href="/content/xin-xi-su-yang-1" class="sf-depth-2 menuparent">信息素养</a><ul><li id="menu-9003-1" class="first odd sf-item-1 sf-depth-3 sf-no-children"><a href="/content/wei-ke-cheng" class="sf-depth-3">微课程</a></li><li id="menu-8779-1" class="middle even sf-item-2 sf-depth-3 sf-no-children"><a href="/lecture?field_semester_tid=All" title="" class="sf-depth-3">系列讲座</a></li><li id="menu-8777-1" class="middle odd sf-item-3 sf-depth-3 sf-no-children"><a href="/content/yu-yue-zhuan-chang" class="sf-depth-3">预约专场</a></li><li id="menu-22785-1" class="middle even sf-item-4 sf-depth-3 sf-no-children"><a href="/content/xin-sheng-pei-xun-0" class="sf-depth-3">新生培训</a></li><li id="menu-8778-1" class="middle odd sf-item-5 sf-depth-3 sf-no-children"><a href="/content/gong-gong-xuan-xiu-ke-jiao-xue" class="sf-depth-3">公共选修课教学</a></li><li id="menu-8776-1" class="last even sf-item-6 sf-depth-3 sf-no-children"><a href="/content/zhuan-jia-jiang-zuo" class="sf-depth-3">专家讲座</a></li></ul></li><li id="menu-36108-1" class="last even sf-item-4 sf-depth-2 sf-total-children-9 sf-parent-children-0 sf-single-children-9 menuparent"><a href="/content/duo-mei-ti-xue-xi-zhong-xin" title="" class="sf-depth-2 menuparent">环境与设施</a><ul><li id="menu-8789-1" class="first odd sf-item-1 sf-depth-3 sf-no-children"><a href="/content/duo-mei-ti-xue-xi-zhong-xin" class="sf-depth-3">多媒体学习中心</a></li><li id="menu-6576-1" class="middle even sf-item-2 sf-depth-3 sf-no-children"><a href="/content/zuo-wei-yu-yue-0" class="sf-depth-3">座位预约</a></li><li id="menu-8788-1" class="middle odd sf-item-3 sf-depth-3 sf-no-children"><a href="/content/yan-jiu-jian-yu-yue-0" class="sf-depth-3">研究间预约</a></li><li id="menu-8790-1" class="middle even sf-item-4 sf-depth-3 sf-no-children"><a href="/content/wu-xian-wang" class="sf-depth-3">无线网</a></li><li id="menu-8791-1" class="middle odd sf-item-5 sf-depth-3 sf-no-children"><a href="/content/wen-yin-fu-wu" class="sf-depth-3">文印服务</a></li><li id="menu-9000-1" class="middle even sf-item-6 sf-depth-3 sf-no-children"><a href="/content/bao-xiu-xi-tong" class="sf-depth-3">报修系统</a></li><li id="menu-9001-1" class="middle odd sf-item-7 sf-depth-3 sf-no-children"><a href="/content/cun-bao-ju" class="sf-depth-3">存包柜</a></li><li id="menu-9002-1" class="middle even sf-item-8 sf-depth-3 sf-no-children"><a href="/content/zi-zhu-jie-huan-shu-ji" class="sf-depth-3">自助借还书机</a></li><li id="menu-10141-1" class="last odd sf-item-9 sf-depth-3 sf-no-children"><a href="/content/hui-chang-shen-qing-0" class="sf-depth-3">会场申请</a></li></ul></li></ul></li><li id="menu-5721-1" class="middle even sf-item-4 sf-depth-1 sf-total-children-5 sf-parent-children-3 sf-single-children-2 menuparent"><a href="/content/guan-chang-ji-yu" name="BRIEF INTRODUCTIONS" class="sf-depth-1 menuparent">概况</a><ul><li id="menu-7269-1" class="first odd sf-item-1 sf-depth-2 sf-total-children-4 sf-parent-children-0 sf-single-children-4 menuparent"><a href="/content/guan-chang-ji-yu" title="" class="sf-depth-2 menuparent">本馆介绍</a><ul><li id="menu-8780-1" class="first odd sf-item-1 sf-depth-3 sf-no-children"><a href="/content/guan-chang-ji-yu" class="sf-depth-3">馆长寄语</a></li><li id="menu-8781-1" class="middle even sf-item-2 sf-depth-3 sf-no-children"><a href="/content/gai-kuang-yu-li-shi" class="sf-depth-3">概况与历史</a></li><li id="menu-8782-1" class="middle odd sf-item-3 sf-depth-3 sf-no-children"><a href="/content/guan-she-feng-mao" class="sf-depth-3">馆舍风貌</a></li><li id="menu-8783-1" class="last even sf-item-4 sf-depth-3 sf-no-children"><a href="/content/xuan-chuan-pian" class="sf-depth-3">宣传片</a></li></ul></li><li id="menu-7270-1" class="middle even sf-item-2 sf-depth-2 sf-no-children"><a href="/content/zu-zhi-ji-gou" title="" class="sf-depth-2">组织机构</a></li><li id="menu-7271-1" class="middle odd sf-item-3 sf-depth-2 sf-total-children-3 sf-parent-children-0 sf-single-children-3 menuparent"><a href="/content/jing-shi-guan-xun" class="sf-depth-2 menuparent">馆刊馆讯</a><ul><li id="menu-9135-1" class="first odd sf-item-1 sf-depth-3 sf-no-children"><a href="/content/jing-shi-guan-xun" class="sf-depth-3">京师馆讯</a></li><li id="menu-8784-1" class="middle even sf-item-2 sf-depth-3 sf-no-children"><a href="/content/bei-jing-shi-fan-da-xue-tu-shu-guan-nian-du-zong-lan" class="sf-depth-3">年度报告</a></li><li id="menu-8786-1" class="last odd sf-item-3 sf-depth-3 sf-no-children"><a href="http://jyxxzb.lib.bnu.edu.cn:8080/" title="" class="sf-depth-3">世界教育动态</a></li></ul></li><li id="menu-7272-1" class="middle even sf-item-4 sf-depth-2 sf-no-children"><a href="/content/mei-ti-ju-jiao" class="sf-depth-2">媒体聚焦</a></li><li id="menu-7273-1" class="last odd sf-item-5 sf-depth-2 sf-total-children-2 sf-parent-children-0 sf-single-children-2 menuparent"><a href="/content/qin-gong-zhu-xue" class="sf-depth-2 menuparent">学生工&amp;志愿者</a><ul><li id="menu-9148-1" class="first odd sf-item-1 sf-depth-3 sf-no-children"><a href="/content/qin-gong-zhu-xue" class="sf-depth-3">勤工助学</a></li><li id="menu-9149-1" class="last even sf-item-2 sf-depth-3 sf-no-children"><a href="/content/zhi-yuan-fu-wu" class="sf-depth-3">志愿服务</a></li></ul></li></ul></li><li id="menu-10839-1" class="last odd sf-item-5 sf-depth-1 sf-total-children-5 sf-parent-children-4 sf-single-children-1 menuparent"><a href="/content/wo-yao-zi-xun-0" name="HELP" class="sf-depth-1 menuparent">帮助</a><ul><li id="menu-10841-1" class="first odd sf-item-1 sf-depth-2 sf-no-children"><a href="/content/wo-yao-zi-xun-0" title="" class="sf-depth-2">我要咨询</a></li><li id="menu-10842-1" class="middle even sf-item-2 sf-depth-2 sf-total-children-3 sf-parent-children-0 sf-single-children-3 menuparent"><a href="/databaseguide" title="" class="sf-depth-2 menuparent">资源指南</a><ul><li id="menu-35691-1" class="first odd sf-item-1 sf-depth-3 sf-no-children"><a href="/content/mu-duo-sou-suo" class="sf-depth-3">木铎搜索指南</a></li><li id="menu-10843-1" class="middle even sf-item-2 sf-depth-3 sf-no-children"><a href="/databaseguide" title="" class="sf-depth-3">数据库使用指南</a></li><li id="menu-10844-1" class="last odd sf-item-3 sf-depth-3 sf-no-children"><a href="/content/mei-zhou-yi-ku" title="" class="sf-depth-3">每周一库</a></li></ul></li><li id="menu-10845-1" class="middle odd sf-item-3 sf-depth-2 sf-total-children-3 sf-parent-children-0 sf-single-children-3 menuparent"><a href="/content/kai-guan-shi-jian-0" title="" class="sf-depth-2 menuparent">入馆指南</a><ul><li id="menu-10846-1" class="first odd sf-item-1 sf-depth-3 sf-no-children"><a href="/content/kai-guan-shi-jian-0" title="" class="sf-depth-3">开馆时间</a></li><li id="menu-10847-1" class="middle even sf-item-2 sf-depth-3 sf-no-children"><a href="/content/gui-zhang-zhi-du" title="" class="sf-depth-3">规章制度</a></li><li id="menu-10848-1" class="last odd sf-item-3 sf-depth-3 sf-no-children"><a href="/content/guan-cang-fen-bu" title="" class="sf-depth-3">馆藏分布</a></li></ul></li><li id="menu-10849-1" class="middle even sf-item-4 sf-depth-2 sf-total-children-3 sf-parent-children-0 sf-single-children-3 menuparent"><a href="/content/xue-xiao-ssl-vpn" title="" class="sf-depth-2 menuparent">校外访问资源</a><ul><li id="menu-10850-1" class="first odd sf-item-1 sf-depth-3 sf-no-children"><a href="/content/xue-xiao-ssl-vpn" title="" class="sf-depth-3">学校SSL VPN</a></li><li id="menu-10851-1" class="middle even sf-item-2 sf-depth-3 sf-no-children"><a href="/content/ji-yu-shibboleth" title="" class="sf-depth-3">基于Shibboleth</a></li><li id="menu-10852-1" class="last odd sf-item-3 sf-depth-3 sf-no-children"><a href="/content/shu-ju-ku-man-you" title="" class="sf-depth-3">数据库漫游</a></li></ul></li><li id="menu-32956-1" class="last odd sf-item-5 sf-depth-2 sf-total-children-4 sf-parent-children-0 sf-single-children-4 menuparent"><a href="/content/bu-men-fu-wu-xiang-mu-lian-xi" class="sf-depth-2 menuparent">联系我们</a><ul><li id="menu-32957-1" class="first odd sf-item-1 sf-depth-3 sf-no-children"><a href="/content/bu-men-fu-wu-xiang-mu-lian-xi" title="" class="sf-depth-3">部门/服务项目联系</a></li><li id="menu-10840-1" class="middle even sf-item-2 sf-depth-3 sf-no-children"><a href="/content/lai-fang-can-guan" title="" class="sf-depth-3">来访参观</a></li><li id="menu-32959-1" class="middle odd sf-item-3 sf-depth-3 sf-no-children"><a href="/content/kai-fang-ri" class="sf-depth-3">开放日</a></li><li id="menu-32960-1" class="last even sf-item-4 sf-depth-3 sf-no-children"><a href="/content/zhan-lan" class="sf-depth-3">展览</a></li></ul></li></ul></li></ul>    </div>
+  </div>
+</section>    <!--
+    <nav class="navigation">
+         </nav>
+-->
+      </div>
+</div>
+  </div>
+</div></header>        <section id="section-content" class="section section-content">
+  <div id="zone-preface-wrapper" class="zone-wrapper zone-preface-wrapper clearfix">  
+  <div id="zone-preface" class="zone zone-preface clearfix container-12">
+    <div class="grid-6 region region-preface-first" id="region-preface-first">
+  <div class="region-inner region-preface-first-inner">
+    <section class="block block-quicktabs block-searchtabs-bnu block-quicktabs-searchtabs-bnu odd" id="block-quicktabs-searchtabs-bnu">
+  <div class="block-inner clearfix">
+              <h2 class="block-title">资源检索</h2>
+            
+    <div class="content clearfix">
+      <div  id="quicktabs-searchtabs_bnu" class="quicktabs-wrapper quicktabs-style-nostyle"><div class="item-list"><ul class="quicktabs-tabs quicktabs-style-nostyle clearfix"><li class="active first"><a href="/node?qt-searchtabs_bnu=0#qt-searchtabs_bnu" id="quicktabs-tab-searchtabs_bnu-0" class="active">木铎搜索</a></li><li><a href="/node?qt-searchtabs_bnu=1#qt-searchtabs_bnu" id="quicktabs-tab-searchtabs_bnu-1" class="active">电子期刊</a></li><li class="last"><a href="/node?qt-searchtabs_bnu=2#qt-searchtabs_bnu" id="quicktabs-tab-searchtabs_bnu-2" class="active">Web资源</a></li></ul></div><div id="quicktabs-container-searchtabs_bnu" class="quicktabs_main quicktabs-style-nostyle"><div  id="quicktabs-tabpage-searchtabs_bnu-0" class="quicktabs-tabpage "><div class="block block-searchtabs block-searchtabs-primoform block-searchtabs-searchtabs-primoform odd block-without-title" id="block-searchtabs-searchtabs-primoform">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <form action="/" method="post" id="searchtabs-block-primoform" accept-charset="UTF-8"><div><div class="container-inline fds">
+      <h2 class="element-invisible">搜索表单</h2>
+    <div class="form-item form-type-select form-item-search-key">
+ <select id="edit-search-key" name="search_key" class="form-select"><option value="any" selected="selected">全部字段</option><option value="title">题名</option><option value="creator">著者</option></select>
+</div>
+<div class="form-item form-type-textfield form-item-search-term">
+  <label class="element-invisible" for="edit-search-term">搜索 </label>
+ <input title="请输入您想搜索的关键词。" type="text" id="edit-search-term" name="search_term" value="" size="15" maxlength="128" class="form-text" />
+</div>
+<input type="submit" id="edit-submit" name="op" value="搜索" class="form-submit" /><div id="edit-search-scope" class="form-radios"><div class="form-item form-type-radio form-item-search-scope">
+ <input type="radio" id="edit-search-scope-tabdefault-tabsearch-scopedefault-scope" name="search_scope" value="&amp;tab=default_tab&amp;search_scope=default_scope" checked="checked" class="form-radio" />  <label class="option" for="edit-search-scope-tabdefault-tabsearch-scopedefault-scope">全部资源 </label>
+
+</div>
+<div class="form-item form-type-radio form-item-search-scope">
+ <input type="radio" id="edit-search-scope-tab86bnu-primosearch-scope86bnu-primo" name="search_scope" value="&amp;tab=86bnu_primo&amp;search_scope=86BNU_PRIMO" class="form-radio" />  <label class="option" for="edit-search-scope-tab86bnu-primosearch-scope86bnu-primo">电子资源 </label>
+
+</div>
+<div class="form-item form-type-radio form-item-search-scope">
+ <input type="radio" id="edit-search-scope-tabbooks-tabsearch-scopebook-scope" name="search_scope" value="&amp;tab=books_tab&amp;search_scope=book_scope" class="form-radio" />  <label class="option" for="edit-search-scope-tabbooks-tabsearch-scopebook-scope">图书 </label>
+
+</div>
+<div class="form-item form-type-radio form-item-search-scope">
+ <input type="radio" id="edit-search-scope-tabxuewei-tabsearch-scopexuewei-scope" name="search_scope" value="&amp;tab=xuewei_tab&amp;search_scope=xuewei_scope" class="form-radio" />  <label class="option" for="edit-search-scope-tabxuewei-tabsearch-scopexuewei-scope">学位论文 </label>
+
+</div>
+</div><ul class="links inline"><li class="link first"><a href="http://202.112.82.7:8080/V" target="_blank">数据库</a></li><li class="link1"><a href="https://bnu-primo.hosted.exlibrisgroup.com/primo-explore/search?vid=86BNU&amp;lang=zh_CN&amp;sortby=rank" target="_blank">木铎搜索</a></li><li class="link2 last"><a href="http://ss.zhizhen.com">超星发现</a></li></ul><input type="hidden" name="form_build_id" value="form-klnyEeK_7zzEaF8flTEdBosAxa_eqXs9O4dHVuCHDVU" />
+<input type="hidden" name="form_id" value="searchtabs_block_primoform" />
+</div>
+</div></form>    </div>
+  </div>
+</div></div><div  id="quicktabs-tabpage-searchtabs_bnu-1" class="quicktabs-tabpage quicktabs-hide"><div class="block block-searchtabs block-searchtabs-sfxform block-searchtabs-searchtabs-sfxform even block-without-title" id="block-searchtabs-searchtabs-sfxform">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <form action="/" method="post" id="searchtabs-block-sfxform" accept-charset="UTF-8"><div><div class="container-inline">
+      <h2 class="element-invisible">搜索表单</h2>
+    <div class="form-item form-type-textfield form-item-param-pattern-value">
+  <label class="element-invisible" for="edit-param-pattern-value">搜索 </label>
+ <input title="请输入您想搜索的关键词。" type="text" id="edit-param-pattern-value" name="param_pattern_value" value="" size="15" maxlength="128" class="form-text" />
+</div>
+<input type="submit" id="edit-submit--2" name="op" value="搜索" class="form-submit" /><strong>请输入期刊名称关键词</strong><ul class="links inline"><li class="link1 first"><a href="http://search.lib.bnu.edu.cn:9003/sfx_bnu/az" target="_blank">电子期刊A-Z</a></li><li class="link2 last"><a href="http://coreej.cceu.org.cn">核心期刊查询</a></li></ul><input type="hidden" name="form_build_id" value="form-SO25eSGIG3TOG7dJ1PiFMH4qaLazSm-NcmBXSqBfarQ" />
+<input type="hidden" name="form_id" value="searchtabs_block_sfxform" />
+</div>
+</div></form>    </div>
+  </div>
+</div></div><div  id="quicktabs-tabpage-searchtabs_bnu-2" class="quicktabs-tabpage quicktabs-hide"><div class="block block-searchtabs block-searchtabs-baiduform block-searchtabs-searchtabs-baiduform odd block-without-title" id="block-searchtabs-searchtabs-baiduform">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <form action="/" method="post" id="searchtabs-block-baiduform" accept-charset="UTF-8"><div><div class="container-inline">
+      <h2 class="element-invisible">搜索表单</h2>
+    <div class="form-item form-type-textfield form-item-wd">
+  <label class="element-invisible" for="edit-wd">搜索 </label>
+ <input title="请输入您想搜索的关键词。" type="text" id="edit-wd" name="wd" value="" size="15" maxlength="128" class="form-text" />
+</div>
+<input type="submit" id="edit-submit--3" name="op" value="搜索" class="form-submit" /><strong>请输入关键词</strong><input type="hidden" name="form_build_id" value="form-Xdr9dr-qGhAQINeKwn_-Xn5Cz-kZbuD4-CdflNBIqOY" />
+<input type="hidden" name="form_id" value="searchtabs_block_baiduform" />
+</div>
+</div></form>    </div>
+  </div>
+</div></div></div></div>    </div>
+  </div>
+</section>  </div>
+</div>
+<div class="grid-6 region region-preface-second" id="region-preface-second">
+  <div class="region-inner region-preface-second-inner">
+    <div class="block block-views block-slide-block block-views-slide-block odd block-without-title" id="block-views-slide-block">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <div class="view view-slide view-id-slide view-display-id-block view-dom-id-6bc14b4d8ccd49cfea8a66b0e10652eb">
+        
+  
+  
+      <div class="view-content">
+      
+  <div class="skin-default">
+    
+    <div id="views_slideshow_cycle_main_slide-block" class="views_slideshow_cycle_main views_slideshow_main"><div id="views_slideshow_cycle_teaser_section_slide-block" class="views-slideshow-cycle-main-frame views_slideshow_cycle_teaser_section">
+  <div id="views_slideshow_cycle_div_slide-block_0" class="views-slideshow-cycle-main-frame-row views_slideshow_cycle_slide views_slideshow_slide views-row-1 views-row-odd">
+  <div class="views-slideshow-cycle-main-frame-row-item views-row views-row-0 views-row-odd views-row-first">
+    
+          <div><a href='
+
+  http://www.lib.bnu.edu.cn/content/guan-wai-wen-xian-zi-yuan-huo-qu'><div class="field-wrapper">
+
+  <div class="field field-name-field-slide-image field-type-image field-label-hidden">
+    <img src="http://www.lib.bnu.edu.cn/sites/default/files/zhu_ye_wei_xin_ban_san_-01.jpg" width="563" height="335" alt="" />  </div>
+</div></a></div>    
+  <div class="views-field views-field-title">        <span class="field-content"><a href='
+
+  http://www.lib.bnu.edu.cn/content/guan-wai-wen-xian-zi-yuan-huo-qu'>【信息素养∙系列讲座】馆外文献资源获取</a></span>  </div></div>
+</div>
+<div id="views_slideshow_cycle_div_slide-block_1" class="views-slideshow-cycle-main-frame-row views_slideshow_cycle_slide views_slideshow_slide views-row-2 views_slideshow_cycle_hidden views-row-even">
+  <div class="views-slideshow-cycle-main-frame-row-item views-row views-row-1 views-row-even">
+    
+          <div><a href='
+
+  http://202.112.82.32/content/4yue-9ri-zhuan-jia-jiang-zuo-shu-fa-yu-zhong-guo-wen-hua'><div class="field-wrapper">
+
+  <div class="field field-name-field-slide-image field-type-image field-label-hidden">
+    <img src="http://www.lib.bnu.edu.cn/sites/default/files/20180409zhu_ye_huan_deng_.jpg" width="563" height="335" alt="" />  </div>
+</div></a></div>    
+  <div class="views-field views-field-title">        <span class="field-content"><a href='
+
+  http://202.112.82.32/content/4yue-9ri-zhuan-jia-jiang-zuo-shu-fa-yu-zhong-guo-wen-hua'>4 月9日《专家讲座》：书法与中国文化</a></span>  </div></div>
+</div>
+<div id="views_slideshow_cycle_div_slide-block_2" class="views-slideshow-cycle-main-frame-row views_slideshow_cycle_slide views_slideshow_slide views-row-3 views_slideshow_cycle_hidden views-row-odd">
+  <div class="views-slideshow-cycle-main-frame-row-item views-row views-row-2 views-row-odd">
+    
+          <div><a href='
+
+  http://www.lib.bnu.edu.cn/content/guan-ji-hu-jie-wen-xian-chuan-di'><div class="field-wrapper">
+
+  <div class="field field-name-field-slide-image field-type-image field-label-hidden">
+    <img src="http://www.lib.bnu.edu.cn/sites/default/files/zhou_nian_qing_you_hui_huo_dong_.jpg" width="563" height="335" alt="" />  </div>
+</div></a></div>    
+  <div class="views-field views-field-title">        <span class="field-content"><a href='
+
+  http://www.lib.bnu.edu.cn/content/guan-ji-hu-jie-wen-xian-chuan-di'>CASHL全国优惠活动</a></span>  </div></div>
+</div>
+<div id="views_slideshow_cycle_div_slide-block_3" class="views-slideshow-cycle-main-frame-row views_slideshow_cycle_slide views_slideshow_slide views-row-4 views_slideshow_cycle_hidden views-row-even">
+  <div class="views-slideshow-cycle-main-frame-row-item views-row views-row-3 views-row-even">
+    
+          <div><a href=''><div class="field-wrapper">
+
+  <div class="field field-name-field-slide-image field-type-image field-label-hidden">
+    <img src="http://www.lib.bnu.edu.cn/sites/default/files/20180320wei_tu_yi_shu_zhan_xin_zhu_ye_563335.jpg" width="563" height="335" alt="" />  </div>
+</div></a></div>    
+  <div class="views-field views-field-title">        <span class="field-content"><a href=''>【馆藏巡礼】星藏——品读经典 积蓄力量</a></span>  </div></div>
+</div>
+<div id="views_slideshow_cycle_div_slide-block_4" class="views-slideshow-cycle-main-frame-row views_slideshow_cycle_slide views_slideshow_slide views-row-5 views_slideshow_cycle_hidden views-row-odd">
+  <div class="views-slideshow-cycle-main-frame-row-item views-row views-row-4 views-row-odd views-row-last">
+    
+          <div><a href='
+
+  http://jyxxzb.lib.bnu.edu.cn:8080/'><div class="field-wrapper">
+
+  <div class="field field-name-field-slide-image field-type-image field-label-hidden">
+    <img src="http://www.lib.bnu.edu.cn/sites/default/files/201724_0.jpg" width="563" height="335" alt="" />  </div>
+</div></a></div>    
+  <div class="views-field views-field-title">        <span class="field-content"><a href='
+
+  http://jyxxzb.lib.bnu.edu.cn:8080/'>《世界教育动态》2017年12月第24期</a></span>  </div></div>
+</div>
+</div>
+</div>
+          <div class="views-slideshow-controls-bottom clearfix">
+        <div id="widget_pager_bottom_slide-block" class="views-slideshow-pager-fields widget_pager widget_pager_bottom views_slideshow_pager_field">
+  <div id="views_slideshow_pager_field_item_bottom_slide-block_0" class="views-slideshow-pager-field-item views_slideshow_pager_field_item views-row-odd views-row-first">
+  <div class="views-field-counter">
+    <div class="views-content-counter">
+    1  </div>
+</div>
+</div>
+<div id="views_slideshow_pager_field_item_bottom_slide-block_1" class="views-slideshow-pager-field-item views_slideshow_pager_field_item views-row-even">
+  <div class="views-field-counter">
+    <div class="views-content-counter">
+    2  </div>
+</div>
+</div>
+<div id="views_slideshow_pager_field_item_bottom_slide-block_2" class="views-slideshow-pager-field-item views_slideshow_pager_field_item views-row-odd">
+  <div class="views-field-counter">
+    <div class="views-content-counter">
+    3  </div>
+</div>
+</div>
+<div id="views_slideshow_pager_field_item_bottom_slide-block_3" class="views-slideshow-pager-field-item views_slideshow_pager_field_item views-row-even">
+  <div class="views-field-counter">
+    <div class="views-content-counter">
+    4  </div>
+</div>
+</div>
+<div id="views_slideshow_pager_field_item_bottom_slide-block_4" class="views-slideshow-pager-field-item views_slideshow_pager_field_item views-row-odd views-row-last">
+  <div class="views-field-counter">
+    <div class="views-content-counter">
+    5  </div>
+</div>
+</div>
+</div>
+      </div>
+      </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>    </div>
+  </div>
+</div><div class="block block-bnu-wechat block-media-qrcode block-bnu-wechat-media-qrcode even block-without-title" id="block-bnu-wechat-media-qrcode">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <div><ul class="qrcode_ul"><li><a href="/bnu_wechat_ajax_link_callback/nojs/wechat/" class="use-ajax-link wechat_icon" qrcode="public://images/weixin_qrcode.jpg"></a></li><li><a href="/bnu_wechat_ajax_link_callback/nojs/weibo/" class="use-ajax-link weibo_icon" qrcode="public://images/weixin_qrcode.jpg"></a></li><li><a href="/bnu_wechat_ajax_link_callback/nojs/phone/" class="use-ajax-link phone_icon" qrcode="public://images/weixin_qrcode.jpg"></a></li></ul></div><div id='myDiv'></div>    </div>
+  </div>
+</div>  </div>
+</div>
+  </div>
+</div><div id="zone-postscript-wrapper" class="zone-wrapper zone-postscript-wrapper clearfix">  
+  <div id="zone-postscript" class="zone zone-postscript clearfix container-24">
+    <div class="grid-9 region region-postscript-first" id="region-postscript-first">
+  <div class="region-inner region-postscript-first-inner">
+    <div class="block block-quicktabs block-front-page-content-list-tabs2 block-quicktabs-front-page-content-list-tabs2 odd block-without-title" id="block-quicktabs-front-page-content-list-tabs2">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <div  id="quicktabs-front_page_content_list_tabs2" class="quicktabs-wrapper quicktabs-style-nostyle"><div class="item-list"><ul class="quicktabs-tabs quicktabs-style-nostyle clearfix"><li class="active first"><a href="/node?qt-front_page_content_list_tabs2=0#qt-front_page_content_list_tabs2" id="quicktabs-tab-front_page_content_list_tabs2-0" class="active">新闻动态</a></li><li><a href="/node?qt-front_page_content_list_tabs2=1#qt-front_page_content_list_tabs2" id="quicktabs-tab-front_page_content_list_tabs2-1" class="active">资源动态</a></li><li class="last"><a href="/node?qt-front_page_content_list_tabs2=2#qt-front_page_content_list_tabs2" id="quicktabs-tab-front_page_content_list_tabs2-2" class="active">系列讲座</a></li></ul></div><div id="quicktabs-container-front_page_content_list_tabs2" class="quicktabs_main quicktabs-style-nostyle"><div  id="quicktabs-tabpage-front_page_content_list_tabs2-0" class="quicktabs-tabpage "><div class="block block-views block-news-list-block block-views-news-list-block even block-without-title" id="block-views-news-list-block">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <div class="view view-news-list view-id-news_list view-display-id-block view-dom-id-44ce12310cc6651ba65ad62fa7dbd1a7">
+        
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1">
+      
+  <span>        <a href="/content/bi-jia-he-ding-kan-kai-tong-wang-shang-yu-yue-tong-zhi">闭架合订刊开通网上预约通知</a>  </span>  
+  <span>        <span class="time">[2018-03-28]</span>  </span>  </div>
+  <div class="views-row views-row-2">
+      
+  <span>        <a href="/content/2018nian-qing-ming-jie-kai-guan-shi-jian">2018年清明节开馆时间</a>  </span>  
+  <span>        <span class="time">[2018-03-27]</span>  </span>  </div>
+  <div class="views-row views-row-3">
+      
+  <span>        <a href="/content/4yue-9ri-zhuan-jia-jiang-zuo-shu-fa-yu-zhong-guo-wen-hua">4月9日《专家讲座》： 书法与中国文化</a>  </span>  
+  <span>        <span class="time">[2018-03-26]</span>  </span>  </div>
+  <div class="views-row views-row-4">
+      
+  <span>        <a href="/content/2018nian-chun-ji-xue-qi-xi-lie-jiang-zuo-kai-jiang-la">2018年春季学期系列讲座开讲啦！</a>  </span>  
+  <span>        <span class="time">[2018-03-20]</span>  </span>  </div>
+  <div class="views-row views-row-5">
+      
+  <span>        <a href="/content/jiang-zuo-yu-gao-yi-dai-yi-lu-chang-yi-shi-shi-yu-qian-jing">【讲座预告】“一带一路”倡议、实施与前景</a>  </span>  
+  <span>        <span class="time">[2018-03-13]</span>  </span>  </div>
+    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="/-">
+    更多  </a>
+</div>
+  
+  
+  
+</div>    </div>
+  </div>
+</div></div></div></div>    </div>
+  </div>
+</div>  </div>
+</div>
+<div class="grid-9 region region-postscript-second" id="region-postscript-second">
+  <div class="region-inner region-postscript-second-inner">
+    <div class="block block-quicktabs block-front-page-content-list-tabs block-quicktabs-front-page-content-list-tabs odd block-without-title" id="block-quicktabs-front-page-content-list-tabs">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <div  id="quicktabs-front_page_content_list_tabs" class="quicktabs-wrapper quicktabs-style-nostyle"><div class="item-list"><ul class="quicktabs-tabs quicktabs-style-nostyle clearfix"><li class="active first"><a href="/node?qt-front_page_content_list_tabs=0#qt-front_page_content_list_tabs" id="quicktabs-tab-front_page_content_list_tabs-0" class="active">常用服务</a></li><li class="last"><a href="/node?qt-front_page_content_list_tabs=1#qt-front_page_content_list_tabs" id="quicktabs-tab-front_page_content_list_tabs-1" class="active">常用资源</a></li></ul></div><div id="quicktabs-container-front_page_content_list_tabs" class="quicktabs_main quicktabs-style-nostyle"><div  id="quicktabs-tabpage-front_page_content_list_tabs-0" class="quicktabs-tabpage "><div class="block block-block block-2 block-block-2 odd block-without-title" id="block-block-2">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <div class="view view-taxonomy-term view-id-taxonomy_term view-display-id-block_2">
+<div class="view-content">
+<div class="views-row views-row-1 views-row-odd views-row-first">
+          <a href="/content/jie-yue-gui-ze">借阅规则</a></div>
+<div class="views-row views-row-2 views-row-even">
+          <a href="/content/guan-ji-hu-jie-wen-xian-chuan-di">馆际互借&amp;文献传递</a>    </div>
+<div class="views-row views-row-3 views-row-odd">
+          <a href="/content/yu-yue-zhuan-chang"> 预约讲座</a>    </div>
+<div class="views-row views-row-4 views-row-even">
+          <a href="/content/ke-ji-cha-xin-0"> 科技查新</a>    </div>
+<div class="views-row views-row-5 views-row-odd">
+          <a href="/content/lun-wen-shou-lu-yin-yong-zheng-ming">收录引证</a>    </div>
+<div class="views-row views-row-6 views-row-even">
+          <a href="http://librarian.lib.bnu.edu.cn/">学科服务</a>    </div>
+<div class="views-row views-row-7 views-row-odd">
+         <a href="/content/xue-xiao-ssl-vpn">校外访问资源</a>     </div>
+<div class="views-row views-row-8 views-row-even">
+          <a href="http://www.lib.bnu.edu.cn/content/zhuan-jia-jiang-zuo">专家讲座</a>    </div>
+</div>
+</div>
+    </div>
+  </div>
+</div></div><div  id="quicktabs-tabpage-front_page_content_list_tabs-1" class="quicktabs-tabpage quicktabs-hide"><div class="block block-block block-3 block-block-3 even block-without-title" id="block-block-3">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <div class="view view-taxonomy-term view-id-taxonomy_term view-display-id-block_2">
+<div class="view-content">
+<div class="views-row views-row-1 views-row-odd views-row-first">
+          <a href="http://www.cnki.net/">CNKI</a></div>
+<div class="views-row views-row-2 views-row-even">
+          <a href="http://edu.sslibrary.com/">超星电子图书</a>    </div>
+<div class="views-row views-row-3 views-row-odd">
+          <a href="http://lib.cqvip.com/">维普</a>    </div>
+<div class="views-row views-row-4 views-row-even">
+          <a href="http://library.koolearn.com">新东方多媒体学习库</a>    </div>
+<div class="views-row views-row-5 views-row-odd">
+          <a href="http://ame.lib.bnu.edu.cn/tools/clientsetup.exe">中国基本古籍库</a>    </div>
+<div class="views-row views-row-6 views-row-even">
+          <a href="http://www.duxiu.com/">读秀学术搜索</a>    </div>
+<div class="views-row views-row-7 views-row-odd">
+          <a href="http://www.sciencedirect.com">Elsevier Sciencedirect</a>    </div>
+<div class="views-row views-row-8 views-row-even">
+          <a href="http://search.proquest.com/index">Proquest</a>    </div>
+<div class="views-row views-row-9 views-row-odd">
+          <a href="http://apps.webofknowledge.com/UA_GeneralSearch_input.do?product=UA&amp;search_mode=GeneralSearch&amp;SID=Y1Kp5JJoG1Jm@2a7FH7&amp;preferencesSaved=">Web of Science</a>    </div>
+</div>
+<div class="views-row views-row-10 views-row-even views-row-last">
+          <a href="http://www.springerlink.com">Springer Online Journals</a>    </div>
+</div>
+    </div>
+  </div>
+</div></div></div></div>    </div>
+  </div>
+</div>  </div>
+</div>
+<div class="grid-6 region region-postscript-third" id="region-postscript-third">
+  <div class="region-inner region-postscript-third-inner">
+    <section class="block block-views block-links-list-block block-views-links-list-block odd" id="block-views-links-list-block">
+  <div class="block-inner clearfix">
+              <h2 class="block-title">互动与沟通</h2>
+            
+    <div class="content clearfix">
+      <div class="view view-links-list view-id-links_list view-display-id-block view-dom-id-257b332d15638e6a4b5cfd5deeef39d8">
+        
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1">
+      
+          <a href="http://www.lib.bnu.edu.cn/content/wo-yao-zi-xun-0"><div class="field-wrapper">
+
+  <img src="http://www.lib.bnu.edu.cn/sites/default/files/styles/long_icon_150_40_/public/images/icon/zi_xun_tai_2.jpg?itok=UCwnMV3K" width="223" height="47" alt="" /></div></a>    </div>
+  <div class="views-row views-row-2">
+      
+          <a href="http://www.lib.bnu.edu.cn/content/guan-chang-xin-xiang"><div class="field-wrapper">
+
+  <img src="http://www.lib.bnu.edu.cn/sites/default/files/styles/long_icon_150_40_/public/images/icon/guan_chang_xin_xiang_2.jpg?itok=SEOGxnsE" width="223" height="47" alt="" /></div></a>    </div>
+  <div class="views-row views-row-3">
+      
+          <a href="http://www.lib.bnu.edu.cn/content/guan-chang-jie-dai-ri"><div class="field-wrapper">
+
+  <img src="http://www.lib.bnu.edu.cn/sites/default/files/styles/long_icon_150_40_/public/images/icon/guan_chang_jie_dai_ri_2.jpg?itok=eg_Ai-J5" width="223" height="47" alt="" /></div></a>    </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>    </div>
+  </div>
+</section>  </div>
+</div>
+  </div>
+</div></section>    
+  
+      <footer id="section-footer" class="section section-footer">
+  <div id="zone-footer-wrapper" class="zone-wrapper zone-footer-wrapper clearfix">  
+  <div id="zone-footer" class="zone zone-footer clearfix container-12">
+    <div class="grid-12 region region-footer-first" id="region-footer-first">
+  <div class="region-inner region-footer-first-inner">
+    <section class="block block-views block-links-list-block-5 block-views-links-list-block-5 odd" id="block-views-links-list-block-5">
+  <div class="block-inner clearfix">
+              <h2 class="block-title">动态服务</h2>
+            
+    <div class="content clearfix">
+      <div class="view view-links-list view-id-links_list view-display-id-block_5 view-dom-id-07d13fd4935c5e83809c98a98eebe55d">
+        
+  
+  
+      <div class="view-content">
+      <table class="views-view-grid cols-8" class="views-view-grid">
+  
+  <tbody>
+          <tr class="row-1">
+                  <td class="col-1">
+              
+          <div class="field-wrapper">
+
+  <span class="field field-name-field-url field-type-link-field field-label-hidden">
+    <a href="http://www.lib.bnu.edu.cn/content/kai-guan-shi-jian-0" target="_blank">开馆时间</a>  </span>
+</div>            </td>
+                  <td class="col-2">
+              
+          <div class="field-wrapper">
+
+  <span class="field field-name-field-url field-type-link-field field-label-hidden">
+    <a href="http://www.lib.bnu.edu.cn/content/zuo-wei-yu-yue-0" target="_blank">座位预约</a>  </span>
+</div>            </td>
+                  <td class="col-3">
+              
+          <div class="field-wrapper">
+
+  <span class="field field-name-field-url field-type-link-field field-label-hidden">
+    <a href="http://www.lib.bnu.edu.cn/content/yan-jiu-jian-yu-yue-0" target="_blank">研究间预约</a>  </span>
+</div>            </td>
+                  <td class="col-4">
+              
+          <div class="field-wrapper">
+
+  <span class="field field-name-field-url field-type-link-field field-label-hidden">
+    <a href="http://etd.lib.bnu.edu.cn/thesis/index.aspx" target="_blank">学位论文提交</a>  </span>
+</div>            </td>
+                  <td class="col-5">
+              
+          <div class="field-wrapper">
+
+  <span class="field field-name-field-url field-type-link-field field-label-hidden">
+    <a href="http://www.lib.bnu.edu.cn/2017fresh/index.html" target="_blank">新生季</a>  </span>
+</div>            </td>
+                  <td class="col-6">
+              
+          <div class="field-wrapper">
+
+  <span class="field field-name-field-url field-type-link-field field-label-hidden">
+    <a href="http://www.lib.bnu.edu.cn/2018jieqi/index.html" target="_blank">岁时民俗 · 节气</a>  </span>
+</div>            </td>
+                  <td class="col-7">
+              
+          <div class="field-wrapper">
+
+  <span class="field field-name-field-url field-type-link-field field-label-hidden">
+    <a href="http://www.lib.bnu.edu.cn/special_service/recommand" target="_blank">资源荐购</a>  </span>
+</div>            </td>
+                  <td class="col-8">
+              
+          <div class="field-wrapper">
+
+  <span class="field field-name-field-url field-type-link-field field-label-hidden">
+    <a href="http://www.lib.bnu.edu.cn/tushujijin.html#" target="_blank">图书基金</a>  </span>
+</div>            </td>
+              </tr>
+      </tbody>
+</table>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>    </div>
+  </div>
+</section>  </div>
+</div>
+<div class="grid-12 region region-footer-second" id="region-footer-second">
+  <div class="region-inner region-footer-second-inner">
+    <div class="block block-views block-links-list-block-1 block-views-links-list-block-1 odd block-without-title" id="block-views-links-list-block-1">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <div class="view view-links-list view-id-links_list view-display-id-block_1 view-dom-id-ab18d996b979830eee5f0d4ec7b3b747">
+        
+  
+  
+      <div class="view-content">
+      <table class="views-view-grid cols-6" class="views-view-grid">
+  
+  <tbody>
+          <tr class="row-1 row-first row-last">
+                  <td class="col-1 col-first">
+              
+              
+  <div class="views-field views-field-title">        <span class="field-content"><a href='
+
+  
+    http://sflm.bnu.edu.cn/templates/qgsflm/default.cshtml  
+' target='_blank'>全国师范院校图书馆联盟</a></span>  </div>          </td>
+                  <td class="col-2">
+              
+              
+  <div class="views-field views-field-title">        <span class="field-content"><a href='
+
+  
+    http://www.lib.bnu.edu.cn/cceu/  
+' target='_blank'>艾利贝斯中国用户协会(CCEU) </a></span>  </div>          </td>
+                  <td class="col-3">
+              
+              
+  <div class="views-field views-field-title">        <span class="field-content"><a href='
+
+  
+    http://balis5.ustb.edu.cn/home  
+' target='_blank'>BALIS联合信息咨询中心</a></span>  </div>          </td>
+                  <td class="col-4">
+              
+              
+  <div class="views-field views-field-title">        <span class="field-content"><a href='
+
+  
+    http://www.lib.bnu.edu.cn/bianmu/  
+' target='_blank'>编目专业委员会</a></span>  </div>          </td>
+                  <td class="col-5">
+              
+              
+  <div class="views-field views-field-title">        <span class="field-content"><a href='
+
+  
+    http://bnu.fanya.chaoxing.com/portal  
+' target='_blank'>BALIS培训中心</a></span>  </div>          </td>
+                  <td class="col-6 col-last">
+              
+              
+  <div class="views-field views-field-title">        <span class="field-content"><a href='
+
+  
+    http://219.224.28.27:8080/cashl/index.jsp  
+' target='_blank'>CASHL华北区域中心</a></span>  </div>          </td>
+              </tr>
+      </tbody>
+</table>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>    </div>
+  </div>
+</div><section class="block block-block block-1 block-block-1 even" id="block-block-1">
+  <div class="block-inner clearfix">
+              <h2 class="block-title">copyright</h2>
+            
+    <div class="content clearfix">
+      <div style="color:#EBEBEB">版权所有 © 2015 北京师范大学图书馆  <a ref="http://www.lib.bnu.edu.cn/content/yi-jian-fan-kui">意见反馈</a> <a href="http://tongji.baidu.com/web/18246420/overview/sole?siteId=7747667">网站统计</a><a href="http://202.112.82.32/rss.xml">RSS</a><br />建议使用IE9.0及以上、Firefox、Google Chrome、360浏览器极速模式或其它兼容浏览器访问本网站</div>
+    </div>
+  </div>
+</section>  </div>
+</div>
+  </div>
+</div></footer>  </div>  <script type="text/javascript" src="http://www.lib.bnu.edu.cn/sites/default/files/js/js_REsLPu7rmWMjWdJcbmAAi4_CGneW_u1kgEQ0gfYfPC4.js"></script>
+</body>
+</html>

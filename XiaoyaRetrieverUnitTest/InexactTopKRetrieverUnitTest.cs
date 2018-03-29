@@ -60,7 +60,7 @@ namespace XiaoyaRetrieverUnitTest
             };
 
             var urlFileIds = retriever.Retrieve(expression);
-            Assert.AreEqual(13, urlFileIds.Count());
+            Assert.AreEqual(32, urlFileIds.Count());
 
 
             expression = new And
@@ -68,18 +68,18 @@ namespace XiaoyaRetrieverUnitTest
                 "北京师范大学",
                 new Not(new And
                 {
-                    "协同",
-                    "创新",
+                    "教务处",
+                    "教育",
                 })
             };
 
             urlFileIds = retriever.Retrieve(expression);
-            Assert.AreEqual(11, urlFileIds.Count());
+            Assert.AreEqual(31, urlFileIds.Count());
 
             using (var context = new XiaoyaSearchContext(options))
             {
                 Assert.IsFalse(GetUrls(context, urlFileIds)
-                        .Contains("http://www.bnu.edu.cn/kxyj/")
+                        .Contains("http://jwc.bnu.edu.cn/")
                     );
             }
         }
@@ -109,13 +109,13 @@ namespace XiaoyaRetrieverUnitTest
 
             var expression = new SimpleQueryParser();
 
-            var urlFileIds = retriever.Retrieve(expression.Parse("北京师范大学 -协同创新"));
-            Assert.AreEqual(11, urlFileIds.Count());
+            var urlFileIds = retriever.Retrieve(expression.Parse("北京师范大学 -教务处教育"));
+            Assert.AreEqual(31, urlFileIds.Count());
 
             using (var context = new XiaoyaSearchContext(options))
             {
                 Assert.IsFalse(GetUrls(context, urlFileIds)
-                        .Contains("http://www.bnu.edu.cn/kxyj/")
+                        .Contains("http://jwc.bnu.edu.cn/")
                     );
             }
         }

@@ -1,0 +1,373 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>北京师范大学教务处</title>
+<link href="http://jwc.bnu.edu.cn/images/index.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>北京师范大学教务处</title>
+<link href="http://jwc.bnu.edu.cn/images/index.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+.inputStyle {
+	FONT-SIZE: 12px;
+	WIDTH: 100px;
+	COLOR: #333333;
+	HEIGHT: 15px;
+	padding-top: 5px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-color: #8099b3;
+	border-right-color: #8099b3;
+	border-bottom-color: #8099b3;
+	border-left-color: #8099b3;
+	line-height: 20px;
+}
+-->
+</style>
+</head>
+
+<body>
+<div style="width:1001px; margin:0px auto;">
+<table width="1001" border="0" align="center" cellpadding="0" cellspacing="0" class="bodybg">
+  <tr>
+    <td height="111" align="center" valign="top" class="toplf" bgcolor="#FFFFFF"><table width="1001" border="0" align="center" cellpadding="0" cellspacing="0" >
+      <tr>
+        <td height="130" align="left" background="http://jwc.bnu.edu.cn/images/banner.png">&nbsp;</td>
+        </tr>
+      <tr>
+        <td align="center" valign="top" background="http://jwc.bnu.edu.cn/images/daohang.gif"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="980"><ul id="nav" style="font-size:14px;font-family:微软雅黑">
+	<li class="top"><a href="http://jwc.bnu.edu.cn/" class="top_link"><span style="font-size:14px;font-family:微软雅黑">&nbsp;首&nbsp;&nbsp;页&nbsp;</span></a></li>
+    <li class="top"><a href="http://jwc.bnu.edu.cn/jgsz/znjj" class="top_link"><span style="font-size:14px;font-family:微软雅黑">机构设置</span></a></li>
+    <li class="top"><a href="http://jwc.bnu.edu.cn/tzgg" class="top_link"><span style="font-size:14px;font-family:微软雅黑">通知公告</span></a></li>
+    <li class="top"><a href="http://jwc.bnu.edu.cn/gzzd" class="top_link"><span style="font-size:14px;font-family:微软雅黑">规章制度</span></a></li>
+    <li class="top"><a href="http://jwc.bnu.edu.cn/xxpt" class="top_link"><span style="font-size:14px;font-family:微软雅黑">信息平台</span></a></li>
+    <li class="top"><a href="http://jwc.bnu.edu.cn/fwzn" class="top_link"><span style="font-size:14px;font-family:微软雅黑">服务指南</span></a></li>
+    <li class="top"><a href="http://jwc.bnu.edu.cn/xxgk" class="top_link"><span style="font-size:14px;font-family:微软雅黑">信息公开</span></a></li>
+    <li class="top"><a href="http://jwc.bnu.edu.cn/cyxz" class="top_link"><span style="font-size:14px;font-family:微软雅黑">常用下载</span></a></li>
+    <li class="top"><a href="http://jwc.bnu.edu.cn/jxrl" class="top_link"><span style="font-size:14px;font-family:微软雅黑">教学日历</span></a></li>
+    
+      <li class="topresearch">
+    <form name="dataForm" action="/cms/search/searchResults.jsp" target="_blank" method="post" accept-Charset="utf-8"  onsubmit="document.charset='utf-8';"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td colspan="2"> <input name="siteID" size="4" value="114" type = "hidden">
+      <table cellspacing="0" cellpadding="0" width="96%" align="center" 
+                  border="0">
+        <tbody>
+          <tr>
+            <td 
+                      height="5"></td>
+          </tr>
+        </tbody>
+      </table></td>
+    </tr>
+  <tr>
+    <td><input  name="query" type="text" class="inputStyle"  title="搜索" size=15 /></td>
+    <td>&nbsp;
+      <input name=btnG type=submit value=" 搜  索 " /></td>
+  </tr>
+</table>
+       </form>
+   </li>
+</ul></td></tr>
+  </table>  </td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+</div>
+</body>
+</html>
+
+</body></html><div style="width:1001px; margin:0px auto;">
+<table width="1001" border="0" align="center" cellpadding="0" cellspacing="0" class="bodybg">
+<tr>
+    <td align="center" valign="middle">
+      <table width="973" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="420" rowspan="2" valign="top" class="slidebox">
+ <!-----------图片切换  begin----------->
+<SCRIPT type=text/javascript>
+		var imgUrl=new Array();
+		var imgLink=new Array();
+		var imgName=new Array();
+		var n=1;
+						imgUrl[n] = "images/content/2017-03/20170307105640785166.jpg";
+		imgLink[n] = "tpxw/140335.html";
+		var vTitle='数字化教学资源建设与应用工作会议';
+		if (vTitle.length>15)
+		vTitle=vTitle.substring(0,15)+"...";
+		imgName[n] = vTitle;
+		n++;
+								imgUrl[n] = "images/content/2016-03/20160302095327917579.jpg";
+		imgLink[n] = "tpxw/122726.html";
+		var vTitle='晨读花园';
+		if (vTitle.length>15)
+		vTitle=vTitle.substring(0,15)+"...";
+		imgName[n] = vTitle;
+		n++;
+								imgUrl[n] = "images/content/2017-03/20170307105653797262.jpg";
+		imgLink[n] = "tpxw/140337.html";
+		var vTitle='京师学堂';
+		if (vTitle.length>15)
+		vTitle=vTitle.substring(0,15)+"...";
+		imgName[n] = vTitle;
+		n++;
+								imgUrl[n] = "images/content/2016-03/20160302100208656044.jpg";
+		imgLink[n] = "tpxw/122731.html";
+		var vTitle='体育馆';
+		if (vTitle.length>15)
+		vTitle=vTitle.substring(0,15)+"...";
+		imgName[n] = vTitle;
+		n++;
+								imgUrl[n] = "images/content/2016-03/20160302095928482714.jpg";
+		imgLink[n] = "tpxw/122728.html";
+		var vTitle='京师广场';
+		if (vTitle.length>15)
+		vTitle=vTitle.substring(0,15)+"...";
+		imgName[n] = vTitle;
+		n++;
+								imgUrl[n] = "images/content/2016-03/20160302095948369891.jpg";
+		imgLink[n] = "tpxw/122729.html";
+		var vTitle='教学大会召开';
+		if (vTitle.length>15)
+		vTitle=vTitle.substring(0,15)+"...";
+		imgName[n] = vTitle;
+		n++;
+								imgUrl[n] = "images/content/2016-03/20160302095623252699.jpg";
+		imgLink[n] = "tpxw/122727.html";
+		var vTitle='学校操场';
+		if (vTitle.length>15)
+		vTitle=vTitle.substring(0,15)+"...";
+		imgName[n] = vTitle;
+		n++;
+								imgUrl[n] = "images/content/2016-03/20160302100127749952.jpg";
+		imgLink[n] = "tpxw/122730.html";
+		var vTitle='校园掠影';
+		if (vTitle.length>15)
+		vTitle=vTitle.substring(0,15)+"...";
+		imgName[n] = vTitle;
+		n++;
+				
+											
+				var texts = "";
+				var links = "";
+				var pics = "";
+				var count=1;
+				for(var h=1; h<n; h++) {
+				if (count>8)
+				break;
+				if ((imgUrl[h] !="") && (imgLink[h] !="") && (imgUrl[h].indexOf(".jpg") > 0)){
+					if (imgName[h].length > 20)
+					imgName[h] = imgName[h].substring(0, 20) + "...";
+					texts += imgName[h] + "|";
+					links += imgLink[h] + "|";
+					pics += imgUrl[h] + "|";
+					count++;
+					}
+				}
+				texts = texts.substring(0, texts.length-1);
+				links = links.substring(0, links.length-1);
+				pics = pics.substring(0, pics.length-1);
+				var focus_width=420  //图片宽度
+				var focus_height=315  //图片高度
+				var text_height=20    //文字高度
+				var swf_height = focus_height+text_height
+				document.write('<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ focus_width +'" height="'+ swf_height +'">');
+				
+document.write('<param name="allowScriptAccess" value="sameDomain"><param name="movie" value="images/focus.swf"><param name="quality" value="high"> <param name="bgcolor" value= "#FFFFFF"> <param name="wmode" value="transparent"> ');				
+				document.write('<param name="menu" value="false"><param name=wmode value="opaque">');
+				
+				document.write('<param name="FlashVars" value="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'">');
+				
+				document.write('<embed src="images/focus.swf" wmode="opaque"  FlashVars="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'" menu="false" wmode="transparent" quality="high" width="'+ focus_width +'" height="'+ swf_height +'" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />'); document.write('</object>'); 
+</SCRIPT>
+		<!-----------图片切换  end----------->
+</td>
+          <td align="right" valign="middle"></td>
+          </tr>
+        <tr>
+          <td align="right" valign="top"><table width="98%" border="0" cellspacing="1" cellpadding="0" bgcolor="#DCDCDC" class="topboxlf">
+            <tr>
+              <td bgcolor="#EEEEEE"><h1>最新通知<span class="gengduo1"><a href="tzgg/index.html">更 多 &raquo;</a></span></h1></td>
+            </tr>    
+            <tr>
+              <td align="center" valign="top" bgcolor="#FFFFFF">
+              <div class="kuaixunlist">
+                <ul class="ul_list">
+                          <li><a href="tzgg/157344.html" target="_blank" title="关于举办第十四届北京师范大学数学建模竞赛的通知" >            关于举办第十四届北京师范大学数学建模竞赛的通知 
+    &nbsp;<span class="newtime">&nbsp;&nbsp;&nbsp;(2018-03-27)&nbsp;&nbsp;</span></a></li>
+                    <li><a href="http://prsc.bnu.edu.cn/docs/20180327113356409983.pdf" target="_blank" title="【转发】关于编排2018～2019学年秋季学期课表的通知" >            【转发】关于编排2018～2019学年秋季学期课表的通知 
+    &nbsp;<span class="newtime">&nbsp;&nbsp;&nbsp;(2018-03-27)&nbsp;&nbsp;</span></a></li>
+                    <li><a href="http://prsc.bnu.edu.cn/docs/20180321110100287237.pdf" target="_blank" title="【转发】关于2018年上半年全国大学英语四、六级考试报名的通知" >            【转发】关于2018年上半年全国大学英语四、六级考试报名的通... 
+    &nbsp;<span class="newtime">&nbsp;&nbsp;&nbsp;(2018-03-22)&nbsp;&nbsp;</span></a></li>
+                    <li><a href="http://prsc.bnu.edu.cn/tzgg/157055.htm" target="_blank" title="【转发】关于启用网上申请课程调整功能的通知" >            【转发】关于启用网上申请课程调整功能的通知 
+    &nbsp;<span class="newtime">&nbsp;&nbsp;&nbsp;(2018-03-22)&nbsp;&nbsp;</span></a></li>
+                    <li><a href="tzgg/157221.html" target="_blank" title="2017-2018学年明德教师奖北京师范大学候选人评选结果公示" >            2017-2018学年明德教师奖北京师范大学候选人评选结果公... 
+    &nbsp;<span class="newtime">&nbsp;&nbsp;&nbsp;(2018-03-22)&nbsp;&nbsp;</span></a></li>
+                    <li><a href="tzgg/157219.html" target="_blank" title="2017-2018学年第一学期本科生课程优秀研究生助教评选结果" >            2017-2018学年第一学期本科生课程优秀研究生助教评选结... 
+    &nbsp;<span class="newtime">&nbsp;&nbsp;&nbsp;(2018-03-22)&nbsp;&nbsp;</span></a></li>
+                    <li><a href="tzgg/157180.html" target="_blank" title="关于公布2018年“基础学科拔尖学生培养试验计划”励耘实验班选拔方案的通知" >            关于公布2018年“基础学科拔尖学生培养试验计划”励耘实验班... 
+    &nbsp;<span class="newtime">&nbsp;&nbsp;&nbsp;(2018-03-21)&nbsp;&nbsp;</span></a></li>
+                    <li><a href="tzgg/157087.html" target="_blank" title="关于2018年本科生专业选择部（院、系）工作方案公布的通知" >            关于2018年本科生专业选择部（院、系）工作方案公布的通知 
+    &nbsp;<span class="newtime">&nbsp;&nbsp;&nbsp;(2018-03-20)&nbsp;&nbsp;</span></a></li>
+                    <li><a href="tzgg/157085.html" target="_blank" title="关于2017～2018学年春季学期“北京师范大学学士学位英语考试”的通知" >            关于2017～2018学年春季学期“北京师范大学学士学位英语... 
+    &nbsp;<span class="newtime">&nbsp;&nbsp;&nbsp;(2018-03-20)&nbsp;&nbsp;</span></a></li>
+                    <li><a href="tzgg/157043.html" target="_blank" title="北京市教育委员会关于征集参与第四届中国“互联网+”大学生创新创业大赛“青年红色筑梦之旅”项目的通知" >            北京市教育委员会关于征集参与第四届中国“互联网+”大学生创新... 
+    &nbsp;<span class="newtime">&nbsp;&nbsp;&nbsp;(2018-03-19)&nbsp;&nbsp;</span></a></li>
+          </ul>
+            </div></td>
+            </tr>
+          </table></td>
+          </tr>
+        </table>
+      </td>
+  </tr>
+
+  <tr>
+    <td align="center" valign="middle" bgcolor="#F1F1F1" class="midbox"><table width="973" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="33%" align="left" valign="top"><table width="99%" border="0" cellspacing="1" cellpadding="0" bgcolor="#DCDCDC">
+          <tr>
+            <td bgcolor="#EEEEEE"><h4>规章制度<span class="gengduo"><a href="gzzd/index.html">更 多 &raquo;</a></span></h4></td>
+            </tr>
+          <tr>
+            <td align="center" valign="top" bgcolor="#FFFFFF" style="height:167px">
+ <div class="kuaixunlist">
+<ul class="ul_list">
+           <li><a href="gzzd/156955.html" target="_blank" title="关于港澳台学生修读学校国情类课程的规定" >            关于港澳台学生修读学校国情类课... 
+    &nbsp;<span class="newtime">&nbsp;&nbsp;&nbsp;(2018-03-16)&nbsp;&nbsp;</span></a></li>
+                    <li><a href="gzzd/122410.html" target="_blank" title="北京师范大学本科生专业选择管理办法" >            北京师范大学本科生专业选择管理... 
+    &nbsp;<span class="newtime">&nbsp;&nbsp;&nbsp;(2018-03-13)&nbsp;&nbsp;</span></a></li>
+                    <li><a href="gzzd/156615.html" target="_blank" title="关于公布《北京师范大学本科生培养方案各专业自由选修学分认定办法汇编》的通知" >            关于公布《北京师范大学本科生培... 
+    &nbsp;<span class="newtime">&nbsp;&nbsp;&nbsp;(2018-03-06)&nbsp;&nbsp;</span></a></li>
+                    <li><a href="gzzd/153403.html" target="_blank" title="北京师范大学免修大学外语课程和认定学士学位外语考试成绩管理办法" >            北京师范大学免修大学外语课程和... 
+    &nbsp;<span class="newtime">&nbsp;&nbsp;&nbsp;(2017-11-09)&nbsp;&nbsp;</span></a></li>
+                    <li><a href="http://one.bnu.edu.cn/dcp/forward.action?path=/portal/portal&p=pimShow&id=3ecde7ea2e1242be87acc0e2adb77e06" target="_blank" title="北京师范大学本科课程教材选用管理办法" >            北京师范大学本科课程教材选用管... 
+    &nbsp;<span class="newtime">&nbsp;&nbsp;&nbsp;(2017-07-10)&nbsp;&nbsp;</span></a></li>
+                    <li><a href="gzzd/140940.html" target="_blank" title="北京师范大学关于本科生竞赛的管理办法" >            北京师范大学关于本科生竞赛的管... 
+    &nbsp;<span class="newtime">&nbsp;&nbsp;&nbsp;(2017-03-22)&nbsp;&nbsp;</span></a></li>
+                    <li><a href="gzzd/133139.html" target="_blank" title="北京师范大学师范生教育实习安全纪律要求" >            北京师范大学师范生教育实习安全... 
+    &nbsp;<span class="newtime">&nbsp;&nbsp;&nbsp;(2016-09-21)&nbsp;&nbsp;</span></a></li>
+                    <li><a href="gzzd/123531.html" target="_blank" title="北京师范大学本科新生导师制实施意见（试行）" >            北京师范大学本科新生导师制实施... 
+    &nbsp;<span class="newtime">&nbsp;&nbsp;&nbsp;(2016-03-15)&nbsp;&nbsp;</span></a></li>
+                    <li><a href="gzzd/122432.html" target="_blank" title="北京师范大学本科教学优秀奖实施办法 （ 2008 年修订） " >            北京师范大学本科教学优秀奖实施... 
+    &nbsp;<span class="newtime">&nbsp;&nbsp;&nbsp;(2016-02-24)&nbsp;&nbsp;</span></a></li>
+                            </ul>
+                  </div>
+</td>
+          </tr>
+          </table></td>
+        <td width="33%" align="center" valign="top"><table width="99%" border="0" cellspacing="1" cellpadding="0" bgcolor="#DCDCDC">
+          <tr>
+            <td bgcolor="#EEEEEE"><h4>常用下载<span class="gengduo"><a href="cyxz/index.html">更 多 &raquo;</a></span></h4></td>
+            </tr>
+          <tr>
+            <td align="center" valign="top" bgcolor="#FFFFFF" style="height:167px">
+ <div class="kuaixunlist">
+
+<ul class="ul_list">
+           <li><a href="docs/20180307111432258803.doc" target="_blank" title="北京师范大学本科生学士学位外语考试成绩认定申请表" >            北京师范大学本科生学士学位外语... 
+    &nbsp;<span class="newtime">&nbsp;&nbsp;&nbsp;(2017-11-10)&nbsp;&nbsp;</span></a></li>
+                    <li><a href="docs/20171109140742780171.docx" target="_blank" title="北京师范大学本科生免修和认定大学外语成绩申请表" >            北京师范大学本科生免修和认定大... 
+    &nbsp;<span class="newtime">&nbsp;&nbsp;&nbsp;(2017-11-09)&nbsp;&nbsp;</span></a></li>
+                    <li><a href="docs/20171011170533166761.doc" target="_blank" title="北京师范大学课程成绩、学分认定申请表" >            北京师范大学课程成绩、学分认定... 
+    &nbsp;<span class="newtime">&nbsp;&nbsp;&nbsp;(2017-10-11)&nbsp;&nbsp;</span></a></li>
+                    <li><a href="docs/20171011085416944361.docx" target="_blank" title="北京师范大学本科课程教学大纲（模板）" >            北京师范大学本科课程教学大纲（... 
+    &nbsp;<span class="newtime">&nbsp;&nbsp;&nbsp;(2017-10-11)&nbsp;&nbsp;</span></a></li>
+                    <li><a href="docs/20171011085444506424.docx" target="_blank" title="本科培养方案调整申请表" >            本科培养方案调整申请表 
+    &nbsp;<span class="newtime">&nbsp;&nbsp;&nbsp;(2017-10-11)&nbsp;&nbsp;</span></a></li>
+                    <li><a href="docs/20171011085458755625.docx" target="_blank" title="本科培养方案外新增课程申请表" >            本科培养方案外新增课程申请表 
+    &nbsp;<span class="newtime">&nbsp;&nbsp;&nbsp;(2017-10-11)&nbsp;&nbsp;</span></a></li>
+                    <li><a href="docs/20170605150857507533.doc" target="_blank" title="瀚德学院本科生免修第二外语课程申请表" >            瀚德学院本科生免修第二外语课程... 
+    &nbsp;<span class="newtime">&nbsp;&nbsp;&nbsp;(2017-06-05)&nbsp;&nbsp;</span></a></li>
+                    <li><a href="docs/20170428163237483090.rar" target="_blank" title="北京师范大学免费师范生教育实习常用表格" >            北京师范大学免费师范生教育实习... 
+    &nbsp;<span class="newtime">&nbsp;&nbsp;&nbsp;(2017-04-28)&nbsp;&nbsp;</span></a></li>
+                    <li><a href="docs/20170420164713797503.doc" target="_blank" title="北京师范大学本科生免修课程申请表" >            北京师范大学本科生免修课程申请... 
+    &nbsp;<span class="newtime">&nbsp;&nbsp;&nbsp;(2017-04-20)&nbsp;&nbsp;</span></a></li>
+                            </ul>
+                  </div>
+</td>
+          </tr>
+          </table></td>
+        <td width="34%" align="right" valign="top"><table width="99%" border="0" cellspacing="1" cellpadding="0" bgcolor="#DCDCDC">
+          <tr>
+            <td bgcolor="#EEEEEE"><h4>快速链接<span class="gengduo"><a href="kslj/index.html">更 多 &raquo;</a></span></h4></td>
+            </tr>
+          <tr>
+            <td align="center" valign="top" bgcolor="#FFFFFF" style="height:167px">
+<div class="kuaixunlist">
+<ul class="ul_list">
+            <li><a href="http://jwcold.bnu.edu.cn" target="_blank" title="旧版教务处网站*" >            旧版教务处网站* 
+    &nbsp;<span class="newtime">&nbsp;&nbsp;&nbsp;(2016-03-13)&nbsp;&nbsp;</span></a></li>
+                    <li><a href="http://fd.bnu.edu.cn/" target="_blank" title="教师发展中心" >            教师发展中心 
+    &nbsp;<span class="newtime">&nbsp;&nbsp;&nbsp;(2016-02-24)&nbsp;&nbsp;</span></a></li>
+                    <li><a href="http://prsc.bnu.edu.cn/" target="_blank" title="公共资源服务中心" >            公共资源服务中心 
+    &nbsp;<span class="newtime">&nbsp;&nbsp;&nbsp;(2016-02-24)&nbsp;&nbsp;</span></a></li>
+                    <li><a href="http://admission.bnu.edu.cn" target="_blank" title="本科招生网" >            本科招生网 
+    &nbsp;<span class="newtime">&nbsp;&nbsp;&nbsp;(2016-02-24)&nbsp;&nbsp;</span></a></li>
+                    <li><a href="http://www.bnu.edu.cn/" target="_blank" title="北京师范大学" >            北京师范大学 
+    &nbsp;<span class="newtime">&nbsp;&nbsp;&nbsp;(2016-02-24)&nbsp;&nbsp;</span></a></li>
+                    <li><a href="http://www.bjedu.gov.cn/" target="_blank" title="北京市教委" >            北京市教委 
+    &nbsp;<span class="newtime">&nbsp;&nbsp;&nbsp;(2016-02-24)&nbsp;&nbsp;</span></a></li>
+                    <li><a href="http://www.moe.gov.cn/" target="_blank" title="国家教育部" >            国家教育部 
+    &nbsp;<span class="newtime">&nbsp;&nbsp;&nbsp;(2016-02-24)&nbsp;&nbsp;</span></a></li>
+                            </ul>
+                  </div>
+</td>
+          </tr>
+          </table></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+</div>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>北京师范大学教务处</title>
+<link href="http://jwc.bnu.edu.cn/images/index.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div style="width:1001px; margin:0px auto;">
+<table width="1001" border="0" align="center" cellpadding="0" cellspacing="0" class="bodybg">
+   <tr>
+    <td align="center" valign="middle" bgcolor="#F1F1F1"><table width="100%" border="0" cellspacing="0" cellpadding="0" ><tr>
+        <td>
+	<table width="100%" border="0" cellspacing="10" cellpadding="0">
+      <tr>
+            <td align="center" valign="middle" background="http://jwc.bnu.edu.cn/images/footer.gif"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="59%" align="center" valign="middle" class="footer">北京师范大学教务处　新街口外大街19号，北京·中国(100875) <br />
+          E-mail: jwc@bnu.edu.cn　Tel: 010-58807845　Fax: 010-58807845</td>
+        </tr>
+      
+    </table></td>
+          </tr>
+        </table></td>
+  </tr>
+    </table></td></tr>
+    </table>
+</div>
+</body>
+</html>
+
+</body></html></body>
+</html>
+
+</body></html>

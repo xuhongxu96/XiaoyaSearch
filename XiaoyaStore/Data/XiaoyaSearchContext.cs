@@ -75,8 +75,7 @@ namespace XiaoyaStore.Data
         {
             if (!optionsBuilder.IsConfigured)
             {
-                // optionsBuilder.UseSqlite("Data Source=Db/XiaoyaSearch.db");
-                optionsBuilder.UseSqlServer("Data Source=IR-PC;Initial Catalog=XiaoyaSearch;Integrated Security=True");
+                optionsBuilder.UseSqlite("Data Source=Db/XiaoyaSearch.db");
             }
         }
 

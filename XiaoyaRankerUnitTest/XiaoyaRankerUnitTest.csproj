@@ -17,8 +17,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="init.sql">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    <None Update="XiaoyaSearch.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
 

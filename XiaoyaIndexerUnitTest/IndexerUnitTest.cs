@@ -15,7 +15,7 @@ namespace XiaoyaIndexerUnitTest
     public class IndexerUnitTest
     {
         private string logDir = Path.Combine(Path.GetTempPath(), "Logs");
-        private string fetchDir = Path.Combine(Path.GetTempPath(), "Fetched");
+        private string fetchDir = "Fetched";
 
         [TestMethod]
         public void TestIndex()
@@ -34,12 +34,6 @@ namespace XiaoyaIndexerUnitTest
                 }
             }
 
-            Directory.CreateDirectory(fetchDir);
-            foreach (var file in Directory.EnumerateFiles("Fetched"))
-            {
-                File.Copy(file, Path.Combine(fetchDir, Path.GetFileName(file)), true);
-            }
-
             var options = new DbContextOptionsBuilder<XiaoyaSearchContext>()
                 .UseSqlite("Data Source=XiaoyaSearch.db")
                 .Options;
@@ -50,24 +44,6 @@ namespace XiaoyaIndexerUnitTest
                 UrlFileStore = new UrlFileStore(options),
                 InvertedIndexStore = new InvertedIndexStore(options),
             };
-
-            using (var context = new XiaoyaSearchContext(options))
-            {
-                if (context.Database.EnsureCreated())
-                {
-                    context.Database.ExecuteSqlCommand(File.ReadAllText("init.sql"));
-                }
-
-                foreach (var urlFile in context.UrlFiles)
-                {
-                    urlFile.IsIndexed = false;
-                }
-
-                context.RemoveRange(context.InvertedIndices);
-                context.RemoveRange(context.IndexStats);
-                context.RemoveRange(context.UrlFileIndexStats);
-                context.SaveChanges();
-            }
 
             IIndexer indexer = new SimpleIndexer(config);
 

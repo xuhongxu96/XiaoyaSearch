@@ -25,6 +25,30 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Fetched\04692baf46f96207908581bdbc94b0861522320887909">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Fetched\0ef4e9ada3dfab017eef75119f2f20541522320880090">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Fetched\11ffae4dcf5a95f250635665ca50a01e1522320883841">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Fetched\13bc0ac229829d5b0a99e3a37c50261e1522320885438">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Fetched\1662367af2b1d8497a5a9e9fd94f1ba71522320887203">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Fetched\1adf3459a421a3050df112f3f066ca421522320882745">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Fetched\21eb9950f7a036654dcabfcb036afe281522320877244">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Fetched\27c6b87c9f0086e9e3fb2f5bc452cec71522320883664">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Fetched\2bd90fa7bac4f6c45e6d641267abf65a1521528697570">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -38,6 +62,18 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="Fetched\2bd90fa7bac4f6c45e6d641267abf65a1521699430740">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Fetched\3094385673ae68eac60a1d4cf83e11581522320875848">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Fetched\362b2a3b290fc3c504588942bc5108481522320881095">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Fetched\396628d6e69d1af0eee9eecbf602ec7f1522320888179">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Fetched\3fff8ab095aab86165a9b593353fa9fe1522320875815">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="Fetched\4adb4c6b07f9269e5c5e24a6eaa8bdc61521528698656">
@@ -55,6 +91,15 @@
     <None Update="Fetched\4adb4c6b07f9269e5c5e24a6eaa8bdc61521699432264">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="Fetched\4b13a737313a9761aeb93594435874901522320876230">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Fetched\4d6ffff8c87e67b6193ef4e904e8b0381522320886177">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Fetched\53bf2cc01256d3bc9dbb400106cbbeb81522320887171">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Fetched\580277d17c425e5d8e6fbd289a1395d91521611873988">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -65,6 +110,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="Fetched\580277d17c425e5d8e6fbd289a1395d91521699447993">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Fetched\5c87326d4bdb0507d750fd5d30f52e591522320883672">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="Fetched\633f9c718a944a7ac30af43925a610971521528710686">
@@ -80,6 +128,30 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="Fetched\633f9c718a944a7ac30af43925a610971521699447890">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Fetched\633f9c718a944a7ac30af43925a610971522320884631">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Fetched\68f5468f5b408fcd6e325d01b81f958a1522320883763">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Fetched\6d0f580d4439c355a86dd53e8456326e1522320882470">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Fetched\792de3cecc2406e8b45886da9d0186be1522320878087">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Fetched\798f731e3ae06bb25a1473273992939f1522320884091">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Fetched\7b88cf988b109217b8c319409e093e7c1522320886294">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Fetched\85f1e43493f0318d1f751951ed7d968d1522320887783">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Fetched\87a59febe01b88c435067e518e5e2bb71522320882834">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="Fetched\87ab38521134eb207f371918b257dd031521528695469">
@@ -112,6 +184,15 @@
     <None Update="Fetched\926f3be16330aeeb3aa33eb42d760aed1521699429417">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="Fetched\94d982944bfa2853f02888169dd533351522320879087">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Fetched\a2496ac2fc250b9b0fd63376275964f51522320883690">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Fetched\a8bd74fb6dc014905e99863e41af55901522320883640">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Fetched\ab27aa43dfb1066430a6dc8b418a34171521528698651">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -127,6 +208,15 @@
     <None Update="Fetched\ab27aa43dfb1066430a6dc8b418a34171521699432205">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="Fetched\b354ab02b109e972bfa664b3703b2ae71522320882132">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Fetched\b383c26665c0c3732d9ca9298479a9d21522320887094">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Fetched\b567b0dcdc00f35e3a0f53146e4c217a1522320884891">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Fetched\b829b43ef09a8cbad500e16bcbf62d1a1521528695613">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -140,6 +230,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="Fetched\b829b43ef09a8cbad500e16bcbf62d1a1521699430696">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Fetched\b9488f5b1e67fadaf9e5a624e1228ed01522320882484">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="Fetched\c0fd18efc84416a6b7d663e4cdb16cc81521528698784">
@@ -170,6 +263,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="Fetched\c43dc64881791dd118b30fc5727c9b801521699431124">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Fetched\d2706c1237bc7b6d17f40c4e30afd95d1522320888216">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="Fetched\d8d8be3710754556c8914c5414605ff51521528698653">
@@ -217,8 +313,26 @@
     <None Update="Fetched\dcdf7f2ed50fe8b26fe13f996595a8121521699429389">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="Fetched\dcdf7f2ed50fe8b26fe13f996595a8121522320884795">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Fetched\dd907eaf41c0286bf183480987d10d051522320884411">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Fetched\ddf698dd6211b6ad1dd53963fcca25ef1522320887715">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Fetched\ef105d8584b6936226957e6f23fb21bf1522320886148">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Fetched\fbd8a9ed49b0808449b683831df8b3411522320887802">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="init.sql">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="XiaoyaSearch.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
 
