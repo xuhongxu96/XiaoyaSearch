@@ -69,6 +69,12 @@ namespace XiaoyaCrawler.Fetcher
                     return null;
                 }
 
+                if (type == null)
+                {
+                    mLogger.Log(nameof(SimpleFetcher), "Unknown MIME type: " + url);
+                    return null;
+                }
+
                 if (mConfig.UsePhantomJS && type.MediaType == "text/html")
                 {
                     // If config is set to use PhantomJS and web content type is HTML, 

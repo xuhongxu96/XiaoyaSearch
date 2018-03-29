@@ -18,22 +18,34 @@ namespace XiaoyaRanker.QueryTermProximityRanker
         public IEnumerable<double> Rank(IEnumerable<int> urlFileIds, IEnumerable<string> words)
         {
             var wordCount = words.Count();
-            var wordPositions = new List<List<int>>(wordCount);
-            var pointers = new int[wordCount];
 
             foreach (var id in urlFileIds)
             {
+                var wordPositions = new List<List<int>>(wordCount);
+                var pointers = new int[wordCount];
+
+                bool skip = false;
+
                 foreach (var word in words)
                 {
-                    wordPositions.Add(mConfig.InvertedIndexStore
+                    var positions = mConfig.InvertedIndexStore
                         .LoadByWordInUrlFileOrderByPosition(id, word)
                         .Select(o => o.Position)
-                        .ToList());
+                        .ToList();
+                    
+                    if (positions.Count == 0)
+                    {
+                        yield return double.PositiveInfinity;
+                        skip = true;
+                        break;
+                    }
+
+                    wordPositions.Add(positions);
                 }
 
-                for (int i = 0; i < wordCount; ++i)
+                if (skip)
                 {
-                    pointers[i] = 0;
+                    continue;
                 }
 
                 var minWindowLength = -1;

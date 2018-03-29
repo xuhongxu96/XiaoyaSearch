@@ -50,7 +50,7 @@ namespace XiaoyaStore.Store
         {
             using (var context = NewContext())
             {
-                foreach (var item in context.UrlFrontierItems)
+                foreach (var item in context.UrlFrontierItems.Where(o => o.IsPopped))
                 {
                     item.IsPopped = false;
                 }
@@ -63,7 +63,7 @@ namespace XiaoyaStore.Store
             }
         }
 
-        public UrlFrontierItem Save(string url)
+        public UrlFrontierItem Push(string url)
         {
             using (var context = NewContext())
             {

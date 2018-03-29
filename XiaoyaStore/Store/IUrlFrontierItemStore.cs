@@ -11,7 +11,7 @@ namespace XiaoyaStore.Store
         void Restart();
         UrlFrontierItem PopUrlForCrawl(bool strictPlannedTime = true);
         UrlFrontierItem LoadByUrl(string url);
-        UrlFrontierItem Save(string url);
+        UrlFrontierItem Push(string url);
         UrlFrontierItem PushBack(string url, bool failed = false);
     }
 }

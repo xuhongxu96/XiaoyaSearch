@@ -97,10 +97,7 @@ namespace XiaoyaCrawler
                             mUrlFrontier.PushUrl(parsedUrl);
                         }
                         // Push back this url
-                        if (!parseResult.Urls.Contains(url))
-                        {
-                            mUrlFrontier.PushBackUrl(url);
-                        }
+                        mUrlFrontier.PushBackUrl(url);
 
                         mFetchCount++;
                     }
@@ -120,7 +117,7 @@ namespace XiaoyaCrawler
                 {
                     mLogger.Log(nameof(Crawler),
                         url + " Error\r\n" + e.Message + "\r\n---\r\n" + e.StackTrace);
-                    mErrorLogger.Log(nameof(Crawler), 
+                    mErrorLogger.Log(nameof(Crawler),
                         url + " Error\r\n" + e.Message + "\r\n---\r\n" + e.StackTrace);
                     // Retry
                     mUrlFrontier.PushBackUrl(url, true);

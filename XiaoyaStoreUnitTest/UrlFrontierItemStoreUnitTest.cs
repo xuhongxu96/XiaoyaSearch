@@ -70,7 +70,7 @@ namespace XiaoyaStoreUnitTest
                 }
 
                 var urlFrontierItemStore = new UrlFrontierItemStore(options);
-                urlFrontierItemStore.Save("http://baidu.com");
+                urlFrontierItemStore.Push("http://baidu.com");
 
                 using (var context = new XiaoyaSearchContext(options))
                 {

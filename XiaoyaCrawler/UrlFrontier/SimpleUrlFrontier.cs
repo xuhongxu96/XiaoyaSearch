@@ -69,7 +69,7 @@ namespace XiaoyaCrawler.UrlFrontier
         /// <param name="url">New url</param>
         public void PushUrl(string url)
         {
-            mConfig.UrlFrontierItemStore.Save(url);
+            mConfig.UrlFrontierItemStore.Push(url);
             mLogger.Log(nameof(SimpleUrlFrontier), "Pushed Url: " + url);
         }
 
