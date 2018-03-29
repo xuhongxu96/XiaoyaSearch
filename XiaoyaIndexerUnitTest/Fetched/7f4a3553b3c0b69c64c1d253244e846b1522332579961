@@ -1,0 +1,1742 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>博士学位论文公开答辩会</title>
+    <link href="/Content/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="/Content/css/main.css" rel="stylesheet" />
+    <link href="/Content/jquery/jquery.blogcalendar.css" rel="stylesheet" />
+    <script src="/Content/jquery/jquery-1.10.2.min.js"></script>
+    <script src="/Content/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/Content/jquery/jquery.dd.js"></script>
+    <script src="/Content/jquery/jquery.blogcalendar.js"></script>
+
+</head>
+<body>
+    <header class="navbar navbar-default navbar-fixed-top" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="http://www.bnu.edu.cn" target="_blank" class="navbar-brand">BNU</a>
+            </div>
+            <nav class="collapse navbar-collapse bs-navbar-collapse">
+                <ul class="nav navbar-nav h4">
+                    <li>
+                        <a href="http://graduate.bnu.edu.cn" target="_blank">研究生院</a>
+                    </li>
+                    <li>
+                        <a href="/">学位授予工作细则</a>
+                    </li>
+                    <li>
+                        <a href="/dabian/dbh">博士学位论文公开答辩会</a>
+                    </li>                    
+                    <li>
+                        <a href="http://ss.graduate.bnu.edu.cn//" target="_blank">博士学位论文送审</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="http://ss.graduate.bnu.edu.cn/" target="_blank">我要登记</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div id="logob">
+        <div id="logo" class="container"></div>
+    </div>
+    <div class="container mainbody">
+        
+
+<div class="maincontent">
+    <div class="row cattitle">
+        <div class="col-md-6">
+            博士学位论文公开答辩会
+        </div>
+        <div class="col-md-6">
+            <form action="/dabian/dbh" role="search">
+                <div class="form-group">
+                    <div class="input-group">
+                        <input class="form-control" id="navbarInput-01" name="s" type="search" placeholder="Search">
+                        <span class="input-group-btn">
+                            <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                        </span>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-9">
+            <div class="catlist">
+
+<div class="panel panel-default">
+    <div class="panel-heading text-center">
+        <a href="/dabian/dbh/0db717282cc9b5f7a53beae9bc840040">黄河三角洲滨海湿地土壤硫赋存形态和迁移转化过程研究</a>
+    </div>
+    <table class="table table-bordered">
+        <tr>
+            <td class="text-right" width="80px">答辩人</td>
+            <td>
+                <a href="/dabian/dbh?yxsm=022">环境学院</a>
+                &nbsp;
+                <a href="/dabian/dbh?mldm=08">环境生态学专业</a>
+                &nbsp;
+                卢琼琼
+            </td>
+        </tr>
+        <tr>
+            <td class="text-right">导师</td>
+            <td>白军红</td>
+        </tr>
+        <tr>
+            <td class="text-right">答辩主席</td>
+            <td>黄冠华，中国农业大学（水利与土木工程学院），教授</td>
+        </tr>
+        <tr>
+            <td class="text-right">答辩委员</td>
+            <td>吴绍洪，中国科学院地理科学与资源研究所，研究院<br/>严登华，中国水利水电科学研究院（水资源研究所），教授<br/>崔保山，北京师范大学（环境学院），教授<br/>刘新会，北京师范大学（环境学院），教授</td>
+        </tr>
+        <tr>
+            <td class="text-right">时间</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="text-right">地点</td>
+            <td>环境学院6楼会议室</td>
+        </tr>
+    </table>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading text-center">
+        <a href="/dabian/dbh/94c69e6db492d81b40b5f5c1ffc4af0e">鄂尔多斯市多尺度环境风险评价研究</a>
+    </div>
+    <table class="table table-bordered">
+        <tr>
+            <td class="text-right" width="80px">答辩人</td>
+            <td>
+                <a href="/dabian/dbh?yxsm=022">环境学院</a>
+                &nbsp;
+                <a href="/dabian/dbh?mldm=08">环境科学专业</a>
+                &nbsp;
+                孟晓杰
+            </td>
+        </tr>
+        <tr>
+            <td class="text-right">导师</td>
+            <td>张妍</td>
+        </tr>
+        <tr>
+            <td class="text-right">答辩主席</td>
+            <td>王兆华，北京理工大学（管理与经济学院），教授</td>
+        </tr>
+        <tr>
+            <td class="text-right">答辩委员</td>
+            <td>徐明，教授，University of Michigan<br/>毛显强，教授，北京师范大学<br/>曾维华，教授，北京师范大学<br/>赵彦伟，教授，北京师范大学  </td>
+        </tr>
+        <tr>
+            <td class="text-right">时间</td>
+            <td>2018年06月01日14时00分</td>
+        </tr>
+        <tr>
+            <td class="text-right">地点</td>
+            <td>环境学院610会议室</td>
+        </tr>
+    </table>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading text-center">
+        <a href="/dabian/dbh/7de4406fbab8c2b97b60408848befdf2">沿施肥梯度草地植物物种功能性状与其多度关系的变化</a>
+    </div>
+    <table class="table table-bordered">
+        <tr>
+            <td class="text-right" width="80px">答辩人</td>
+            <td>
+                <a href="/dabian/dbh?yxsm=023">生命科学学院</a>
+                &nbsp;
+                <a href="/dabian/dbh?mldm=07">生态学专业</a>
+                &nbsp;
+                王萌
+            </td>
+        </tr>
+        <tr>
+            <td class="text-right">导师</td>
+            <td>张大勇</td>
+        </tr>
+        <tr>
+            <td class="text-right">答辩主席</td>
+            <td>白永飞，中科院植物所，研究员</td>
+        </tr>
+        <tr>
+            <td class="text-right">答辩委员</td>
+            <td>娄安如，北京师范大学，教授<br/>张金屯，北京师范大学，教师<br/>陶毅，中科院动物所，研究员<br/>牟溥，北京师范大学，教授</td>
+        </tr>
+        <tr>
+            <td class="text-right">时间</td>
+            <td>2010年05月31日16时10分</td>
+        </tr>
+        <tr>
+            <td class="text-right">地点</td>
+            <td>北京师范大学生命科学院</td>
+        </tr>
+    </table>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading text-center">
+        <a href="/dabian/dbh/5c48121858790fc819ad3a59780b08d9">大肠杆菌在缺氮环境下的实验进化</a>
+    </div>
+    <table class="table table-bordered">
+        <tr>
+            <td class="text-right" width="80px">答辩人</td>
+            <td>
+                <a href="/dabian/dbh?yxsm=023">生命科学学院</a>
+                &nbsp;
+                <a href="/dabian/dbh?mldm=07">生态学专业</a>
+                &nbsp;
+                倪川
+            </td>
+        </tr>
+        <tr>
+            <td class="text-right">导师</td>
+            <td>张大勇</td>
+        </tr>
+        <tr>
+            <td class="text-right">答辩主席</td>
+            <td>李凌浩，中国科学院植物研究所，研究员</td>
+        </tr>
+        <tr>
+            <td class="text-right">答辩委员</td>
+            <td>陶毅，中国科学院动物研究所，研究员<br/>牟溥，北京师范大学生命科学学院，教授<br/>娄安如，北京师范大学生命科学学院，教授<br/>张金屯，北京师范大学生命科学学院，教授</td>
+        </tr>
+        <tr>
+            <td class="text-right">时间</td>
+            <td>2011年06月02日09时00分</td>
+        </tr>
+        <tr>
+            <td class="text-right">地点</td>
+            <td>生命科学学院618</td>
+        </tr>
+    </table>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading text-center">
+        <a href="/dabian/dbh/b47a28a1785dae0b692300c4f2935dde">毛尖紫萼藓干旱胁迫特异表达基因的高通量筛选及GpDSR7功能验证</a>
+    </div>
+    <table class="table table-bordered">
+        <tr>
+            <td class="text-right" width="80px">答辩人</td>
+            <td>
+                <a href="/dabian/dbh?yxsm=023">生命科学学院</a>
+                &nbsp;
+                <a href="/dabian/dbh?mldm=07">发育生物学专业</a>
+                &nbsp;
+                李萌萌
+            </td>
+        </tr>
+        <tr>
+            <td class="text-right">导师</td>
+            <td>王英典</td>
+        </tr>
+        <tr>
+            <td class="text-right">答辩主席</td>
+            <td>李毅，北京大学（生命科学学院），教授</td>
+        </tr>
+        <tr>
+            <td class="text-right">答辩委员</td>
+            <td>何奕昆，首都师范大学（生命科学学院），教授<br/>任海云，北京师范大学（生命科学学院），教授<br/>韩生成，北京师范大学（生命科学学院），教授<br/>赵和平，北京师范大学（生命科学学院），教授</td>
+        </tr>
+        <tr>
+            <td class="text-right">时间</td>
+            <td>2012年05月20日16时46分</td>
+        </tr>
+        <tr>
+            <td class="text-right">地点</td>
+            <td>生地楼 116</td>
+        </tr>
+    </table>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading text-center">
+        <a href="/dabian/dbh/b7b90142a11cbb0864f16fef36f7750e">NOX2介导UVA诱导的肥大细  胞胞浆钙振荡及细胞胞吐</a>
+    </div>
+    <table class="table table-bordered">
+        <tr>
+            <td class="text-right" width="80px">答辩人</td>
+            <td>
+                <a href="/dabian/dbh?yxsm=023">生命科学学院</a>
+                &nbsp;
+                <a href="/dabian/dbh?mldm=07">细胞生物学专业</a>
+                &nbsp;
+                李志英
+            </td>
+        </tr>
+        <tr>
+            <td class="text-right">导师</td>
+            <td>崔宗杰</td>
+        </tr>
+        <tr>
+            <td class="text-right">答辩主席</td>
+            <td>沈恂，中国科学院生物物理研究所，正高级</td>
+        </tr>
+        <tr>
+            <td class="text-right">答辩委员</td>
+            <td>魏群，北京师范大学，正高级；<br/>姬广聚，中国科学院生物物理研究所，正高级；<br/>梁前进，北京师范大学，副高级（博导）；<br/>曾少举，北京师范大学，正高级；</td>
+        </tr>
+        <tr>
+            <td class="text-right">时间</td>
+            <td>2012年06月06日09时19分</td>
+        </tr>
+        <tr>
+            <td class="text-right">地点</td>
+            <td>生命科学学院</td>
+        </tr>
+    </table>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading text-center">
+        <a href="/dabian/dbh/930d3f006bbe1f4db3f913f3b6237a1a">几种癌症的生物信息学辅助的差异蛋白质组学研究</a>
+    </div>
+    <table class="table table-bordered">
+        <tr>
+            <td class="text-right" width="80px">答辩人</td>
+            <td>
+                <a href="/dabian/dbh?yxsm=023">生命科学学院</a>
+                &nbsp;
+                <a href="/dabian/dbh?mldm=07">细胞生物学专业</a>
+                &nbsp;
+                唐川宁
+            </td>
+        </tr>
+        <tr>
+            <td class="text-right">导师</td>
+            <td>何大澄</td>
+        </tr>
+        <tr>
+            <td class="text-right">答辩主席</td>
+            <td>郑德先，中国医学科学院基础医学研究所，教授</td>
+        </tr>
+        <tr>
+            <td class="text-right">答辩委员</td>
+            <td>纪建国，北京大学生命科学院，教授<br/>高友鹤，中国医学科学院基础医学研究所，教授<br/>林魁，北京师范大学生命科学学院，教授<br/>瞿永功，北京师范大学生命科学学院，教授</td>
+        </tr>
+        <tr>
+            <td class="text-right">时间</td>
+            <td>2012年12月11日12时54分</td>
+        </tr>
+        <tr>
+            <td class="text-right">地点</td>
+            <td>北京师范大学细胞所会议室</td>
+        </tr>
+    </table>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading text-center">
+        <a href="/dabian/dbh/ada3abb83acf8ba74ab8d2c61356bb19">内蒙古草原土壤细菌群落结构的研究</a>
+    </div>
+    <table class="table table-bordered">
+        <tr>
+            <td class="text-right" width="80px">答辩人</td>
+            <td>
+                <a href="/dabian/dbh?yxsm=023">生命科学学院</a>
+                &nbsp;
+                <a href="/dabian/dbh?mldm=07">生态学专业</a>
+                &nbsp;
+                徐冰
+            </td>
+        </tr>
+        <tr>
+            <td class="text-right">导师</td>
+            <td>张大勇</td>
+        </tr>
+        <tr>
+            <td class="text-right">答辩主席</td>
+            <td>陶毅，中国科学院动物研究所，正高级；</td>
+        </tr>
+        <tr>
+            <td class="text-right">答辩委员</td>
+            <td>康慕谊，北京师范大学资源学院，正高级；<br/>徐汝梅，北京师范大学生命科学学院，正高级；<br/>林魁，北京师范大学生命科学学院，正高级；<br/>娄安如，北京师范大学生命科学学院，正高级；</td>
+        </tr>
+        <tr>
+            <td class="text-right">时间</td>
+            <td>2013年05月28日09时51分</td>
+        </tr>
+        <tr>
+            <td class="text-right">地点</td>
+            <td>生命科学学院</td>
+        </tr>
+    </table>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading text-center">
+        <a href="/dabian/dbh/90461c787ed2da774f15dd72db00441d">传粉榕小蜂隐种及其与寄主榕树和寄生者沃尔巴克氏体的关系</a>
+    </div>
+    <table class="table table-bordered">
+        <tr>
+            <td class="text-right" width="80px">答辩人</td>
+            <td>
+                <a href="/dabian/dbh?yxsm=023">生命科学学院</a>
+                &nbsp;
+                <a href="/dabian/dbh?mldm=07">生态学专业</a>
+                &nbsp;
+                杨丽媛
+            </td>
+        </tr>
+        <tr>
+            <td class="text-right">导师</td>
+            <td>张大勇</td>
+        </tr>
+        <tr>
+            <td class="text-right">答辩主席</td>
+            <td>陶毅，中国科学院动物研究所，正高级；</td>
+        </tr>
+        <tr>
+            <td class="text-right">答辩委员</td>
+            <td>康慕谊，北京师范大学资源学院，正高级；<br/>徐汝梅，北京师范大学生命科学学院，正高级；<br/>林魁，北京师范大学生命科学学院，正高级；<br/>娄安如，北京师范大学生命科学学院，正高级；</td>
+        </tr>
+        <tr>
+            <td class="text-right">时间</td>
+            <td>2013年05月28日10时09分</td>
+        </tr>
+        <tr>
+            <td class="text-right">地点</td>
+            <td>生命科学学院</td>
+        </tr>
+    </table>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading text-center">
+        <a href="/dabian/dbh/5dc9e190b295e8e0080c7d11c6b55d93">抗卵巢癌融合蛋白6B11ScFv—mIL-12的构建、表达及功能研究</a>
+    </div>
+    <table class="table table-bordered">
+        <tr>
+            <td class="text-right" width="80px">答辩人</td>
+            <td>
+                <a href="/dabian/dbh?yxsm=023">生命科学学院</a>
+                &nbsp;
+                <a href="/dabian/dbh?mldm=07">细胞生物学专业</a>
+                &nbsp;
+                程洪艳
+            </td>
+        </tr>
+        <tr>
+            <td class="text-right">导师</td>
+            <td>桑建利</td>
+        </tr>
+        <tr>
+            <td class="text-right">答辩主席</td>
+            <td>邱晓彦，北京大学医学部基础医学院，教授</td>
+        </tr>
+        <tr>
+            <td class="text-right">答辩委员</td>
+            <td>钱家鸣，中国医院协和医院，教授<br/>陈应华，清华大学生命科学学院，教授<br/>苏辉胜，解放军307医院，教授<br/>安威，首都医科大学基础医学院，教授</td>
+        </tr>
+        <tr>
+            <td class="text-right">时间</td>
+            <td>2013年05月31日00时00分</td>
+        </tr>
+        <tr>
+            <td class="text-right">地点</td>
+            <td>北京师范大学</td>
+        </tr>
+    </table>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading text-center">
+        <a href="/dabian/dbh/9ecfd8f5f3b1fb25de3082860545d671">中国国际文化演出交流的模式与分析</a>
+    </div>
+    <table class="table table-bordered">
+        <tr>
+            <td class="text-right" width="80px">答辩人</td>
+            <td>
+                <a href="/dabian/dbh?yxsm=029">艺术与传媒学院</a>
+                &nbsp;
+                <a href="/dabian/dbh?mldm=13">戏剧与影视学专业</a>
+                &nbsp;
+                吴嘉童
+            </td>
+        </tr>
+        <tr>
+            <td class="text-right">导师</td>
+            <td>黄会林</td>
+        </tr>
+        <tr>
+            <td class="text-right">答辩主席</td>
+            <td>曾庆瑞，中国传媒大学，教授</td>
+        </tr>
+        <tr>
+            <td class="text-right">答辩委员</td>
+            <td>贾磊磊，中国艺术研究院，研究员<br/>王宜文，北京师范大学（艺术与传媒学院），教授<br/>史可扬，北京师范大学（艺术与传媒学院），教授<br/>张智华，北京师范大学（艺术与传媒学院），教授</td>
+        </tr>
+        <tr>
+            <td class="text-right">时间</td>
+            <td>2013年06月04日09时09分</td>
+        </tr>
+        <tr>
+            <td class="text-right">地点</td>
+            <td>北京师范大学艺术楼二楼会议室</td>
+        </tr>
+    </table>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading text-center">
+        <a href="/dabian/dbh/10d2e37c30f0e717bee3f4ce6083f48a">危险废物填埋场地下水污染风险及其分级方法研究</a>
+    </div>
+    <table class="table table-bordered">
+        <tr>
+            <td class="text-right" width="80px">答辩人</td>
+            <td>
+                <a href="/dabian/dbh?yxsm=022">环境学院</a>
+                &nbsp;
+                <a href="/dabian/dbh?mldm=08">环境科学专业</a>
+                &nbsp;
+                安达
+            </td>
+        </tr>
+        <tr>
+            <td class="text-right">导师</td>
+            <td>刘鸿亮</td>
+        </tr>
+        <tr>
+            <td class="text-right">答辩主席</td>
+            <td>陈鸿汉，中国地质大学（北京）（水资源与环境学院），教授</td>
+        </tr>
+        <tr>
+            <td class="text-right">答辩委员</td>
+            <td>范文宏，北京航空航天大学化学与环境学院，教授<br/>籍国东，北京大学环境科学与工程学院，教授<br/>裴元生，北京师范大学环境学院，教授<br/>夏星辉，北京师范大学环境学院，教授<br/>全向春，北京师范大学环境学院，教授<br/>郑少奎，北京师范大学环境学院，教授<br/></td>
+        </tr>
+        <tr>
+            <td class="text-right">时间</td>
+            <td>2013年12月19日13时05分</td>
+        </tr>
+        <tr>
+            <td class="text-right">地点</td>
+            <td>北京师范大学环境学院六楼会议室</td>
+        </tr>
+    </table>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading text-center">
+        <a href="/dabian/dbh/b75de266f878ae77d453cc20ac03667f">塔里木河生态输水与胡杨林生态恢复关系研究</a>
+    </div>
+    <table class="table table-bordered">
+        <tr>
+            <td class="text-right" width="80px">答辩人</td>
+            <td>
+                <a href="/dabian/dbh?yxsm=022">环境学院</a>
+                &nbsp;
+                <a href="/dabian/dbh?mldm=08">环境科学专业</a>
+                &nbsp;
+                邓晓雅
+            </td>
+        </tr>
+        <tr>
+            <td class="text-right">导师</td>
+            <td>杨志峰</td>
+        </tr>
+        <tr>
+            <td class="text-right">答辩主席</td>
+            <td>陈国谦， 北京大学， 教授</td>
+        </tr>
+        <tr>
+            <td class="text-right">答辩委员</td>
+            <td>江春波，清华大学，教授<br/>孙涛，北京师范大学，教授<br/>崔保山，北京师范大学，教授<br/>张妍，北京师范大学，教授<br/>蔡宴鹏，北京师范大学，副教授<br/></td>
+        </tr>
+        <tr>
+            <td class="text-right">时间</td>
+            <td>2013年12月20日15时27分</td>
+        </tr>
+        <tr>
+            <td class="text-right">地点</td>
+            <td>环境学院510</td>
+        </tr>
+    </table>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading text-center">
+        <a href="/dabian/dbh/ccb2b9580a836e31623c13c38f1c49fe">高氨高浓度有机废水微好氧处理与组合工艺研究</a>
+    </div>
+    <table class="table table-bordered">
+        <tr>
+            <td class="text-right" width="80px">答辩人</td>
+            <td>
+                <a href="/dabian/dbh?yxsm=022">环境学院</a>
+                &nbsp;
+                <a href="/dabian/dbh?mldm=08">环境工程专业</a>
+                &nbsp;
+                李慧君
+            </td>
+        </tr>
+        <tr>
+            <td class="text-right">导师</td>
+            <td>郑少奎</td>
+        </tr>
+        <tr>
+            <td class="text-right">答辩主席</td>
+            <td>弓爱君，北京科技大学，教授</td>
+        </tr>
+        <tr>
+            <td class="text-right">答辩委员</td>
+            <td>辛宝平，北京理工大学，教授<br/>裴元生，北京师范大学，教授<br/>全向春，北京师范大学，教授<br/>竺建荣，北京师范大学，教授<br/>陈家军，北京师范大学，教授</td>
+        </tr>
+        <tr>
+            <td class="text-right">时间</td>
+            <td>2014年03月27日09时00分</td>
+        </tr>
+        <tr>
+            <td class="text-right">地点</td>
+            <td>环境学院510会议室</td>
+        </tr>
+    </table>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading text-center">
+        <a href="/dabian/dbh/58b8d253095a44e31c7bb66fe8b3fe80">不同运行条件及群体感应系统对MBR膜污染的影响机理研究</a>
+    </div>
+    <table class="table table-bordered">
+        <tr>
+            <td class="text-right" width="80px">答辩人</td>
+            <td>
+                <a href="/dabian/dbh?yxsm=022">环境学院</a>
+                &nbsp;
+                <a href="/dabian/dbh?mldm=08">环境工程专业</a>
+                &nbsp;
+                王亚芹
+            </td>
+        </tr>
+        <tr>
+            <td class="text-right">导师</td>
+            <td>竺建荣</td>
+        </tr>
+        <tr>
+            <td class="text-right">答辩主席</td>
+            <td>黄霞，清华大学环境学院，教授</td>
+        </tr>
+        <tr>
+            <td class="text-right">答辩委员</td>
+            <td>周岳溪，中国环境科学研究院，研究员<br/>丁爱中，北京师范大学水科学研究院，教授<br/>裴元生，北京师范大学环境学院，教授<br/>全向春，北京师范大学环境学院，教授<br/></td>
+        </tr>
+        <tr>
+            <td class="text-right">时间</td>
+            <td>2014年04月10日09时30分</td>
+        </tr>
+        <tr>
+            <td class="text-right">地点</td>
+            <td>环境学院510会议室</td>
+        </tr>
+    </table>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading text-center">
+        <a href="/dabian/dbh/88a1ccc9016b500957de18e390e18b16">多电负性原子分子体系的溶剂化效应和簇-连续介质模型的理论研究</a>
+    </div>
+    <table class="table table-bordered">
+        <tr>
+            <td class="text-right" width="80px">答辩人</td>
+            <td>
+                <a href="/dabian/dbh?yxsm=019">化学学院</a>
+                &nbsp;
+                <a href="/dabian/dbh?mldm=07">物理化学专业</a>
+                &nbsp;
+                陈彦梅
+            </td>
+        </tr>
+        <tr>
+            <td class="text-right">导师</td>
+            <td>方德彩</td>
+        </tr>
+        <tr>
+            <td class="text-right">答辩主席</td>
+            <td>蒲敏，北京化工大学，教授</td>
+        </tr>
+        <tr>
+            <td class="text-right">答辩委员</td>
+            <td>张绍文，北京理工大学，教授<br/>陈光巨，北京师范大学，教授<br/>李   奇，北京师范大学，教授<br/>王   艳，北京师范大学，教授<br/></td>
+        </tr>
+        <tr>
+            <td class="text-right">时间</td>
+            <td>2014年04月19日10时00分</td>
+        </tr>
+        <tr>
+            <td class="text-right">地点</td>
+            <td>化学楼715</td>
+        </tr>
+    </table>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading text-center">
+        <a href="/dabian/dbh/b91c885d0954d8705b7c797244416879">新型手性有机铝、有机锌和氮杂卡宾IVB族金属有机化合物的合成、结构及其在外消旋丙交酯聚合反应中的应用研究</a>
+    </div>
+    <table class="table table-bordered">
+        <tr>
+            <td class="text-right" width="80px">答辩人</td>
+            <td>
+                <a href="/dabian/dbh?yxsm=019">化学学院</a>
+                &nbsp;
+                <a href="/dabian/dbh?mldm=07">有机化学专业</a>
+                &nbsp;
+                赵宁
+            </td>
+        </tr>
+        <tr>
+            <td class="text-right">导师</td>
+            <td>自国甫</td>
+        </tr>
+        <tr>
+            <td class="text-right">答辩主席</td>
+            <td>刘正平，北京师范大学，教授</td>
+        </tr>
+        <tr>
+            <td class="text-right">答辩委员</td>
+            <td>赵榆霞，中国科学院理化技术研究所，研究员<br/>张文雄，北京大学化学学院，副教授<br/>侯国华，北京师范大学化学学院，副教授<br/>董永强，北京师范大学化学学院，副教授</td>
+        </tr>
+        <tr>
+            <td class="text-right">时间</td>
+            <td>2014年04月21日10时00分</td>
+        </tr>
+        <tr>
+            <td class="text-right">地点</td>
+            <td>化学楼314会议室</td>
+        </tr>
+    </table>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading text-center">
+        <a href="/dabian/dbh/3f8e796546eae323963aa14aba93347f">中国中学英语教师评价素养研究</a>
+    </div>
+    <table class="table table-bordered">
+        <tr>
+            <td class="text-right" width="80px">答辩人</td>
+            <td>
+                <a href="/dabian/dbh?yxsm=011">外国语言文学学院</a>
+                &nbsp;
+                <a href="/dabian/dbh?mldm=05">英语语言文学专业</a>
+                &nbsp;
+                林敦来
+            </td>
+        </tr>
+        <tr>
+            <td class="text-right">导师</td>
+            <td>武尊民</td>
+        </tr>
+        <tr>
+            <td class="text-right">答辩主席</td>
+            <td>韩宝成，北京外国语大学，教授</td>
+        </tr>
+        <tr>
+            <td class="text-right">答辩委员</td>
+            <td>张文霞，清华大学，教授<br/>王文静，北京师范大学，教授<br/>程晓堂，北京师范大学，教授<br/>罗少茜，北京师范大学，教授</td>
+        </tr>
+        <tr>
+            <td class="text-right">时间</td>
+            <td>2014年04月28日10时30分</td>
+        </tr>
+        <tr>
+            <td class="text-right">地点</td>
+            <td>后主楼1020</td>
+        </tr>
+    </table>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading text-center">
+        <a href="/dabian/dbh/18aa425a481d29a0aebf4a00a4f49a2a">中国外语学习者外语学能测量工具的研制</a>
+    </div>
+    <table class="table table-bordered">
+        <tr>
+            <td class="text-right" width="80px">答辩人</td>
+            <td>
+                <a href="/dabian/dbh?yxsm=011">外国语言文学学院</a>
+                &nbsp;
+                <a href="/dabian/dbh?mldm=05">英语语言文学专业</a>
+                &nbsp;
+                李兰荣
+            </td>
+        </tr>
+        <tr>
+            <td class="text-right">导师</td>
+            <td>罗少茜</td>
+        </tr>
+        <tr>
+            <td class="text-right">答辩主席</td>
+            <td>韩宝成，北京外国语大学，教授</td>
+        </tr>
+        <tr>
+            <td class="text-right">答辩委员</td>
+            <td>张文霞，清华大学，教授<br/>王文静，北京师范大学，教授<br/>程晓堂，北京师范大学，教授<br/>武尊民，北京师范大学，教授</td>
+        </tr>
+        <tr>
+            <td class="text-right">时间</td>
+            <td>2014年04月28日10时30分</td>
+        </tr>
+        <tr>
+            <td class="text-right">地点</td>
+            <td>后主楼1020</td>
+        </tr>
+    </table>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading text-center">
+        <a href="/dabian/dbh/8502b1ae09737e0e061e90e705ffc7d0">用于高分辨率成像的新型正性光致抗蚀剂材料</a>
+    </div>
+    <table class="table table-bordered">
+        <tr>
+            <td class="text-right" width="80px">答辩人</td>
+            <td>
+                <a href="/dabian/dbh?yxsm=019">化学学院</a>
+                &nbsp;
+                <a href="/dabian/dbh?mldm=07">高分子化学与物理专业</a>
+                &nbsp;
+                刘娟
+            </td>
+        </tr>
+        <tr>
+            <td class="text-right">导师</td>
+            <td>王力元</td>
+        </tr>
+        <tr>
+            <td class="text-right">答辩主席</td>
+            <td>杨国强，中国科学院化学研究所，研究员</td>
+        </tr>
+        <tr>
+            <td class="text-right">答辩委员</td>
+            <td>聂俊，北京化工大学，教授<br/>汪辉亮，北京师范大学，教授<br/>刘正平，北京师范大学，教授<br/>方德彩，北京师范大学，教授</td>
+        </tr>
+        <tr>
+            <td class="text-right">时间</td>
+            <td>2014年04月29日14时02分</td>
+        </tr>
+        <tr>
+            <td class="text-right">地点</td>
+            <td>化学楼314</td>
+        </tr>
+    </table>
+</div>            </div>
+            <div class="text-center catpager">
+                <ul class="pagination">
+                    <li class="previous">
+                        <a href="/dabian/dbh?ps=20&amp;pi=0" class="glyphicon glyphicon-arrow-left"></a>
+                    </li>
+                        <li class="active"><a href="/dabian/dbh?ps=20&amp;pi=1">01</a></li>
+                        <li class=""><a href="/dabian/dbh?ps=20&amp;pi=2">02</a></li>
+                        <li class=""><a href="/dabian/dbh?ps=20&amp;pi=3">03</a></li>
+                        <li class=""><a href="/dabian/dbh?ps=20&amp;pi=4">04</a></li>
+                        <li class=""><a href="/dabian/dbh?ps=20&amp;pi=5">05</a></li>
+                        <li class=""><a href="/dabian/dbh?ps=20&amp;pi=6">06</a></li>
+                        <li class=""><a href="/dabian/dbh?ps=20&amp;pi=7">07</a></li>
+                        <li class=""><a href="/dabian/dbh?ps=20&amp;pi=8">08</a></li>
+                        <li class=""><a href="/dabian/dbh?ps=20&amp;pi=9">09</a></li>
+                        <li class=""><a href="/dabian/dbh?ps=20&amp;pi=10">10</a></li>
+                        <li class=""><a href="/dabian/dbh?ps=20&amp;pi=11">11</a></li>
+                    <li class="next">
+                        <a href="/dabian/dbh?ps=20&amp;pi=2" class="glyphicon glyphicon-arrow-right"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            
+<div class="sidecontent">
+    <div class="panel panel-primary">
+        <div class="panel-heading">日期预告</div>
+        <div class="Calendar">
+            <div id="idCalendarPre"><a><<</a></div>
+            <div id="idCalendarNext"><a>>></a></div>
+            <span id="idCalendarYear">2008</span>年 <span id="idCalendarMonth">8</span>月
+            <table cellspacing="0">
+                <thead>
+                    <tr>
+                        <td>日</td>
+                        <td>一</td>
+                        <td>二</td>
+                        <td>三</td>
+                        <td>四</td>
+                        <td>五</td>
+                        <td>六</td>
+                    </tr>
+                </thead>
+                <tbody id="idCalendar"></tbody>
+            </table>
+            <script language="JavaScript">
+                $(function () {
+                    var cale = new Calendar("idCalendar", {
+                        onSelectDay: function (o) { o.className = "onSelect"; },
+                        onToday: function (o) { o.className = "onToday"; },
+                        onFinish: function () {
+                            _cld("idCalendarYear").innerHTML = this.Year; _cld("idCalendarMonth").innerHTML = this.Month;
+                            var y = this.Year; var m = String(this.Month).padLeft(2, '0'); var flag; var cal = this;
+                            $.ajax({
+                                async: false, url: "/dabian/dbht", data: { year: y, month: m }, type: "post",
+                                success: function (text) {
+                                    var flag = text; for (var i = 0, len = flag.length; i < len; i++) {
+                                        cal.Days[flag[i]].innerHTML = "<a href='dbh?rq=" + "{0}-{1}-{2}".format(y, m, String(flag[i]).padLeft(2, '0')) + "'>" + flag[i] + "</a>";
+                                    }
+                                },
+                                error: function (jqXHR, textStatus, errorThrown) { alert(jqXHR.responseText); }
+                            });
+                        }
+                    });
+                    _cld("idCalendarPre").onclick = function () { cale.PreMonth(); }
+                    _cld("idCalendarNext").onclick = function () { cale.NextMonth(); }
+                });
+            </script>
+        </div>
+
+        <div class="panel-heading">学院预告</div>
+        <div class="list-group">
+                <a class="list-group-item" href="/dabian/dbh?yxsm=022&amp;wl=1"><span class="badge">2</span>环境学院</a>
+        </div>
+        <div class="panel-heading">门类预告</div>
+        <div class="list-group">
+                <a class="list-group-item" href="/dabian/dbh?mldm=08&amp;wl=1"><span class="badge">2</span>工学 </a>
+        </div>
+
+        <div class="panel-heading">学院历史</div>
+        <div class="list-group">
+                <a class="list-group-item" href="/dabian/dbh?yxsm=001&amp;wl=0"><span class="badge">96</span>哲学与社会学学院</a>
+                <a class="list-group-item" href="/dabian/dbh?yxsm=002&amp;wl=0"><span class="badge">64</span>经济与工商管理学院</a>
+                <a class="list-group-item" href="/dabian/dbh?yxsm=003&amp;wl=0"><span class="badge">56</span>马克思主义学院</a>
+                <a class="list-group-item" href="/dabian/dbh?yxsm=004&amp;wl=0"><span class="badge">290</span>教育学部</a>
+                <a class="list-group-item" href="/dabian/dbh?yxsm=005&amp;wl=0"><span class="badge">50</span>法学院</a>
+                <a class="list-group-item" href="/dabian/dbh?yxsm=006&amp;wl=0"><span class="badge">68</span>政府管理学院</a>
+                <a class="list-group-item" href="/dabian/dbh?yxsm=007&amp;wl=0"><span class="badge">83</span>心理学院</a>
+                <a class="list-group-item" href="/dabian/dbh?yxsm=008&amp;wl=0"><span class="badge">93</span>脑与认知科学研究院</a>
+                <a class="list-group-item" href="/dabian/dbh?yxsm=009&amp;wl=0"><span class="badge">17</span>体育与运动学院</a>
+                <a class="list-group-item" href="/dabian/dbh?yxsm=010&amp;wl=0"><span class="badge">215</span>文学院</a>
+                <a class="list-group-item" href="/dabian/dbh?yxsm=011&amp;wl=0"><span class="badge">54</span>外国语言文学学院</a>
+                <a class="list-group-item" href="/dabian/dbh?yxsm=012&amp;wl=0"><span class="badge">96</span>历史学院</a>
+                <a class="list-group-item" href="/dabian/dbh?yxsm=013&amp;wl=0"><span class="badge">12</span>古籍与传统文化研究院</a>
+                <a class="list-group-item" href="/dabian/dbh?yxsm=014&amp;wl=0"><span class="badge">23</span>经济与资源管理研究院</a>
+                <a class="list-group-item" href="/dabian/dbh?yxsm=015&amp;wl=0"><span class="badge">101</span>数学科学学院</a>
+                <a class="list-group-item" href="/dabian/dbh?yxsm=016&amp;wl=0"><span class="badge">108</span>物理学系</a>
+                <a class="list-group-item" href="/dabian/dbh?yxsm=017&amp;wl=0"><span class="badge">42</span>核科学与技术学院</a>
+                <a class="list-group-item" href="/dabian/dbh?yxsm=018&amp;wl=0"><span class="badge">27</span>信息科学与技术学院</a>
+                <a class="list-group-item" href="/dabian/dbh?yxsm=019&amp;wl=0"><span class="badge">140</span>化学学院</a>
+                <a class="list-group-item" href="/dabian/dbh?yxsm=020&amp;wl=0"><span class="badge">22</span>天文系</a>
+                <a class="list-group-item" href="/dabian/dbh?yxsm=022&amp;wl=0"><span class="badge">145</span>环境学院</a>
+                <a class="list-group-item" href="/dabian/dbh?yxsm=023&amp;wl=0"><span class="badge">184</span>生命科学学院</a>
+                <a class="list-group-item" href="/dabian/dbh?yxsm=025&amp;wl=0"><span class="badge">39</span>社会发展与公共政策学院</a>
+                <a class="list-group-item" href="/dabian/dbh?yxsm=026&amp;wl=0"><span class="badge">19</span>系统科学学院</a>
+                <a class="list-group-item" href="/dabian/dbh?yxsm=027&amp;wl=0"><span class="badge">36</span>全球变化与地球系统科学研究院</a>
+                <a class="list-group-item" href="/dabian/dbh?yxsm=029&amp;wl=0"><span class="badge">62</span>艺术与传媒学院</a>
+                <a class="list-group-item" href="/dabian/dbh?yxsm=030&amp;wl=0"><span class="badge">59</span>水科学研究院</a>
+                <a class="list-group-item" href="/dabian/dbh?yxsm=031&amp;wl=0"><span class="badge">66</span>刑事法律科学研究院</a>
+                <a class="list-group-item" href="/dabian/dbh?yxsm=032&amp;wl=0"><span class="badge">42</span>汉语文化学院</a>
+                <a class="list-group-item" href="/dabian/dbh?yxsm=034&amp;wl=0"><span class="badge">8</span>国民核算研究院</a>
+        </div>
+        <div class="panel-heading">门类历史</div>
+        <div class="list-group">
+                <a class="list-group-item" href="/dabian/dbh?mldm=01&amp;wl=0"><span class="badge">81</span>哲学 </a>
+                <a class="list-group-item" href="/dabian/dbh?mldm=02&amp;wl=0"><span class="badge">96</span>经济学 </a>
+                <a class="list-group-item" href="/dabian/dbh?mldm=03&amp;wl=0"><span class="badge">198</span>法学 </a>
+                <a class="list-group-item" href="/dabian/dbh?mldm=04&amp;wl=0"><span class="badge">481</span>教育学 </a>
+                <a class="list-group-item" href="/dabian/dbh?mldm=05&amp;wl=0"><span class="badge">293</span>文学 </a>
+                <a class="list-group-item" href="/dabian/dbh?mldm=06&amp;wl=0"><span class="badge">99</span>历史学 </a>
+                <a class="list-group-item" href="/dabian/dbh?mldm=07&amp;wl=0"><span class="badge">633</span>理学 </a>
+                <a class="list-group-item" href="/dabian/dbh?mldm=08&amp;wl=0"><span class="badge">207</span>工学 </a>
+                <a class="list-group-item" href="/dabian/dbh?mldm=12&amp;wl=0"><span class="badge">167</span>管理学 </a>
+                <a class="list-group-item" href="/dabian/dbh?mldm=13&amp;wl=0"><span class="badge">62</span>艺术学 </a>
+        </div>
+
+        <div class="panel-heading">日期历史</div>
+        <div class="list-group">
+                <a class="list-group-item" href="/dabian/dbh?rq=2018-03-27">
+                    <span class="badge">1</span>2018-03-27
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2017-12-21">
+                    <span class="badge">1</span>2017-12-21
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2017-12-20">
+                    <span class="badge">4</span>2017-12-20
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2017-12-19">
+                    <span class="badge">5</span>2017-12-19
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2017-12-18">
+                    <span class="badge">8</span>2017-12-18
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2017-12-17">
+                    <span class="badge">4</span>2017-12-17
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2017-12-16">
+                    <span class="badge">10</span>2017-12-16
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2017-12-15">
+                    <span class="badge">4</span>2017-12-15
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2017-12-14">
+                    <span class="badge">15</span>2017-12-14
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2017-12-13">
+                    <span class="badge">6</span>2017-12-13
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2017-12-12">
+                    <span class="badge">6</span>2017-12-12
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2017-12-11">
+                    <span class="badge">8</span>2017-12-11
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2017-12-10">
+                    <span class="badge">2</span>2017-12-10
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2017-12-09">
+                    <span class="badge">4</span>2017-12-09
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2017-12-08">
+                    <span class="badge">3</span>2017-12-08
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2017-12-07">
+                    <span class="badge">2</span>2017-12-07
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2017-12-06">
+                    <span class="badge">2</span>2017-12-06
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2017-12-05">
+                    <span class="badge">2</span>2017-12-05
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2017-12-03">
+                    <span class="badge">4</span>2017-12-03
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2017-12-02">
+                    <span class="badge">2</span>2017-12-02
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2017-12-01">
+                    <span class="badge">2</span>2017-12-01
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2017-11-29">
+                    <span class="badge">3</span>2017-11-29
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2017-11-28">
+                    <span class="badge">1</span>2017-11-28
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2017-10-16">
+                    <span class="badge">1</span>2017-10-16
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2017-07-17">
+                    <span class="badge">1</span>2017-07-17
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2017-07-03">
+                    <span class="badge">1</span>2017-07-03
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2017-06-27">
+                    <span class="badge">2</span>2017-06-27
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2017-06-21">
+                    <span class="badge">1</span>2017-06-21
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2017-06-16">
+                    <span class="badge">1</span>2017-06-16
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2017-06-12">
+                    <span class="badge">1</span>2017-06-12
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2017-06-11">
+                    <span class="badge">1</span>2017-06-11
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2017-06-06">
+                    <span class="badge">2</span>2017-06-06
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2017-06-04">
+                    <span class="badge">9</span>2017-06-04
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2017-06-03">
+                    <span class="badge">19</span>2017-06-03
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2017-06-02">
+                    <span class="badge">24</span>2017-06-02
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2017-06-01">
+                    <span class="badge">35</span>2017-06-01
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2017-05-31">
+                    <span class="badge">54</span>2017-05-31
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2017-05-30">
+                    <span class="badge">8</span>2017-05-30
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2017-05-29">
+                    <span class="badge">7</span>2017-05-29
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2017-05-28">
+                    <span class="badge">3</span>2017-05-28
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2017-05-27">
+                    <span class="badge">39</span>2017-05-27
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2017-05-26">
+                    <span class="badge">37</span>2017-05-26
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2017-05-25">
+                    <span class="badge">28</span>2017-05-25
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2017-05-24">
+                    <span class="badge">35</span>2017-05-24
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2017-05-23">
+                    <span class="badge">16</span>2017-05-23
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2017-05-22">
+                    <span class="badge">30</span>2017-05-22
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2017-05-21">
+                    <span class="badge">14</span>2017-05-21
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2017-05-20">
+                    <span class="badge">29</span>2017-05-20
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2017-05-19">
+                    <span class="badge">21</span>2017-05-19
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2017-05-18">
+                    <span class="badge">9</span>2017-05-18
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2017-05-17">
+                    <span class="badge">14</span>2017-05-17
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2017-05-16">
+                    <span class="badge">8</span>2017-05-16
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2017-05-15">
+                    <span class="badge">5</span>2017-05-15
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2017-05-14">
+                    <span class="badge">7</span>2017-05-14
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2017-05-13">
+                    <span class="badge">3</span>2017-05-13
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2017-05-12">
+                    <span class="badge">3</span>2017-05-12
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2017-05-10">
+                    <span class="badge">5</span>2017-05-10
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2017-05-09">
+                    <span class="badge">1</span>2017-05-09
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2017-05-05">
+                    <span class="badge">1</span>2017-05-05
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2017-05-03">
+                    <span class="badge">1</span>2017-05-03
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2017-04-08">
+                    <span class="badge">1</span>2017-04-08
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2017-01-12">
+                    <span class="badge">2</span>2017-01-12
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2016-12-30">
+                    <span class="badge">1</span>2016-12-30
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2016-12-25">
+                    <span class="badge">1</span>2016-12-25
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2016-12-22">
+                    <span class="badge">2</span>2016-12-22
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2016-12-20">
+                    <span class="badge">6</span>2016-12-20
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2016-12-19">
+                    <span class="badge">10</span>2016-12-19
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2016-12-18">
+                    <span class="badge">11</span>2016-12-18
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2016-12-17">
+                    <span class="badge">11</span>2016-12-17
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2016-12-16">
+                    <span class="badge">13</span>2016-12-16
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2016-12-15">
+                    <span class="badge">6</span>2016-12-15
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2016-12-14">
+                    <span class="badge">7</span>2016-12-14
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2016-12-13">
+                    <span class="badge">6</span>2016-12-13
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2016-12-12">
+                    <span class="badge">1</span>2016-12-12
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2016-12-11">
+                    <span class="badge">4</span>2016-12-11
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2016-12-10">
+                    <span class="badge">2</span>2016-12-10
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2016-12-09">
+                    <span class="badge">5</span>2016-12-09
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2016-12-08">
+                    <span class="badge">4</span>2016-12-08
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2016-12-07">
+                    <span class="badge">5</span>2016-12-07
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2016-12-06">
+                    <span class="badge">4</span>2016-12-06
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2016-12-05">
+                    <span class="badge">1</span>2016-12-05
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2016-12-04">
+                    <span class="badge">2</span>2016-12-04
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2016-10-20">
+                    <span class="badge">1</span>2016-10-20
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2016-06-23">
+                    <span class="badge">1</span>2016-06-23
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2016-06-22">
+                    <span class="badge">1</span>2016-06-22
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2016-06-05">
+                    <span class="badge">2</span>2016-06-05
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2016-06-04">
+                    <span class="badge">2</span>2016-06-04
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2016-06-03">
+                    <span class="badge">11</span>2016-06-03
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2016-06-02">
+                    <span class="badge">28</span>2016-06-02
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2016-06-01">
+                    <span class="badge">25</span>2016-06-01
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2016-05-31">
+                    <span class="badge">17</span>2016-05-31
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2016-05-30">
+                    <span class="badge">28</span>2016-05-30
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2016-05-29">
+                    <span class="badge">28</span>2016-05-29
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2016-05-28">
+                    <span class="badge">29</span>2016-05-28
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2016-05-27">
+                    <span class="badge">46</span>2016-05-27
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2016-05-26">
+                    <span class="badge">18</span>2016-05-26
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2016-05-25">
+                    <span class="badge">50</span>2016-05-25
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2016-05-24">
+                    <span class="badge">16</span>2016-05-24
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2016-05-23">
+                    <span class="badge">26</span>2016-05-23
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2016-05-22">
+                    <span class="badge">12</span>2016-05-22
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2016-05-21">
+                    <span class="badge">14</span>2016-05-21
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2016-05-20">
+                    <span class="badge">18</span>2016-05-20
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2016-05-19">
+                    <span class="badge">11</span>2016-05-19
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2016-05-18">
+                    <span class="badge">10</span>2016-05-18
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2016-05-17">
+                    <span class="badge">16</span>2016-05-17
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2016-05-16">
+                    <span class="badge">4</span>2016-05-16
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2016-05-15">
+                    <span class="badge">15</span>2016-05-15
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2016-05-14">
+                    <span class="badge">12</span>2016-05-14
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2016-05-13">
+                    <span class="badge">6</span>2016-05-13
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2016-05-12">
+                    <span class="badge">3</span>2016-05-12
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2016-05-11">
+                    <span class="badge">7</span>2016-05-11
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2016-05-10">
+                    <span class="badge">6</span>2016-05-10
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2016-05-09">
+                    <span class="badge">1</span>2016-05-09
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2016-05-08">
+                    <span class="badge">5</span>2016-05-08
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2016-05-06">
+                    <span class="badge">1</span>2016-05-06
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2016-04-27">
+                    <span class="badge">2</span>2016-04-27
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2016-04-20">
+                    <span class="badge">1</span>2016-04-20
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2016-01-14">
+                    <span class="badge">1</span>2016-01-14
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2016-01-11">
+                    <span class="badge">1</span>2016-01-11
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2015-12-22">
+                    <span class="badge">1</span>2015-12-22
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2015-12-21">
+                    <span class="badge">1</span>2015-12-21
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2015-12-20">
+                    <span class="badge">1</span>2015-12-20
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2015-12-19">
+                    <span class="badge">3</span>2015-12-19
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2015-12-18">
+                    <span class="badge">3</span>2015-12-18
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2015-12-17">
+                    <span class="badge">6</span>2015-12-17
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2015-12-16">
+                    <span class="badge">7</span>2015-12-16
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2015-12-15">
+                    <span class="badge">7</span>2015-12-15
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2015-12-14">
+                    <span class="badge">9</span>2015-12-14
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2015-12-13">
+                    <span class="badge">6</span>2015-12-13
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2015-12-12">
+                    <span class="badge">6</span>2015-12-12
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2015-12-11">
+                    <span class="badge">2</span>2015-12-11
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2015-12-10">
+                    <span class="badge">1</span>2015-12-10
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2015-12-09">
+                    <span class="badge">6</span>2015-12-09
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2015-12-08">
+                    <span class="badge">1</span>2015-12-08
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2015-12-06">
+                    <span class="badge">2</span>2015-12-06
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2015-12-04">
+                    <span class="badge">2</span>2015-12-04
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2015-12-03">
+                    <span class="badge">1</span>2015-12-03
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2015-12-02">
+                    <span class="badge">2</span>2015-12-02
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2015-12-01">
+                    <span class="badge">1</span>2015-12-01
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2015-11-26">
+                    <span class="badge">2</span>2015-11-26
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2015-11-25">
+                    <span class="badge">1</span>2015-11-25
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2015-11-24">
+                    <span class="badge">1</span>2015-11-24
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2015-11-20">
+                    <span class="badge">2</span>2015-11-20
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2015-11-16">
+                    <span class="badge">1</span>2015-11-16
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2015-10-22">
+                    <span class="badge">1</span>2015-10-22
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2015-09-15">
+                    <span class="badge">1</span>2015-09-15
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2015-09-07">
+                    <span class="badge">1</span>2015-09-07
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2015-08-04">
+                    <span class="badge">1</span>2015-08-04
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2015-06-26">
+                    <span class="badge">1</span>2015-06-26
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2015-06-17">
+                    <span class="badge">1</span>2015-06-17
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2015-06-07">
+                    <span class="badge">1</span>2015-06-07
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2015-06-06">
+                    <span class="badge">1</span>2015-06-06
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2015-06-05">
+                    <span class="badge">10</span>2015-06-05
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2015-06-04">
+                    <span class="badge">15</span>2015-06-04
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2015-06-03">
+                    <span class="badge">35</span>2015-06-03
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2015-06-02">
+                    <span class="badge">35</span>2015-06-02
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2015-06-01">
+                    <span class="badge">53</span>2015-06-01
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2015-05-31">
+                    <span class="badge">39</span>2015-05-31
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2015-05-30">
+                    <span class="badge">39</span>2015-05-30
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2015-05-29">
+                    <span class="badge">32</span>2015-05-29
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2015-05-28">
+                    <span class="badge">44</span>2015-05-28
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2015-05-27">
+                    <span class="badge">36</span>2015-05-27
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2015-05-26">
+                    <span class="badge">28</span>2015-05-26
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2015-05-25">
+                    <span class="badge">31</span>2015-05-25
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2015-05-24">
+                    <span class="badge">21</span>2015-05-24
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2015-05-23">
+                    <span class="badge">10</span>2015-05-23
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2015-05-22">
+                    <span class="badge">14</span>2015-05-22
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2015-05-21">
+                    <span class="badge">13</span>2015-05-21
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2015-05-20">
+                    <span class="badge">13</span>2015-05-20
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2015-05-18">
+                    <span class="badge">7</span>2015-05-18
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2015-05-17">
+                    <span class="badge">3</span>2015-05-17
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2015-05-16">
+                    <span class="badge">6</span>2015-05-16
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2015-05-15">
+                    <span class="badge">2</span>2015-05-15
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2015-05-14">
+                    <span class="badge">1</span>2015-05-14
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2015-05-13">
+                    <span class="badge">1</span>2015-05-13
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2015-05-11">
+                    <span class="badge">1</span>2015-05-11
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2015-05-10">
+                    <span class="badge">1</span>2015-05-10
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2015-05-06">
+                    <span class="badge">1</span>2015-05-06
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2015-05-01">
+                    <span class="badge">1</span>2015-05-01
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2015-04-10">
+                    <span class="badge">1</span>2015-04-10
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2015-03-20">
+                    <span class="badge">1</span>2015-03-20
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2015-01-18">
+                    <span class="badge">1</span>2015-01-18
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2015-01-01">
+                    <span class="badge">2</span>2015-01-01
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-12-30">
+                    <span class="badge">2</span>2014-12-30
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-12-25">
+                    <span class="badge">1</span>2014-12-25
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-12-24">
+                    <span class="badge">3</span>2014-12-24
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-12-23">
+                    <span class="badge">1</span>2014-12-23
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-12-22">
+                    <span class="badge">3</span>2014-12-22
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-12-21">
+                    <span class="badge">3</span>2014-12-21
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-12-20">
+                    <span class="badge">2</span>2014-12-20
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-12-19">
+                    <span class="badge">12</span>2014-12-19
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-12-18">
+                    <span class="badge">11</span>2014-12-18
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-12-17">
+                    <span class="badge">5</span>2014-12-17
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-12-16">
+                    <span class="badge">8</span>2014-12-16
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-12-15">
+                    <span class="badge">4</span>2014-12-15
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-12-14">
+                    <span class="badge">4</span>2014-12-14
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-12-13">
+                    <span class="badge">1</span>2014-12-13
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-12-12">
+                    <span class="badge">9</span>2014-12-12
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-12-11">
+                    <span class="badge">2</span>2014-12-11
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-12-10">
+                    <span class="badge">1</span>2014-12-10
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-12-09">
+                    <span class="badge">5</span>2014-12-09
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-12-06">
+                    <span class="badge">1</span>2014-12-06
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-12-05">
+                    <span class="badge">1</span>2014-12-05
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-12-02">
+                    <span class="badge">1</span>2014-12-02
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-11-29">
+                    <span class="badge">1</span>2014-11-29
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-09-23">
+                    <span class="badge">1</span>2014-09-23
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-09-02">
+                    <span class="badge">2</span>2014-09-02
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-07-13">
+                    <span class="badge">1</span>2014-07-13
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-06-19">
+                    <span class="badge">1</span>2014-06-19
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-06-08">
+                    <span class="badge">1</span>2014-06-08
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-06-07">
+                    <span class="badge">1</span>2014-06-07
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-06-06">
+                    <span class="badge">1</span>2014-06-06
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-06-04">
+                    <span class="badge">20</span>2014-06-04
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-06-03">
+                    <span class="badge">26</span>2014-06-03
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-06-02">
+                    <span class="badge">6</span>2014-06-02
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-06-01">
+                    <span class="badge">10</span>2014-06-01
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-05-31">
+                    <span class="badge">49</span>2014-05-31
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-05-30">
+                    <span class="badge">40</span>2014-05-30
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-05-29">
+                    <span class="badge">22</span>2014-05-29
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-05-28">
+                    <span class="badge">49</span>2014-05-28
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-05-27">
+                    <span class="badge">40</span>2014-05-27
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-05-26">
+                    <span class="badge">24</span>2014-05-26
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-05-25">
+                    <span class="badge">14</span>2014-05-25
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-05-24">
+                    <span class="badge">29</span>2014-05-24
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-05-23">
+                    <span class="badge">25</span>2014-05-23
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-05-22">
+                    <span class="badge">9</span>2014-05-22
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-05-21">
+                    <span class="badge">13</span>2014-05-21
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-05-20">
+                    <span class="badge">20</span>2014-05-20
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-05-19">
+                    <span class="badge">12</span>2014-05-19
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-05-18">
+                    <span class="badge">10</span>2014-05-18
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-05-17">
+                    <span class="badge">6</span>2014-05-17
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-05-16">
+                    <span class="badge">6</span>2014-05-16
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-05-15">
+                    <span class="badge">7</span>2014-05-15
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-05-14">
+                    <span class="badge">4</span>2014-05-14
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-05-13">
+                    <span class="badge">7</span>2014-05-13
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-05-12">
+                    <span class="badge">3</span>2014-05-12
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-05-11">
+                    <span class="badge">3</span>2014-05-11
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-05-10">
+                    <span class="badge">4</span>2014-05-10
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-05-09">
+                    <span class="badge">9</span>2014-05-09
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-05-08">
+                    <span class="badge">2</span>2014-05-08
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-05-07">
+                    <span class="badge">3</span>2014-05-07
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-05-02">
+                    <span class="badge">3</span>2014-05-02
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-04-29">
+                    <span class="badge">1</span>2014-04-29
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-04-28">
+                    <span class="badge">2</span>2014-04-28
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-04-21">
+                    <span class="badge">1</span>2014-04-21
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-04-19">
+                    <span class="badge">1</span>2014-04-19
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-04-10">
+                    <span class="badge">1</span>2014-04-10
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2014-03-27">
+                    <span class="badge">1</span>2014-03-27
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2013-12-20">
+                    <span class="badge">1</span>2013-12-20
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2013-12-19">
+                    <span class="badge">1</span>2013-12-19
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2013-06-04">
+                    <span class="badge">1</span>2013-06-04
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2013-05-31">
+                    <span class="badge">1</span>2013-05-31
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2013-05-28">
+                    <span class="badge">2</span>2013-05-28
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2012-12-11">
+                    <span class="badge">1</span>2012-12-11
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2012-06-06">
+                    <span class="badge">1</span>2012-06-06
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2012-05-20">
+                    <span class="badge">1</span>2012-05-20
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2011-06-02">
+                    <span class="badge">1</span>2011-06-02
+                </a>
+                <a class="list-group-item" href="/dabian/dbh?rq=2010-05-31">
+                    <span class="badge">1</span>2010-05-31
+                </a>
+        </div>
+    </div>
+</div>
+        </div>
+    </div>
+</div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="text-center">
+                <br />
+                Copyright &copy; 2009-2018 <a href="http://graduate.bnu.edu.cn/">北京师范大学研究生院</a><br />地址：北京市新街口外大街19号，100875
+                <br />
+                <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://"); document.write(unescape("%3Cspan id='cnzz_stat_icon_5843925'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s5.cnzz.com/stat.php%3Fid%3D5843925%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+                <br />
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

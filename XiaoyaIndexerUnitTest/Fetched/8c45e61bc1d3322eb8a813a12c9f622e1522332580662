@@ -1,0 +1,772 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0022)http://jwc.bnu.edu.cn/ -->
+<HTML><HEAD>
+<META http-equiv=Content-Type content="text/html; charset=utf-8">
+<TITLE>北京师范大学教务处</TITLE>
+<script src="/cms/web/writeLog.jsp?channelID=479"></script>
+<LINK href="css/index.css" type=text/css rel=stylesheet>
+<SCRIPT language=JavaScript type=text/JavaScript>
+
+<!--
+function checkinput(theform){ 
+ if(theform.title.value.replace(/(^\s*)|(\s*$)/g, "") == ""){ //判断标题是否为空!
+  alert("搜索不能为空或不能全是空格!");
+  theform.title.focus(); //聚焦到输入域!
+  return false;
+ }
+ return true;
+ }
+
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+//-->
+</SCRIPT>
+
+<META content="MSHTML 6.00.2900.6003" name=GENERATOR></HEAD>
+<BODY leftMargin=0 background="images/bodybk.jpg" topMargin=0 
+marginheight="0" marginwidth="0">
+<EM>
+<TABLE cellSpacing=0 cellPadding=0 width=760 align=center border=1>
+  
+  <TR>
+    <TD>
+      <TABLE borderColor=#d2d2d2 cellSpacing=0 borderColorDark=#d2d2d2 
+      cellPadding=0 width=760 align=center bgColor=#ffffff 
+      borderColorLight=#ffffff border=0>
+        
+        <TR>
+          <TD vAlign=top>  
+            <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+              
+              <TR>
+                <TD height=90>
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    
+                    <TR>
+                      <TD rowSpan=2><IMG height=90 
+                        src="images/Jwcblog.jpg" width=440></TD>
+                      <TD vAlign=bottom height=70>
+                        <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+border=0>
+                          
+                          <TR>                     
+                            <TD height=20>&nbsp;</TD></TR> 
+                          <TR>
+                            <TD height=20>
+                              <TABLE height=20 cellSpacing=2 cellPadding=2 
+                              width=300 align=right border=0>
+                                
+                                <TR vAlign=center>
+                                <TD vAlign=top align=right width=20><IMG 
+                                height=20 src="images/plugin3.jpg" 
+                                width=20></TD>
+                                <TD width=80><A 
+                                href="http://jwc.bnu.edu.cn/ypcj/sitemap/map.htm"></A><A 
+                                href="index.htm"><STRONG>返回首页</STRONG></A></TD>
+                                <TD vAlign=top align=right width=20><IMG 
+                                height=20 src="images/plugin3.jpg" 
+                                width=20></TD>
+                                <TD width=80><A 
+                                href="zddt/index.htm"><STRONG>站点地图</STRONG></A></TD>
+                                <TD width=20><IMG height=20 
+                                src="images/plugin3.jpg" width=20></TD>
+                                <TD width=80><STRONG><A 
+                                href="mailto:jwc@bnu.edu.cn" 
+                                >联系我们</A></STRONG></TD></TR></TABLE></TD></TR>
+                          <TR>
+                            <TD height=20>&nbsp;</TD></TR></TABLE></TD></TR>
+                    <TR>
+                      <TD vAlign=bottom height=20><IMG height=20 
+                        src="images/muduo1.jpg" 
+                  width=320></TD></TR></TABLE></TD></TR>
+              <TR>
+                <TD height=250>
+                  <TABLE height="100%" cellSpacing=0 cellPadding=0 width=760 
+                  border=0>
+                    
+                    <TR>
+                      <TD width=233 
+                      background="images/muduo2_1.jpg">&nbsp;</TD>            
+                      <TD width=263 
+                      background="images/muduo2_2.jpg">&nbsp;</TD>
+                      <TD vAlign=bottom background="images/muduo2_3.jpg">
+                        <FORM name=form1  target="_blank" action="/cms/search/searchResults.jsp" method=post  accept-Charset="utf-8" onSubmit="document.charset='utf-8';">
+                        <input name="siteID" size="4" value="14" type = "hidden">
+                        <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                          
+                          <TR>
+                            <TD align=right>&nbsp; <INPUT name="query" ></TD>
+                            <TD>&nbsp;<INPUT type=submit value="搜索"></TD></TR></TABLE></FORM></TD></TR></TABLE></TD></TR>
+              <TR>
+                <TD background="images/muduo3.jpg" height=22>
+                  <MARQUEE scrollDelay=150><STRONG><SPAN 
+                  class=style28></SPAN></STRONG></A></MARQUEE></TD></TR>
+              <TR>
+                <TD vAlign=top>
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    
+                    <TR>
+                      <TD vAlign=top width=179 
+                      background="images/pic5.jpg" rowSpan=3>
+                        <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                          
+                          <TR>
+                            <TD valign="top">
+                              <TABLE height=436 cellSpacing=1 cellPadding=1 
+                              width="100%" align=center border=0>
+                               
+                                <TR><TD align=right width=20 bgColor=#3366cc 
+                                height=28>&nbsp;</TD>
+                                <TD bgColor=#003399 height=28>&nbsp;</TD></TR>
+                                
+                                                                                                          
+                                    
+                                    
+                                <TR bgColor=#ccccff>
+                                <TD align=right width=20 height=28>&nbsp;</TD>
+                                <TD width="90%" height=28><STRONG>&nbsp;&nbsp;<A 
+                                href="jgsz/index.htm">机构设置</A></STRONG></TD></TR>
+                                                                                                                                             
+                                    
+                                    
+                                <TR bgColor=#ccccff>
+                                <TD align=right width=20 height=28>&nbsp;</TD>
+                                <TD width="90%" height=28><STRONG>&nbsp;&nbsp;<A 
+                                href="gzzd/index.htm">规章制度</A></STRONG></TD></TR>
+                                                                                                                                             
+                                    
+                                    
+                                <TR bgColor=#ccccff>
+                                <TD align=right width=20 height=28>&nbsp;</TD>
+                                <TD width="90%" height=28><STRONG>&nbsp;&nbsp;<A 
+                                href="jxyj/index.htm">教学研究</A></STRONG></TD></TR>
+                                                                                                                                             
+                                    
+                                    
+                                <TR bgColor=#ccccff>
+                                <TD align=right width=20 height=28>&nbsp;</TD>
+                                <TD width="90%" height=28><STRONG>&nbsp;&nbsp;<A 
+                                href="sjjx/index.htm">实践教学</A></STRONG></TD></TR>
+                                                                                                                                             
+                                    
+                                    
+                                <TR bgColor=#ccccff>
+                                <TD align=right width=20 height=28>&nbsp;</TD>
+                                <TD width="90%" height=28><STRONG>&nbsp;&nbsp;<A 
+                                href="jwyx/index.htm">教务运行</A></STRONG></TD></TR>
+                                                                                                                                             
+                                    
+                                    
+                                <TR bgColor=#ccccff>
+                                <TD align=right width=20 height=28>&nbsp;</TD>
+                                <TD width="90%" height=28><STRONG>&nbsp;&nbsp;<A 
+                                href="jxzl/index.htm">教学质量</A></STRONG></TD></TR>
+                                                                                                                                             
+                                    
+                                    
+                                <TR bgColor=#ccccff>
+                                <TD align=right width=20 height=28>&nbsp;</TD>
+                                <TD width="90%" height=28><STRONG>&nbsp;&nbsp;<A 
+                                href="xjyxw/index.htm">学籍与学位</A></STRONG></TD></TR>
+                                                                                                                                             
+                                    
+                                    
+                                <TR bgColor=#ccccff>
+                                <TD align=right width=20 height=28>&nbsp;</TD>
+                                <TD width="90%" height=28><STRONG>&nbsp;&nbsp;<A 
+                                href="cxrcpy/index.htm">创新人才培养</A></STRONG></TD></TR>
+                                                                                                                                             
+                                    
+                                    
+                                <TR bgColor=#ccccff>
+                                <TD align=right width=20 height=28>&nbsp;</TD>
+                                <TD width="90%" height=28><STRONG>&nbsp;&nbsp;<A 
+                                href="jwxxzt/index.htm">境外学习专题</A></STRONG></TD></TR>
+                                                                                                                                             
+                                    
+                                    
+                                <TR bgColor=#ccccff>
+                                <TD align=right width=20 height=28>&nbsp;</TD>
+                                <TD width="90%" height=28><STRONG>&nbsp;&nbsp;<A 
+                                href="http://admission.bnu.edu.cn/">本科招生</A></STRONG></TD></TR>
+                                                                                                                                       <tr bgcolor="#CCCCFF"> 
+                            <td height="28" align="right" width=20>&nbsp;</td>
+                             <td height="28"><strong>&nbsp;&nbsp;<a href="http://sctl.bnu.edu.cn/jwmis/" target="_blank">教务网络管理系统（校园网）</a>&nbsp;&nbsp;<a href="http://sctl1.bnu.edu.cn/jwmis/" target="_blank">/非校园网</a></td>
+                          </tr>
+                                                                                                                                               
+                                    
+                                    
+                                <TR bgColor=#ccccff>
+                                <TD align=right width=20 height=28>&nbsp;</TD>
+                                <TD width="90%" height=28><STRONG>&nbsp;&nbsp;<A 
+                                href="http://zyfw.prsc.bnu.edu.cn/">教务网络管理系统—新</A></STRONG></TD></TR>
+                                                                                                                                             
+                                    
+                                    
+                                <TR bgColor=#ccccff>
+                                <TD align=right width=20 height=28>&nbsp;</TD>
+                                <TD width="90%" height=28><STRONG>&nbsp;&nbsp;<A 
+                                href="http://bb.bnu.edu.cn/webapps/login/">Bb网络教学平台</A></STRONG></TD></TR>
+                                                                                                                                             
+                                    
+                                    
+                                <TR bgColor=#ccccff>
+                                <TD align=right width=20 height=28>&nbsp;</TD>
+                                <TD width="90%" height=28><STRONG>&nbsp;&nbsp;<A 
+                                href="http://59.64.36.16/bssj/">实践教学网</A></STRONG></TD></TR>
+                                                                                                                                             
+                                    
+                                    
+                                <TR bgColor=#ccccff>
+                                <TD align=right width=20 height=28>&nbsp;</TD>
+                                <TD width="90%" height=28><STRONG>&nbsp;&nbsp;<A 
+                                href="http://dd.jwc.bnu.edu.cn/">本科教学督导工作平台</A></STRONG></TD></TR>
+                                                                                                                                             
+                                    
+                                    
+                                <TR bgColor=#ccccff>
+                                <TD align=right width=20 height=28>&nbsp;</TD>
+                                <TD width="90%" height=28><STRONG>&nbsp;&nbsp;<A 
+                                href="fxsxwjxjh/index.htm">辅修(双学位)教学计划</A></STRONG></TD></TR>
+                                                                                                                                   <TR bgColor=#ccccff>
+                            <TD align=right width=20 bgColor=#ccccff 
+                            height=28>&nbsp;</TD>
+                            <TD bgColor=#ccccff 
+                              height=28><STRONG>&nbsp;&nbsp;<A 
+                              href="nebenfach">学院路教学共同体辅修专业介绍</A></STRONG></TD></TR>
+                          
+                                                                                                                                               
+                                    
+                                    
+                                <TR bgColor=#ccccff>
+                                <TD align=right width=20 height=28>&nbsp;</TD>
+                                <TD width="90%" height=28><STRONG>&nbsp;&nbsp;<A 
+                                href="http://114.255.218.51/zyzx/backdoor.aspx?u=admin&w=admin80235&t=default.aspx&p=126">教师教育中学课程资源中心</A></STRONG></TD></TR>
+                                                                                                                                             
+                                    
+                                    
+                                <TR bgColor=#ccccff>
+                                <TD align=right width=20 height=28>&nbsp;</TD>
+                                <TD width="90%" height=28><STRONG>&nbsp;&nbsp;<A 
+                                href="http://jsjyxy.bnu.edu.cn/">教师教育学院</A></STRONG></TD></TR>
+                                                                                                                                             
+                                    
+                                    
+                                <TR bgColor=#ccccff>
+                                <TD align=right width=20 height=28>&nbsp;</TD>
+                                <TD width="90%" height=28><STRONG>&nbsp;&nbsp;<A 
+                                href="http://sfs.ncss.org.cn/">免费师范生就业服务网</A></STRONG></TD></TR>
+                                                                                                                                             
+                                    
+                                    
+                                <TR bgColor=#ccccff>
+                                <TD align=right width=20 height=28>&nbsp;</TD>
+                                <TD width="90%" height=28><STRONG>&nbsp;&nbsp;<A 
+                                href="xxgk/index.htm">信息公开</A></STRONG></TD></TR>
+                                                                                                  </TABLE></TD></TR>
+                          <TR>
+                            <TD height=23>
+                              <DIV align=center>
+                              <TABLE cellSpacing=2 cellPadding=2 width="100%" 
+                              border=0>
+                                
+                                <TR>
+                                <TD align=middle><IMG height=40 
+                                src="/docs/20140917153300011448.jpg" width=150 
+                                useMap=#Map8 border=0></TD></TR> 
+                                <TR>
+                                <TD align=middle><IMG height=50 
+                                src="/docs/20140421161755026681.jpg" width=150 
+                                useMap=#Map7 border=0></TD></TR>                                
+                                 <TR>
+                                <TD align=middle><IMG height=50 
+                                src="images/bt-jpkcw.jpg" width=150 
+                                useMap=#Map5 border=0><A 
+                                href="http://course.bnu.edu.cn/"><BR>教育网</A> <A 
+                                href="http://bnucourse.bnu.edu.cn/">公众网</A> 
+                                </TD></TR>
+                                <TR>
+                                <TD align=middle><IMG height=50 
+                                src="images/bt-bkkyjj.jpg" width=150 
+                                useMap=#Map6 border=0></TD></TR>
+                                </TABLE></DIV></TD></TR>
+                          <TR>
+                            <TD height=25>
+                              <DIV align=center>
+                              <TABLE cellSpacing=2 cellPadding=2 width="100%" 
+                              border=0>
+                                                                <TR vAlign=center align=middle>
+                                <TD width="49%" height=20><A 
+                                href="http://www.btrc.edu.cn/" 
+                                target=_blank>双语教学资源网</A></TD></TR>
+                                                                <TR vAlign=center align=middle>
+                                <TD width="49%" height=20><A 
+                                href="http://www.bnu.edu.cn/yxsz" 
+                                target=_blank>校内院系导航</A></TD></TR>
+                                                                <TR vAlign=center align=middle>
+                                <TD width="49%" height=20><A 
+                                href="http://mstd.bnu.edu.cn/" 
+                                target=_blank>北京市优秀教学团队与教学名师奖建设项目</A></TD></TR>
+                                                                <TR vAlign=center align=middle>
+                                <TD width="49%" height=20><A 
+                                href="http://www.bnu.edu.cn/" 
+                                target=_blank>北京师范大学</A></TD></TR>
+                                                                <TR vAlign=center align=middle>
+                                <TD width="49%" height=20><A 
+                                href="http://www.bjedu.gov.cn/" 
+                                target=_blank>北京市教委</A></TD></TR>
+                                                                <TR vAlign=center align=middle>
+                                <TD width="49%" height=20><A 
+                                href="http://www.moe.gov.cn/" 
+                                target=_blank>国家教育部</A></TD></TR>
+                                                                </TABLE></DIV></TD></TR></TABLE></TD>
+                      <TD vAlign=top width=1 background="images/pic8.jpg" 
+                      rowSpan=3><IMG height=10 src="images/pic8.jpg" 
+                        width=1></TD>
+                      <TD vAlign=top width=10 rowSpan=3>&nbsp;</TD>
+                      <TD vAlign=top width=570>
+                        <TABLE cellSpacing=0 cellPadding=0 width="98%" 
+                          border=0>
+                          <TR>
+                            <TD vAlign=center height=25>
+                              <TABLE height=25 cellSpacing=0 cellPadding=0 
+                              width="96%" align=center border=0>
+                                
+                                <TR>
+                                <TD vAlign=center><IMG height=25 
+                                src="images/bt-red.jpg" width=150><FONT 
+                                size=3>&nbsp;</FONT></TD>
+                                <TD>&nbsp;</TD>
+                                <TD align=right><A 
+                                href="zytz/index.htm"><IMG 
+                                height=12 src="images/moreinfo.gif" 
+                                width=100 
+                            border=0></A></TD></TR></TABLE></TD></TR>
+                          <TR>
+                            <TD>
+                              <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+                              border=0>
+                                
+                                <TR>
+                                <TD width=14 height=9><IMG height=9 
+                                src="images/tz-corner-left.jpg" 
+                                width=14></TD>
+                                <TD background="images/tz-top-bk.jpg" 
+                                height=9><IMG height=9 
+                                src="images/tz-top-bk.jpg" 
+                                width=14></TD>
+                                <TD width=11 height=9><IMG height=9 
+                                src="images/tz-top-right.jpg" 
+                                width=11></TD></TR>
+                                <TR>
+                                <TD vAlign=top width=14 
+                                background="images/tz-left-bk.jpg"><IMG 
+                                height=224 src="images/tz-left.jpg" 
+                                width=14></TD>
+                                <TD vAlign=top>
+                                <TABLE cellSpacing=2 cellPadding=2 width="98%" 
+                                align=center border=0>
+                                
+                                <TR>
+                                <TD align=middle width="16%" height=10><IMG 
+                                height=10 src="images/tz-whiteplug.jpg" 
+                                width=5></TD>
+                                <TD height=10><FONT color=#ff0000><A 
+                                href="http://jwc.bnu.edu.cn/public/tongzhi/0506-2/tz20060606sjz.htm"></A><IMG 
+                                height=10 src="images/tz-whiteplug.jpg" 
+                                width=5></FONT><IMG height=10 
+                                src="images/tz-whiteplug.jpg" 
+                                width=5></TD></TR> 
+                                                        
+                                                                  <TR>
+                                <TD align=middle height=25><FONT 
+                                color=#999999>2016-03-17</FONT></TD>
+                                <TD background="images/tb-bk.gif"><A 
+                                href="jwxxzt/jhsxm/123738.htm" 
+                                target=_blank>            2016年度“BNU-HKIED特选交换课程”项目选派优秀... 
+     </A>
+                                 </TD></TR>
+                                                                <TR>
+                                <TD align=middle height=25><FONT 
+                                color=#999999>2016-03-16</FONT></TD>
+                                <TD background="images/tb-bk.gif"><A 
+                                href="sjjx/sjz/123699.htm" 
+                                target=_blank>            关于开展2016年度本科生小学期的第一轮通知 
+     </A>
+                                 </TD></TR>
+                                                                <TR>
+                                <TD align=middle height=25><FONT 
+                                color=#999999>2016-03-14</FONT></TD>
+                                <TD background="images/tb-bk.gif"><A 
+                                href="jxzl/jxzljk/123492.htm" 
+                                target=_blank>            关于开展2015-2016学年春季学期本科课堂教学质量过程... 
+     </A>
+                                 </TD></TR>
+                                                                <TR>
+                                <TD align=middle height=25><FONT 
+                                color=#999999>2016-03-11</FONT></TD>
+                                <TD background="images/tb-bk.gif"><A 
+                                href="jwyx/bylw/123301.htm" 
+                                target=_blank>            关于本科生毕业论文（设计）查重工作的通知 
+     </A>
+                                 </TD></TR>
+                                                                <TR>
+                                <TD align=middle height=25><FONT 
+                                color=#999999>2016-03-10</FONT></TD>
+                                <TD background="images/tb-bk.gif"><A 
+                                href="jwxxzt/gjgpyjsxm/123180.htm" 
+                                target=_blank>            关于选派本科生赴昆山杜克大学参加第二校园国际化学习项目及宣... 
+     </A>
+                                 </TD></TR>
+                                                                <TR>
+                                <TD align=middle height=25><FONT 
+                                color=#999999>2016-03-09</FONT></TD>
+                                <TD background="images/tb-bk.gif"><A 
+                                href="sjjx/jszgrz/123081.htm" 
+                                target=_blank>            关于2012级应届本科毕业生教师资格认定工作的通知 
+     </A>
+                                 </TD></TR>
+                                                                <TR>
+                                <TD align=middle height=25><FONT 
+                                color=#999999>2016-03-08</FONT></TD>
+                                <TD background="images/tb-bk.gif"><A 
+                                href="xjyxw/zyecxz/123047.htm" 
+                                target=_blank>            关于2016年本科生专业二次选择工作的通知 
+     </A>
+                                 </TD></TR>
+                                                                <TR>
+                                <TD align=middle height=25><FONT 
+                                color=#999999>2016-03-03</FONT></TD>
+                                <TD background="images/tb-bk.gif"><A 
+                                href="jwyx/ksgl/122797.htm" 
+                                target=_blank>            关于组织2012级本科毕业生重考的通知 
+     </A>
+                                 </TD></TR>
+                                                                <TR>
+                                <TD align=middle height=25><FONT 
+                                color=#999999>2016-03-03</FONT></TD>
+                                <TD background="images/tb-bk.gif"><A 
+                                href="jwyx/bylw/122782.htm" 
+                                target=_blank>            关于本科生使用“Writeaid论文写作助手”的通知 
+     </A>
+                                 </TD></TR>
+                                                                <TR>
+                                <TD align=middle height=25><FONT 
+                                color=#999999>2016-03-02</FONT></TD>
+                                <TD background="images/tb-bk.gif"><A 
+                                href="xjyxw/byyxw/122735.htm" 
+                                target=_blank>            关于2012级本科生毕业前图像采集工作的通知 
+     </A>
+                                 </TD></TR>
+                                                                <TR>
+                                <TD align=middle height=25><FONT 
+                                color=#999999>2016-03-01</FONT></TD>
+                                <TD background="images/tb-bk.gif"><A 
+                                href="http://prsc.bnu.edu.cn/docs/20160301083206574199.pdf" 
+                                target=_blank>            【转发】关于2015-2016学年第2学期普通话水平培训测... 
+     </A>
+                                 </TD></TR>
+                                                                <TR>
+                                <TD align=middle height=25><FONT 
+                                color=#999999>2016-02-29</FONT></TD>
+                                <TD background="images/tb-bk.gif"><A 
+                                href="jxzl/jxjl/122587.htm" 
+                                target=_blank>            关于开展2015-2016学年明德教师奖推荐工作的通知 
+     </A>
+                                 </TD></TR>
+                                                                <TR>
+                                <TD align=middle height=25><FONT 
+                                color=#999999>2016-02-25</FONT></TD>
+                                <TD background="images/tb-bk.gif"><A 
+                                href="jxzl/jxzljk/122477.htm" 
+                                target=_blank>            关于2015-2016学年第二学期助教聘任工作的通知 
+     </A>
+                                 </TD></TR>
+                                                                <TR>
+                                <TD align=middle height=25><FONT 
+                                color=#999999>2016-02-25</FONT></TD>
+                                <TD background="images/tb-bk.gif"><A 
+                                href="jwyx/qt/122474.htm" 
+                                target=_blank>            关于召开教学工作会议的通知 
+     </A>
+                                 </TD></TR>
+                                                                <TR>
+                                <TD align=middle height=25><FONT 
+                                color=#999999>2016-02-24</FONT></TD>
+                                <TD background="images/tb-bk.gif"><A 
+                                href="docs/20160224114552458612.pdf" 
+                                target=_blank>            关于我校获得2016年国家留学基金委 “优秀本科生国际交流... 
+     </A>
+                                 </TD></TR>
+                                                                <TR>
+                                <TD align=middle height=25><FONT 
+                                color=#999999>2016-02-24</FONT></TD>
+                                <TD background="images/tb-bk.gif"><A 
+                                href="jxyj/jxcgj/122315.htm" 
+                                target=_blank>            关于开展本科教学工程2011-2015年项目总结工作的通知 
+     </A>
+                                 </TD></TR>
+                                                                <TR>
+                                <TD align=middle height=25><FONT 
+                                color=#999999>2016-01-22</FONT></TD>
+                                <TD background="images/tb-bk.gif"><A 
+                                href="www.bjedu.gov.cn/publish/portal8/tab551/info39300.htm" 
+                                target=_blank>            【转发】北京市教育委员会、北京市财政局关于实施北京高等学校... 
+     </A>
+                                 </TD></TR>
+                                                                <TR>
+                                <TD align=middle height=25><FONT 
+                                color=#999999>2016-01-18</FONT></TD>
+                                <TD background="images/tb-bk.gif"><A 
+                                href="jwxxzt/gjgpyjsxm/121953.htm" 
+                                target=_blank>            关于推荐国家留学基金委“选派本科生赴加拿大阿尔伯塔大学科研... 
+     </A>
+                                 </TD></TR>
+                                                                <TR>
+                                <TD align=middle height=25><FONT 
+                                color=#999999>2016-01-15</FONT></TD>
+                                <TD background="images/tb-bk.gif"><A 
+                                href="http://www.xueyuanlu.cn/article/view.php?id=315" 
+                                target=_blank>            2016（上）学院路共同体校际公选课——选课通知 
+     </A>
+                                 </TD></TR>
+                                                                <TR>
+                                <TD align=middle height=25><FONT 
+                                color=#999999>2016-01-13</FONT></TD>
+                                <TD background="images/tb-bk.gif"><A 
+                                href="xjyxw/byyxw/121771.htm" 
+                                target=_blank>            关于2015～2016学年秋季学期学业预警工作的通知 
+     </A>
+                                 </TD></TR>
+                                                                <TR>
+                                <TD align=middle height=25><FONT 
+                                color=#999999>2016-01-13</FONT></TD>
+                                <TD background="images/tb-bk.gif"><A 
+                                href="xjyxw/byyxw/121768.htm" 
+                                target=_blank>            关于2016届本科生毕业工作的通知 
+     </A>
+                                 </TD></TR>
+                                                                <TR>
+                                <TD align=middle height=25><FONT 
+                                color=#999999>2016-01-12</FONT></TD>
+                                <TD background="images/tb-bk.gif"><A 
+                                href="jxzl/jxzljk/121672.htm" 
+                                target=_blank>            2015-2016学年第一学期助教考核评优工作通知 
+     </A>
+                                 </TD></TR>
+                                                                                                  
+                                
+                                <TR>
+                                <TD height=10><IMG height=10 
+                                src="images/tz-whiteplug.jpg" 
+                                width=5></TD>
+                                <TD background="images/tb-bk.gif" 
+                                height=10><IMG height=10 
+                                src="images/tz-whiteplug.jpg" 
+                                width=5><IMG height=10 
+                                src="images/tz-whiteplug.jpg" 
+                                width=5></TD></TR></TABLE></TD>
+                                <TD vAlign=top 
+                                background="images/tz-right-bk.jpg">&nbsp;</TD></TR>
+                                <TR>
+                                <TD vAlign=top width=14 height=9><IMG height=9 
+                                src="images/tz-corner-leftdown.jpg" 
+                                width=14></TD>
+                                <TD vAlign=top 
+                                background="images/tz-down-bk.jpg" 
+                                height=9><IMG height=9 
+                                src="images/tz-down-bk.jpg" 
+                                width=11></TD>
+                                <TD vAlign=top width=11 height=9><IMG height=9 
+                                src="images/tz-corner-rdown.jpg" 
+                                width=11></TD></TR></TABLE></TD></TR>
+                          <TR>
+                            <TD height=10><IMG height=10 
+                              src="images/tz-whiteplug.jpg" 
+                          width=5></TD></TR>
+                          <TR>
+                            <TD>
+                              <TABLE cellSpacing=0 cellPadding=0 width="90%" 
+                              align=center border=0>
+                                
+                                <TR align=middle>
+                                <TD width=138><IMG height=43 
+                                src="images/formdown.jpg" width=120 
+                                useMap=#MapMap border=0></TD>
+                                <TD width=138><IMG height=43 
+                                src="images/xiaoli.jpg" width=120 
+                                useMap=#Map3Map border=0></TD>
+                                <TD width=138><IMG height=43 
+                                src="images/zuoxi.jpg" width=120 
+                                useMap=#Map2Map border=0></TD>
+                                <TD width=138><IMG height=43 
+                                src="images/kejian.jpg" width=120 
+                                useMap=#Map4Map border=0></TD></TR>
+                                </TR>
+
+                                <TR align=middle>
+                                 <MARQUEE onmouseover=this.stop() 
+                                onmouseout=this.start() scrollAmount=1 
+                                direction=up width=1 height=1 delay="1"><A 
+                                href="http://jwc.bnu.edu.cn/gzzd/jxyj/index.asp">aa1</A> 
+                                <A 
+                                href="http://jwc.bnu.edu.cn/gzzd/jxyj/">aa1</A> 
+                                <A 
+                                href="http://jwc.bnu.edu.cn/gzzd/jxyj/List/?1.htm">a2a</A> 
+                                <A 
+                                href="http://jwc.bnu.edu.cn/gzzd/jxyj/List/?2.htm">a3a</A> 
+                                <A 
+                                href="http://jwc.bnu.edu.cn/gzzd/jxyj/List/?3.htm">a4a</A> 
+                                <A 
+                                href="http://jwc.bnu.edu.cn/gzzd/jxyj/List/?4.htm">a5a</A> 
+                                <A 
+                                href="http://jwc.bnu.edu.cn/gzzd/jxyj/List/?5.htm">a6a</A> 
+                                <A 
+                                href="http://jwc.bnu.edu.cn/gzzd/jxyj/List/?6.htm">a7a</A></MARQUEE></TR></TABLE></TD></TR>
+                          <TR>
+                            <TD height=10><IMG height=10 
+                              src="images/tz-whiteplug.jpg" 
+                          width=5></TD></TR></TABLE></TD></TR>
+                    <TR>
+                      <TD vAlign=top>
+                        <TABLE cellSpacing=0 cellPadding=0 width=539 
+                        align=center border=0>
+                          
+                          <TR>
+                            <TD width=1 background="images/pic8.jpg" 
+                            rowSpan=3><IMG height=10 
+                              src="images/pic8.jpg" width=1></TD>
+                            <TD width=268 background="images/pic6.jpg" 
+                            height=23>&nbsp;</TD>
+                            <TD width=1 background="images/pic8.jpg" 
+                            rowSpan=3><IMG height=10 
+                              src="images/pic8.jpg" width=1><IMG 
+                              height=10 src="images/pic8.jpg" 
+                            width=1></TD>
+                            <TD width=268 background="images/pic6.jpg" 
+                            height=23>&nbsp;</TD>
+                            <TD width=1 background="images/pic8.jpg" 
+                            rowSpan=3><IMG height=10 
+                              src="images/pic8.jpg" width=1><IMG 
+                              height=10 src="images/pic8.jpg" 
+                            width=1></TD></TR>
+                          <TR>
+                            <TD><IMG height=25 
+                              src="images/bt-jxcgj.jpg" width=200></TD>
+                            <TD width=268><IMG height=25 
+                              src="images/bt-jxmsj.jpg" 
+width=200></TD></TR>
+                          <TR>
+                            <TD vAlign=top width=268>
+                              <TABLE cellSpacing=2 cellPadding=2 width="96%" 
+                              align=center border=0>
+                                
+                                <TR>
+                                <TD vAlign=top height=120>
+                                <P><A >1994年3月，国务院颁布了中华人民共和国第151号总理令——《教学成果奖励条例》，标志着教学成果奖成为我国政府颁发的教育领域中唯一的一项国家级奖励，与国家科技三大奖励同等对待。教学成果奖分为国家级和省（部）级，设有特等奖、一等奖、二等奖三个等级，授予相应的证书、奖章和奖金，每4年评审一次。</A></P></TD></TR>
+                                <TR>
+                                <TD height=9>&nbsp;<IMG height=13 
+                                src="images/plugin2.gif" 
+                                width=15>&nbsp;<A 
+                                href="http://jwc.bnu.edu.cn/docs/20121203085344614087.htm">2012年教学成果奖工作专题</A> 
+                                <STRONG><IMG height=11 
+                                src="images/order-hot.gif" 
+                                width=22></STRONG> </TD></TR>
+                                 <TR>
+                                <TD height=20>&nbsp;<IMG height=13 
+                                src="images/plugin2.gif" 
+                                width=15>&nbsp;<A href="http://www.jxcg.edu.cn/" 
+                                target=_blank>教育部教学成果奖主题网站</A></TD></TR></TABLE></TD>
+                            <TD vAlign=top width=268>
+                              <TABLE cellSpacing=2 cellPadding=2 width="96%" 
+                              align=center border=0>
+                                
+                                <TR>
+                                <TD vAlign=top height=120>
+                                <P><A 
+                                href="jxzl/jxjl/msj/msjj.htm">我校心理学院舒华教授、地理学院王静爱教授分别获得第一届（2003年）、第二届（2006年）国家级教学名师奖。</A></P></TD></TR>
+                                <TR>
+                                <TD vAlign=top height=19>&nbsp;<IMG height=13 
+                                src="images/plugin2.gif" 
+                                width=15>&nbsp;<A 
+                                href="jxzl/jxjl/msj/msjj.htm">教学奖励专题</A> 
+                                <STRONG><IMG height=11 
+                                src="images/order-hot.gif" 
+                                width=22></STRONG> </TD></TR>
+                                <TR>
+                                <TD height=20>&nbsp;<IMG height=13 
+                                src="images/plugin2.gif" 
+                                width=15>&nbsp;<A 
+                                href="jxzl/jxjl/msj/msjj-wja.htm">获奖教师简介</A> 
+                                <STRONG><IMG height=11 
+                                src="images/order-hot.gif" 
+                                width=22></STRONG> </TD></TR>
+                                <TR>
+                                <TD height=20>&nbsp;<IMG height=13 
+                                src="images/plugin2.gif" 
+                                width=15>&nbsp;<A 
+                                href="http://msj.zlgc.org/Notice/Default.aspx" 
+                                target=_blank>教育部教学名师奖主题网站</A></TD></TR></TABLE></TD></TR>
+                          <TR>
+                            <TD width=1 background="images/pic9.jpg" 
+                            height=1><IMG height=1 
+                              src="images/pic9.jpg" width=1></TD>
+                            <TD width=268 background="images/pic9.jpg" 
+                            height=1><IMG height=1 
+                              src="images/pic9.jpg" width=1></TD>
+                            <TD width=1 background="images/pic9.jpg" 
+                            height=1><IMG height=1 
+                              src="images/pic9.jpg" width=1></TD>
+                            <TD width=268 background="images/pic9.jpg" 
+
+                            height=1><IMG height=1 
+                              src="images/pic9.jpg" width=1></TD>
+                            <TD width=1 background="images/pic9.jpg" 
+                            height=1><IMG height=1 
+                              src="images/pic9.jpg" 
+                          width=1></TD></TR></TABLE></TD></TR>
+                    <TR>
+                      <TD vAlign=top>&nbsp;</TD></TR></TABLE></TD></TR>
+              <TR>
+                <TD height=50>
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+                  bgColor=#003399 border=0>
+                    
+                    <TR>
+                      <TD align=middle height=50><FONT color=#ffffff>&copy; 
+                        北京师范大学教务处　新街口外大街19号，北京·中国(100875) <BR>E-mail: 
+                        jwc@bnu.edu.cn　Tel: 010-58807845　Fax: 
+                      010-58807845</FONT></TD></TR></TABLE></TD></TR></TABLE></TD></TR></TABLE><MAP 
+      name=MapMap><AREA shape=RECT coords=2,3,118,39 
+        href="cybgxz/index.htm"></MAP><MAP 
+        name=Map2Map>
+                        <AREA shape=RECT coords=2,1,117,40 
+        href="zxsjb/index.htm">
+                      </MAP>  <MAP 
+        name=Map3Map>
+        <AREA shape=RECT coords=1,1,116,50 
+        href="xl/2015_20162xndyxqjxgzap/index.htm"></MAP>                               <MAP 
+      name=Map4Map><AREA shape=RECT coords=2,2,119,41 
+        href="jxkjzy/index.htm"></MAP></TD></TR></TABLE>
+<DIV align=center><MAP name=Map><AREA shape=RECT coords=2,3,118,39 
+  href="http://jwc.bnu.edu.cn/forms/index.htm"></MAP><MAP name=Map2><AREA 
+  shape=RECT coords=2,2,117,41 
+href="http://jwc.bnu.edu.cn/others/zxsj.htm"></MAP><MAP name=Map3><AREA 
+  shape=RECT coords=2,1,116,40 
+href="http://jwc.bnu.edu.cn/others/xiaoli.htm"></MAP><MAP name=Map4><AREA 
+  shape=RECT coords=2,2,119,41 
+href="http://jwc.bnu.edu.cn/others/jxzy.htm"></MAP><MAP name=Map5><AREA 
+  shape=RECT coords=2,3,151,48 href="http://course.bnu.edu.cn/"></MAP>
+<MAP name=Map7><AREA 
+  shape=RECT coords=2,1,151,40 href="http://jwc.bnu.edu.cn/docs/20140424150614508722.pdf"></MAP>
+<MAP name=Map8><AREA 
+  shape=RECT coords=2,1,151,47 href="http://kczx.bnu.edu.cn/"></MAP>
+<MAP 
+name=Map6><AREA shape=RECT coords=2,4,151,49 
+  href="sjjx/bkskyjj/index.htm"></MAP></DIV></EM>
+
+</body></html>

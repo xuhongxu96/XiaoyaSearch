@@ -46,7 +46,7 @@ namespace XiaoyaStore.Store
             }
         }
 
-        public void Restart()
+        public void RestartCrawl()
         {
             using (var context = NewContext())
             {

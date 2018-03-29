@@ -8,6 +8,11 @@ namespace XiaoyaStore.Data.Model
 {
     public class UrlFile
     {
+        public enum UrlFileIndexStatus
+        {
+            NotIndexed, Indexing, Indexed
+        }
+
         /// <summary>
         /// ID
         /// </summary>
@@ -45,7 +50,7 @@ namespace XiaoyaStore.Data.Model
         /// Is Indexed
         /// </summary>
         [ConcurrencyCheck]
-        public bool IsIndexed { get; set; }
+        public UrlFileIndexStatus IndexStatus { get; set; }
         /// <summary>
         /// Seconds offset between present and last update
         /// </summary>

@@ -39,7 +39,7 @@ namespace XiaoyaStore.Data
                 .IsUnique();
 
             modelBuilder.Entity<UrlFile>()
-                .HasIndex(o => o.UpdatedAt);
+                .HasIndex(o => new { o.UpdatedAt, o.IndexStatus });
 
             #endregion
 

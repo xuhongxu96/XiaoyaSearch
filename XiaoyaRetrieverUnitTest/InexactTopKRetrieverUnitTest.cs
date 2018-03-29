@@ -38,14 +38,6 @@ namespace XiaoyaRetrieverUnitTest
                 .UseSqlite("Data Source=XiaoyaSearch.db")
                 .Options;
 
-            using (var context = new XiaoyaSearchContext(options))
-            {
-                if (context.Database.EnsureCreated())
-                {
-                    context.Database.ExecuteSqlCommand(File.ReadAllText("init.sql"));
-                }
-            }
-
             var retriever = new InexactTopKRetriever(new RetrieverConfig
             {
                 IndexStatStore = new IndexStatStore(options),
@@ -60,7 +52,7 @@ namespace XiaoyaRetrieverUnitTest
             };
 
             var urlFileIds = retriever.Retrieve(expression);
-            Assert.AreEqual(32, urlFileIds.Count());
+            Assert.AreEqual(55, urlFileIds.Count());
 
 
             expression = new And
@@ -74,7 +66,7 @@ namespace XiaoyaRetrieverUnitTest
             };
 
             urlFileIds = retriever.Retrieve(expression);
-            Assert.AreEqual(31, urlFileIds.Count());
+            Assert.AreEqual(46, urlFileIds.Count());
 
             using (var context = new XiaoyaSearchContext(options))
             {
@@ -91,14 +83,6 @@ namespace XiaoyaRetrieverUnitTest
                 .UseSqlite("Data Source=XiaoyaSearch.db")
                 .Options;
 
-            using (var context = new XiaoyaSearchContext(options))
-            {
-                if (context.Database.EnsureCreated())
-                {
-                    context.Database.ExecuteSqlCommand(File.ReadAllText("init.sql"));
-                }
-            }
-
             var retriever = new InexactTopKRetriever(new RetrieverConfig
             {
                 IndexStatStore = new IndexStatStore(options),
@@ -110,7 +94,7 @@ namespace XiaoyaRetrieverUnitTest
             var expression = new SimpleQueryParser();
 
             var urlFileIds = retriever.Retrieve(expression.Parse("北京师范大学 -教务处教育"));
-            Assert.AreEqual(31, urlFileIds.Count());
+            Assert.AreEqual(46, urlFileIds.Count());
 
             using (var context = new XiaoyaSearchContext(options))
             {

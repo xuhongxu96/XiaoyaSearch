@@ -59,7 +59,7 @@ namespace XiaoyaCrawler
             mErrorLogger = new RuntimeLogger(Path.Combine(config.LogDirectory, "Error.Log"), true);
         }
 
-        protected async void FetchUrlAsync(string url)
+        protected void FetchUrlAsync(string url)
         {
             var t = Task.Run(() =>
             {
@@ -132,7 +132,6 @@ namespace XiaoyaCrawler
                 }
             });
             mTasks.Add(t);
-            await t;
         }
 
         public async Task StartAsync(bool restart = false)

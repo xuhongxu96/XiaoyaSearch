@@ -1,0 +1,325 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>Experimental Primary School of Beijing Normal University</title>
+
+<link href="images/bnu2013.css" rel="stylesheet" type="text/css" />
+<script src="js/daohang.js" type="text/javascript"></script>
+
+<SCRIPT type="text/javascript" src="images/jquery-1.6.4.min.js"></SCRIPT>
+
+<SCRIPT type="text/javascript" src="images/jquery.easing.1.3.js"></SCRIPT>
+
+<SCRIPT type="text/javascript" src="images/jquery.nivo.slider.pack.js"></SCRIPT>
+
+<SCRIPT type="text/javascript">
+jQuery(document).ready(function(){
+	//Menu
+	jQuery("ul.sf-menu").supersubs({ 
+	minWidth		: 12,		// requires em unit.
+	maxWidth		: 27,		// requires em unit.
+	extraWidth		: 1	// extra width can ensure lines don't sometimes turn over due to slight browser differences in how they round-off values
+						   // due to slight rounding differences and font-family 
+	}).superfish();  // call supersubs first, then superfish, so that subs are 
+					 // not display:none when measuring. Call before initialising 
+					 // containing tabs for same reason. 
+});
+//Slider
+jQuery(window).load(function() {
+	jQuery('#slider').nivoSlider({
+	effect: 'fold',
+	slices:15,
+	animSpeed:500, //Slide transition speed
+	pauseTime:5000,
+	controlNav: false,
+	directionNavHide: false,
+	prevText: 'prev',
+	nextText: 'next',
+	startSlide:0, //Set starting Slide (0 index)
+	directionNav:true, //Next &amp; Prev
+	afterLoad: function(){
+		jQuery(".nivo-caption").animate({top:"60"}, {easing:"easeOutBack", duration: 500})
+		},
+		beforeChange: function(){
+		jQuery(".nivo-caption").animate({top:"-300"}, {easing:"easeInBack", duration: 500})
+		},
+		afterChange: function(){
+		jQuery(".nivo-caption").animate({top:"60"}, {easing:"easeOutBack", duration: 500})
+		}
+	});
+	
+});
+
+</SCRIPT>
+
+<style type="text/css">
+
+.topboxlf1 {
+
+	margin-top: 5px;
+
+	margin-bottom: 5px;
+
+}
+
+</style>
+
+<link href="images/nivo-slider.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div style="width:1001px; margin:0px auto;">
+
+<table width="1001" border="0" align="center" cellpadding="0" cellspacing="0" class="bodybg">
+
+  <tr>
+    
+    <td height="111" align="center" valign="top" class="toplf" bgcolor="#FFFFFF">
+ 
+<table width="1001" border="0" align="center" cellpadding="0" cellspacing="0" >
+    
+    <tr>
+      
+      <td width="219" align="left">&nbsp;</td>
+      
+      <td width="782" height="111" align="right" valign="top">&nbsp;</td>
+      
+      </tr>
+    
+    <tr>
+      
+      <td colspan="2" align="center" valign="top" background="http://eng.eps.bnu.edu.cn/images/daohang.gif"><ul id="nav">
+        
+        <li class="top"><a href="http://eng.eps.bnu.edu.cn/" class="top_link"><span>Home</span></a></li>
+        <li class="top"><a href="#" class="top_link"><span class="down">About Us</span></a>
+		  <ul class="sub">
+			<li><a href="http://eng.eps.bnu.edu.cn/about_us/school_profile1/61530.htm">School Profile</a></li>
+            <li><a href="http://eng.eps.bnu.edu.cn/about_us/leadership_team/index.htm">Leadership Team</a></li>
+			<li class="mid"><a href="http://eng.eps.bnu.edu.cn/about_us/school_culture1/index.htm" class="fly">School Culture</a>
+					<ul>
+						<li><a href="http://eng.eps.bnu.edu.cn/about_us/school_culture1/62060.htm">School Badge</a></li>
+						<li><a href="http://eng.eps.bnu.edu.cn/about_us/school_culture1/62061.htm">Schooling Principle</a></li>
+						<li><a href="http://eng.eps.bnu.edu.cn/about_us/school_culture1/62062.htm">School Song</a></li>
+					</ul>
+			</li>
+           <li><a href="http://eng.eps.bnu.edu.cn/about_us/school_community/index.htm">School Community</a></li> 
+          </ul></li>
+        <li class="top"><a href="#" class="top_link"><span class="down">School Curriculum</span></a>
+		  <ul class="sub">
+			<li><a href="http://eng.eps.bnu.edu.cn/school_curriculum/subjects/62070.htm">Subjects</a></li>
+			<li><a href="http://eng.eps.bnu.edu.cn/school_curriculum/schooling_schedule/index.htm">Schooling Schedule</a></li>
+          </ul></li>
+          <li class="top"><a href="#" class="top_link"><span class="down">Special Activities</span></a>
+		  <ul class="sub">
+			<li><a href="http://eng.eps.bnu.edu.cn/special_activities/activity_calendar/62105.htm">Activity Calendar</a></li>
+			<li class="mid"><a href="http://eng.eps.bnu.edu.cn/special_activities/reading_festival/index.htm">Reading Festival</a>
+            </li>
+             <li><a href="http://eng.eps.bnu.edu.cn/special_activities/sports/index.htm">Sports</a></li>
+             <li><a href="http://eng.eps.bnu.edu.cn/special_activities/orchestra/index.htm">Brass Band</a></li>
+          </ul></li>
+        <li class="top"><a href="#" class="top_link"><span class="down">International Exchange</span></a>
+		  <ul class="sub">
+			<li><a href="http://eng.eps.bnu.edu.cn/international_exchange/friendly_schools/index.htm">Sister School</a></li>
+			<li><a href="http://eng.eps.bnu.edu.cn/international_exchange/friendly_exchange/index.htm">Friendly Exchange</a></li>
+          </ul></li> 
+          <li class="top"><a href="http://www.eps.bnu.edu.cn/" target="_blank" class="top_link"><span>中文版</span></a></li>    
+        </ul></td>
+      
+      </tr>
+    
+    </table></td>
+    
+  </tr>
+
+  <tr>
+    <td height="33" align="center" valign="middle">
+      
+      <DIV id="slider-container">
+  <DIV id="slider" class="nivoSlider">
+  <IMG title="#htmlcaption1" alt="" src="http://eng.eps.bnu.edu.cn/images/slider2.jpg">
+  <IMG title="#htmlcaption2" alt="" src="http://eng.eps.bnu.edu.cn/images/slider3.jpg">
+  <IMG title="#htmlcaption3" alt="" src="http://eng.eps.bnu.edu.cn/images/slider4.jpg">
+  <IMG title="#htmlcaption4" alt="" src="http://eng.eps.bnu.edu.cn/images/slider5.jpg"></DIV><!-- #slider -->
+  <DIV id="htmlcaption1" class="nivo-html-caption">
+  <span class="slidetxt">Educational Philosophy</span> 
+<span class="slidetxt1">Love to learn , learn to learn, and have a healthy physical and mental, social well-adapted.</span>
+</DIV>
+  <DIV id="htmlcaption2" class="nivo-html-caption">
+  <span class="slidetxt">School motto</span> 
+<span class="slidetxt1">Unity, Liveliness, Diligence, Upwards</span>
+</DIV>
+  <DIV id="htmlcaption3" class="nivo-html-caption">
+  <span class="slidetxt">For Teacher</span> 
+<span class="slidetxt1">Love and respect work, be strict and innovative.</span>
+</DIV>
+  <DIV id="htmlcaption4" class="nivo-html-caption">
+  <span class="slidetxt">For Student</span> 
+<span class="slidetxt1">Hardworking, realistic, willing and able to learn.</span>
+</DIV>
+
+ </DIV>
+      
+      </td>
+  </tr>
+
+  <tr>
+    
+    <td align="center" valign="middle" class="midbox" background="http://xszz.bnu.edu.cn/images/midbg.jpg"><table width="973" border="0" cellspacing="5" cellpadding="0">
+      
+      <tr>
+        
+        <td width="35%" align="left" valign="top" bgcolor="#F2FDDF"><table width="100%" border="0" cellspacing="1" cellpadding="0">
+          
+          <tr>
+            
+            <td><span class="prh1">Leadership Team</span></td>
+            
+            </tr>
+          
+          <tr>
+            
+            <td align="left" valign="top" class="president">              
+                                      <img src="images/content/2013-10/20131029135530919309.jpg"/>
+                <strong>Wu Jianmin</strong>, the president of the Beijing Normal University experimental primary school From 2000 May until now, is also associate professor of Beijing Normal University School of psychology, master's tutor……<a href="http://eng.eps.bnu.edu.cn/about_us/leadership_team/index.htm">　(more)</a>             
+              </td>
+            
+            </tr>
+          
+          </table></td>
+        
+        <td width="65%" align="left" valign="top" class="aboutus">
+        <table width="99%" border="0" cellspacing="1" cellpadding="0">
+          
+          <tr>
+            
+            <td><h1>About Us</h1></td>
+            
+            </tr>
+          
+          <tr>
+            
+            <td align="left" valign="top" class="president">
+           
+                                      <img src="images/content/2013-10/20131029140119955456.jpg"/><strong>School Profile:</strong><br><br>   
+                Experimental Primary School of Beijing Normal University was established in 1958. It is the primary school which directly attached to BNU. It is also an experimental primary school which put education reform of BNU in practice……<a href="about_us/school_profile1/61530.htm">　(more)</a>               
+              </td>
+            
+            </tr>
+          
+        </table></td>
+        
+        </tr>
+      
+      </table></td>
+    
+  </tr>
+  <tr>
+    <td align="center" valign="top" bgcolor="#FFFFFF" class="midbox"><table width="973" border="0" cellspacing="5" cellpadding="0">
+      <tr>
+        <td width="767" height="206" align="left" valign="top"><h1>Special Activities</h1>
+<table width="100%" border="0" cellspacing="10" cellpadding="0">
+  <tr>
+    <td width="21%" rowspan="2"><img src="http://eng.eps.bnu.edu.cn/images/rili.png" width="180" height="180" usemap="#Map" border="0" /></td>
+    <td height="30"><span class="PA">Photo Album</span></td>
+  </tr>
+  <tr>
+    <td width="79%" height="130" align="left" valign="top" bgcolor="#FFFFFF" class="pa1"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td align="center" valign="middle"><a href="http://eng.eps.bnu.edu.cn/special_activities/reading_festival/index.htm"><img src="http://eng.eps.bnu.edu.cn/images/pa1.jpg" alt="" width="122" height="90" /></a></td>
+        <td align="center" valign="middle"><a href="http://eng.eps.bnu.edu.cn/special_activities/eps_forum/index.htm"><img src="http://eng.eps.bnu.edu.cn/images/pa2.jpg" alt="" width="122" height="90" /></a></td>
+        <td align="center" valign="middle"><a href="http://eng.eps.bnu.edu.cn/special_activities/sports/index.htm"><img src="http://eng.eps.bnu.edu.cn/images/pa3.jpg" alt="" width="122" height="90" /></a></td>
+        <td align="center" valign="middle"><a href="http://eng.eps.bnu.edu.cn/special_activities/orchestra/index.htm"><img src="http://eng.eps.bnu.edu.cn/images/pa4.jpg" alt="" width="122" height="90" /></a></td>
+      </tr>
+      <tr>
+        <td width="25%" align="center" valign="middle">Reading Festival</td>
+        <td width="25%" align="center" valign="middle">EPS Forum</td>
+        <td width="25%" align="center" valign="middle">Sports</td>
+        <td width="25%" align="center" valign="middle">Brass Band</td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+</td>
+        <td width="206"><img src="http://eng.eps.bnu.edu.cn/images/huodong.png" width="206" height="229" /></td>
+      </tr>
+    </table></td>
+  </tr>
+
+  <tr>
+
+<td align="center" valign="middle" bgcolor="#FFFFFF">
+<table width="100%" border="0" cellspacing="10" cellpadding="0">
+    
+    <tr>
+      
+      <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+        
+        <tr>
+          
+          <td height="30" align="center" valign="middle" bgcolor="#F2F2F2"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+            
+            <tr>
+              
+              <td width="66%" align="left" class="link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://eng.eps.bnu.edu.cn/contact_us/62214.htm">Contact Us</a></td>
+              
+              <td width="34%" align="right"><DIV class="searchbox">
+                
+                
+                
+                
+  <form name="dataForm" action="/cms/search/searchResults.jsp" target="_blank" method="post" accept-Charset="utf-8"  onsubmit="document.charset='utf-8';">
+    
+  <INPUT name="siteID" size="4" value="72" type="hidden">
+    
+  <INPUT title="搜索" class="input1" type="text" name="query" >
+    
+  <input type="image" src="http://eng.eps.bnu.edu.cn/images/searchi.jpg" value="搜索" name=btnG/>
+    
+  </form>
+                
+  </DIV></td>
+              
+              </tr>
+            
+            </table></td>
+          
+          </tr>
+        
+        <tr>
+          
+          <td height="35" align="center" valign="middle" bgcolor="#6FB619"><table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+            
+            <tr>
+              
+              <td height="26" align="center" valign="middle">&nbsp;&nbsp;&nbsp;Copyright &copy; 2013 All Right Reserved　 Experimental Primary School of Beijing Normal  University</td>
+              
+              <td align="right" valign="middle">&nbsp;</td>
+              
+              </tr>
+            
+            </table></td>
+          
+          </tr>
+        
+        </table></td>
+      
+      </tr>
+    
+    </table></td>
+    
+  </tr>
+
+</table>
+
+</div>
+
+<map name="Map" id="Map">
+  <area shape="rect" coords="6,4,176,175" href="http://eng.eps.bnu.edu.cn/special_activities/activity_calendar/62105.htm" />
+</map>
+</body></html>
+</body></html>

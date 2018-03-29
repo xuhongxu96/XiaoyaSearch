@@ -1,0 +1,390 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>北京师范大学</title>
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/subCon.css">
+<link rel="shortcut icon" href="../images/favicon.ico" >
+<!--[if lt IE 9]>
+<script src="../js/html5.js"  type="text/javascript"></script>
+<![endif]-->
+</head>
+<body>
+
+<!--header开始-->
+
+
+
+
+<header class="header" >
+    <div class="serWrap">
+        <div id="ser">
+            <div class="ser" >
+                <form name="dataForm" class="search" action="/cms/search/searchResults.jsp" target="_blank" method="post" accept-charset="utf-8" onSubmit="document.charset='utf-8';">
+                    <input name="siteID" value="57" type ="hidden">
+                    <input class="notxt" value="search" name="query" type="text" id="keywords" onFocus="if(value==defaultValue){value='';}" onBlur="if(!value){value=defaultValue;}"
+                     onclick="if(this.value==''){this.value='';this.form.keywords.style.color='#444'}">
+                    <input class="notxt1" name="Submit" type="submit" value="搜索" />
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="topWrap">
+      <div class="top">
+          <div class="top_lf">
+              <a href="http://cas.bnu.edu.cn/cas/login?service=http%3A%2F%2Fone.bnu.edu.cn%2Fdcp%2Findex.jsp" target="_blank">信息门户</a><span>|</span> 
+              <a href="http://xxgk.bnu.edu.cn/" target="_blank">信息公开</a><span>|</span> 
+              <a href="../lxxld/index.htm" target="_blank">联系校领导</a><span>|</span> 
+              <a href="http://email.bnu.edu.cn/" target="_blank">教师邮箱</a><span>|</span>
+              <a href="http://stu.mail.bnu.edu.cn/" target="_blank">学生邮箱</a>
+          </div>
+          <div class="top_rt">
+              <a href="http://news.bnu.edu.cn/" target="_blank">师大新闻</a><span>|</span> 
+              <a href="http://english.bnu.edu.cn/" target="_blank">English Version</a><span>|</span> 
+              <a href="http://zhuye.bnu.edu.cn/" target="_blank">旧版入口</a><span>|</span> 
+              <a class="serBtn" href="javascript:void(0)">&nbsp;</a>
+          </div>
+      </div>
+    </div>
+    <div class="nav-wrapper">
+        <div class="logo"><a href="../index.htm"><img src="../images/logo1.png" alt=""></a></div>
+        <div class="logo_bg"><img src="../images/logo_bg.png" alt=""></div>
+        <div class="nav" id="nav">
+            <ul class="nav_lf">        
+                <li><a href="../xxgk/index.htm">学校概况</a>
+				    <dl class="subNav  ">
+                      <dd><a href="../xxgk/xxjj/index.htm">学校简介</a></dd>
+                      <dd><a href="../xxgk/xsyg/index.htm">校史沿革</a></dd>
+                      <dd><a href="../xxgk/xrld/index.htm">现任领导</a></dd>
+                      <dd><a href="../xxgk/lrld/index.htm">历任领导</a></dd>
+                      <dd><a href="../xxgk/zmxz/index.htm">著名学者</a></dd>
+                      <dd><a href="../xxgk/lsmr/index.htm">历史名人</a></dd>
+                    </dl>
+				</li>
+                <li><a href="../zzjg/index.htm">组织机构</a></li>
+                <li><a href="../xbyx/index.htm">学部院系</a></li>
+                <li><a href="../jyjx/index.htm">教育教学</a>
+                  <dl class="subNav  ">
+                      <dd><a href="http://jwc.bnu.edu.cn/" target="_blank">本科生教育</a></dd>
+                      <dd><a href="http://graduate.bnu.edu.cn/" target="_blank">研究生教育</a></dd>
+                      <dd><a href="http://iso.bnu.edu.cn/" target="_blank">留学生教育</a></dd>
+                      <dd><a href="http://www.scett.bnu.edu.cn/" target="_blank">继续教育</a></dd>
+                  </dl>
+                </li>
+                <li><a href="index.htm">科学研究</a></li>
+            </ul>
+            <ul class="nav_rt">        
+                <li><a href="../zsjy/index.htm">招生就业</a>
+                   <dl class="subNav">
+                      <dd><a href="http://admission.bnu.edu.cn/" target="_blank">本科生招生</a></dd>
+                      <dd><a href="http://yz.bnu.edu.cn/" target="_blank">研究生招生</a></dd>
+                      <dd><a href="http://iso.bnu.edu.cn/" target="_blank">留学生招生</a></dd>
+                      <dd><a href="http://career.bnu.edu.cn/" target="_blank">就业创业</a></dd>
+                  </dl>
+				</li>
+                <li><a href="http://hr.bnu.edu.cn/rcgzbgs/index.html" target="_blank">人才招聘</a></li>
+                <li><a href="../hzjl/index.htm">合作交流</a>
+                   <dl class="subNav">
+                      <dd><a href="http://oiec.bnu.edu.cn/" target="_blank">国际交流与合作</a></dd>
+                      <dd><a href="http://gnhz.bnu.edu.cn/" target="_blank">国内合作</a></dd>
+                      <dd><a href="http://www.bnuef.org/" target="_blank">教育基金会</a></dd>
+                      <dd><a href="http://ocia.bnu.edu.cn/" target="_blank">孔子学院</a></dd>
+                  </dl>
+                </li>
+                <li><a href="../tsda/index.htm">图书档案</a>
+                  <dl class="subNav">
+                      <dd><a href="http://www.lib.bnu.edu.cn/" target="_blank">图书馆</a></dd>
+                      <dd><a href="http://dangan.bnu.edu.cn/" target="_blank">档案馆</a></dd>
+                  </dl>
+                </li>
+                <li><a href="../xysh/index.htm">校园生活</a></li>
+            </ul>
+        </div>
+    </div>
+    <span class="black_bg01"></span>
+    <!-- 移动端主导航 -->
+    <section class="mobile">
+        <div class="mobile-inner-header">
+            <h3 class="mobile_title"><a href="http://email.bnu.edu.cn/" target="_blank">教师邮箱</a><a href="http://stu.mail.bnu.edu.cn/" target="_blank">学生邮箱</a></h3>
+            <div class="mobile-inner-header-icon mobile-inner-header-icon-out">
+            <span></span><span></span><span></span></div>
+          </div>
+          <div class="mobile-inner-nav">
+            <ul>
+                <li><a href="../index.htm">首页</a></li>
+                <li><a href="../xxgk/index.htm">学校概况</a><strong>+</strong>
+                    <dl class="mobile_subNav">
+						<dd><a href="../xxgk/xxjj/index.htm">学校简介</a></dd>
+						<dd><a href="../xxgk/xsyg/index.htm">校史沿革</a></dd>
+						<dd><a href="../xxgk/xrld/index.htm">现任领导</a></dd>
+						<dd><a href="../xxgk/lrld/index.htm">历任领导</a></dd>
+						<dd><a href="../xxgk/zmxz/index.htm">著名学者</a></dd>
+						<dd><a href="../xxgk/lsmr/index.htm">历史名人</a></dd>
+                    </dl>
+                </li>
+                <li><a href="../zzjg/index.htm">组织机构</a></li>
+                <li><a href="../xbyx/index.htm">学部院系</a></li>
+				<li><a href="../jyjx/index.htm">教育教学</a><strong>+</strong>
+                    <dl class="mobile_subNav">
+						<dd><a href="http://jwc.bnu.edu.cn/" target="_blank">本科生教育</a></dd>
+						<dd><a href="http://graduate.bnu.edu.cn/" target="_blank">研究生教育</a></dd>
+						<dd><a href="http://iso.bnu.edu.cn/" target="_blank">留学生教育</a></dd>
+						<dd><a href="http://www.scett.bnu.edu.cn/" target="_blank">继续教育</a></dd>
+                    </dl>
+                </li>
+				<li><a href="index.htm">科学研究</a></li>
+                <li><a href="../zsjy/index.htm">招生就业</a><strong>+</strong>
+                    <dl class="mobile_subNav">
+						<dd><a href="http://admission.bnu.edu.cn/" target="_blank">本科生招生</a></dd>
+						<dd><a href="http://yz.bnu.edu.cn/" target="_blank">研究生招生</a></dd>
+						<dd><a href="http://iso.bnu.edu.cn/" target="_blank">留学生招生</a></dd>
+						<dd><a href="http://career.bnu.edu.cn/" target="_blank">就业创业</a></dd>
+                    </dl>
+                </li>
+				<li><a href="http://hr.bnu.edu.cn/rcgzbgs/index.html" target="_blank">人才招聘</a></li>
+				<li><a href="../hzjl/index.htm">合作交流</a><strong>+</strong>
+                    <dl class="mobile_subNav">
+						<dd><a href="http://oiec.bnu.edu.cn/" target="_blank">国际交流与合作</a></dd>
+						<dd><a href="http://gnhz.bnu.edu.cn/" target="_blank">国内合作</a></dd>
+						<dd><a href="http://www.bnuef.org/" target="_blank">教育基金会</a></dd>
+						<dd><a href="http://ocia.bnu.edu.cn/" target="_blank">孔子学院</a></dd>
+                    </dl>
+                </li>
+				<li><a href="../tsda/index.htm">图书档案</a><strong>+</strong>
+                    <dl class="mobile_subNav">
+						<dd><a href="http://www.lib.bnu.edu.cn/" target="_blank">图书馆</a></dd>
+						<dd><a href="http://dangan.bnu.edu.cn/" target="_blank">档案馆</a></dd>
+                    </dl>
+                </li>
+				<li><a href="../xysh/index.htm">校园生活</a></li>
+            </ul>
+			<div class="mobile-links">
+                <span><a href="http://cas.bnu.edu.cn/cas/login?service=http%3A%2F%2Fone.bnu.edu.cn%2Fdcp%2Findex.jsp" target="_blank">信息门户</a></span>
+                <span><a href="http://xxgk.bnu.edu.cn/" target="_blank">信息公开</a></span>
+                <span><a href="../lxxld/index.htm" target="_blank">联系校领导</a></span>
+                <span><a href="http://news.bnu.edu.cn/" target="_blank">师大新闻</a></span>
+                <span><a href="http://english.bnu.edu.cn/" target="_blank">English Version</a></span>
+                <span><a href="http://zhuye.bnu.edu.cn/" target="_blank">旧版入口</a></span>
+            </div>
+            <!-- <div class="mobile_links">
+                <a href=""></a><span></span><a href="#"></a>
+            </div> -->
+            <div class="mobile_search">
+                <form name="dataForm" class="search" action="/cms/search/searchResults.jsp" target="_blank" method="post" accept-charset="utf-8" onSubmit="document.charset='utf-8';">
+                    <input name="siteID" value="57" type ="hidden">
+                    <input class="notxt1" name="Submit" type="submit" value="" />
+                    <input class="notxt" value="search" name="query" type="text" id="keywords" onFocus="if(value==defaultValue){value='';}" onBlur="if(!value){value=defaultValue;}"
+                     onclick="if(this.value==''){this.value='';this.form.keywords.style.color='#666'}">
+                </form>
+            </div>
+          </div>
+    </section>
+</header><!--header结束 -->
+<section class="subBanner">
+    <img src="../images/kxyj.jpg" alt="">
+    <span class="subBanner_bg"></span>
+    <span class="subBanner_con_bg"></span>
+    <div class="subBanner_con">
+        <h3>科学研究</h3>
+        <p>北师大人笃实求真、不务虚华，质朴勤勉、锐意创新，秉承“诚敬勤朴”之学术传统，成就了百余年来蔚为壮观的学术气象。</p>
+    </div>
+</section>
+<!--subPage开始-->
+<section class="subPage">
+    <div class="sub-section clear">
+        <div class="sec-title sec-title02">
+            <a>
+              <h3 class="item-txt02">国家级科研平台</h3>
+              <p>包括国家重点实验室4个、国家工程实验室1个、国家级协同创新中心1个、国家高端智库培育单位1个。</p>
+            </a>
+        </div>
+        <div class="sec-con">
+			            <div class="sec-row">
+                <h4 class="sec-conHeader"><a>国家重点实验室</a></h4>
+                <ul>
+				  				                    <li><a href="http://brain.bnu.edu.cn/" target="_blank">认知神经科学与学习国家重点实验室</a></li>
+				  				  				                    <li><a href="http://www.espre.cn/" target="_blank">地表过程与资源生态国家重点实验室</a></li>
+				  				  				                    <li><a href="http://kejichu.bnu.edu.cn/kyjd/kyjg/gjzdsys/51378.html" target="_blank">环境模拟与污染控制国家重点联合实验室（联合）</a></li>
+				  				  				                    <li><a href="http://www.slrss.cn/" target="_blank">遥感科学国家重点实验室 （联合）</a></li>
+				  				                  </ul>
+            </div> 
+                        <div class="sec-row">
+                <h4 class="sec-conHeader"><a>国家工程实验室</a></h4>
+                <ul>
+				  				  				  <li><a>互联网教育智能技术及应用国家工程实验室</a></li>
+				  				                  </ul>
+            </div> 
+                        <div class="sec-row">
+                <h4 class="sec-conHeader"><a>国家级协同创新中心</a></h4>
+                <ul>
+				  				                    <li><a href="http://cicabeq.bnu.edu.cn/index.shtml" target="_blank">中国基础教育质量监测协同中心 </a></li>
+				  				                  </ul>
+            </div> 
+                        <div class="sec-row">
+                <h4 class="sec-conHeader"><a>国家高端智库建设培育单位</a></h4>
+                <ul>
+				  				  				  <li><a>中国教育与社会发展研究院</a></li>
+				  				                  </ul>
+            </div> 
+                    </div>
+    </div>
+    <div class="sub-section clear">
+        <div class="sec-title sec-title02">
+            <a>
+              <h3 class="item-txt02">教育部科研平台</h3>
+              <p>包括教育部重点实验室9个、教育部工程研究中心5个、教育部人文社会科学重点研究基地7个、教育部国别和区域研究基地4个、教育部教育立法研究基地1个。</p>
+            </a>
+        </div>
+        <div class="sec-con"> 
+			            <div class="sec-conHeader"><a>教育部重点实验室</a></div>
+            <ul>
+            	  				                    <li><a href="http://kejichu.bnu.edu.cn/kyjd/kyjg/jybzdsys/155284.html" target="_blank">射线束技术教育部重点实验室  </a></li>
+				  				  				                    <li><a href="http://math.bnu.edu.cn/lab/" target="_blank">数学与复杂系统教育部重点实验室 </a></li>
+				  				  				                    <li><a href="http://env.bnu.edu.cn/ptjs/jybzdsys/" target="_blank">水沙科学教育部重点实验室 </a></li>
+				  				  				                    <li><a href="http://radiopharm.bnu.edu.cn/" target="_blank">放射性药物教育部重点实验室 </a></li>
+				  				  				                    <li><a href="http://www.chem.bnu.edu.cn/zdsys/llyjsghxjybzdsys/" target="_blank">理论及计算光化学教育部重点实验室  </a></li>
+				  				  				                    <li><a href="http://kled.bnu.edu.cn/" target="_blank">环境演变与自然灾害教育部重点实验室 </a></li>
+				  				  				                    <li><a href="http://icb.bnu.edu.cn/" target="_blank">细胞增殖及调控生物学教育部重点实验室 </a></li>
+				  				  				                    <li><a href="http://mllab.bnu.edu.cn/" target="_blank">生物多样性与生态工程教育部重点实验室  </a></li>
+				  				  				                    <li><a href="http://bsee.bnu.edu.cn/" target="_blank">“移动学习”教育部-中国移动联合实验室 </a></li>
+				  				              </ul>
+			            <div class="sec-conHeader"><a>教育部工程研究中心</a></div>
+            <ul>
+            	  				                    <li><a href="http://fe.bnu.edu.cn/index32.shtml" target="_blank">数字学习与教育公共服务教育部工程研究中心</a></li>
+				  				  				                    <li><a href="http://kejichu.bnu.edu.cn/kyjd/kyjg/jybgcyjzx/51438.html" target="_blank">天然药物教育部工程研究中心</a></li>
+				  				  				                    <li><a href="http://kejichu.bnu.edu.cn/kyjd/kyjg/jybgcyjzx/51439.html" target="_blank">防沙治沙教育部工程研究中心  </a></li>
+				  				  				                    <li><a href="http://kejichu.bnu.edu.cn/kyjd/kyjg/jybgcyjzx/51440.html" target="_blank">虚拟现实应用教育部工程研究中心  </a></li>
+				  				  				                    <li><a href="http://kejichu.bnu.edu.cn/kyjd/kyjg/jybgcyjzx/51442.html" target="_blank">地下水污染控制与修复教育部工程研究中心  </a></li>
+				  				              </ul>
+			            <div class="sec-conHeader"><a>教育部人文社科重点研究基地</a></div>
+            <ul>
+            	  				                    <li><a href="http://fe.bnu.edu.cn/index17.shtml" target="_blank">国际与比较教育研究院 </a></li>
+				  				  				                    <li><a href="http://www.cter.net.cn/" target="_blank">教师教育研究中心</a></li>
+				  				  				                    <li><a href="http://wenyixue.com/" target="_blank">文艺学研究中心</a></li>
+				  				  				                    <li><a href="http://mdw.bnu.edu.cn/main.action" target="_blank">民俗典籍文字研究中心</a></li>
+				  				  				                    <li><a href="http://bnuhh.bnu.edu.cn/" target="_blank">史学理论与史学史研究中心</a></li>
+				  				  				  				  <li><a>价值与文化研究中心</a></li>
+				  				  				  				  <li><a>发展心理研究院</a></li>
+				  				              </ul>
+			            <div class="sec-conHeader"><a>教育部国别和区域研究基地</a></div>
+            <ul>
+            	  				                    <li><a href="http://rus.bnu.edu.cn/" target="_blank">俄罗斯研究中心</a></li>
+				  				  				  				  <li><a>国际与比较教育研究院</a></li>
+				  				  				  				  <li><a>金砖国家合作中心</a></li>
+				  				  				  				  <li><a>G20反腐追逃追赃研究中心</a></li>
+				  				              </ul>
+			            <div class="sec-conHeader"><a>教育部教育立法研究基地</a></div>
+            <ul>
+            	  				  				  <li><a>教育立法研究基地</a></li>
+				  				              </ul>
+			        </div>
+    </div>
+    <div class="sub-section clear">
+        <div class="sec-title sec-title02">
+            <a>
+              <h3 class="item-txt02">北京市科研平台</h3>
+              <p>包括北京市重点实验室12个、北京市工程中心4个、北京市哲学社会科学研究基地2个、北京市语言文字工作委员会研究基地1个、中国文联文艺评论基地1个、北京教育法治研究基地1个、北京市高精尖创新中心1个、北京市新型智库1个。</p>
+            </a>
+        </div>
+        <div class="sec-con"> 
+			            <div class="sec-conHeader"><a>北京市重点实验室</a></div>
+            <ul>
+            	  				                    <li><a href="http://serm.bnu.edu.cn/content/details_27_1354.html" target="_blank">城市绿色发展科技战略研究北京市重点实验室  </a></li>
+				  				  				                    <li><a href="http://www.chem.bnu.edu.cn/zdsys/nlzhy/" target="_blank">能量转换与存储材料北京市重点实验室 </a></li>
+				  				  				                    <li><a href="http://physics.bnu.edu.cn/application/research/apply_optica_laboratory/" target="_blank">应用光学北京市重点实验室  </a></li>
+				  				  				                    <li><a href="http://psykeylab.bnu.edu.cn/" target="_blank">应用实验心理北京市重点实验室  </a></li>
+				  				  				                    <li><a href="http://gd.bnu.edu.cn/" target="_blank">抗性基因资源与分子发育北京市重点实验室  </a></li>
+				  				  				                    <li><a href="http://kejichu.bnu.edu.cn/kyjd/kyjg/bjszdsys/140218.html" target="_blank">城市水循环与海绵城市技术北京市重点实验室  </a></li>
+				  				  				                    <li><a href="http://kejichu.bnu.edu.cn/kyjd/kyjg/bjszdsys/140216.html" target="_blank">神经影像大数据与人脑连接组学北京市重点实验室 </a></li>
+				  				  				                    <li><a href="http://beiklerdc.bnu.edu.cn/" target="_blank">环境遥感与数字城市北京市重点实验室 </a></li>
+				  				  				                    <li><a href="http://kejichu.bnu.edu.cn/kyjd/kyjg/bjszdsys/51451.html" target="_blank">中药资源保护与利用北京市重点实验室 </a></li>
+				  				  				                    <li><a href="http://kejichu.bnu.edu.cn/kyjd/kyjg/bjszdsys/52085.html" target="_blank">基因工程药物及生物技术北京市重点实验室 </a></li>
+				  				  				                    <li><a href="http://kejichu.bnu.edu.cn/kyjd/kyjg/bjszdsys/52087.html" target="_blank">教育技术学北京市重点实验室 </a></li>
+				  				  				                    <li><a href="http://kejichu.bnu.edu.cn/kyjd/kyjg/bjszdsys/52088.html" target="_blank">文化遗产数字化保护与虚拟现实北京市重点实验室 </a></li>
+				  				              </ul>
+			            <div class="sec-conHeader"><a>北京市工程中心</a></div>
+            <ul>
+            	  				                    <li><a href="http://cless.bnu.edu.cn/" target="_blank">生态服务产业规划与设计北京高等学校工程研究中心 </a></li>
+				  				  				                    <li><a href="http://env.bnu.edu.cn/ptjs/bjsgcjzyjzx/" target="_blank">北京市流域环境生态修复与综合调控工程技术研究中心  </a></li>
+				  				  				                    <li><a href="http://kejichu.bnu.edu.cn/kyjd/kyjg/bjsgczx/140219.html" target="_blank">北京市陆表遥感数据产品工程技术研究中心  </a></li>
+				  				  				                    <li><a href="http://kejichu.bnu.edu.cn/kyjd/kyjg/bjsgczx/98474.html" target="_blank">北京市防沙治沙工程技术中心  </a></li>
+				  				              </ul>
+			            <div class="sec-conHeader"><a>北京市哲学社会科学研究基地</a></div>
+            <ul>
+            	  				                    <li><a href="http://bjwhfzyjy.bnu.edu.cn/" target="_blank">北京文化发展研究基地</a></li>
+				  				  				                    <li><a href="http://www.ciee.bnu.edu.cn/" target="_blank">首都教育经济研究基地</a></li>
+				  				              </ul>
+			            <div class="sec-conHeader"><a>北京市语言文字工作委员会研究基地</a></div>
+            <ul>
+            	  				  				  <li><a>北京语言文化建设研究中心</a></li>
+				  				              </ul>
+			            <div class="sec-conHeader"><a>中国文联文评论基地</a></div>
+            <ul>
+            	  				  				  <li><a>中国文艺评论基地</a></li>
+				  				              </ul>
+			            <div class="sec-conHeader"><a>北京教育法制研究基地</a></div>
+            <ul>
+            	  				  				  <li><a>北京教育法治研究基地</a></li>
+				  				              </ul>
+			            <div class="sec-conHeader"><a>北京市高精尖创新中心</a></div>
+            <ul>
+            	  				  				  <li><a>“未来教育”高精尖创新中心 </a></li>
+				  				              </ul>
+			            <div class="sec-conHeader"><a>北京市新型智库</a></div>
+            <ul>
+            	  				                    <li><a href="http://www.bicic.org/" target="_blank">首都文化创新与传播研究院</a></li>
+				  				              </ul>
+			        </div>
+    </div>
+	<div class="sub-section clear">
+        <div class="sec-title sec-title02">
+            <a>
+              <h3 class="item-txt02">其他省部级科研平台</h3>
+            </a>
+        </div>
+        <div class="sec-con">
+            <ul>
+            	  				  				  <li><a>北京高校中国特色社会主义理论研究协同创新中心</a></li>
+				  				  				                    <li><a href="http://sjc.bnu.edu.cn/zdsys/index.html" target="_blank"> “新闻出版大数据用户行为跟踪与分析”新闻出版业科技与标准重点实验室 </a></li>
+				  				  				                    <li><a href="http://kejichu.bnu.edu.cn/kyjd/kyjg/qt/145540.html" target="_blank">防灾减灾与可持续发展国家国际科技合作基地  </a></li>
+				  				  				                    <li><a href="http://kejichu.bnu.edu.cn/kyjd/kyjg/qt/140231.html" target="_blank">国家林业局东北虎豹监测与研究中心  </a></li>
+				  				  				                    <li><a href="http://kejichu.bnu.edu.cn/kyjd/kyjg/qt/98481.html" target="_blank">脑科学与认知科学教育部网上合作中心  </a></li>
+				  				  				                    <li><a href="http://lenp.bnu.edu.cn/" target="_blank">北京市辐射中心  </a></li>
+				  				  				                    <li><a href="http://kejichu.bnu.edu.cn/kyjd/kyjg/qt/51611.html" target="_blank">高等学校蛋白质组学研究院  </a></li>
+				  				  				                    <li><a href="http://www.sdtjpt.gov.cn/news/detail/423.html" target="_blank">首都科技条件平台—北京师范大学研发试验服务基地 </a></li>
+				  				              </ul>
+        </div>
+    </div>
+</section>
+<!--content结束-->
+<!--footer开始-->
+<a href="#" class="goTop">TOP</a>
+
+<footer class="footer">	<span>&copy; 版权所有 北京师范大学 </span> <strong>|</strong>    <span>地址：北京市新街口外大街19号 &nbsp;&nbsp; 邮编：100875 </span><strong>|</strong>    <span>京ICP备05066832号-1   京公网安备110402430002号</span><strong>|</strong>    <span class="tel">电话查号台：010-58806183  </span></footer><!--<script src="../js/modernizr.js"></script>    -->      
+<!--footer结束-->
+<!-- 通用JS -->
+<!-- 通用JS -->
+<script type="text/javascript" src="../js/jquery-1.9.0.min.js"></script>
+<script type="text/javascript" src="../js/comm.js"></script>
+<script type="text/javascript" src="../js/script.js"></script>
+<script type="text/javascript">
+$(function() {
+    Nav('#nav')//导航
+    SerMax()//搜索
+    //ImgHeight()//banner图片高度
+    mobideMenu()// 移动端主导航
+	//subLeft();//侧边栏三级菜单
+	// Menu('.phone-icon01 .mobile-inner-header-icon','.sub_navm');//移动端二级导航
+     subBanner()
+}); 
+
+</script>
+
+
+</body></html>

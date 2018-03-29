@@ -9,6 +9,7 @@ namespace XiaoyaIndexer
     {
         Task CreateIndexAsync();
         void StopIndex();
+        void WaitAll();
         bool IsWaiting { get; }
     }
 }

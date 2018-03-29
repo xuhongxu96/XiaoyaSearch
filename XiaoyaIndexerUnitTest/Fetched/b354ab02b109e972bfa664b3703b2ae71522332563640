@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>北京师范大学继续教育与教师培训学院</title>
+<link href="/css/css_new.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="/js/jq.js"></script>
+<script type="text/javascript" src="/js/all.js"></script>
+<script type="text/javascript" src="/js/global.js"></script>
+<script type="text/javascript" src="/js/tab.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?a63be64105f51ec16d5e9f3579a76476";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<script type="text/javascript">
+        $(function () {
+            var $window = $(window),
+			window_width = 1002;
+            $('#js_banner, #js_banner_img li').width(window_width);
+            startFrame = 0;
+
+            new $.Tab({/*添加圆点按钮*/
+                target: $('#js_banner_img li'),
+                effect: 'slide3d',
+                animateTime: 1000,
+                stay: 9000,
+                playTo: startFrame,
+                autoPlay: true,
+                merge: true,
+                prevBtn: $('#js_banner_pre'),
+                nextBtn: $('#js_banner_next')
+            });
+            $('#js_banner_img').css('left', '-' + (window_width * startFrame) + 'px');
+        })
+        function refresh() {
+            window.location.reload();
+        }
+        setTimeout('refresh()', 1200000); //指定20分钟刷新一次
+    </script>
+</head>
+<!-- 2018-3-29 15:53:19-->
+<body>
+<div class="header">
+  <!-- 2018-3-29 15:53:19-->
+<div class="search pos_re">
+    <a href="/" class="logo_link" title="北京师范大学继续教育与教师培训学院"></a><p><span style="padding-top: 5px; padding-right: 5px;"><a href="/index_en.shtml">ENGLISH</a></span> </p><p><span><input id="searchtext" type="text" class="search_txt" onkeydown=" return EnterPress(event)" />
+      <img src="/images/search_btn.jpg" onclick="SearchGo15351()" style="cursor:point;display:inline"/>
+<script>function SearchGo15351(){if(document.getElementById('searchtext').value==''){ alert('请填写关键字');return false;}window.location.href='/search.aspx?type=news&tags='+escape(document.getElementById('searchtext').value)+'';}function EnterPress(e){ var keynum; if (window.event){  keynum = e.keyCode; } else if (e.which) { keynum = e.which; } if(e.keyCode == 13){  SearchGo15351(); return false;}}</script></span><p></div>
+</div>
+<div class="warp">
+  <!-- 2018-3-29 15:53:19-->
+<div class="nav"><ul><li><a href="/index.shtml">首页</a></li>
+      <li class="lib">学院概况
+        <ul>
+  <li><a href=/news/2015421/n03351123.shtml>学院简介</a></li>
+  <li><a href=/news/2015421/n94061125.shtml>历史沿革</a></li>
+  <li><a href=/news/2015421/n47961124.shtml>院长寄语</a></li>
+  <li><a href=/news/201553/n36712550.shtml>现任领导</a></li>
+  <li><a href=/news/2015421/n71901126.shtml>发展愿景</a></li>
+  <li><a href=/news/2015515/n05842652.shtml>组织结构</a></li></ul>
+      </li>
+      <li class="lib">学历教育
+        <ul>
+  <li><a href=http://www.sne.bnu.edu.cn/elms/bnude/homepage/first.jsp target="_blank">网络高等学历教育</a></li>
+  <li><a href=http://www.sce.bnu.edu.cn/ target="_blank">成人高等学历教育</a></li>
+  <li><a href=/news/2015424/n94941139.shtml target="_blank">高等教育自学考试</a></li></ul>
+      </li>
+      <li class="lib t">非学历教育
+           <ul>
+  <li><a href=/news/2015424/n15981144.shtml target="_blank">中国好老师发展中心</a></li>
+  <li><a href=http://www.eduedp.com/ target="_blank">北师大EDP中心</a></li>
+  <li><a href=http://www.scett.bnu.edu.cn/news/2017118/n11093228_1.shtml target="_blank">北京师范大学中华文明传播中心</a></li>
+  <li><a href=/news/2015109/n69482767.shtml target="_blank">北师大中国教育扶贫研究中心</a></li></ul>      </li>
+<li class="lib">访学进修
+        <ul style="width:250px;"><li><a href="/news/jxjszsjz/index.shtml" target="_blank">进修教师招生简章 </a></li><li><a href="/news/2017324/n84483087.shtml" target="_blank">进修教师培养表格下载</a></li></ul>      </li>
+      <li class="lib">国际教育
+        <!--<ul style="width:250px;"><li><a href="http://guoji.scett.bnu.edu.cn" target="_blank">英国高等教育文凭项目（HND）</a></li><li><a href="http://pitts.scett.bnu.edu.cn/index.html" target="_blank">北京师范大学中美双校园联合培养预备项目</a></li><li><a href="http://efp.scett.bnu.edu.cn/" target="_blank">北京师范大学法国精英高校直通车项目</a></li><li><a href="http://www.bnufd.cn/" target="_blank">北京师范大学英澳留学预科项目</a></li></ul>-->
+      </li>
+      <li class="lib">党群工作
+        <ul class="pos_nav">
+          <li><a href="/news/djdt/index.shtml">党建工作</a></li>
+          <li><a href="/news/ghxw/index.shtml">工会工作</a></li>
+        </ul></li></ul>
+<ul class="pos_nav"><li style="border-right:none; padding:0; margin:0; color:#fff"><a href="/news/201557/n20652606.shtml">国内合作</a>　|　<a href="/news/2015424/n64021166.shtml">公益事业</a>　|　<a href="/news/2015426/n25422548.shtml">国际合作</a></li></ul>
+</div>
+  <div class="pic_js">
+    <div class="banner_common"> <a id="js_banner_pre" href="javascript:;" class="banner_pre"></a> <a id="js_banner_next" href="javascript:;" class="banner_next"></a> </div>
+    <div class="banner" id="js_banner">
+      <ul id="js_banner_img" class="banner_img clear">
+<li><div class="child child1" data-z="1"><img src="/files/images/1.jpg" /></div></li><li><div class="child child1" data-z="1"><img src="/files/images/2.jpg" /></div></li><li><div class="child child1" data-z="1"><img src="/files/images/3.jpg" /></div></li><li><div class="child child1" data-z="1"><img src="/files/images/4.jpg" /></div></li><li><div class="child child1" data-z="1"><img src="/files/images/5.jpg" /></div></li><li><div class="child child1" data-z="1"><img src="/files/images/6.jpg" /></div></li><li><div class="child child1" data-z="1"><img src="/files/images/7.jpg" /></div></li><li><div class="child child1" data-z="1"><img src="/files/images/8.jpg" /></div></li><li><div class="child child1" data-z="1"><img src="/files/images/9.jpg" /></div></li>        
+           </ul>
+    </div>
+  </div>
+  <div class="main clearfix">
+    <div class="news bg_img_no">
+      <h3>学院新闻<a href="/news/xyxw/index.shtml" target="_blank">更多</a></h3>
+      <dl>
+        <dt class="blue"><a href="/news/2018115/n13603254.shtml">“品读经典•无私奉献”2018新年会讲举行</a></dt>
+        <dd><a href="/news/2018329/n74533278.shtml">2017年云南省卓越职业院校校长专题研...</a><span>2018-03-29</span></dd><dd><a href="/news/2018319/n92713276.shtml">学院召开学习《关于全面深化新时代教...</a><span>2018-03-16</span></dd><dd><a href="/news/201838/n88303273.shtml">继续教育与教师培训学院新学期工作研...</a><span>2018-03-08</span></dd><dd><a href="/news/201832/n03813272.shtml">周作宇副校长到继续教育与教师培训学...</a><span>2018-03-02</span></dd><dd><a href="/news/201832/n60153271.shtml">王守军副校长到继续教育与教师培训学...</a><span>2018-03-02</span></dd><dd><a href="/news/2018124/n36803259.shtml">周作宇副校长出席继续教育与教师培训...</a><span>2018-01-22</span></dd><dd><a href="/news/2018329/n89983277.shtml">北京师范大学“垣曲县基础教育质量整...</a><span>2018-01-19</span></dd>
+      </dl>
+    </div>
+    <div class="news">
+      <h3>招生信息<a href="/news/zsxx/index.shtml" target="_blank">更多</a></h3>
+      <dl>
+        <dt class="blue"><a href="/news/2017327/n71053103.shtml">北京师范大学2017－2018学年进修教师招生...</a></dt>
+        <dd><a href="/news/20171023/n09553220.shtml">北京师范大学网络学历教育2018年春季...</a><span>2017-10-01</span></dd><dd><a href="/news/20171023/n68213218.shtml">北京师范大学网络学历教育2017年秋季...</a><span>2017-05-01</span></dd><dd><a href="/news/20171020/n22353217.shtml">北京师范大学网络学历教育2017年春季...</a><span>2016-11-01</span></dd><dd><a href="/news/20171020/n85723216.shtml">北京师范大学网络学历教育2016年秋季...</a><span>2016-05-01</span></dd><dd><a href="/news/201641/n55382857.shtml">北京师范大学2016—2017学年进修教师...</a><span>2016-04-01</span></dd><dd><a href="/news/2016324/n15432851.shtml">北京师范大学网络教育2016年招生简章</a><span>2016-03-24</span></dd><dd><a href="/news/201558/n19742633_1.shtml">2015年成人高等学历教育招生简章</a><span>2015-05-08</span></dd>      </dl>
+    </div>
+    <div class="news" id="tz">
+      <h3>通知公告<a href="/news/tzgg/index.shtml" target="_blank">更多</a></h3>
+      <dl>
+        <dt class="blue"><a href="/news/2018313/n79943274.shtml">诚聘英才，虚位以待</a></dt>
+        <dd><a href="/news/2018228/n96933270.shtml">继续教育与教师培训学院培训项目公示</a><span>2018-02-28</span></dd><dd><a href="/news/201826/n64993260.shtml">关于停止举办留学预科项目的声明</a><span>2018-02-03</span></dd><dd><a href="/news/2018313/n92013275.shtml">副高职称以上骨干人员招聘启事</a><span>2017-09-02</span></dd><dd><a href="/news/201766/n15963135.shtml">师资博士后或人事代理骨干人员招聘启...</a><span>2017-09-01</span></dd><dd><a href="/news/2017829/n77843168.shtml">纪念习近平总书记“9·9”讲话三周年...</a><span>2017-08-29</span></dd><dd><a href="/news/20151120/n87942795.shtml">招聘项目主管启事</a><span>2015-11-20</span></dd><dd><a href="/news/2017621/n49633147.shtml">北京师范大学2017－2018学年进修教师...</a><span>2017-06-21</span></dd>        </dl>
+    </div>
+    <div class="body_bg"> </div>
+  </div>
+    <div class="main mar_t_46 sy_btm_jt">
+            <div class="fzzx">
+                <div style="width: 638px; float: left">
+                       
+<div class="tp_div">   <a href="/news/20171227/n32413236_1.shtml" target="_blank"><img src="/files/zhaop-1226.jpg"  width="309" height="210" /></a>
+        <div class="tp_txt">
+          <h4><a href="/news/20171227/n32413236_1.shtml" target="_blank"  title="“中华文化涵养师德”区域模式探索拉开序幕 ——京师好老师生命成长营第6期成功举行">“中华文化涵养师德”区域模式探索拉开序幕 ——京师...</a></h4>      
+                 </div> 
+<p class="tab"><a href="/news/201657/n80252911.shtml" target="_blank">中华文明传播中心</a></p>  
+      </div>  
+
+  
+<div class="tp_div">   <a href="/news/2017416/n26293108.shtml" target="_blank"><img src="/comm/ueditor/net/upload/2017-04-13/92ac8f40-a108-4b91-8345-49bec35fa7be.jpg"  width="309" height="210" /></a>
+        <div class="tp_txt">
+          <h4><a href="/news/2017416/n26293108.shtml" target="_blank"  title="第六期“园丁计划—中国关心下一代教育示范基地校长、教师研修班”在我校开班">第六期“园丁计划—中国关心下一代教育示范基地校长、...</a></h4>      
+                 </div> 
+<p class="tab"><a href="/news/2015424/n15981144.shtml" target="_blank">中国好老师发展中心</a></p>  
+      </div> 
+        
+
+   
+<div class="tp_div">   <a href="/news/201697/n17332973.shtml" target="_blank"><img src="/files/images/banner-e-learning-1.jpg"  width="309" height="210" /></a>
+        <div class="tp_txt">
+          <h4><a href="/news/201697/n17332973.shtml" target="_blank"  title="传统文化教育—网络教育特色专业推介">传统文化教育—网络教育特色专业推介</a></h4>      
+                 </div> 
+<p class="tab"><a href="/news/201697/n17332973.shtml" target="_blank">网络高等学历教育</a></p>  
+      </div>     
+  
+
+         
+<div class="tp_div">   <a href="/news/20161019/n26543009.shtml" target="_blank"><img src="/files/6ed1a969-e224-4f53-a548-e5d6531bfbee1.jpg"  width="309" height="210" /></a>
+        <div class="tp_txt">
+          <h4><a href="/news/20161019/n26543009.shtml" target="_blank"  title="阻断贫困代际传递，做中国教育扶贫的先行者 ——北京师范大学教育蓝皮书《中国教育扶贫报告（2016年）》通过专家鉴定">阻断贫困代际传递，做中国教育扶贫的先行者 ——北京...</a></h4>      
+                 </div>
+<p class="tab"><a href="/news/fpyjzxdt1/index.shtml" target="_blank">中国教育扶贫研究中心</a></p> 
+      </div>     
+      
+                </div>
+                <div style="float: right; width: 335px;">
+<!--
+ <div class="tp_div">
+                    <div class="no_tp_txt">
+                        <ul>
+                            <li>
+                                <a href="/news/2017619/n12193145.shtml" target="_blank">◇ 北京师范大学法国精英高校直通车项目</a></li>
+                        </ul>
+                    </div>-->
+                   <!--<img src=''   class="tu" />-->
+                   <!-- <p class="tab">
+                        <a href="/news/jz/index.shtml" target="_blank">国际教育</a></p>
+                </div>-->
+<div class="tp_div">   <a href="/news/2017921/n50863200.shtml" target="_blank"><img src="/files/封面.jpg"  width="309" height="210" /></a>
+        <div class="tp_txt">
+          <h4><a href="http://www.eduedp.com/" target="_blank"  title="北京师范大学高级管理者发展中心简介">北京师范大学高级管理者发展中心简介...</a></h4>      
+                 </div> 
+<p class="tab"><a href="http://www.eduedp.com/" target="_blank">EDP中心</a></p>  
+      </div>
+                           <div class="tp_div">
+                    <div class="no_tp_txt">
+                        <ul>
+                            <li>
+                                <a href="http://www.ccf.edu.cn/" target="_blank">◇ 教育部高等学校师资培训交流北京中心</a></li><li>
+                                <a href="http://www.tuchina.org/" target="_blank">◇ 全国教师教育网络联盟</a></li><li>
+                                <a href="http://www.jszg.edu.cn/" target="_blank">◇ 教育部教师资格认定指导中心</a></li><li>
+                                <a href="/news/zjxw/index.shtml" target="_blank">◇ 全国重点建设职业教育师资培训基地</a></li>
+                        </ul>
+                    </div>
+     <!-- <img src=''   class="tu" />-->
+
+                    <p class="tab">
+                        <a href="/news/zjxw/index.shtml" target="_blank">教育部后援机构</a></p>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- 2018-3-29 15:53:19-->
+<div class="footer mar_t_46"><div class="footer_x">
+  <span class="fd bottom_logo"><strong>继续教育与教师培训学院 对外项目合作</strong><br>
+    电话： 86-10-58804611 或 86-10-58800181 邮箱：mengzhidui@scett.bnu.edu.cn<br>
+<strong>继续教育与教师培训学院 评估与督导办公室</strong><br>
+    电话： 86-10-58800992  邮箱：dudaoban@scett.bnu.edu.cn<br>
+    地址：北京市海淀区学院路南路12号京师科技大厦A座<br>
+    <br>
+    <font style="font-size:12px">版权所有 北京师范大学继续教育与教师培训学院 京ICP备05069600号<br>
+    Site designed by XITUNG<font>
+    </span>
+    <span class="fd" style="padding-top:50px;"><font style=" line-height:35px;font-size:16px"><b>友情链接</b></font>
+    <br>
+    </strong><a href="http://www.moe.edu.cn/" target="_blank">中华人民共和国教育部</a><br><a href="http://www.bnu.edu.cn/" target="_blank">北京师范大学</a><br><a href="http://english.bnu.edu.cn/" target="_blank">Beijing Normal University</a><br><span>
+  </div>
+  </div>
+	<script>$(function(){
+var a = $(".dqwz").eq(0).html();
+if(a)
+if(a.indexOf('学院新闻')==-1 &&a.indexOf('通知公告')==-1&&a.indexOf('招生信息')==-1)
+if(a.length>85){
+a = a.substr(0,85)+"...";
+$(".dqwz").eq(0).html(a);
+}
+});</script>
+<script type="text/javascript">
+$(function(){
+
+	$("#tz dt a").css("color","red");
+	$("#tz dd:eq(0) a").css("color","red");
+
+});
+
+</script>
+</body>
+</html>
+<!--网站设计制作 茜堂文化传媒（北京）有限公司-->

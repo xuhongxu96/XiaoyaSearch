@@ -8,7 +8,7 @@ namespace XiaoyaStore.Store
     {
         int Count();
         void Init(IEnumerable<string> initUrls);
-        void Restart();
+        void RestartCrawl();
         UrlFrontierItem PopUrlForCrawl(bool strictPlannedTime = true);
         UrlFrontierItem LoadByUrl(string url);
         UrlFrontierItem Push(string url);

@@ -1,0 +1,1011 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>北京师范大学信息网络中心</title>
+    <link rel="stylesheet" href="http://info.bnu.edu.cn/css/jquery.bxslider.css">
+    <link rel="stylesheet" href="http://info.bnu.edu.cn/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://info.bnu.edu.cn/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="http://info.bnu.edu.cn/css/reset.css">
+    <link rel="stylesheet" href="http://info.bnu.edu.cn/css/style.css">
+    <style>
+         html{width:100%;}
+        #xinwenkk{
+           transition: all .3s linear; 
+        }
+        
+        #xinwenkk:hover{
+            box-shadow:4px 4px 4px #ccc;
+        }
+        .moree {
+            display: block;
+            width: 60px;
+            height: 30px;
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+        }
+        .content11h a {
+            display: block;
+            float: right;
+            margin-top: 0px;
+        }
+        #cc2{
+            display:none;
+        }
+        
+            .navfirst{
+                display:block;
+            }
+            .navbar{
+                display:none;
+            }
+        
+        li.zxjjdsj{
+            height:60px;
+        }
+        
+        
+        #cc1{
+            display:none;
+        }
+        #cc3 {
+            display: block;
+            position: static;
+            background: #CBDFEA;
+            height: 96px;
+            width:1170px;
+            margin:0 auto;
+        }
+        .cc2f{
+            width:100%;
+            display: block;
+            background:#CBDFEA;
+        }
+        .cc1topf {
+            float: left;
+            margin: 3px 58px 6px 58px;
+        }
+        .content3r {
+            width: 375px;
+        }
+        
+        
+        .headerf{
+            height:150px;
+        }
+        .header img{
+            width:600px;
+            margin-top:10px;
+        }
+        .navs li a {
+            padding: 13px 55px 13px 53px;
+        }
+        p.apap{
+            float:right;
+        }
+        
+        .carousel-caption {
+            background: #333;
+            background: rgba(0,0,0,0.55);
+        }
+        
+        @media screen and (max-width: 1200px) {
+            .header{
+                width:80%;
+            }
+            .navs{
+                width:82%;
+                height:100%;
+            }
+            
+            .navs li a {
+                display: block;
+                padding: 13px 0px 13px 0px;
+                font-size: 16px;
+                color: white;
+                transition: all .3s linear;
+                text-align:center;
+            }
+            .navs li{
+                width:14%;
+            }
+            #cc1{
+                display:none;
+            }
+            .content3{
+                width:810px;
+                height:100%;
+                margin-bottom:40px;
+                padding-bottom:10px;
+            }
+            .content3l {
+                width:810px;
+            }
+            .content3r{
+                width:800px;
+                height:470px;
+            }
+            .xinwenka{
+                float:left;
+                margin:20px 50px 0px 50px;
+            }
+            #content112{
+                width:796px;
+            }
+            #content11h{
+                width:740px;
+            }
+            #content11h p {
+                width: 700px;
+            }
+            .cc2f{
+                display:none;
+            }
+            #cc3{
+                display:none;
+            }
+            #cc2{
+                display:block;
+                position:static;
+                background:#CBDFEA;
+                height:96px;
+            }
+            .cc1topf{
+                width:14%;
+                text-align:center;
+            }
+            .cc1topf {
+                float: left;
+                margin: 3px 14px 6px 10px;
+            }
+            
+            .cc1top{
+                margin:0 auto;
+            }
+            div.cc1topf p{
+                margin:0 auto;
+            }
+            li.zxjjf:hover .zxjj{
+                display:none;
+            }
+            .footer1{
+                width:800px;
+            }
+            .footerimg{
+                height:40px;
+                width:400px;
+            }
+            .fwdt{
+                width:300px;
+                height:30px;
+                font-size:13px;
+                margin-top:40px;
+            }
+            .dizhi{
+                width:320px;
+            }
+            .zhbg{
+                width:300px;
+                font-size:13px;
+            }
+            #content111{
+                margin-right:0px;
+            }
+            div.content111{
+                margin-right:20px!important;
+            }
+        }
+        
+/*        950px宽度下的样式*/
+        @media screen and (max-width: 950px){
+            .cc1topf{
+                width:13%;
+                text-align:center;
+            }
+            .navvv{
+                height:278px;
+                background:#01487C;
+            }
+            .navvv>li>a{
+                background:white;
+                color:deepskyblue;
+                font-size:14px;
+            }
+            .navbar{
+                margin-bottom:0px;
+            }
+            .containernav{
+                background:#01487C;
+            }
+            .navbar-inner{
+                background:#01487C;
+                border: 0px solid #d4d4d4;
+            }
+            .navbar .brand{
+                color:white;
+                font-family:'微软雅黑';
+            }
+            
+            .navfirst{
+                display:none;
+            }
+            .navbar{
+                display:block;
+            }
+        }
+        
+        /*        810px以下宽度的内容部分的变化*/
+        @media screen and (max-width: 810px){
+            .content3{
+                width:100%;
+            }
+            .content3l {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            .content3lsev{
+                width:90%;
+                margin:0 auto;
+                height:1040px;
+            }
+            .sevicehc3hh{
+                width:320px;
+                height:155px;
+                border-top: 0px dashed #008CFD;
+                border-bottom: 0px dashed #008CFD;
+            }
+            .tel{
+                margin-left:40px;
+                height:20px;
+                margin-top:15px;
+            }
+            .sevicehff{
+                width:100%;
+                border-top: 1px dashed #008CFD;
+                border-bottom: 1px dashed #008CFD;
+            }
+            div.sevicec{
+                margin:0 auto!important;
+                float:none;
+                margin-top:40px!important;
+            }
+            .sevicecf{
+                width:100%;
+                overflow:hidden;
+                height:260px;
+            }
+            
+            #content111{
+                width:90%;
+                float:none;
+                margin:0 auto!important;
+                margin-top: 20px!important;
+            }
+            .content11h{
+                width:90%;
+                margin-right:30px;
+            }
+            .content11c li{
+                width:100%;
+            }
+            .content11c ul{
+                width:100%;
+            }
+            .content11c{
+                width:auto;
+                margin-right:35px;
+            }
+            #content111 .content11h div{
+                display:none;
+            }
+            .content11h a {
+                display: block;
+                float: right;
+                margin-top: 35px;
+            }
+            #content112 .content11h a {
+                margin-top: 0px;
+            }
+            
+            
+            
+            /*新闻动态部分*/
+            .content3r {
+                width: 90%;
+                height: 840px;
+                margin: 0 auto!important;
+                margin-top: 30px!important;
+                z-index:2;
+                float:none;
+                clear:both;
+            }
+            #content112 {
+                width: 99%;
+            }
+            #content11h {
+                width: 90%;
+            }
+            #content11h p {
+                width: 95%;
+            }
+            .xinwenka{
+                float:none;
+                margin:0 auto;
+                margin-top:30px;
+            }
+            
+            /*footer部分*/
+            .footer1{
+                width:320px;
+            }
+            .footerimg{
+                margin-top:25px;
+            }
+            .fwdt{
+                margin-top:15px;
+            }
+            /*header改动*/
+            .header3{
+                display:block;
+                margin-top:20px;
+                font-family:Microsoft YaHei;
+            }
+            .headerf {
+                height: 100%;
+                padding: 20px 0;
+            }
+            span.header3span {
+                margin-right: 2px;
+                margin-left: 2px;
+            }
+        }
+        
+        @media screen and (max-width: 705px){
+            .cc1top img,.cc1top{
+                width:50px;
+                height:50px;
+            }
+            #cc2{
+                height:70px;
+            }
+            .cc1topf{
+                width:16%;
+                margin:0px;
+            }
+			
+			.footer{
+				height: 194px;
+			}
+			.dizhi{
+				height:74px;
+			}
+			.dizhi2 {
+				float: left;
+				margin-top: 10px;
+			}
+            
+        }
+        
+        @media screen and (max-width: 500px){
+            .cc1top img,.cc1top{
+                width:50px;
+                height:50px;
+            }
+            #cc2{
+                height:140px;
+            }
+            .cc1topf{
+                width:32%;
+                margin:0px;
+            }
+            .carousel-caption {
+                background: #333;
+                background: rgba(0,0,0,0.75);
+            }
+        }
+        @media screen and (max-width: 420px){
+            
+            .content11hp {
+                width: 180px;
+            }
+            p.apap {
+                display: none;
+            }
+        }
+        @media screen and (max-width: 340px){
+            .content3lsev {
+                width: 100%;
+            }
+            #content111 {
+                width: 100%;
+            }
+            .content3r{
+                width:100%
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+                <div class="headerf">
+            <div class="header">
+                <img src="http://info.bnu.edu.cn/logogai5.png" alt="">
+<!--                <p class="header2">信息网络中心</p>-->
+                <p class="header3 header32"><a href="http://www.bnu.edu.cn/" target="_blank">师大主页</a>
+                <span class="header3span">|</span>
+                <a href="http://info.bnu.edu.cn/eng/" class="header3a" target="_blank">English</a>
+                <span class="header3span">|</span>
+                </p>
+            </div>
+        </div>
+        
+        <div class="nav navfirst">
+            <div class="navs">
+                <ul>
+                    <li><a href="">首&nbsp;&nbsp;页</a></li>
+                    <li class="zxjjf">
+                       <a href="zxjj" class="zxjjf2" target="_blank">中心简介</a>
+                        <ul class="zxjj">
+                            <li><a href="zxjj/jgsz" target="_blank">机构设置</a></li>
+                            <li class="zxjjdsj"><a href="zxjj/xwsjglzx" target="_blank">校务数据管理中心（挂靠）</a></li>
+                             <li><a href="zxjj/dsj" target="_blank">大事记</a></li>
+                        </ul>
+                    
+                    </li>
+                    <li><a href="gzzd" target="_blank">规章制度</a></li>
+                    <li><a href="http://security.bnu.edu.cn" target="_blank">网络安全</a></li>
+                    <li class="zxjjf"><a href="xzzx/wlfw" class="zxjjf2" target="_blank">下载中心</a>
+                        <ul class="zxjj">
+                            <li><a href="xzzx/wlfw">网络服务</a></li>
+                            <li><a href="xzzx/xxfw">信息服务</a></li>
+                            <li><a href="xzzx/xyqfw">校园卡服务</a></li>
+                            <li><a href="xzzx/sjfw">数据服务</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="jsnb" target="_blank">信息化年报</a></li>
+                    <li><a href="lxwm" target="_blank">联系我们</a></li>
+                </ul>
+            </div>
+        </div>   
+           
+            <div class="navbar">
+              <div class="navbar-inner">
+                <div class="container containernav">
+
+                  <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+                  <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </a>
+
+                  <!-- Be sure to leave the brand out there if you want it shown -->
+                  <a class="brand" href="#">信息网络中心</a>
+
+                  <!-- Everything you want hidden at 940px or less, place within here -->
+                  <div class="nav-collapse collapse">
+                    <!-- .nav, .navbar-search, .navbar-form, etc -->
+                        <ul class="nav navvv">
+                          <li class="active"><a href="http://info.bnu.edu.cn/">首页</a></li>
+                          <li><a href="zxjj" target="_blank">中心简介</a></li>
+                          <li><a href="gzzd" target="_blank">规章制度</a></li>
+                          <li><a href="http://security.bnu.edu.cn" target="_blank">网络安全</a></li>
+                          <li><a href="xzzx/wlfw" target="_blank">下载中心</a></li>
+                          <li><a href="jsnb" target="_blank">信息化年报</a></li>
+                          <li><a href="lxwm" target="_blank">联系我们</a></li>
+                        </ul>
+                  </div>
+
+                </div>
+              </div>
+            </div> 
+           
+        <div class="banner">
+            <div id="myCarousel" class="carousel slide">
+                  <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                  </ol>
+                  <!-- Carousel items -->
+                  <div class="carousel-inner">
+                                                        
+                                    
+                                    <div class="item active">
+                                        <img src="images/content/2017-05/20170503104744529543.jpg">
+                                        <div class="carousel-caption">
+                                         <a href="https://wifi.bnu.edu.cn"><h4>            师大美 无线好 
+    </h4></a> 
+                                        </div>
+                                    </div>
+                                    
+                    
+                                        
+                                                        
+                                    
+                                    <div class="item">
+                                        <img src="images/content/2017-05/20170503104936998666.jpg">
+                                        <div class="carousel-caption">
+                                          <a href="http://info.bnu.edu.cn/gzdt/83636.html"><h4>            信息网络中心召开网络安全与信息化工作研讨会 
+    </h4></a> 
+                                        </div>
+                                    </div>
+                                    
+                    
+                                                        
+                                    
+                                    <div class="item">
+                                        <img src="images/content/2017-04/20170414143724522408.jpg">
+                                        <div class="carousel-caption">
+                                          <a href="sydt/83665.html"><h4>            如果你也相信IT的力量  欢迎加入我们  成为学生IT服务助理 
+    </h4></a> 
+                                        </div>
+                                    </div>
+                                    
+                    
+                                        
+                  </div>
+                  <!-- Carousel nav -->
+                  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+                  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+                  
+                  <div class="carousel-caption" id="cc1">
+                        
+                           
+                                                <a href="http://one.bnu.edu.cn" target="_blank">
+                        <div class="cc1topf">
+                           <div class="cc1top">
+                               <img src="images/content/2017-04/20170414160257831656.png" alt="">
+                           </div>
+                           <p>            信息门户 
+    </p>
+                        </div>
+                        </a>
+                                                <a href="http://weixin.bnu.edu.cn/" target="_blank">
+                        <div class="cc1topf">
+                           <div class="cc1top">
+                               <img src="images/content/2017-05/20170511174349412799.png" alt="">
+                           </div>
+                           <p>            微信门户 
+    </p>
+                        </div>
+                        </a>
+                                                <a href="http://software.bnu.edu.cn/" target="_blank">
+                        <div class="cc1topf">
+                           <div class="cc1top">
+                               <img src="images/content/2017-04/20170414160201318459.png" alt="">
+                           </div>
+                           <p>            正版软件 
+    </p>
+                        </div>
+                        </a>
+                                                <a href="http://vpn2.bnu.edu.cn/" target="_blank">
+                        <div class="cc1topf">
+                           <div class="cc1top">
+                               <img src="images/content/2017-05/20170511171841634487.png" alt="">
+                           </div>
+                           <p>            SSL VPN 
+    </p>
+                        </div>
+                        </a>
+                                                <a href="https://sdyp.bnu.edu.cn/" target="_blank">
+                        <div class="cc1topf">
+                           <div class="cc1top">
+                               <img src="images/content/2017-05/20170511172359704544.png" alt="">
+                           </div>
+                           <p>            师大云盘 
+    </p>
+                        </div>
+                        </a>
+                                                <a href="http://card.bnu.edu.cn/" target="_blank">
+                        <div class="cc1topf">
+                           <div class="cc1top">
+                               <img src="images/content/2017-05/20170512093301424107.png" alt="">
+                           </div>
+                           <p>            校园卡 
+    </p>
+                        </div>
+                        </a>
+                                                
+                        
+                  </div>
+                  
+            </div>
+        </div>
+        
+        <div class="cc2f">
+                  <div class="carousel-caption" id="cc3">
+                            
+                                                <a href="http://one.bnu.edu.cn" target="_blank">
+                        <div class="cc1topf">
+                           <div class="cc1top">
+                               <img src="images/content/2017-04/20170414160257831656.png" alt="">
+                           </div>
+                           <p>            信息门户 
+    </p>
+                        </div>
+                        </a>
+                                                <a href="http://weixin.bnu.edu.cn/" target="_blank">
+                        <div class="cc1topf">
+                           <div class="cc1top">
+                               <img src="images/content/2017-05/20170511174349412799.png" alt="">
+                           </div>
+                           <p>            微信门户 
+    </p>
+                        </div>
+                        </a>
+                                                <a href="http://software.bnu.edu.cn/" target="_blank">
+                        <div class="cc1topf">
+                           <div class="cc1top">
+                               <img src="images/content/2017-04/20170414160201318459.png" alt="">
+                           </div>
+                           <p>            正版软件 
+    </p>
+                        </div>
+                        </a>
+                                                <a href="http://vpn2.bnu.edu.cn/" target="_blank">
+                        <div class="cc1topf">
+                           <div class="cc1top">
+                               <img src="images/content/2017-05/20170511171841634487.png" alt="">
+                           </div>
+                           <p>            SSL VPN 
+    </p>
+                        </div>
+                        </a>
+                                                <a href="https://sdyp.bnu.edu.cn/" target="_blank">
+                        <div class="cc1topf">
+                           <div class="cc1top">
+                               <img src="images/content/2017-05/20170511172359704544.png" alt="">
+                           </div>
+                           <p>            师大云盘 
+    </p>
+                        </div>
+                        </a>
+                                                <a href="http://card.bnu.edu.cn/" target="_blank">
+                        <div class="cc1topf">
+                           <div class="cc1top">
+                               <img src="images/content/2017-05/20170512093301424107.png" alt="">
+                           </div>
+                           <p>            校园卡 
+    </p>
+                        </div>
+                        </a>
+                                          </div>
+        </div>
+                   
+                    <div class="carousel-caption" id="cc2">
+                        
+                           
+                                                <a href="http://one.bnu.edu.cn" target="_blank">
+                        <div class="cc1topf">
+                           <div class="cc1top">
+                               <img src="images/content/2017-04/20170414160257831656.png" alt="">
+                           </div>
+                           <p>            信息门户 
+    </p>
+                        </div>
+                        </a>
+                                                <a href="http://weixin.bnu.edu.cn/" target="_blank">
+                        <div class="cc1topf">
+                           <div class="cc1top">
+                               <img src="images/content/2017-05/20170511174349412799.png" alt="">
+                           </div>
+                           <p>            微信门户 
+    </p>
+                        </div>
+                        </a>
+                                                <a href="http://software.bnu.edu.cn/" target="_blank">
+                        <div class="cc1topf">
+                           <div class="cc1top">
+                               <img src="images/content/2017-04/20170414160201318459.png" alt="">
+                           </div>
+                           <p>            正版软件 
+    </p>
+                        </div>
+                        </a>
+                                                <a href="http://vpn2.bnu.edu.cn/" target="_blank">
+                        <div class="cc1topf">
+                           <div class="cc1top">
+                               <img src="images/content/2017-05/20170511171841634487.png" alt="">
+                           </div>
+                           <p>            SSL VPN 
+    </p>
+                        </div>
+                        </a>
+                                                <a href="https://sdyp.bnu.edu.cn/" target="_blank">
+                        <div class="cc1topf">
+                           <div class="cc1top">
+                               <img src="images/content/2017-05/20170511172359704544.png" alt="">
+                           </div>
+                           <p>            师大云盘 
+    </p>
+                        </div>
+                        </a>
+                                                <a href="http://card.bnu.edu.cn/" target="_blank">
+                        <div class="cc1topf">
+                           <div class="cc1top">
+                               <img src="images/content/2017-05/20170512093301424107.png" alt="">
+                           </div>
+                           <p>            校园卡 
+    </p>
+                        </div>
+                        </a>
+                                                
+                        
+                  </div>
+        
+        <div class="content3">
+                <div class="content3l">
+                    <div class="content3lsev">
+                        <div class="seviceh sevicehc3h">
+                            <p>服务专区
+                                <a></a>
+                                </p>
+                        </div>
+                        
+                        <div class="sevicehff">
+                        <div class="seviceh sevicehc3h sevicehc3hh">
+                            <a href="http://itservice.bnu.edu.cn" target="_blank"><div class="itservice"></div></a>
+                            
+                             <form id="quick-search"  action="http://itservice.bnu.edu.cn:8090/dosearchsite.action" method="get">
+                            <input type="text" data-provide="typeahead" class="input1" value="信息网络服务百科搜索">
+                           
+                            <p class="btnp">
+                              <button class="btn btn-primary quick-search-submit" type="submit" id="quick-search-submit">搜索</button> 
+                            </p></form>
+                            <div class="tel">服务电话：58808113</div>
+                        </div>
+                        </div>
+                        
+                        <div class="sevicecf">
+                        <div class="sevicec" style="margin-right:10px;margin-left:40px;">
+                            <img src="http://info.bnu.edu.cn/images/xs2.png" class="imggao">
+                            <div class="sevicech sevicechstu">学生</div>
+                            <ul class="sevicec1">
+                                                                    <li><a href="fwzq/xs/83598.html" title="校园网（SSL VPN）" target="_blank">            校园网（SSL VPN） 
+    </a>
+                                    </li>
+                                                                    <li><a href="fwzq/xs/84007.html" title="Eduroam全球无线漫游" target="_blank">            Eduroam全球无线漫游 
+    </a>
+                                    </li>
+                                                                    <li><a href="fwzq/xs/83601.html" title="校园卡（服务平台）" target="_blank">            校园卡（服务平台） 
+    </a>
+                                    </li>
+                                                                    <li><a href="fwzq/xs/83599.html" title="学生电子邮箱" target="_blank">            学生电子邮箱 
+    </a>
+                                    </li>
+                                                                    <li><a href="fwzq/xs/83600.html" title="师大云盘（云存储）" target="_blank">            师大云盘（云存储） 
+    </a>
+                                    </li>
+                                                            </ul>
+                            <a href="fwzq/xs" class="moree">更多&gt;&gt; </a>
+                        </div>
+                        </div>
+                        
+                        <div class="sevicec" style="margin-right:10px;">
+                            <img src="http://info.bnu.edu.cn/images/xs.png" class="imggao">
+                            <div class="sevicech">教职工</div>
+                            <ul class="sevicec1">
+                                                                    <li><a href="fwzq/jzg/83606.html" title="校园网（SSL VPN）" target="_blank">            校园网（SSL VPN） 
+    </a>
+                                    </li>
+                                                                    <li><a href="fwzq/jzg/84017.html" title="Eduroam全球无线漫游" target="_blank">            Eduroam全球无线漫游 
+    </a>
+                                    </li>
+                                                                    <li><a href="fwzq/jzg/83603.html" title="校园卡（运动卡）" target="_blank">            校园卡（运动卡） 
+    </a>
+                                    </li>
+                                                                    <li><a href="fwzq/jzg/83605.html" title="教师电子邮箱" target="_blank">            教师电子邮箱 
+    </a>
+                                    </li>
+                                                                    <li><a href="fwzq/jzg/83604.html" title="师大云盘（云存储）" target="_blank">            师大云盘（云存储） 
+    </a>
+                                    </li>
+                                                            </ul>
+                            <a href="fwzq/jzg" class="moree">更多&gt;&gt;</a>
+                        </div>
+                        <div class="sevicec">
+                            <img src="http://info.bnu.edu.cn/images/bm.png" class="imggao">
+                            <div class="sevicech">校内单位</div>
+                            <ul class="sevicec1">
+                                                                    <li><a href="fwzq/xnsw/83935.html" title="校园网（SSL VPN）" target="_blank">            校园网（SSL VPN） 
+    </a>
+                                    </li>
+                                                                    <li><a href="fwzq/xnsw/83617.html" title="电子邮箱" target="_blank">            电子邮箱 
+    </a>
+                                    </li>
+                                                                    <li><a href="fwzq/xnsw/83615.html" title="网络信息安全" target="_blank">            网络信息安全 
+    </a>
+                                    </li>
+                                                                    <li><a href="fwzq/xnsw/83614.html" title="服务器相关业务" target="_blank">            服务器相关业务 
+    </a>
+                                    </li>
+                                                                    <li><a href="fwzq/xnsw/83611.html" title="师大云盘" target="_blank">            师大云盘 
+    </a>
+                                    </li>
+                                                                    <li><a href="fwzq/xnsw/83610.html" title="统一通信平台" target="_blank">            统一通信平台 
+    </a>
+                                    </li>
+                                                            </ul>
+                            <a href="fwzq/xnsw" class="moree">更多&gt;&gt; </a>
+                        </div>
+                    </div>
+                    <div class="content11 content111" id="content111">
+                        <div class="content11h">
+                            <p class="content11hp">通知公告</p>
+                            <a href="tzgg">更多&gt;&gt;</a>
+                            <div></div>
+                        </div>
+                        <div class="content11c">
+                            <ul>
+                                                                    <li>
+                                    
+                                    <a href="tzgg/84672.html" title="关于优化教师上网方式的通知" target="_blank">             关于优化教师上网方式的通知 
+     &nbsp;<p class="apap">2017-08-31</p></a>
+                                    
+<!--                                    <a href="tzgg/84672.html" title="关于优化教师上网方式的通知" target="_blank">            关于优化教师上网方式的通知 
+    </a>-->
+                                    </li>
+                                                                    <li>
+                                    
+                                    <a href="tzgg/83774.html" title="信息网络中心综合服务部招聘启示" target="_blank">             信息网络中心综合服务部招聘... 
+     &nbsp;<p class="apap">2016-11-13</p></a>
+                                    
+<!--                                    <a href="tzgg/83774.html" title="信息网络中心综合服务部招聘启示" target="_blank">            信息网络中心综合服务部招聘启示 
+    </a>-->
+                                    </li>
+                                                                    <li>
+                                    
+                                    <a href="tzgg/83775.html" title="北京师范大学信息网络中心招聘启事" target="_blank">             北京师范大学信息网络中心招... 
+     &nbsp;<p class="apap">2016-09-07</p></a>
+                                    
+<!--                                    <a href="tzgg/83775.html" title="北京师范大学信息网络中心招聘启事" target="_blank">            北京师范大学信息网络中心招聘启事 
+    </a>-->
+                                    </li>
+                                                                    <li>
+                                    
+                                    <a href="tzgg/83776.html" title="信息网络中心搬迁通知" target="_blank">             信息网络中心搬迁通知 
+     &nbsp;<p class="apap">2016-05-30</p></a>
+                                    
+<!--                                    <a href="tzgg/83776.html" title="信息网络中心搬迁通知" target="_blank">            信息网络中心搬迁通知 
+    </a>-->
+                                    </li>
+                                                                    <li>
+                                    
+                                    <a href="tzgg/83777.html" title="北京师范大学新信息门户“数字京师”上线试运行" target="_blank">             北京师范大学新信息门户“数... 
+     &nbsp;<p class="apap">2015-06-30</p></a>
+                                    
+<!--                                    <a href="tzgg/83777.html" title="北京师范大学新信息门户“数字京师”上线试运行" target="_blank">            北京师范大学新信息门户“数字京师”上线试... 
+    </a>-->
+                                    </li>
+                                                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="content11" id="content111">
+                        <div class="content11h">
+                            <p class="content11hp">常见问答</p>
+                            <a href="cjwd/xywcjwtjd/" target="_blank">更多&gt;&gt;</a>
+                            <div></div>
+                        </div>
+                        <div class="content11c">
+                            <ul>
+                                                                     <li><a href="https://qy.weixin.qq.com/cgi-bin/wap_getnewsmsg?action=get&__biz=MzI0MTQ2MDgyNg==&mixuin=MjE2NDY2NDQ2NzQzMTgxMzI1OQ==&mid=10002006&idx=1&sn=7bf172d11f05006ca7532ee1be1ca9ff&scene=1" title="新生上网指南" target="_blank">            新生上网指南 
+    </a>
+                                    </li>
+                                                                    <li><a href="cjwd/xyqcjwtjd/84015.html" title="运动卡如何延期" target="_blank">            运动卡如何延期 
+    </a>
+                                    </li>
+                                                                    <li><a href="cjwd/xyqcjwtjd/83829.html" title="校园卡圈存机使用介绍" target="_blank">            校园卡圈存机使用介绍 
+    </a>
+                                    </li>
+                                                                    <li><a href="cjwd/xyqcjwtjd/83828.html" title="自助补卡机使用介绍" target="_blank">            自助补卡机使用介绍 
+    </a>
+                                    </li>
+                                                                    <li><a href="cjwd/xyqcjwtjd/83827.html" title="自助现金充值机使用介绍" target="_blank">            自助现金充值机使用介绍 
+    </a>
+                                    </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="content3r">
+                    <div class="content11" id="content112">
+                        <div class="content11h" id="content11h">
+                            <p class="content11hp">工作动态</p>
+                            <a href="gzdt" target="_blank">更多&gt;&gt;</a>
+                            <div></div>
+                        </div>
+                    </div>
+                                
+                                             <a class="xinwenka" href="gzdt/85901.html">
+                            <div class="xinwentup">
+                                <img src="" alt="" width="300" height="200" id="xinwenkk">
+                            </div>
+
+                           <div class="xinwenbt">            复旦大学信息办来访交流 
+    </div>
+                           <div class="xinwensj">2018-01-04</div>
+                           <div class="xinwenxq">             
+    </div> 
+                        </a>
+                                            <a class="xinwenka" href="gzdt/85069.html">
+                            <div class="xinwentup">
+                                <img src="images/content/2017-10/20171025093104977735.jpg" alt="" width="300" height="200" id="xinwenkk">
+                            </div>
+
+                           <div class="xinwenbt">            孙红培调研信息网络中心 
+    </div>
+                           <div class="xinwensj">2017-10-25</div>
+                           <div class="xinwenxq">            10月20日，学校党委副书记、纪委书记孙红培调研信息网络中心，并与信息网络中心领导班子成员及支部成员座谈。学校机关党委副书记李美仙、廖英参加座谈。 
+    </div> 
+                        </a>
+                                        
+                </div>
+        </div>
+        
+        
+       <div class="footer">
+            <div class="footer1">
+                <div class="footerimg"><img src="images/footer1.png" alt="" width="300"></div>
+                <div class="dizhi">
+                    <div class="fwdt">服务大厅：学16楼一层139室 服务电话：58808113 服务监督电话：58806001-601</div>
+                    <div class="zhbg">综合办公：主楼C区111室 邮箱：info@bnu.edu.cn 监督邮箱：infojd@bnu.edu.cn</div>
+                </div>
+                <div class="dizhi2">
+                    <a target="_blank" href="http://sighttp.qq.com/authd?IDKEY=c84fa5a7a48072596e0355b1867a75f94ab2f67466214b50"><img border="0"  src="http://wpa.qq.com/imgd?IDKEY=c84fa5a7a48072596e0355b1867a75f94ab2f67466214b50&pic=51" alt="点击这里给我发消息" title="点击这里给我发消息"/></a>
+                </div>
+            </div>
+        </div>    </div>
+</body>
+<script src="http://info.bnu.edu.cn/js/jquery-1.9.1.min.js"></script>
+<script src="http://info.bnu.edu.cn/js/bootstrap.min.js"></script>
+<script src="http://info.bnu.edu.cn/js/jquery.bxslider.js"></script>
+<script src="http://info.bnu.edu.cn/js/jquery.goup.min.js"></script>
+    <script type="text/javascript" src="http://info.bnu.edu.cn/js/toptop.js">
+    </script>
+    
+<script>
+//    $(function(){
+//        function slide(a){
+//            $(function(){ 
+//                $(a).hover(function(){ 
+//                    $(this).find('ul').slideDown(500);//鼠标滑过找到当前的UL，向下滑出显示子菜单 
+//                    },function(){ 
+//                    $(this).find('ul').stop(true,false).slideUp('fast'); 
+//                }); 
+//            });
+//        }
+//        slide('li.zxjjf');
+//    });
+    
+    $('.carousel').carousel();
+    
+    $(document).ready(function(){
+
+                  $('.slider5').bxSlider({
+
+                    mode: 'vertical',
+
+                    slideWidth: 200,
+
+                    minSlides: 10,
+
+                    slideMargin: 12,
+                    
+                    auto:true
+
+                  });
+
+                });
+</script>
+</html>
+</body></html>

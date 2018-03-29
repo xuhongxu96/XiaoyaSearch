@@ -27,10 +27,6 @@ namespace XiaoyaRankerUnitTest
 
             using (var context = new XiaoyaSearchContext(options))
             {
-                if (context.Database.EnsureCreated())
-                {
-                    context.Database.ExecuteSqlCommand(File.ReadAllText("init.sql"));
-                }
                 urlFiles = context.UrlFiles.ToList();
             }
 

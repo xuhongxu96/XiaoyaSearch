@@ -15,12 +15,12 @@ namespace XiaoyaStore.Store
         public InvertedIndexStore(DbContextOptions options = null) : base(options)
         { }
 
-        public void ClearAndSaveInvertedIndices(UrlFile urlFile, IEnumerable<InvertedIndex> invertedIndices)
+        public void ClearAndSaveInvertedIndices(int urlFileId, IEnumerable<InvertedIndex> invertedIndices)
         {
             using (var context = NewContext())
             {
                 var toBeRemovedIndices = from o in context.InvertedIndices
-                                         where o.UrlFileId == urlFile.UrlFileId
+                                         where o.UrlFileId == urlFileId
                                          select o;
 
                 var groupedRemovedIndices = toBeRemovedIndices.GroupBy(o => o.Word)
@@ -42,7 +42,7 @@ namespace XiaoyaStore.Store
                         {
                             stat.WordFrequency = 0;
                         }
-                        
+
                         if (stat.DocumentFrequency < 0)
                         {
                             stat.DocumentFrequency = 0;
@@ -50,7 +50,7 @@ namespace XiaoyaStore.Store
                     }
 
                     var urlFileStat = context.UrlFileIndexStats
-                        .SingleOrDefault(o => o.UrlFileId == urlFile.UrlFileId && o.Word == index.Word);
+                        .SingleOrDefault(o => o.UrlFileId == urlFileId && o.Word == index.Word);
                     if (urlFileStat != null && urlFileStat.WordFrequency > 0)
                     {
                         urlFileStat.WordFrequency -= index.Count;
@@ -103,12 +103,12 @@ namespace XiaoyaStore.Store
                     }
 
                     var urlFileStat = context.UrlFileIndexStats
-                        .SingleOrDefault(o => o.UrlFileId == urlFile.UrlFileId && o.Word == index.Word);
+                        .SingleOrDefault(o => o.UrlFileId == urlFileId && o.Word == index.Word);
                     if (urlFileStat == null)
                     {
                         urlFileStat = new UrlFileIndexStat
                         {
-                            UrlFileId = urlFile.UrlFileId,
+                            UrlFileId = urlFileId,
                             Word = index.Word,
                             WordFrequency = index.Count,
                         };
@@ -125,8 +125,16 @@ namespace XiaoyaStore.Store
                     }
                 }
 
+                context.UrlFiles.Single(o => o.UrlFileId == urlFileId).IndexStatus
+                    = UrlFile.UrlFileIndexStatus.Indexed;
+
                 context.SaveChanges();
             }
+        }
+
+        public void ClearAndSaveInvertedIndices(UrlFile urlFile, IEnumerable<InvertedIndex> invertedIndices)
+        {
+            ClearAndSaveInvertedIndices(urlFile.UrlFileId, invertedIndices);
         }
 
         public void ClearInvertedIndicesOf(UrlFile urlFile)

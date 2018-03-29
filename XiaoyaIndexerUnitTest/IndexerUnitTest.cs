@@ -6,8 +6,10 @@ using System.Threading;
 using System.Threading.Tasks;
 using XiaoyaIndexer;
 using XiaoyaIndexer.Config;
+using XiaoyaNLP.Helper;
 using XiaoyaStore.Data;
 using XiaoyaStore.Store;
+using static XiaoyaStore.Data.Model.UrlFile;
 
 namespace XiaoyaIndexerUnitTest
 {
@@ -15,7 +17,6 @@ namespace XiaoyaIndexerUnitTest
     public class IndexerUnitTest
     {
         private string logDir = Path.Combine(Path.GetTempPath(), "Logs");
-        private string fetchDir = "Fetched";
 
         [TestMethod]
         public void TestIndex()
@@ -57,16 +58,19 @@ namespace XiaoyaIndexerUnitTest
                 Thread.Sleep(1000);
             }
 
+            indexer.WaitAll();
+
             indexer.StopIndex();
 
             using (var context = new XiaoyaSearchContext(options))
             {
                 foreach (var urlFile in context.UrlFiles)
                 {
-                    Assert.IsTrue(urlFile.IsIndexed);
+                    Assert.IsTrue(urlFile.IndexStatus == UrlFileIndexStatus.Indexed);
 
                     var id = urlFile.UrlFileId;
-                    if (urlFile.Content.Trim() != "")
+                    if (urlFile.Content.Trim() != ""
+                        && CommonRegex.RegexAllChars.IsMatch(urlFile.Content.Trim()))
                     {
                         var indices = context.InvertedIndices
                             .Where(o => o.UrlFileId == id);

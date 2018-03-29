@@ -41,7 +41,7 @@ namespace XiaoyaCrawler.UrlFrontier
             }
             else
             {
-                config.UrlFrontierItemStore.Restart();
+                config.UrlFrontierItemStore.RestartCrawl();
             }
         }
 

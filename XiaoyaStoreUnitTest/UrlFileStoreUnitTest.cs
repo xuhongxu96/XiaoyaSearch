@@ -7,6 +7,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using XiaoyaStore.Data;
 using XiaoyaStore.Store;
+using static XiaoyaStore.Data.Model.UrlFile;
 
 namespace XiaoyaStoreUnitTest
 {
@@ -357,7 +358,7 @@ namespace XiaoyaStoreUnitTest
 
                 using (var context = new XiaoyaSearchContext(options))
                 {
-                    Assert.IsTrue(context.UrlFiles.All(o => o.IsIndexed));
+                    Assert.IsTrue(context.UrlFiles.All(o => o.IndexStatus == UrlFileIndexStatus.Indexing));
                 }
             }
             finally

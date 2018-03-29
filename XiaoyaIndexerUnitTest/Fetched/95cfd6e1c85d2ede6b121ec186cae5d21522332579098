@@ -1,0 +1,364 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>北京师范大学教务处</title>
+<link href="http://jwc.bnu.edu.cn/images/index.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>北京师范大学教务处</title>
+<link href="http://jwc.bnu.edu.cn/images/index.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+.inputStyle {
+	FONT-SIZE: 12px;
+	WIDTH: 100px;
+	COLOR: #333333;
+	HEIGHT: 15px;
+	padding-top: 5px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-color: #8099b3;
+	border-right-color: #8099b3;
+	border-bottom-color: #8099b3;
+	border-left-color: #8099b3;
+	line-height: 20px;
+}
+-->
+</style>
+</head>
+
+<body>
+<div style="width:1001px; margin:0px auto;">
+<table width="1001" border="0" align="center" cellpadding="0" cellspacing="0" class="bodybg">
+  <tr>
+    <td height="111" align="center" valign="top" class="toplf" bgcolor="#FFFFFF"><table width="1001" border="0" align="center" cellpadding="0" cellspacing="0" >
+      <tr>
+        <td height="130" align="left" background="http://jwc.bnu.edu.cn/images/banner.png">&nbsp;</td>
+        </tr>
+      <tr>
+        <td align="center" valign="top" background="http://jwc.bnu.edu.cn/images/daohang.gif"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="980"><ul id="nav" style="font-size:14px;font-family:微软雅黑">
+	<li class="top"><a href="http://jwc.bnu.edu.cn/" class="top_link"><span style="font-size:14px;font-family:微软雅黑">&nbsp;首&nbsp;&nbsp;页&nbsp;</span></a></li>
+    <li class="top"><a href="http://jwc.bnu.edu.cn/jgsz/znjj" class="top_link"><span style="font-size:14px;font-family:微软雅黑">机构设置</span></a></li>
+    <li class="top"><a href="http://jwc.bnu.edu.cn/tzgg" class="top_link"><span style="font-size:14px;font-family:微软雅黑">通知公告</span></a></li>
+    <li class="top"><a href="http://jwc.bnu.edu.cn/gzzd" class="top_link"><span style="font-size:14px;font-family:微软雅黑">规章制度</span></a></li>
+    <li class="top"><a href="http://jwc.bnu.edu.cn/xxpt" class="top_link"><span style="font-size:14px;font-family:微软雅黑">信息平台</span></a></li>
+    <li class="top"><a href="http://jwc.bnu.edu.cn/fwzn" class="top_link"><span style="font-size:14px;font-family:微软雅黑">服务指南</span></a></li>
+    <li class="top"><a href="http://jwc.bnu.edu.cn/xxgk" class="top_link"><span style="font-size:14px;font-family:微软雅黑">信息公开</span></a></li>
+    <li class="top"><a href="http://jwc.bnu.edu.cn/cyxz" class="top_link"><span style="font-size:14px;font-family:微软雅黑">常用下载</span></a></li>
+    <li class="top"><a href="http://jwc.bnu.edu.cn/jxrl" class="top_link"><span style="font-size:14px;font-family:微软雅黑">教学日历</span></a></li>
+    
+      <li class="topresearch">
+    <form name="dataForm" action="/cms/search/searchResults.jsp" target="_blank" method="post" accept-Charset="utf-8"  onsubmit="document.charset='utf-8';"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td colspan="2"> <input name="siteID" size="4" value="114" type = "hidden">
+      <table cellspacing="0" cellpadding="0" width="96%" align="center" 
+                  border="0">
+        <tbody>
+          <tr>
+            <td 
+                      height="5"></td>
+          </tr>
+        </tbody>
+      </table></td>
+    </tr>
+  <tr>
+    <td><input  name="query" type="text" class="inputStyle"  title="搜索" size=15 /></td>
+    <td>&nbsp;
+      <input name=btnG type=submit value=" 搜  索 " /></td>
+  </tr>
+</table>
+       </form>
+   </li>
+</ul></td></tr>
+  </table>  </td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+</div>
+</body>
+</html>
+
+</body></html><div style="width:1001px; margin:0px auto;">
+<table width="1001" border="0" align="center" cellpadding="0" cellspacing="0" class="bodybg">
+  <tr>
+    <td align="center" valign="middle" class="newsbox">
+    <table width="973" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="250" valign="top">
+         <ul class="ul_daohangrsc">     
+
+<li><a href="../jgsz/index.html">机构设置</a></li>
+<li id="redlist_rsc">通知公告</li>
+<li><a href="../gzzd/index.html">规章制度</a></li>
+<li><a href="../xxpt/index.html">信息平台</a></li>
+<li><a href="../fwzn/index.html">服务指南</a></li>
+<li><a href="../xxgk/index.html">信息公开</a></li>
+<li><a href="../cyxz/index.html">常用下载</a></li>
+<li><a href="../jxrl/index.html">教学日历</a></li>
+<li><a href="../tpxw/index.html">图片新闻</a></li>
+<li><a href="../kslj/index.html">快速链接</a></li>
+<li><a href="../jpk/index.html">精品课</a></li>
+    </ul>
+    </td>
+    <td width="723" valign="top"><div class="zhengwen_r">
+    <span class="zhengwenweizhi">当前位置：			<a href="../index.html">首页</a> &raquo; 
+			  通知公告</span>
+     <ul class="ul_list">
+                                       <li><a href="157344.html" target="_blank">            关于举办第十四届北京师范大学数学建模竞赛的通知 
+    </a><span class="newtime">2018-03-27</span></li>
+			                                   <li><a href="http://prsc.bnu.edu.cn/docs/20180327113356409983.pdf" target="_blank">            【转发】关于编排2018～2019学年秋季学期课表的通知 
+    </a><span class="newtime">2018-03-27</span></li>
+			                                   <li><a href="http://prsc.bnu.edu.cn/docs/20180321110100287237.pdf" target="_blank">            【转发】关于2018年上半年全国大学英语四、六级考试报名的通知 
+    </a><span class="newtime">2018-03-22</span></li>
+			                                   <li><a href="http://prsc.bnu.edu.cn/tzgg/157055.htm" target="_blank">            【转发】关于启用网上申请课程调整功能的通知 
+    </a><span class="newtime">2018-03-22</span></li>
+			                                   <li><a href="157221.html" target="_blank">            2017-2018学年明德教师奖北京师范大学候选人评选结果公示 
+    </a><span class="newtime">2018-03-22</span></li>
+			                                   <li><a href="157219.html" target="_blank">            2017-2018学年第一学期本科生课程优秀研究生助教评选结果 
+    </a><span class="newtime">2018-03-22</span></li>
+			                                   <li><a href="157180.html" target="_blank">            关于公布2018年“基础学科拔尖学生培养试验计划”励耘实验班选拔方案的通知 
+    </a><span class="newtime">2018-03-21</span></li>
+			                                   <li><a href="157087.html" target="_blank">            关于2018年本科生专业选择部（院、系）工作方案公布的通知 
+    </a><span class="newtime">2018-03-20</span></li>
+			                                   <li><a href="157085.html" target="_blank">            关于2017～2018学年春季学期“北京师范大学学士学位英语考试”的通知 
+    </a><span class="newtime">2018-03-20</span></li>
+			                                   <li><a href="157043.html" target="_blank">            北京市教育委员会关于征集参与第四届中国“互联网+”大学生创新创业大赛“青年红... 
+    </a><span class="newtime">2018-03-19</span></li>
+			                                   <li><a href="157042.html" target="_blank">            我校首批本科大规模在线开放课程建设项目结题验收通知 
+    </a><span class="newtime">2018-03-19</span></li>
+			                                   <li><a href="156986.html" target="_blank">            关于安排2014级本科生毕业前“重考”工作的通知 
+    </a><span class="newtime">2018-03-16</span></li>
+			                                   <li><a href="156984.html" target="_blank">            2017—2018学年秋季学期本科课堂教学学生评教结果第一轮反馈通知 
+    </a><span class="newtime">2018-03-16</span></li>
+			                                   <li><a href="156983.html" target="_blank">            2018年励耘实验班动态进出和专业选择工作通知 
+    </a><span class="newtime">2018-03-16</span></li>
+			                                   <li><a href="156954.html" target="_blank">            关于港澳台学生修读学校国情类课程的规定 
+    </a><span class="newtime">2018-03-16</span></li>
+			                                   <li><a href="156929.html" target="_blank">            关于2014级应届本科毕业生教师资格认定工作的通知 
+    </a><span class="newtime">2018-03-15</span></li>
+			                                   <li><a href="http://prsc.bnu.edu.cn/docs/20180314155831964291.pdf" target="_blank">            【转发】关于2018年上半年全国大学英语四、六级考试报名的通知 
+    </a><span class="newtime">2018-03-14</span></li>
+			                                   <li><a href="156862.html" target="_blank">            关于2018年本科生专业选择工作的通知 
+    </a><span class="newtime">2018-03-14</span></li>
+			                                   <li><a href="156840.html" target="_blank">            关于本科生毕业论文（设计）查重工作的通知 
+    </a><span class="newtime">2018-03-13</span></li>
+			                                   <li><a href="http://graduate.bnu.edu.cn/ReadNews.aspx?NewsId=18022804310" target="_blank">            关于2018年国家公派研究生项目子项目申报工作的安排 
+    </a><span class="newtime">2018-03-09</span></li>
+			                  </ul>
+                  <TABLE border=0 cellSpacing=1 cellPadding=0 width="100%" align=center bgcolor="#CCCCCC" class="listbox">
+                                <FORM method=post name=pageForm action=#>
+                                <TBODY>
+                                <TR>
+                                <TD>
+                                <TABLE border=0 cellSpacing=1 cellPadding=0 
+                                width="100%" bgColor=#f5f5f5>
+                                <TBODY>
+                                <TR align=center>
+                                <TD width="25%">当前第 1 页</TD>
+                                <TD width="25%">总页数： 122 页</TD>
+                                <TD width="25%">总记录数： 2433 条</TD>
+                                <TD width="25%"><select 
+                                onchange="javascript:PageFormSubmit()" 
+                                name="page">
+                                                <option selected="selected">选择要查询页数</option>
+        
+																								<option value="index.html" selected>第 1 页</option>                                       
+																<option value="index1.html" >第 2 页</option>                                       
+																<option value="index2.html" >第 3 页</option>                                       
+																<option value="index3.html" >第 4 页</option>                                       
+																<option value="index4.html" >第 5 页</option>                                       
+																<option value="index5.html" >第 6 页</option>                                       
+																<option value="index6.html" >第 7 页</option>                                       
+																<option value="index7.html" >第 8 页</option>                                       
+																<option value="index8.html" >第 9 页</option>                                       
+																<option value="index9.html" >第 10 页</option>                                       
+																<option value="index10.html" >第 11 页</option>                                       
+																<option value="index11.html" >第 12 页</option>                                       
+																<option value="index12.html" >第 13 页</option>                                       
+																<option value="index13.html" >第 14 页</option>                                       
+																<option value="index14.html" >第 15 页</option>                                       
+																<option value="index15.html" >第 16 页</option>                                       
+																<option value="index16.html" >第 17 页</option>                                       
+																<option value="index17.html" >第 18 页</option>                                       
+																<option value="index18.html" >第 19 页</option>                                       
+																<option value="index19.html" >第 20 页</option>                                       
+																<option value="index20.html" >第 21 页</option>                                       
+																<option value="index21.html" >第 22 页</option>                                       
+																<option value="index22.html" >第 23 页</option>                                       
+																<option value="index23.html" >第 24 页</option>                                       
+																<option value="index24.html" >第 25 页</option>                                       
+																<option value="index25.html" >第 26 页</option>                                       
+																<option value="index26.html" >第 27 页</option>                                       
+																<option value="index27.html" >第 28 页</option>                                       
+																<option value="index28.html" >第 29 页</option>                                       
+																<option value="index29.html" >第 30 页</option>                                       
+																<option value="index30.html" >第 31 页</option>                                       
+																<option value="index31.html" >第 32 页</option>                                       
+																<option value="index32.html" >第 33 页</option>                                       
+																<option value="index33.html" >第 34 页</option>                                       
+																<option value="index34.html" >第 35 页</option>                                       
+																<option value="index35.html" >第 36 页</option>                                       
+																<option value="index36.html" >第 37 页</option>                                       
+																<option value="index37.html" >第 38 页</option>                                       
+																<option value="index38.html" >第 39 页</option>                                       
+																<option value="index39.html" >第 40 页</option>                                       
+																<option value="index40.html" >第 41 页</option>                                       
+																<option value="index41.html" >第 42 页</option>                                       
+																<option value="index42.html" >第 43 页</option>                                       
+																<option value="index43.html" >第 44 页</option>                                       
+																<option value="index44.html" >第 45 页</option>                                       
+																<option value="index45.html" >第 46 页</option>                                       
+																<option value="index46.html" >第 47 页</option>                                       
+																<option value="index47.html" >第 48 页</option>                                       
+																<option value="index48.html" >第 49 页</option>                                       
+																<option value="index49.html" >第 50 页</option>                                       
+																<option value="index50.html" >第 51 页</option>                                       
+																<option value="index51.html" >第 52 页</option>                                       
+																<option value="index52.html" >第 53 页</option>                                       
+																<option value="index53.html" >第 54 页</option>                                       
+																<option value="index54.html" >第 55 页</option>                                       
+																<option value="index55.html" >第 56 页</option>                                       
+																<option value="index56.html" >第 57 页</option>                                       
+																<option value="index57.html" >第 58 页</option>                                       
+																<option value="index58.html" >第 59 页</option>                                       
+																<option value="index59.html" >第 60 页</option>                                       
+																<option value="index60.html" >第 61 页</option>                                       
+																<option value="index61.html" >第 62 页</option>                                       
+																<option value="index62.html" >第 63 页</option>                                       
+																<option value="index63.html" >第 64 页</option>                                       
+																<option value="index64.html" >第 65 页</option>                                       
+																<option value="index65.html" >第 66 页</option>                                       
+																<option value="index66.html" >第 67 页</option>                                       
+																<option value="index67.html" >第 68 页</option>                                       
+																<option value="index68.html" >第 69 页</option>                                       
+																<option value="index69.html" >第 70 页</option>                                       
+																<option value="index70.html" >第 71 页</option>                                       
+																<option value="index71.html" >第 72 页</option>                                       
+																<option value="index72.html" >第 73 页</option>                                       
+																<option value="index73.html" >第 74 页</option>                                       
+																<option value="index74.html" >第 75 页</option>                                       
+																<option value="index75.html" >第 76 页</option>                                       
+																<option value="index76.html" >第 77 页</option>                                       
+																<option value="index77.html" >第 78 页</option>                                       
+																<option value="index78.html" >第 79 页</option>                                       
+																<option value="index79.html" >第 80 页</option>                                       
+																<option value="index80.html" >第 81 页</option>                                       
+																<option value="index81.html" >第 82 页</option>                                       
+																<option value="index82.html" >第 83 页</option>                                       
+																<option value="index83.html" >第 84 页</option>                                       
+																<option value="index84.html" >第 85 页</option>                                       
+																<option value="index85.html" >第 86 页</option>                                       
+																<option value="index86.html" >第 87 页</option>                                       
+																<option value="index87.html" >第 88 页</option>                                       
+																<option value="index88.html" >第 89 页</option>                                       
+																<option value="index89.html" >第 90 页</option>                                       
+																<option value="index90.html" >第 91 页</option>                                       
+																<option value="index91.html" >第 92 页</option>                                       
+																<option value="index92.html" >第 93 页</option>                                       
+																<option value="index93.html" >第 94 页</option>                                       
+																<option value="index94.html" >第 95 页</option>                                       
+																<option value="index95.html" >第 96 页</option>                                       
+																<option value="index96.html" >第 97 页</option>                                       
+																<option value="index97.html" >第 98 页</option>                                       
+																<option value="index98.html" >第 99 页</option>                                       
+																<option value="index99.html" >第 100 页</option>                                       
+																<option value="index100.html" >第 101 页</option>                                       
+																<option value="index101.html" >第 102 页</option>                                       
+																<option value="index102.html" >第 103 页</option>                                       
+																<option value="index103.html" >第 104 页</option>                                       
+																<option value="index104.html" >第 105 页</option>                                       
+																<option value="index105.html" >第 106 页</option>                                       
+																<option value="index106.html" >第 107 页</option>                                       
+																<option value="index107.html" >第 108 页</option>                                       
+																<option value="index108.html" >第 109 页</option>                                       
+																<option value="index109.html" >第 110 页</option>                                       
+																<option value="index110.html" >第 111 页</option>                                       
+																<option value="index111.html" >第 112 页</option>                                       
+																<option value="index112.html" >第 113 页</option>                                       
+																<option value="index113.html" >第 114 页</option>                                       
+																<option value="index114.html" >第 115 页</option>                                       
+																<option value="index115.html" >第 116 页</option>                                       
+																<option value="index116.html" >第 117 页</option>                                       
+																<option value="index117.html" >第 118 页</option>                                       
+																<option value="index118.html" >第 119 页</option>                                       
+																<option value="index119.html" >第 120 页</option>                                       
+																<option value="index120.html" >第 121 页</option>                                       
+																<option value="index121.html" >第 122 页</option>                                       
+								                                              </select>
+                                              <script language="JavaScript" type="text/javascript">
+								function PageFormSubmit()
+								{
+								document.location.href=document.pageForm.page.options[document.pageForm.page.selectedIndex].value;
+								}
+								</script>
+                                 </TD></TR></TBODY></TABLE>
+                                <TABLE width="100%" border=0 align=center cellpadding="0" cellSpacing=1 bgColor=#f5f5f5>
+                                <TBODY>
+                                <TR vAlign=baseline align=center>
+                                <td><div align="center"></div></td>
+                                <TD width="25%"><a href="index.html" >第一页</a></TD>
+                                <TD width="25%"><a href="index.html">上一页</a></TD>
+                                <TD width="25%"><a 
+                                href="index1.html">下一页</a>
+                                </TD>
+                                <TD width="25%"><a 
+                                href="index121.html">最后一页</a>
+                                </TD></TR></TBODY></TABLE></TD></TR></FORM></TBODY></TABLE>
+      </div></td>
+  </tr>
+</table>
+
+      </td>
+  </tr>
+</table>
+</div>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>北京师范大学教务处</title>
+<link href="http://jwc.bnu.edu.cn/images/index.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div style="width:1001px; margin:0px auto;">
+<table width="1001" border="0" align="center" cellpadding="0" cellspacing="0" class="bodybg">
+   <tr>
+    <td align="center" valign="middle" bgcolor="#F1F1F1"><table width="100%" border="0" cellspacing="0" cellpadding="0" ><tr>
+        <td>
+	<table width="100%" border="0" cellspacing="10" cellpadding="0">
+      <tr>
+            <td align="center" valign="middle" background="http://jwc.bnu.edu.cn/images/footer.gif"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="59%" align="center" valign="middle" class="footer">北京师范大学教务处　新街口外大街19号，北京·中国(100875) <br />
+          E-mail: jwc@bnu.edu.cn　Tel: 010-58807845　Fax: 010-58807845</td>
+        </tr>
+      
+    </table></td>
+          </tr>
+        </table></td>
+  </tr>
+    </table></td></tr>
+    </table>
+</div>
+</body>
+</html>
+
+</body></html></body>
+</html>
+
+</body></html>

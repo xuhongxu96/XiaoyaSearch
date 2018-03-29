@@ -35,14 +35,6 @@ namespace XiaoyaRetrieverUnitTest
                 .UseSqlite("Data Source=XiaoyaSearch.db")
                 .Options;
 
-            using (var context = new XiaoyaSearchContext(options))
-            {
-                if (context.Database.EnsureCreated())
-                {
-                    context.Database.ExecuteSqlCommand(File.ReadAllText("init.sql"));
-                }
-            }
-
             var retriever = new BooleanRetriever(new RetrieverConfig
             {
                 IndexStatStore = new IndexStatStore(options),
@@ -68,7 +60,7 @@ namespace XiaoyaRetrieverUnitTest
             };
 
             var urlFileIds = retriever.Retrieve(expression);
-            Assert.AreEqual(2, urlFileIds.Count());
+            Assert.AreEqual(10, urlFileIds.Count());
 
             using (var context = new XiaoyaSearchContext(options))
             {

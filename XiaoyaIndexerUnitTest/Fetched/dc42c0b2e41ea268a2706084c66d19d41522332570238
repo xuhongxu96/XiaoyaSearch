@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>北师大校园基础地理信息图件下载站</title>
+<link href="images/map.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<table width="1001" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td><img src="images/top.jpg" width="1001" height="121" border="0" usemap="#Map" /></td>
+  </tr>
+  <tr>
+    <td bgcolor="#CCCCCC">&nbsp;</td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF" class="txt">
+    <h1>北京师范大学校园基础地理信息图件说明</h1>
+　　为了进一步统一学校校园地图信息数据规范和标准，并及时更新和共享相关数据，学校信息网络中心制作并发布北京师范大学校园基础地理信息图件，包括：平面图、影像图、三维示意图，基于ArcGis平台的校园矢量图，供校内单位使用。<br />
+　　如您在使用中遇到问题，请拨打电话58808113。</td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF"><table width="1001" border="0" cellspacing="3" cellpadding="0" class="pic">
+      <tr>
+        <td width="25%" align="center" valign="middle" bgcolor="#EAEAEA"><a href="images/map.jpg" target="_blank"><img src="images/map0.jpg" width="200" height="262" /></a></td>
+        <td width="25%" align="center" valign="middle" bgcolor="#EAEAEA"><a href="images/map1.jpg" target="_blank"><img src="images/map10.jpg" width="200" height="262" /></a></td>
+        <td width="25%" align="center" valign="middle" bgcolor="#EAEAEA"><a href="images/map21.jpg" target="_blank"><img src="images/map20.jpg" width="200" height="141" /></a></td>
+        <td width="25%" align="center" valign="middle" bgcolor="#EAEAEA"><a href="http://map.bnu.edu.cn/" target="_blank"><img src="images/map3.jpg" width="200" height="262" /></a></td>
+      </tr>
+      <tr>
+        <td height="150" align="center" valign="middle" bgcolor="#CCCCCC">
+        平面图（<a href="images/map.jpg" target="_blank">点击下载</a>）
+        <br />
+        高清版下载需申请（<a href="map_shenqingdan.doc" target="_blank">申请单下载</a>）<br />
+制作时间：2014年8月<br />
+高清版图片格式：jpg、tif </td>
+        <td align="center" valign="middle" bgcolor="#CCCCCC">影像图（<a href="images/map1.jpg" target="_blank">点击下载</a>）
+        <br />
+        高清版下载需申请（<a href="map_shenqingdan.doc" target="_blank">申请单下载</a>）<br />
+制作时间：2012年5月<br />
+影像来源：GeoEye<br />
+影像拍摄时间：2011年10月13日<br />
+高清版图片格式：jpg、tif</td>
+        <td align="center" valign="middle" bgcolor="#CCCCCC">三维示意图（<a href="images/map21.jpg" target="_blank">点击下载</a>）
+        <br />
+        高清版下载需申请（<a href="map_shenqingdan.doc" target="_blank">申请单下载</a>）<br />
+制作时间：2012年5月<br />
+高清版图片格式：jpg、tif</td>
+        <td align="center" valign="middle" bgcolor="#CCCCCC">矢量图（<a href="http://map.bnu.edu.cn/" target="_blank">点击查看</a>）<br />
+
+        矢量图下载需申请（<a href="map_shenqingdan.doc" target="_blank">申请单下载</a>）<br />
+制作时间：2012年5月<br />
+矢量格式：mxd</td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF">&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="center" valign="middle" class="footer">版权所有 &copy; 北京师范大学信息网络中心</td>
+  </tr>
+</table>
+
+<map name="Map" id="Map">
+  <area shape="rect" coords="4,3,391,118" href="http://www.bnu.edu.cn/" target="_blank" />
+</map>
+</body>
+</html>

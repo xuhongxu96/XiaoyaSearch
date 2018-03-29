@@ -24,20 +24,33 @@ namespace XiaoyaStore.Store
             }
         }
 
+        public void RestartIndex()
+        {
+            using (var context = NewContext())
+            {
+                foreach (var urlFile in context.UrlFiles
+                    .Where(o => o.IndexStatus == UrlFile.UrlFileIndexStatus.Indexing))
+                {
+                    urlFile.IndexStatus = UrlFile.UrlFileIndexStatus.NotIndexed;
+                }
+                context.SaveChanges();
+            }
+        }
+
         public UrlFile LoadAnyForIndex()
         {
             using (var context = NewContext())
             {
                 var urlFile = context.UrlFiles
                     .OrderBy(o => o.UpdatedAt)
-                    .FirstOrDefault(o => o.IsIndexed == false);
+                    .FirstOrDefault(o => o.IndexStatus == UrlFile.UrlFileIndexStatus.NotIndexed);
 
                 if (urlFile == null)
                 {
                     return null;
                 }
 
-                urlFile.IsIndexed = true;
+                urlFile.IndexStatus = UrlFile.UrlFileIndexStatus.Indexing;
                 context.SaveChanges();
 
                 return urlFile;
@@ -77,7 +90,7 @@ namespace XiaoyaStore.Store
                 if (oldUrlFile == null)
                 {
                     // first see this url, add to database
-                    urlFile.IsIndexed = false;
+                    urlFile.IndexStatus = UrlFile.UrlFileIndexStatus.NotIndexed;
                     urlFile.UpdatedAt = DateTime.Now;
                     urlFile.CreatedAt = DateTime.Now;
                     urlFile.UpdateInterval = TimeSpan.FromDays(3);
@@ -100,7 +113,7 @@ namespace XiaoyaStore.Store
                     File.Delete(oldUrlFile.FilePath);
 
                     // Update info
-                    oldUrlFile.IsIndexed = false;
+                    oldUrlFile.IndexStatus = UrlFile.UrlFileIndexStatus.NotIndexed;
                     oldUrlFile.FilePath = urlFile.FilePath;
                     oldUrlFile.FileHash = urlFile.FileHash;
                     oldUrlFile.Content = urlFile.Content;
