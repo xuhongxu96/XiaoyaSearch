@@ -50,7 +50,7 @@ namespace XiaoyaStore.Data.Model
         /// Seconds offset between present and last update
         /// </summary>
         [ConcurrencyCheck]
-        public int UpdateIntervalSeconds { get; set; }
+        public double UpdateIntervalSeconds { get; set; }
         /// <summary>
         /// Timespan between present and last update
         /// </summary>
@@ -60,7 +60,7 @@ namespace XiaoyaStore.Data.Model
             get => TimeSpan.FromSeconds(UpdateIntervalSeconds);
             set
             {
-                UpdateIntervalSeconds = value.Seconds;
+                UpdateIntervalSeconds = value.TotalSeconds;
             }
         }
         /// <summary>
