@@ -13,7 +13,7 @@ My initial goal is to deploy this search engine in Beijing Normal University.
 - XiaoyaCommon  
   Including some common algorithms and functions
 - XiaoyaCrawler  
-  A multi-thread cntinuous crawler
+  A multi-thread continuous crawler
     - UrlFrontier
 	- Fetcher
 	- Parser
