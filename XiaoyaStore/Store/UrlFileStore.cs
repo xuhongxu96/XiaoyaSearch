@@ -115,13 +115,14 @@ namespace XiaoyaStore.Store
                         oldUrlFile.UpdatedAt = DateTime.Now;
                         oldUrlFile.UpdateInterval
                             = (oldUrlFile.UpdateInterval * 3 + updateInterval) / 4;
+
+                        oldUrlFile.IndexStatus = UrlFile.UrlFileIndexStatus.NotIndexed;
                     }
 
                     // Delete old file
                     File.Delete(oldUrlFile.FilePath);
 
                     // Update info
-                    oldUrlFile.IndexStatus = UrlFile.UrlFileIndexStatus.NotIndexed;
                     oldUrlFile.FilePath = urlFile.FilePath;
                     oldUrlFile.FileHash = urlFile.FileHash;
                     oldUrlFile.Content = urlFile.Content;
