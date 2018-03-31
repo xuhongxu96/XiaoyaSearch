@@ -27,7 +27,7 @@ namespace XiaoyaCrawlerInterface
 
         [Argument("-DbType",
             Alias = "-d",
-            DefaultValue ="sqlite",
+            DefaultValue = "sqlite",
             Required = true)]
         public string DbType { get; set; }
 
@@ -36,5 +36,11 @@ namespace XiaoyaCrawlerInterface
             DefaultValue = "Data Source=Db/XiaoyaSearch.db",
             Required = false)]
         public string DbConnectionString { get; set; }
+
+        [Argument("-ThreadCount",
+            Alias = "-t",
+            DefaultValue = "10",
+            Required = true)]
+        public string ThreadCount { get; set; }
     }
 }

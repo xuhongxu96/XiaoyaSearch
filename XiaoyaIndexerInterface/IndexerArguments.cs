@@ -30,5 +30,11 @@ namespace XiaoyaIndexerInterface
             DefaultValue = "Data Source=Db/XiaoyaSearch.db",
             Required = false)]
         public string DbConnectionString { get; set; }
+
+        [Argument("-ThreadCount",
+            Alias = "-t",
+            DefaultValue = "10",
+            Required = true)]
+        public string ThreadCount { get; set; }
     }
 }

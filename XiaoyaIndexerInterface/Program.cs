@@ -20,10 +20,6 @@ namespace XiaoyaIndexerInterface
             {
                 case "sqlite":
                 default:
-                    if (!Directory.Exists(arguments.DbConnectionString))
-                    {
-                        Directory.CreateDirectory(arguments.DbConnectionString);
-                    }
                     options = new DbContextOptionsBuilder<XiaoyaSearchContext>()
                                 .UseSqlite(arguments.DbConnectionString)
                                 .Options;
@@ -40,7 +36,7 @@ namespace XiaoyaIndexerInterface
                 LogDirectory = arguments.LogDir,
                 UrlFileStore = new UrlFileStore(options),
                 InvertedIndexStore = new InvertedIndexStore(options),
-                MaxIndexingConcurrency = 10,
+                MaxIndexingConcurrency = int.Parse(arguments.ThreadCount),
             };
 
             var indexer = new SimpleIndexer(config);

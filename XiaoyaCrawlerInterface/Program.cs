@@ -26,10 +26,6 @@ namespace XiaoyaCrawlerInterface
             {
                 case "sqlite":
                 default:
-                    if (!Directory.Exists(arguments.DbConnectionString))
-                    {
-                        Directory.CreateDirectory(arguments.DbConnectionString);
-                    }
                     options = new DbContextOptionsBuilder<XiaoyaSearchContext>()
                                 .UseSqlite(arguments.DbConnectionString)
                                 .Options;
@@ -53,7 +49,7 @@ namespace XiaoyaCrawlerInterface
                 UrlFrontierItemStore = new UrlFrontierItemStore(options),
                 FetchDirectory = arguments.FetchDir,
                 LogDirectory = arguments.LogDir,
-                MaxFetchingConcurrency = 10,
+                MaxFetchingConcurrency = int.Parse(arguments.ThreadCount),
             };
 
             var urlFilters = new List<IUrlFilter>
