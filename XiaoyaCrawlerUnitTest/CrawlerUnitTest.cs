@@ -54,6 +54,7 @@ namespace XiaoyaCrawlerUnitTest
                 context.Database.EnsureCreated();
                 context.RemoveRange(context.UrlFiles);
                 context.RemoveRange(context.UrlFrontierItems);
+                context.RemoveRange(context.UrlHostStats);
                 context.SaveChanges();
             }
 

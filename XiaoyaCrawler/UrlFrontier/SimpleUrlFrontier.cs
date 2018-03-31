@@ -51,7 +51,7 @@ namespace XiaoyaCrawler.UrlFrontier
         /// <returns>Url to be fetched</returns>
         public UrlFrontierItem PopUrl()
         {
-            var item = mConfig.UrlFrontierItemStore.PopUrlForCrawl();
+            var item = mConfig.UrlFrontierItemStore.PopUrlForCrawl(false);
 
             if (item == null)
             {

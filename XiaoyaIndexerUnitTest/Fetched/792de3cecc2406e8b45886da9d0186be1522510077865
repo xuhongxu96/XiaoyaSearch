@@ -81,7 +81,7 @@ window.location="http://www.bnu.edu.cn/ie6.html";
 
 	    			<a href="mailto:xzxx@bnu.edu.cn">校长信箱</a>
 
-	    			<a href="http://www.bnu.edu.cn/xfzc/80823.html">校领导信箱</a>
+	    			<a href="http://zhuye.bnu.edu.cn/xfzc/80823.html">校领导信箱</a>
 
 	    			<a href="xfzc/52576.html">接待日</a>
 
@@ -158,29 +158,29 @@ window.location="http://www.bnu.edu.cn/ie6.html";
 				    	<ul style="display: none;" class="dropdown-menu subnavlist">
 
 
-			                <li><a href="http://www.bnu.edu.cn/xxgk/xxjj/index.html">学校简介</a></li>
+			                <li><a href="http://zhuye.bnu.edu.cn/xxgk/xxjj/index.html">学校简介</a></li>
 
-			                <li><a href="http://www.bnu.edu.cn/xxgk/xsyg/index.html">校史沿革</a></li>
+			                <li><a href="http://zhuye.bnu.edu.cn/xxgk/xsyg/index.html">校史沿革</a></li>
 
-			                <li><a href="http://www.bnu.edu.cn/xxgk/xrxld/index.html">现任校领导</a></li>
+			                <li><a href="http://zhuye.bnu.edu.cn/xxgk/xrxld/index.html">现任校领导</a></li>
 
-			                <li><a href="http://www.bnu.edu.cn/xxgk/lrsj/index.html">历任书记</a></li>
+			                <li><a href="http://zhuye.bnu.edu.cn/xxgk/lrsj/index.html">历任书记</a></li>
 
-                                                                <li><a href="http://www.bnu.edu.cn/xxgk/lrxz/index.html">历任校长</a></li>
-			                <li><a href="http://www.bnu.edu.cn/xxgk/zmxz/index.html">著名学者</a></li>
-                                                                   <li><a href="http://www.bnu.edu.cn/xxgk/lsmr/index.html">历史名人</a></li>
+                                                                <li><a href="http://zhuye.bnu.edu.cn/xxgk/lrxz/index.html">历任校长</a></li>
+			                <li><a href="http://zhuye.bnu.edu.cn/xxgk/zmxz/index.html">著名学者</a></li>
+                                                                   <li><a href="http://zhuye.bnu.edu.cn/xxgk/lsmr/index.html">历史名人</a></li>
 
 			            </ul>
 
 				    </li>
 
-				    <li><a href="http://www.bnu.edu.cn/yxsz/" class="fisrtmenu">院系设置</a></li>
+				    <li><a href="http://zhuye.bnu.edu.cn/yxsz/" class="fisrtmenu">院系设置</a></li>
 
-				    <li><a href="http://www.bnu.edu.cn/gljg/" class="fisrtmenu">管理机构</a></li>
+				    <li><a href="http://zhuye.bnu.edu.cn/gljg/" class="fisrtmenu">管理机构</a></li>
 
 				    <li><a href="http://hr.bnu.edu.cn/rcgzbgs/dashouye.html" target="_blank" class="fisrtmenu">人才招聘</a></li>
 
-				    <li><a href="http://www.bnu.edu.cn/kxyj/" class="fisrtmenu">科学研究</a></li>
+				    <li><a href="http://zhuye.bnu.edu.cn/kxyj/" class="fisrtmenu">科学研究</a></li>
 
 				    <li class="dropdown">
 
@@ -241,13 +241,13 @@ window.location="http://www.bnu.edu.cn/ie6.html";
 
 				    	<ul style="display: none;" class="dropdown-menu subnavlist subnavlist-last">
 
-			                <li><a href="http://www.bnu.edu.cn/map/" target="_blank">校园地图</a></li>
+			                <li><a href="http://zhuye.bnu.edu.cn/map/" target="_blank">校园地图</a></li>
 
 			                <li><a href="http://news.bnu.edu.cn/sdtk/">校园风光</a></li>
 
-			                <li><a href="http://www.bnu.edu.cn/zjsd/52915.html">校　历</a></li>
+			                <li><a href="http://zhuye.bnu.edu.cn/zjsd/52915.html">校　历</a></li>
 
-			                <li><a href="http://www.bnu.edu.cn/zjsd/52916.html">黄　页</a></li>
+			                <li><a href="http://zhuye.bnu.edu.cn/zjsd/52916.html">黄　页</a></li>
 
 			            </ul>
 
@@ -275,13 +275,13 @@ window.location="http://www.bnu.edu.cn/ie6.html";
 
 				    <li class="col-sm-4 col-xs-6"><a style="" href="xxgk/" class="">学校概况</a></li>
 
-				    <li class="col-sm-4 col-xs-6"><a href="http://www.bnu.edu.cn/yxsz/" class="">院系设置</a></li>
+				    <li class="col-sm-4 col-xs-6"><a href="http://zhuye.bnu.edu.cn/yxsz/" class="">院系设置</a></li>
 
-				    <li class="col-sm-4 col-xs-6"><a href="http://www.bnu.edu.cn/gljg/" class="">管理机构</a></li>
+				    <li class="col-sm-4 col-xs-6"><a href="http://zhuye.bnu.edu.cn/gljg/" class="">管理机构</a></li>
 
 				    <li class="col-sm-4 col-xs-6"><a href="http://hr.bnu.edu.cn/rcgzbgs/dashouye.html" target="_blank" class="">人才招聘</a></li>
 
-				    <li class="col-sm-4 col-xs-6"><a href="http://www.bnu.edu.cn/kxyj/" class="">科学研究</a></li>
+				    <li class="col-sm-4 col-xs-6"><a href="http://zhuye.bnu.edu.cn/kxyj/" class="">科学研究</a></li>
 
 				    <li class="col-sm-4 col-xs-6"><a href="zsjy/" class="">招生就业</a></li>
 
@@ -295,9 +295,9 @@ window.location="http://www.bnu.edu.cn/ie6.html";
 
 	    			<li class="col-sm-4 col-xs-6"><a href="mailto:xzxx@bnu.edu.cn">校长信箱</a></li>
 
-	    			<li class="col-sm-4 col-xs-6"><a href="http://www.bnu.edu.cn/xfzc/80823.html">校领导信箱</a></li>
+	    			<li class="col-sm-4 col-xs-6"><a href="http://zhuye.bnu.edu.cn/xfzc/80823.html">校领导信箱</a></li>
 
-	    			<li class="col-sm-4 col-xs-6"><a href="http://www.bnu.edu.cn/xfzc/52576.html">接待日</a></li>
+	    			<li class="col-sm-4 col-xs-6"><a href="http://zhuye.bnu.edu.cn/xfzc/52576.html">接待日</a></li>
 
 				  </ul>
 
@@ -603,8 +603,8 @@ window.location="http://www.bnu.edu.cn/ie6.html";
 
   </body>
 
-</html></body></html></body></html><script src="http://www.bnu.edu.cn/cms/web/writeLog.jsp?channelID=2315"></script>
+</html></body></html></body></html><script src="http://zhuye.bnu.edu.cn/cms/web/writeLog.jsp?channelID=2315"></script>
 <div class="yincang">您是第<FONT color=red>
-                      <script src="http://www.bnu.edu.cn/cms/web/channelVisitLog.jsp?parentID=2315"></script>
+                      <script src="http://zhuye.bnu.edu.cn/cms/web/channelVisitLog.jsp?parentID=2315"></script>
     </FONT>位访问者</div>
 </body></html>

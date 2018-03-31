@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using XiaoyaStore.Data;
 using XiaoyaStore.Data.Model;
+using XiaoyaStore.Helper;
 
 namespace XiaoyaStore.Store
 {
@@ -21,12 +22,30 @@ namespace XiaoyaStore.Store
                 // Clear all
                 context.RemoveRange(context.UrlFrontierItems);
 
+                var hostCount = new Dictionary<string, int>();
+
                 // Add all init urls
                 foreach (var url in initUrls)
                 {
+                    var host = UrlHelper.GetHost(url);
+
+                    if (host != "")
+                    {
+                        if (hostCount.ContainsKey(host))
+                        {
+                            hostCount[host]++;
+                        }
+                        else
+                        {
+                            hostCount[host] = 1;
+                        }
+                    }
+
                     var item = new UrlFrontierItem
                     {
                         Url = url,
+                        Host = host,
+                        UrlDepth = UrlHelper.GetDomainDepth(url),
                         PlannedTime = DateTime.Now,
                         FailedTimes = 0,
                         UpdatedAt = DateTime.Now,
@@ -35,6 +54,15 @@ namespace XiaoyaStore.Store
                     };
 
                     context.UrlFrontierItems.Add(item);
+                }
+
+                foreach (var host in hostCount)
+                {
+                    context.UrlHostStats.Add(new UrlHostStat
+                    {
+                        Host = host.Key,
+                        Count = host.Value,
+                    });
                 }
 
                 try
@@ -80,16 +108,45 @@ namespace XiaoyaStore.Store
 
                 if (item == null)
                 {
+                    var host = UrlHelper.GetHost(url);
                     // Add this url for the first time
                     item = new UrlFrontierItem
                     {
                         Url = url,
+                        Host = host,
+                        UrlDepth = UrlHelper.GetDomainDepth(url),
                         PlannedTime = DateTime.Now,
                         FailedTimes = 0,
                         UpdatedAt = DateTime.Now,
                         CreatedAt = DateTime.Now,
                         IsPopped = false,
                     };
+
+                    var hostStat = context.UrlHostStats.SingleOrDefault(o => o.Host == host);
+                    if (hostStat == null)
+                    {
+                        if (host != "")
+                        {
+                            context.UrlHostStats.Add(new UrlHostStat
+                            {
+                                Host = host,
+                                Count = 1,
+                            });
+                        }
+                    }
+                    else
+                    {
+                        item.PlannedTime = item.PlannedTime.AddSeconds(hostStat.Count * 10);
+                        hostStat.Count++;
+                    }
+
+                    item.PlannedTime = item.PlannedTime.AddHours(item.UrlDepth);
+
+                    // Don't plan too late
+                    if (item.PlannedTime > DateTime.Now.AddDays(3))
+                    {
+                        item.PlannedTime = DateTime.Now.AddDays(3);
+                    }
 
                     context.UrlFrontierItems.Add(item);
 
@@ -140,6 +197,14 @@ namespace XiaoyaStore.Store
                     item.IsPopped = false;
                     item.UpdatedAt = DateTime.Now;
                 }
+
+                var hostStat = context.UrlHostStats.SingleOrDefault(o => o.Host == UrlHelper.GetHost(url));
+                if (hostStat != null)
+                {
+                    item.PlannedTime = item.PlannedTime.AddSeconds((hostStat.Count - 1) * 10);
+                }
+
+                item.PlannedTime.AddHours(item.UrlDepth);
 
                 // Don't plan too late
                 if (item.PlannedTime > DateTime.Now.AddMonths(3))

@@ -483,5 +483,88 @@ namespace XiaoyaStoreUnitTest
                 connection.Close();
             }
         }
+
+        [TestMethod]
+        public void TestPopUrlForCrawlPerHostAndDepth()
+        {
+            var connection = new SqliteConnection("DataSource=:memory:");
+            connection.Open();
+
+            var options = new DbContextOptionsBuilder<XiaoyaSearchContext>()
+                .UseSqlite(connection)
+                .Options;
+
+            try
+            {
+                using (var context = new XiaoyaSearchContext(options))
+                {
+                    context.Database.EnsureCreated();
+                }
+
+                var urlFrontierItemStore = new UrlFrontierItemStore(options);
+
+                var urlFileStore = new UrlFileStore(options);
+
+                urlFileStore.Save(new UrlFile
+                {
+                    Url = "http://a.com/c",
+                    FilePath = @"D:\a.html",
+                    FileHash = "abcd",
+                    Charset = "utf8",
+                    MimeType = "text/html",
+                });
+
+                urlFileStore.Save(new UrlFile
+                {
+                    Url = "http://a.com/b",
+                    FilePath = @"D:\b.html",
+                    FileHash = "abcd",
+                    Charset = "utf8",
+                    MimeType = "text/html",
+                });
+
+                urlFileStore.Save(new UrlFile
+                {
+                    Url = "http://c.com/d",
+                    FilePath = @"D:\c.html",
+                    FileHash = "abcd",
+                    Charset = "utf8",
+                    MimeType = "text/html",
+                });
+
+                urlFileStore.Save(new UrlFile
+                {
+                    Url = "http://b.com/",
+                    FilePath = @"D:\d.html",
+                    FileHash = "abcd",
+                    Charset = "utf8",
+                    MimeType = "text/html",
+                });
+
+                urlFrontierItemStore.Push("http://a.com/c");
+                urlFrontierItemStore.Push("http://a.com/b");
+                urlFrontierItemStore.Push("http://c.com/d");
+                urlFrontierItemStore.Push("http://b.com/");
+
+                var item = urlFrontierItemStore.PopUrlForCrawl(false);
+                Assert.AreEqual("http://b.com/", item.Url);
+
+                item = urlFrontierItemStore.PopUrlForCrawl(false);
+                Assert.AreEqual("http://a.com/c", item.Url);
+
+                item = urlFrontierItemStore.PopUrlForCrawl(false);
+                Assert.AreEqual("http://c.com/d", item.Url);
+
+                item = urlFrontierItemStore.PopUrlForCrawl(false);
+                Assert.AreEqual("http://a.com/b", item.Url);
+
+                item = urlFrontierItemStore.PopUrlForCrawl(false);
+                Assert.IsNull(item);
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
     }
 }

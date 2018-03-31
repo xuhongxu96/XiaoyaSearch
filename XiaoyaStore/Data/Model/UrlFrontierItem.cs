@@ -17,6 +17,16 @@ namespace XiaoyaStore.Data.Model
         [ConcurrencyCheck]
         public string Url { get; set; }
         /// <summary>
+        /// Host of url
+        /// </summary>
+        [ConcurrencyCheck]
+        public string Host { get; set; }
+        /// <summary>
+        /// Depth of url (Number of '/')
+        /// </summary>
+        [ConcurrencyCheck]
+        public int UrlDepth { get; set; }
+        /// <summary>
         /// Date time for next crawling this url
         /// </summary>
         [ConcurrencyCheck]

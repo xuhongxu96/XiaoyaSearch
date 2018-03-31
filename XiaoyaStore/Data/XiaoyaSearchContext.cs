@@ -14,6 +14,7 @@ namespace XiaoyaStore.Data
         public DbSet<InvertedIndex> InvertedIndices { get; set; }
         public DbSet<IndexStat> IndexStats { get; set; }
         public DbSet<UrlFileIndexStat> UrlFileIndexStats { get; set; }
+        public DbSet<UrlHostStat> UrlHostStats { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -67,6 +68,14 @@ namespace XiaoyaStore.Data
 
             modelBuilder.Entity<UrlFileIndexStat>()
                 .HasIndex(o => o.WordFrequency);
+
+            #endregion
+
+            #region UrlHostStat
+
+            modelBuilder.Entity<UrlHostStat>()
+                .HasIndex(o => o.Host)
+                .IsUnique();
 
             #endregion
         }

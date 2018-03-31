@@ -97,7 +97,7 @@ document.write(isnMonth[today.getMonth()]+"&nbsp;&nbsp;"+date+"&nbsp;&nbsp;"+yea
         <LI><a href="administration/jgbc/index.htm" target="_parent">Administration</a></li>
         <LI><a href="schools_departments/xy_x/index.htm" target="_parent">Schools&Dept</a></li>
         <LI><a href="http://iso.bnu.edu.cn/" target="_blank">Admission</a></li>
-         <LI><a href="famous_educators/index.htm" target="_parent">Faculty&Staff</a></li>
+         <LI><a href="gateways_for/faculty_staff/famous_educators/index.htm" target="_parent">Faculty&Staff</a></li>
         <LI><a href="academicsresearch/index.htm" target="_parent">Academics&Research</a></li>
         <LI><a href="http://oiec.bnu.edu.cn/" target="_blank">International</a></li>
         <LI><a href="http://english.bnu.edu.cn/publicservices/directions/index.htm" target="_parent">Public Service</a></li>
@@ -125,7 +125,7 @@ document.write(isnMonth[today.getMonth()]+"&nbsp;&nbsp;"+date+"&nbsp;&nbsp;"+yea
               href="gateways_for/students/index.htm" >Students</A> 
 
               <LI><A 
-              href="famous_educators/index.htm"  >Faculty 
+              href="gateways_for/faculty_staff/famous_educators/index.htm"  >Faculty 
               &amp; Staff</A> 
               <LI><A 
               href="http://www.bnulxsh.com/english/"  target="_blank" >International 
@@ -207,17 +207,17 @@ document.write(isnMonth[today.getMonth()]+"&nbsp;&nbsp;"+date+"&nbsp;&nbsp;"+yea
               <TR>
                 <TD>
                   <UL class=ul_list>
-                                         <LI><A title="Our school and the Central Institute of Socialism signed a strategic cooperation agreement" href="universitynews/85909.htm" onMouseOver="document.getElementById('1').style.display='block'; " onMouseOut="document.getElementById('1').style.display='none'; " align="left" >            Our school and the Central Institute of Socialism signed a strategic cooperation... 
-    　</A> <span class="newtime" >2018-01-17</span>
+                                         <LI><A title="Dong Qi Meets the President of Mongolian National Normal University" href="universitynews/86434.htm" onMouseOver="document.getElementById('1').style.display='block'; " onMouseOut="document.getElementById('1').style.display='none'; " align="left" >            Dong Qi Meets the President of Mongolian National Normal University 
+    　</A> <span class="newtime" >2018-03-21</span>
   </LI>
-                         <LI><A title="Six subjects of our school in the country's fourth round of subject evaluation were rated A +" href="universitynews/85908.htm" onMouseOver="document.getElementById('2').style.display='block'; " onMouseOut="document.getElementById('2').style.display='none'; " align="left" >            Six subjects of our school in the country's fourth round of subject evaluation w... 
-    　</A> <span class="newtime" >2017-12-29</span>
+                         <LI><A title="Chen Li Researched Institute of History, Department of Geographic Sciences" href="universitynews/86344.htm" onMouseOver="document.getElementById('2').style.display='block'; " onMouseOut="document.getElementById('2').style.display='none'; " align="left" >            Chen Li Researched Institute of History, Department of Geographic Sciences 
+    　</A> <span class="newtime" >2018-03-12</span>
   </LI>
-                         <LI><A title="Our BNU Chinese literature and art review base was rated as advanced unit of work" href="universitynews/85907.htm" onMouseOver="document.getElementById('3').style.display='block'; " onMouseOut="document.getElementById('3').style.display='none'; " align="left" >            Our BNU Chinese literature and art review base was rated as advanced unit of wor... 
-    　</A> <span class="newtime" >2017-12-25</span>
+                         <LI><A title="Delegation from Purdue University visited our BNU" href="universitynews/86341.htm" onMouseOver="document.getElementById('3').style.display='block'; " onMouseOut="document.getElementById('3').style.display='none'; " align="left" >            Delegation from Purdue University visited our BNU 
+    　</A> <span class="newtime" >2018-03-08</span>
   </LI>
-                         <LI><A title="Cheng Jianping and his entourage went to Ningxia Hui Autonomous Region to negotiate the strategic cooperation between the campus and region" href="universitynews/85906.htm" onMouseOver="document.getElementById('4').style.display='block'; " onMouseOut="document.getElementById('4').style.display='none'; " align="left" >            Cheng Jianping and his entourage went to Ningxia Hui Autonomous Region to negoti... 
-    　</A> <span class="newtime" >2017-12-20</span>
+                         <LI><A title="Our first Sino-foreign cooperative education program was approved by the Ministry of Education" href="universitynews/86288.htm" onMouseOver="document.getElementById('4').style.display='block'; " onMouseOut="document.getElementById('4').style.display='none'; " align="left" >            Our first Sino-foreign cooperative education program was approved by the Ministr... 
+    　</A> <span class="newtime" >2018-02-28</span>
   </LI>
                     </UL>           <div><a 
            class=more href="universitynews/index.htm">more &gt;&gt;&nbsp;&nbsp;</a>
@@ -250,27 +250,31 @@ document.write(isnMonth[today.getMonth()]+"&nbsp;&nbsp;"+date+"&nbsp;&nbsp;"+yea
                   src=""  width=139>
 </div>
       <img class=pic height=93 
-                  src="images/content/2017-04/20170411165416043581.jpg" 
+                  src="images/content/2018-03/20180312182830611855.png" 
                   width=139>
 </div> 
-                  <SPAN class=picnews>            The Astronomy Department successfully held the Physics of the Intracluster Medium International Symp... 
-    </SPAN><span class="newtime0" >2017-04-10</span>
+                  <SPAN class=picnews>            World Association of Lesson Studies (WALS) International Conference 2018 
+    </SPAN><span class="newtime0" >2018-03-12</span>
                   <A 
-                  href="academicevents/83577.htm" class=picnews1>Our school Astronomy Department successfully held the Physics of the Intracluster Medium International Symposium in April 3-7 ...</A>                </TD></TR>
+                  href="academicevents/86328.htm" class=picnews1>Conference Theme:
+
+LESSON STUDY AND TEACHER EDUCATION: 
+INTERNATIONAL DIALOGUE
+</A>                </TD></TR>
               <TR>
                 <TD>
                   <UL class=ul_list>
-                                                     <LI><A title="[Results] Professor Miu Chiun-Yuan of Department of Geographical Sciences published a long review paper in Reviews of Geophysics" href="academicevents/85905.htm" onMouseOver="document.getElementById('10').style.display='block';" onMouseOut="document.getElementById('10').style.display='none';" align="left" >            [Results] Professor Miu Chiun-Yuan of Department of Geographical Sciences publis... 
+                                                     <LI><A title="[Announcement] Notice on the Second Asian Science and Technology Conference on Disaster Reduction" href="academicevents/86362.htm" onMouseOver="document.getElementById('10').style.display='block';" onMouseOut="document.getElementById('10').style.display='none';" align="left" >            [Announcement] Notice on the Second Asian Science and Technology Conference on D... 
+    </A><span class="newtime" >2018-03-15</span>
+  </LI>
+                         <LI><A title="[Conference]Agricultural Education Center Participates in the 5th Joint Meeting of the UNESCO class II Center for Education" href="academicevents/86323.htm" onMouseOver="document.getElementById('11').style.display='block';" onMouseOut="document.getElementById('11').style.display='none';" align="left" >            [Conference]Agricultural Education Center Participates in the 5th Joint Meeting ... 
+    </A><span class="newtime" >2018-03-06</span>
+  </LI>
+                         <LI><A title="[Results] Professor Miu Chiun-Yuan of Department of Geographical Sciences published a long review paper in Reviews of Geophysics" href="academicevents/86178.htm" onMouseOver="document.getElementById('12').style.display='block';" onMouseOut="document.getElementById('12').style.display='none';" align="left" >            [Results] Professor Miu Chiun-Yuan of Department of Geographical Sciences publis... 
     </A><span class="newtime" >2018-01-16</span>
   </LI>
-                         <LI><A title="[Call for Paper] The 2018 Regional Conference of the International Geographical Union (Human-Land System Coupling and Sustainable Development)" href="academicevents/85904.htm" onMouseOver="document.getElementById('11').style.display='block';" onMouseOut="document.getElementById('11').style.display='none';" align="left" >            [Call for Paper] The 2018 Regional Conference of the International Geographical ... 
+                         <LI><A title="[Call for Paper] The 2018 Regional Conference of the International Geographical Union (Human-Land System Coupling and Sustainable Development)" href="academicevents/85956.htm" onMouseOver="document.getElementById('13').style.display='block';" onMouseOut="document.getElementById('13').style.display='none';" align="left" >            [Call for Paper] The 2018 Regional Conference of the International Geographical ... 
     </A><span class="newtime" >2017-12-27</span>
-  </LI>
-                         <LI><A title="[Meeting] Prof. Zhu Lihang in School of Statistics was invited as a special guest at South African National Statistical Annual Meeting 2017" href="academicevents/85903.htm" onMouseOver="document.getElementById('12').style.display='block';" onMouseOut="document.getElementById('12').style.display='none';" align="left" >            [Meeting] Prof. Zhu Lihang in School of Statistics was invited as a special gues... 
-    </A><span class="newtime" >2017-12-13</span>
-  </LI>
-                         <LI><A title=" [Achievement] Zhang Yifan, Ph.D. candidate at the School of Nuclear Science and Technology won the Best Academic Report Award at the International Surface Treatment and Modification Technology Conference 2017" href="academicevents/85902.htm" onMouseOver="document.getElementById('13').style.display='block';" onMouseOut="document.getElementById('13').style.display='none';" align="left" >             [Achievement] Zhang Yifan, Ph.D. candidate at the School of Nuclear Science and... 
-    </A><span class="newtime" >2017-12-08</span>
   </LI>
 </UL>
            <div><a 
