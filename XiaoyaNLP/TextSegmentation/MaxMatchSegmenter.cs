@@ -64,7 +64,7 @@ namespace XiaoyaNLP.TextSegmentation
 
             if (notCharCount > charCount)
             {
-                yield break;
+                throw new NotSupportedException("Invalid text");
             }
 
             while (match.Success)
