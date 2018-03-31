@@ -8,13 +8,13 @@ namespace XiaoyaNLP.TextSegmentation
 {
     public class MaxMatchSegmenter : ITextSegmenter
     {
+        protected const string DictFileName = "../../../../Resources/30wdict_utf8.txt";
+        protected static HashSet<string> mDict = new HashSet<string>();
+        protected static Dictionary<char, int> mMaxWordLength = new Dictionary<char, int>();
 
-        protected HashSet<string> mDict = new HashSet<string>();
-        protected Dictionary<char, int> mMaxWordLength = new Dictionary<char, int>();
-
-        public MaxMatchSegmenter(string dictFileName)
+        static MaxMatchSegmenter()
         {
-            using (var reader = new StreamReader(dictFileName))
+            using (var reader = new StreamReader(DictFileName))
             {
                 while (!reader.EndOfStream)
                 {
@@ -58,6 +58,15 @@ namespace XiaoyaNLP.TextSegmentation
         public IEnumerable<TextSegment> Segment(string sentence)
         {
             var match = CommonRegex.RegexAnyChars.Match(sentence);
+
+            var charCount = CommonRegex.RegexAllChar.Matches(sentence).Count;
+            var notCharCount = CommonRegex.RegexAllNotChar.Matches(sentence).Count;
+
+            if (notCharCount > charCount)
+            {
+                yield break;
+            }
+
             while (match.Success)
             {
                 var subSentence = match.Value;

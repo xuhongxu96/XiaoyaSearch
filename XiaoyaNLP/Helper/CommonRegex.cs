@@ -7,6 +7,9 @@ namespace XiaoyaNLP.Helper
 {
     public static class CommonRegex
     {
+        public static readonly Regex RegexAllChar = new Regex(@"([\P{Cc}\s])", RegexOptions.Compiled);
+        public static readonly Regex RegexAllNotChar = new Regex(@"([^\P{Cc}\s])", RegexOptions.Compiled);
+
         public static readonly Regex RegexAllChars = new Regex(@"([\u4E00-\u9FD5a-zA-Z0-9+#&\._]+)", RegexOptions.Compiled);
         public static readonly Regex RegexAnyChars = new Regex(@"([\u4E00-\u9FD5]+|[a-zA-Z0-9]+|[0-9\.]+)", RegexOptions.Compiled);
 

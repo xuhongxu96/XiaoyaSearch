@@ -39,7 +39,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XiaoyaQueryParserUnitTest",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XiaoyaRankerUnitTest", "XiaoyaRankerUnitTest\XiaoyaRankerUnitTest.csproj", "{C3308F16-4DCC-4317-AE55-FE45F8DB29EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XiaoyaIndexerInterface", "XiaoyaIndexerInterface\XiaoyaIndexerInterface.csproj", "{78932E20-62B6-42AA-B3FA-6E34593E3FC6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XiaoyaIndexerInterface", "XiaoyaIndexerInterface\XiaoyaIndexerInterface.csproj", "{78932E20-62B6-42AA-B3FA-6E34593E3FC6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

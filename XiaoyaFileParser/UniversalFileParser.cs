@@ -21,7 +21,11 @@ namespace XiaoyaFileParser
                 mUrlFile = value;
                 if (!File.Exists(mUrlFile.FilePath))
                 {
-                    throw new FileNotFoundException(mUrlFile.FilePath + "doesn't exist");
+                    throw new FileNotFoundException(mUrlFile.FilePath + " doesn't exist");
+                }
+                else if (new FileInfo(mUrlFile.FilePath).Length > 4 * 1024 * 1024)
+                {
+                    throw new FileLoadException(mUrlFile.FilePath + " is too big to index");
                 }
                 mCurrentParser = GetParser(mUrlFile.MimeType, mConfig);
                 mCurrentParser.UrlFile = mUrlFile;

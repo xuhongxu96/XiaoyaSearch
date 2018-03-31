@@ -100,6 +100,10 @@ namespace XiaoyaIndexer
 
                     mLogger.Log(nameof(SimpleIndexer), "Indexed Url: " + urlFile.Url);
                 }
+                catch (Exception e)
+                {
+                    mLogger.Log(nameof(SimpleIndexer), "Failed to Index Url: " + urlFile.Url + "\r\n" + e.Message);
+                }
                 finally
                 {
                     mIndexSemaphore.Release();

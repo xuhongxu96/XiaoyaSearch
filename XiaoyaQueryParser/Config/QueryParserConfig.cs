@@ -8,6 +8,6 @@ namespace XiaoyaQueryParser.Config
     public class QueryParserConfig
     {
         public ITextSegmenter TextSegmenter { get; set; }
-            = new MaxMatchSegmenter("../../../../Resources/30wdict_utf8.txt");
+            = new MaxMatchSegmenter();
     }
 }

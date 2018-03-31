@@ -262,3 +262,5 @@ __pycache__/
 /XiaoyaCrawlerInterface/Properties/launchSettings.json
 /XiaoyaStore/Migrations/
 /XiaoyaIndexerInterface/Properties/launchSettings.json
+/XiaoyaIndexer/Properties/launchSettings.json
+/XiaoyaCommon/Properties/launchSettings.json
