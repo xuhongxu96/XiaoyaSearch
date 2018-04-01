@@ -7,6 +7,7 @@ using XiaoyaStore.Data;
 using XiaoyaStore.Data.Model;
 using Microsoft.EntityFrameworkCore;
 using static XiaoyaStore.Data.Model.InvertedIndex;
+using System.Data.SqlClient;
 
 namespace XiaoyaStore.Store
 {
@@ -15,15 +16,34 @@ namespace XiaoyaStore.Store
         public InvertedIndexStore(DbContextOptions options = null) : base(options)
         { }
 
+        protected double mStatTimeoutMinute = 1;
+        protected double mTimeoutMinute = 1;
+
         public void GenerateStat()
         {
             using (var context = NewContext())
             {
-                context.Database.ExecuteSqlCommand(@"
+                while (true)
+                {
+                    try
+                    {
+                        context.Database.SetCommandTimeout(TimeSpan.FromMinutes(mStatTimeoutMinute));
+                        context.Database.ExecuteSqlCommand(@"
 TRUNCATE TABLE IndexStats;
 INSERT INTO IndexStats (Word, DocumentFrequency, WordFrequency) SELECT Word AS Word, COUNT(DISTINCT UrlFileId) AS DocumentFrequency, COUNT(*) AS WordFrequency FROM XiaoyaSearch.dbo.InvertedIndices GROUP BY Word;
 TRUNCATE TABLE UrlFileIndexStats;
 INSERT INTO UrlFileIndexStats (Word, UrlFileId, WordFrequency) SELECT Word AS Word, UrlFileId AS UrlFileId, COUNT(*) AS WordFrequency FROM XiaoyaSearch.dbo.InvertedIndices GROUP BY Word, UrlFileId;");
+                        break;
+                    }
+                    catch (SqlException e) when (e.Message.Contains("timeout"))
+                    {
+                        mStatTimeoutMinute *= 2;
+                        if (mStatTimeoutMinute > 30)
+                        {
+                            throw;
+                        }
+                    }
+                }
             }
         }
 
@@ -31,17 +51,35 @@ INSERT INTO UrlFileIndexStats (Word, UrlFileId, WordFrequency) SELECT Word AS Wo
         {
             using (var context = NewContext())
             {
-                var toBeRemovedIndices = from o in context.InvertedIndices
-                                         where o.UrlFileId == urlFileId
-                                         select o;
+                while (true)
+                {
+                    try
+                    {
+                        context.Database.SetCommandTimeout(TimeSpan.FromMinutes(mTimeoutMinute));
 
-                context.RemoveRange(toBeRemovedIndices);
-                context.InvertedIndices.AddRange(invertedIndices);
+                        var toBeRemovedIndices = from o in context.InvertedIndices
+                                                 where o.UrlFileId == urlFileId
+                                                 select o;
 
-                context.UrlFiles.Single(o => o.UrlFileId == urlFileId).IndexStatus
-                    = UrlFile.UrlFileIndexStatus.Indexed;
+                        context.RemoveRange(toBeRemovedIndices);
+                        context.InvertedIndices.AddRange(invertedIndices);
 
-                context.SaveChanges();
+                        context.UrlFiles.Single(o => o.UrlFileId == urlFileId).IndexStatus
+                            = UrlFile.UrlFileIndexStatus.Indexed;
+
+                        context.SaveChanges();
+
+                        break;
+                    }
+                    catch (SqlException e) when (e.Message.Contains("timeout"))
+                    {
+                        mTimeoutMinute *= 2;
+                        if (mTimeoutMinute > 30)
+                        {
+                            throw;
+                        }
+                    }
+                }
             }
         }
 

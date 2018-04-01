@@ -42,11 +42,19 @@ namespace XiaoyaIndexer
 
                 lock (mSyncLock)
                 {
-                    mConfig.InvertedIndexStore.GenerateStat();
+                    try
+                    {
+                        mConfig.InvertedIndexStore.GenerateStat();
+                    }
+                    catch(Exception e)
+                    {
+                        mLogger.Log(nameof(SimpleIndexer), "Failed to Generate Stat: " 
+                        + "\r\n" + e.Message + "\r\n" + e.InnerException.Message + "\r\n" + e.StackTrace);
+                    }
                 }
 
                 mLogger.Log(nameof(SimpleIndexer), "Generated Index Stats.");
-            }), null, TimeSpan.FromTicks(0), TimeSpan.FromMinutes(10));
+            }), null, TimeSpan.FromTicks(0), TimeSpan.FromHours(2));
         }
 
         public void WaitAll()
@@ -101,8 +109,7 @@ namespace XiaoyaIndexer
                             failedTimes++;
                             if (failedTimes == 10)
                             {
-                                mLogger.Log(nameof(SimpleIndexer), "Failed to Index Url: " 
-                                    + urlFile.Url + "\r\n" + e.Message + "\r\n" + e.InnerException.Message);
+                                throw;
                             }
                         }
                     }
@@ -112,7 +119,7 @@ namespace XiaoyaIndexer
                 catch (Exception e)
                 {
                     mLogger.Log(nameof(SimpleIndexer), "Failed to Index Url: " + urlFile.Url
-                        + "\r\n" + e.Message + "\r\n" + e.InnerException.Message);
+                        + "\r\n" + e.Message + "\r\n" + e.InnerException.Message + "\r\n" + e.StackTrace);
                 }
                 finally
                 {
