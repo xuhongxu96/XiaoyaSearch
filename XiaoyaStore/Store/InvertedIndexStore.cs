@@ -15,6 +15,18 @@ namespace XiaoyaStore.Store
         public InvertedIndexStore(DbContextOptions options = null) : base(options)
         { }
 
+        public void GenerateStat()
+        {
+            using (var context = NewContext())
+            {
+                context.Database.ExecuteSqlCommand(@"
+TRUNCATE TABLE IndexStats;
+INSERT INTO IndexStats (Word, DocumentFrequency, WordFrequency) SELECT Word AS Word, COUNT(DISTINCT UrlFileId) AS DocumentFrequency, COUNT(*) AS WordFrequency FROM XiaoyaSearch.dbo.InvertedIndices GROUP BY Word;
+TRUNCATE TABLE UrlFileIndexStats;
+INSERT INTO UrlFileIndexStats (Word, UrlFileId, WordFrequency) SELECT Word AS Word, UrlFileId AS UrlFileId, COUNT(*) AS WordFrequency FROM XiaoyaSearch.dbo.InvertedIndices GROUP BY Word, UrlFileId;");
+            }
+        }
+
         public void ClearAndSaveInvertedIndices(int urlFileId, IEnumerable<InvertedIndex> invertedIndices)
         {
             using (var context = NewContext())
@@ -23,107 +35,8 @@ namespace XiaoyaStore.Store
                                          where o.UrlFileId == urlFileId
                                          select o;
 
-                var groupedRemovedIndices = toBeRemovedIndices.GroupBy(o => o.Word)
-                    .Select(g => new
-                    {
-                        Word = g.Key,
-                        Count = g.Count(),
-                    });
-
-                foreach (var index in groupedRemovedIndices)
-                {
-                    var stat = context.IndexStats.SingleOrDefault(o => o.Word == index.Word);
-                    if (stat != null)
-                    {
-                        stat.WordFrequency -= index.Count;
-                        stat.DocumentFrequency--;
-
-                        if (stat.WordFrequency < 0)
-                        {
-                            stat.WordFrequency = 0;
-                        }
-
-                        if (stat.DocumentFrequency < 0)
-                        {
-                            stat.DocumentFrequency = 0;
-                        }
-                    }
-
-                    var urlFileStat = context.UrlFileIndexStats
-                        .SingleOrDefault(o => o.UrlFileId == urlFileId && o.Word == index.Word);
-                    if (urlFileStat != null && urlFileStat.WordFrequency > 0)
-                    {
-                        urlFileStat.WordFrequency -= index.Count;
-
-                        if (urlFileStat.WordFrequency < 0)
-                        {
-                            urlFileStat.WordFrequency = 0;
-                        }
-                    }
-
-                }
-
                 context.RemoveRange(toBeRemovedIndices);
                 context.InvertedIndices.AddRange(invertedIndices);
-
-                var groupedIndices = invertedIndices.GroupBy(o => o.Word)
-                    .Select(g => new
-                    {
-                        Word = g.Key,
-                        Count = g.Count(),
-                    });
-
-                foreach (var index in groupedIndices)
-                {
-                    var stat = context.IndexStats.SingleOrDefault(o => o.Word == index.Word);
-                    if (stat == null)
-                    {
-                        stat = new IndexStat
-                        {
-                            Word = index.Word,
-                            WordFrequency = index.Count,
-                            DocumentFrequency = 1,
-                        };
-                        context.IndexStats.Add(stat);
-                    }
-                    else
-                    {
-                        stat.WordFrequency += index.Count;
-                        stat.DocumentFrequency++;
-                    }
-
-                    if (stat.WordFrequency > long.MaxValue / 2)
-                    {
-                        stat.WordFrequency = long.MaxValue / 2;
-                    }
-
-                    if (stat.DocumentFrequency > long.MaxValue / 2)
-                    {
-                        stat.DocumentFrequency = long.MaxValue / 2;
-                    }
-
-                    var urlFileStat = context.UrlFileIndexStats
-                        .SingleOrDefault(o => o.UrlFileId == urlFileId && o.Word == index.Word);
-                    if (urlFileStat == null)
-                    {
-                        urlFileStat = new UrlFileIndexStat
-                        {
-                            UrlFileId = urlFileId,
-                            Word = index.Word,
-                            WordFrequency = index.Count,
-                        };
-                        context.UrlFileIndexStats.Add(urlFileStat);
-                    }
-                    else
-                    {
-                        urlFileStat.WordFrequency += index.Count;
-                    }
-
-                    if (urlFileStat.WordFrequency > long.MaxValue / 2)
-                    {
-                        urlFileStat.WordFrequency = long.MaxValue / 2;
-                    }
-                }
 
                 context.UrlFiles.Single(o => o.UrlFileId == urlFileId).IndexStatus
                     = UrlFile.UrlFileIndexStatus.Indexed;
@@ -144,44 +57,6 @@ namespace XiaoyaStore.Store
                 var toBeRemovedIndices = from o in context.InvertedIndices
                                          where o.UrlFileId == urlFile.UrlFileId
                                          select o;
-                var groupedRemovedIndices = toBeRemovedIndices.GroupBy(o => o.Word)
-                    .Select(g => new
-                    {
-                        Word = g.Key,
-                        Count = g.Count(),
-                    });
-
-                foreach (var index in groupedRemovedIndices)
-                {
-                    var stat = context.IndexStats.SingleOrDefault(o => o.Word == index.Word);
-                    if (stat != null)
-                    {
-                        stat.WordFrequency -= index.Count;
-                        stat.DocumentFrequency--;
-
-                        if (stat.WordFrequency < 0)
-                        {
-                            stat.WordFrequency = 0;
-                        }
-
-                        if (stat.DocumentFrequency < 0)
-                        {
-                            stat.DocumentFrequency = 0;
-                        }
-                    }
-
-                    var urlFileStat = context.UrlFileIndexStats
-                       .SingleOrDefault(o => o.UrlFileId == urlFile.UrlFileId && o.Word == index.Word);
-                    if (urlFileStat != null && urlFileStat.WordFrequency > 0)
-                    {
-                        urlFileStat.WordFrequency -= index.Count;
-
-                        if (urlFileStat.WordFrequency < 0)
-                        {
-                            urlFileStat.WordFrequency = 0;
-                        }
-                    }
-                }
 
                 context.RemoveRange(toBeRemovedIndices);
                 context.SaveChanges();

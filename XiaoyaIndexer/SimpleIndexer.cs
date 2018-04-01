@@ -26,6 +26,7 @@ namespace XiaoyaIndexer
         protected SemaphoreSlim mIndexSemaphore;
         protected ConcurrentBag<Task> mTasks = new ConcurrentBag<Task>();
         protected object mSyncLock = new object();
+        protected Timer mTimer;
 
         public bool IsWaiting { get; private set; } = false;
 
@@ -35,6 +36,17 @@ namespace XiaoyaIndexer
             mConfig = config;
 
             mConfig.UrlFileStore.RestartIndex();
+            mTimer = new Timer(new TimerCallback(obj =>
+            {
+                mLogger.Log(nameof(SimpleIndexer), "Generating Index Stats...");
+
+                lock (mSyncLock)
+                {
+                    mConfig.InvertedIndexStore.GenerateStat();
+                }
+
+                mLogger.Log(nameof(SimpleIndexer), "Generated Index Stats.");
+            }), null, TimeSpan.FromTicks(0), TimeSpan.FromMinutes(10));
         }
 
         public void WaitAll()
@@ -80,10 +92,7 @@ namespace XiaoyaIndexer
                     {
                         try
                         {
-                            lock (mSyncLock)
-                            {
-                                mConfig.InvertedIndexStore.ClearAndSaveInvertedIndices(urlFile, invertedIndices);
-                            }
+                            mConfig.InvertedIndexStore.ClearAndSaveInvertedIndices(urlFile, invertedIndices);
                             failedTimes = -1;
                         }
                         catch (DbUpdateConcurrencyException)
