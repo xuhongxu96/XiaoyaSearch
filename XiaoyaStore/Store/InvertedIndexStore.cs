@@ -16,8 +16,8 @@ namespace XiaoyaStore.Store
         public InvertedIndexStore(DbContextOptions options = null) : base(options)
         { }
 
-        protected double mStatTimeoutMinute = 1;
-        protected double mTimeoutMinute = 1;
+        protected static double sStatTimeoutMinute = 1;
+        protected static double sTimeoutMinute = 1;
 
         public void GenerateStat()
         {
@@ -27,7 +27,7 @@ namespace XiaoyaStore.Store
                 {
                     try
                     {
-                        context.Database.SetCommandTimeout(TimeSpan.FromMinutes(mStatTimeoutMinute));
+                        context.Database.SetCommandTimeout(TimeSpan.FromMinutes(sStatTimeoutMinute));
                         context.Database.ExecuteSqlCommand(@"
 TRUNCATE TABLE IndexStats;
 INSERT INTO IndexStats (Word, DocumentFrequency, WordFrequency) SELECT Word AS Word, COUNT(DISTINCT UrlFileId) AS DocumentFrequency, COUNT(*) AS WordFrequency FROM XiaoyaSearch.dbo.InvertedIndices GROUP BY Word;
@@ -37,8 +37,8 @@ INSERT INTO UrlFileIndexStats (Word, UrlFileId, WordFrequency) SELECT Word AS Wo
                     }
                     catch (SqlException e) when (e.Message.Contains("timeout"))
                     {
-                        mStatTimeoutMinute *= 2;
-                        if (mStatTimeoutMinute > 30)
+                        sStatTimeoutMinute *= 2;
+                        if (sStatTimeoutMinute > 30)
                         {
                             throw;
                         }
@@ -55,7 +55,7 @@ INSERT INTO UrlFileIndexStats (Word, UrlFileId, WordFrequency) SELECT Word AS Wo
                 {
                     try
                     {
-                        context.Database.SetCommandTimeout(TimeSpan.FromMinutes(mTimeoutMinute));
+                        context.Database.SetCommandTimeout(TimeSpan.FromMinutes(sTimeoutMinute));
 
                         var toBeRemovedIndices = from o in context.InvertedIndices
                                                  where o.UrlFileId == urlFileId
@@ -73,8 +73,8 @@ INSERT INTO UrlFileIndexStats (Word, UrlFileId, WordFrequency) SELECT Word AS Wo
                     }
                     catch (SqlException e) when (e.Message.Contains("timeout"))
                     {
-                        mTimeoutMinute *= 2;
-                        if (mTimeoutMinute > 30)
+                        sTimeoutMinute *= 2;
+                        if (sTimeoutMinute > 30)
                         {
                             throw;
                         }
