@@ -95,14 +95,14 @@ namespace XiaoyaIndexer
                             mConfig.InvertedIndexStore.ClearAndSaveInvertedIndices(urlFile, invertedIndices);
                             failedTimes = -1;
                         }
-                        catch (DbUpdateException)
+                        catch (DbUpdateException e)
                         {
                             Thread.Sleep(5000);
                             failedTimes++;
                             if (failedTimes == 10)
                             {
-                                mLogger.Log(nameof(SimpleIndexer), "Failed to Index Url: " + urlFile.Url);
-                                throw;
+                                mLogger.Log(nameof(SimpleIndexer), "Failed to Index Url: " 
+                                    + urlFile.Url + "\r\n" + e.Message + "\r\n" + e.InnerException.Message);
                             }
                         }
                     }
@@ -111,7 +111,8 @@ namespace XiaoyaIndexer
                 }
                 catch (Exception e)
                 {
-                    mLogger.Log(nameof(SimpleIndexer), "Failed to Index Url: " + urlFile.Url + "\r\n" + e.Message + "\r\n" + e.InnerException.Message);
+                    mLogger.Log(nameof(SimpleIndexer), "Failed to Index Url: " + urlFile.Url
+                        + "\r\n" + e.Message + "\r\n" + e.InnerException.Message);
                 }
                 finally
                 {
