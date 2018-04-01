@@ -75,8 +75,13 @@ namespace XiaoyaFileParser.Parsers
         {
             if (mContent == null)
             {
+                var encoding = UrlFile.Charset;
+                if (encoding == null || encoding == "")
+                {
+                    encoding = "utf-8";
+                }
                 mContent = await File.ReadAllTextAsync(UrlFile.FilePath,
-                    Encoding.GetEncoding(UrlFile.Charset));
+                    Encoding.GetEncoding(encoding));
             }
             return mContent;
         }

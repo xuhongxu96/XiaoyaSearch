@@ -103,7 +103,7 @@ namespace XiaoyaIndexer
                             mConfig.InvertedIndexStore.ClearAndSaveInvertedIndices(urlFile, invertedIndices);
                             failedTimes = -1;
                         }
-                        catch (DbUpdateException e)
+                        catch (DbUpdateException)
                         {
                             Thread.Sleep(5000);
                             failedTimes++;
