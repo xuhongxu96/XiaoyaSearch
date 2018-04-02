@@ -46,10 +46,18 @@ namespace XiaoyaIndexer
                     {
                         mConfig.InvertedIndexStore.GenerateStat();
                     }
-                    catch(Exception e)
+                    catch (Exception e)
                     {
-                        mLogger.Log(nameof(SimpleIndexer), "Failed to Generate Stat: " 
-                        + "\r\n" + e.Message + "\r\n" + e.InnerException.Message + "\r\n" + e.StackTrace);
+                        if (e.InnerException == null)
+                        {
+                            mLogger.Log(nameof(SimpleIndexer), "Failed to Generate Stat: "
+                            + "\r\n" + e.Message + "\r\n" + e.InnerException.Message + "\r\n" + e.StackTrace);
+                        }
+                        else
+                        {
+                            mLogger.Log(nameof(SimpleIndexer), "Failed to Generate Stat: "
+                            + "\r\n" + e.Message + "\r\n" + e.StackTrace);
+                        }
                     }
                 }
 
@@ -118,8 +126,16 @@ namespace XiaoyaIndexer
                 }
                 catch (Exception e)
                 {
-                    mLogger.Log(nameof(SimpleIndexer), "Failed to Index Url: " + urlFile.Url
+                    if (e.InnerException == null)
+                    {
+                        mLogger.Log(nameof(SimpleIndexer), "Failed to Generate Stat: "
                         + "\r\n" + e.Message + "\r\n" + e.InnerException.Message + "\r\n" + e.StackTrace);
+                    }
+                    else
+                    {
+                        mLogger.Log(nameof(SimpleIndexer), "Failed to Generate Stat: "
+                        + "\r\n" + e.Message + "\r\n" + e.StackTrace);
+                    }
                 }
                 finally
                 {

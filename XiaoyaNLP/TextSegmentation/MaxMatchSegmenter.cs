@@ -8,6 +8,8 @@ namespace XiaoyaNLP.TextSegmentation
 {
     public class MaxMatchSegmenter : ITextSegmenter
     {
+        protected const int MaxSegmentLength = 30;
+
         protected const string DictFileName = "../../../../Resources/30wdict_utf8.txt";
         protected static HashSet<string> mDict = new HashSet<string>();
         protected static Dictionary<char, int> mMaxWordLength = new Dictionary<char, int>();
@@ -76,17 +78,28 @@ namespace XiaoyaNLP.TextSegmentation
                 {
                     foreach(var segment in SegmentChineseSentence(subSentence, index))
                     {
-                        yield return segment;
+                        if (segment.Length <= MaxSegmentLength)
+                        {
+                            yield return segment;
+                        }
                     }
                 }
                 else
                 {
-                    yield return new TextSegment
+                    var symbolCount = CommonRegex.RegexAllSymbol.Matches(sentence).Count;
+
+                    if (symbolCount < charCount / 2)
                     {
-                        Text = subSentence,
-                        Position = index,
-                        Length = subSentence.Length,
-                    };
+                        if (subSentence.Length <= MaxSegmentLength)
+                        {
+                            yield return new TextSegment
+                            {
+                                Text = subSentence,
+                                Position = index,
+                                Length = subSentence.Length,
+                            };
+                        }
+                    }
                 }
 
                 match = match.NextMatch();
