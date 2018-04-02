@@ -86,7 +86,8 @@ namespace XiaoyaNLP.TextSegmentation
                 }
                 else
                 {
-                    var symbolCount = CommonRegex.RegexAllSymbol.Matches(sentence).Count;
+                    var symbolCount = CommonRegex.RegexAllSymbol.Matches(subSentence).Count;
+                    charCount = CommonRegex.RegexAllChar.Matches(subSentence).Count;
 
                     if (symbolCount < charCount / 2)
                     {
