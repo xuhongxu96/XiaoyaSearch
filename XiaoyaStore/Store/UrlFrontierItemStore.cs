@@ -79,10 +79,7 @@ namespace XiaoyaStore.Store
             using (var context = NewContext())
             {
                 // Pop all urls
-                foreach (var item in context.UrlFrontierItems.Where(o => o.IsPopped))
-                {
-                    item.IsPopped = false;
-                }
+                context.Database.ExecuteSqlCommand("UPDATE UrlFrontierItems SET IsPopped = 0 WHERE IsPopped = 1");
 
                 // Don't plan too late
                 foreach (var item in context.UrlFrontierItems

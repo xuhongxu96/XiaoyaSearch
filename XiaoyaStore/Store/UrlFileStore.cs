@@ -28,12 +28,7 @@ namespace XiaoyaStore.Store
         {
             using (var context = NewContext())
             {
-                foreach (var urlFile in context.UrlFiles
-                    .Where(o => o.IndexStatus == UrlFile.UrlFileIndexStatus.Indexing))
-                {
-                    urlFile.IndexStatus = UrlFile.UrlFileIndexStatus.NotIndexed;
-                }
-                context.SaveChanges();
+                context.Database.ExecuteSqlCommand("UPDATE UrlFiles SET IndexStatus = 0 WHERE IndexStatus = 1");
             }
         }
 
