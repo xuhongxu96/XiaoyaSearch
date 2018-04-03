@@ -159,7 +159,7 @@ namespace XiaoyaCrawler
             var token = mCancellationTokenSource.Token;
             await Task.Run(() =>
             {
-                while (!mUrlFrontier.IsEmpty)
+                while (true)
                 {
                     if (token.IsCancellationRequested)
                     {
@@ -172,9 +172,13 @@ namespace XiaoyaCrawler
                         mFetchSemaphore.Wait();
                         FetchUrlAsync(url.Url);
                     }
-                    while (mUrlFrontier.IsEmpty && mTasks.Any(o => !o.IsCompleted))
+                    else if (mTasks.Any(o => !o.IsCompleted))
                     {
                         Task.WaitAny(mTasks.ToArray());
+                    }
+                    else
+                    {
+                        Thread.Sleep(5000);
                     }
                 }
             }, token);

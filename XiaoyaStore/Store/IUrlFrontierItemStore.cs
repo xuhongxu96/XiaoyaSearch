@@ -6,10 +6,9 @@ namespace XiaoyaStore.Store
 {
     public interface IUrlFrontierItemStore
     {
-        int Count();
         void Init(IEnumerable<string> initUrls);
         void RestartCrawl();
-        UrlFrontierItem PopUrlForCrawl(bool strictPlannedTime = true);
+        UrlFrontierItem PopUrlForCrawl();
         UrlFrontierItem LoadByUrl(string url);
         UrlFrontierItem Push(string url);
         UrlFrontierItem PushBack(string url, bool failed = false);

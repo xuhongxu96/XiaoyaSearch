@@ -13,14 +13,9 @@ namespace XiaoyaCrawler.UrlFrontier
 {
     public class SimpleUrlFrontier : IUrlFrontier
     {
-        /// <summary>
-        /// Is url queue empty
-        /// </summary>
-        public bool IsEmpty => mConfig.UrlFrontierItemStore.Count() == 0;
-
         protected RuntimeLogger mLogger;
         protected CrawlerConfig mConfig;
-        
+
         /// <summary>
         /// Sync lock
         /// </summary>
@@ -34,15 +29,8 @@ namespace XiaoyaCrawler.UrlFrontier
         {
             mLogger = new RuntimeLogger(Path.Combine(config.LogDirectory, "Crawler.log"));
             mConfig = config;
-
-            if (IsEmpty)
-            {
-                config.UrlFrontierItemStore.Init(config.InitUrls);
-            }
-            else
-            {
-                config.UrlFrontierItemStore.RestartCrawl();
-            }
+            config.UrlFrontierItemStore.Init(config.InitUrls);
+            config.UrlFrontierItemStore.RestartCrawl();
         }
 
         /// <summary>
@@ -51,7 +39,7 @@ namespace XiaoyaCrawler.UrlFrontier
         /// <returns>Url to be fetched</returns>
         public UrlFrontierItem PopUrl()
         {
-            var item = mConfig.UrlFrontierItemStore.PopUrlForCrawl(false);
+            var item = mConfig.UrlFrontierItemStore.PopUrlForCrawl();
 
             if (item == null)
             {

@@ -27,9 +27,5 @@ namespace XiaoyaCrawler.UrlFrontier
         /// </summary>
         /// <param name="url">Url</param>
         void PushBackUrl(string url, bool failed = false);
-        /// <summary>
-        /// Is no url to be fetched
-        /// </summary>
-        bool IsEmpty { get; }
     }
 }
