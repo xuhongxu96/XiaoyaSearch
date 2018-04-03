@@ -236,10 +236,20 @@ namespace XiaoyaStore.Store
         {
             using (var context = NewContext())
             {
-                var item = context.UrlFrontierItems
-                    .FromSql("SELECT TOP 1 * FROM UrlFrontierItems WHERE IsPopped = 0 ORDER BY PlannedTime")
-                    .FirstOrDefault();
-
+                UrlFrontierItem item;
+                if (context.Database.IsSqlServer())
+                {
+                    item = context.UrlFrontierItems
+                        .FromSql("SELECT TOP 1 * FROM UrlFrontierItems WHERE IsPopped = 0 ORDER BY PlannedTime")
+                        .FirstOrDefault();
+                }
+                else
+                {
+                    item = context.UrlFrontierItems
+                        .Where(o => !o.IsPopped)
+                        .OrderBy(o => o.PlannedTime)
+                        .FirstOrDefault();
+                }
                 if (item == null)
                 {
                     return null;

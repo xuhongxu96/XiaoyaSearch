@@ -28,11 +28,25 @@ namespace XiaoyaStore.Store
                     try
                     {
                         context.Database.SetCommandTimeout(TimeSpan.FromMinutes(sStatTimeoutMinute));
-                        context.Database.ExecuteSqlCommand(@"
+                        if (context.Database.IsSqlServer())
+                        {
+                            context.Database.ExecuteSqlCommand(@"
 TRUNCATE TABLE IndexStats;
-INSERT INTO IndexStats (Word, DocumentFrequency, WordFrequency) SELECT Word AS Word, COUNT(DISTINCT UrlFileId) AS DocumentFrequency, COUNT(*) AS WordFrequency FROM XiaoyaSearch.dbo.InvertedIndices GROUP BY Word;
+INSERT INTO IndexStats (Word, DocumentFrequency, WordFrequency) SELECT Word AS Word, COUNT(DISTINCT UrlFileId) AS DocumentFrequency, COUNT(*) AS WordFrequency FROM InvertedIndices GROUP BY Word;
 TRUNCATE TABLE UrlFileIndexStats;
-INSERT INTO UrlFileIndexStats (Word, UrlFileId, WordFrequency) SELECT Word AS Word, UrlFileId AS UrlFileId, COUNT(*) AS WordFrequency FROM XiaoyaSearch.dbo.InvertedIndices GROUP BY Word, UrlFileId;");
+INSERT INTO UrlFileIndexStats (Word, UrlFileId, WordFrequency) SELECT Word AS Word, UrlFileId AS UrlFileId, COUNT(*) AS WordFrequency FROM InvertedIndices GROUP BY Word, UrlFileId;");
+                        }
+                        else
+                        {
+                            context.RemoveRange(context.IndexStats);
+                            context.RemoveRange(context.UrlFileIndexStats);
+
+                            context.SaveChanges();
+
+                            context.Database.ExecuteSqlCommand(@"
+INSERT INTO IndexStats (Word, DocumentFrequency, WordFrequency) SELECT Word AS Word, COUNT(DISTINCT UrlFileId) AS DocumentFrequency, COUNT(*) AS WordFrequency FROM InvertedIndices GROUP BY Word;
+INSERT INTO UrlFileIndexStats (Word, UrlFileId, WordFrequency) SELECT Word AS Word, UrlFileId AS UrlFileId, COUNT(*) AS WordFrequency FROM InvertedIndices GROUP BY Word, UrlFileId;");
+                        }
                         break;
                     }
                     catch (SqlException e) when (e.Message.Contains("timeout"))

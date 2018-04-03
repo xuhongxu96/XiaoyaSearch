@@ -103,8 +103,6 @@ namespace XiaoyaCrawlerUnitTest
                 Assert.IsTrue(context.UrlFrontierItems.Count() > 0);
             }
 
-            Assert.AreEqual(urlFileCount, Directory.GetFiles(fetchDir).Length);
-
             lock (RuntimeLogger.ReadLock)
             {
                 var urlLineNo = new Dictionary<string, int>();
