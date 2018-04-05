@@ -13,6 +13,7 @@ using XiaoyaCrawler.SimilarContentManager;
 using XiaoyaCrawler.UrlFilter;
 using XiaoyaCrawler.UrlFrontier;
 using XiaoyaLogger;
+using XiaoyaStore.Data.Model;
 
 namespace XiaoyaCrawler
 {
@@ -61,6 +62,7 @@ namespace XiaoyaCrawler
 
         protected void FetchUrlAsync(string url)
         {
+            mFetchSemaphore.Wait();
             var t = Task.Run(() =>
             {
                 mLogger.Log(nameof(Crawler), "Begin Crawl: " + url);
@@ -166,10 +168,22 @@ namespace XiaoyaCrawler
                         break;
                     }
 
-                    var url = mUrlFrontier.PopUrl();
+                    UrlFrontierItem url = null;
+
+                    try
+                    {
+                       url = mUrlFrontier.PopUrl();
+                    }
+                    catch (Exception e)
+                    {
+                        mLogger.Log(nameof(Crawler),
+                            "Pop Url Error\r\n" + e.Message + "\r\n---\r\n" + e.StackTrace);
+                        mErrorLogger.Log(nameof(Crawler),
+                            "Pop Url Error\r\n" + e.Message + "\r\n---\r\n" + e.StackTrace);
+                    }
+
                     if (url != null)
                     {
-                        mFetchSemaphore.Wait();
                         FetchUrlAsync(url.Url);
                     }
                     else if (mTasks.Any(o => !o.IsCompleted))

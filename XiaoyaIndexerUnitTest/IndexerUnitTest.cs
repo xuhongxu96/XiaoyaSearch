@@ -39,6 +39,14 @@ namespace XiaoyaIndexerUnitTest
                 .UseSqlite("Data Source=XiaoyaSearch.db")
                 .Options;
 
+            using (var context = new XiaoyaSearchContext(options))
+            {
+                context.RemoveRange(context.InvertedIndices);
+                context.RemoveRange(context.UrlFileIndexStats);
+                context.RemoveRange(context.IndexStats);
+                context.SaveChanges();
+            }
+
             var config = new IndexerConfig
             {
                 LogDirectory = logDir,

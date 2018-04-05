@@ -35,35 +35,6 @@ namespace XiaoyaIndexer
             mConfig = config;
 
             mConfig.UrlFileStore.RestartIndex();
-            /*
-            mTimer = new Timer(new TimerCallback(obj =>
-            {
-                mLogger.Log(nameof(SimpleIndexer), "Generating Index Stats...");
-
-                lock (mSyncLock)
-                {
-                    try
-                    {
-                        mConfig.InvertedIndexStore.GenerateStat();
-                    }
-                    catch (Exception e)
-                    {
-                        if (e.InnerException != null)
-                        {
-                            mLogger.Log(nameof(SimpleIndexer), "Failed to Generate Stat: "
-                            + "\r\n" + e.Message + "\r\n" + e.InnerException.Message + "\r\n" + e.StackTrace);
-                        }
-                        else
-                        {
-                            mLogger.Log(nameof(SimpleIndexer), "Failed to Generate Stat: "
-                            + "\r\n" + e.Message + "\r\n" + e.StackTrace);
-                        }
-                    }
-                }
-
-                mLogger.Log(nameof(SimpleIndexer), "Generated Index Stats.");
-            }), null, TimeSpan.FromTicks(0), TimeSpan.FromHours(2));
-            */
         }
 
         public void WaitAll()

@@ -70,7 +70,7 @@ namespace XiaoyaCrawler.Fetcher
                     return null;
                 }
 
-                if (mConfig.UsePhantomJS && type.MediaType == "text/html")
+                if (mConfig.UsePhantomJS && (type == null || type.MediaType == "text/html"))
                 {
                     // If config is set to use PhantomJS and web content type is HTML, 
                     // use PhantomJS to fetch real web page content
@@ -80,7 +80,7 @@ namespace XiaoyaCrawler.Fetcher
                 else
                 {
                     // Otherwise, directly save it if supported by parser
-                    if (UniversalFileParser.IsSupported(type.MediaType))
+                    if (type == null || UniversalFileParser.IsSupported(type.MediaType))
                     {
                         using (Stream contentStream = await response.Content.ReadAsStreamAsync(),
                         stream = File.Create(filePath))

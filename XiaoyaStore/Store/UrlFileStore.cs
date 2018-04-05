@@ -37,8 +37,8 @@ namespace XiaoyaStore.Store
             using (var context = NewContext())
             {
                 var urlFile = context.UrlFiles
-                    .OrderBy(o => o.UpdatedAt)
-                    .FirstOrDefault(o => o.IndexStatus == UrlFile.UrlFileIndexStatus.NotIndexed);
+                    .FromSql("SELECT * FROM UrlFiles WHERE IndexStatus = 0 ORDER BY UpdatedAt")
+                    .FirstOrDefault();
 
                 if (urlFile == null)
                 {
