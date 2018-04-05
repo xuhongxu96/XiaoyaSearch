@@ -16,8 +16,6 @@ namespace XiaoyaStore.Store
         public InvertedIndexStore(DbContextOptions options = null) : base(options)
         { }
 
-        protected object mIndexLock = new object();
-
         public void ClearAndSaveInvertedIndices(int urlFileId, IEnumerable<InvertedIndex> invertedIndices)
         {
             using (var context = NewContext())
@@ -49,48 +47,45 @@ namespace XiaoyaStore.Store
                     var toBeRemovedWordCountDict = toBeRemovedUrlFileIndexStats.ToDictionary(o => o.Word, o => o.WordFrequency);
                     var wordCountDict = urlFileIndexStats.ToDictionary(o => o.Word, o => o.WordFrequency);
 
-                    lock (mIndexLock)
+                    foreach (var word in toBeRemovedWordCountDict.Keys.Union(wordCountDict.Keys))
                     {
-                        foreach (var word in toBeRemovedWordCountDict.Keys.Union(wordCountDict.Keys))
+                        var frequencyDelta = wordCountDict.GetValueOrDefault(word, 0)
+                            - toBeRemovedWordCountDict.GetValueOrDefault(word, 0);
+
+                        var hasWordBefore = toBeRemovedWordCountDict.ContainsKey(word);
+                        var hasWordNow = wordCountDict.ContainsKey(word);
+
+                        if (hasWordBefore && hasWordNow && frequencyDelta == 0)
                         {
-                            var frequencyDelta = wordCountDict.GetValueOrDefault(word, 0)
-                                - toBeRemovedWordCountDict.GetValueOrDefault(word, 0);
+                            continue;
+                        }
 
-                            var hasWordBefore = toBeRemovedWordCountDict.ContainsKey(word);
-                            var hasWordNow = wordCountDict.ContainsKey(word);
+                        var stat = context.IndexStats.SingleOrDefault(o => o.Word == word);
 
-                            if (hasWordBefore && hasWordNow && frequencyDelta == 0)
+                        if (stat == null)
+                        {
+                            if (frequencyDelta < 0 || hasWordBefore)
                             {
                                 continue;
                             }
 
-                            var stat = context.IndexStats.SingleOrDefault(o => o.Word == word);
-
-                            if (stat == null)
+                            stat = new IndexStat
                             {
-                                if (frequencyDelta < 0 || hasWordBefore)
-                                {
-                                    continue;
-                                }
+                                Word = word,
+                                WordFrequency = frequencyDelta,
+                                DocumentFrequency = 0,
+                            };
 
-                                stat = new IndexStat
-                                {
-                                    Word = word,
-                                    WordFrequency = frequencyDelta,
-                                    DocumentFrequency = 0,
-                                };
+                            context.Add(stat);
+                        }
 
-                                context.Add(stat);
-                            }
-
-                            if (hasWordBefore && !hasWordNow)
-                            {
-                                stat.DocumentFrequency--;
-                            }
-                            else if (!hasWordBefore && hasWordNow)
-                            {
-                                stat.DocumentFrequency++;
-                            }
+                        if (hasWordBefore && !hasWordNow)
+                        {
+                            stat.DocumentFrequency--;
+                        }
+                        else if (!hasWordBefore && hasWordNow)
+                        {
+                            stat.DocumentFrequency++;
                         }
                     }
 

@@ -80,7 +80,10 @@ namespace XiaoyaIndexer
                     {
                         try
                         {
-                            mConfig.InvertedIndexStore.ClearAndSaveInvertedIndices(urlFile, invertedIndices);
+                            lock (mSyncLock)
+                            {
+                                mConfig.InvertedIndexStore.ClearAndSaveInvertedIndices(urlFile, invertedIndices);
+                            }
                             failedTimes = -1;
                         }
                         catch (DbUpdateException)
