@@ -25,7 +25,6 @@ namespace XiaoyaIndexer
         protected RuntimeLogger mLogger;
         protected SemaphoreSlim mIndexSemaphore;
         protected ConcurrentBag<Task> mTasks = new ConcurrentBag<Task>();
-        protected object mSyncLock = new object();
 
         public bool IsWaiting { get; private set; } = false;
 
@@ -80,19 +79,26 @@ namespace XiaoyaIndexer
                     {
                         try
                         {
-                            lock (mSyncLock)
-                            {
-                                mConfig.InvertedIndexStore.ClearAndSaveInvertedIndices(urlFile, invertedIndices);
-                            }
+                            mConfig.InvertedIndexStore.ClearAndSaveInvertedIndices(urlFile, invertedIndices);
                             failedTimes = -1;
                         }
                         catch (DbUpdateException e)
                         {
+                            if (e.InnerException != null)
+                            {
+                                mLogger.Log(nameof(SimpleIndexer), "Failed to index url: " + urlFile.Url
+                                + "\r\n" + e.Message + "\r\n" + e.InnerException.Message + "\r\n" + e.StackTrace);
+                            }
+                            else
+                            {
+                                mLogger.Log(nameof(SimpleIndexer), "Failed to index url: " + urlFile.Url
+                                + "\r\n" + e.Message + "\r\n" + e.StackTrace);
+                            }
                             Thread.Sleep(5000);
                             failedTimes++;
-                            if (failedTimes == 10)
+                            if (failedTimes == 3)
                             {
-                                throw;
+                                break;
                             }
                         }
                     }

@@ -22,11 +22,8 @@ namespace XiaoyaStore.Store
             {
                 try
                 {
-                    context.Database.ExecuteSqlCommand($"DELETE FROM InvertedIndices WHERE UrlFileId = {urlFileId}");
-                    context.Database.ExecuteSqlCommand($"DELETE FROM UrlFileIndexStats WHERE UrlFileId = {urlFileId}");
-
+                    context.RemoveRange(from o in context.InvertedIndices where o.UrlFileId == urlFileId select o);
                     context.AddRange(invertedIndices);
-
 
                     var toBeRemovedUrlFileIndexStats = (from o in context.UrlFileIndexStats
                                                         where o.UrlFileId == urlFileId
@@ -40,6 +37,7 @@ namespace XiaoyaStore.Store
                             WordFrequency = g.Count(),
                         });
 
+                    context.RemoveRange(toBeRemovedUrlFileIndexStats);
                     context.AddRange(urlFileIndexStats);
 
                     if (!context.Database.IsSqlServer())
