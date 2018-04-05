@@ -19,48 +19,6 @@ namespace XiaoyaStore.Store
         protected static double sStatTimeoutMinute = 1;
         protected static double sTimeoutMinute = 1;
 
-        public void GenerateStat()
-        {
-            using (var context = NewContext())
-            {
-                while (true)
-                {
-                    try
-                    {
-                        context.Database.SetCommandTimeout(TimeSpan.FromMinutes(sStatTimeoutMinute));
-                        if (context.Database.IsSqlServer())
-                        {
-                            context.Database.ExecuteSqlCommand(@"
-TRUNCATE TABLE IndexStats;
-INSERT INTO IndexStats (Word, DocumentFrequency, WordFrequency) SELECT Word AS Word, COUNT(DISTINCT UrlFileId) AS DocumentFrequency, COUNT(*) AS WordFrequency FROM InvertedIndices GROUP BY Word;
-TRUNCATE TABLE UrlFileIndexStats;
-INSERT INTO UrlFileIndexStats (Word, UrlFileId, WordFrequency) SELECT Word AS Word, UrlFileId AS UrlFileId, COUNT(*) AS WordFrequency FROM InvertedIndices GROUP BY Word, UrlFileId;");
-                        }
-                        else
-                        {
-                            context.RemoveRange(context.IndexStats);
-                            context.RemoveRange(context.UrlFileIndexStats);
-
-                            context.SaveChanges();
-
-                            context.Database.ExecuteSqlCommand(@"
-INSERT INTO IndexStats (Word, DocumentFrequency, WordFrequency) SELECT Word AS Word, COUNT(DISTINCT UrlFileId) AS DocumentFrequency, COUNT(*) AS WordFrequency FROM InvertedIndices GROUP BY Word;
-INSERT INTO UrlFileIndexStats (Word, UrlFileId, WordFrequency) SELECT Word AS Word, UrlFileId AS UrlFileId, COUNT(*) AS WordFrequency FROM InvertedIndices GROUP BY Word, UrlFileId;");
-                        }
-                        break;
-                    }
-                    catch (SqlException e) when (e.Message.Contains("timeout"))
-                    {
-                        sStatTimeoutMinute *= 2;
-                        if (sStatTimeoutMinute > 30)
-                        {
-                            throw;
-                        }
-                    }
-                }
-            }
-        }
-
         public void ClearAndSaveInvertedIndices(int urlFileId, IEnumerable<InvertedIndex> invertedIndices)
         {
             using (var context = NewContext())
@@ -75,11 +33,56 @@ INSERT INTO UrlFileIndexStats (Word, UrlFileId, WordFrequency) SELECT Word AS Wo
                                                  where o.UrlFileId == urlFileId
                                                  select o;
 
-                        context.RemoveRange(toBeRemovedIndices);
-                        context.InvertedIndices.AddRange(invertedIndices);
+                        context.RemoveRange(toBeRemovedIndices.Except(invertedIndices));
+                        context.AddRange(invertedIndices.Except(toBeRemovedIndices));
+
+                        var toBeRemovedUrlFileIndexStats = from o in context.UrlFileIndexStats
+                                                           where o.UrlFileId == urlFileId
+                                                           select o;
+
+                        var urlFileIndexStats = invertedIndices.GroupBy(o => o.Word)
+                            .Select(g => new UrlFileIndexStat
+                            {
+                                UrlFileId = urlFileId,
+                                Word = g.Key,
+                                WordFrequency = g.Count(),
+                            });
+
+                        context.RemoveRange(toBeRemovedUrlFileIndexStats.Except(urlFileIndexStats));
+                        context.AddRange(urlFileIndexStats.Except(toBeRemovedUrlFileIndexStats));
+
+                        foreach (var index in toBeRemovedUrlFileIndexStats)
+                        {
+                            var stat = context.IndexStats.SingleOrDefault(o => o.Word == index.Word);
+                            if (stat != null)
+                            {
+                                stat.WordFrequency -= index.WordFrequency;
+                                stat.DocumentFrequency--;
+                            }
+                        }
+
+                        foreach (var index in urlFileIndexStats)
+                        {
+                            var stat = context.IndexStats.SingleOrDefault(o => o.Word == index.Word);
+                            if (stat == null)
+                            {
+                                stat = new IndexStat
+                                {
+                                    Word = index.Word,
+                                    WordFrequency = index.WordFrequency,
+                                    DocumentFrequency = 1,
+                                };
+                                context.IndexStats.Add(stat);
+                            }
+                            else
+                            {
+                                stat.WordFrequency += index.WordFrequency;
+                                stat.DocumentFrequency++;
+                            }
+                        }
 
                         context.UrlFiles.Single(o => o.UrlFileId == urlFileId).IndexStatus
-                            = UrlFile.UrlFileIndexStatus.Indexed;
+                        = UrlFile.UrlFileIndexStatus.Indexed;
 
                         context.SaveChanges();
 
@@ -111,6 +114,12 @@ INSERT INTO UrlFileIndexStats (Word, UrlFileId, WordFrequency) SELECT Word AS Wo
                                          select o;
 
                 context.RemoveRange(toBeRemovedIndices);
+
+                var toBeRemovedUrlFileIndices = from o in context.UrlFileIndexStats
+                                                where o.UrlFileId == urlFile.UrlFileId
+                                                select o;
+
+                context.RemoveRange(toBeRemovedUrlFileIndices);
                 context.SaveChanges();
             }
         }

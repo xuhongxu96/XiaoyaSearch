@@ -12,6 +12,7 @@ using XiaoyaStore.Store;
 using XiaoyaCrawler.Config;
 using XiaoyaLogger;
 using XiaoyaFileParser;
+using XiaoyaCommon.Helper;
 
 namespace XiaoyaCrawler.Fetcher
 {
@@ -54,7 +55,7 @@ namespace XiaoyaCrawler.Fetcher
             }
 
             // Target path to save downloaded web file
-            var path = Path.Combine(mConfig.FetchDirectory, UrlHelper.UrlToFileName(url));
+            var filePath = Path.Combine(mConfig.FetchDirectory, UrlHelper.UrlToFileName(url));
             using (var client = new HttpClient())
             {
                 client.Timeout = new TimeSpan(0, 0, 10);
@@ -69,17 +70,11 @@ namespace XiaoyaCrawler.Fetcher
                     return null;
                 }
 
-                if (type == null)
-                {
-                    mLogger.Log(nameof(SimpleFetcher), "Unknown MIME type: " + url);
-                    return null;
-                }
-
                 if (mConfig.UsePhantomJS && type.MediaType == "text/html")
                 {
                     // If config is set to use PhantomJS and web content type is HTML, 
                     // use PhantomJS to fetch real web page content
-                    File.WriteAllText(path, 
+                    File.WriteAllText(filePath, 
                         FetchPageContentByPhantomJS(url, mConfig.PhantomJSDriverPath));
                 }
                 else
@@ -88,7 +83,7 @@ namespace XiaoyaCrawler.Fetcher
                     if (UniversalFileParser.IsSupported(type.MediaType))
                     {
                         using (Stream contentStream = await response.Content.ReadAsStreamAsync(),
-                        stream = File.Create(path))
+                        stream = File.Create(filePath))
                         {
                             await contentStream.CopyToAsync(stream);
                         }
@@ -99,13 +94,31 @@ namespace XiaoyaCrawler.Fetcher
                     }
                 }
 
+                var contentType = MimeHelper.GetContentType(filePath);
+                if (contentType == null && type != null)
+                {
+                    contentType = type.MediaType;
+                }
+
+                if (contentType == null)
+                {
+                    mLogger.Log(nameof(SimpleFetcher), "Unknown MIME type: " + url);
+                    return null;
+                }
+
+                if (!UniversalFileParser.IsSupported(contentType))
+                {
+                    File.Delete(filePath);
+                    return null;
+                }
+
                 return new UrlFile
                 {
                     Url = url,
-                    FilePath = path,
+                    FilePath = filePath,
                     Charset = type.CharSet,
-                    MimeType = type.MediaType,
-                    FileHash = HashHelper.GetFileMd5(path),
+                    MimeType = contentType,
+                    FileHash = HashHelper.GetFileMd5(filePath),
                 };
             }
         }

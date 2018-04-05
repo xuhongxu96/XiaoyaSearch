@@ -26,7 +26,6 @@ namespace XiaoyaIndexer
         protected SemaphoreSlim mIndexSemaphore;
         protected ConcurrentBag<Task> mTasks = new ConcurrentBag<Task>();
         protected object mSyncLock = new object();
-        protected Timer mTimer;
 
         public bool IsWaiting { get; private set; } = false;
 
@@ -36,6 +35,7 @@ namespace XiaoyaIndexer
             mConfig = config;
 
             mConfig.UrlFileStore.RestartIndex();
+            /*
             mTimer = new Timer(new TimerCallback(obj =>
             {
                 mLogger.Log(nameof(SimpleIndexer), "Generating Index Stats...");
@@ -48,7 +48,7 @@ namespace XiaoyaIndexer
                     }
                     catch (Exception e)
                     {
-                        if (e.InnerException == null)
+                        if (e.InnerException != null)
                         {
                             mLogger.Log(nameof(SimpleIndexer), "Failed to Generate Stat: "
                             + "\r\n" + e.Message + "\r\n" + e.InnerException.Message + "\r\n" + e.StackTrace);
@@ -63,6 +63,7 @@ namespace XiaoyaIndexer
 
                 mLogger.Log(nameof(SimpleIndexer), "Generated Index Stats.");
             }), null, TimeSpan.FromTicks(0), TimeSpan.FromHours(2));
+            */
         }
 
         public void WaitAll()
@@ -121,25 +122,24 @@ namespace XiaoyaIndexer
                             }
                         }
                     }
-
-                    mLogger.Log(nameof(SimpleIndexer), "Indexed Url: " + urlFile.Url);
                 }
                 catch (Exception e)
                 {
-                    if (e.InnerException == null)
+                    if (e.InnerException != null)
                     {
-                        mLogger.Log(nameof(SimpleIndexer), "Failed to Generate Stat: "
+                        mLogger.Log(nameof(SimpleIndexer), "Failed to index url: " + urlFile.Url
                         + "\r\n" + e.Message + "\r\n" + e.InnerException.Message + "\r\n" + e.StackTrace);
                     }
                     else
                     {
-                        mLogger.Log(nameof(SimpleIndexer), "Failed to Generate Stat: "
+                        mLogger.Log(nameof(SimpleIndexer), "Failed to index url: " + urlFile.Url
                         + "\r\n" + e.Message + "\r\n" + e.StackTrace);
                     }
                 }
                 finally
                 {
                     mIndexSemaphore.Release();
+                    mLogger.Log(nameof(SimpleIndexer), "Indexed Url: " + urlFile.Url);
                 }
             }));
         }

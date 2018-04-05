@@ -83,7 +83,6 @@ namespace XiaoyaStoreUnitTest
                     };
 
                 invertedIndexStore.ClearAndSaveInvertedIndices(urlFile, invertedIndices);
-                invertedIndexStore.GenerateStat();
 
                 using (var context = new XiaoyaSearchContext(options))
                 {
@@ -147,7 +146,6 @@ namespace XiaoyaStoreUnitTest
                         },
                     };
                 invertedIndexStore.ClearAndSaveInvertedIndices(urlFile, invertedIndices);
-                invertedIndexStore.GenerateStat();
 
                 using (var context = new XiaoyaSearchContext(options))
                 {
@@ -224,7 +222,6 @@ namespace XiaoyaStoreUnitTest
                         },
                     };
                 invertedIndexStore.ClearAndSaveInvertedIndices(urlFile, invertedIndices);
-                invertedIndexStore.GenerateStat();
 
                 using (var context = new XiaoyaSearchContext(options))
                 {

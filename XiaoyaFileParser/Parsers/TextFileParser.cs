@@ -24,6 +24,10 @@ namespace XiaoyaFileParser.Parsers
                 mTitle = null;
                 mContent = null;
                 mTextContent = mUrlFile.Content;
+                if (new FileInfo(mUrlFile.FilePath).Length > 4 * 1024 * 1024)
+                {
+                    throw new FileLoadException(mUrlFile.FilePath + " is too big to parse");
+                }
             }
         }
 
@@ -36,6 +40,7 @@ namespace XiaoyaFileParser.Parsers
 
         public TextFileParser(FileParserConfig config)
         {
+            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
             mConfig = config;
         }
 
@@ -81,7 +86,7 @@ namespace XiaoyaFileParser.Parsers
                     encoding = "utf-8";
                 }
                 mContent = await File.ReadAllTextAsync(UrlFile.FilePath,
-                    Encoding.GetEncoding(encoding));
+                    Encoding.GetEncoding(encoding.ToLower()));
             }
             return mContent;
         }

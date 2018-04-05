@@ -45,6 +45,8 @@ namespace XiaoyaCrawlerUnitTest
                 }
             }
 
+            File.Delete("XiaoyaSearch.db");
+
             var options = new DbContextOptionsBuilder<XiaoyaSearchContext>()
                 .UseSqlite("Data Source=XiaoyaSearch.db")
                 .Options;

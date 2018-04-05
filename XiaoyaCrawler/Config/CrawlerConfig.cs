@@ -10,7 +10,11 @@ namespace XiaoyaCrawler.Config
     public class CrawlerConfig
     {
         public bool UsePhantomJS { get; set; } = false;
+#if DEBUG
         public string PhantomJSDriverPath { get; set; } = Path.Combine(Directory.GetCurrentDirectory(), "../../../../Resources/");
+#else
+        public string PhantomJSDriverPath { get; set; } = Path.Combine(Directory.GetCurrentDirectory(), "../Resources/");
+#endif
 
         public string LogDirectory { get; set; } = "Logs";
         public string FetchDirectory { get; set; } = "Fetched";

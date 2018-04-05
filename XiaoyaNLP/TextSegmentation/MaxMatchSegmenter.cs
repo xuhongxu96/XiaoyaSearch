@@ -8,9 +8,12 @@ namespace XiaoyaNLP.TextSegmentation
 {
     public class MaxMatchSegmenter : ITextSegmenter
     {
-        protected const int MaxSegmentLength = 30;
-
+        protected const int MaxSegmentLength = 15;
+#if DEBUG
         protected const string DictFileName = "../../../../Resources/30wdict_utf8.txt";
+#else
+        protected const string DictFileName = "../Resources/30wdict_utf8.txt";
+#endif
         protected static HashSet<string> mDict = new HashSet<string>();
         protected static Dictionary<char, int> mMaxWordLength = new Dictionary<char, int>();
 
@@ -76,7 +79,7 @@ namespace XiaoyaNLP.TextSegmentation
 
                 if (CommonRegex.RegexChineseChars.IsMatch(subSentence))
                 {
-                    foreach(var segment in SegmentChineseSentence(subSentence, index))
+                    foreach (var segment in SegmentChineseSentence(subSentence, index))
                     {
                         if (segment.Length <= MaxSegmentLength)
                         {
@@ -86,26 +89,20 @@ namespace XiaoyaNLP.TextSegmentation
                 }
                 else
                 {
-                    var symbolCount = CommonRegex.RegexAllSymbol.Matches(subSentence).Count;
-                    charCount = CommonRegex.RegexAllChar.Matches(subSentence).Count;
-
-                    if (symbolCount < charCount / 2)
+                    if (subSentence.Length <= MaxSegmentLength)
                     {
-                        if (subSentence.Length <= MaxSegmentLength)
+                        yield return new TextSegment
                         {
-                            yield return new TextSegment
-                            {
-                                Text = subSentence,
-                                Position = index,
-                                Length = subSentence.Length,
-                            };
-                        }
+                            Text = subSentence,
+                            Position = index,
+                            Length = subSentence.Length,
+                        };
                     }
                 }
 
                 match = match.NextMatch();
             }
-           
+
         }
     }
 }
