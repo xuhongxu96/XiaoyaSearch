@@ -86,7 +86,7 @@ namespace XiaoyaIndexer
                             }
                             failedTimes = -1;
                         }
-                        catch (DbUpdateException)
+                        catch (DbUpdateException e)
                         {
                             Thread.Sleep(5000);
                             failedTimes++;

@@ -31,25 +31,5 @@ namespace XiaoyaStore.Data.Model
         /// Type
         /// </summary>
         public InvertedIndexType IndexType { get; set; } = InvertedIndexType.Body;
-
-        public override bool Equals(object obj)
-        {
-            var index = obj as InvertedIndex;
-            return index != null &&
-                   Word == index.Word &&
-                   UrlFileId == index.UrlFileId &&
-                   Position == index.Position &&
-                   IndexType == index.IndexType;
-        }
-
-        public override int GetHashCode()
-        {
-            var hashCode = -1716764649;
-            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Word);
-            hashCode = hashCode * -1521134295 + UrlFileId.GetHashCode();
-            hashCode = hashCode * -1521134295 + Position.GetHashCode();
-            hashCode = hashCode * -1521134295 + IndexType.GetHashCode();
-            return hashCode;
-        }
     }
 }

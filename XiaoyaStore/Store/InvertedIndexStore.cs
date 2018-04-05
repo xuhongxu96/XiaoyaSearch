@@ -22,12 +22,11 @@ namespace XiaoyaStore.Store
             {
                 try
                 {
-                    var toBeRemovedIndices = (from o in context.InvertedIndices
-                                              where o.UrlFileId == urlFileId
-                                              select o);
+                    context.Database.ExecuteSqlCommand($"DELETE FROM InvertedIndices WHERE UrlFileId = {urlFileId}");
+                    context.Database.ExecuteSqlCommand($"DELETE FROM UrlFileIndexStats WHERE UrlFileId = {urlFileId}");
 
-                    context.RemoveRange(toBeRemovedIndices.Except(invertedIndices));
-                    context.AddRange(invertedIndices.Except(toBeRemovedIndices));
+                    context.AddRange(invertedIndices);
+
 
                     var toBeRemovedUrlFileIndexStats = (from o in context.UrlFileIndexStats
                                                         where o.UrlFileId == urlFileId
@@ -41,52 +40,57 @@ namespace XiaoyaStore.Store
                             WordFrequency = g.Count(),
                         });
 
-                    context.RemoveRange(toBeRemovedUrlFileIndexStats.Except(urlFileIndexStats));
-                    context.AddRange(urlFileIndexStats.Except(toBeRemovedUrlFileIndexStats));
+                    context.AddRange(urlFileIndexStats);
 
-                    var toBeRemovedWordCountDict = toBeRemovedUrlFileIndexStats.ToDictionary(o => o.Word, o => o.WordFrequency);
-                    var wordCountDict = urlFileIndexStats.ToDictionary(o => o.Word, o => o.WordFrequency);
-
-                    foreach (var word in toBeRemovedWordCountDict.Keys.Union(wordCountDict.Keys))
+                    if (!context.Database.IsSqlServer())
                     {
-                        var frequencyDelta = wordCountDict.GetValueOrDefault(word, 0)
-                            - toBeRemovedWordCountDict.GetValueOrDefault(word, 0);
+                        var toBeRemovedWordCountDict = toBeRemovedUrlFileIndexStats.ToDictionary(o => o.Word, o => o.WordFrequency);
+                        var wordCountDict = urlFileIndexStats.ToDictionary(o => o.Word, o => o.WordFrequency);
 
-                        var hasWordBefore = toBeRemovedWordCountDict.ContainsKey(word);
-                        var hasWordNow = wordCountDict.ContainsKey(word);
-
-                        if (hasWordBefore && hasWordNow && frequencyDelta == 0)
+                        foreach (var word in toBeRemovedWordCountDict.Keys.Union(wordCountDict.Keys))
                         {
-                            continue;
-                        }
+                            var frequencyDelta = wordCountDict.GetValueOrDefault(word, 0)
+                                - toBeRemovedWordCountDict.GetValueOrDefault(word, 0);
 
-                        var stat = context.IndexStats.SingleOrDefault(o => o.Word == word);
+                            var hasWordBefore = toBeRemovedWordCountDict.ContainsKey(word);
+                            var hasWordNow = wordCountDict.ContainsKey(word);
 
-                        if (stat == null)
-                        {
-                            if (frequencyDelta < 0 || hasWordBefore)
+                            if (hasWordBefore && hasWordNow && frequencyDelta == 0)
                             {
                                 continue;
                             }
 
-                            stat = new IndexStat
+                            var stat = context.IndexStats.SingleOrDefault(o => o.Word == word);
+
+                            if (stat == null)
                             {
-                                Word = word,
-                                WordFrequency = frequencyDelta,
-                                DocumentFrequency = 0,
-                            };
+                                if (frequencyDelta < 0 || hasWordBefore)
+                                {
+                                    continue;
+                                }
 
-                            context.Add(stat);
+                                stat = new IndexStat
+                                {
+                                    Word = word,
+                                    WordFrequency = 0,
+                                    DocumentFrequency = 0,
+                                };
+
+                                context.Add(stat);
+                            }
+
+                            if (hasWordBefore && !hasWordNow)
+                            {
+                                stat.DocumentFrequency--;
+                            }
+                            else if (!hasWordBefore && hasWordNow)
+                            {
+                                stat.DocumentFrequency++;
+                            }
+
+                            stat.WordFrequency += frequencyDelta;
                         }
 
-                        if (hasWordBefore && !hasWordNow)
-                        {
-                            stat.DocumentFrequency--;
-                        }
-                        else if (!hasWordBefore && hasWordNow)
-                        {
-                            stat.DocumentFrequency++;
-                        }
                     }
 
                     context.UrlFiles.Single(o => o.UrlFileId == urlFileId).IndexStatus

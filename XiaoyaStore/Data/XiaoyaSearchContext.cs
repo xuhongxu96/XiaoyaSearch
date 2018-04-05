@@ -54,10 +54,16 @@ namespace XiaoyaStore.Data
 
             #region IndexStat
 
-            modelBuilder.Entity<IndexStat>()
-                .HasIndex(o => o.Word)
-                .IsUnique();
-
+            if (Database.IsSqlServer())
+            {
+                modelBuilder.Ignore<IndexStat>();
+            }
+            else
+            {
+                modelBuilder.Entity<IndexStat>()
+                    .HasIndex(o => o.Word)
+                    .IsUnique();
+            }
             #endregion
 
             #region UrlFileIndexStat
@@ -78,13 +84,15 @@ namespace XiaoyaStore.Data
                 .IsUnique();
 
             #endregion
+
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlite("Data Source=Db/XiaoyaSearch.db");
+                // optionsBuilder.UseSqlite("Data Source=Db/XiaoyaSearch.db");
+                optionsBuilder.UseSqlServer("Data Source=IR-PC;Initial Catalog=XiaoyaSearch;Integrated Security=True");
             }
         }
 

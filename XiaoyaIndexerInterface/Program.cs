@@ -31,6 +31,11 @@ namespace XiaoyaIndexerInterface
                     break;
             }
 
+            using (var context = new XiaoyaSearchContext(options))
+            {
+                context.Database.Migrate();
+            }
+
             var config = new IndexerConfig
             {
                 LogDirectory = arguments.LogDir,

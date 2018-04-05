@@ -39,7 +39,7 @@ namespace XiaoyaCrawlerInterface
 
             using (var context = new XiaoyaSearchContext(options))
             {
-                context.Database.EnsureCreated();
+                context.Database.Migrate();
             }
 
             var config = new XiaoyaCrawler.Config.CrawlerConfig
