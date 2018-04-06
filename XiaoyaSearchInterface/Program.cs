@@ -48,11 +48,25 @@ namespace XiaoyaSearchInterface
 
                 var results = engine.Search(query);
 
+                var count = 0;
+
                 foreach (var result in results)
                 {
                     var urlFile = store.LoadById(result.UrlFileId);
 
                     Console.WriteLine("{0}: {1} ({2})", result.UrlFileId, urlFile.Url, result.Score);
+
+                    count++;
+
+                    if (count % 10 == 0)
+                    {
+                        Console.WriteLine("Input N to View Next Page, Otherwise Exit.");
+                        var cmd = Console.ReadLine();
+                        if (cmd != "N")
+                        {
+                            break;
+                        }
+                    }
                 }
 
                 Console.WriteLine();

@@ -156,8 +156,11 @@ namespace XiaoyaStore.Store
             using (var context = NewContext())
             {
                 var indices = context.InvertedIndices
-                    .Where(o => o.UrlFileId == urlFileId && o.Word == word && o.IndexType == indexType)
+                    .Where(o => o.UrlFileId == urlFileId)
+                    .Where(o => o.Word == word)
+                    .Where(o => o.IndexType == indexType)
                     .OrderBy(o => o.Position);
+                    //.FromSql($"SELECT * FROM dbo.InvertedIndices WHERE UrlFileId = {urlFileId} AND Word = '{word}' AND IndexType = {(int)indexType} ORDER BY Position");
 
                 foreach (var index in indices)
                 {

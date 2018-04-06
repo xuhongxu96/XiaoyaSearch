@@ -56,7 +56,13 @@ namespace XiaoyaStore.Data
 
             if (Database.IsSqlServer())
             {
-                modelBuilder.Ignore<IndexStat>();
+                //modelBuilder.Ignore<IndexStat>();
+
+                modelBuilder.Entity<IndexStat>()
+                    .Ignore(o => o.IndexStatId);
+
+                modelBuilder.Entity<IndexStat>()
+                    .HasKey(o => o.Word);
             }
             else
             {

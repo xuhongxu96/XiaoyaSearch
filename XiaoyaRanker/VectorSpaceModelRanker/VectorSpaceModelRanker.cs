@@ -24,6 +24,7 @@ namespace XiaoyaRanker.VectorSpaceModelRanker
                 double score = 0;
                 foreach (var word in words)
                 {
+                    var urlFile = mConfig.UrlFileStore.LoadById(urlFileId);
                     var urlFileIndexStat = mConfig.UrlFileIndexStatStore.LoadByWordInUrlFile(urlFileId, word);
                     if (urlFileIndexStat == null)
                     {
@@ -35,7 +36,7 @@ namespace XiaoyaRanker.VectorSpaceModelRanker
                     var documentFrequency = indexStat.DocumentFrequency;
 
                     var wordScore =
-                        ScoringHelpers.TfIdf(wordFrequencyInDocument, documentFrequency, documentCount);
+                        ScoringHelpers.TfIdf(wordFrequencyInDocument, documentFrequency, documentCount) / urlFile.Content.Length * 100;
                     score += wordScore;
                 }
                 yield return score;

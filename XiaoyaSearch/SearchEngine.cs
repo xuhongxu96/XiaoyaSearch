@@ -18,7 +18,7 @@ namespace XiaoyaSearch
     {
         protected IQueryParser mQueryParser;
         protected IRetriever mRetriever;
-        protected List<IRanker> mRankers = new List<IRanker>();
+        protected IRanker mRanker;
 
         public SearchEngine(SearchEngineConfig config)
         {
@@ -32,7 +32,7 @@ namespace XiaoyaSearch
                 UrlFileIndexStatStore = config.UrlFileIndexStatStore,
                 UrlFileStore = config.UrlFileStore,
                 InvertedIndexStore = config.InvertedIndexStore,
-            });
+            }, 300);
 
             var rankerConfig = new RankerConfig
             {
@@ -42,44 +42,27 @@ namespace XiaoyaSearch
                 InvertedIndexStore = config.InvertedIndexStore,
             };
 
-            mRankers.Add(new VectorSpaceModelRanker(rankerConfig));
-            mRankers.Add(new QueryTermProximityRanker(rankerConfig));
+             mRanker = new IntegratedRanker(rankerConfig);
         }
 
         public IEnumerable<SearchResult> Search(string query)
         {
             var parsedQuery = mQueryParser.Parse(query);
             var urlFileIds = mRetriever.Retrieve(parsedQuery.Expression).ToList();
-            var totalScores = new Dictionary<int, double>();
+            var scores = mRanker.Rank(urlFileIds, parsedQuery.Words).ToList();
 
-            foreach (var ranker in mRankers)
+            var results = new List<SearchResult>();
+
+            for(int i = 0; i < urlFileIds.Count; ++i)
             {
-                var scores = ranker.Rank(urlFileIds, parsedQuery.Words).ToArray();
-                for (int i = 0; i < urlFileIds.Count(); ++i)
+                results.Add(new SearchResult
                 {
-                    var id = urlFileIds[i];
-                    if (totalScores.ContainsKey(id))
-                    {
-                        totalScores[id] += scores[i];
-                    }
-                    else
-                    {
-                        totalScores[id] = scores[i];
-                    }
-                }
+                    UrlFileId = urlFileIds[i],
+                    Score = scores[i],
+                });
             }
 
-            urlFileIds.Sort((x, y) =>
-            {
-                return totalScores[y].CompareTo(totalScores[x]);
-            });
-
-            return from id in urlFileIds
-                   select new SearchResult
-                   {
-                       UrlFileId = id,
-                       Score = totalScores[id],
-                   };
+            return results.OrderByDescending(o => o.Score);
         }
     }
 }

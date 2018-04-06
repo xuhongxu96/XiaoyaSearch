@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "XiaoyaSearchInterface": {
+      "commandName": "Project",
+      "commandLineArgs": "-f E:\\XiaoyaSearch\\Fetched -LogDir E:\\XiaoyaSearch\\Logs -d sqlserver -c \"Data Source=IR-PC;Initial Catalog=XiaoyaSearch;Integrated Security=True\""
+    }
+  }
+}

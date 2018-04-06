@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,14 +10,33 @@ namespace XiaoyaStore.Store
 {
     public class IndexStatStore : BaseStore, IIndexStatStore
     {
-        public IndexStatStore(DbContextOptions options = null) : base(options)
-        { }
+        protected ConcurrentDictionary<string, IndexStat> mStats = new ConcurrentDictionary<string, IndexStat>();
 
-        public IndexStat LoadByWord(string word)
+        public IndexStatStore(DbContextOptions options = null) : base(options)
+        {
+            LoadIntoMemory();
+        }
+
+        protected void LoadIntoMemory()
         {
             using (var context = NewContext())
             {
-                return context.IndexStats.SingleOrDefault(o => o.Word == word);
+                foreach (var stat in context.IndexStats)
+                {
+                    mStats.AddOrUpdate(stat.Word, stat, (k, v) => stat);
+                }
+            }
+        }
+
+        public IndexStat LoadByWord(string word)
+        {
+            if (mStats.ContainsKey(word))
+            {
+                return mStats[word];
+            }
+            else
+            {
+                return null;
             }
         }
     }
