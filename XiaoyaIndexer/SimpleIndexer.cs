@@ -23,6 +23,7 @@ namespace XiaoyaIndexer
         protected CancellationTokenSource mCancellationTokenSource = null;
         protected IndexerConfig mConfig;
         protected RuntimeLogger mLogger;
+        protected RuntimeLogger mErrorLogger;
         protected SemaphoreSlim mIndexSemaphore;
         protected ConcurrentBag<Task> mTasks = new ConcurrentBag<Task>();
 
@@ -31,6 +32,7 @@ namespace XiaoyaIndexer
         public SimpleIndexer(IndexerConfig config)
         {
             mLogger = new RuntimeLogger(Path.Combine(config.LogDirectory, "Indexer.Log"), true);
+            mErrorLogger = new RuntimeLogger(Path.Combine(config.LogDirectory, "Indexer Error.Log"), true);
             mConfig = config;
 
             mConfig.UrlFileStore.RestartIndex();
@@ -74,52 +76,19 @@ namespace XiaoyaIndexer
                                               UrlFileId = urlFile.UrlFileId,
                                               IndexType = ConvertType(token.Type),
                                           };
-                    int failedTimes = 0;
-                    while (failedTimes != -1)
-                    {
-                        try
-                        {
-                            mConfig.InvertedIndexStore.ClearAndSaveInvertedIndices(urlFile, invertedIndices);
-                            failedTimes = -1;
-                        }
-                        catch (DbUpdateException e)
-                        {
-                            if (e.InnerException != null)
-                            {
-                                mLogger.Log(nameof(SimpleIndexer), "Failed to index url: " + urlFile.Url
-                                + "\r\n" + e.Message + "\r\n" + e.InnerException.Message + "\r\n" + e.StackTrace);
-                            }
-                            else
-                            {
-                                mLogger.Log(nameof(SimpleIndexer), "Failed to index url: " + urlFile.Url
-                                + "\r\n" + e.Message + "\r\n" + e.StackTrace);
-                            }
-                            Thread.Sleep(5000);
-                            failedTimes++;
-                            if (failedTimes == 3)
-                            {
-                                break;
-                            }
-                        }
-                    }
+
+                    mConfig.InvertedIndexStore.ClearAndSaveInvertedIndices(urlFile, invertedIndices);
+
+                    mLogger.Log(nameof(SimpleIndexer), "Indexed Url: " + urlFile.Url);
                 }
                 catch (Exception e)
                 {
-                    if (e.InnerException != null)
-                    {
-                        mLogger.Log(nameof(SimpleIndexer), "Failed to index url: " + urlFile.Url
-                        + "\r\n" + e.Message + "\r\n" + e.InnerException.Message + "\r\n" + e.StackTrace);
-                    }
-                    else
-                    {
-                        mLogger.Log(nameof(SimpleIndexer), "Failed to index url: " + urlFile.Url
-                        + "\r\n" + e.Message + "\r\n" + e.StackTrace);
-                    }
+                    mLogger.LogException(nameof(SimpleIndexer), "Failed to index url: " + urlFile.Url, e);
+                    mErrorLogger.LogException(nameof(SimpleIndexer), "Failed to index url: " + urlFile.Url, e);
                 }
                 finally
                 {
                     mIndexSemaphore.Release();
-                    mLogger.Log(nameof(SimpleIndexer), "Indexed Url: " + urlFile.Url);
                 }
             }));
         }

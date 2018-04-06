@@ -57,7 +57,7 @@ namespace XiaoyaCrawler
             mSimilarContentJudger = similarContentManager;
             mUrlFilters = urlFilters;
             mLogger = new RuntimeLogger(Path.Combine(config.LogDirectory, "Crawler.Log"), true);
-            mErrorLogger = new RuntimeLogger(Path.Combine(config.LogDirectory, "Error.Log"), true);
+            mErrorLogger = new RuntimeLogger(Path.Combine(config.LogDirectory, "Crawler Error.Log"), true);
         }
 
         protected void FetchUrlAsync(string url)
@@ -120,10 +120,9 @@ namespace XiaoyaCrawler
                 }
                 catch (Exception e)
                 {
-                    mLogger.Log(nameof(Crawler),
-                        url + " Error\r\n" + e.Message + "\r\n---\r\n" + e.StackTrace);
-                    mErrorLogger.Log(nameof(Crawler),
-                        url + " Error\r\n" + e.Message + "\r\n---\r\n" + e.StackTrace);
+                    mLogger.LogException(nameof(Crawler), "Failed to crawl url: " + url, e);
+                    mErrorLogger.LogException(nameof(Crawler), "Failed to crawl url: " + url, e);
+                    
                     // Retry
                     mUrlFrontier.PushBackUrl(url, true);
                 }
@@ -176,10 +175,8 @@ namespace XiaoyaCrawler
                     }
                     catch (Exception e)
                     {
-                        mLogger.Log(nameof(Crawler),
-                            "Pop Url Error\r\n" + e.Message + "\r\n---\r\n" + e.StackTrace);
-                        mErrorLogger.Log(nameof(Crawler),
-                            "Pop Url Error\r\n" + e.Message + "\r\n---\r\n" + e.StackTrace);
+                        mLogger.LogException(nameof(Crawler), "Failed to pop url", e);
+                        mErrorLogger.LogException(nameof(Crawler), "Failed to pop url", e);
                     }
 
                     if (url != null)

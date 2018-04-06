@@ -9,6 +9,7 @@ using XiaoyaNLP.TextSegmentation;
 using XiaoyaStore.Data.Model;
 using System.Linq;
 using static XiaoyaFileParser.Model.Token;
+using XiaoyaCommon.Helper;
 
 namespace XiaoyaFileParser.Parsers
 {
@@ -87,6 +88,7 @@ namespace XiaoyaFileParser.Parsers
                 }
                 mContent = await File.ReadAllTextAsync(UrlFile.FilePath,
                     Encoding.GetEncoding(encoding.ToLower()));
+                mContent = TextHelper.ToDBC(mContent.ToLower());
             }
             return mContent;
         }

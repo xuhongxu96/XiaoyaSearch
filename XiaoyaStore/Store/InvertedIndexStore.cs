@@ -18,18 +18,24 @@ namespace XiaoyaStore.Store
 
         public void ClearAndSaveInvertedIndices(int urlFileId, IEnumerable<InvertedIndex> invertedIndices)
         {
-            using (var context = NewContext())
+
+            try
             {
-                try
+                using (var context = NewContext())
                 {
-                    context.RemoveRange(from o in context.InvertedIndices where o.UrlFileId == urlFileId select o);
-                    context.AddRange(invertedIndices);
+                    var toBeRemovedIndices = from o in context.InvertedIndices
+                                             where o.UrlFileId == urlFileId
+                                             select o;
+                    var toBeRemovedUrlFileIndexStats = from o in context.UrlFileIndexStats
+                                                       where o.UrlFileId == urlFileId
+                                                       select o;
+                    context.RemoveRange(toBeRemovedIndices);
+                    context.RemoveRange(toBeRemovedUrlFileIndexStats);
 
-                    var toBeRemovedUrlFileIndexStats = (from o in context.UrlFileIndexStats
-                                                        where o.UrlFileId == urlFileId
-                                                        select o);
+                    context.InvertedIndices.AddRange(invertedIndices);
 
-                    var urlFileIndexStats = invertedIndices.GroupBy(o => o.Word)
+                    var urlFileIndexStats = invertedIndices
+                        .GroupBy(o => o.Word)
                         .Select(g => new UrlFileIndexStat
                         {
                             UrlFileId = urlFileId,
@@ -37,8 +43,7 @@ namespace XiaoyaStore.Store
                             WordFrequency = g.Count(),
                         });
 
-                    context.RemoveRange(toBeRemovedUrlFileIndexStats);
-                    context.AddRange(urlFileIndexStats);
+                    context.UrlFileIndexStats.AddRange(urlFileIndexStats);
 
                     if (!context.Database.IsSqlServer())
                     {
@@ -74,7 +79,7 @@ namespace XiaoyaStore.Store
                                     DocumentFrequency = 0,
                                 };
 
-                                context.Add(stat);
+                                context.IndexStats.Add(stat);
                             }
 
                             if (hasWordBefore && !hasWordNow)
@@ -96,14 +101,17 @@ namespace XiaoyaStore.Store
 
                     context.SaveChanges();
                 }
-                catch (DbUpdateConcurrencyException)
+            }
+            catch (Exception e)
+            {
+                using (var context = NewContext())
                 {
                     context.UrlFiles.Single(o => o.UrlFileId == urlFileId).IndexStatus
                         = UrlFile.UrlFileIndexStatus.NotIndexed;
 
                     context.SaveChanges();
-                    throw;
                 }
+                throw;
             }
         }
 

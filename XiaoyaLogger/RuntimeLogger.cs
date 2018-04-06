@@ -64,6 +64,31 @@ namespace XiaoyaLogger
             });
         }
 
+        public void LogException(string className, string message, Exception e)
+        {
+            var exceptionMessage = e.GetType().Name + "\r\n" + e.Message + "\r\n" + e.StackTrace + "\r\n";
+            while (e.InnerException != null)
+            {
+                e = e.InnerException;
+                exceptionMessage += e.GetType().Name + "\r\n" + e.Message + "\r\n" + e.StackTrace + "\r\n";
+            }
+
+            var content = string.Format(
+                "{0}\r\n{1}\r\n{2}\r\nException:\r\n{3}\r\n",
+                DateTime.Now.ToString(),
+                className,
+                message,
+                exceptionMessage
+            );
+
+            queue.Add(new LogData
+            {
+                fileName = mLogFileName,
+                content = content,
+                doWriteToConsole = mDoWriteToConsole,
+            });
+        }
+
         public static void StartWrite()
         {
             WriteAsync();
