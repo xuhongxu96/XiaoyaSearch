@@ -26,6 +26,7 @@ namespace XiaoyaIndexer
         protected RuntimeLogger mErrorLogger;
         protected SemaphoreSlim mIndexSemaphore;
         protected ConcurrentBag<Task> mTasks = new ConcurrentBag<Task>();
+        protected object mSyncLock = new object();
 
         public bool IsWaiting { get; private set; } = false;
 
@@ -77,7 +78,10 @@ namespace XiaoyaIndexer
                                               IndexType = ConvertType(token.Type),
                                           };
 
-                    mConfig.InvertedIndexStore.ClearAndSaveInvertedIndices(urlFile, invertedIndices);
+                    lock (mSyncLock)
+                    {
+                        mConfig.InvertedIndexStore.ClearAndSaveInvertedIndices(urlFile, invertedIndices);
+                    }
 
                     mLogger.Log(nameof(SimpleIndexer), "Indexed Url: " + urlFile.Url);
                 }
