@@ -11,10 +11,11 @@ namespace XiaoyaRetriever.InexactTopKRetriever
 {
     public class InexactTopKRetriever : IRetriever
     {
-        protected readonly int[] WORD_FREQUENCY_THRESHOLDS_FOR_TIERS = new int[] { int.MaxValue, 20, 10, 2, 1 };
+        protected readonly int[] WORD_FREQUENCY_THRESHOLDS_FOR_TIERS = new int[] { int.MaxValue / 2, 20, 10, 2, 1 };
 
         protected RetrieverConfig mConfig;
         protected int mTopK;
+        protected Dictionary<string, IEnumerable<int>> mWordCaches = new Dictionary<string, IEnumerable<int>>();
 
         public InexactTopKRetriever(RetrieverConfig config, int k = 1000)
         {
@@ -22,104 +23,174 @@ namespace XiaoyaRetriever.InexactTopKRetriever
             mTopK = k;
         }
 
-        protected IEnumerable<UrlFileIndexStat> RetrieveWord(Word word)
+        protected IEnumerable<int> RetrieveWord(Word word, int minFrequency, int maxFrequency)
         {
-            return (from index in mConfig.UrlFileIndexStatStore.LoadByWord(word.Value)
-                    select index);
-        }
-
-        protected IEnumerable<int> RetrieveNot(Not not)
-        {
-            IEnumerable<int> result = null;
-            foreach (var word in not.Operand as And)
+            var result = from index in mConfig.UrlFileIndexStatStore.LoadByWord(word.Value)
+                         where index.WordFrequency >= minFrequency && index.WordFrequency < maxFrequency
+                         select index.UrlFileId;
+            if (mWordCaches.ContainsKey(word.Value))
             {
-                var nextIndices = from index in mConfig.UrlFileIndexStatStore.LoadByWord((word as Word).Value)
-                                  select index.UrlFileId;
-                if (result == null)
-                {
-                    result = nextIndices;
-                }
-                else
-                {
-                    result.Intersect(nextIndices);
-                }
+                result = result.Union(mWordCaches[word.Value]);
             }
+            mWordCaches[word.Value] = result;
             return result;
         }
 
-        protected IEnumerable<int> RetrieveExpression(SearchExpression expression)
+        protected IEnumerable<int> RetrieveNot(Not notExp, int minFrequency, int maxFrequency)
         {
-            if (expression is And andExp)
+            return from position in
+                       RetrieveExpression(notExp.Operand, -minFrequency, int.MaxValue - maxFrequency)
+                   select position;
+        }
+
+        protected IEnumerable<int> RetrieveAnd(And andExp, int minFrequency, int maxFrequency)
+        {
+            IEnumerable<int> result = null;
+
+            if (andExp.IsIncluded)
             {
-                int count = 0;
-                var urlFilesForWords = new Dictionary<Word, IEnumerable<UrlFileIndexStat>>();
-
-                var documentCount = mConfig.UrlFileStore.Count();
-
-                var sortedWordExps = (from exp in andExp
-                                      where exp is Word
-                                      select exp as Word).OrderByDescending(o =>
-                         ScoringHelpers.TfIdf(o.Frequency, o.DocumentFrequency, documentCount)).ToList();
-                var notWordExps = (from exp in andExp
-                                   where exp is Not
-                                   select exp as Not).OrderByDescending(o => o.Frequency).ToList();
-
-                foreach (var word in sortedWordExps)
+                // Someone is included
+                foreach (var operand in andExp.OrderBy(o => o.Frequency))
                 {
-                    urlFilesForWords[word] = RetrieveWord(word);
-                }
+                    var nextIndices = RetrieveExpression(operand, minFrequency, maxFrequency);
 
-                for (int tier = 1; tier < WORD_FREQUENCY_THRESHOLDS_FOR_TIERS.Length; ++tier)
-                {
-                    IEnumerable<int> result = null;
-                    bool isFirstWord = true;
-
-                    foreach (var word in sortedWordExps)
+                    if (result == null)
                     {
-                        int curTier = tier;
-                        var nextIndices = urlFilesForWords[word]
-                                        .Where(o => o.WordFrequency >= WORD_FREQUENCY_THRESHOLDS_FOR_TIERS[curTier]
-                                                && o.WordFrequency < WORD_FREQUENCY_THRESHOLDS_FOR_TIERS[curTier - 1])
-                                        .Select(o => o.UrlFileId);
-
-                        if (isFirstWord)
-                        {
-                            if (result == null)
-                            {
-                                result = nextIndices;
-                            }
-                            else
-                            {
-                                result = result.Union(nextIndices);
-                            }
-                            isFirstWord = false;
-                        }
-                        else
+                        result = nextIndices;
+                    }
+                    else
+                    {
+                        if (operand.IsIncluded)
                         {
                             result = result.Intersect(nextIndices);
                         }
-                    }
-
-                    foreach (var notWord in notWordExps)
-                    {
-                        result = result.Except(RetrieveNot(notWord));
-                    }
-
-                    foreach (var urlFileId in result)
-                    {
-                        yield return urlFileId;
-                        ++count;
-
-                        if (count >= mTopK)
+                        else
                         {
-                            yield break;
+                            result = result.Except(nextIndices);
                         }
                     }
                 }
             }
             else
             {
-                throw new NotSupportedException("Not supported search expression");
+                // None is included
+                foreach (var operand in andExp.OrderByDescending(o => o.Frequency))
+                {
+                    var nextIndices = RetrieveExpression(operand, minFrequency, maxFrequency);
+
+                    if (result == null)
+                    {
+                        result = nextIndices;
+                    }
+                    else
+                    {
+                        result = result.Union(nextIndices);
+                    }
+                }
+            }
+            return result;
+        }
+
+
+        protected IEnumerable<int> RetrieveOr(Or orExp, int minFrequency, int maxFrequency)
+        {
+            IEnumerable<int> result = null;
+
+            if (orExp.IsIncluded)
+            {
+                // All are included
+                foreach (var operand in orExp.OrderBy(o => o.Frequency))
+                {
+                    var nextIndices = RetrieveExpression(operand, minFrequency, maxFrequency);
+
+                    if (result == null)
+                    {
+                        result = nextIndices;
+                    }
+                    else
+                    {
+                        result = result.Union(nextIndices);
+                    }
+                }
+            }
+            else
+            {
+                // Someone is not included
+                foreach (var operand in orExp.OrderByDescending(o => o.Frequency))
+                {
+                    var nextIndices = RetrieveExpression(operand, minFrequency, maxFrequency);
+
+                    if (result == null)
+                    {
+                        result = nextIndices;
+                    }
+                    else
+                    {
+                        if (operand.IsIncluded)
+                        {
+                            result = result.Except(nextIndices);
+                        }
+                        else
+                        {
+                            result = result.Intersect(nextIndices);
+                        }
+                    }
+                }
+            }
+            return result;
+        }
+
+        protected IEnumerable<int> RetrieveExpression(SearchExpression expression, int minFrequency, int maxFrequency)
+        {
+            if (expression is Word word)
+            {
+                return RetrieveWord(word, minFrequency, maxFrequency);
+            }
+            else if (expression is Not notExp)
+            {
+                return RetrieveNot(notExp, minFrequency, maxFrequency);
+            }
+            else if (expression is And andExp)
+            {
+                return RetrieveAnd(andExp, minFrequency, maxFrequency);
+            }
+            else if (expression is Or orExp)
+            {
+                return RetrieveOr(orExp, minFrequency, maxFrequency);
+            }
+            throw new NotSupportedException("Not supported search expression");
+        }
+
+        protected IEnumerable<int> RetrieveExpression(SearchExpression expression)
+        {
+            int count = 0;
+
+            mWordCaches.Clear();
+
+            var existedResult = new HashSet<int>();
+
+            for (int tier = 1; tier < WORD_FREQUENCY_THRESHOLDS_FOR_TIERS.Length; ++tier)
+            {
+                var result = RetrieveExpression(expression,
+                    WORD_FREQUENCY_THRESHOLDS_FOR_TIERS[tier],
+                    WORD_FREQUENCY_THRESHOLDS_FOR_TIERS[tier - 1]);
+
+                foreach (var urlFileId in result)
+                {
+                    if (existedResult.Contains(urlFileId))
+                    {
+                        continue;
+                    }
+                    existedResult.Add(urlFileId);
+
+                    yield return urlFileId;
+                    ++count;
+
+                    if (count >= mTopK)
+                    {
+                        yield break;
+                    }
+                }
             }
         }
 
@@ -130,11 +201,6 @@ namespace XiaoyaRetriever.InexactTopKRetriever
         /// <returns>An enumerable of UrlFile IDs</returns>
         public IEnumerable<int> Retrieve(SearchExpression expression)
         {
-            if (!expression.IsParsedFromFreeText)
-            {
-                throw new NotSupportedException("Not supported search expression");
-            }
-
             expression.SetConfig(mConfig);
 
             if (expression.IsIncluded)

@@ -25,8 +25,8 @@ namespace XiaoyaRetriever.BooleanRetriever
 
         protected IEnumerable<int> RetrieveNot(Not notExp)
         {
-            return from position in RetrieveExpression(notExp.Operand)
-                   select position;
+            return from urlFileID in RetrieveExpression(notExp.Operand)
+                   select urlFileID;
         }
 
         protected IEnumerable<int> RetrieveAnd(And andExp)

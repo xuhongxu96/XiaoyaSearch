@@ -102,7 +102,7 @@ namespace XiaoyaStore.Store
                     context.SaveChanges();
                 }
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 using (var context = NewContext())
                 {

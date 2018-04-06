@@ -19,6 +19,7 @@ namespace XiaoyaRanker.QueryTermProximityRanker
         {
             var wordCount = words.Count();
             var wordTotalLength = words.Sum(o => o.Length);
+            var lastWordLength = 0;
 
             foreach (var id in urlFileIds)
             {
@@ -36,12 +37,13 @@ namespace XiaoyaRanker.QueryTermProximityRanker
 
                     if (positions.Count == 0)
                     {
-                        yield return double.NegativeInfinity;
+                        yield return 0;
                         skip = true;
                         break;
                     }
 
                     wordPositions.Add(positions);
+                    lastWordLength = word.Length;
                 }
 
                 if (skip)
@@ -89,7 +91,7 @@ namespace XiaoyaRanker.QueryTermProximityRanker
                     }
                 }
 
-                yield return Math.Log(wordTotalLength) - Math.Log(minWindowLength);
+                yield return (double)wordTotalLength / (minWindowLength + lastWordLength);
             }
         }
     }

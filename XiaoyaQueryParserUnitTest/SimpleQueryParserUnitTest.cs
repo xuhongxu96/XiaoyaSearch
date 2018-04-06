@@ -14,7 +14,7 @@ namespace XiaoyaQueryParserUnitTest
         {
             var parser = new SimpleQueryParser(new QueryParserConfig());
 
-            var expression = parser.Parse("Hello World -ÄãºÃ°¡");
+            var expression = parser.Parse("Hello World -ÄãºÃ°¡").Expression;
 
             Assert.IsInstanceOfType(expression, typeof(And));
 

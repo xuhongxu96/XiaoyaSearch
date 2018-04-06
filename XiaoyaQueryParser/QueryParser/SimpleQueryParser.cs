@@ -6,7 +6,7 @@ using XiaoyaRetriever.Expression;
 
 namespace XiaoyaQueryParser.QueryParser
 {
-    public class SimpleQueryParser
+    public class SimpleQueryParser : IQueryParser
     {
         protected QueryParserConfig mConfig = new QueryParserConfig();
 
@@ -18,8 +18,9 @@ namespace XiaoyaQueryParser.QueryParser
             mConfig = config;
         }
 
-        public SearchExpression Parse(string query)
+        public ParsedQuery Parse(string query)
         {
+            var words = new List<string>();
             var result = new And();
             var rawTerms = query.ToLower().Split(' ', StringSplitOptions.RemoveEmptyEntries);
 
@@ -49,11 +50,16 @@ namespace XiaoyaQueryParser.QueryParser
                     foreach (var segment in segments)
                     {
                         result.Add(segment.Text);
+                        words.Add(segment.Text);
                     }
                 }
             }
 
-            return result;
+            return new ParsedQuery
+            {
+                Expression = result,
+                Words = words,
+            };
         }
     }
 }

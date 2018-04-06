@@ -60,8 +60,8 @@ namespace XiaoyaRankerUnitTest
                 }
             }
 
-            Assert.IsTrue(scores.Any(o => Math.Abs(o - (Math.Log(8) - Math.Log(26))) < double.Epsilon));
-            Assert.AreEqual(scores.Count - 1, scores.Count(o => double.IsNegativeInfinity(o)));
+            Assert.IsTrue(scores.Any(o => Math.Abs(o - (8 / 28)) < double.Epsilon));
+            Assert.AreEqual(scores.Count - 1, scores.Count(o => o == 0));
         }
     }
 }

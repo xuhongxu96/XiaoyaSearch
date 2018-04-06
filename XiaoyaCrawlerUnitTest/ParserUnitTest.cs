@@ -89,7 +89,7 @@ namespace XiaoyaCrawlerUnitTest
                 var parseResult = parser.ParseAsync(urlFile).GetAwaiter().GetResult();
 
                 Assert.AreEqual(
-                    Regex.Replace("Hello, World! 你好，世界！百度Google返回", @"\s", ""),
+                    Regex.Replace("hello, world! 你好,世界!百度google返回", @"\s", ""),
                     Regex.Replace(parseResult.Content, @"\s", "")
                     );
                 Assert.AreEqual(3, parseResult.Urls.Count);

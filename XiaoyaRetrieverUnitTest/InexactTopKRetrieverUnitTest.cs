@@ -52,7 +52,7 @@ namespace XiaoyaRetrieverUnitTest
             };
 
             var urlFileIds = retriever.Retrieve(expression);
-            Assert.AreEqual(55, urlFileIds.Count());
+            Assert.AreEqual(120, urlFileIds.Count());
 
 
             expression = new And
@@ -66,7 +66,11 @@ namespace XiaoyaRetrieverUnitTest
             };
 
             urlFileIds = retriever.Retrieve(expression);
-            Assert.AreEqual(46, urlFileIds.Count());
+            foreach (var id in urlFileIds)
+            {
+                Console.WriteLine(id);
+            }
+            Assert.AreEqual(104, urlFileIds.Count());
 
             using (var context = new XiaoyaSearchContext(options))
             {
@@ -93,8 +97,8 @@ namespace XiaoyaRetrieverUnitTest
 
             var expression = new SimpleQueryParser();
 
-            var urlFileIds = retriever.Retrieve(expression.Parse("北京师范大学 -教务处教育"));
-            Assert.AreEqual(46, urlFileIds.Count());
+            var urlFileIds = retriever.Retrieve(expression.Parse("北京师范大学 -教务处教育").Expression);
+            Assert.AreEqual(104, urlFileIds.Count());
 
             using (var context = new XiaoyaSearchContext(options))
             {
