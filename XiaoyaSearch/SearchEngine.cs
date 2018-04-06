@@ -54,7 +54,7 @@ namespace XiaoyaSearch
 
             foreach (var ranker in mRankers)
             {
-                var scores = ranker.Rank(urlFileIds, parsedQuery.Words).ToList();
+                var scores = ranker.Rank(urlFileIds, parsedQuery.Words).ToArray();
                 for (int i = 0; i < urlFileIds.Count(); ++i)
                 {
                     var id = urlFileIds[i];
