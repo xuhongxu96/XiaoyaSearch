@@ -45,6 +45,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XiaoyaSearch", "XiaoyaSearc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XiaoyaSearchUnitTest", "XiaoyaSearchUnitTest\XiaoyaSearchUnitTest.csproj", "{114ADAFB-A920-4A80-8507-7924B64072D0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XiaoyaSearchInterface", "XiaoyaSearchInterface\XiaoyaSearchInterface.csproj", "{F02615D8-875C-4804-B3C3-97B90DE9AB94}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -135,6 +137,10 @@ Global
 		{114ADAFB-A920-4A80-8507-7924B64072D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{114ADAFB-A920-4A80-8507-7924B64072D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{114ADAFB-A920-4A80-8507-7924B64072D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F02615D8-875C-4804-B3C3-97B90DE9AB94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F02615D8-875C-4804-B3C3-97B90DE9AB94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F02615D8-875C-4804-B3C3-97B90DE9AB94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F02615D8-875C-4804-B3C3-97B90DE9AB94}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

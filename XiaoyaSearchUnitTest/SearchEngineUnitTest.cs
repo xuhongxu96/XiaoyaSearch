@@ -67,10 +67,10 @@ namespace XiaoyaSearchUnitTest
                 {
                     var urlFile = store.LoadById(result.UrlFileId);
 
-                    // Console.WriteLine("{0}: {1} ({2})", result.UrlFileId, urlFile.Url, result.Score);
+                    Console.WriteLine("{0}: {1} ({2})", result.UrlFileId, urlFile.Url, result.Score);
                 }
 
-                // Console.WriteLine("---");
+                Console.WriteLine("---");
             }
         }
     }
