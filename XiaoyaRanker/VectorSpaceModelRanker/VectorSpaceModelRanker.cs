@@ -10,8 +10,8 @@ namespace XiaoyaRanker.VectorSpaceModelRanker
     public class VectorSpaceModelRanker : IRanker
     {
         protected RankerConfig mConfig;
-        protected const double ContentFactor = 100;
-        protected const double TitleFactor = 2;
+        protected const double ContentFactor = 1;
+        protected const double TitleFactor = 10;
 
         public VectorSpaceModelRanker(RankerConfig config)
         {
@@ -25,6 +25,8 @@ namespace XiaoyaRanker.VectorSpaceModelRanker
             foreach (var urlFileId in urlFileIds)
             {
                 var urlFile = mConfig.UrlFileStore.LoadById(urlFileId);
+                var titleLength = urlFile.Title.Length + 1;
+                var contentLength = urlFile.Content.Length + 1;
 
                 double titleScore = 0;
                 double score = 0;
@@ -47,10 +49,10 @@ namespace XiaoyaRanker.VectorSpaceModelRanker
 
                     if (urlFile.Title.Contains(word))
                     {
-                        titleScore += wordScore * word.Length / urlFile.Title.Length;
+                        titleScore += wordScore * word.Length / titleLength;
                     }
 
-                    score += wordScore * word.Length / urlFile.Content.Length;
+                    score += wordScore * Math.Min(1, (0.3 + word.Length / contentLength));
                 }
                 yield return ContentFactor * score + TitleFactor * titleScore;
             }

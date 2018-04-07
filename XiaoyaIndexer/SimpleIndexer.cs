@@ -78,7 +78,7 @@ namespace XiaoyaIndexer
                                               IndexType = ConvertType(token.Type),
                                           };
 
-                    lock (mSyncLock)
+                    // lock (mSyncLock)
                     {
                         mConfig.InvertedIndexStore.ClearAndSaveInvertedIndices(urlFile, invertedIndices);
                     }

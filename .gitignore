@@ -259,8 +259,3 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
-/XiaoyaCrawlerInterface/Properties/launchSettings.json
-/XiaoyaStore/Migrations/
-/XiaoyaIndexerInterface/Properties/launchSettings.json
-/XiaoyaIndexer/Properties/launchSettings.json
-/XiaoyaCommon/Properties/launchSettings.json

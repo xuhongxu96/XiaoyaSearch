@@ -106,13 +106,16 @@ CREATE UNIQUE CLUSTERED INDEX IndexStatsIdx ON dbo.IndexStats(Word)");
                             .IsUnique();
 
             modelBuilder.Entity<UrlFileIndexStat>()
-                            .HasIndex(o => new { o.Word, o.UrlFileId, o.WordFrequency });
+                            .HasIndex(o => new { o.Word, o.UrlFileId, o.Weight, o.WordFrequency});
 
             modelBuilder.Entity<UrlFileIndexStat>()
                 .HasIndex(o => o.WordFrequency);
 
             modelBuilder.Entity<UrlFileIndexStat>()
                 .HasIndex(o => o.Word);
+
+            modelBuilder.Entity<UrlFileIndexStat>()
+                .HasIndex(o => o.Weight);
 
             modelBuilder.Entity<UrlFileIndexStat>()
                 .HasIndex(o => o.UrlFileId);

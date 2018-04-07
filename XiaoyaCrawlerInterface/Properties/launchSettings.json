@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "XiaoyaCrawlerInterface": {
+      "commandName": "Project",
+      "commandLineArgs": "-i http://www.bnu.edu.cn -f E:\\XiaoyaSearch\\Fetched -LogDir E:\\XiaoyaSearch\\Logs -d sqlserver -c \"Data Source=IR-PC;Initial Catalog=XiaoyaSearch;Integrated Security=True\" -t 100"
+    }
+  }
+}

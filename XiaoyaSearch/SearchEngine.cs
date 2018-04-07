@@ -36,7 +36,7 @@ namespace XiaoyaSearch
                 UrlFileIndexStatStore = config.UrlFileIndexStatStore,
                 UrlFileStore = config.UrlFileStore,
                 InvertedIndexStore = config.InvertedIndexStore,
-            }, 500);
+            }, 300);
 
             var rankerConfig = new RankerConfig
             {
