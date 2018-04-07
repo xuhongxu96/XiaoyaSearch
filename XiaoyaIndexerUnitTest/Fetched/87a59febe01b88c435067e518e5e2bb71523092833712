@@ -38,10 +38,7 @@
 		            		<a href="javascript:void(0);" style="cursor: default;">学生服务 </a>
 							<ul class="n_2">
 					                	<li>
-											<i class="fa fa-info-circle"></i><a   href="http://career.bnu.edu.cn/front/channel.jspa?channelId=763&parentId=741">招聘信息</a>
-					                	</li>
-					                	<li>
-											<i class="fa fa-tags"></i><a   href="http://career.bnu.edu.cn/front/channel.jspa?channelId=764&parentId=741">招聘会</a>
+											<i class="fa fa-info-circle"></i><a   href="http://career.bnu.edu.cn/front/channel.jspa?channelId=745&parentId=741">招聘信息</a>
 					                	</li>
 					                	<li>
 											<i class="fa fa-pencil-square-o"></i><a  class="v_login" memberTypeId="86" returnUrl="http://career.bnu.edu.cn/front/channel.jspa?channelId=747&parentId=741" href="http://career.bnu.edu.cn/front/channel.jspa?channelId=747&parentId=741">手续办理</a>
@@ -197,6 +194,12 @@
 					</h3>
 		        	<ul class="tables" style="display:block;">
 		        			<li>
+		        				<a title="北京大学生就业之家近期双选会预告" href="http://career.bnu.edu.cn/front/showContent.jspa?channelId=743&contentId=103527">
+										北京大学生就业之家近期双选会预告
+		        				</a>
+		        				<span>2018-04-03</span>
+		        			</li>
+		        			<li>
 		        				<a title="关于举办2018年北京师范大学创新创业大赛的通知" href="http://career.bnu.edu.cn/front/showContent.jspa?channelId=743&contentId=103525">
 										关于举办2018年北京师范大学创新创...
 		        				</a>
@@ -217,12 +220,6 @@
 		        			<li>
 		        				<a title="2017-2018学年春季院系专场招聘会通知" href="http://career.bnu.edu.cn/front/showContent.jspa?channelId=743&contentId=103494">
 										2017-2018学年春季院系专场招...
-		        				</a>
-		        				<span>2018-03-01</span>
-		        			</li>
-		        			<li>
-		        				<a title="2017-2018春季学期3月份大型双选会邀请函" href="http://career.bnu.edu.cn/front/showContent.jspa?channelId=743&contentId=103493">
-										2017-2018春季学期3月份大型...
 		        				</a>
 		        				<span>2018-03-01</span>
 		        			</li>
@@ -274,43 +271,43 @@
 					</h3>
 						<ul class="tablesa" style="display:block;">
 						 	<li>
-						 		<a id="a_prop_" title = "北京农商银行"  href="/front/zpxx.jspa?channelId=764&tid=107496">
+						 		<a id="a_prop_" title = ""  href="/front/zpxx.jspa?channelId=764&tid=107567">
 						 			<font color="">
-									        北京农商银行
+									        北京睿信致成管理顾问有限公司
 						 			</font>
-						 		</a><span>2018-03-30</span>
+						 		</a><span>2018-04-04</span>
 						 	</li>
 						 	
 						 	<li>
-						 		<a id="a_prop_" title = ""  href="/front/zpxx.jspa?channelId=764&tid=107495">
+						 		<a id="a_prop_" title = "绫致时装"  href="/front/zpxx.jspa?channelId=764&tid=107566">
 						 			<font color="">
-									        北京新传智库科技有限公司
+									        绫致时装
 						 			</font>
-						 		</a><span>2018-03-30</span>
+						 		</a><span>2018-04-04</span>
 						 	</li>
 						 	
 						 	<li>
-						 		<a id="a_prop_" title = "北京博汇盛仁教育咨询有限责任公司招聘信息"  href="/front/zpxx.jspa?channelId=764&tid=107494">
+						 		<a id="a_prop_" title = ""  href="/front/zpxx.jspa?channelId=764&tid=107565">
 						 			<font color="">
-									        北京博汇盛仁教育咨询有限责任公司
+									        温州市鹿城区番茄园文化艺术培训有限公... 
 						 			</font>
-						 		</a><span>2018-03-30</span>
+						 		</a><span>2018-04-04</span>
 						 	</li>
 						 	
 						 	<li>
-						 		<a id="a_prop_" title = ""  href="/front/zpxx.jspa?channelId=764&tid=107492">
+						 		<a id="a_prop_" title = "北京依科世福科技有限公司校园招聘"  href="/front/zpxx.jspa?channelId=764&tid=107564">
 						 			<font color="">
-									        北京大恒创新技术有限公司
+									        北京依科世福科技有限公司
 						 			</font>
-						 		</a><span>2018-03-30</span>
+						 		</a><span>2018-04-04</span>
 						 	</li>
 						 	
 						 	<li>
-						 		<a id="a_prop_" title = ""  href="/front/zpxx.jspa?channelId=764&tid=107491">
+						 		<a id="a_prop_" title = ""  href="/front/zpxx.jspa?channelId=764&tid=107562">
 						 			<font color="">
-									        上濒翅膀教育科技（北京）有限责任公司
+									        北京五八信息技术有限公司
 						 			</font>
-						 		</a><span>2018-03-30</span>
+						 		</a><span>2018-04-04</span>
 						 	</li>
 						 	
 						 	<a class="more" href="/front/channel.jspa?channelId=745&parentId=741">更多<i class="fa fa-arrow-circle-o-right"></i></a>

@@ -60,7 +60,7 @@ namespace XiaoyaRetrieverUnitTest
             };
 
             var urlFileIds = retriever.Retrieve(expression);
-            Assert.AreEqual(10, urlFileIds.Count());
+            Assert.AreEqual(4, urlFileIds.Count());
 
             using (var context = new XiaoyaSearchContext(options))
             {

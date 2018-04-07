@@ -141,7 +141,7 @@ $(document).ready(function() {initMenu();});
               <td bgcolor="#D9F2FF"><h1>重要链接</h1></td>
             </tr>
             <tr>
-    <td height="35" align="left" valign="middle" class="link_m">　　<a href="http://one.bnu.edu.cn/" target="_blank">信息门户</a>　｜　<a href="http://www.bnu.edu.cn/xfzc/80823.html" target="_blank">校领导信箱</a>　｜　<a href="http://www.bnu.edu.cn/xfzc/52576.html" target="_blank">校领导接待日</a></td>
+    <td height="35" align="left" valign="middle" class="link_m">　　<a href="http://one.bnu.edu.cn/" target="_blank">信息门户</a>　｜　<a href="http://www.bnu.edu.cn/lxxld/index.htm" target="_blank">校领导信箱</a>　｜　<a href="http://www.bnu.edu.cn/lxxld/index.htm" target="_blank">校领导接待日</a></td>
             </tr>
           </table>    </td>
     <td width="150" align="center" valign="top" bgcolor="#D9F2FF">

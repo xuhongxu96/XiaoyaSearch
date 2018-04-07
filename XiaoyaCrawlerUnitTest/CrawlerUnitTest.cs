@@ -112,7 +112,7 @@ namespace XiaoyaCrawlerUnitTest
                 foreach (var line in File.ReadLines(Path.Combine(logDir, "Crawler.log")))
                 {
                     lineNo++;
-                    if (!line.Contains(":")) continue;
+                    if (!line.Contains(":") && line.Length <= line.IndexOf(":") + 2) continue;
                     var url = line.Substring(line.IndexOf(":") + 2);
                     if (line.StartsWith("Begin Crawl: "))
                     {

@@ -19,11 +19,23 @@ namespace XiaoyaStore.Store
 
         protected double CalculateWeight(UrlFile urlFile, string word, long wordFrequency, int minPosition)
         {
-            return (urlFile.Title.Contains(word) ? 2.0 * word.Length : 1.0)
-                / (1 + urlFile.Title.Length)
+            var title = urlFile.Title;
+            if (title == null)
+            {
+                title = "";
+            }
+
+            var content = urlFile.Content;
+            if (content == null)
+            {
+                content = "";
+            }
+
+            return (title.Contains(word) ? 2.0 * word.Length : 1.0)
+                / (1 + title.Length)
                 * wordFrequency
                 / (1 + UrlHelper.GetDomainDepth(urlFile.Url))
-                + 3 * (minPosition / (1 + urlFile.Content.Length));
+                + 3 * (minPosition / (1 + content.Length));
         }
 
         public void ClearAndSaveInvertedIndices(int urlFileId, IEnumerable<InvertedIndex> invertedIndices)

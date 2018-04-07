@@ -38,7 +38,7 @@
 			<p class="header_09_help">登录帮助</p>
 		</div>
 	</div>
-    <form id="loginForm" action="/cas/login;jsessionid=9Rp8rDJgjdxJEWGwLkngbQDf91m9hPd3kn3SbfvwKwgrI-UfkiqM!-1691662994?service=http%3A%2F%2Fone.bnu.edu.cn%2Fdcp%2Findex.jsp" method="post">
+    <form id="loginForm" action="/cas/login;jsessionid=awWfaFqhJH3TcHAywxR4I-7xSqZ3ZBmVvkg8c3aIhVQwLYDZAkl3!748264095?service=http%3A%2F%2Fone.bnu.edu.cn%2Fdcp%2Findex.jsp" method="post">
 		<div class="login_space1">
 			<div class="container_space">
 					<div class="content_login_box1">
@@ -73,7 +73,7 @@
 		  <input type="hidden" id="rsa" name="rsa"/>
 	      <input type="hidden" id="ul" name="ul"/>
 	      <input type="hidden" id="pl" name="pl"/>
-	      <input type="hidden" id="lt" name="lt" value="LT-936061-X1JcxmqGePwreKXq97DkTRfKPQqpNZ-cas" />
+	      <input type="hidden" id="lt" name="lt" value="LT-155351-oql4uPK6mkWY6xk7lUKhCgR92pfVaD-cas" />
 	      <input type="hidden" name="execution" value="e1s1" />
 	      <input type="hidden" name="_eventId" value="submit" />
 	</form>

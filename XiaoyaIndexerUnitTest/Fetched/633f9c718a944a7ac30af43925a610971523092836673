@@ -30,6 +30,8 @@
 
 
 
+
+
 <header class="header" >
     <div class="serWrap">
         <div id="ser">
@@ -103,6 +105,7 @@
                       <dd><a href="http://gnhz.bnu.edu.cn/" target="_blank">国内合作</a></dd>
                       <dd><a href="http://www.bnuef.org/" target="_blank">教育基金会</a></dd>
                       <dd><a href="http://ocia.bnu.edu.cn/" target="_blank">孔子学院</a></dd>
+                      <dd><a href="http://aiccc.bnu.edu.cn" target="_blank">中国文化国际传播研究院</a></dd>
                   </dl>
                 </li>
                 <li><a href="tsda/index.htm">图书档案</a>
@@ -120,8 +123,12 @@
     <section class="mobile">
         <div class="mobile-inner-header">
             <h3 class="mobile_title"><a href="http://email.bnu.edu.cn/" target="_blank">教师邮箱</a><a href="http://stu.mail.bnu.edu.cn/" target="_blank">学生邮箱</a></h3>
+			<!-- 0331开始 -->
+            <!-- <div class="mobile-inner-header-icon mobile-inner-header-icon-out">
+            <span></span><span></span><span></span></div> -->
             <div class="mobile-inner-header-icon mobile-inner-header-icon-out">
-            <span></span><span></span><span></span></div>
+            <span class="mobile_home">导航</span></div>
+            <!-- 0331结束 -->
           </div>
           <div class="mobile-inner-nav">
             <ul>
@@ -200,16 +207,16 @@
     
     <div class="flexslider">
       <ul class="slides">
-	  	        <li><a href="http://www.bnu.edu.cn/zhxw/86938.htm" target="_blank"><img src="images/content/2018-03/20180329174303486031.jpg" />
+	  			        <li><a><img src="images/content/2018-04/20180404172519740284.jpg" />
               <span class="bannerTitle"></span>
             </a></li>
-                <li><a href="http://www.bnu.edu.cn/ttgz/86939.htm" target="_blank"><img src="images/content/2018-03/20180330111720136864.jpg" />
+						        <li><a><img src="images/content/2018-04/20180403150537285607.jpg" />
               <span class="bannerTitle"></span>
             </a></li>
-                <li><a href="http://219.224.19.67/bnu/Pc/sdk/Player.aspx?play=vod&progid=43218&episode_id=1" target="_blank"><img src="images/content/2018-03/20180302164331842440.jpg" />
+								<li><a href="tt/87012.htm" target="_blank"><img src="images/content/2018-04/20180404092108639245.jpg" />
               <span class="bannerTitle"></span>
             </a></li>
-              </ul>
+        		      </ul>
    </div>
    <span class="review_newsBg"></span>
    <div class="review_news"><a href="tt/index.htm">More ></a></div>
@@ -226,6 +233,20 @@
                 <a href="ttgz/index.htm"><h3><img src="images/title01.png" alt=""></h3></a>
             </div>
             <ul class="list01">
+			  			  			                <li class="liBg3"><a href="ttgz/87200.htm" target="_blank">
+                  <span class="item-img01"><img src="images/content/2018-04/20180404145918550802.jpg" alt=""></span>
+                  <div class="item-txt01">
+                      <h3>北师大基础教育合作办学平台：艺体搭建新丝路</h3>
+                      <span class="more01"><img src="images/more3.png" alt=""></span>
+                  </div>
+              </a></li>
+			  			  			  			  <li class="liBg4"><a href="ttgz/87006.htm" target="_blank">
+                  <span class="item-img01"><img src="images/content/2018-04/20180403105842589296.jpg" alt=""></span>
+                  <div class="item-txt01">
+                      <h3>全球院无人机航摄珠海校区 助力“一体两翼”办学推进</h3>
+                      <span class="more01"><img src="images/more3.png" alt=""></span>
+                  </div>
+              </a></li>
 			  			  			                <li class="liBg3"><a href="ttgz/86939.htm" target="_blank">
                   <span class="item-img01"><img src="images/content/2018-03/20180329172700724875.jpg" alt=""></span>
                   <div class="item-txt01">
@@ -240,20 +261,6 @@
                       <span class="more01"><img src="images/more3.png" alt=""></span>
                   </div>
               </a></li>
-			  			  			                <li class="liBg3"><a href="ttgz/86912.htm" target="_blank">
-                  <span class="item-img01"><img src="images/content/2018-03/20180327171155413278.jpg" alt=""></span>
-                  <div class="item-txt01">
-                      <h3>黄会林、绍武教育思想研讨会举行</h3>
-                      <span class="more01"><img src="images/more3.png" alt=""></span>
-                  </div>
-              </a></li>
-			  			  			  			  <li class="liBg4"><a href="ttgz/86913.htm" target="_blank">
-                  <span class="item-img01"><img src="images/content/2018-03/20180327145240219420.jpg" alt=""></span>
-                  <div class="item-txt01">
-                      <h3>顾明远：谈谈未来教育的逻辑起点</h3>
-                      <span class="more01"><img src="images/more3.png" alt=""></span>
-                  </div>
-              </a></li>
 			  			              </ul>
       </div>
   </section>
@@ -264,51 +271,51 @@
           </div>
           <ul class="list02 clear">
 		  
-		  	  			                 <li><div><a class="item-info2" href="zhxw/86926.htm" target="_blank">
+		  	  			                <li><div>
+              <a class="item-info2" href="zhxw/87204.htm" target="_blank">
+                  <span class="item-img02"><img src="images/content/2018-04/20180404182331883309.jpg" alt=""></span>
                   <div class="item-txt02">
-                      <h3>            学校主页投稿指南 
+                      <h3>            程建平调研生命科学学院生态学一流学科建设 
     </h3>
-                      <p>            学校原中文主页已陪伴大家走过了五年的时光，成为展示学校办学实力和社会形象的重要窗口。随着“双一流”建设步伐的加快，学校决定对中文主页进行改版升级，以更好地展现北京师范大学的历史底蕴和时代风貌，提高学校品牌形象的网络传播力。<br>学校新版中文主页由党委宣传部、信息网络中心等联合开发，沿用师大蓝为主色调，采用扁平化设计和响应式布局，自动适应电脑、平板、手机等设备。经过前端设计开发、后端融合调试、试运行征求意见等工作，即日起正式上线。<br... 
+                      <p>            4月3日，北师大党委书记程建平到生命科学学院调研学科发展及生态学一流学科建设情况。程建平一行参观了北京师范大学—国家林业局东北虎豹监测与研究中心，听取了中心负责人葛剑平教授关于“天... 
+    </p>
+                  </div>
+              </a>
+               <span class="more02"><a href="zhxw/87204.htm" target="_blank"><img src="images/more3.png" alt=""></a></span>
+              </div></li>
+			  							                 <li><div><a class="item-info2" href="zhxw/87206.htm" target="_blank">
+                  <div class="item-txt02">
+                      <h3>            北师大未来教育高精尖创新中心团队赴云南怒江开展教育扶贫调研 
+    </h3>
+                      <p>            3月25日至28日，未来教育高精尖创新中心融合应用实验室师生在教育技术学院副院长吴娟的带领下，赴云南怒江傈僳族自治县开展教育扶贫调研。本次调研工作行程三天，共走访了六所有代表性的中小学，通过与州教育局领导、项目校负责人及各学科一线教师深入交流，调研小组对州、县、校、学科、教师等整体和个体教育信息化的现状有了深入的了解，为接下来项目计划的制定提供了明确的指向和有益借鉴。 
     </p>
                   </div>
                 </a>
-                <span class="more02"><a href="zhxw/86926.htm" target="_blank"><img src="images/more3.png" alt=""></a></span>
+                <span class="more02"><a href="zhxw/87206.htm" target="_blank"><img src="images/more3.png" alt=""></a></span>
                 </div></li>
 											                <li><div>
-              <a class="item-info2" href="zhxw/86954.htm" target="_blank">
-                  <span class="item-img02"><img src="images/content/2018-03/20180330191607157559.png" alt=""></span>
+              <a class="item-info2" href="zhxw/86973.htm" target="_blank">
+                  <span class="item-img02"><img src="images/content/2018-04/20180402163338908901.jpg" alt=""></span>
                   <div class="item-txt02">
-                      <h3>            教育部网站报道北师大推进辅导员队伍专业化建设工作经验 
+                      <h3>            “京师数学大讲坛”陈木法院士谈治学 
     </h3>
-                      <p>            3月12日，教育部官网刊登“北京师范大学推进辅导员队伍专业化建设”的新闻，对北师大的辅导员队伍建设表示了肯定。 
+                      <p>            3月30日，2018年度“治学·修身”系列学术活动首场报告会暨京师数学大讲坛第九场报告会在敬文讲堂举行。中国科学院院士、数学科学学院教授陈木法为来自各学部院系的近400名师生作了题... 
     </p>
                   </div>
               </a>
-               <span class="more02"><a href="zhxw/86954.htm" target="_blank"><img src="images/more3.png" alt=""></a></span>
+               <span class="more02"><a href="zhxw/86973.htm" target="_blank"><img src="images/more3.png" alt=""></a></span>
               </div></li>
 			  							                <li><div>
-              <a class="item-info2" href="zhxw/86938.htm" target="_blank">
-                  <span class="item-img02"><img src="images/content/2018-03/20180329174330112141.jpg" alt=""></span>
+              <a class="item-info2" href="zhxw/86967.htm" target="_blank">
+                  <span class="item-img02"><img src="images/content/2018-04/20180402160525681694.jpg" alt=""></span>
                   <div class="item-txt02">
-                      <h3>            “时代楷模”曲建武老师为北师大师生做专题报告 
+                      <h3>            北师大党委理论学习中心组专题学习全国“两会”精神和教育部党组文件精神 
     </h3>
-                      <p>            3月28日，为贯彻落实习近平总书记“四有”好老师重要讲话精神和《教育部关于授予曲建武同志“全国优秀教师”荣誉称号的决定》文件精神，学习宣传“时代楷模”曲建武老师的先进事迹，引导我校... 
+                      <p>            3月30日，北京师范大学党委理论学习中心组召开专题会议，集中学习全国“两会”精神和《中共教育部党组关于在教育系统大兴调查研究之风的意见》《中共教育部党组关于加强落实工作的意见》文件... 
     </p>
                   </div>
               </a>
-               <span class="more02"><a href="zhxw/86938.htm" target="_blank"><img src="images/more3.png" alt=""></a></span>
-              </div></li>
-			  							                <li><div>
-              <a class="item-info2" href="zhxw/86940.htm" target="_blank">
-                  <span class="item-img02"><img src="images/content/2018-03/20180329153225200707.jpg" alt=""></span>
-                  <div class="item-txt02">
-                      <h3>            ​教育部财务司调研北师大中国教育经济信息研究中心 
-    </h3>
-                      <p>            3月27日，教育部财务司副司长郭鹏、刘景一行到北师大中国教育经济信息研究中心调研。副校长王守军接待调研组，我校总会计师，统计学院、中国教育经济信息研究中心相关负责人及部分师生参加了... 
-    </p>
-                  </div>
-              </a>
-               <span class="more02"><a href="zhxw/86940.htm" target="_blank"><img src="images/more3.png" alt=""></a></span>
+               <span class="more02"><a href="zhxw/86967.htm" target="_blank"><img src="images/more3.png" alt=""></a></span>
               </div></li>
 			  				          </ul>
       </div>
@@ -326,32 +333,12 @@
 		  
 		  
 		  <ul class="list03 clear">
-		  	  		  	  			                <li class="d-bg02"><a href="xzdt/86942.htm">
+		  	  		  	  			                <li class="d-bg02"><a href="xzdt/87201.htm">
                   <div class="item-txt03">
-                      <h3>            [预告]03.30 京师数学大讲坛——第九讲 从对称矩阵谈起 
+                      <h3>            [预告]04.07 “奔向莫斯科”2018年俄语奥林匹克竞赛通知 
     </h3>
                       <div class="item-con03">
-                          						              报告人：陈木法 教授<br>时间：2018年3月30日 （周五） 16:00-17:00<br>地点：敬文讲堂 
-    						                        </div>
-                      <!-- <span class="more03"><img src="images/more3.png" alt=""></span> -->
-                  </div>
-              </a></li>
-			  			  			                <li><a href="xzdt/86932.htm">
-                  <div class="item-txt03">
-                      <h3>            [预告]03.30 京师核科学论坛第29期——科学研究中的创新思... 
-    </h3>
-                      <div class="item-con03">
-                          						              报告人：欧阳小平 院士<br>时间：2018年3月30日（周五）09:30 <br>地点：京师科技大厦B座 1314报告厅 
-    						                        </div>
-                      <!-- <span class="more03"><img src="images/more3.png" alt=""></span> -->
-                  </div>
-              </a></li>
-			  			  			                <li class="d-bg02"><a href="xzdt/86914.htm">
-                  <div class="item-txt03">
-                      <h3>            [预告]04.03 京师大讲堂——生物技术产业现状与未来 
-    </h3>
-                      <div class="item-con03">
-                          						              主讲人：谢良志 教授<br>时间：2018年4月3日（周二） 18:00<br>地点：北京师范大学生地楼生一教室<br> 
+                          						              时间：2018年4月7-8日<br>地点：京师学堂京师厅 
     						                        </div>
                       <!-- <span class="more03"><img src="images/more3.png" alt=""></span> -->
                   </div>
@@ -361,48 +348,68 @@
                       <h3>            [预告]04.09 专家讲座——书法与中国文化 
     </h3>
                       <div class="item-con03">
-                          						              主讲人：倪文东 教授<br>时间：2018年4月9日（周一）19:00<br>地点：北京师范大学图书馆三层学术报告厅 
+                          						              主讲人：倪文东 教授<br>时间：2018年4月9日（周一）19:00<br>地点：图书馆三层学术报告厅 
+    						                        </div>
+                      <!-- <span class="more03"><img src="images/more3.png" alt=""></span> -->
+                  </div>
+              </a></li>
+			  			  			                <li class="d-bg02"><a href="xzdt/87199.htm">
+                  <div class="item-txt03">
+                      <h3>            [预告]04.10 京师大讲堂：人类疾病与健康主题——行为与健康 
+    </h3>
+                      <div class="item-con03">
+                          						              主讲人：王宇 教授<br>时间：2018年4月10日（周二）18:00<br>地点：生地楼生一教室<br> 
+    						                        </div>
+                      <!-- <span class="more03"><img src="images/more3.png" alt=""></span> -->
+                  </div>
+              </a></li>
+			  			  			                <li><a href="xzdt/86977.htm">
+                  <div class="item-txt03">
+                      <h3>            [预告]04.10 人工智能与未来媒体大讲堂第6期——《语言智能... 
+    </h3>
+                      <div class="item-con03">
+                          						              主讲人：周明 博士<br>时间：2018年4月10日（周二）19:00<br>地点：京师学堂一层京师厅 
     						                        </div>
                       <!-- <span class="more03"><img src="images/more3.png" alt=""></span> -->
                   </div>
               </a></li>
 			  			  			  
-              		  	  			                <li><a href="xzdt/86766.htm">
+              		  	  			                <li><a href="xzdt/86982.htm">
+                  <div class="item-txt03">
+                      <h3>            [预告]04.14 蛋白质科学北京前沿学术讲座 
+    </h3>
+                      <div class="item-con03">
+                          						              时间：2018年4月14日 (周六) 08:30-11:40<br>地点： 英东学术会堂 二层报告厅 
+    						                        </div>
+                      <!-- <span class="more03"><img src="images/more3.png" alt=""></span> -->
+                  </div>
+              </a></li>
+              			  			                <li class="d-bg02"><a href="xzdt/86766.htm">
                   <div class="item-txt03">
                       <h3>            [预告]04.17 关于举办第二届亚洲科技减灾大会的通知  
     </h3>
                       <div class="item-con03">
-                          						              会议时间：2018年4月17-18日<br>会议地点：北京鑫海锦江酒店<br><br> 
+                          						              时间：2018年4月17-18日<br>地点：北京鑫海锦江酒店<br><br> 
     						                        </div>
                       <!-- <span class="more03"><img src="images/more3.png" alt=""></span> -->
                   </div>
               </a></li>
-              			  			                <li class="d-bg02"><a href="xzdt/86943.htm">
+			  			  			                <li><a href="xzdt/87011.htm">
                   <div class="item-txt03">
-                      <h3>            [成果]​我校社发院胡晓江教授等在国际顶级医学期刊《柳叶刀》发表... 
+                      <h3>            [预告]06.08 第六届景观可持续科学论坛 
     </h3>
                       <div class="item-con03">
-                          						              2018年3月28日，最新一期的国际顶级医学期刊《柳叶刀》（The Lancet）发表了社会发展与公共政策学院彭向东博士生（第一作者）、胡晓江教授（通讯作者）、与Migu... 
+                          						              时间：2018年6月8日-9日<br>地点：北京元辰鑫国际酒店 
     						                        </div>
                       <!-- <span class="more03"><img src="images/more3.png" alt=""></span> -->
                   </div>
               </a></li>
-			  			  			                <li><a href="xzdt/86928.htm">
+              			  			                <li class="d-bg02"><a href="xzdt/87207.htm">
                   <div class="item-txt03">
-                      <h3>            [观点]人民日报海外版刊登我校姚建彬教授“孔子学院助推中国文学海... 
+                      <h3>            [成果]北师大全球院教授在Nature发表评论揭示减缓全球海平面... 
     </h3>
                       <div class="item-con03">
-                          						              孔子学院作为汉语国际教育和中国文化海外推广之重要平台、重要渠道的形象，已经日益清晰而稳固。 
-    						                        </div>
-                      <!-- <span class="more03"><img src="images/more3.png" alt=""></span> -->
-                  </div>
-              </a></li>
-              			  			                <li class="d-bg02"><a href="xzdt/86920.htm">
-                  <div class="item-txt03">
-                      <h3>            [成果]《2018中国职业教育技术展望：地平线项目报告》在京发布 
-    </h3>
-                      <div class="item-con03">
-                          						              3月19日，《2018中国职业教育技术展望：地平线项目报告》（下简称《报告》）在第三届中美智慧教育大会上发布 
+                          						              2018年3月14日，我校全球变化与地球系统科学研究院John C. Moore教授与来自芬兰、美国的科学家在知名期刊Nature上发表评论，指出有针对性的应用地球工程方... 
     						                        </div>
                       <!-- <span class="more03"><img src="images/more3.png" alt=""></span> -->
                   </div>
@@ -434,15 +441,25 @@
               </div>
 			  			                <div class="item-info04 item-3">
                 <div>
-                  <span class="item-img04"><a href="bsgs/ehw/86703.htm" target="_blank"><img src="images/content/2018-03/20180302162012802913.jpg" alt=""></a></span>
+                  <span class="item-img04"><a href="bsgs/ehw/86996.htm" target="_blank"><img src="images/content/2018-04/20180403090123117981.png" alt=""></a></span>
                   <span class="item-txtBg04"></span>
                   <div class="item-txt04">
-                      <a href="bsgs/ehw/86703.htm" target="_blank">            卢乐山：仁爱者不朽，... 
+                      <a href="bsgs/ehw/86996.htm" target="_blank">            覃皓珺：初心无悔，文... 
     </a>
                   </div>
                 </div>
               </div>
 			  			                <div class="item-info04 item-1 item-marginR">
+                <div>
+                  <span class="item-img04"><a href="bsgs/86952.htm" target="_blank"><img src="images/content/2018-04/20180402113254280776.jpg" alt=""></a></span>
+                  <span class="item-txtBg04"></span>
+                  <div class="item-txt04">
+                      <a href="bsgs/86952.htm" target="_blank">            陈木法院士访谈录 
+    </a>
+                  </div>
+                </div>
+              </div>
+			                <div class="item-info04 item-1 item-marginR">
                 <div>
                   <span class="item-img04"><a href="bsgs/86763.htm" target="_blank"><img src="images/content/2018-03/20180319143838655823.jpg" alt=""></a></span>
                   <span class="item-txtBg04"></span>
@@ -452,7 +469,7 @@
                   </div>
                 </div>
               </div>
-			                <div class="item-info04 item-1 item-marginR">
+			  			                <div class="item-info04 item-1">
                 <div>
                   <span class="item-img04"><a href="bsgs/86910.htm" target="_blank"><img src="images/content/2018-03/20180327153016391155.jpg" alt=""></a></span>
                   <span class="item-txtBg04"></span>
@@ -462,22 +479,12 @@
                   </div>
                 </div>
               </div>
-			  			                <div class="item-info04 item-1">
+			                <div class="item-info04 item-1">
                 <div>
                   <span class="item-img04"><a href="bsgs/86705.htm" target="_blank"><img src="images/content/2018-03/20180327113033406136.jpg" alt=""></a></span>
                   <span class="item-txtBg04"></span>
                   <div class="item-txt04">
                       <a href="bsgs/86705.htm" target="_blank">            梁迎修：发展和完善中国特色社会主义法... 
-    </a>
-                  </div>
-                </div>
-              </div>
-			                <div class="item-info04 item-1">
-                <div>
-                  <span class="item-img04"><a href="bsgs/86907.htm" target="_blank"><img src="images/content/2018-03/20180327103310317235.jpg" alt=""></a></span>
-                  <span class="item-txtBg04"></span>
-                  <div class="item-txt04">
-                      <a href="bsgs/86907.htm" target="_blank">            章晓辉：努力做有显示度的科研 
     </a>
                   </div>
                 </div>
@@ -521,6 +528,39 @@
                 <ul class="slides">
 				                    <li>
                       <span class="notice-date">
+                          <strong>04</strong><i>
+						              			  Apr
+            			  						  </i>
+                      </span>
+                      <div class="notice-txt">
+                           <a href="tzgg/87210.htm" target="_blank">            关于北京师范大学沙河新校区G-18区景观工程基坑第三方监测的询价公告 
+    </a>
+                      </div>
+                  </li>
+                                    <li>
+                      <span class="notice-date">
+                          <strong>04</strong><i>
+						              			  Apr
+            			  						  </i>
+                      </span>
+                      <div class="notice-txt">
+                           <a href="tzgg/87208.htm" target="_blank">            关于北京师范大学沙河新校区G-18区编制通讯基础设施规划方案的询价公告 
+    </a>
+                      </div>
+                  </li>
+                                    <li>
+                      <span class="notice-date">
+                          <strong>28</strong><i>
+						              			  Mar
+            			  						  </i>
+                      </span>
+                      <div class="notice-txt">
+                           <a href="tzgg/86923.htm" target="_blank">            学校主页投稿指南 
+    </a>
+                      </div>
+                  </li>
+                                    <li>
+                      <span class="notice-date">
                           <strong>02</strong><i>
 						              			  Mar
             			  						  </i>
@@ -552,39 +592,6 @@
     </a>
                       </div>
                   </li>
-                                    <li>
-                      <span class="notice-date">
-                          <strong>02</strong><i>
-						              			  Mar
-            			  						  </i>
-                      </span>
-                      <div class="notice-txt">
-                           <a href="tzgg/86330.htm" target="_blank">            北京师范大学后勤管理处电力增容材料采购招标公告 
-    </a>
-                      </div>
-                  </li>
-                                    <li>
-                      <span class="notice-date">
-                          <strong>02</strong><i>
-						              			  Mar
-            			  						  </i>
-                      </span>
-                      <div class="notice-txt">
-                           <a href="tzgg/86331.htm" target="_blank">            北京师范大学热力部2017-2020年度五金水暖维修材料供货商入围评选项目招标公... 
-    </a>
-                      </div>
-                  </li>
-                                    <li>
-                      <span class="notice-date">
-                          <strong>02</strong><i>
-						              			  Mar
-            			  						  </i>
-                      </span>
-                      <div class="notice-txt">
-                           <a href="tzgg/86332.htm" target="_blank">            “一种用于制备锝-99m标记的GSA的药盒及其制备方法”专利转让公示 
-    </a>
-                      </div>
-                  </li>
                                   </ul>
             </div>
           </div>
@@ -608,16 +615,16 @@
               <div class="sina_inner">
                   <a class="p01" href="https://weibo.com/lovebnu" target="_blank">
 				  <strong>@ 北京师范大学  </strong>
-				     				  <p><span style="font-size:14px;"><a class="a_topic" extra-data="type=topic" href="https://huati.weibo.com/k/æè²å¤´æ¡?from=501" render="ext" style="color: rgb(48, 125, 116); text-decoration: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);Microsoft YaHei&quot;; font-size: 12px; background-color: rgb(242, 242, 245);" suda-uatrack="key=topic_click&amp;value=click_topic" target="_blank">#教育头条#</a>【195位入选！第三批国家“万人计划”教学名师名单出炉】教育部近日公布第三批国家“万人计划”教学名师入选名单，我校文学院教授康震入选。</span></p>
+				     				  <p><span style="font-size:14px;"><a class="a_topic" extra-data="type=topic" href="https://huati.weibo.com/k/ç»å¸ä¸å»?from=501" render="ext" style="color: rgb(48, 125, 116); text-decoration: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);Microsoft YaHei&quot;; font-size: 12px; background-color: rgb(242, 242, 245);" suda-uatrack="key=topic_click&amp;value=click_topic" target="_blank">#经典一刻#</a>【长知识！100道传统文化常识题，你能答对几个？】近期，风靡全国的《中国诗词大会》第三季播出了，更是激发了大家热爱中华优秀传统文化的热情。关于传统文化，你了解多少？</span></p>
 
    				  				  </a>
               </div>
           </div>
 <div class="col rt wow fadeInRightSmall" data-wow-delay="0.4s">
               <div class="sina_inner">
-				                                    <a class="p01" href="https://mp.weixin.qq.com/s?__biz=MjM5MTg4NjM2MQ==&mid=2657841822&idx=1&sn=1c270087aec6a8e60519379409bef076&chksm=bd316fe88a46e6fed60984ea837737d052c577511cc29ec08089c2ca291bb2c8974e57bc0882#rd" target="_blank">
+				                                    <a class="p01" href="https://mp.weixin.qq.com/s?__biz=MjM5MTg4NjM2MQ==&mid=2657841898&idx=1&sn=9614e0d1bf5dfdc1ccd4859926e63d99&chksm=bd316f9c8a46e68af3b70909c6d9a4bd95bdaf014cf810abc7c181eb841fb3232d11ed1c95bd#rd" target="_blank">
 				  <strong>@ 北京师范大学  </strong>
-   				  <p><span style="font-size:14px;">【重磅！北师大新增4个一级学科博士学位授权点！】日前，国务院学位委员会印发《关于下达2017年审核增列的博士、硕士学位授权点名单的通知》，我校新增社会学、天文学、核科学与技术、法学四个博士学位授权一级学科。</span></p>
+   				  <p><span style="font-size:14px;">【北师大限定版拼图闯关，来挑战一下？】如果把北师大的美照切割、打乱，你要用多久复原呢？今天我们一起来测试一下自己每天生活在其中的师大，我们对它究竟了解几分？</span></p>
 
 				  </a>
                                                 </div>

@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <title>北京师范大学 - Beijing Normal University</title>
+
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="author" content="Beijing Normal University" /> 
+
+    <meta name="description" content="北京师范大学是教育部直属重点大学，是一所以教师教育、教育科学和文理基础学科为主要特色的著名学府。学校的前身是1902年创立的京师大学堂师范馆，1908年改称京师优级师范学堂，独立设校。1912年改名为北京高等师范学校。1923年更名为北京师范大学，成为中国历史上第一所师范大学。1931年、1952年北平女子师范大学、辅仁大学先后并入北京师范大学。" />
+
+    <!-- Bootstrap -->
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="../css/flexslider.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+
+    <!--[if lt IE 9]>
+
+      <script src="../js/html5shiv.js"></script>
+
+      <script src="../js/respond.min.js"></script>
+
+    <![endif]-->
+
+    <link href="../css/style.css" rel="stylesheet">
+<style type="text/css">
+.h2lf {
+	line-height: 2em;
+	text-align: left;
+	text-indent: 1em;
+	display: block;
+	font-family: "微软雅黑";
+	font-size: 16px;
+	color: #09F;
+}
+</style>
+  </head>
+ <body>
+
+    <!-- Static navbar -->
+
+    <div class="navbar navbar-up navbar-static-top">
+
+    	<div class="container">
+
+	    	<div class="row">
+
+	    		<div class="col-md-4 link2eng"><a href="http://english.bnu.edu.cn/" target="_blank">ENGLISH VERSION</a></div>
+
+	    		<div class="navbar-right navlist-topright">
+
+	    			<a href="mailto:bnu_chengjianping@bnu.edu.cn">书记信箱</a>
+
+	    			<a href="mailto:xzxx@bnu.edu.cn">校长信箱</a>
+
+	    			<a href="http://www.bnu.edu.cn/xfzc/80823.html">校领导信箱</a>
+
+	    			<a href="../xfzc/52576.html">接待日</a>
+
+	    			<form name="dataForm" action="/cms/search/searchResults.jsp" target="_blank" method="post" accept-Charset="utf-8"  onsubmit="document.charset='utf-8';">
+          <input name="siteID" size="4" value="53" type = "hidden">        
+          <INPUT value="校内搜索" type="image" src="../imgs/searchbtn-bg.png" class="search-submit" />
+          <input title="校内搜索" maxlength=255 size=15  name="query" type="text" class="search-input" /> 
+        </form>
+
+	    		</div>	
+
+	    	</div>
+
+    	</div>
+
+    </div>
+
+    <div class="navbar navbar-default navbar-down navbar-static-top" role="navigation">
+
+		<div class="container">
+
+			<div class="row">
+
+				<div class="nav navbar-header  uni-logo col-md-3">
+
+				  
+
+				  <a href="../"><img src="../3/imgs/BNU-logo.png" class="img-responsive" alt="北京师范大学" /></a>
+
+ 					
+
+ 				  <div class="navbar-toggle visible-xs nomargintop selecttogo select-xs xs-navlist-toggle">
+
+				  	导航
+
+				  </div>
+
+				</div>
+
+				
+
+				<div class="navbar-collapse collapse">
+
+				  <div class="navbar-toggle visible-sm nomargintop selecttogo  select-xs xs-navlist-toggle">
+
+				  	导航
+
+				  </div>
+
+				  <ul class="nav navbar-nav navbar-right col-md-9 navlist visible-lg visible-md">
+
+                  <li class="dropdown">
+
+				    	<a style="border-right: 1px solid rgb(212, 211, 206);" href="http://news.bnu.edu.cn/" target="_blank" class="fisrtmenu">师大新闻</a>
+
+				    	<ul style="display: none;" class="dropdown-menu subnavlist">
+
+			                <li><a href="http://news.bnu.edu.cn/twbd/" target="_blank">图文报道</a></li>
+
+			                <li><a href="http://news.bnu.edu.cn/spkj/" target="_blank">网络电视</a></li>
+
+			                <li><a href="http://bnu.cuepa.cn/" target="_blank">校报在线</a></li>
+
+			                <li><a href="http://news.bnu.edu.cn/mtsd/" target="_blank">媒体师大</a></li>
+
+			            </ul>
+
+				    </li>
+
+				    <li class="dropdown">
+
+				    	<a style="border-right: 1px solid rgb(212, 211, 206);" href="#" class="fisrtmenu">学校概况</a>
+
+				    	<ul style="display: none;" class="dropdown-menu subnavlist">
+
+
+			                <li><a href="http://www.bnu.edu.cn/xxgk/xxjj/index.html">学校简介</a></li>
+
+			                <li><a href="http://www.bnu.edu.cn/xxgk/xsyg/index.html">校史沿革</a></li>
+
+			                <li><a href="http://www.bnu.edu.cn/xxgk/xrxld/index.html">现任校领导</a></li>
+
+			                <li><a href="http://www.bnu.edu.cn/xxgk/lrsj/index.html">历任书记</a></li>
+
+                                                                <li><a href="http://www.bnu.edu.cn/xxgk/lrxz/index.html">历任校长</a></li>
+			                <li><a href="http://www.bnu.edu.cn/xxgk/zmxz/index.html">著名学者</a></li>
+                                                                   <li><a href="http://www.bnu.edu.cn/xxgk/lsmr/index.html">历史名人</a></li>
+
+			            </ul>
+
+				    </li>
+
+				    <li><a href="http://www.bnu.edu.cn/yxsz/" class="fisrtmenu">院系设置</a></li>
+
+				    <li><a href="http://www.bnu.edu.cn/gljg/" class="fisrtmenu">管理机构</a></li>
+
+				    <li><a href="http://hr.bnu.edu.cn/rcgzbgs/dashouye.html" target="_blank" class="fisrtmenu">人才招聘</a></li>
+
+				    <li><a href="http://www.bnu.edu.cn/kxyj/" class="fisrtmenu">科学研究</a></li>
+
+				    <li class="dropdown">
+
+				    	<a href="#" class="dropdown-toggle fisrtmenu">招生就业</a>
+
+				    	<ul style="display: none;" class="dropdown-menu subnavlist">
+
+			                <li><a href="http://admission.bnu.edu.cn/" target="_blank">本科生招生</a></li>
+
+			                <li><a href="http://yz.bnu.edu.cn/" target="_blank">研究生招生</a></li>
+                          <li><a href="http://hr.bnu.edu.cn/bsh/index.htm" target="_blank">博士后</a></li>
+
+			                <li><a href="Http://iso.bnu.edu.cn" target="_blank">留学生招生</a></li>
+
+			                <li><a href="http://www.scett.bnu.edu.cn/" target="_blank">继续教育与教师培训</a></li>
+
+			                <li><a href="http://career.bnu.edu.cn/" target="_blank">就业与创业</a></li>
+
+			            </ul>
+
+			        </li>
+
+				    <li class="dropdown">
+
+				    	<a href="#" class="dropdown-toggle fisrtmenu">合作交流</a>
+
+				    	<ul style="display: none;" class="dropdown-menu subnavlist">
+
+			                <li><a href="http://oiec.bnu.edu.cn/" target="_blank">国际交流与合作</a></li>
+
+			                <li><a href="http://gnhz.bnu.edu.cn/" target="_blank">国内合作</a></li>
+
+			                <li><a href="http://ipo.bnu.edu.cn/gat/index_gat.html" target="_blank">港澳台事务</a></li>
+
+			                <li><a href="http://www.bnuef.org/" target="_blank">教育基金会</a></li>
+
+			            </ul>
+
+			        </li>
+
+				    <li class="dropdown">
+
+				    	<a href="#" class="dropdown-toggle fisrtmenu">图书档案</a>
+
+				    	<ul style="display: none;" class="dropdown-menu subnavlist">
+
+			                <li><a href="http://www.lib.bnu.edu.cn/" target="_blank">图书馆</a></li>
+
+			                <li><a href="http://dangan.bnu.edu.cn" target="_blank">档案馆</a></li>
+
+			            </ul>
+
+			        </li>
+
+				    <li class="dropdown">
+
+				    	<a href="#" class="dropdown-toggle fisrtmenu last">走进师大</a>
+
+				    	<ul style="display: none;" class="dropdown-menu subnavlist subnavlist-last">
+
+			                <li><a href="http://www.bnu.edu.cn/map/" target="_blank">校园地图</a></li>
+
+			                <li><a href="http://news.bnu.edu.cn/sdtk/">校园风光</a></li>
+
+			                <li><a href="http://www.bnu.edu.cn/zjsd/52915.html">校　历</a></li>
+
+			                <li><a href="http://www.bnu.edu.cn/zjsd/52916.html">黄　页</a></li>
+
+			            </ul>
+
+			        </li>
+
+				  </ul>
+
+				</div><!--/.nav-collapse -->
+
+			</div>
+
+		</div>
+
+    </div>
+
+    <div class="navbar navbar-bg hidden-md">
+
+    	<div class="container">
+
+    		<div class="row">
+
+    			<ul class="nav xs-navlist" style="display:none;">
+
+                  	<li class="col-sm-4 col-xs-6"><a style="" href="http://news.bnu.edu.cn/" target="_blank" class="">师大新闻</a></li>
+
+				    <li class="col-sm-4 col-xs-6"><a style="" href="../xxgk/" class="">学校概况</a></li>
+
+				    <li class="col-sm-4 col-xs-6"><a href="http://www.bnu.edu.cn/yxsz/" class="">院系设置</a></li>
+
+				    <li class="col-sm-4 col-xs-6"><a href="http://www.bnu.edu.cn/gljg/" class="">管理机构</a></li>
+
+				    <li class="col-sm-4 col-xs-6"><a href="http://hr.bnu.edu.cn/rcgzbgs/dashouye.html" target="_blank" class="">人才招聘</a></li>
+
+				    <li class="col-sm-4 col-xs-6"><a href="http://www.bnu.edu.cn/kxyj/" class="">科学研究</a></li>
+
+				    <li class="col-sm-4 col-xs-6"><a href="../zsjy/" class="">招生就业</a></li>
+
+				    <li class="col-sm-4 col-xs-6"><a href="../hzjl/" class="">合作交流</a></li>
+
+				    <li class="col-sm-4 col-xs-6"><a href="../tsda/" class="">图书档案</a></li>
+
+				    <li class="col-sm-4 col-xs-6"><a href="../zjsd/" class="">走进师大</a></li>
+
+			        <li class="col-sm-4 col-xs-6"><a href="mailto:bnu_liuchuansheng@bnu.edu.cn">书记信箱</a></li>
+
+	    			<li class="col-sm-4 col-xs-6"><a href="mailto:xzxx@bnu.edu.cn">校长信箱</a></li>
+
+	    			<li class="col-sm-4 col-xs-6"><a href="http://www.bnu.edu.cn/xfzc/80823.html">校领导信箱</a></li>
+
+	    			<li class="col-sm-4 col-xs-6"><a href="http://www.bnu.edu.cn/xfzc/52576.html">接待日</a></li>
+
+				  </ul>
+
+    		</div>
+
+    	</div>
+
+    </div>
+    <div class="main mainbg1">
+	    <div class="container">
+	    	<div class="subcontent row">
+	    		<div class="subtitle">科学研究</div>
+	    		<div class="subbody">
+    			  <div class="subbody-b col-md-12">
+	    				<div class="subbody-b-nav">当前位置：			<a href="../index.html">首页</a> &raquo; 
+			  科学研究</div>
+
+
+	    				<div class="subbody-b-subtitle">&#8226; 重点学科</div>
+	    				<div class="subbody-b-content">
+<p>            　　北京师范大学学科综合实力位居全国高校前列。2002年，北京师范大学成为首批拥有自主设置本科专业审批权的6所高校之一。现有本科专业64个、硕士学位授权二级学科点146个、博士学位授权二级学科点109个、博士后流动站25个、博士学位授权一级学科24个、硕士学位授权一级学科37个。5个一级学科、11个二级学科获批国家重点学科，2个二级学科获批国家重点（培育）学科。现有5个一级学科北京市重点学科、9个二级学科北京市重点学科、1个交叉学科北京市重点学科。 
+    </p>
+<h4>国家重点学科</h4>
+<span class="h2lf">一级学科国家重点学科</span>
+	    					<ul class="subjectlist row">
+                            											    						<li class="col-sm-4"><a href="zdxk/gjzdxk/yjxkgjzdxk/75042.html" target="_blank"><span class="fushu">教育学</span></a></li>
+                                											    						<li class="col-sm-4"><a href="zdxk/gjzdxk/yjxkgjzdxk/75043.html" target="_blank"><span class="fushu">心理学</span></a></li>
+                                										                                <li class="col-sm-4"><a href="zdxk/gjzdxk/yjxkgjzdxk/75044.html" target="_blank"><span class="fushu">中国语言文学</span></a></li>
+                                											    						<li class="col-sm-4"><a href="zdxk/gjzdxk/yjxkgjzdxk/75045.html" target="_blank"><span class="fushu">数学</span></a></li>
+                                											    						<li class="col-sm-4"><a href="zdxk/gjzdxk/yjxkgjzdxk/75046.html" target="_blank"><span class="fushu">地理学</span></a></li>
+                                						    					</ul><div style="clear:both"></div>
+<span class="h2lf">二级学科国家重点学科</span>
+<ul class="subjectlist row">
+                            											    						<li class="col-sm-4"><a href="zdxk/gjzdxk/ejxkgjzdxk/75054.html" target="_blank"><span class="fushu">马克思主义哲学</span></a></li>
+                                											    						<li class="col-sm-4"><a href="zdxk/gjzdxk/ejxkgjzdxk/75053.html" target="_blank"><span class="fushu">民俗学</span></a></li>
+                                										                                <li class="col-sm-4"><a href="zdxk/gjzdxk/ejxkgjzdxk/75051.html" target="_blank"><span class="fushu">史学理论及史学史</span></a></li>
+                                											    						<li class="col-sm-4"><a href="zdxk/gjzdxk/ejxkgjzdxk/75047.html" target="_blank"><span class="fushu">中国古代史</span></a></li>
+                                											    						<li class="col-sm-4"><a href="zdxk/gjzdxk/ejxkgjzdxk/75055.html" target="_blank"><span class="fushu">理论物理</span></a></li>
+                                										                                <li class="col-sm-4"><a href="zdxk/gjzdxk/ejxkgjzdxk/75050.html" target="_blank"><span class="fushu">物理化学</span></a></li>
+                                											    						<li class="col-sm-4"><a href="zdxk/gjzdxk/ejxkgjzdxk/75048.html" target="_blank"><span class="fushu">细胞生物学</span></a></li>
+                                											    						<li class="col-sm-4"><a href="zdxk/gjzdxk/ejxkgjzdxk/75052.html" target="_blank"><span class="fushu">生态学</span></a></li>
+                                										                                <li class="col-sm-4"><a href="zdxk/gjzdxk/ejxkgjzdxk/75049.html" target="_blank"><span class="fushu">系统理论</span></a></li>
+                                											    						<li class="col-sm-4"><a href="zdxk/gjzdxk/ejxkgjzdxk/75057.html" target="_blank"><span class="fushu">环境科学</span></a></li>
+                                											    						<li class="col-sm-4"><a href="zdxk/gjzdxk/ejxkgjzdxk/75056.html" target="_blank"><span class="fushu">教育经济与管理</span></a></li>
+                                					    					  </ul><div style="clear:both"></div>
+
+<h4>北京市重点学科</h4>
+<span class="h2lf">交叉学科北京市重点学科</span>
+	    					<ul class="subjectlist row">
+                            											    						<li class="col-sm-4"><a href="zdxk/bjszdxk/jcxkbjszdxk/75061.html" target="_blank"><span class="fushu">自然资源</span></a></li>
+                                						    					</ul><div style="clear:both"></div>
+<span class="h2lf">一级学科北京市重点学科</span>
+<ul class="subjectlist row">
+                            											    						<li class="col-sm-4"><a href="zdxk/bjszdxk/yjxkbjszdxk/75062.html" target="_blank"><span class="fushu">中国史</span></a></li>
+                                											    						<li class="col-sm-4"><a href="zdxk/bjszdxk/yjxkbjszdxk/75063.html" target="_blank"><span class="fushu">生物学</span></a></li>
+                                										                                <li class="col-sm-4"><a href="zdxk/bjszdxk/yjxkbjszdxk/75064.html" target="_blank"><span class="fushu">公共管理</span></a></li>
+                                											    						<li class="col-sm-4"><a href="zdxk/bjszdxk/yjxkbjszdxk/75065.html" target="_blank"><span class="fushu">艺术学理论</span></a></li>
+                                											    						<li class="col-sm-4"><a href="zdxk/bjszdxk/yjxkbjszdxk/75066.html" target="_blank"><span class="fushu">戏剧与影视学</span></a></li>
+                                					    					  </ul><div style="clear:both"></div>
+<span class="h2lf">二级学科北京市重点学科</span>
+<ul class="subjectlist row">
+                            											    						<li class="col-sm-4"><a href="zdxk/bjszdxk/ejxkbjszdxk/75070.html" target="_blank"><span class="fushu">外国哲学</span></a></li>
+                                											    						<li class="col-sm-4"><a href="zdxk/bjszdxk/ejxkbjszdxk/75060.html" target="_blank"><span class="fushu">世界经济</span></a></li>
+                                										                                <li class="col-sm-4"><a href="zdxk/bjszdxk/ejxkbjszdxk/75074.html" target="_blank"><span class="fushu">凝聚态物理</span></a></li>
+                                											    						<li class="col-sm-4"><a href="zdxk/bjszdxk/ejxkbjszdxk/75069.html" target="_blank"><span class="fushu">无机化学</span></a></li>
+                                											    						<li class="col-sm-4"><a href="zdxk/bjszdxk/ejxkbjszdxk/75067.html" target="_blank"><span class="fushu">有机化学</span></a></li>
+                                										                                <li class="col-sm-4"><a href="zdxk/bjszdxk/ejxkbjszdxk/75075.html" target="_blank"><span class="fushu">环境工程</span></a></li>
+                                											    						<li class="col-sm-4"><a href="zdxk/bjszdxk/ejxkbjszdxk/75068.html" target="_blank"><span class="fushu">英语语言文学</span></a></li>
+                                											    						<li class="col-sm-4"><a href="zdxk/bjszdxk/ejxkbjszdxk/75072.html" target="_blank"><span class="fushu">体育人文社会学</span></a></li>
+                                										                                <li class="col-sm-4"><a href="zdxk/bjszdxk/ejxkbjszdxk/75071.html" target="_blank"><span class="fushu">天体物理</span></a></li>
+                                					    					  </ul><div style="clear:both"></div>
+</div>
+
+<div class="subbody-b-subtitle">&#8226; 重点研究基地</div>
+	    				<div class="subbody-b-content">
+<p>            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 我校现有9个重点研究基地，其中教育部人文社会科学重点研究基地7个，数量位居全国高校前列。北京市哲学社会科学重点研究基地2个。经过几年的建设，重点研究基地有效地带动了全校哲学社会科学的发展，成为学校学术创新的&ldquo;标杆&rdquo;、提升质量的&ldquo;旗舰&rdquo;。 
+    </p>
+<h4>教育部人文社会科学重点研究基地</h4>
+	    					<ul class="subjectlist row">
+                            											    						<li class="col-sm-4"><a href="http://www.compe.cn/" target="_blank"><span class="fushu">国际与比较教育研究院</span></a></li>
+                                											    						<li class="col-sm-4"><a href="http://www.idpbnu.net/" target="_blank"><span class="fushu">发展心理研究所</span></a></li>
+                                										                                <li class="col-sm-4"><a href="http://wenyixue.bnu.edu.cn/" target="_blank"><span class="fushu">文艺学研究中心</span></a></li>
+                                											    						<li class="col-sm-4"><a href="http://mdw.bnu.edu.cn/" target="_blank"><span class="fushu">民俗典籍文字研究中心</span></a></li>
+                                											    						<li class="col-sm-4"><a href="http://bnuhh.bnu.edu.cn/" target="_blank"><span class="fushu">史学理论与史学史研究中心</span></a></li>
+                                										                                <li class="col-sm-4"><a href="http://www.bnu.edu.cn/kxyj/" target="_blank"><span class="fushu">价值与文化研究中心</span></a></li>
+                                											    						<li class="col-sm-4"><a href="http://www1.bnu.edu.cn/cter/" target="_blank"><span class="fushu">教师教育研究中心</span></a></li>
+                                						    					</ul><div style="clear:both"></div>
+<h4>北京市哲学社会科学重点研究基地</h4>
+	    					<ul class="subjectlist row">
+                            											    						<li class="col-sm-4"><a href="http://219.224.17.99/" target="_blank"><span class="fushu">北京文化发展研究院</span></a></li>
+                                											    						<li class="col-sm-4"><a href="http://www.ciee.bnu.edu.cn/" target="_blank"><span class="fushu">首都教育经济研究院</span></a></li>
+                                						    					</ul>
+                            
+                            <div style="clear:both"></div></div>
+<div class="subbody-b-subtitle">&#8226; 重点实验室、工程中心等</div>
+	    				<div class="subbody-b-content">
+<p>            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 我校已建成国家级、部市级重点实验室、工程中心等42个，其中包括4个国家重点实验室，1个国家工程实验室，7个教育部重点实验室，1个移动学习教育部-中国移动联合实验室，5个教育部工程研究中心，12个北京市重点实验室，4个北京市工程中心，1个北京高等学校高精尖创新中心。此外，学校还建有校级重点实验室70个。 
+    </p>
+<ul class="subjectlist row">
+                            											    						<li class="col-sm-4"><a href="http://kejichu.bnu.edu.cn/kyjd/" target="_blank"><span class="fushu">点击进入“重点实验室、工程中心等”列表</span></a></li>
+                                					    					  </ul><div style="clear:both"></div>
+</div>
+
+
+<div class="subbody-b-subtitle">&#8226; 2011国家协同创新中心</div>
+<div class="subbody-b-content">
+	    					<ul class="subjectlist row">
+                            											    						<li class="col-sm-4"><a href="http://cicabeq.bnu.edu.cn" target="_blank"><span class="fushu">中国基础教育质量监测协同创新中心</span></a></li>
+                                						    					</ul><div style="clear:both"></div>
+</div>
+
+
+<div class="subbody-b-subtitle">&#8226; 北京市高精尖创新中心</div>
+<div class="subbody-b-content">
+	    					<ul class="subjectlist row">
+                            											    						<li class="col-sm-4"><a href="http://slp.bnu.edu.cn/" target="_blank"><span class="fushu">未来教育高精尖创新中心</span></a></li>
+                                						    					</ul><div style="clear:both"></div>
+</div>
+
+<div class="subbody-b-subtitle"></div>
+    			  </div>
+	    		</div>
+		    
+	    	</div>
+
+<div class="footercontant  row">
+
+	    		<div class="footercontantline col-md-12">
+
+	    			<span class="col-md-10">&copy; 版权所有 北京师范大学&nbsp;&nbsp;地址：北京市新街口外大街19号&nbsp;&nbsp;邮编：100875&nbsp;&nbsp;京ICP备05066832号-1 &nbsp;&nbsp;京公网安备110402430002号&nbsp;&nbsp;电话查号台：010-58806183&nbsp;&nbsp;后勤服务热线：010-58801111</span>
+
+	    			<span class="col-md-2 right">Site designed by MONOKEROS</span>
+
+	    		</div>
+
+				<div class="footercontantline col-md-12">
+
+					<span class="col-md-9"></span>
+
+					<span class="col-md-3 right"></span>
+
+				</div>
+
+			</div>
+
+		</div>	
+
+	</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+    <script src="../3/js/jquery.min.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+
+    <script src="../3/js/bootstrap.min.js"></script>
+
+    <script src="../3/js/jquery.flexslider-min.js"></script>
+<map name="Map">
+  <area shape="rect" coords="2,3,26,27" href=" http://e.weibo.com/lovebnu/profile" target="_blank">
+  </map>
+<map name="Map2">
+  <area shape="rect" coords="4,5,26,26" href="http://www.bnu.edu.cn/xzdt/51346.html" target="_blank">
+  </map>
+    <script>
+
+
+	  // Can also be used with $(document).ready()
+
+	$(document).ready(function(){
+
+	  $('.xs-navlist-toggle').click(function(){
+	  	$('.xs-navlist').toggle();
+	  });
+
+	  $('.flexslider').flexslider({
+
+	    animation: "slide",
+
+	    slideshowSpeed: 10000
+
+	    //controlsContainer: ".flex-container"
+
+	  });
+
+	  $('.navlist li a.fisrtmenu').hover(function(){
+
+	  	$(this).css("border-right","1px solid #fff");
+
+	  	$(this).parent().prev().children('a').css("border-right","1px solid #fff");
+	  	$('.subnavlist').hide();
+	  	$(this).next('.subnavlist').fadeIn();
+	  	
+
+	  },function(){
+
+	  	$(this).css("border-right","1px solid #d4d3ce");
+	  	$(this).parent().prev().children('a').css("border-right","1px solid #d4d3ce");
+
+	  });
+
+	  $('.navbar-nav').hover(function(){
+	  	$('.subnavlist').hide();
+	  });
+
+	  $('.subnavlist').hover(function(){
+	  	$(this).parent().addClass('active');
+	  }, function(){
+	  	$(this).parent().removeClass('active');
+	  	$(this).fadeOut();
+	  });
+
+	  $(function(){
+
+      // bind change event to select
+
+      $('.selecttogo').bind('change', function () {
+
+          var url = $(this).val(); // get selected value
+
+          if (url) { // require a URL
+
+              window.location = url; // redirect
+
+          }
+
+          return false;
+
+      });
+
+    });
+
+	});
+
+	</script>
+
+
+  </body>
+
+</html></body></html></body></html>  </body>
+
+</html>
+
+</body></html>

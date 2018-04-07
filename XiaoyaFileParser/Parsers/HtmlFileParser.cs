@@ -8,6 +8,7 @@ using XiaoyaFileParser.Config;
 using XiaoyaStore.Data.Model;
 using AngleSharp.Extensions;
 using System.Text.RegularExpressions;
+using XiaoyaCommon.Helper;
 
 namespace XiaoyaFileParser.Parsers
 {
@@ -56,8 +57,15 @@ namespace XiaoyaFileParser.Parsers
                     script.Parent.RemoveChild(script);
                 }
 
-                mTextContent = document.Body.Text().Trim();
-                mTextContent = sTrimmer.Replace(mTextContent, "\n");
+                mTextContent = document.Body.Text();
+                if (mTextContent == null)
+                {
+                    mTextContent = "";
+                }
+                else
+                {
+                    mTextContent = sTrimmer.Replace(mTextContent.Trim(), "\n");
+                }
             }
             return mTextContent;
         }
@@ -71,6 +79,10 @@ namespace XiaoyaFileParser.Parsers
                 var document = await mParser.ParseAsync(content);
 
                 mTitle = document.Title;
+                if (mTitle == null)
+                {
+                    mTitle = "";
+                }
             }
             return mTitle;
         }
