@@ -26,7 +26,14 @@ namespace XiaoyaRetriever.Expression
                 operand.SetConfig(config);
             }
 
-            mFrequency = (from o in mOperands select o.Frequency).Max();
+            if (mOperands.Any())
+            {
+                mFrequency = (from o in mOperands select o.Frequency).Max();
+            }
+            else
+            {
+                mFrequency = 0;
+            }
         }
 
         public IEnumerator<SearchExpression> GetEnumerator()
