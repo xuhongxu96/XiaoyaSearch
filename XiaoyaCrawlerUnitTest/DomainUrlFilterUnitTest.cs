@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using XiaoyaCrawler.UrlFilter;
 
@@ -24,7 +25,7 @@ namespace XiaoyaCrawlerUnitTest
                 "http://192.168.1.1",
                 "http://192.168.172.1"
             });
-            Assert.AreEqual(5, results.Count);
+            Assert.AreEqual(5, results.Count());
         }
     }
 }

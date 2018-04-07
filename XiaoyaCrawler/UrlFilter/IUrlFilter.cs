@@ -16,6 +16,6 @@ namespace XiaoyaCrawler.UrlFilter
         /// </summary>
         /// <param name="urls">Urls to be filtered</param>
         /// <returns>Filtered urls</returns>
-        IList<string> Filter(IList<string> urls);
+        IEnumerable<string> Filter(IEnumerable<string> urls);
     }
 }

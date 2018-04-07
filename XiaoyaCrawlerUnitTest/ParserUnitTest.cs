@@ -4,6 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using XiaoyaCrawler.Config;
@@ -92,10 +93,11 @@ namespace XiaoyaCrawlerUnitTest
                     Regex.Replace("hello, world! 你好,世界!百度google返回", @"\s", ""),
                     Regex.Replace(parseResult.Content, @"\s", "")
                     );
-                Assert.AreEqual(3, parseResult.Urls.Count);
-                Assert.AreEqual("http://www.baidu.com/", parseResult.Urls[0]);
-                Assert.AreEqual("https://www.google.com/", parseResult.Urls[1]);
-                Assert.AreEqual("http://bar.foo.com/a/b/index.htm", parseResult.Urls[2]);
+                var urls = parseResult.Urls.ToList();
+                Assert.AreEqual(3, urls.Count);
+                Assert.AreEqual("http://www.baidu.com/", urls[0]);
+                Assert.AreEqual("https://www.google.com/", urls[1]);
+                Assert.AreEqual("http://bar.foo.com/a/b/index.htm", urls[2]);
             });
         }
 

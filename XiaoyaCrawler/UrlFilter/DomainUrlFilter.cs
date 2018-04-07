@@ -17,9 +17,9 @@ namespace XiaoyaCrawler.UrlFilter
             mDomainPattern = new Regex(domainPattern);
         }
 
-        public IList<string> Filter(IList<string> urls)
+        public IEnumerable<string> Filter(IEnumerable<string> urls)
         {
-            return urls.Where(o => mDomainPattern.IsMatch(o)).ToList();
+            return urls.Where(o => mDomainPattern.IsMatch(o));
         }
     }
 }

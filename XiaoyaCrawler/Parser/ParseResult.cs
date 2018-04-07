@@ -20,6 +20,6 @@ namespace XiaoyaCrawler.Parser
         /// <summary>
         /// Urls in web file
         /// </summary>
-        public IList<string> Urls { get; set; }
+        public IEnumerable<string> Urls { get; set; }
     }
 }

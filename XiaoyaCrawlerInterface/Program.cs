@@ -55,6 +55,7 @@ namespace XiaoyaCrawlerInterface
             var urlFilters = new List<IUrlFilter>
             {
                 new DomainUrlFilter(@"bnu\.edu\.cn"),
+                new UrlNormalizer(),
             };
 
             var crawler = new Crawler(
