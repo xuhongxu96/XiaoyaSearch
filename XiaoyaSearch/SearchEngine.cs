@@ -19,6 +19,7 @@ namespace XiaoyaSearch
         protected IQueryParser mQueryParser;
         protected IRetriever mRetriever;
         protected IRanker mRanker;
+        protected IRanker mProRanker;
 
         public SearchEngine(SearchEngineConfig config)
         {
@@ -26,13 +27,14 @@ namespace XiaoyaSearch
             {
                 TextSegmenter = config.TextSegmenter,
             });
+
             mRetriever = new InexactTopKRetriever(new RetrieverConfig
             {
                 IndexStatStore = config.IndexStatStore,
                 UrlFileIndexStatStore = config.UrlFileIndexStatStore,
                 UrlFileStore = config.UrlFileStore,
                 InvertedIndexStore = config.InvertedIndexStore,
-            }, 300);
+            }, 500);
 
             var rankerConfig = new RankerConfig
             {
@@ -42,18 +44,22 @@ namespace XiaoyaSearch
                 InvertedIndexStore = config.InvertedIndexStore,
             };
 
-             mRanker = new IntegratedRanker(rankerConfig);
+            mRanker = new IntegratedRanker(rankerConfig);
+            mProRanker = new QueryTermProximityRanker(rankerConfig);
         }
 
         public IEnumerable<SearchResult> Search(string query)
         {
             var parsedQuery = mQueryParser.Parse(query);
+
             var urlFileIds = mRetriever.Retrieve(parsedQuery.Expression).ToList();
+            var count = urlFileIds.Count;
+
             var scores = mRanker.Rank(urlFileIds, parsedQuery.Words).ToList();
 
             var results = new List<SearchResult>();
 
-            for(int i = 0; i < urlFileIds.Count; ++i)
+            for (int i = 0; i < count; ++i)
             {
                 results.Add(new SearchResult
                 {
@@ -62,7 +68,23 @@ namespace XiaoyaSearch
                 });
             }
 
-            return results.OrderByDescending(o => o.Score);
+            results = results.OrderByDescending(o => o.Score).ToList();
+
+            for (int i = 0; i < (49 + count) / 50; ++i)
+            {
+                var subResults = results.GetRange(i, Math.Min(50, count - 50 * i));
+                var proScores = mProRanker.Rank(subResults.Select(o => o.UrlFileId), parsedQuery.Words).ToList();
+
+                for (int j = 0; j < count; ++j)
+                {
+                    subResults[j].ProScore = proScores[j];
+                }
+
+                foreach (var proResult in subResults.OrderByDescending(o => o.ProScore))
+                {
+                    yield return proResult;
+                }
+            }
         }
     }
 }

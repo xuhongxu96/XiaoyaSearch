@@ -8,5 +8,6 @@ namespace XiaoyaSearch
     {
         public int UrlFileId { get; set; }
         public double Score { get; set; }
+        public double ProScore { get; set; }
     }
 }

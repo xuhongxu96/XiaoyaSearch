@@ -9,6 +9,7 @@ namespace XiaoyaRanker.VectorSpaceModelRanker
     public class VectorSpaceModelRanker : IRanker
     {
         protected RankerConfig mConfig;
+        protected const double TitleFactor = 10.0;
 
         public VectorSpaceModelRanker(RankerConfig config)
         {
@@ -26,6 +27,8 @@ namespace XiaoyaRanker.VectorSpaceModelRanker
                 {
                     var urlFile = mConfig.UrlFileStore.LoadById(urlFileId);
                     var urlFileIndexStat = mConfig.UrlFileIndexStatStore.LoadByWordInUrlFile(urlFileId, word);
+                    var titleIndex = mConfig.InvertedIndexStore.LoadByWordInUrlFileOrderByPosition(urlFileId, word, XiaoyaStore.Data.Model.InvertedIndex.InvertedIndexType.Title);
+
                     if (urlFileIndexStat == null)
                     {
                         continue;
@@ -37,6 +40,12 @@ namespace XiaoyaRanker.VectorSpaceModelRanker
 
                     var wordScore =
                         ScoringHelpers.TfIdf(wordFrequencyInDocument, documentFrequency, documentCount) / urlFile.Content.Length * 100;
+
+                    if (titleIndex != null)
+                    {
+                        wordScore *= TitleFactor;
+                    }
+
                     score += wordScore;
                 }
                 yield return score;
