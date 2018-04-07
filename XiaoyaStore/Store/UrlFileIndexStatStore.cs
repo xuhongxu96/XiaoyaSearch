@@ -17,8 +17,7 @@ namespace XiaoyaStore.Store
             using (var context = NewContext())
             {
                 foreach (var stat in context.UrlFileIndexStats
-                    .Where(o => o.Word == word)
-                    .OrderByDescending(o => o.WordFrequency))
+                    .Where(o => o.Word == word))
                 {
                     yield return stat;
                 }

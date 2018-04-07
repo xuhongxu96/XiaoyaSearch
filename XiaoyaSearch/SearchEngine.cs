@@ -21,6 +21,8 @@ namespace XiaoyaSearch
         protected IRanker mRanker;
         protected IRanker mProRanker;
 
+        protected const int PageSize = 20;
+
         public SearchEngine(SearchEngineConfig config)
         {
             mQueryParser = new SimpleQueryParser(new QueryParserConfig
@@ -70,12 +72,13 @@ namespace XiaoyaSearch
 
             results = results.OrderByDescending(o => o.Score).ToList();
 
-            for (int i = 0; i < (49 + count) / 50; ++i)
+            for (int i = 0; i < (PageSize - 1 + count) / PageSize; ++i)
             {
-                var subResults = results.GetRange(i, Math.Min(50, count - 50 * i));
+                int subResultsLength = Math.Min(PageSize, count - PageSize * i);
+                var subResults = results.GetRange(i, subResultsLength);
                 var proScores = mProRanker.Rank(subResults.Select(o => o.UrlFileId), parsedQuery.Words).ToList();
 
-                for (int j = 0; j < count; ++j)
+                for (int j = 0; j < subResultsLength; ++j)
                 {
                     subResults[j].ProScore = proScores[j];
                 }

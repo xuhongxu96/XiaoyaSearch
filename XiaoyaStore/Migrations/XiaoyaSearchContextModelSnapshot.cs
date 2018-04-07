@@ -21,6 +21,23 @@ namespace XiaoyaStore.Migrations
                 .HasAnnotation("ProductVersion", "2.0.2-rtm-10011")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("XiaoyaStore.Data.Model.IndexStat", b =>
+                {
+                    b.Property<string>("Word")
+                        .IsConcurrencyToken()
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<long>("DocumentFrequency")
+                        .IsConcurrencyToken();
+
+                    b.Property<long>("WordFrequency")
+                        .IsConcurrencyToken();
+
+                    b.HasKey("Word");
+
+                    b.ToTable("IndexStat");
+                });
+
             modelBuilder.Entity("XiaoyaStore.Data.Model.InvertedIndex", b =>
                 {
                     b.Property<int>("InvertedIndexId")
@@ -35,6 +52,8 @@ namespace XiaoyaStore.Migrations
                     b.Property<string>("Word");
 
                     b.HasKey("InvertedIndexId");
+
+                    b.HasIndex("UrlFileId");
 
                     b.HasIndex("UrlFileId", "Word", "Position", "IndexType")
                         .IsUnique()
@@ -68,6 +87,8 @@ namespace XiaoyaStore.Migrations
                     b.Property<string>("MimeType")
                         .IsConcurrencyToken();
 
+                    b.Property<string>("Title");
+
                     b.Property<double>("UpdateIntervalSeconds")
                         .IsConcurrencyToken();
 
@@ -81,6 +102,8 @@ namespace XiaoyaStore.Migrations
                     b.HasIndex("FilePath")
                         .IsUnique()
                         .HasFilter("[FilePath] IS NOT NULL");
+
+                    b.HasIndex("IndexStatus");
 
                     b.HasIndex("Url")
                         .IsUnique()
@@ -99,6 +122,8 @@ namespace XiaoyaStore.Migrations
                     b.Property<int>("UrlFileId")
                         .IsConcurrencyToken();
 
+                    b.Property<double>("Weight");
+
                     b.Property<string>("Word")
                         .IsConcurrencyToken();
 
@@ -107,11 +132,17 @@ namespace XiaoyaStore.Migrations
 
                     b.HasKey("UrlFileIndexStatId");
 
+                    b.HasIndex("UrlFileId");
+
+                    b.HasIndex("Word");
+
                     b.HasIndex("WordFrequency");
 
                     b.HasIndex("Word", "UrlFileId")
                         .IsUnique()
                         .HasFilter("[Word] IS NOT NULL");
+
+                    b.HasIndex("Word", "UrlFileId", "WordFrequency");
 
                     b.ToTable("UrlFileIndexStats");
                 });
@@ -145,6 +176,8 @@ namespace XiaoyaStore.Migrations
                         .IsConcurrencyToken();
 
                     b.HasKey("UrlFrontierItemId");
+
+                    b.HasIndex("IsPopped");
 
                     b.HasIndex("Url")
                         .IsUnique()

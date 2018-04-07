@@ -15,6 +15,8 @@ namespace XiaoyaFileParser.Parsers
 {
     public class TextFileParser : IFileParser
     {
+        protected string mEncoding;
+
         protected UrlFile mUrlFile;
         public UrlFile UrlFile
         {
@@ -22,13 +24,20 @@ namespace XiaoyaFileParser.Parsers
             set
             {
                 mUrlFile = value;
-                mTitle = null;
                 mContent = null;
+                mTitle = mUrlFile.Title;
                 mTextContent = mUrlFile.Content;
                 if (new FileInfo(mUrlFile.FilePath).Length > 4 * 1024 * 1024)
                 {
                     throw new FileLoadException(mUrlFile.FilePath + " is too big to parse");
                 }
+
+                mEncoding = UrlFile.Charset;
+                if (mEncoding == null || mEncoding == "")
+                {
+                    mEncoding = "utf-8";
+                }
+                mEncoding = mEncoding.ToLower();
             }
         }
 
@@ -81,13 +90,8 @@ namespace XiaoyaFileParser.Parsers
         {
             if (mContent == null)
             {
-                var encoding = UrlFile.Charset;
-                if (encoding == null || encoding == "")
-                {
-                    encoding = "utf-8";
-                }
                 mContent = await File.ReadAllTextAsync(UrlFile.FilePath,
-                    Encoding.GetEncoding(encoding.ToLower()));
+                    Encoding.GetEncoding(mEncoding));
                 mContent = TextHelper.ToDBC(mContent.ToLower());
             }
             return mContent;
@@ -109,14 +113,16 @@ namespace XiaoyaFileParser.Parsers
 
         public virtual async Task<string> GetTitleAsync()
         {
-            return await Task.Run(() =>
+            if (mTitle == null)
             {
-                if (mTitle == null)
+                await Task.Run(() =>
                 {
-                    mTitle = File.ReadLines(UrlFile.FilePath).FirstOrDefault();
-                }
-                return mTitle;
-            });
+                    mTitle = File.ReadLines(UrlFile.FilePath,
+                        Encoding.GetEncoding(mEncoding)).FirstOrDefault();
+                    mTitle = TextHelper.ToDBC(mTitle.ToLower());
+                });
+            }
+            return mTitle;
         }
     }
 }

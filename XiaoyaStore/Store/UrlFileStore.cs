@@ -113,7 +113,8 @@ namespace XiaoyaStore.Store
                 else
                 {
                     // Exists this url, then judge if two fetched file is same
-                    if (urlFile.Content != "" && oldUrlFile.Content != urlFile.Content)
+                    if ((urlFile.Title != "" && oldUrlFile.Title != urlFile.Title)
+                            || (urlFile.Content != "" && oldUrlFile.Content != urlFile.Content))
                     {
                         // Updated
                         var updateInterval = DateTime.Now.Subtract(oldUrlFile.UpdatedAt);
@@ -131,6 +132,7 @@ namespace XiaoyaStore.Store
                     // Update info
                     oldUrlFile.FilePath = urlFile.FilePath;
                     oldUrlFile.FileHash = urlFile.FileHash;
+                    oldUrlFile.Title = urlFile.Title;
                     oldUrlFile.Content = urlFile.Content;
                     oldUrlFile.Charset = urlFile.Charset;
                     oldUrlFile.MimeType = urlFile.MimeType;

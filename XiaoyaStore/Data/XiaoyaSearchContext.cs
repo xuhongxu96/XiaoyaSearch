@@ -16,6 +16,24 @@ namespace XiaoyaStore.Data
         public DbSet<UrlFileIndexStat> UrlFileIndexStats { get; set; }
         public DbSet<UrlHostStat> UrlHostStats { get; set; }
 
+        /*
+         * Additional Migration
+         * 
+      migrationBuilder.Sql(@"CREATE VIEW dbo.IndexStats WITH SCHEMABINDING AS 
+SELECT 
+        Word,
+        COUNT_BIG(*) AS DocumentFrequency,
+		SUM(WordFrequency) AS WordFrequency
+FROM dbo.UrlFileIndexStats
+GROUP BY Word
+
+GO
+
+CREATE UNIQUE CLUSTERED INDEX IndexStatsIdx ON dbo.IndexStats(Word)");        
+        *
+        * 
+        */
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             #region UrlFrontierItem
@@ -26,6 +44,9 @@ namespace XiaoyaStore.Data
 
             modelBuilder.Entity<UrlFrontierItem>()
                 .HasIndex(o => new { o.PlannedTime, o.IsPopped });
+
+            modelBuilder.Entity<UrlFrontierItem>()
+                .HasIndex(o => o.IsPopped);
 
             #endregion
 
@@ -42,6 +63,9 @@ namespace XiaoyaStore.Data
             modelBuilder.Entity<UrlFile>()
                 .HasIndex(o => new { o.UpdatedAt, o.IndexStatus });
 
+            modelBuilder.Entity<UrlFile>()
+                .HasIndex(o => o.IndexStatus);
+
             #endregion
 
             #region InvertedIndex
@@ -50,19 +74,22 @@ namespace XiaoyaStore.Data
                .HasIndex(o => new { o.UrlFileId, o.Word, o.Position, o.IndexType })
                .IsUnique();
 
+            modelBuilder.Entity<InvertedIndex>()
+               .HasIndex(o => o.UrlFileId);
+
             #endregion
 
             #region IndexStat
 
             if (Database.IsSqlServer())
             {
-                //modelBuilder.Ignore<IndexStat>();
+                // modelBuilder.Ignore<IndexStat>();
 
                 modelBuilder.Entity<IndexStat>()
                     .Ignore(o => o.IndexStatId);
 
                 modelBuilder.Entity<IndexStat>()
-                    .HasKey(o => o.Word);
+                            .HasKey(o => o.Word);
             }
             else
             {
@@ -75,19 +102,28 @@ namespace XiaoyaStore.Data
             #region UrlFileIndexStat
 
             modelBuilder.Entity<UrlFileIndexStat>()
-                .HasIndex(o => new { o.Word, o.UrlFileId })
-                .IsUnique();
+                            .HasIndex(o => new { o.Word, o.UrlFileId })
+                            .IsUnique();
+
+            modelBuilder.Entity<UrlFileIndexStat>()
+                            .HasIndex(o => new { o.Word, o.UrlFileId, o.WordFrequency });
 
             modelBuilder.Entity<UrlFileIndexStat>()
                 .HasIndex(o => o.WordFrequency);
+
+            modelBuilder.Entity<UrlFileIndexStat>()
+                .HasIndex(o => o.Word);
+
+            modelBuilder.Entity<UrlFileIndexStat>()
+                .HasIndex(o => o.UrlFileId);
 
             #endregion
 
             #region UrlHostStat
 
             modelBuilder.Entity<UrlHostStat>()
-                .HasIndex(o => o.Host)
-                .IsUnique();
+                            .HasIndex(o => o.Host)
+                            .IsUnique();
 
             #endregion
 

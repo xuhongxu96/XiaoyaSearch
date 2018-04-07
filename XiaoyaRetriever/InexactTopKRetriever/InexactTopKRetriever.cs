@@ -6,12 +6,13 @@ using XiaoyaCommon.Helper;
 using XiaoyaRetriever.Config;
 using XiaoyaRetriever.Expression;
 using XiaoyaStore.Data.Model;
+using XiaoyaStore.Helper;
 
 namespace XiaoyaRetriever.InexactTopKRetriever
 {
     public class InexactTopKRetriever : IRetriever
     {
-        protected readonly int[] WORD_FREQUENCY_THRESHOLDS_FOR_TIERS = new int[] { int.MaxValue / 2, 20, 10, 2, 1 };
+        protected readonly int[] WORD_FREQUENCY_THRESHOLDS_FOR_TIERS = new int[] { int.MaxValue / 2, 15, 8, 2, 1 };
 
         protected RetrieverConfig mConfig;
         protected int mTopK;
@@ -27,6 +28,7 @@ namespace XiaoyaRetriever.InexactTopKRetriever
         {
             var result = from index in mConfig.UrlFileIndexStatStore.LoadByWord(word.Value)
                          where index.WordFrequency >= minFrequency && index.WordFrequency < maxFrequency
+                         orderby index.Weight descending
                          select index.UrlFileId;
             if (mWordCaches.ContainsKey(word.Value))
             {

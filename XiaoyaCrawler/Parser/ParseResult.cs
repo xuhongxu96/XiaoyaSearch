@@ -10,11 +10,15 @@ namespace XiaoyaCrawler.Parser
     public class ParseResult
     {
         /// <summary>
-        /// Content of web page or file
+        /// Title of web file
+        /// </summary>
+        public string Title { get; set; }
+        /// <summary>
+        /// Content of web file
         /// </summary>
         public string Content { get; set; }
         /// <summary>
-        /// Urls in web page or file
+        /// Urls in web file
         /// </summary>
         public IList<string> Urls { get; set; }
     }

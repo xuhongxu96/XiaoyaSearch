@@ -14,5 +14,6 @@ namespace XiaoyaStore.Data.Model
         public string Word { get; set; }
         [ConcurrencyCheck]
         public long WordFrequency { get; set; }
+        public double Weight { get; set; }
     }
 }

@@ -84,6 +84,7 @@ namespace XiaoyaCrawler
                         var parseResult = mParser.ParseAsync(urlFile).GetAwaiter().GetResult();
 
                         // Store parsed content
+                        urlFile.Title = parseResult.Title;
                         urlFile.Content = parseResult.Content;
 
                         mConfig.UrlFileStore.Save(urlFile);

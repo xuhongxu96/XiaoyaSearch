@@ -8,6 +8,7 @@ using XiaoyaStore.Data.Model;
 using Microsoft.EntityFrameworkCore;
 using static XiaoyaStore.Data.Model.InvertedIndex;
 using System.Data.SqlClient;
+using XiaoyaStore.Helper;
 
 namespace XiaoyaStore.Store
 {
@@ -16,13 +17,26 @@ namespace XiaoyaStore.Store
         public InvertedIndexStore(DbContextOptions options = null) : base(options)
         { }
 
+        protected double CalculateWeight(UrlFile urlFile, string word, long wordFrequency, int minPosition)
+        {
+            return (urlFile.Title.Contains(word) ? 2.0 * word.Length : 1.0)
+                / (1 + urlFile.Title.Length)
+                * wordFrequency
+                / (1 + UrlHelper.GetDomainDepth(urlFile.Url))
+                + 3 * (minPosition / (1 + urlFile.Content.Length));
+        }
+
         public void ClearAndSaveInvertedIndices(int urlFileId, IEnumerable<InvertedIndex> invertedIndices)
         {
-
             try
             {
                 using (var context = NewContext())
                 {
+                    var urlFile = context.UrlFiles.SingleOrDefault(o => o.UrlFileId == urlFileId);
+                    if (urlFile == null)
+                    {
+                        return;
+                    }
                     var toBeRemovedIndices = from o in context.InvertedIndices
                                              where o.UrlFileId == urlFileId
                                              select o;
@@ -41,6 +55,7 @@ namespace XiaoyaStore.Store
                             UrlFileId = urlFileId,
                             Word = g.Key,
                             WordFrequency = g.Count(),
+                            Weight = CalculateWeight(urlFile, g.Key, g.Count(), g.Min(o => o.Position)),
                         });
 
                     context.UrlFileIndexStats.AddRange(urlFileIndexStats);
@@ -160,7 +175,7 @@ namespace XiaoyaStore.Store
                     .Where(o => o.Word == word)
                     .Where(o => o.IndexType == indexType)
                     .OrderBy(o => o.Position);
-                    //.FromSql($"SELECT * FROM dbo.InvertedIndices WHERE UrlFileId = {urlFileId} AND Word = '{word}' AND IndexType = {(int)indexType} ORDER BY Position");
+                //.FromSql($"SELECT * FROM dbo.InvertedIndices WHERE UrlFileId = {urlFileId} AND Word = '{word}' AND IndexType = {(int)indexType} ORDER BY Position");
 
                 foreach (var index in indices)
                 {
@@ -188,6 +203,20 @@ namespace XiaoyaStore.Store
         public InvertedIndex LoadByUrlFilePosition(UrlFile urlFile, int position, InvertedIndexType indexType = InvertedIndexType.Body)
         {
             return LoadByUrlFilePosition(urlFile.UrlFileId, position);
+        }
+
+        public int CountTitleIndexInUrlFile(int urlFileId)
+        {
+            using (var context = NewContext())
+            {
+                return context.InvertedIndices
+                    .Count(o => o.UrlFileId == urlFileId && o.IndexType == InvertedIndexType.Title);
+            }
+        }
+
+        public int CountTitleIndexInUrlFile(UrlFile urlFile)
+        {
+            return CountTitleIndexInUrlFile(urlFile.UrlFileId);
         }
     }
 }

@@ -22,6 +22,10 @@ namespace XiaoyaStore.Data.Model
         /// </summary>
         public string Url { get; set; }
         /// <summary>
+        /// Title
+        /// </summary>
+        public string Title { get; set; }
+        /// <summary>
         /// Fetched content file path
         /// </summary>
         [ConcurrencyCheck]
