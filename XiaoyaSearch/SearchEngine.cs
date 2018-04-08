@@ -75,7 +75,7 @@ namespace XiaoyaSearch
             for (int i = 0; i < (PageSize - 1 + count) / PageSize; ++i)
             {
                 int subResultsLength = Math.Min(PageSize, count - PageSize * i);
-                var subResults = results.GetRange(i, subResultsLength);
+                var subResults = results.GetRange(i * PageSize, subResultsLength);
                 var proScores = mProRanker.Rank(subResults.Select(o => o.UrlFileId), parsedQuery.Words).ToList();
 
                 for (int j = 0; j < subResultsLength; ++j)

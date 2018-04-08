@@ -15,6 +15,7 @@ using static XiaoyaStore.Data.Model.InvertedIndex;
 using static XiaoyaFileParser.Model.Token;
 using System.Collections.Concurrent;
 using Microsoft.EntityFrameworkCore;
+using XiaoyaNLP.Encoding;
 
 namespace XiaoyaIndexer
 {
@@ -63,10 +64,17 @@ namespace XiaoyaIndexer
                 try
                 {
                     mLogger.Log(nameof(SimpleIndexer), "Indexing Url: " + urlFile.Url);
+
+                    if (!EncodingDetector.IsValidString(urlFile.Content))
+                    {
+                        throw new NotSupportedException("Invalid content");
+                    }
+
                     UniversalFileParser parser = new UniversalFileParser
                     {
                         UrlFile = urlFile
                     };
+  
                     IList<Token> tokens = parser.GetTokensAsync().GetAwaiter().GetResult();
 
                     var invertedIndices = from token in tokens

@@ -7,6 +7,7 @@ using XiaoyaFileParser.Config;
 using XiaoyaStore.Data.Model;
 using System.IO;
 using XiaoyaFileParser.Parsers;
+using XiaoyaNLP.Encoding;
 
 namespace XiaoyaFileParser
 {
@@ -87,7 +88,5 @@ namespace XiaoyaFileParser
                     throw new NotSupportedException(mimeType + " not supported");
             }
         }
-
-
     }
 }
