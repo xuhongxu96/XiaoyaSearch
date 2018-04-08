@@ -21,6 +21,11 @@ namespace XiaoyaRetriever.Expression
 
         public override void SetConfig(RetrieverConfig config)
         {
+            if (!mOperands.Any())
+            {
+                return;
+            }
+
             foreach (var operand in mOperands)
             {
                 operand.SetConfig(config);

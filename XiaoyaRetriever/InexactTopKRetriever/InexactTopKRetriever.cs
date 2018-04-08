@@ -12,7 +12,7 @@ namespace XiaoyaRetriever.InexactTopKRetriever
 {
     public class InexactTopKRetriever : IRetriever
     {
-        protected readonly int[] WORD_FREQUENCY_THRESHOLDS_FOR_TIERS = new int[] { int.MaxValue / 2, 15, 8, 2, 1 };
+        protected readonly double[] WORD_WEIGHT_THRESHOLDS_FOR_TIERS = new double[] { double.MaxValue / 2, 5, 2, 1, 0.1, 0 };
 
         protected RetrieverConfig mConfig;
         protected int mTopK;
@@ -24,10 +24,10 @@ namespace XiaoyaRetriever.InexactTopKRetriever
             mTopK = k;
         }
 
-        protected IEnumerable<int> RetrieveWord(Word word, int minFrequency, int maxFrequency)
+        protected IEnumerable<int> RetrieveWord(Word word, double minWeight, double maxWeight)
         {
             var result = from index in mConfig.UrlFileIndexStatStore.LoadByWord(word.Value)
-                         where index.WordFrequency >= minFrequency && index.WordFrequency < maxFrequency
+                         where index.Weight >= minWeight && index.Weight < maxWeight
                          orderby index.Weight descending
                          select index.UrlFileId;
             if (mWordCaches.ContainsKey(word.Value))
@@ -38,14 +38,14 @@ namespace XiaoyaRetriever.InexactTopKRetriever
             return result;
         }
 
-        protected IEnumerable<int> RetrieveNot(Not notExp, int minFrequency, int maxFrequency)
+        protected IEnumerable<int> RetrieveNot(Not notExp, double minWeight, double maxWeight)
         {
             return from position in
-                       RetrieveExpression(notExp.Operand, -minFrequency, int.MaxValue - maxFrequency)
+                       RetrieveExpression(notExp.Operand, -minWeight, int.MaxValue - maxWeight)
                    select position;
         }
 
-        protected IEnumerable<int> RetrieveAnd(And andExp, int minFrequency, int maxFrequency)
+        protected IEnumerable<int> RetrieveAnd(And andExp, double minWeight, double maxWeight)
         {
             IEnumerable<int> result = null;
 
@@ -54,7 +54,7 @@ namespace XiaoyaRetriever.InexactTopKRetriever
                 // Someone is included
                 foreach (var operand in andExp.OrderBy(o => o.Frequency))
                 {
-                    var nextIndices = RetrieveExpression(operand, minFrequency, maxFrequency);
+                    var nextIndices = RetrieveExpression(operand, minWeight, maxWeight);
 
                     if (result == null)
                     {
@@ -78,7 +78,7 @@ namespace XiaoyaRetriever.InexactTopKRetriever
                 // None is included
                 foreach (var operand in andExp.OrderByDescending(o => o.Frequency))
                 {
-                    var nextIndices = RetrieveExpression(operand, minFrequency, maxFrequency);
+                    var nextIndices = RetrieveExpression(operand, minWeight, maxWeight);
 
                     if (result == null)
                     {
@@ -94,7 +94,7 @@ namespace XiaoyaRetriever.InexactTopKRetriever
         }
 
 
-        protected IEnumerable<int> RetrieveOr(Or orExp, int minFrequency, int maxFrequency)
+        protected IEnumerable<int> RetrieveOr(Or orExp, double minWeight, double maxWeight)
         {
             IEnumerable<int> result = null;
 
@@ -103,7 +103,7 @@ namespace XiaoyaRetriever.InexactTopKRetriever
                 // All are included
                 foreach (var operand in orExp.OrderBy(o => o.Frequency))
                 {
-                    var nextIndices = RetrieveExpression(operand, minFrequency, maxFrequency);
+                    var nextIndices = RetrieveExpression(operand, minWeight, maxWeight);
 
                     if (result == null)
                     {
@@ -120,7 +120,7 @@ namespace XiaoyaRetriever.InexactTopKRetriever
                 // Someone is not included
                 foreach (var operand in orExp.OrderByDescending(o => o.Frequency))
                 {
-                    var nextIndices = RetrieveExpression(operand, minFrequency, maxFrequency);
+                    var nextIndices = RetrieveExpression(operand, minWeight, maxWeight);
 
                     if (result == null)
                     {
@@ -142,23 +142,23 @@ namespace XiaoyaRetriever.InexactTopKRetriever
             return result;
         }
 
-        protected IEnumerable<int> RetrieveExpression(SearchExpression expression, int minFrequency, int maxFrequency)
+        protected IEnumerable<int> RetrieveExpression(SearchExpression expression, double minWeight, double maxWeight)
         {
             if (expression is Word word)
             {
-                return RetrieveWord(word, minFrequency, maxFrequency);
+                return RetrieveWord(word, minWeight, maxWeight);
             }
             else if (expression is Not notExp)
             {
-                return RetrieveNot(notExp, minFrequency, maxFrequency);
+                return RetrieveNot(notExp, minWeight, maxWeight);
             }
             else if (expression is And andExp)
             {
-                return RetrieveAnd(andExp, minFrequency, maxFrequency);
+                return RetrieveAnd(andExp, minWeight, maxWeight);
             }
             else if (expression is Or orExp)
             {
-                return RetrieveOr(orExp, minFrequency, maxFrequency);
+                return RetrieveOr(orExp, minWeight, maxWeight);
             }
             throw new NotSupportedException("Not supported search expression");
         }
@@ -171,11 +171,11 @@ namespace XiaoyaRetriever.InexactTopKRetriever
 
             var existedResult = new HashSet<int>();
 
-            for (int tier = 1; tier < WORD_FREQUENCY_THRESHOLDS_FOR_TIERS.Length; ++tier)
+            for (int tier = 1; tier < WORD_WEIGHT_THRESHOLDS_FOR_TIERS.Length; ++tier)
             {
                 var result = RetrieveExpression(expression,
-                    WORD_FREQUENCY_THRESHOLDS_FOR_TIERS[tier],
-                    WORD_FREQUENCY_THRESHOLDS_FOR_TIERS[tier - 1]);
+                    WORD_WEIGHT_THRESHOLDS_FOR_TIERS[tier],
+                    WORD_WEIGHT_THRESHOLDS_FOR_TIERS[tier - 1]);
 
                 foreach (var urlFileId in result)
                 {

@@ -52,6 +52,12 @@ namespace XiaoyaSearch
 
         public IEnumerable<SearchResult> Search(string query)
         {
+            query = query.Trim();
+            if (query == "")
+            {
+                yield break;
+            }
+
             var parsedQuery = mQueryParser.Parse(query);
 
             var urlFileIds = mRetriever.Retrieve(parsedQuery.Expression).ToList();
