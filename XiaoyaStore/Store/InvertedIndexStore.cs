@@ -34,7 +34,7 @@ namespace XiaoyaStore.Store
             return (title.Contains(word) ? 2.0 * word.Length : 1.0)
                 / (1 + title.Length)
                 * wordFrequency
-                / (1 + UrlHelper.GetDomainDepth(urlFile.Url))
+                / (1 + 10 * UrlHelper.GetDomainDepth(urlFile.Url))
                 + 3 * (minPosition / (1 + content.Length));
         }
 

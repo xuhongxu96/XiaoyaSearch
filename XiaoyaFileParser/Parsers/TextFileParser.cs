@@ -10,6 +10,7 @@ using XiaoyaStore.Data.Model;
 using System.Linq;
 using static XiaoyaFileParser.Model.Token;
 using XiaoyaCommon.Helper;
+using XiaoyaNLP.Encoding;
 
 namespace XiaoyaFileParser.Parsers
 {
@@ -92,6 +93,14 @@ namespace XiaoyaFileParser.Parsers
             {
                 mContent = await File.ReadAllTextAsync(UrlFile.FilePath,
                     Encoding.GetEncoding(mEncoding));
+
+                if (mEncoding == "utf-8" && !EncodingDetector.IsValidString(mContent))
+                {
+                    mEncoding = "gbk";
+                    mContent = await File.ReadAllTextAsync(UrlFile.FilePath,
+                        Encoding.GetEncoding(mEncoding));
+                }
+
                 mContent = TextHelper.ToDBC(mContent.ToLower());
             }
             return mContent;
@@ -117,9 +126,11 @@ namespace XiaoyaFileParser.Parsers
             {
                 await Task.Run(() =>
                 {
-                    mTitle = File.ReadLines(UrlFile.FilePath,
-                        Encoding.GetEncoding(mEncoding)).FirstOrDefault();
-                    mTitle = TextHelper.ToDBC(mTitle.ToLower());
+                    mTitle = mContent.Split(new char[] { '\n' }, StringSplitOptions.RemoveEmptyEntries).FirstOrDefault();
+                    if (mTitle == null)
+                    {
+                        mTitle = "";
+                    }
                 });
             }
             return mTitle;

@@ -25,12 +25,11 @@ SELECT
         COUNT_BIG(*) AS DocumentFrequency,
 		SUM(WordFrequency) AS WordFrequency
 FROM dbo.UrlFileIndexStats
-GROUP BY Word
-
-GO
-
-CREATE UNIQUE CLUSTERED INDEX IndexStatsIdx ON dbo.IndexStats(Word)");        
+GROUP BY Word");
         *
+        * 
+        * 
+            ALTER DATABASE DBNAME COLLATE Chinese_PRC_90_CI_AS_SC
         * 
         */
 
@@ -85,11 +84,13 @@ CREATE UNIQUE CLUSTERED INDEX IndexStatsIdx ON dbo.IndexStats(Word)");
             {
                 // modelBuilder.Ignore<IndexStat>();
 
+                //*
                 modelBuilder.Entity<IndexStat>()
                     .Ignore(o => o.IndexStatId);
 
                 modelBuilder.Entity<IndexStat>()
                             .HasKey(o => o.Word);
+                // */
             }
             else
             {

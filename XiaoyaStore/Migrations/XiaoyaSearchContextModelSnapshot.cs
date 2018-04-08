@@ -21,35 +21,23 @@ namespace XiaoyaStore.Migrations
                 .HasAnnotation("ProductVersion", "2.0.2-rtm-10011")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("XiaoyaStore.Data.Model.IndexStat", b =>
-                {
-                    b.Property<string>("Word")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<long>("DocumentFrequency")
-                        .IsConcurrencyToken();
-
-                    b.Property<long>("WordFrequency")
-                        .IsConcurrencyToken();
-
-                    b.HasKey("Word");
-
-                    b.ToTable("IndexStat");
-                });
-
             modelBuilder.Entity("XiaoyaStore.Data.Model.InvertedIndex", b =>
                 {
                     b.Property<int>("InvertedIndexId")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<int>("IndexType");
+                    b.Property<int>("IndexType")
+                        .IsConcurrencyToken();
 
-                    b.Property<int>("Position");
+                    b.Property<int>("Position")
+                        .IsConcurrencyToken();
 
-                    b.Property<int>("UrlFileId");
+                    b.Property<int>("UrlFileId")
+                        .IsConcurrencyToken();
 
-                    b.Property<string>("Word");
+                    b.Property<string>("Word")
+                        .IsConcurrencyToken()
+                        .HasColumnType("nvarchar(30)");
 
                     b.HasKey("InvertedIndexId");
 
@@ -125,7 +113,8 @@ namespace XiaoyaStore.Migrations
                     b.Property<double>("Weight");
 
                     b.Property<string>("Word")
-                        .IsConcurrencyToken();
+                        .IsConcurrencyToken()
+                        .HasColumnType("nvarchar(30)");
 
                     b.Property<long>("WordFrequency")
                         .IsConcurrencyToken();
@@ -133,6 +122,8 @@ namespace XiaoyaStore.Migrations
                     b.HasKey("UrlFileIndexStatId");
 
                     b.HasIndex("UrlFileId");
+
+                    b.HasIndex("Weight");
 
                     b.HasIndex("Word");
 
@@ -142,7 +133,7 @@ namespace XiaoyaStore.Migrations
                         .IsUnique()
                         .HasFilter("[Word] IS NOT NULL");
 
-                    b.HasIndex("Word", "UrlFileId", "WordFrequency");
+                    b.HasIndex("Word", "UrlFileId", "Weight", "WordFrequency");
 
                     b.ToTable("UrlFileIndexStats");
                 });

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace XiaoyaStore.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class init : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -18,7 +18,7 @@ namespace XiaoyaStore.Migrations
                     IndexType = table.Column<int>(nullable: false),
                     Position = table.Column<int>(nullable: false),
                     UrlFileId = table.Column<int>(nullable: false),
-                    Word = table.Column<string>(nullable: true)
+                    Word = table.Column<string>(type: "nvarchar(30)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -33,7 +33,7 @@ namespace XiaoyaStore.Migrations
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     UrlFileId = table.Column<int>(nullable: false),
                     Weight = table.Column<double>(nullable: false),
-                    Word = table.Column<string>(nullable: true),
+                    Word = table.Column<string>(type: "nvarchar(30)", nullable: true),
                     WordFrequency = table.Column<long>(nullable: false)
                 },
                 constraints: table =>
@@ -116,6 +116,11 @@ namespace XiaoyaStore.Migrations
                 column: "UrlFileId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_UrlFileIndexStats_Weight",
+                table: "UrlFileIndexStats",
+                column: "Weight");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_UrlFileIndexStats_Word",
                 table: "UrlFileIndexStats",
                 column: "Word");
@@ -133,9 +138,9 @@ namespace XiaoyaStore.Migrations
                 filter: "[Word] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
-                name: "IX_UrlFileIndexStats_Word_UrlFileId_WordFrequency",
+                name: "IX_UrlFileIndexStats_Word_UrlFileId_Weight_WordFrequency",
                 table: "UrlFileIndexStats",
-                columns: new[] { "Word", "UrlFileId", "WordFrequency" });
+                columns: new[] { "Word", "UrlFileId", "Weight", "WordFrequency" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_UrlFiles_FilePath",
@@ -192,6 +197,7 @@ SELECT
 		SUM(WordFrequency) AS WordFrequency
 FROM dbo.UrlFileIndexStats
 GROUP BY Word");
+
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using XiaoyaNLP.Encoding;
 using XiaoyaNLP.Helper;
 
 namespace XiaoyaNLP.TextSegmentation
@@ -64,12 +65,9 @@ namespace XiaoyaNLP.TextSegmentation
         {
             var match = CommonRegex.RegexAnyChars.Match(sentence);
 
-            var charCount = CommonRegex.RegexAllChar.Matches(sentence).Count;
-            var notCharCount = CommonRegex.RegexAllNotChar.Matches(sentence).Count;
-
-            if (notCharCount > charCount)
+            if (!EncodingDetector.IsValidString(sentence))
             {
-                throw new NotSupportedException("Invalid text");
+                yield break;
             }
 
             while (match.Success)
