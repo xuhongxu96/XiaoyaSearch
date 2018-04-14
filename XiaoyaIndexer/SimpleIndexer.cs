@@ -21,13 +21,14 @@ namespace XiaoyaIndexer
 {
     public class SimpleIndexer : IIndexer
     {
-        protected CancellationTokenSource mCancellationTokenSource = null;
         protected IndexerConfig mConfig;
         protected RuntimeLogger mLogger;
         protected RuntimeLogger mErrorLogger;
-        protected SemaphoreSlim mIndexSemaphore;
-        protected ConcurrentBag<Task> mTasks = new ConcurrentBag<Task>();
-        protected object mSyncLock = new object();
+        protected CancellationTokenSource mCancellationTokenSource = null;
+
+        private SemaphoreSlim mIndexSemaphore;
+        private ConcurrentBag<Task> mTasks = new ConcurrentBag<Task>();
+        private object mSyncLock = new object();
 
         public bool IsWaiting { get; private set; } = false;
 
@@ -59,6 +60,8 @@ namespace XiaoyaIndexer
 
         protected void IndexFile(UrlFile urlFile)
         {
+            mIndexSemaphore.Wait();
+
             mTasks.Add(Task.Run(() =>
             {
                 try
@@ -105,8 +108,11 @@ namespace XiaoyaIndexer
             }));
         }
 
-        protected async Task IndexFilesAsync(CancellationToken cancellationToken)
+        public async Task CreateIndexAsync()
         {
+            mCancellationTokenSource = new CancellationTokenSource();
+            var cancellationToken = mCancellationTokenSource.Token;
+
             mIndexSemaphore = new SemaphoreSlim(mConfig.MaxIndexingConcurrency);
 
             int waitSeconds = 1;
@@ -131,15 +137,8 @@ namespace XiaoyaIndexer
                 IsWaiting = false;
                 waitSeconds = 1;
 
-                mIndexSemaphore.Wait();
                 IndexFile(urlFile);
             }
-        }
-
-        public async Task CreateIndexAsync()
-        {
-            mCancellationTokenSource = new CancellationTokenSource();
-            await IndexFilesAsync(mCancellationTokenSource.Token);
         }
 
         public void StopIndex()

@@ -16,7 +16,7 @@ namespace XiaoyaRetriever.InexactTopKRetriever
 
         protected RetrieverConfig mConfig;
         protected int mTopK;
-        protected Dictionary<string, IEnumerable<int>> mWordCaches = new Dictionary<string, IEnumerable<int>>();
+        // protected Dictionary<string, IEnumerable<int>> mWordCaches = new Dictionary<string, IEnumerable<int>>();
 
         public InexactTopKRetriever(RetrieverConfig config, int k = 1000)
         {
@@ -30,18 +30,20 @@ namespace XiaoyaRetriever.InexactTopKRetriever
                          where index.Weight >= minWeight && index.Weight < maxWeight
                          orderby index.Weight descending
                          select index.UrlFileId;
+            /*
             if (mWordCaches.ContainsKey(word.Value))
             {
                 result = result.Union(mWordCaches[word.Value]);
             }
             mWordCaches[word.Value] = result;
+            */
             return result;
         }
 
         protected IEnumerable<int> RetrieveNot(Not notExp, double minWeight, double maxWeight)
         {
             return from position in
-                       RetrieveExpression(notExp.Operand, -minWeight, int.MaxValue - maxWeight)
+                       RetrieveExpression(notExp.Operand, -minWeight, double.MaxValue - maxWeight)
                    select position;
         }
 
@@ -167,7 +169,7 @@ namespace XiaoyaRetriever.InexactTopKRetriever
         {
             int count = 0;
 
-            mWordCaches.Clear();
+            // mWordCaches.Clear();
 
             var existedResult = new HashSet<int>();
 

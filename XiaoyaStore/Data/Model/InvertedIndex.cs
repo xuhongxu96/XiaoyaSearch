@@ -10,7 +10,7 @@ namespace XiaoyaStore.Data.Model
     {
         public enum InvertedIndexType
         {
-            Body, Title
+            Body, Title, Link
         }
 
         /// <summary>

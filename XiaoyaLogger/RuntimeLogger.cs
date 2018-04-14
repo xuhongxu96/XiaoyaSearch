@@ -20,15 +20,15 @@ namespace XiaoyaLogger
         private string mLogFileName;
         private bool mDoWriteToConsole;
 
-        private static BlockingCollection<LogData> queue = new BlockingCollection<LogData>();
-        private static CancellationTokenSource cancellationTokenSource = null;
-        private static object readLock = new object();
+        private static BlockingCollection<LogData> mQueue = new BlockingCollection<LogData>();
+        private static CancellationTokenSource mCancellationTokenSource = null;
+        private static object mReadLock = new object();
 
         public static object ReadLock
         {
             get
             {
-                return readLock;
+                return mReadLock;
             }
         }
 
@@ -56,7 +56,7 @@ namespace XiaoyaLogger
                 message
             );
 
-            queue.Add(new LogData
+            mQueue.Add(new LogData
             {
                 fileName = mLogFileName,
                 content = content,
@@ -81,7 +81,7 @@ namespace XiaoyaLogger
                 exceptionMessage
             );
 
-            queue.Add(new LogData
+            mQueue.Add(new LogData
             {
                 fileName = mLogFileName,
                 content = content,
@@ -96,17 +96,17 @@ namespace XiaoyaLogger
 
         public static void StopWrite()
         {
-            if (cancellationTokenSource != null)
+            if (mCancellationTokenSource != null)
             {
-                cancellationTokenSource.Cancel();
-                cancellationTokenSource = null;
+                mCancellationTokenSource.Cancel();
+                mCancellationTokenSource = null;
             }
         }
 
         protected static async void WriteAsync()
         {
-            cancellationTokenSource = new CancellationTokenSource();
-            var token = cancellationTokenSource.Token;
+            mCancellationTokenSource = new CancellationTokenSource();
+            var token = mCancellationTokenSource.Token;
 
             await Task.Run(() =>
             {
@@ -115,7 +115,7 @@ namespace XiaoyaLogger
                     token.ThrowIfCancellationRequested();
 
                     // Wait and take one LogData
-                    var data = queue.Take();
+                    var data = mQueue.Take();
 
                     lock (ReadLock)
                     {
@@ -153,7 +153,7 @@ namespace XiaoyaLogger
                                 catch (IOException)
                                 {
                                     // Failed, add it back
-                                    queue.Add(data);
+                                    mQueue.Add(data);
                                     break;
                                 }
                             }
@@ -172,7 +172,7 @@ namespace XiaoyaLogger
                                 flushCount = 0;
                             }
 
-                        } while (queue.TryTake(out data, TimeSpan.FromMilliseconds(100)));
+                        } while (mQueue.TryTake(out data, TimeSpan.FromMilliseconds(100)));
 
                         if (writer != null)
                         {

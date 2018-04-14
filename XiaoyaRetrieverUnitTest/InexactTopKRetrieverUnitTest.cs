@@ -61,7 +61,6 @@ namespace XiaoyaRetrieverUnitTest
                 new Not(new And
                 {
                     "教务处",
-                    "教育",
                 })
             };
 
@@ -97,7 +96,7 @@ namespace XiaoyaRetrieverUnitTest
 
             var expression = new SimpleQueryParser();
 
-            var urlFileIds = retriever.Retrieve(expression.Parse("北京师范大学 -教务处教育").Expression);
+            var urlFileIds = retriever.Retrieve(expression.Parse("北京师范大学 -教务处").Expression);
             Assert.AreEqual(48, urlFileIds.Count());
 
             using (var context = new XiaoyaSearchContext(options))

@@ -64,13 +64,7 @@ namespace XiaoyaStore.Store
                         Count = host.Value,
                     });
                 }
-
-                try
-                {
-                    context.SaveChanges();
-                }
-                catch (DbUpdateConcurrencyException)
-                { }
+                context.SaveChanges();
             }
         }
 
@@ -81,12 +75,7 @@ namespace XiaoyaStore.Store
                 // Pop all urls
                 context.Database.ExecuteSqlCommand("UPDATE UrlFrontierItems SET IsPopped = 0 WHERE IsPopped = 1");
 
-                try
-                {
-                    context.SaveChanges();
-                }
-                catch (DbUpdateConcurrencyException)
-                { }
+                context.SaveChanges();
             }
         }
 
@@ -140,18 +129,8 @@ namespace XiaoyaStore.Store
 
                     context.UrlFrontierItems.Add(item);
 
-                    try
-                    {
-                        // Attempt to save changes to the database
-                        context.SaveChanges();
-                    }
-                    catch (DbUpdateConcurrencyException e)
-                    {
-                        e.Entries.Single().Reload();
-                        context.SaveChanges();
-                    }
-                    catch (DbUpdateException)
-                    { }
+                    // Attempt to save changes to the database
+                    context.SaveChanges();
                 }
 
                 return item;
@@ -202,16 +181,8 @@ namespace XiaoyaStore.Store
                     item.PlannedTime = DateTime.Now.AddMonths(3);
                 }
 
-                try
-                {
-                    // Attempt to save changes to the database
-                    context.SaveChanges();
-                }
-                catch (DbUpdateConcurrencyException e)
-                {
-                    e.Entries.Single().Reload();
-                    context.SaveChanges();
-                }
+                // Attempt to save changes to the database
+                context.SaveChanges();
 
                 return item;
             }
@@ -251,15 +222,8 @@ namespace XiaoyaStore.Store
                 item.IsPopped = true;
                 item.UpdatedAt = DateTime.Now;
 
-                try
-                {
-                    context.SaveChanges();
-                }
-                catch (DbUpdateConcurrencyException e)
-                {
-                    e.Entries.Single().Reload();
-                    context.SaveChanges();
-                }
+                context.SaveChanges();
+
                 return item;
             }
         }

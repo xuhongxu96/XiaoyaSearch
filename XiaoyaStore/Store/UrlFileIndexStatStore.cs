@@ -1,26 +1,41 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using XiaoyaStore.Cache;
 using XiaoyaStore.Data.Model;
 
 namespace XiaoyaStore.Store
 {
     public class UrlFileIndexStatStore : BaseStore, IUrlFileIndexStatStore
     {
-        public UrlFileIndexStatStore(DbContextOptions options = null) : base(options)
-        { }
+        DictionaryCache<string, IReadOnlyDictionary<int, UrlFileIndexStat>> mCache;
 
-        public IEnumerable<UrlFileIndexStat> LoadByWord(string word)
+        public UrlFileIndexStatStore(DbContextOptions options = null) : base(options)
+        {
+            mCache = new DictionaryCache<string, IReadOnlyDictionary<int, UrlFileIndexStat>>(
+                TimeSpan.FromDays(5),
+                GetCache);
+        }
+
+        protected IReadOnlyDictionary<int, UrlFileIndexStat> GetCache(string word)
         {
             using (var context = NewContext())
             {
-                foreach (var stat in context.UrlFileIndexStats
-                    .Where(o => o.Word == word))
-                {
-                    yield return stat;
-                }
+                return context.UrlFileIndexStats
+                    .Where(o => o.Word == word)
+                    .GroupBy(o => o.UrlFileId)
+                    .ToDictionary(o => o.Key, o => o.SingleOrDefault());
+            }
+        }
+
+        public IEnumerable<UrlFileIndexStat> LoadByWord(string word)
+        {
+            foreach (var item in mCache.Get(word))
+            {
+                yield return item.Value;
             }
         }
 
@@ -31,11 +46,7 @@ namespace XiaoyaStore.Store
 
         public UrlFileIndexStat LoadByWordInUrlFile(int urlFileId, string word)
         {
-            using (var context = NewContext())
-            {
-                return context.UrlFileIndexStats
-                    .SingleOrDefault(o => o.Word == word && o.UrlFileId == urlFileId);
-            }
+            return mCache.Get(word)[urlFileId];
         }
 
         public int CountWordInUrlFile(int urlFileId)

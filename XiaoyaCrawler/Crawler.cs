@@ -27,14 +27,11 @@ namespace XiaoyaCrawler
         protected IParser mParser;
         protected ISimilarContentManager mSimilarContentJudger;
         protected List<IUrlFilter> mUrlFilters;
-
-        protected SemaphoreSlim mFetchSemaphore;
-        protected object mSyncLock = new object();
-
         protected CancellationTokenSource mCancellationTokenSource;
-        protected ConcurrentBag<Task> mTasks = new ConcurrentBag<Task>();
 
-        protected int mFetchCount;
+        private SemaphoreSlim mFetchSemaphore;
+        private object mSyncLock = new object();
+        private ConcurrentBag<Task> mTasks = new ConcurrentBag<Task>();
 
         /// <summary>
         /// Logger
@@ -95,7 +92,7 @@ namespace XiaoyaCrawler
                         // Filter urls
                         foreach (var filter in mUrlFilters)
                         {
-                            parseResult.Urls = filter.Filter(parseResult.Urls);
+                            parseResult.Urls = filter.Filter(parseResult.Urls).Distinct();
                         }
                         // Add newly-found urls
                         foreach (var parsedUrl in parseResult.Urls)
@@ -104,8 +101,6 @@ namespace XiaoyaCrawler
                         }
                         // Push back this url
                         mUrlFrontier.PushBackUrl(url);
-
-                        mFetchCount++;
                     }
                     catch (NotSupportedException)
                     {
@@ -154,7 +149,6 @@ namespace XiaoyaCrawler
             }
 
             mTasks.Clear();
-            mFetchCount = 0;
             mFetchSemaphore = new SemaphoreSlim(mConfig.MaxFetchingConcurrency);
 
             mCancellationTokenSource = new CancellationTokenSource();

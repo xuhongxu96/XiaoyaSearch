@@ -17,11 +17,6 @@ namespace XiaoyaCrawler.UrlFrontier
         protected CrawlerConfig mConfig;
 
         /// <summary>
-        /// Sync lock
-        /// </summary>
-        private object mSyncLock = new object();
-
-        /// <summary>
         /// Constructor
         /// </summary>
         /// <param name="config">Crawler config</param>

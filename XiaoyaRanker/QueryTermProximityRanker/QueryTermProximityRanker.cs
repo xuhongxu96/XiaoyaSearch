@@ -75,7 +75,8 @@ namespace XiaoyaRanker.QueryTermProximityRanker
                     {
                         var currentPointer = pointers[i];
                         if (currentPointer + 1 < wordPositions[i].Count
-                            && (movePointerIndex == -1 || currentPointer < pointers[movePointerIndex]))
+                            && (movePointerIndex == -1 
+                            || wordPositions[i][currentPointer] < wordPositions[movePointerIndex][pointers[movePointerIndex]]))
                         {
                             movePointerIndex = i;
                         }

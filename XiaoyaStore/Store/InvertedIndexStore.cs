@@ -9,13 +9,43 @@ using Microsoft.EntityFrameworkCore;
 using static XiaoyaStore.Data.Model.InvertedIndex;
 using System.Data.SqlClient;
 using XiaoyaStore.Helper;
+using XiaoyaStore.Cache;
+using System.Collections.Concurrent;
 
 namespace XiaoyaStore.Store
 {
     public class InvertedIndexStore : BaseStore, IInvertedIndexStore
     {
+        protected object mSyncLock = new object();
+
+        public struct CacheIndex
+        {
+            public int urlFileId;
+            public string word;
+            public InvertedIndexType indexType;
+        }
+
+        protected DictionaryCache<CacheIndex, IReadOnlyList<InvertedIndex>> mCache;
+
         public InvertedIndexStore(DbContextOptions options = null) : base(options)
-        { }
+        {
+            mCache = new DictionaryCache<CacheIndex, IReadOnlyList<InvertedIndex>>(
+                TimeSpan.FromDays(5),
+                GetCache);
+        }
+
+        protected IReadOnlyList<InvertedIndex> GetCache(CacheIndex cacheIndex)
+        {
+            using (var context = NewContext())
+            {
+                return context.InvertedIndices
+                   .Where(o => o.UrlFileId == cacheIndex.urlFileId)
+                   .Where(o => o.Word == cacheIndex.word)
+                   .Where(o => o.IndexType == cacheIndex.indexType)
+                   .OrderBy(o => o.Position)
+                   .ToList().AsReadOnly();
+            }
+        }
 
         protected double CalculateWeight(UrlFile urlFile, string word, long wordFrequency, int minPosition)
         {
@@ -40,39 +70,39 @@ namespace XiaoyaStore.Store
 
         public void ClearAndSaveInvertedIndices(int urlFileId, IEnumerable<InvertedIndex> invertedIndices)
         {
-            try
+            using (var context = NewContext())
             {
-                using (var context = NewContext())
+                var urlFile = context.UrlFiles.SingleOrDefault(o => o.UrlFileId == urlFileId);
+                if (urlFile == null)
                 {
-                    var urlFile = context.UrlFiles.SingleOrDefault(o => o.UrlFileId == urlFileId);
-                    if (urlFile == null)
+                    return;
+                }
+                var toBeRemovedIndices = from o in context.InvertedIndices
+                                         where o.UrlFileId == urlFileId
+                                         select o;
+                var toBeRemovedUrlFileIndexStats = from o in context.UrlFileIndexStats
+                                                   where o.UrlFileId == urlFileId
+                                                   select o;
+                context.RemoveRange(toBeRemovedIndices);
+                context.RemoveRange(toBeRemovedUrlFileIndexStats);
+
+                context.InvertedIndices.AddRange(invertedIndices);
+
+                var urlFileIndexStats = invertedIndices
+                    .GroupBy(o => o.Word)
+                    .Select(g => new UrlFileIndexStat
                     {
-                        return;
-                    }
-                    var toBeRemovedIndices = from o in context.InvertedIndices
-                                             where o.UrlFileId == urlFileId
-                                             select o;
-                    var toBeRemovedUrlFileIndexStats = from o in context.UrlFileIndexStats
-                                                       where o.UrlFileId == urlFileId
-                                                       select o;
-                    context.RemoveRange(toBeRemovedIndices);
-                    context.RemoveRange(toBeRemovedUrlFileIndexStats);
+                        UrlFileId = urlFileId,
+                        Word = g.Key,
+                        WordFrequency = g.Count(),
+                        Weight = CalculateWeight(urlFile, g.Key, g.Count(), g.Min(o => o.Position)),
+                    });
 
-                    context.InvertedIndices.AddRange(invertedIndices);
+                context.UrlFileIndexStats.AddRange(urlFileIndexStats);
 
-                    var urlFileIndexStats = invertedIndices
-                        .GroupBy(o => o.Word)
-                        .Select(g => new UrlFileIndexStat
-                        {
-                            UrlFileId = urlFileId,
-                            Word = g.Key,
-                            WordFrequency = g.Count(),
-                            Weight = CalculateWeight(urlFile, g.Key, g.Count(), g.Min(o => o.Position)),
-                        });
-
-                    context.UrlFileIndexStats.AddRange(urlFileIndexStats);
-
-                    if (!context.Database.IsSqlServer())
+                if (!context.Database.IsSqlServer())
+                {
+                    lock (mSyncLock)
                     {
                         var toBeRemovedWordCountDict = toBeRemovedUrlFileIndexStats.ToDictionary(o => o.Word, o => o.WordFrequency);
                         var wordCountDict = urlFileIndexStats.ToDictionary(o => o.Word, o => o.WordFrequency);
@@ -121,25 +151,21 @@ namespace XiaoyaStore.Store
                             stat.WordFrequency += frequencyDelta;
                         }
 
+                        context.UrlFiles.Single(o => o.UrlFileId == urlFileId).IndexStatus
+                            = UrlFile.UrlFileIndexStatus.Indexed;
+
+                        context.SaveChanges();
+
+                        return;
                     }
-
-                    context.UrlFiles.Single(o => o.UrlFileId == urlFileId).IndexStatus
-                    = UrlFile.UrlFileIndexStatus.Indexed;
-
-                    context.SaveChanges();
                 }
-            }
-            catch (Exception)
-            {
-                using (var context = NewContext())
-                {
-                    context.UrlFiles.Single(o => o.UrlFileId == urlFileId).IndexStatus
-                        = UrlFile.UrlFileIndexStatus.NotIndexed;
 
-                    context.SaveChanges();
-                }
-                throw;
+                context.UrlFiles.Single(o => o.UrlFileId == urlFileId).IndexStatus
+                = UrlFile.UrlFileIndexStatus.Indexed;
+
+                context.SaveChanges();
             }
+
         }
 
         public void ClearAndSaveInvertedIndices(UrlFile urlFile, IEnumerable<InvertedIndex> invertedIndices)
@@ -182,17 +208,12 @@ namespace XiaoyaStore.Store
         {
             using (var context = NewContext())
             {
-                var indices = context.InvertedIndices
-                    .Where(o => o.UrlFileId == urlFileId)
-                    .Where(o => o.Word == word)
-                    .Where(o => o.IndexType == indexType)
-                    .OrderBy(o => o.Position);
-                //.FromSql($"SELECT * FROM dbo.InvertedIndices WHERE UrlFileId = {urlFileId} AND Word = '{word}' AND IndexType = {(int)indexType} ORDER BY Position");
-
-                foreach (var index in indices)
+                return mCache.Get(new CacheIndex
                 {
-                    yield return index;
-                }
+                    urlFileId = urlFileId,
+                    word = word,
+                    indexType = indexType,
+                });
             }
         }
 
@@ -206,29 +227,15 @@ namespace XiaoyaStore.Store
             using (var context = NewContext())
             {
                 return context.InvertedIndices
-                .Where(o => o.UrlFileId == urlFileId && o.IndexType == indexType && o.Position <= position)
-                .OrderByDescending(o => o.Position)
-                .FirstOrDefault();
+                    .Where(o => o.UrlFileId == urlFileId && o.IndexType == indexType && o.Position <= position)
+                    .OrderByDescending(o => o.Position)
+                    .FirstOrDefault();
             }
         }
 
         public InvertedIndex LoadByUrlFilePosition(UrlFile urlFile, int position, InvertedIndexType indexType = InvertedIndexType.Body)
         {
             return LoadByUrlFilePosition(urlFile.UrlFileId, position);
-        }
-
-        public int CountTitleIndexInUrlFile(int urlFileId)
-        {
-            using (var context = NewContext())
-            {
-                return context.InvertedIndices
-                    .Count(o => o.UrlFileId == urlFileId && o.IndexType == InvertedIndexType.Title);
-            }
-        }
-
-        public int CountTitleIndexInUrlFile(UrlFile urlFile)
-        {
-            return CountTitleIndexInUrlFile(urlFile.UrlFileId);
         }
     }
 }
