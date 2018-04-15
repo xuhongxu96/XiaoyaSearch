@@ -30,8 +30,6 @@ GROUP BY Word");
         *
         * 
         * 
-            ALTER DATABASE DBNAME COLLATE Chinese_PRC_90_CI_AS_SC
-        * 
         */
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

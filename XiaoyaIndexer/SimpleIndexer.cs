@@ -79,8 +79,15 @@ namespace XiaoyaIndexer
                     {
                         UrlFile = urlFile
                     };
-  
-                    IList<Token> tokens = parser.GetTokensAsync().GetAwaiter().GetResult();
+
+                    var links = mConfig.LinkStore.LoadByUrl(urlFile.Url)
+                        .Select(o => new LinkInfo
+                        {
+                            Text = o.Text,
+                            Url = o.Url,
+                        });
+
+                    IList<Token> tokens = parser.GetTokensAsync(links).GetAwaiter().GetResult();
 
                     var invertedIndices = from token in tokens
                                           select new InvertedIndex

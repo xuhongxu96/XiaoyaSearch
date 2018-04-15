@@ -40,6 +40,7 @@ namespace XiaoyaIndexerInterface
             {
                 LogDirectory = arguments.LogDir,
                 UrlFileStore = new UrlFileStore(options),
+                LinkStore = new LinkStore(options),
                 InvertedIndexStore = new InvertedIndexStore(options),
                 MaxIndexingConcurrency = int.Parse(arguments.ThreadCount),
             };

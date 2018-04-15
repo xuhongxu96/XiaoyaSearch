@@ -50,6 +50,24 @@ namespace XiaoyaStore.Migrations
                     b.ToTable("InvertedIndices");
                 });
 
+            modelBuilder.Entity("XiaoyaStore.Data.Model.Link", b =>
+                {
+                    b.Property<int>("LinkId")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Text");
+
+                    b.Property<string>("Url");
+
+                    b.Property<int>("UrlFileId");
+
+                    b.HasKey("LinkId");
+
+                    b.HasIndex("Url");
+
+                    b.ToTable("Links");
+                });
+
             modelBuilder.Entity("XiaoyaStore.Data.Model.UrlFile", b =>
                 {
                     b.Property<int>("UrlFileId")
@@ -74,6 +92,8 @@ namespace XiaoyaStore.Migrations
 
                     b.Property<string>("MimeType")
                         .IsConcurrencyToken();
+
+                    b.Property<double>("PageRank");
 
                     b.Property<string>("Title");
 

@@ -13,5 +13,6 @@ namespace XiaoyaIndexer.Config
 
         public IUrlFileStore UrlFileStore { get; set; }
         public IInvertedIndexStore InvertedIndexStore { get; set; }
+        public ILinkStore LinkStore { get; set; }
     }
 }

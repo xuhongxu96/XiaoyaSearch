@@ -86,9 +86,15 @@ namespace XiaoyaFileParser.Parsers
                 });
             }
 
-            var links = await GetLinksAsync();
+            return result;
+        }
+
+        public virtual async Task<IList<Token>> GetTokensAsync(IEnumerable<LinkInfo> linkInfos)
+        {
+            var result = await GetTokensAsync();
+
             var positionOffset = 0;
-            foreach (var link in links)
+            foreach (var link in linkInfos)
             {
                 foreach (var segment in mConfig.TextSegmenter.Segment(link.Text))
                 {

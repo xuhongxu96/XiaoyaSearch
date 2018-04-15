@@ -26,6 +26,21 @@ namespace XiaoyaStore.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Links",
+                columns: table => new
+                {
+                    LinkId = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Text = table.Column<string>(nullable: true),
+                    Url = table.Column<string>(nullable: true),
+                    UrlFileId = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Links", x => x.LinkId);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "UrlFileIndexStats",
                 columns: table => new
                 {
@@ -54,6 +69,7 @@ namespace XiaoyaStore.Migrations
                     FilePath = table.Column<string>(nullable: true),
                     IndexStatus = table.Column<int>(nullable: false),
                     MimeType = table.Column<string>(nullable: true),
+                    PageRank = table.Column<double>(nullable: false),
                     Title = table.Column<string>(nullable: true),
                     UpdateIntervalSeconds = table.Column<double>(nullable: false),
                     UpdatedAt = table.Column<DateTime>(nullable: false),
@@ -109,6 +125,11 @@ namespace XiaoyaStore.Migrations
                 columns: new[] { "UrlFileId", "Word", "Position", "IndexType" },
                 unique: true,
                 filter: "[Word] IS NOT NULL");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Links_Url",
+                table: "Links",
+                column: "Url");
 
             migrationBuilder.CreateIndex(
                 name: "IX_UrlFileIndexStats_UrlFileId",
@@ -197,13 +218,15 @@ SELECT
 		SUM(WordFrequency) AS WordFrequency
 FROM dbo.UrlFileIndexStats
 GROUP BY Word");
-
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
                 name: "InvertedIndices");
+
+            migrationBuilder.DropTable(
+                name: "Links");
 
             migrationBuilder.DropTable(
                 name: "UrlFileIndexStats");
