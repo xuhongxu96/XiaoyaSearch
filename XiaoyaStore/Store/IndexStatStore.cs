@@ -12,11 +12,11 @@ namespace XiaoyaStore.Store
 {
     public class IndexStatStore : BaseStore, IIndexStatStore
     {
-        protected DictionaryCache<string, IndexStat> mCache;
+        protected LRUCache<string, IndexStat> mCache;
 
         public IndexStatStore(DbContextOptions options = null) : base(options)
         {
-            mCache = new DictionaryCache<string, IndexStat>(TimeSpan.FromDays(5), GetCache, LoadCaches);
+            mCache = new LRUCache<string, IndexStat>(TimeSpan.FromDays(5), GetCache, LoadCaches, 1_000_000);
         }
 
         public IndexStat LoadByWord(string word)

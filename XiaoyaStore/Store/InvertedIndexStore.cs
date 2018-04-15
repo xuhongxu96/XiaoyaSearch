@@ -25,14 +25,12 @@ namespace XiaoyaStore.Store
             public InvertedIndexType indexType;
         }
 
-        protected DictionaryCache<CacheIndex, IReadOnlyList<InvertedIndex>> mCache;
+        protected LRUCache<CacheIndex, IReadOnlyList<InvertedIndex>> mCache;
 
         public InvertedIndexStore(DbContextOptions options = null) : base(options)
         {
-            mCache = new DictionaryCache<CacheIndex, IReadOnlyList<InvertedIndex>>(
-                TimeSpan.FromDays(5),
-                GetCache/*,
-                LoadCaches*/);
+            mCache = new LRUCache<CacheIndex, IReadOnlyList<InvertedIndex>>(
+                TimeSpan.FromDays(5), GetCache, LoadCaches, 10_000_000);
         }
 
         protected IEnumerable<Tuple<CacheIndex, IReadOnlyList<InvertedIndex>>> LoadCaches()

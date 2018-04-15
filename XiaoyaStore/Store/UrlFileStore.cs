@@ -14,11 +14,11 @@ namespace XiaoyaStore.Store
 {
     public class UrlFileStore : BaseStore, IUrlFileStore
     {
-        protected DictionaryCache<int, UrlFile> mCache;
+        protected LRUCache<int, UrlFile> mCache;
 
         public UrlFileStore(DbContextOptions options = null) : base(options)
         {
-            mCache = new DictionaryCache<int, UrlFile>(TimeSpan.FromDays(1), GetCache);
+            mCache = new LRUCache<int, UrlFile>(TimeSpan.FromDays(1), GetCache, null, 100_000);
         }
 
         protected UrlFile GetCache(int id)

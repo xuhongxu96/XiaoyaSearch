@@ -11,14 +11,15 @@ namespace XiaoyaStore.Store
 {
     public class UrlFileIndexStatStore : BaseStore, IUrlFileIndexStatStore
     {
-        DictionaryCache<string, IReadOnlyDictionary<int, UrlFileIndexStat>> mCache;
+        LRUCache<string, IReadOnlyDictionary<int, UrlFileIndexStat>> mCache;
 
         public UrlFileIndexStatStore(DbContextOptions options = null) : base(options)
         {
-            mCache = new DictionaryCache<string, IReadOnlyDictionary<int, UrlFileIndexStat>>(
+            mCache = new LRUCache<string, IReadOnlyDictionary<int, UrlFileIndexStat>>(
                 TimeSpan.FromDays(5),
                 GetCache,
-                LoadCaches);
+                LoadCaches,
+                10_000_000);
         }
 
         protected IEnumerable<Tuple<string, IReadOnlyDictionary<int, UrlFileIndexStat>>> LoadCaches()
