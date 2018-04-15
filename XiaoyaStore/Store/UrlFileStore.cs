@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using XiaoyaStore.Cache;
 using XiaoyaStore.Data;
 using XiaoyaStore.Data.Model;
 using XiaoyaStore.Helper;
@@ -13,8 +14,20 @@ namespace XiaoyaStore.Store
 {
     public class UrlFileStore : BaseStore, IUrlFileStore
     {
+        protected DictionaryCache<int, UrlFile> mCache;
+
         public UrlFileStore(DbContextOptions options = null) : base(options)
-        { }
+        {
+            mCache = new DictionaryCache<int, UrlFile>(TimeSpan.FromDays(1), GetCache);
+        }
+
+        protected UrlFile GetCache(int id)
+        {
+            using (var context = NewContext())
+            {
+                return context.UrlFiles.SingleOrDefault(o => o.UrlFileId == id);
+            }
+        }
 
         public int Count()
         {
@@ -81,10 +94,7 @@ namespace XiaoyaStore.Store
 
         public UrlFile LoadById(int id)
         {
-            using (var context = NewContext())
-            {
-                return context.UrlFiles.SingleOrDefault(o => o.UrlFileId == id);
-            }
+            return mCache.Get(id);
         }
 
         public UrlFile LoadByUrl(string url)
