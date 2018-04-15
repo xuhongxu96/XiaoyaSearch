@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using XiaoyaFileParser.Model;
 
 namespace XiaoyaCrawler.Parser
 {
@@ -20,6 +21,6 @@ namespace XiaoyaCrawler.Parser
         /// <summary>
         /// Urls in web file
         /// </summary>
-        public IEnumerable<string> Urls { get; set; }
+        public IEnumerable<LinkInfo> Links { get; set; }
     }
 }

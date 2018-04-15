@@ -9,6 +9,7 @@ using XiaoyaStore.Data.Model;
 using AngleSharp.Extensions;
 using System.Text.RegularExpressions;
 using XiaoyaCommon.Helper;
+using System.Linq;
 
 namespace XiaoyaFileParser.Parsers
 {
@@ -24,22 +25,39 @@ namespace XiaoyaFileParser.Parsers
 
         public override async Task<IList<string>> GetUrlsAsync()
         {
-            var content = await GetContentAsync();
+            return (await GetLinksAsync()).Select(o => o.Url).ToList();
+        }
 
-            var result = new List<string>();
-
-            var document = await mParser.ParseAsync(content);
-            var links = document.GetElementsByTagName("a");
-            foreach (var link in links)
+        public override async Task<IList<LinkInfo>> GetLinksAsync()
+        {
+            if (mLinkInfo == null)
             {
-                var href = link.GetAttribute("href");
-                if (Uri.TryCreate(new Uri(UrlFile.Url), href, out Uri absoluteUrl))
+                var content = await GetContentAsync();
+
+                mLinkInfo = new List<LinkInfo>();
+
+                var document = await mParser.ParseAsync(content);
+                var links = document.GetElementsByTagName("a");
+                foreach (var link in links)
                 {
-                    result.Add(absoluteUrl.ToString());
+                    var href = link.GetAttribute("href");
+                    var text = link.Text();
+                    if (text == null)
+                    {
+                        text = "";
+                    }
+                    if (Uri.TryCreate(new Uri(UrlFile.Url), href, out Uri absoluteUrl))
+                    {
+                        mLinkInfo.Add(new LinkInfo
+                        {
+                            Url = absoluteUrl.ToString(),
+                            Text = text,
+                        });
+                    }
                 }
             }
 
-            return result;
+            return mLinkInfo;
         }
 
         public override async Task<string> GetTextContentAsync()

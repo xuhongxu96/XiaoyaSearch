@@ -26,6 +26,7 @@ namespace XiaoyaFileParser.Parsers
             {
                 mUrlFile = value;
                 mContent = null;
+                mLinkInfo = null;
                 mTitle = mUrlFile.Title;
                 mTextContent = mUrlFile.Content;
                 if (new FileInfo(mUrlFile.FilePath).Length > 4 * 1024 * 1024)
@@ -46,6 +47,7 @@ namespace XiaoyaFileParser.Parsers
         protected string mTitle = null;
         protected string mContent = null;
         protected string mTextContent = null;
+        protected List<LinkInfo> mLinkInfo = null;
 
         public TextFileParser() { }
 
@@ -84,6 +86,23 @@ namespace XiaoyaFileParser.Parsers
                 });
             }
 
+            var links = await GetLinksAsync();
+            var positionOffset = 0;
+            foreach (var link in links)
+            {
+                foreach (var segment in mConfig.TextSegmenter.Segment(link.Text))
+                {
+                    result.Add(new Token
+                    {
+                        Text = segment.Text.ToLower(),
+                        Position = positionOffset + segment.Position,
+                        Length = segment.Length,
+                        Type = TokenType.Link,
+                    });
+                }
+                positionOffset += link.Text.Length;
+            }
+
             return result;
         }
 
@@ -118,6 +137,11 @@ namespace XiaoyaFileParser.Parsers
         public virtual async Task<IList<string>> GetUrlsAsync()
         {
             return await Task.Run(() => new List<string>());
+        }
+
+        public virtual async Task<IList<LinkInfo>> GetLinksAsync()
+        {
+            return await Task.Run(() => new List<LinkInfo>());
         }
 
         public virtual async Task<string> GetTitleAsync()

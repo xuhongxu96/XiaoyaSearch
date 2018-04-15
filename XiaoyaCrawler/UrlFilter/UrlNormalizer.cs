@@ -12,7 +12,7 @@ namespace XiaoyaCrawler.UrlFilter
             {
                 var uri = new Uri(url);
                 var result = uri.ToString();
-                if (result.EndsWith("/#"))
+                if (result.EndsWith("#") || result.EndsWith("/"))
                 {
                     result = result.Substring(0, result.Length - 1);
                 }

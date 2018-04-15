@@ -64,6 +64,11 @@ namespace XiaoyaFileParser
             return await mCurrentParser?.GetUrlsAsync();
         }
 
+        public async Task<IList<LinkInfo>> GetLinksAsync()
+        {
+            return await mCurrentParser?.GetLinksAsync();
+        }
+
         public static bool IsSupported(string mimeType)
         {
             switch (mimeType)

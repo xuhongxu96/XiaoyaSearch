@@ -59,7 +59,7 @@ namespace XiaoyaStore.Store
 
         public UrlFileIndexStat LoadByWordInUrlFile(int urlFileId, string word)
         {
-            return mCache.Get(word)[urlFileId];
+            return mCache.Get(word).GetValueOrDefault(urlFileId, null);
         }
 
         public int CountWordInUrlFile(int urlFileId)

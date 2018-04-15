@@ -84,18 +84,29 @@ namespace XiaoyaCrawler
                         urlFile.Title = parseResult.Title;
                         urlFile.Content = parseResult.Content;
 
-                        mConfig.UrlFileStore.Save(urlFile);
+                        urlFile = mConfig.UrlFileStore.Save(urlFile);
 
                         // Judge if there are other files that have similar content as this
                         mSimilarContentJudger.AddContentAsync(url, parseResult.Content);
 
+                        var urls = parseResult.Links.Select(o => o.Url);
+
+                        // Save links
+                        mConfig.LinkStore.ClearAndSaveLinksForUrlFile(urlFile.UrlFileId,
+                            parseResult.Links.Select(o => new Link
+                            {
+                                Text = o.Text,
+                                Url = o.Url,
+                                UrlFileId = urlFile.UrlFileId,
+                            }));
+
                         // Filter urls
                         foreach (var filter in mUrlFilters)
                         {
-                            parseResult.Urls = filter.Filter(parseResult.Urls).Distinct();
+                            urls = filter.Filter(urls).Distinct();
                         }
                         // Add newly-found urls
-                        foreach (var parsedUrl in parseResult.Urls)
+                        foreach (var parsedUrl in urls)
                         {
                             mUrlFrontier.PushUrl(parsedUrl);
                         }
@@ -118,7 +129,7 @@ namespace XiaoyaCrawler
                 {
                     mLogger.LogException(nameof(Crawler), "Failed to crawl url: " + url, e);
                     mErrorLogger.LogException(nameof(Crawler), "Failed to crawl url: " + url, e);
-                    
+
                     // Retry
                     mUrlFrontier.PushBackUrl(url, true);
                 }
@@ -166,7 +177,7 @@ namespace XiaoyaCrawler
 
                     try
                     {
-                       url = mUrlFrontier.PopUrl();
+                        url = mUrlFrontier.PopUrl();
                     }
                     catch (Exception e)
                     {

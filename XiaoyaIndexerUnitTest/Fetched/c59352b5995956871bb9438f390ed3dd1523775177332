@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <link href="http://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+        <link href="http://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+        <!--[if lt IE 9]><script src="http://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script><script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script><![endif]-->        
+        <script src="http://cdn.bootcss.com/jquery/1.12.0/jquery.min.js"></script>
+        <script src="http://cdn.bootcss.com/jquery-validate/1.14.0/jquery.validate.min.js"></script>
+        <script src="http://cdn.bootcss.com/linq.js/2.2.0.2/jquery.linq.min.js"></script>
+        <script src="http://cdn.bootcss.com/knockout/3.4.0/knockout-min.js"></script>
+        <script src="/scripts/dengdu/dengdu.js"></script>
+        <script src="/scripts/dengdu/dengdu.bootstrap.js"></script>
+        <title></title>
+    </head>
+    <body>
+        <style>
+            body {
+                font-family: 'Microsoft YaHei';
+                padding-top: 50px;
+                background-color:#fffffe;
+            }
+        </style>
+        <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+<!-- Docs master nav -->
+<header class="navbar navbar-default navbar-fixed-top" id="top" role="banner">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="http://yz.bnu.edu.cn" class="navbar-brand">北京师范大学研究生招生网</a>
+        </div>
+        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="http://yz.bnu.edu.cn" >首页</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+
+            </ul>
+        </nav>
+    </div>
+</header>
+<div id="logob">
+    <div id="logo" class="container"></div>
+</div>
+<div class="container">
+    <div class="page-header">
+        <h3>
+            <span data-bind="text: '{0}年硕士研究生入学考试{1}成绩查询'.format(zsnd,dwmc)"></span><br/>
+            <small>作弊替考要判刑，考生切勿存侥幸；诚信考研谋幸福，不负寒窗苦读情。</small>
+        </h3>        
+    </div>
+    <div class="row">
+        <div class="col-md-9">
+            <div id="kcap">
+                <h3>成绩查询(请依次输入身份证号、姓名)</h3><hr/>
+                <form class="form" action="/core/ureport/viewer/ss_ks_cjd" method="get" target="_blank">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                            <input type="text" class="form-control" name="zjhm" placeholder="身份证号" vtype="required" data-bind="value: $root.zjhm">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                            <input type="text" class="form-control" name="xm" placeholder="姓名" vtype="required" data-bind="value: $root.xm">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary btn-block" type="submit">
+                            查询
+                        </button>
+                    </div>
+                </form>
+                <div data-bind="if: $root.error">
+                    <p class="h4 text-danger" data-bind="text: error"></p>
+                </div>
+            </div>
+            <div id="sskstbtx">
+                <h3>特别提醒</h3><hr/>
+                <div data-bind="html: cxsm"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    #logob{
+        background-image: url(http://graduate.bnu.edu.cn/cdn/lb.jpg);
+        height:138px;
+        border-bottom:5px solid #990000;
+
+    }
+    #logo{
+        background-image: url(http://graduate.bnu.edu.cn/cdn/li.jpg);
+        background-repeat:no-repeat;
+        height:133px;    
+    }
+    .footer {
+        color: #777;
+        text-align: center;
+        padding: 30px 0;
+        margin-top: 30px;
+        border-top: 1px solid #e5e5e5;
+        background-color: #f5f5f5;
+    }
+</style>
+<footer class="footer">
+    Copyright &copy; 北京师范大学研究生院
+</footer>
+        <script>
+            var url = $.url().attr('path'); var param = $.url().param(); param.model = 1; param._model= Math.random() ; $.ajaxSettings.async = false;
+            $.getJSON(url,param, function(msg) {
+                if (msg.message) alert(msg.message); if (msg.script) eval(msg.script); if (msg.href) window.open(msg.href, msg.target);
+                if (msg.success) {
+                    viewModel = window.ViewModel ? window.ViewModel(msg.data) : msg.data;
+                    try { ko.applyBindings(viewModel); } catch (e) { alert(e.message); }
+                }
+            });
+            $.ajaxSettings.async = true;
+        </script>
+        <script src="http://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    </body>
+</html>

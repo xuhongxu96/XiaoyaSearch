@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>北京师范大学学风建设专题网站</title>
+<link href="images/css/index.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<table width="1001" border="0" align="center" cellpadding="0" cellspacing="0" id="all">
+  <tr>
+    <td height="60" align="left" valign="middle"><table width="1001" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="681">
+        <marquee  scrollAmount=2 direction="left">
+        <span class="red">欢迎您访问北京师范大学学风建设专题网站！</span>
+        </marquee>
+        </td>
+        <td width="320" align="right" valign="middle">
+<form name="dataForm" action="/cms/search/searchResults.jsp" target="_blank" method="post" accept-Charset="utf-8"  onsubmit="document.charset='utf-8';" style="padding:0px;margin:0px;">
+          信息检索 <input name="siteID" size="4" value="45" type = "hidden">
+          <input title="搜索" maxlength=255 size=20  name="query"  class="login" id="search" type="text">
+          <INPUT value="搜索" type=submit name=btnG>&nbsp;&nbsp;
+          </form> 
+        </td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td><TABLE border=0 cellSpacing=0 cellPadding=0 width=1001>
+        <TBODY>
+        <TR>
+          <TD colspan="2"><IMG src="http://xuefeng.bnu.edu.cn/images/top.jpg" width=1001 
+        height=141></TD></TR>
+        <TR>
+          <TD width="701" background=http://xuefeng.bnu.edu.cn/images/top03.jpg>
+<ul class="ul_daohang">
+      <li><A href="index.html">首　页</a></li>
+      <li><A href="http://xuefeng.bnu.edu.cn/zzjg/44161.html">组织机构</a></li>
+      <li><A href="gzzd/index.html">规章制度</a></li>
+      <li><A href="xfgzdt/index.html">学风建设动态</a></li>
+      <li><A href="ssfc/index.html">优秀团队和科学家</a></li>
+    </ul>
+</TD>
+          <TD width="300" background=http://xuefeng.bnu.edu.cn/images/top03.jpg><span class="time1">
+    <SCRIPT language=JavaScript1.2>
+var isnMonth = new
+Array("1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月");
+var isnDay = new
+Array("星期日","星期一","星期二","星期三","星期四","星期五","星期六","星期日");
+today = new Date () ;
+Year=today.getYear();
+Date=today.getDate();
+if (document.all)
+document.write("今天是"+isnMonth[today.getMonth()]+Date+"日　"+isnDay[today.getDay()])
+</SCRIPT>
+</span></TD>
+        </TR>
+    </TBODY></TABLE></td>
+  </tr>  <tr>
+    <td height="28" align="center" valign="top"><table width="1001" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td align="left" valign="top" bgcolor="#FFFFFF">
+        <div class="rightbox0">
+        <div class="newslist">
+        <h2>通知公告　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　<a href="tzgg/index.html" target="_blank">more</a></h2>
+        <ul class="ul_list">
+<li><a href="tzgg/78698.html" target="_blank">            关于上网公布学风建设“三落实、三公开”有关材料的通知 
+    </a><span class="newtime">(2014-05-05)</span></li>
+<li><a href="tzgg/78700.html" target="_blank">            关于开展“高校学风建设专项教育和治理行动(2012-2014... 
+    </a><span class="newtime">(2014-05-05)</span></li>
+<li><a href="tzgg/44999.html" target="_blank">            关于报送高等学校学风建设实施细则的通知 
+    </a><span class="newtime">(2012-05-10)</span></li>
+<li><a href="tzgg/44998.html" target="_blank">            教育部关于进一步贯彻执行国家科研经费管理政策 加强高校科研经... 
+    </a><span class="newtime">(2012-05-10)</span></li>
+            </ul>
+        </div>
+        </div>
+        <div class="rightbox0">
+        <div class="newslist">
+        <h2>学风建设动态　　　　　　　　　　　　　　　　　　　　　　　　　　　　<a href="xfgzdt/index.html" target="_blank">more</a></h2>
+        <ul class="ul_list">
+               <li><a href="xfgzdt/78711.html" target="_blank">            北京师范大学“高校学风建设专项教育和治理行动（2012-20... 
+    </a><span class="newtime">(2014-05-05)</span></li>
+<li><a href="xfgzdt/45140.html" target="_blank">            北京师范大学2011年度学风建设工作报告 
+    </a><span class="newtime">(2012-05-15)</span></li>
+<li><a href="xfgzdt/45002.html" target="_blank">            我校参加科技部科研诚信建设办公室组织的学术不端行为调查处理工... 
+    </a><span class="newtime">(2012-05-10)</span></li>
+<li><a href="xfgzdt/45001.html" target="_blank">            教育部有关负责人就新出台的学风建设文件答记者问 
+    </a><span class="newtime">(2012-05-10)</span></li>
+<li><a href="xfgzdt/45000.html" target="_blank">            教育部开展高校学风建设专项教育和治理行动 
+    </a><span class="newtime">(2012-05-10)</span></li>
+ 
+        </ul>
+        </div>
+        </div>
+        <div class="rightbox10">
+        <div class="newslist">
+        <h2>规章制度　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　<a href="gzzd/index.html">more</a></h2>
+        <ul class="ul_list">
+                <li><a href="gzzd/jybwj/45003.html" target="_blank">            教育部关于进一步加强和改进师德建设的意见 
+    </a><span class="newtime">(2012-05-10)</span></li>
+<li><a href="gzzd/jybwj/44740.html" target="_blank">            教育部关于树立社会主义荣辱观进一步加强学术道德建设的意见 
+    </a><span class="newtime">(2012-04-28)</span></li>
+<li><a href="gzzd/jybwj/44739.html" target="_blank">            教育部关于切实加强和改进高等学校学风建设的实施意见 
+    </a><span class="newtime">(2012-04-28)</span></li>
+<li><a href="gzzd/jybwj/45004.html" target="_blank">            高等学校知识产权保护管理规定 
+    </a><span class="newtime">(2012-05-10)</span></li>
+<li><a href="docs/20120510161421087311.pdf" target="_blank">            高校人文社会科学学术规范指南 
+    </a><span class="newtime">(2012-05-10)</span></li>
+                <li><a href="gzzd/xxwj/44924.html" target="_blank">            北京师范大学处理学术不端行为实施细则 
+    </a><span class="newtime">(2012-05-08)</span></li>
+            </ul>
+        </div>
+        </div>
+        <div class="rightbox10">
+        <div class="newslist">
+        <h2>优秀团队和科学家　　　　　　　　　　　　　　　　　　　　　　　　　　<a href="ssfc/index.html">more</a></h2>
+        <ul class="ul_list">
+                <li><a href="ssfc/yxtd/78716.html" target="_blank">            概率论国家创新群体 
+    </a><span class="newtime">(2014-05-05)</span></li>
+<li><a href="ssfc/yxtd/78714.html" target="_blank">            “流域水环境、水生态与综合管理”国家创新群体 
+    </a><span class="newtime">(2014-05-05)</span></li>
+<li><a href="ssfc/yxtd/78712.html" target="_blank">            “生物多样性的维持机制”国家创新群体 
+    </a><span class="newtime">(2014-05-05)</span></li>
+                <li><a href="ssfc/yxkxj/78704.html" target="_blank">            新中国的人民教育家——记顾明远先生 
+    </a><span class="newtime">(2014-05-05)</span></li>
+<li><a href="ssfc/yxkxj/78706.html" target="_blank">            文化、艺术学科“领路人”——记黄会林教授 
+    </a><span class="newtime">(2014-05-05)</span></li>
+<li><a href="ssfc/yxkxj/78707.html" target="_blank">            注重历史比较研究  探讨文化内在结构——记刘家和先生 
+    </a><span class="newtime">(2014-05-05)</span></li>
+        </ul>
+        </div>
+        </div>
+        </td>
+      </tr>
+      <tr>
+        <td height="50" colspan="3" align="center" valign="middle" bgcolor="#9E0313" class="footer">版权所有&copy; 北京师范大学　网站制作与维护：北京师范大学信息网络中心</br>举报电话：58802191,58803019；电子邮箱：liuna@bnu.edu.cn，zy@bnu.edu.cn；联系人：刘娜，翟宇</td>
+        </tr>
+    </table></td>
+  </tr>
+</table>
+
+</body></html>

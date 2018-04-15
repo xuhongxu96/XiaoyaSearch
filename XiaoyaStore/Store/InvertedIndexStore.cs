@@ -224,15 +224,12 @@ namespace XiaoyaStore.Store
 
         public IEnumerable<InvertedIndex> LoadByWordInUrlFileOrderByPosition(int urlFileId, string word, InvertedIndexType indexType = InvertedIndexType.Body)
         {
-            using (var context = NewContext())
+            return mCache.Get(new CacheIndex
             {
-                return mCache.Get(new CacheIndex
-                {
-                    urlFileId = urlFileId,
-                    word = word,
-                    indexType = indexType,
-                });
-            }
+                urlFileId = urlFileId,
+                word = word,
+                indexType = indexType,
+            });
         }
 
         public IEnumerable<InvertedIndex> LoadByWordInUrlFileOrderByPosition(UrlFile urlFile, string word, InvertedIndexType indexType = InvertedIndexType.Body)

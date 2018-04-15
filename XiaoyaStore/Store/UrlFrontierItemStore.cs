@@ -129,8 +129,13 @@ namespace XiaoyaStore.Store
 
                     context.UrlFrontierItems.Add(item);
 
-                    // Attempt to save changes to the database
-                    context.SaveChanges();
+                    try
+                    {
+                        // Attempt to save changes to the database
+                        context.SaveChanges();
+                    }
+                    catch (DbUpdateException)
+                    { }
                 }
 
                 return item;
@@ -181,9 +186,13 @@ namespace XiaoyaStore.Store
                     item.PlannedTime = DateTime.Now.AddMonths(3);
                 }
 
-                // Attempt to save changes to the database
-                context.SaveChanges();
-
+                try
+                {
+                    // Attempt to save changes to the database
+                    context.SaveChanges();
+                }
+                catch (DbUpdateException)
+                { }
                 return item;
             }
         }
@@ -222,8 +231,12 @@ namespace XiaoyaStore.Store
                 item.IsPopped = true;
                 item.UpdatedAt = DateTime.Now;
 
-                context.SaveChanges();
-
+                try
+                {
+                    context.SaveChanges();
+                }
+                catch (DbUpdateException)
+                { }
                 return item;
             }
         }

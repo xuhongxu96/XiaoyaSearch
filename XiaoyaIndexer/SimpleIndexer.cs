@@ -55,6 +55,8 @@ namespace XiaoyaIndexer
                     return InvertedIndexType.Body;
                 case TokenType.Title:
                     return InvertedIndexType.Title;
+                case TokenType.Link:
+                    return InvertedIndexType.Link;
             }
         }
 

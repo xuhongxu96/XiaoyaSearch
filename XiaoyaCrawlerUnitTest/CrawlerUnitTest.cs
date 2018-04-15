@@ -68,6 +68,7 @@ namespace XiaoyaCrawlerUnitTest
                 },
                 UrlFileStore = new UrlFileStore(options),
                 UrlFrontierItemStore = new UrlFrontierItemStore(options),
+                LinkStore = new LinkStore(options),
                 FetchDirectory = fetchDir,
                 LogDirectory = logDir,
                 MaxFetchingConcurrency = 100,
@@ -112,7 +113,7 @@ namespace XiaoyaCrawlerUnitTest
                 foreach (var line in File.ReadLines(Path.Combine(logDir, "Crawler.log")))
                 {
                     lineNo++;
-                    if (!line.Contains(":") && line.Length <= line.IndexOf(":") + 2) continue;
+                    if (!line.Contains(":") || line.Length <= line.IndexOf(":") + 2) continue;
                     var url = line.Substring(line.IndexOf(":") + 2);
                     if (line.StartsWith("Begin Crawl: "))
                     {

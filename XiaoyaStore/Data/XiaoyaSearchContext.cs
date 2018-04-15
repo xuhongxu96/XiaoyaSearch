@@ -15,6 +15,7 @@ namespace XiaoyaStore.Data
         public DbSet<IndexStat> IndexStats { get; set; }
         public DbSet<UrlFileIndexStat> UrlFileIndexStats { get; set; }
         public DbSet<UrlHostStat> UrlHostStats { get; set; }
+        public DbSet<Link> Links { get; set; }
 
         /*
          * Additional Migration
@@ -107,7 +108,7 @@ GROUP BY Word");
                             .IsUnique();
 
             modelBuilder.Entity<UrlFileIndexStat>()
-                            .HasIndex(o => new { o.Word, o.UrlFileId, o.Weight, o.WordFrequency});
+                            .HasIndex(o => new { o.Word, o.UrlFileId, o.Weight, o.WordFrequency });
 
             modelBuilder.Entity<UrlFileIndexStat>()
                 .HasIndex(o => o.WordFrequency);
@@ -131,6 +132,12 @@ GROUP BY Word");
 
             #endregion
 
+            #region Link
+
+            modelBuilder.Entity<Link>()
+                .HasIndex(o => o.Url);
+
+            #endregion
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

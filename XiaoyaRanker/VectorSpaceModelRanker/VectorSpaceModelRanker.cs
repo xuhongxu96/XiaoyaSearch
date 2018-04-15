@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using XiaoyaCommon.Helper;
 using XiaoyaRanker.Config;
+using static XiaoyaStore.Data.Model.InvertedIndex;
 
 namespace XiaoyaRanker.VectorSpaceModelRanker
 {
@@ -12,6 +13,7 @@ namespace XiaoyaRanker.VectorSpaceModelRanker
         protected RankerConfig mConfig;
         protected const double ContentFactor = 1;
         protected const double TitleFactor = 10;
+        protected const double LinkFactor = 5;
 
         public VectorSpaceModelRanker(RankerConfig config)
         {
@@ -28,6 +30,7 @@ namespace XiaoyaRanker.VectorSpaceModelRanker
                 var titleLength = urlFile.Title.Length + 1;
                 var contentLength = urlFile.Content.Length + 1;
 
+                double linkScore = 0;
                 double titleScore = 0;
                 double score = 0;
                 foreach (var word in words)
@@ -39,6 +42,10 @@ namespace XiaoyaRanker.VectorSpaceModelRanker
                         continue;
                     }
 
+                    var wordFrequencyInTitle = 
+                        mConfig.InvertedIndexStore.LoadByWordInUrlFileOrderByPosition(urlFileId, word, InvertedIndexType.Title).Count();
+                    var wordFrequencyInLinks =
+                        mConfig.InvertedIndexStore.LoadByWordInUrlFileOrderByPosition(urlFileId, word, InvertedIndexType.Link).Count();
                     var wordFrequencyInDocument = urlFileIndexStat.WordFrequency;
 
                     var indexStat = mConfig.IndexStatStore.LoadByWord(word);
@@ -47,14 +54,18 @@ namespace XiaoyaRanker.VectorSpaceModelRanker
                     var wordScore =
                         ScoringHelpers.TfIdf(wordFrequencyInDocument, documentFrequency, documentCount);
 
-                    if (urlFile.Title.Contains(word))
-                    {
-                        titleScore += wordScore * word.Length / titleLength;
-                    }
+                    var titleWordScore =
+                        ScoringHelpers.TfIdf(wordFrequencyInTitle, documentFrequency, documentCount);
+
+                    var linkWordScore =
+                        ScoringHelpers.TfIdf(wordFrequencyInLinks, documentFrequency, documentCount);
+
+                    titleScore += titleWordScore * word.Length / titleLength;
+                    linkScore += linkWordScore;
 
                     score += wordScore * Math.Min(1, (0.3 + word.Length / contentLength));
                 }
-                yield return ContentFactor * score + TitleFactor * titleScore;
+                yield return ContentFactor * score + TitleFactor * titleScore + LinkFactor * linkScore;
             }
         }
     }

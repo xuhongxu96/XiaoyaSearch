@@ -8,7 +8,7 @@ namespace XiaoyaFileParser.Model
     {
         public enum TokenType
         {
-            Title, Body
+            Title, Body, Link
         }
         public string Text { get; set; }
         public int Position { get; set; }

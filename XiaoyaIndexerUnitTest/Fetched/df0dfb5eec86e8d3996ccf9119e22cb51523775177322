@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>北京师范大学研招网</title>
+        <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="author" content="Beijing Normal University" /> 
+        <meta name="description" content="北京师范大学是教育部直属重点大学，是一所以教师教育、教育科学和文理基础学科为主要特色的著名学府。学校的前身是1902年创立的京师大学堂师范馆，1908年改称京师优级师范学堂，独立设校。1912年改名为北京高等师范学校。1923年更名为北京师范大学，成为中国历史上第一所师范大学。1931年、1952年北平女子师范大学、辅仁大学先后并入北京师范大学。" />
+        <script>
+            var _hmt = _hmt || [];
+            (function() {
+                var hm = document.createElement("script");
+                hm.src = "https://hm.baidu.com/hm.js?e85d7e3fab5d4d96143892e9384d8146";
+                var s = document.getElementsByTagName("script")[0]; 
+                s.parentNode.insertBefore(hm, s);
+            })();
+        </script>
+        <!-- Bootstrap -->
+        <link href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+        <link href="http://cdn.bootcss.com/flexslider/2.6.1/flexslider.min.css" rel="stylesheet">
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]><script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script><script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script><![endif]-->
+        <style type="text/css">
+            body {
+                font-family: "微软雅黑";
+            }
+            #header{
+                padding-top:20px;
+                padding-bottom:15px;
+                background-color:#004EA2;
+            }
+            #footer{
+                text-align:center;
+                background-color:#004EA2;
+                color:white;
+                height:60px;
+                line-height:60px;
+                margin-top: 20px;
+            }
+            #nav{
+                margin-bottom:0px;                
+            }
+            #nav a{
+                font-size:16px;
+            }
+            #content{
+                margin-top:20px;
+            }
+            .sidebar{
+                background-color: #f3f9fc;
+                padding:20px 0px 20px 0px;
+            }
+            .sidebar span {
+                width:100%;
+                display:block;
+                text-align: center;
+                margin-top:5px;
+            }
+            .sidebar .morelinks{                
+                color: #BF2501;
+                font-size: 16px;                
+            }
+
+            .flexslider {
+                border:0;
+                margin-bottom:0px; 
+            }
+            .flex-control-nav {
+                display:none;
+            }
+            .article-list {
+                margin-top:10px;
+            }
+            .article-list .boxtitle {
+                border-bottom: 1px solid #c9c9c9;
+                padding-bottom: 10px;
+                margin-bottom:10px;
+            }
+            .article-list .boxtitle .title{
+                font-size: 20px;
+                color: #141414;
+                font-weight: bold;
+            }
+            .article-list .boxtitle .more{
+                position: absolute;
+                right:20px;
+                color:#a9a9a9;
+            }
+            .article-list .boxlist{
+                margin-left:10px;
+            }
+            .article-list .boxlist ul{
+                list-style:none;
+                margin:0;
+                padding:0;
+            }
+            .article-list .boxlist ul li{
+                margin-top:10px;
+            }
+            .article-list .boxcontent{
+                margin-top:20px;
+            }
+            .article-list .boxpager{
+                border-top: 1px solid #c9c9c9;
+                margin-top:10px;
+                padding-top:10px;
+                color:#999;
+            }
+            .my-breadcrumb {
+                margin-top:10px;
+                color:#999;
+            }
+            .my-breadcrumb a {
+                color:#999;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                        <a href="/" style="font-size:2em; color:white;"><img src="/content/style/yz-logo.png" alt="北京师范大学" /></a>
+                    </div>
+                    <div class="col-md-3">
+                        <form name="dataForm" action="/search" method="post" style="margin-top:5px;">
+                            <div class="input-group">                                
+                                <input type="text" name="pattern" class="form-control" placeholder="搜索关键字">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav id="nav" class="navbar navbar-default" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">首页</a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="/list/master" class="dropdown-toggle" data-hover="dropdown">硕士生招生 <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="/list/master_board">最新消息</a></li>
+                                <li><a href="/list/master_brochure">招生简章</a></li>
+                                <li><a href="/list/master_info">历年数据</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="/list/doctor" class="dropdown-toggle" data-hover="dropdown">博士生招生 <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="/list/doctor_board">最新消息</a></li>
+                                <li><a href="/list/doctor_brochure">招生简章</a></li>
+                                <li><a href="/list/doctor_info">历年数据</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/list/gat">港澳台招生</a></li>
+                        <li><a href="http://iso.bnu.edu.cn/" target="_blank">留学生招生</a></li>
+                        <li><a href="/list/open">信息公开</a></li>
+                        <li><a href="/list/faq">常见问题</a></li>
+                        <li><a href="/list/contact">联系我们</a></li> 
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="navbar navbar-bg hidden-md hidden-lg">
+            <div class="container">
+                <div class="row">
+                    <ul class="nav">
+                        <li class="col-sm-4 col-xs-6"><a href="/list/master">硕士生招生</a></li>
+                        <li class="col-sm-4 col-xs-6"><a href="/list/doctor">博士生招生</a></li>
+                        <li class="col-sm-4 col-xs-6"><a href="/list/gat">港澳台招生</a></li>
+                        <li class="col-sm-4 col-xs-6"><a href="/list/foreign">留学生招生</a></li>
+                        <li class="col-sm-4 col-xs-6"><a href="/list/open">信息公开</a></li>
+                        <li class="col-sm-4 col-xs-6"><a href="/list/faq">常见问题</a></li>
+                        <li class="col-sm-4 col-xs-6"><a href="/list/contact">联系我们</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="content" class="container">
+            <div class="row">
+                <div class="col-sm-10">
+    <div class="article-list">
+        <div class="boxtitle">
+            <span class="title" style="font-size:30px;">最新消息</span>
+            <div class="my-breadcrumb">
+                当前位置：<a href="/">首页</a> 
+                <a href="/list/master">&raquo;  硕士生招生</a>
+                <a href="/list/master_board">&raquo;  最新消息</a>
+                &raquo;
+                详细页
+            </div>
+        </div>        
+        <div class="boxcontent">
+            <h4 class="text-center strong">
+                <strong>北京师范大学2018年硕士研究生招生学校复试基本分数线</strong>
+            </h4>
+            <div class="text-center text-muted">发布时间：2018-03-05　<span>阅读 152787 次</span></div>
+            <div class="article-content" style="margin-top:10px;">
+                <p><span class="MsoNormal"> <span style="font-family:仿宋_GB2312;line-height:150%;color:#000000;font-size:12.0000pt;"><span> </span></span> </span> <span class="MsoNormal"></p>
+<p class="MsoNormal" style="text-align:center;" align="center">
+	<br />
+</p>
+<p class="MsoNormal" style="text-indent:24.0000pt;">
+	说明：此复试基本分数线只是我校复试的最低分数要求，接受报考的学部院系可根据整体考试情况、招生计划、学科专业特点等，<b>上调</b>分数要求。考生须同时达到学校复试基本分数线和报考学部院系调整设定的复试分数线，才有资格参加复试。学部院系调整设定的复试分数线和复试办法将于近期公布，请密切留意。
+</p>
+<p class="MsoNormal" style="text-indent:24.0000pt;">
+	&nbsp;
+</p>
+<p class="MsoNormal">
+	<b>一、学校复试基本分数线（学术学位类）</b><b></b> 
+</p>
+<table class="MsoNormalTable" style="width:417.95pt;" align="center">
+	<tbody>
+		<tr>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="217">
+				<span class="MsoNormal"> <b><span style="font-family:仿宋_GB2312;font-size:12pt;">报考学科门类</span></b><b><span style="font-family:仿宋_GB2312;font-size:12pt;"></span></b> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="73">
+				<span class="MsoNormal"> <b><span style="font-family:仿宋_GB2312;font-size:12pt;">政治</span></b><b><span style="font-family:仿宋_GB2312;font-size:12pt;"></span></b> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="65">
+				<span class="MsoNormal"> <b><span style="font-family:仿宋_GB2312;font-size:12pt;">外国语</span></b><b><span style="font-family:仿宋_GB2312;font-size:12pt;"></span></b> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="64">
+				<span class="MsoNormal"> <b><span style="font-family:仿宋_GB2312;font-size:12pt;">业务一</span></b><b><span style="font-family:仿宋_GB2312;font-size:12pt;"></span></b> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="64">
+				<span class="MsoNormal"> <b><span style="font-family:仿宋_GB2312;font-size:12pt;">业务二</span></b><b><span style="font-family:仿宋_GB2312;font-size:12pt;"></span></b> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="72">
+				<span class="MsoNormal"> <b><span style="font-family:仿宋_GB2312;font-size:12pt;">总分</span></b><b><span style="font-family:仿宋_GB2312;font-size:12pt;"></span></b> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="217">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">[01]</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;">哲学</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="73">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">50</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="65">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">50</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="64">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">90</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="64">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">90</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="72">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">340</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="217">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">[02]</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;">经济学</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="73">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">50</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="65">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">50</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="64">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">90</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="64">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">90</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="72">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">340</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="217">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">[03]</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;">法学</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="73">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">50</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="65">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">50</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="64">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">90</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="64">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">90</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="72">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">335</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="217">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">[</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;">04</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;">]教育学（不含</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;">体育学</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;">）</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="73">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">50</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="65">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">50</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="64">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">180</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="64">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">-</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="72">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">315</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="217">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">[05]</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;">文学</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="73">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">50</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="65">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">50</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="64">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">90</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="64">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">90</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="72">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">3</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;">35</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="217">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">[06]</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;">历史学</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="73">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">50</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="65">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">50</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="64">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">180</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="64">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">-</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="72">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">330</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="217">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">[07]</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;">理学</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="73">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">48</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="65">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">48</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="64">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">70</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="64">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">90</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="72">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">295</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="217">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">[08]</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;">工学</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="73">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">48</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="65">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">48</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="64">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">70</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="64">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">90</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="72">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">300</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="217">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">[12]</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;">管理学</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="73">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">5</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;">0</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="65">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">50</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="64">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">90</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="64">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">90</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="72">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">340</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="217">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">[13]</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;">艺术学</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="73">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">48</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="65">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">48</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="64">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">90</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="64">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">90</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="72">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">330</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="217">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">[0403]</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;">体育学</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="73">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">45</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="65">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">45</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="64">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">180</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="64">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">-</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="72">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">300</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p class="MsoNormal" style="text-indent:24.1000pt;text-align:center;" align="center">
+	<b>&nbsp;</b> 
+</p>
+<p class="MsoNormal">
+	<b>二、学校复试基本分数线（专业学位类）</b><b></b> 
+</p>
+<table class="MsoNormalTable" style="width:417.7pt;" align="center">
+	<tbody>
+		<tr>
+			<td colspan="2" style="border:1.0000pt solid windowtext;" valign="center" width="216">
+				<span class="MsoNormal"> <b><span style="font-family:仿宋_GB2312;font-size:12pt;">专业学位类型</span></b><b><span style="font-family:仿宋_GB2312;font-size:12pt;"></span></b> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="75">
+				<span class="MsoNormal"> <b><span style="font-family:仿宋_GB2312;font-size:12pt;">政 治<br />
+或综合</span></b><b><span style="font-family:仿宋_GB2312;font-size:12pt;"></span></b> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <b><span style="font-family:仿宋_GB2312;font-size:12pt;">外语</span></b><b><span style="font-family:仿宋_GB2312;font-size:12pt;"></span></b> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <b><span style="font-family:仿宋_GB2312;font-size:12pt;">业务一</span></b><b><span style="font-family:仿宋_GB2312;font-size:12pt;"></span></b> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <b><span style="font-family:仿宋_GB2312;font-size:12pt;">业务二</span></b><b><span style="font-family:仿宋_GB2312;font-size:12pt;"></span></b> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <b><span style="font-family:仿宋_GB2312;font-size:12pt;">总分</span></b><b><span style="font-family:仿宋_GB2312;font-size:12pt;"></span></b> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="border:1.0000pt solid windowtext;" valign="center" width="216">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">[0252]</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;">应用统计</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="75">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">50</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">50</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">90</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">90</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">350</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="border:1.0000pt solid windowtext;" valign="center" width="216">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">[0351]</span><span style="font-family:仿宋_GB2312;font-size:12pt;">法律</span><span style="font-family:仿宋_GB2312;font-size:12pt;">&nbsp;</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="75">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">50</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">50</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">90</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">90</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">3</span><span style="font-family:仿宋_GB2312;font-size:12pt;">25</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="border:1.0000pt solid windowtext;" valign="center" width="216">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">[0352]</span><span style="font-family:仿宋_GB2312;font-size:12pt;">社会工作</span><span style="font-family:仿宋_GB2312;font-size:12pt;">&nbsp;</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="75">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">50</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">50</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">90</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">90</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">340</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="border:1.0000pt solid windowtext;" valign="center" width="216">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">[0451]</span><span style="font-family:仿宋_GB2312;font-size:12pt;">教育</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="75">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">45</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">45</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">90</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">90</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">300</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="border:1.0000pt solid windowtext;" valign="center" width="216">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">[0452]</span><span style="font-family:仿宋_GB2312;font-size:12pt;">体育</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="75">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">40</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">40</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">180</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">-</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">28</span><span style="font-family:仿宋_GB2312;font-size:12pt;">5</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="border:1.0000pt solid windowtext;" valign="center" width="216">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">[0453]</span><span style="font-family:仿宋_GB2312;font-size:12pt;">汉语国际教育</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="75">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">60</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">60</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">90</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">90</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">36</span><span style="font-family:仿宋_GB2312;font-size:12pt;">0</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="border:1.0000pt solid windowtext;" valign="center" width="216">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">[0454]</span><span style="font-family:仿宋_GB2312;font-size:12pt;">应用心理</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="75">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">48</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">48</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">180</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">-</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">310</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="border:1.0000pt solid windowtext;" valign="center" width="216">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">[0551]</span><span style="font-family:仿宋_GB2312;font-size:12pt;">翻译</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="75">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">50</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">70</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">90</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">90</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">350</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="border:1.0000pt solid windowtext;" valign="center" width="216">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">[0552]</span><span style="font-family:仿宋_GB2312;color:#333333;font-size:12.0000pt;">新闻与传播</span><span style="font-family:仿宋_GB2312;color:#FF0000;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="75">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">60</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">60</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">90</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">90</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">38</span><span style="font-family:仿宋_GB2312;font-size:12pt;">5</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="border:1.0000pt solid windowtext;" valign="center" width="216">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">[0852]</span><span style="font-family:仿宋_GB2312;font-size:12pt;">工程</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="75">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">45</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">45</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">70</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">90</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">300</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td rowspan="3" style="border:1.0000pt solid windowtext;" valign="center" width="131">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">[1251]</span><span style="font-family:仿宋_GB2312;font-size:12pt;">工商管理</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="85">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">A</span><span style="font-family:仿宋_GB2312;font-size:12pt;">线</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="75">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">90</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">45</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">-</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">-</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">167</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="85">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">B</span><span style="font-family:仿宋_GB2312;font-size:12pt;">线</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="75">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">80</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">40</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">-</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">-</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">157</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td colspan="6" style="border:1.0000pt solid windowtext;" valign="center" width="425">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">正常批采用A线，提前批面</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;">试结果为</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;">“</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;">通过</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;">”</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;">者采</span><span style="font-family:仿宋_GB2312;font-size:12pt;">用B线。</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="border:1.0000pt solid windowtext;" valign="center" width="216">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">[1252]</span><span style="font-family:仿宋_GB2312;font-size:12pt;">公共管理</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="75">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">90</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">45</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">-</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">-</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">155</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="border:1.0000pt solid windowtext;" valign="center" width="216">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">[1351]</span><span style="font-family:仿宋_GB2312;color:#333333;font-size:12.0000pt;">艺术</span><span style="font-family:仿宋_GB2312;color:#333333;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="75">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">40</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">40</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">90</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">90</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12pt;">300</span><span style="font-family:仿宋_GB2312;font-size:12pt;"></span> </span> 
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p class="MsoNormal">
+	&nbsp;
+</p>
+<p class="MsoNormal">
+	<b>三、少数民族高层次骨干人才计划复试分数线</b><b></b> 
+</p>
+<table class="MsoNormalTable" style="width:410.85pt;" align="center">
+	<tbody>
+		<tr>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="207">
+				<span class="MsoNormal"> <b><span style="font-family:仿宋_GB2312;font-size:12pt;">类别</span></b><b><span style="font-family:仿宋_GB2312;font-size:12pt;"></span></b> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="75">
+				<span class="MsoNormal"> <b><span style="font-family:仿宋_GB2312;font-size:12pt;">政 治<br>或综合</span></b></span>
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <b><span style="font-family:仿宋_GB2312;font-size:12pt;">外语</span></b><b><span style="font-family:仿宋_GB2312;font-size:12pt;"></span></b> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <b><span style="font-family:仿宋_GB2312;font-size:12pt;">业务一</span></b><b><span style="font-family:仿宋_GB2312;font-size:12pt;"></span></b> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <b><span style="font-family:仿宋_GB2312;font-size:12pt;">业务二</span></b><b><span style="font-family:仿宋_GB2312;font-size:12pt;"></span></b> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <b><span style="font-family:仿宋_GB2312;font-size:12pt;">总分</span></b><b><span style="font-family:仿宋_GB2312;font-size:12pt;"></span></b> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="207">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">四门</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="75">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">40</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">40</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">70</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">70</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">290</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="207">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">三门</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="75">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">40</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">40</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">160</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">-</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">290</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="207">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">公共管理</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;">定向新疆</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;">班</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="75">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">75</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">25</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">-</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">-</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">120</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p class="MsoNormal">
+	&nbsp;
+</p>
+<p class="MsoNormal">
+	<b>四、援藏计划复试分数线</b><b></b> 
+</p>
+<table class="MsoNormalTable" style="width:414.8pt;" align="center">
+	<tbody>
+		<tr>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="191">
+				<span class="MsoNormal"> <b><span style="font-family:仿宋_GB2312;font-size:12pt;">报考学部（院、系）</span></b><b><span style="font-family:仿宋_GB2312;font-size:12pt;"></span></b> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="195">
+				<span class="MsoNormal"> <b><span style="font-family:仿宋_GB2312;font-size:12pt;">报考专业</span></b><b><span style="font-family:仿宋_GB2312;font-size:12pt;"></span></b> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="165">
+				<span class="MsoNormal"> <b><span style="font-family:仿宋_GB2312;font-size:12pt;">总分</span></b><b><span style="font-family:仿宋_GB2312;font-size:12pt;"></span></b> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="191">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">003</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;">马克思主义学院</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="195">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">030505</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;">思想政治教育</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="165">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">290</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="191">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">004</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;">教育学部</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="195">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">040101</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;">教育学原理</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="165">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">255</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="191">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">004教育学部</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="195">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">040102</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;">课程与教学论</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="165">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">255</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="191">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">004</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;">教育学部</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="195">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">040105</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;">学前教育学</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="165">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">255</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="191">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">004</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;">教育学部</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="195">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">040106</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;">高等教育学</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="165">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">255</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p class="MsoNormal">
+	<b>&nbsp;</b> 
+</p>
+<p class="MsoNormal">
+	<b>五、单独考试复试分数线</b><b></b> 
+</p>
+<table class="MsoNormalTable" style="width:410.85pt;" align="center">
+	<tbody>
+		<tr>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="207">
+				<span class="MsoNormal"> <b><span style="font-family:仿宋_GB2312;font-size:12pt;">报考学部（院、系）</span></b><b><span style="font-family:仿宋_GB2312;font-size:12pt;"></span></b> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="75">
+				<span class="MsoNormal"> <b><span style="font-family:仿宋_GB2312;font-size:12pt;">政治</span></b><b><span style="font-family:仿宋_GB2312;font-size:12pt;"></span></b> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <b><span style="font-family:仿宋_GB2312;font-size:12pt;">外语</span></b><b><span style="font-family:仿宋_GB2312;font-size:12pt;"></span></b> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <b><span style="font-family:仿宋_GB2312;font-size:12pt;">业务一</span></b><b><span style="font-family:仿宋_GB2312;font-size:12pt;"></span></b> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <b><span style="font-family:仿宋_GB2312;font-size:12pt;">业务二</span></b><b><span style="font-family:仿宋_GB2312;font-size:12pt;"></span></b> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <b><span style="font-family:仿宋_GB2312;font-size:12pt;">总分</span></b><b><span style="font-family:仿宋_GB2312;font-size:12pt;"></span></b> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="207">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">010</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;">文学院</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="75">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">35</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">35</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">90</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">90</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">315</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="207">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">039地理学部</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="75">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">35</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">35</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">90</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">90</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+			<td style="border:1.0000pt solid windowtext;" valign="center" width="66">
+				<span class="MsoNormal"> <span style="font-family:仿宋_GB2312;font-size:12.0000pt;">290</span><span style="font-family:仿宋_GB2312;font-size:12.0000pt;"></span> </span> 
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p class="MsoNormal">
+	<b>&nbsp;</b> 
+</p>
+<p class="MsoNormal">
+	<b>六</b><b>、退役大学生士兵计划</b><b>复试分数线</b><b></b> 
+</p>
+<p class="MsoNormal" style="text-indent:24.0000pt;">
+	初试成绩总分<span>不低于</span>325分。
+</p>
+<p class="MsoNormal">
+	<b>七</b><b>、</b><b>其他</b><b></b> 
+</p>
+<p class="MsoNormal" style="text-indent:24.0000pt;">
+	<span>北京师范大学对参加</span>“大学生志愿服务西部计划”、“三支一扶计划”、“农村义务教育阶段学校教师特设岗位计划”、“赴外汉语教师志愿者”、“高校学生应征入伍服义务兵役退役”、“选聘高校毕业生到村任职”等其他专项计划/项目，服务期满并考核合格的考生，执行教育部有关加分政策。
+</p>
+<p class="MsoNormal" style="text-indent:24.0000pt;">
+	符合教育部规定、可享受研究生入学考试初试加分政策的考生可于3月9日前向<b>所报考学</b><b>部</b><b>院系</b>提交相关证明材料，我校根据教育部最新文件及名单审核考生资格，符合资格的考生将享受初试成绩总分加分（单科不加分）。
+</p>
+</span><span class="MsoNormal"> <br />
+</span> <span> <br />
+</span> <span class="MsoNormal"> <span style="font-family:仿宋_GB2312;line-height:150%;font-size:12.0000pt;"><span></span></span><b><span style="font-family:仿宋_GB2312;line-height:150%;font-weight:bold;font-size:12.0000pt;"><span></span></span></b><b><span style="font-family:仿宋_GB2312;line-height:150%;font-weight:bold;font-size:12.0000pt;"><span></span></span></b><b><span style="font-family:仿宋_GB2312;line-height:150%;font-weight:bold;font-size:12.0000pt;"><span></span></span></b><span style="font-family:仿宋_GB2312;line-height:150%;font-weight:normal;font-size:12.0000pt;"><span></span></span><span style="font-family:仿宋_GB2312;line-height:150%;font-size:12.0000pt;"><span></span></span><span style="font-family:仿宋_GB2312;line-height:150%;font-size:12.0000pt;"></span> </span>
+
+            </div>
+        </div>
+    </div>
+</div>
+                <div class="col-md-2 col-sm-12">
+                    <div class="sidebar" style="min-height: 300px;">
+                        <div class="col-md-12 col-sm-4 nopadding"> 
+                            <span class="morelinks">常用链接</span>
+                            <span><a href="http://www.bnu.edu.cn" target="_blank">学校主页</a></span>
+                            <span><a href="http://graduate.bnu.edu.cn/" target="_blank">研究生院</a></span>
+                            <span><a href="http://www.bnu.edu.cn/kxyj/" target="_blank">科学研究</a></span>
+                            <span><a href="http://www.bnu.edu.cn/xbyx/" target="_blank">学部院系</a></span>
+                            <span><a href="http://www.bnu.edu.cn/zzjg/" target="_blank">组织机构</a></span>
+                        </div>
+                        <div style="clear:both"></div>
+                    </div>	
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            &copy; 版权所有 北京师范大学　地址：北京市新街口外大街19号　邮编：100875
+            <div class="hide">
+                Site designed by <a target="_blank" href="http://www.equiclouds.com/">等度-积木式构建Web应用</a>
+            </div>
+        </div>
+        <div class="text-center small" style="display:none;">
+
+        </div>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script src="http://cdn.bootcss.com/bootstrap-hover-dropdown/2.2.1/bootstrap-hover-dropdown.min.js"></script>
+        <script src="http://cdn.bootcss.com/flexslider/2.6.1/jquery.flexslider-min.js"></script>
+        <script>
+            // Can also be used with $(document).ready()
+            $(document).ready(function(){
+                $('.flexslider').flexslider({
+                    animation: "slide",
+                    slideshowSpeed: 10000
+                    //controlsContainer: ".flex-container"
+                });
+
+            });
+        </script>
+    </body>
+</html>

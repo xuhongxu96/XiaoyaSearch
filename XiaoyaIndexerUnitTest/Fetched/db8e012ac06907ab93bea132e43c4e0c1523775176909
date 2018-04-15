@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>北京师范大学研招网</title>
+        <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="author" content="Beijing Normal University" /> 
+        <meta name="description" content="北京师范大学是教育部直属重点大学，是一所以教师教育、教育科学和文理基础学科为主要特色的著名学府。学校的前身是1902年创立的京师大学堂师范馆，1908年改称京师优级师范学堂，独立设校。1912年改名为北京高等师范学校。1923年更名为北京师范大学，成为中国历史上第一所师范大学。1931年、1952年北平女子师范大学、辅仁大学先后并入北京师范大学。" />
+        <script>
+            var _hmt = _hmt || [];
+            (function() {
+                var hm = document.createElement("script");
+                hm.src = "https://hm.baidu.com/hm.js?e85d7e3fab5d4d96143892e9384d8146";
+                var s = document.getElementsByTagName("script")[0]; 
+                s.parentNode.insertBefore(hm, s);
+            })();
+        </script>
+        <!-- Bootstrap -->
+        <link href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+        <link href="http://cdn.bootcss.com/flexslider/2.6.1/flexslider.min.css" rel="stylesheet">
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]><script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script><script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script><![endif]-->
+        <style type="text/css">
+            body {
+                font-family: "微软雅黑";
+            }
+            #header{
+                padding-top:20px;
+                padding-bottom:15px;
+                background-color:#004EA2;
+            }
+            #footer{
+                text-align:center;
+                background-color:#004EA2;
+                color:white;
+                height:60px;
+                line-height:60px;
+                margin-top: 20px;
+            }
+            #nav{
+                margin-bottom:0px;                
+            }
+            #nav a{
+                font-size:16px;
+            }
+            #content{
+                margin-top:20px;
+            }
+            .sidebar{
+                background-color: #f3f9fc;
+                padding:20px 0px 20px 0px;
+            }
+            .sidebar span {
+                width:100%;
+                display:block;
+                text-align: center;
+                margin-top:5px;
+            }
+            .sidebar .morelinks{                
+                color: #BF2501;
+                font-size: 16px;                
+            }
+
+            .flexslider {
+                border:0;
+                margin-bottom:0px; 
+            }
+            .flex-control-nav {
+                display:none;
+            }
+            .article-list {
+                margin-top:10px;
+            }
+            .article-list .boxtitle {
+                border-bottom: 1px solid #c9c9c9;
+                padding-bottom: 10px;
+                margin-bottom:10px;
+            }
+            .article-list .boxtitle .title{
+                font-size: 20px;
+                color: #141414;
+                font-weight: bold;
+            }
+            .article-list .boxtitle .more{
+                position: absolute;
+                right:20px;
+                color:#a9a9a9;
+            }
+            .article-list .boxlist{
+                margin-left:10px;
+            }
+            .article-list .boxlist ul{
+                list-style:none;
+                margin:0;
+                padding:0;
+            }
+            .article-list .boxlist ul li{
+                margin-top:10px;
+            }
+            .article-list .boxcontent{
+                margin-top:20px;
+            }
+            .article-list .boxpager{
+                border-top: 1px solid #c9c9c9;
+                margin-top:10px;
+                padding-top:10px;
+                color:#999;
+            }
+            .my-breadcrumb {
+                margin-top:10px;
+                color:#999;
+            }
+            .my-breadcrumb a {
+                color:#999;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                        <a href="/" style="font-size:2em; color:white;"><img src="/content/style/yz-logo.png" alt="北京师范大学" /></a>
+                    </div>
+                    <div class="col-md-3">
+                        <form name="dataForm" action="/search" method="post" style="margin-top:5px;">
+                            <div class="input-group">                                
+                                <input type="text" name="pattern" class="form-control" placeholder="搜索关键字">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav id="nav" class="navbar navbar-default" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">首页</a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="/list/master" class="dropdown-toggle" data-hover="dropdown">硕士生招生 <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="/list/master_board">最新消息</a></li>
+                                <li><a href="/list/master_brochure">招生简章</a></li>
+                                <li><a href="/list/master_info">历年数据</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="/list/doctor" class="dropdown-toggle" data-hover="dropdown">博士生招生 <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="/list/doctor_board">最新消息</a></li>
+                                <li><a href="/list/doctor_brochure">招生简章</a></li>
+                                <li><a href="/list/doctor_info">历年数据</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/list/gat">港澳台招生</a></li>
+                        <li><a href="http://iso.bnu.edu.cn/" target="_blank">留学生招生</a></li>
+                        <li><a href="/list/open">信息公开</a></li>
+                        <li><a href="/list/faq">常见问题</a></li>
+                        <li><a href="/list/contact">联系我们</a></li> 
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="navbar navbar-bg hidden-md hidden-lg">
+            <div class="container">
+                <div class="row">
+                    <ul class="nav">
+                        <li class="col-sm-4 col-xs-6"><a href="/list/master">硕士生招生</a></li>
+                        <li class="col-sm-4 col-xs-6"><a href="/list/doctor">博士生招生</a></li>
+                        <li class="col-sm-4 col-xs-6"><a href="/list/gat">港澳台招生</a></li>
+                        <li class="col-sm-4 col-xs-6"><a href="/list/foreign">留学生招生</a></li>
+                        <li class="col-sm-4 col-xs-6"><a href="/list/open">信息公开</a></li>
+                        <li class="col-sm-4 col-xs-6"><a href="/list/faq">常见问题</a></li>
+                        <li class="col-sm-4 col-xs-6"><a href="/list/contact">联系我们</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="content" class="container">
+            <div class="row">
+                <div class="col-sm-10">
+    <div class="article-list">
+        <div class="boxtitle">
+            <span class="title" style="font-size:30px;">招生简章</span>
+            <div class="my-breadcrumb">
+                当前位置：<a href="/">首页</a> 
+                <a href="/list/master">&raquo;  硕士生招生</a>
+                <a href="/list/master_brochure">&raquo;  招生简章</a>
+                &raquo;
+                详细页
+            </div>
+        </div>        
+        <div class="boxcontent">
+            <h4 class="text-center strong">
+                <strong>2018年专业学位硕士研究生招生简章一览表</strong>
+            </h4>
+            <div class="text-center text-muted">发布时间：2017-09-18　<span>阅读 146927 次</span></div>
+            <div class="article-content" style="margin-top:10px;">
+                <table class="MsoNormalTable" style="width:554.25pt;" align="center">
+	<tbody align="center">
+		<tr>
+			<td width="46" valign="center" rowspan="2" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">类别码</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="64" valign="center" rowspan="2" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">类别名称</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="65" valign="center" rowspan="2" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">专业代码</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="165" valign="center" rowspan="2" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">专业名称</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="91" valign="center" rowspan="2" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">招生学部 &nbsp;（院、系）</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="42" valign="center" rowspan="2" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">招生人数</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="122" valign="center" rowspan="2" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">学习方式</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="72" valign="center" rowspan="2" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">是否接收推免生</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="72" valign="center" rowspan="2" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">简章链接</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+		</tr>
+		<tr>
+		</tr>
+		<tr>
+			<td width="46" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">0252</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="294" valign="center" colspan="3" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">应用统计硕士</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="91" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">统计学院</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="42" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">60</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="122" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">全日制和非全日制</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="72" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">接收</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="72" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;"><a href="/content/zyml/2018/zyxwjz_yxsm-034_zydm-0252.html">招生简章</a></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td width="46" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">0351</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="64" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">法律硕士</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="65" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">035101</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="165" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">法律（非法学）</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="91" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">法学院</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="42" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">180</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="122" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">全日制和非全日制</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="72" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">接收</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="72" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;"><a href="/content/zyml/2018/zyxwjz_yxsm-005_zydm-0351.html">招生简章</a></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td width="46" valign="center" rowspan="2" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">0352</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="294" valign="center" colspan="3" rowspan="2" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">社会工作硕士</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="91" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">社会发展与公共政策学院</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="42" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">50</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="122" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">全日制和非全日制</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="72" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">接收</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="72" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;"><a href="/content/zyml/2018/zyxwjz_yxsm-025_zydm-0352.html">招生简章</a></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td width="91" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">社会学院</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="42" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">30</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="122" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">全日制和非全日制</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="72" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">接收</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="72" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;"><a href="/content/zyml/2018/zyxwjz_yxsm-036_zydm-0352.html">招生简章</a></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td width="46" valign="center" rowspan="15" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">0451</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="64" valign="center" rowspan="15" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">教育硕士</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="65" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">045101</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="165" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">教育管理</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="91" valign="center" rowspan="15" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">教育学部</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="42" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">35</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="122" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">全日制和非全日制</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="72" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">不接受</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="72" valign="center" rowspan="15" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;"><a href="/content/zyml/2018/zyxwjz_yxsm-004_zydm-0451.html">招生简章</a></span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td width="65" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">045102</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="165" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">学科教学（思政）</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="42" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">10</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="122" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">非全日制</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="72" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">不接受</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td width="65" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">045103</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="165" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">学科教学（语文）</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="42" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">35</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="122" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">全日制和非全日制</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="72" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">接收</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td width="65" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">045104</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="165" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">学科教学（数学）</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="42" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">15</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="122" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">全日制</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="72" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">接收</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td width="65" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">045105</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="165" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">学科教学（物理）</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="42" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">10</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="122" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">非全日制</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="72" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">不接受</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td width="65" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">045106</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="165" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">学科教学（化学）</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="42" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">10</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="122" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">非全日制</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="72" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">不接受</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td width="65" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">045107</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="165" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">学科教学（生物）</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="42" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">10</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="122" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">非全日制</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="72" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">不接受</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td width="65" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">045108</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="165" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">学科教学（英语）</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="42" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">15</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="122" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">全日制</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="72" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">接收</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td width="65" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">045109</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="165" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">学科教学（历史）</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="42" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">10</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="122" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">非全日制</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="72" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">不接受</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td width="65" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">045110</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="165" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">学科教学（地理）</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="42" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">10</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="122" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">非全日制</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="72" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">不接受</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td width="65" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">045115</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="165" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">小学教育</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="42" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">25</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="122" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">全日制</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="72" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">接收</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td width="65" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">045116</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="165" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">心理健康教育</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="42" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">20</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="122" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">全日制</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="72" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">接收</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td width="65" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">045117</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="165" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">科学与技术教育</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="42" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">15</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="122" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">全日制</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="72" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">接收</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td width="65" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">045118</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="165" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">学前教育</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="42" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">40</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="122" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">全日制和非全日制</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="72" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">接收</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td width="65" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">045119</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="165" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">特殊教育</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="42" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">15</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="122" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">全日制</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="72" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">接收</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td width="46" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">0452</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="64" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">体育硕士</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="65" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">045201</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="165" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">体育教学</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="91" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">体育与运动学院</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="42" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">75</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="122" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">全日制和非全日制</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="72" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">接收</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="72" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;"><a href="/content/zyml/2018/zyxwjz_yxsm-009_zydm-0452.html">招生简章</a></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td width="46" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">0453</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="294" valign="center" colspan="3" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">汉语国际教育硕士</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="91" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">汉语文化学院</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="42" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">100</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="122" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">全日制和非全日制</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="72" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">接收</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="72" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;"><a href="/content/zyml/2018/zyxwjz_yxsm-032_zydm-0453.html">招生简章</a></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td width="46" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">0454</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="294" valign="center" colspan="3" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">应用心理硕士</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="91" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">心理学部</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="42" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">200</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="122" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">非全日制</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="72" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">接收</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="72" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;"><a href="/content/zyml/2018/zyxwjz_yxsm-038_zydm-0454.html">招生简章</a></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td width="46" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">0551</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="294" valign="center" colspan="3" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">英语笔译</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="91" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">外国语言文学学院</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="42" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">60</span><span style="font-family:宋体;font-size:10.5pt;"></span></span> 
+			</td>
+			<td width="122" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">全日制和非全日制</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="72" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">接收</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="72" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;"><a href="/content/zyml/2018/zyxwjz_yxsm-011_zydm-0551.html">招生简章</a></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td width="46" valign="center" rowspan="4" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">1351</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="64" valign="center" rowspan="4" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">艺术硕士</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="65" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">135101</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="165" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">音乐</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="91" valign="center" rowspan="4" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">艺术与传媒学院</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="42" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">27</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="122" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">全日制</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="72" valign="center" rowspan="4" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">接收</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="72" valign="center" rowspan="4" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;"><a href="/content/zyml/2018/zyxwjz_yxsm-029_zydm-1351.html">招生简章</a></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td width="65" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">135105</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="165" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">广播电视（含数字艺术）</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="42" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">55</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="122" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">全日制和非全日制</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td width="65" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">135106</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="165" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">舞蹈</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="42" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">26</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="122" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">全日制和非全日制</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td width="65" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">135107</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="165" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">美术（含书法）</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="42" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">27</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="122" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">全日制</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td width="46" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">0552</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="294" valign="center" colspan="3" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">新闻与传播硕士</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="91" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">新闻传播学院</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="42" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">40</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="122" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">全日制和非全日制</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="72" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">接收</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="72" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;"><a href="/content/zyml/2018/zyxwjz_yxsm-037_zydm-0552.html">招生简章</a></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td width="46" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">1251</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="294" valign="center" colspan="3" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">工商管理硕士</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="91" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">经济与工商管理学院</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="42" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">200</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="122" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">非全日制</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="72" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">不接收</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="72" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;"><a href="/content/zyml/2018/zyxwjz_yxsm-002_zydm-1251.html">招生简章</a></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td width="46" valign="center" rowspan="2" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">1252</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="294" valign="center" colspan="3" rowspan="2" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">公共管理硕士</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="91" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">政府管理学院</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="42" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">180</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="122" valign="center" rowspan="2" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">非全日制</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="72" valign="center" rowspan="2" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">不接收</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="72" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;"><a href="/content/zyml/2018/zyxwjz_yxsm-006_zydm-1252.html">招生简章</a></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td width="91" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">社会发展与公共政策学院</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="42" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">55</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="72" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;"><a href="/content/zyml/2018/zyxwjz_yxsm-025_zydm-1252.html">招生简章</a></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td width="46" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">0852</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="64" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">工程硕士</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="65" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">085202</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="165" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">软件工程</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="91" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">信息科学与技术学院</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="42" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">35</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="122" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">全日制和非全日制</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="72" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">接收</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="72" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;"><a href="/content/zyml/2018/zyxwjz_yxsm-018_zydm-0852.html">招生简章</a></span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td width="46" valign="center" rowspan="5" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">0451</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="64" valign="center" rowspan="5" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">教育硕士</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="65" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">045102</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="165" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">学科教学（思政）</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="91" valign="center" rowspan="6" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">研究生院珠海分院</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="42" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">30</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="122" valign="center" rowspan="5" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">全日制</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="72" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">不接收</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="72" valign="center" rowspan="5" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;"><a href="/content/zyml/2018/zyxwjz_yxsm-033_zydm-0451.html">招生简章</a></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td width="65" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">045103</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="165" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">学科教学（语文）</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="42" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">30</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="72" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">接收</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td width="65" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">045104</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="165" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">学科教学（数学）</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="42" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">30</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="72" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">接收</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td width="65" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">045108</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="165" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">学科教学（英语）</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="42" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">30</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="72" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">接收</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td width="65" valign="center" style="border:none;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">045116</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="165" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">心理健康教育</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="42" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">30</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="72" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">接收</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td width="46" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">1252</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="294" valign="center" colspan="3" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">公共管理硕士</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="42" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">30</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="122" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;">非全日制</span><span style="font-family:宋体;font-size:10.5pt;"></span> </span> 
+			</td>
+			<td width="72" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:11pt;">不接受</span><span style="font-family:宋体;font-size:11pt;"></span> </span> 
+			</td>
+			<td width="72" valign="center" style="border:1.5000pt solid #000000;">
+				<span class="MsoNormal" style="vertical-align:middle;"> <span style="font-family:宋体;font-size:10.5pt;"><a href="/content/zyml/2018/zyxwjz_yxsm-033_zydm-1252.html">招生简章</a></span> </span> 
+			</td>
+		</tr>
+	</tbody>
+</table>
+<span class="MsoNormal"> &nbsp; </span> 
+<p class="MsoNormal">
+	注：我校免费师范毕业生攻读教育硕士也属于专业学位硕士，简章另行公布。
+</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+                <div class="col-md-2 col-sm-12">
+                    <div class="sidebar" style="min-height: 300px;">
+                        <div class="col-md-12 col-sm-4 nopadding"> 
+                            <span class="morelinks">常用链接</span>
+                            <span><a href="http://www.bnu.edu.cn" target="_blank">学校主页</a></span>
+                            <span><a href="http://graduate.bnu.edu.cn/" target="_blank">研究生院</a></span>
+                            <span><a href="http://www.bnu.edu.cn/kxyj/" target="_blank">科学研究</a></span>
+                            <span><a href="http://www.bnu.edu.cn/xbyx/" target="_blank">学部院系</a></span>
+                            <span><a href="http://www.bnu.edu.cn/zzjg/" target="_blank">组织机构</a></span>
+                        </div>
+                        <div style="clear:both"></div>
+                    </div>	
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            &copy; 版权所有 北京师范大学　地址：北京市新街口外大街19号　邮编：100875
+            <div class="hide">
+                Site designed by <a target="_blank" href="http://www.equiclouds.com/">等度-积木式构建Web应用</a>
+            </div>
+        </div>
+        <div class="text-center small" style="display:none;">
+
+        </div>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script src="http://cdn.bootcss.com/bootstrap-hover-dropdown/2.2.1/bootstrap-hover-dropdown.min.js"></script>
+        <script src="http://cdn.bootcss.com/flexslider/2.6.1/jquery.flexslider-min.js"></script>
+        <script>
+            // Can also be used with $(document).ready()
+            $(document).ready(function(){
+                $('.flexslider').flexslider({
+                    animation: "slide",
+                    slideshowSpeed: 10000
+                    //controlsContainer: ".flex-container"
+                });
+
+            });
+        </script>
+    </body>
+</html>

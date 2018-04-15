@@ -24,10 +24,13 @@ namespace XiaoyaRetrieverUnitTest
             foreach (var position in urlFileIds)
             {
                 var file = context.UrlFiles.Single(o => o.UrlFileId == position);
+                Console.WriteLine(file.Url);
+
                 Assert.IsNotNull(file);
 
                 yield return file.Url;
             }
+            Console.WriteLine("---");
         }
 
 
@@ -52,8 +55,11 @@ namespace XiaoyaRetrieverUnitTest
             };
 
             var urlFileIds = retriever.Retrieve(expression);
-            Assert.AreEqual(51, urlFileIds.Count());
 
+            using (var context = new XiaoyaSearchContext(options))
+            {
+                GetUrls(context, urlFileIds);
+            }
 
             expression = new And
             {
@@ -65,11 +71,6 @@ namespace XiaoyaRetrieverUnitTest
             };
 
             urlFileIds = retriever.Retrieve(expression);
-            foreach (var id in urlFileIds)
-            {
-                Console.WriteLine(id);
-            }
-            Assert.AreEqual(48, urlFileIds.Count());
 
             using (var context = new XiaoyaSearchContext(options))
             {
@@ -97,7 +98,6 @@ namespace XiaoyaRetrieverUnitTest
             var expression = new SimpleQueryParser();
 
             var urlFileIds = retriever.Retrieve(expression.Parse("北京师范大学 -教务处").Expression);
-            Assert.AreEqual(48, urlFileIds.Count());
 
             using (var context = new XiaoyaSearchContext(options))
             {

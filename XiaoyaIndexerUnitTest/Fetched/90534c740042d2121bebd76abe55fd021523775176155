@@ -1,0 +1,1209 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>北京师范大学留学生办公室</title>
+    <link href="/themes/1/css/semantic.min.css" rel="stylesheet" type="text/css"/>
+    <link href="/themes/1/css/style.css" rel="stylesheet" type="text/css"/>
+    <script src="/themes/1/js/core.js" type="text/javascript"></script>
+    <script src="/themes/1/js/jquery.SuperSlide.2.1.1.js" type="text/javascript"></script>
+    <script src="/themes/1/js/semantic.min.js" type="text/javascript"></script>
+    <script src="/themes/1/js/common.js" type="text/javascript"></script>
+	<style>
+	body {font-family:'Segoe UI','微软雅黑', sans-serif; font-size: 16px;}
+	</style>
+</head>
+<body>
+<div id="top">
+    <div class="t_menu fl">
+        <a href="javascript:;"></a>
+    </div>
+    <div class="language fl">
+        <a href="/cn/index">中文</a><span>|</span>
+        <a href="/en/index">English</a>
+    </div>
+    <div class="t_right fr">
+        <a href="http://apply.bnu.edu.cn/" target="_blank" class="fl">现在申请</a>        <form class="fl" name="frmm" id="frmm" onsubmit="return checkfrmm();" method="get" action="/cn/search">
+            <input id="search_input1" name="search" type="text"/>
+            <input type="submit" value=""/>
+        </form>
+    </div>
+</div>
+                                            <div class="header">
+    <div class="logo"><a href="javascript:;">
+		<span class="logo_s"></span>
+        <span class="logo_bg"></span>
+	</a></div>
+    <div class="h_left fl">
+        <ul>
+            <li><a href="/cn/about?cid=24&pid=24">关于BNU</a></li>
+            <li class="has"><a href="javascript:;" data-title="招生">招生</a>
+				<div class="dropdown">
+                    <div class="box fl">
+                    <h3>常规项目</h3>
+                        <dl>
+							                            <dd>
+                                <h4><a href="/cn/course?cid=10&pid=8&type_id=2&k=0">本科生项目</a></h4>
+
+                            </dd>
+							                            <dd>
+                                <h4><a href="/cn/course?cid=10&pid=8&type_id=2&k=1">硕士研究生项目</a></h4>
+
+                            </dd>
+							                            <dd>
+                                <h4><a href="/cn/course?cid=10&pid=8&type_id=2&k=2">博士研究生项目</a></h4>
+
+                            </dd>
+							                            <dd>
+                                <h4><a href="/cn/course?cid=10&pid=8&type_id=2&k=3">汉语进修项目</a></h4>
+
+                            </dd>
+							                            <dd>
+                                <h4><a href="/cn/course?cid=10&pid=8&type_id=2&k=4">短期项目</a></h4>
+
+                            </dd>
+							                            
+                            <div><a href="javascript:;">EMD招生手册下载</a></div>
+                        </dl>
+                    </div>
+                    <div class="box fl">
+                        <h3>特色项目</h3>
+                        
+                        <dl>
+                                                        <dd>
+                                <h4><a href="/cn/course?cid=10&pid=8&type_id=1&k=0&k=0">英文授课学位项目</a></h4>
+
+                            </dd>
+							                            <dd>
+                                <h4><a href="/cn/course?cid=10&pid=8&type_id=1&k=1">英文授课学分项目</a></h4>
+
+                            </dd>
+							                            <dd>
+                                <h4><a href="/cn/course?cid=10&pid=2&type_id=1&k=3&k=2">本科学分项目</a></h4>
+
+                            </dd>
+							                            <dd>
+                                <h4><a href="/cn/course?cid=10&pid=2&type_id=1&k=4&k=3">研究生学分项目</a></h4>
+
+                            </dd>
+							                            <dd>
+                                <h4><a href="/cn/course?cid=10&pid=8&type_id=1&k=4">研究学者项目</a></h4>
+
+                            </dd>
+							                            
+                        </dl>
+                    </div>
+                    <div class="box fl">
+                        <h3>其他关注</h3>
+                        <dl>
+                            <ul>
+                            <li>
+	<a href="/cn/videos?cid=355&amp;pid=351" target="_blank">学生眼中的北师大</a> 
+</li>
+<li>
+	<a href="/cn/accommodation?cid=69&amp;pid=28" target="_blank">住宿服务</a>
+</li>
+<li>
+	<a href="/cn/pages?cid=71&amp;pid=28" target="_blank">接机服务</a>
+</li>
+<li>
+	<a href="/cn/pages?cid=283&amp;pid=99" target="_blank">奖学金</a>
+</li>
+<li>
+	<a href="/cn/single_page_fragment?id=3" target="_blank">费用</a>
+</li>
+<li>
+	<a href="/cn/facilities?cid=155&amp;pid=24" target="_blank">设施</a>
+</li>
+<li>
+	<a href="/cn/pages?cid=512&pid=29" target="_blank">实习就业</a>
+</li>							<!--                                <li><a href="">学生眼中的北师大</a> </li>
+							                                <li><a href="">住宿服务</a> </li>
+							                                <li><a href="">接机服务</a> </li>
+							                                <li><a href="">奖学金</a> </li>
+							                                <li><a href="/cn/facilities?cid=155&pid=25">设施</a> </li>
+							                                <li><a href="">实习就业</a> </li>
+							                                <li><a href="">宣传大使</a> </li>
+							  -->
+                            </ul>
+                        </dl>
+                    </div>
+                    <div class="box fl">
+                        <a href="http://apply.bnu.edu.cn/" target="_blank">在线申请</a>                        <a href="/cn/admission?cid=8&pid=2">栏目导览</a>                    </div>
+                </div>
+			</li>
+            <li class="has"><a href="javascript:;" data-title="学习&生活">学习&生活</a>
+			
+			<div class="dropdown dropdown2">
+                    <div class="box">
+                        <div class="left fl">
+                            <h3>新生</h3>
+                            <ul>
+                                                                                                        <li><a href="/cn/accommodation?cid=69&pid=28">宿舍介绍</a> </li>
+                                                                                                        <li><a href="/cn/pages?cid=72&pid=28">签证指南</a> </li>
+                                                                                                        <li><a href="/cn/pages?cid=77&pid=28">保险办理</a> </li>
+                                                                                                        <li><a href="/cn/pages?cid=73&pid=28">体格检查</a> </li>
+                                                                                                        <li><a href="/cn/pages?cid=71&pid=28">接机预订</a> </li>
+                                                                                                        <li><a href="/cn/pages?cid=75&pid=28">如何到校</a> </li>
+                                                                                                        <li><a href="/cn/pages?cid=76&pid=28">新生注册</a> </li>
+                                                                                                        <li><a href="/cn/pages?cid=74&pid=28">如何交费</a> </li>
+                                                                                                        <li><a href="/cn/pages?cid=78&pid=28">校园地图</a> </li>
+                                                            </ul>
+                        </div>
+                        <div class="right fr">
+							<a href="/uploads/pdf/c_cn_bnu.pdf" target="_blank" style="display:block;"><img src="/themes/1/images/f_handbook.jpg"/><p style="text-align:center; font-size:14px; color:#fff;">新生手册</p></a>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="left fl">
+                            <h3>在校生</h3>
+                            <ul>
+                                                                                                        <li><a href="/cn/pages?cid=85&pid=29" >校历</a> </li>
+                                                                                                        <li><a href="/cn/article?cid=164&pid=29" >学业指导</a> </li>
+                                                                                                        <li><a href="/cn/pages?cid=87&pid=29" >图书馆</a> </li>
+                                                                                                        <li><a href="/cn/pages?cid=403&pid=29" >生活服务</a> </li>
+                                                                                                        <li><a href="/cn/pages?cid=436&pid=29" >学生社团</a> </li>
+                                                                                                        <li><a href="/cn/activity?cid=27&pid=25" >校园活动</a> </li>
+                                                                                                        <li><a href="/cn/pages?cid=489&pid=29" >签证居留</a> </li>
+                                                                                                        <li><a href="/cn/article?cid=167&pid=29" >校规校纪</a> </li>
+                                                                                                        <li><a href="/cn/pages?cid=512&pid=29" >实习就业</a> </li>
+                                                                                                        <li><a href="/cn/pages?cid=90&pid=29" >心理咨询</a> </li>
+                                                                                                        <li><a href="/cn/download?cid=499&pid=29" >资料下载</a> </li>
+                                                                                                        <li><a href="/cn/pages?cid=518&pid=29" >安全专栏</a> </li>
+                                                            </ul>
+                        </div>
+                        <div class="right fr">
+                            <a href="/uploads/201512/19/a_bnu.pdf" target="_blank" style="display:block;"><img src="/themes/1/images/lxzn.jpg" width="160" height="120"/><p style="text-align:center; font-size:14px; color:#fff;">学生手册</p></a>
+                        </div>
+                    </div>
+					<div class="box">
+						<a href="/cn/activity?cid=27&pid=25">栏目导览</a>					</div>
+                </div>
+			
+			</li>
+        </ul>
+    </div>
+    <div class="h_right fr">
+        <ul>
+            <li class="has"><a href="javascript:;" data-title="奖学金">奖学金</a>
+			<div class="dropdown dropdown3">
+                    <div class="box fl">
+                        <h3>新生</h3>
+                        <dl>
+                                                                                    <dd>
+                                <h4><a href="/cn/pages?cid=283&pid=99" >中国政府奖学金</a></h4>
+                            </dd>
+							                                                        <dd>
+                                <h4><a href="/cn/pages?cid=461&pid=99" >孔子学院奖学金</a></h4>
+                            </dd>
+							                                                        <dd>
+                                <h4><a href="http://ccsp.chinese.cn/" target="_blank">孔子新汉学计划</a></h4>
+                            </dd>
+							                                                        <dd>
+                                <h4><a href="/cn/pages?cid=462&pid=99" >北京市外国留学生奖学金</a></h4>
+                            </dd>
+							                                                        <dd>
+                                <h4><a href="/cn/pages?cid=497&pid=99" >北京师范大学新生奖学金</a></h4>
+                            </dd>
+							                            
+                            <div><a href="/cn/pages?cid=283&pid=99">More</a></div>
+                        </dl>
+                                            </div>
+                    <div class="box fl box2">
+                        <h3>在校生</h3>
+                                                <dl>
+                                                                                  <dd>
+                                <h4><a href="/cn/pages?cid=285&pid=103"  >中国政府奖学金</a></h4>
+                                <p></p>
+                            </dd>
+							                                                       <dd>
+                                <h4><a href="/cn/pages?cid=466&pid=103"  >北京市外国留学生奖学金</a></h4>
+                                <p></p>
+                            </dd>
+							                                                       <dd>
+                                <h4><a href="/cn/pages?cid=469&pid=103"  >北京师范大学奖学金</a></h4>
+                                <p></p>
+                            </dd>
+							                           
+                            <div><a href="/cn/pages?cid=285&pid=103" class="clear">More</a></div>
+                        </dl>
+                    </div>
+                    <div class="box fl">
+
+                        <a href="http://apply.bnu.edu.cn/" target="_blank">在线申请</a>                        <a href="/cn/scholarship?cid=26&pid=26">栏目导览</a>                    </div>
+                </div>
+			</li>
+            <li><a href="/cn/alumni?cid=108&pid=108">校友</a></li>
+            <li><a href="/cn/contact?cid=348&pid=111">联系我们</a></li>
+        </ul>
+    </div>
+
+</div>
+
+
+
+
+<script>
+	$(window).scroll(function(){
+        var top =$(window).scrollTop();
+        $(".header").addClass("fix-on header-collapsed");
+        if(top <= 0){
+            $(".header").removeClass("fix-on header-collapsed");
+        }
+    });
+	
+
+    function checkfrmm(){
+        var search1 = document.getElementById("search_input1").value;
+        if (search1 == '' ) {
+            $("#frmm").find('input').attr("placeholder","请输入文本");
+            return false;
+        }
+    }
+
+    $('.ui.dropdown.lang').dropdown({action: 'combo'});
+</script>
+<script src="/themes/1/js/artDialog/jquery.artDialog.js?skin=simple"></script>
+<script src="/themes/1/js/artDialog/plugins/iframeTools.js"></script>
+<link href="/themes/1/css/index.css" rel="stylesheet" type="text/css"/>
+<script src="/themes/1/js/indexShow.js" type="text/javascript"></script>
+<div class="banner1">
+    <img src="/themes/1/images/banner1.jpg"/>
+    <div class="text w_1200">
+        <h2 id="png">欢迎留学北京师范大学</h2>
+        <p id="png">学为人师   行为世范</p>
+    </div>
+</div>
+
+    <div class="content">
+        <div class="news_notice">
+            <div class="w_1200">
+                <div class="notice fl">
+                    <h3>What&#39;s On @ BNU</h3>
+
+                                                <div class="n_box ">
+                                <dl>
+                                    <dt class="fl">
+                                    <p>02</p>
+                                    Apr                                    </dt>
+                                    <dd class="fl">
+                                        <h4><a href="/cn/affiche/detail?cid=115&detail=275&pid=113">免费的享受--“每月活动” 参观八达岭长城活动报名通知</a></h4>
+                                        <p><!-- <em>2015 ~ 2016 Admissions. </em> <span>|</span> -->
+
+                                            
+	免费的享受-每月活动：八达岭长城通知
+
+
+	留学生办公室为丰富留学生的生活,定于2018年4月8日（星期日）参观游览八达岭长城，欢迎同学们报名参加。
+
+
+	活动安排:
+
+
+	报名时间&nbsp;&nbsp;&nbsp;4月2日（星期一）...                                        </p>
+                                    </dd>
+                                </dl>
+                            </div>
+
+                                                    <div class="n_box  n_box2">
+                                <dl>
+                                    <dt class="fl">
+                                    <p>27</p>
+                                    Mar                                    </dt>
+                                    <dd class="fl">
+                                        <h4><a href="/cn/affiche/detail?cid=115&detail=273&pid=113">关于邀请我校东盟国家留学生参加“第三届中国—东盟青年论坛”及征集论坛发言人的通知</a></h4>
+                                        <p><!-- <em>2015 ~ 2016 Admissions. </em> <span>|</span> -->
+
+                                            
+	
+
+
+	关于邀请我校东盟国家留学生参加“第三届中国—东盟青年论坛”及征集论坛发言人的通知
+
+
+	
+
+
+	东盟各国的留学生们：
+
+
+	2018年是中国—东盟建立战略伙伴关系15周年，也是中国和东盟国家领导人共同确定的中国—东盟创新年...                                        </p>
+                                    </dd>
+                                </dl>
+                            </div>
+
+                                                    <div class="n_box ">
+                                <dl>
+                                    <dt class="fl">
+                                    <p>15</p>
+                                    Mar                                    </dt>
+                                    <dd class="fl">
+                                        <h4><a href="/cn/affiche/detail?cid=115&detail=272&pid=113">关于2018年本科生专业选择工作的通知</a></h4>
+                                        <p><!-- <em>2015 ~ 2016 Admissions. </em> <span>|</span> -->
+
+                                            
+	转发教务处通知：
+
+
+	http://jwc.bnu.edu.cn/tzgg/156862.html
+
+
+	
+...                                        </p>
+                                    </dd>
+                                </dl>
+                            </div>
+
+                                            <div class="btn">
+                        <div class="left fl"></div>
+                        <a target="_blank" href="/cn/affiche?cid=115&pid=113" class="fl"><span>更多</span></a>
+                        <div class="right fl"></div>
+                    </div>
+                </div>
+                <div class="news fl">
+                    <h3>新闻</h3>
+
+                                                <dl>
+                                <dt class="fl"><img width="80px" height="80px" src="/themes/1/images/news_1.jpg"/> </dt>
+                                <dd><a target="_blank" href="/cn/news/detail?cid=114&detail=56&pid=113">国际处举办我校第一期国际学生招生宣传业务培训会</a> </dd>
+                            </dl>
+                                                    <dl>
+                                <dt class="fl"><img width="80px" height="80px" src="/themes/1/images/news_1.jpg"/> </dt>
+                                <dd><a target="_blank" href="/cn/news/detail?cid=114&detail=54&pid=113">周作宇慰问春节留校国际学生</a> </dd>
+                            </dl>
+                        
+                    <ul>
+                                                        <li><a target="_blank" href="/cn/news/detail?cid=114&detail=56&pid=113">国际处举办我校第一期国际学生招生宣传业务培训会</a> </li>
+                                                            <li><a target="_blank" href="/cn/news/detail?cid=114&detail=54&pid=113">周作宇慰问春节留校国际学生</a> </li>
+                                                            <li><a target="_blank" href="/cn/news/detail?cid=114&detail=50&pid=113">北京师范大学留学生宣传大使项目启动</a> </li>
+                            
+                    </ul>
+                    <div class="btn">
+                        <div class="left fl"></div>
+                        <a target="_blank" href="/cn/news?cid=114&pid=113" class="fl"><span>更多</span></a>
+                        <div class="right fl"></div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+<div class="rbsBJ">
+    <div id="wrapper" style="margin:0px auto;">
+        <div class="indexShow" id="imgShow">
+            <ul class="imgBox">
+
+                                <li class="li1">
+                    <div class="bg bj4"></div>
+                    <div>
+                        <div class="tit">
+                            <a target="_blank" href="javascript:;" id="tit_1">
+                                学历生项目                            </a>
+                        </div>
+                        <a href="" target="_blank" class="show_img">
+                            <img  alt="" src="/uploads/201512/15/FC15630620991412.jpg"  data="edit_Img" id="img_1"/>
+                        </a>
+                        <div class="showColor6">
+                            <div class="tit2">
+                                <ul>
+	<li>
+		<a href="/cn/course?cid=10&pid=8&type_id=2&k=0"><span style="font-size:12px;">本科生项目 </span></a> 
+	</li>
+	<li>
+		<a href="/cn/course?cid=10&pid=8&type_id=2&k=1"><span style="font-size:12px;">中文授课研究生项目</span></a> 
+	</li>
+	<li>
+		<a href="/cn/course?cid=10&pid=8&type_id=1&k=2"><span style="font-size:12px;">英文授课研究生项目 </span></a> 
+	</li>
+	<li>
+		<a href="#"><span style="font-size:12px;">汉语国际教育硕士项目</span></a> 
+	</li>
+</ul>                            </div>
+                            <!-- <p>
+                                <span id="datezx_1" style="font-size: 14px; margin-top: 20px;">
+                                    2015 ~ 2016 Admissions
+                                </span>
+                            </p> -->
+                        </div>
+                    </div>
+                </li>
+                                <li class="li2">
+                    <div class="bg bj4"></div>
+                    <div>
+                        <div class="tit">
+                            <a target="_blank" href="javascript:;" id="tit_1">
+                                英文授课项目                            </a>
+                        </div>
+                        <a href="" target="_blank" class="show_img">
+                            <img  alt="" src="/uploads/201512/15/FC15619332736882.jpg"  data="edit_Img" id="img_1"/>
+                        </a>
+                        <div class="showColor6">
+                            <div class="tit2">
+                                <p>
+	<span style="font-size:12px;">博士：<a target="_blank" href="/cn/course?cid=10&pid=8&type_id=1&k=0">比较教育，环境科学</a></span> 
+</p>
+<p>
+	<span style="font-size:12px;">硕士：<a target="_blank" href="/cn/course?cid=10&amp;pid=8&amp;type_id=1&amp;k=0">比较教育，高等教育管理，公共管理，世界经济，环境科学，人文地理学法学</a></span> 
+</p>                            </div>
+                            <!-- <p>
+                                <span id="datezx_1" style="font-size: 14px; margin-top: 20px;">
+                                    2015 ~ 2016 Admissions
+                                </span>
+                            </p> -->
+                        </div>
+                    </div>
+                </li>
+                                <li class="li3">
+                    <div class="bg bj4"></div>
+                    <div>
+                        <div class="tit">
+                            <a target="_blank" href="javascript:;" id="tit_1">
+                                非学历生项目                            </a>
+                        </div>
+                        <a href="" target="_blank" class="show_img">
+                            <img  alt="" src="/uploads/201512/15/FC15632417513940.jpg"  data="edit_Img" id="img_1"/>
+                        </a>
+                        <div class="showColor6">
+                            <div class="tit2">
+                                <ul>
+	<li>
+		<a href="/cn/course?cid=10&amp;pid=2&amp;type_id=2&amp;k=3"><span style="font-size:12px;">汉语进修项目</span></a> 
+	</li>
+	<li>
+		<a href="/cn/course?cid=10&amp;pid=2&amp;type_id=1&amp;k=3"><span style="font-size:12px;">本科学分项目 </span></a> 
+	</li>
+	<li>
+		<a href="/cn/course?cid=10&amp;pid=2&amp;type_id=1&amp;k=4"><span style="font-size:12px;">研究生学分项目 </span></a> 
+	</li>
+	<li>
+		<a href="/cn/course?cid=10&amp;pid=2&amp;type_id=1&amp;k=5"><span style="font-size:12px;">研究学者项目 </span></a> 
+	</li>
+	<li>
+		<a href="/cn/course?cid=10&amp;pid=2&amp;type_id=2&amp;k=4"><span style="font-size:12px;">暑期汉语项目 </span></a> 
+	</li>
+</ul>                            </div>
+                            <!-- <p>
+                                <span id="datezx_1" style="font-size: 14px; margin-top: 20px;">
+                                    2015 ~ 2016 Admissions
+                                </span>
+                            </p> -->
+                        </div>
+                    </div>
+                </li>
+                                <li class="li4">
+                    <div class="bg bj4"></div>
+                    <div>
+                        <div class="tit">
+                            <a target="_blank" href="javascript:;" id="tit_1">
+                                短期项目                            </a>
+                        </div>
+                        <a href="" target="_blank" class="show_img">
+                            <img  alt="" src="/uploads/201512/15/FC15633392951537.jpg"  data="edit_Img" id="img_1"/>
+                        </a>
+                        <div class="showColor6">
+                            <div class="tit2">
+                                <p>
+	<a target="_blank" href="/cn/course?cid=10&amp;pid=8&amp;type_id=2&amp;k=4"><span style="font-size:12px;">每年春季、暑期举办短期项目，与文化体验相结合，学习期限灵活。</span></a> 
+</p>                            </div>
+                            <!-- <p>
+                                <span id="datezx_1" style="font-size: 14px; margin-top: 20px;">
+                                    2015 ~ 2016 Admissions
+                                </span>
+                            </p> -->
+                        </div>
+                    </div>
+                </li>
+                                <li class="li5">
+                    <div class="bg bj4"></div>
+                    <div>
+                        <div class="tit">
+                            <a target="_blank" href="javascript:;" id="tit_1">
+                                本科热门专业                            </a>
+                        </div>
+                        <a href="" target="_blank" class="show_img">
+                            <img  alt="" src="/uploads/201609/19/G919544968639898.jpg"  data="edit_Img" id="img_1"/>
+                        </a>
+                        <div class="showColor6">
+                            <div class="tit2">
+                                <ul>
+	<li>
+		<a href="/cn/course/detail?cid=10&course_id=4&pid=8"><span style="font-size:12px;">汉语言 </span></a> 
+	</li>
+	<li>
+		<a href="/cn/course/detail?cid=10&course_id=5&pid=8"><span style="font-size:12px;">汉语言文学</span></a> 
+	</li>
+	<li>
+		<a href="/cn/course/detail?cid=10&course_id=9&pid=8"><span style="font-size:12px;">工商管理</span></a> 
+	</li>
+	<li>
+		<a href="/cn/course/detail?cid=10&course_id=13&pid=8"><span style="font-size:12px;">教育学</span></a> 
+	</li>
+	<li>
+		<a href="/cn/course/detail?cid=10&course_id=32&pid=8"><span style="font-size:12px;">心理学</span></a> 
+	</li>
+	<li>
+		<a href="/cn/course/detail?cid=10&course_id=6&pid=8"><span style="font-size:12px;">历史</span></a> 
+	</li>
+	<li>
+		<a href="/cn/course/detail?cid=10&course_id=20&pid=8"><span style="font-size:12px;">舞蹈学</span></a> 
+	</li>
+</ul>                            </div>
+                            <!-- <p>
+                                <span id="datezx_1" style="font-size: 14px; margin-top: 20px;">
+                                    2015 ~ 2016 Admissions
+                                </span>
+                            </p> -->
+                        </div>
+                    </div>
+                </li>
+                                <li class="li6">
+                    <div class="bg bj4"></div>
+                    <div>
+                        <div class="tit">
+                            <a target="_blank" href="javascript:;" id="tit_1">
+                                研究生热门专业                            </a>
+                        </div>
+                        <a href="" target="_blank" class="show_img">
+                            <img  alt="" src="/uploads/201512/15/FC15629022469347.jpg"  data="edit_Img" id="img_1"/>
+                        </a>
+                        <div class="showColor6">
+                            <div class="tit2">
+                                <table class="ke-zeroborder" border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tbody>
+		<tr>
+			<td>
+				<a href="#"><span style="font-size:12px;">硕士</span></a> 
+			</td>
+			<td>
+				<a href="#"><span style="font-size:12px;">博士</span></a> 
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<ul>
+					<li>
+						<a href="/cn/course/detail?cid=10&amp;course_id=150&amp;pid=2"><span style="font-size:12px;">汉语言文字学</span></a> 
+					</li>
+					<li>
+						<a href="/cn/course/detail?cid=10&amp;course_id=220&amp;pid=2"><span style="font-size:12px;">公共管理</span></a> 
+					</li>
+					<li>
+						<a href="/cn/course/detail?cid=10&amp;course_id=119&amp;pid=2"><span style="font-size:12px;">比较教育学 </span></a> 
+					</li>
+					<li>
+						<a href="/cn/course/detail?cid=10&amp;course_id=103&amp;pid=2"><span style="font-size:12px;">世界经济</span></a> 
+					</li>
+					<li>
+						<a href="/cn/course/detail?cid=10&amp;course_id=109&amp;pid=2"><span style="font-size:12px;">企业管理</span></a> 
+					</li>
+					<li>
+						<a href="/cn/course?cid=10&amp;pid=8&amp;type_id=2&amp;k=1"><span style="font-size:12px;">更多&gt;&gt;</span></a> 
+					</li>
+				</ul>
+			</td>
+			<td>
+				<ul>
+					<li>
+						<a href="/cn/course/detail?cid=10&amp;course_id=283&amp;pid=2"><span style="font-size:12px;">比较教育学</span></a> 
+					</li>
+					<li>
+						<a href="/cn/course/detail?cid=10&amp;course_id=363&amp;pid=2"><span style="font-size:12px;">行政管理</span></a> 
+					</li>
+					<li>
+						<a href="/cn/course/detail?cid=10&amp;course_id=307&amp;pid=2"><span style="font-size:12px;">汉语言文字学</span></a> 
+					</li>
+					<li>
+						<a href="/cn/course/detail?cid=10&amp;course_id=285&amp;pid=2"><span style="font-size:12px;">高等教育学</span></a> 
+					</li>
+					<li>
+						<a href="/cn/course/detail?cid=10&amp;course_id=374&amp;pid=2"><span style="font-size:12px;">艺术学</span></a> 
+					</li>
+					<li>
+						<a href="/cn/course?cid=10&amp;pid=8&amp;type_id=2&amp;k=2"><span style="font-size:12px;">更多&gt;&gt;</span></a> 
+					</li>
+				</ul>
+			</td>
+		</tr>
+	</tbody>
+</table>                            </div>
+                            <!-- <p>
+                                <span id="datezx_1" style="font-size: 14px; margin-top: 20px;">
+                                    2015 ~ 2016 Admissions
+                                </span>
+                            </p> -->
+                        </div>
+                    </div>
+                </li>
+                                <li class="li7">
+                    <div class="bg bj4"></div>
+                    <div>
+                        <div class="tit">
+                            <a target="_blank" href="javascript:;" id="tit_1">
+                                奖学金                            </a>
+                        </div>
+                        <a href="" target="_blank" class="show_img">
+                            <img  alt="" src="/uploads/201609/19/G919551213091934.jpg"  data="edit_Img" id="img_1"/>
+                        </a>
+                        <div class="showColor6">
+                            <div class="tit2">
+                                <ul>
+	<li>
+		<a href="/cn/scholarship?cid=26&pid=26"><span style="font-size:12px;">中国政府奖学金</span></a> 
+	</li>
+	<li>
+		<a href="/cn/scholarship?cid=26&pid=26"><span style="font-size:12px;">国家汉办奖学金</span></a> 
+	</li>
+	<li>
+		<a href="/cn/scholarship?cid=26&pid=26"><span style="font-size:12px;">北京市外国留学生奖学金</span></a> 
+	</li>
+	<li>
+		<a href="/cn/scholarship?cid=26&pid=26"><span style="font-size:12px;">北京师范大学奖学金</span></a> 
+	</li>
+</ul>                            </div>
+                            <!-- <p>
+                                <span id="datezx_1" style="font-size: 14px; margin-top: 20px;">
+                                    2015 ~ 2016 Admissions
+                                </span>
+                            </p> -->
+                        </div>
+                    </div>
+                </li>
+                                <li class="li8">
+                    <div class="bg bj4"></div>
+                    <div>
+                        <div class="tit">
+                            <a target="_blank" href="javascript:;" id="tit_1">
+                                汉语进修项目                            </a>
+                        </div>
+                        <a href="" target="_blank" class="show_img">
+                            <img  alt="" src="/uploads/201609/19/G919555151120055.jpg"  data="edit_Img" id="img_1"/>
+                        </a>
+                        <div class="showColor6">
+                            <div class="tit2">
+                                <a target="_blank" href="/cn/course?cid=10&pid=8&type_id=2&k=3"><span style="font-size:12px;">顶尖浸润式汉语进修项目</span> </a>
+<ul>
+	<li>
+		<span style="font-size:12px;">分层教学 小班授课</span> 
+	</li>
+	<li>
+		<span style="font-size:12px;">师资雄厚 课程丰富</span> 
+	</li>
+	<li>
+		<span style="font-size:12px;">寓教于乐 活动多彩</span> 
+	</li>
+</ul>                            </div>
+                            <!-- <p>
+                                <span id="datezx_1" style="font-size: 14px; margin-top: 20px;">
+                                    2015 ~ 2016 Admissions
+                                </span>
+                            </p> -->
+                        </div>
+                    </div>
+                </li>
+                                <li class="li9">
+                    <div class="bg bj4"></div>
+                    <div>
+                        <div class="tit">
+                            <a target="_blank" href="javascript:;" id="tit_1">
+                                教育部精品课程                            </a>
+                        </div>
+                        <a href="" target="_blank" class="show_img">
+                            <img  alt="" src="/uploads/201711/02/HB02087493713956.jpg"  data="edit_Img" id="img_1"/>
+                        </a>
+                        <div class="showColor6">
+                            <div class="tit2">
+                                <ul>
+	<li>
+		<a href="/cn/course?cid=10&pid=8&type_id=1&k=0&k=0"><span style="font-size:12px;">教育部来华留学全英文授课品牌课程</span></a> 
+	</li>
+</ul>                            </div>
+                            <!-- <p>
+                                <span id="datezx_1" style="font-size: 14px; margin-top: 20px;">
+                                    2015 ~ 2016 Admissions
+                                </span>
+                            </p> -->
+                        </div>
+                    </div>
+                </li>
+                                <li class="li10">
+                    <div class="bg bj4"></div>
+                    <div>
+                        <div class="tit">
+                            <a target="_blank" href="javascript:;" id="tit_1">
+                                BNU精品课程                            </a>
+                        </div>
+                        <a href="" target="_blank" class="show_img">
+                            <img  alt="" src="/uploads/201711/02/HB02089613833213.jpg"  data="edit_Img" id="img_1"/>
+                        </a>
+                        <div class="showColor6">
+                            <div class="tit2">
+                                <ul>
+	<li>
+		<a href="/cn/course?cid=10&pid=8&type_id=1&k=0&k=0"><span style="font-size:12px;">BNU来华留学全英文授课精品课程</span></a> 
+	</li>
+</ul>                            </div>
+                            <!-- <p>
+                                <span id="datezx_1" style="font-size: 14px; margin-top: 20px;">
+                                    2015 ~ 2016 Admissions
+                                </span>
+                            </p> -->
+                        </div>
+                    </div>
+                </li>
+                
+            </ul>
+            <ol class="showTab">
+                <li class="active"><a href="javascript:void(0);"></a></li>
+                <li><a href="javascript:void(0);"></a></li>
+                <li><a href="javascript:void(0);"></a></li>
+                <li><a href="javascript:void(0);"></a></li>
+                <li><a href="javascript:void(0);"></a></li>
+                <li><a href="javascript:void(0);"></a></li>
+                <li><a href="javascript:void(0);"></a></li>
+                <li><a href="javascript:void(0);"></a></li>
+                <li><a href="javascript:void(0);"></a></li>
+                <li><a href="javascript:void(0);"></a></li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+    <div class="content">
+        <!--视频模块 - 开始-->
+        <!--<div class="videos">
+	<div class="w_1200">
+		<div class="v_left fl">
+			<a href="javascript:;" onclick="show_video('http://bnu.school.cucas.cn/uploads/201512/14/Introduction of BNU-English_Compress.MP4'）"> <img src="/uploads/201512/15/FC15519514174091.jpg" alt="" height="450" width="600" /> 
+			<div class="text">
+				<h4>
+					北京师范大学简介
+				</h4>
+				<p>
+					北京师范大学是教育部直属重点大学，是一所以教师教育、教育科学和文理基础学科为主要特色的著名学府。
+				</p>
+			</div>
+<span></span> </a> 
+		</div>
+		<div class="v_right fl">
+			<ul>
+				<li>
+					<a href="javascript:;" onclick="show_video('http://bnu.school.cucas.cn/uploads/201512/14/Welcome to BNU_Compress.MP4')"> <img src="/uploads/201512/15/FC15521723651829.jpg" alt="" height="217" width="298" /> 
+					<div class="text">
+						<span></span> 
+						<p>
+							欢迎来到北师大
+						</p>
+					</div>
+</a> 
+				</li>
+				<li class="box2">
+					<a href="javascript:;" onclick="show_video('/videos/show?video_id=33')"> <img src="/uploads/201512/15/FC15516518669254.jpg" alt="" height="217" width="298" /> 
+					<div class="text">
+						<p>
+							欢迎来汉语文化学院学习
+						</p>
+<em>更多</em> 
+					</div>
+</a> 
+				</li>
+				<li class="box2 box3">
+					<a href="javascript:;" onclick="show_video('http://bnu.school.cucas.cn/uploads/video/1000032.flv')"> <img src="/uploads/201512/15/FC15513859485151.jpg" alt="" height="217" width="298" /> 
+					<div class="text">
+						<p>
+							汉语课堂
+						</p>
+<em>更多</em> 
+					</div>
+</a> 
+				</li>
+				<li class="box2 box4">
+					<a href="/en/activity?cid=173&amp;pid=3"> <img src="/uploads/201512/15/FC15510040600431.jpg" alt="" height="217" width="298" /> 
+					<div class="text">
+						<p>
+							@ 留学感悟
+						</p>
+<em>更多</em> 
+					</div>
+</a> 
+				</li>
+			</ul>
+		</div>
+		<div class="clear">
+		</div>
+	</div>
+</div>-->
+        <div class="videos">
+            <div class="w_1200">
+                            <div class="v_left fl">
+                    <a href="javascript:;" onclick="show_video(42)"  > <img src="/uploads/201512/15/FC15519514174091.jpg" alt="" height="450" width="600" />
+                    <div class="text">
+                        <h4>
+                            北京师范大学简介                        </h4>
+                        <p>
+                                                    </p>
+                    </div>
+        <span></span> </a> 
+                </div>
+                                <div class="v_right fl">
+                    <ul>
+                                            <li>
+                            <a href="javascript:;" onclick="show_video(41)"  > <img src="/uploads/201512/17/FC17384965680878.jpg" alt="" height="217" width="298" />
+                            <div class="text">
+                                <span></span> 
+                                <p>
+                                    欢迎来到北师大                                </p>
+                            </div>
+        </a> 
+                        </li>
+                                                                        <li class="box2">
+                            <a href="javascript:;" onclick="show_video(33)"  > <img src="/uploads/201512/17/FC17375786808520.jpg" alt="" height="217" width="298" />
+                            <div class="text">
+                                <p>
+                                    欢迎留学北师大汉语文化学院                                </p>
+        <!-- <em>了解更多</em>  -->
+                            </div>
+        </a> 
+                        </li>
+                                                                        <li class="box2 box3">
+                            <a href="javascript:;" onclick="show_video(36)"  > <img src="/uploads/201512/17/FC17378501190291.jpg" alt="" height="217" width="298" />
+                            <div class="text">
+                                <p>
+                                    课堂瞬间                                </p>
+        <!-- <em>了解更多</em>  -->
+                            </div>
+        </a> 
+                        </li>
+                                                                        <li class="box2 box4">
+                            <a href="/cn/videos?cid=355&pid=351" target="_black" > <img src="/uploads/201512/17/FC17369155124283.jpg" alt="" height="217" width="298" />
+                            <div class="text">
+                                <p>
+                                   @留学感悟                                </p>
+        <em>了解更多</em> 
+                            </div>
+        </a> 
+                        </li>
+                                            </ul>
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+        </div>
+
+
+        <!--友情链接 2016年1月25日17:33:33-->
+        <div class="link">
+	<div class="w_1200">
+		<h3>
+			友情链接
+		</h3>
+		<p>
+			<a target="_blank" href="http://www.bnu.edu.cn/">北京师范大学(BNU)</a> <span>|</span> <a target="_blank" href="http://zyfw.bnu.edu.cn/bnujw/">选课系统</a> <span>|</span> <a target="_blank" href="http://apply.bnu.edu.cn/booking/reservingRoom/login.do">外国留学生宿舍(公寓)预订系统 </a> <span>|</span> <a target="_blank" href="http://www.hanban.edu.cn/">孔子学院总部/国家汉办</a> <span>|</span> <a target="_blank" href="http://www.chinesetest.cn/gosign.do?id=2&lid=828635">汉语考试服务网/HSk考试</a> 
+		</p>
+		<p>
+			<a target="_blank" href="http://www.csc.edu.cn/">留学基金委</a> <span>|</span> <a target="_blank" href="http://www.cdgdc.edu.cn/cn/">教育部学位认证</a> <span>|</span> <a target="_blank" href="http://www.bjgaj.gov.cn/web/">北京市公安局 </a> <span>|</span> <a target="_blank" href="http://www.lxbx.net/">留学保险网</a> 
+		</p>
+	</div>
+</div>
+
+        <!--视频模块 - 结束-->
+
+    </div>
+<!--pop_menu  start-->
+<div class="pop_menu">
+    <a href="javascript:;" class="close"></a>
+    <div class="tool fl">
+        <h3>快速工具</h3>
+        <a href="http://apply.bnu.edu.cn/" target="_blank" class="apply">在线申请加入北师大</a>
+		<dl>
+            <h4>新生:</h4>
+			            			 <dd><a href="/cn/accommodation?cid=69&pid=28">宿舍介绍</a> </dd>
+			            			 <dd><a href="/cn/pages?cid=72&pid=28">签证指南</a> </dd>
+			            			 <dd><a href="/cn/pages?cid=77&pid=28">保险办理</a> </dd>
+			            			 <dd><a href="/cn/pages?cid=73&pid=28">体格检查</a> </dd>
+			            			 <dd><a href="/cn/pages?cid=71&pid=28">接机预订</a> </dd>
+			            			 <dd><a href="/cn/pages?cid=75&pid=28">如何到校</a> </dd>
+			            			 <dd><a href="/cn/pages?cid=76&pid=28">新生注册</a> </dd>
+			            			 <dd><a href="/cn/pages?cid=74&pid=28">如何交费</a> </dd>
+			            			 <dd><a href="/cn/pages?cid=78&pid=28">校园地图</a> </dd>
+			           
+           
+        </dl>
+        <dl style="padding-left: 30px;">
+            <h4>在校生:</h4>
+                        			 <dd><a href="/cn/pages?cid=85&pid=29">校历</a> </dd>
+			            			 <dd><a href="/cn/article?cid=164&pid=29">学业指导</a> </dd>
+			            			 <dd><a href="/cn/pages?cid=87&pid=29">图书馆</a> </dd>
+			            			 <dd><a href="/cn/pages?cid=403&pid=29">生活服务</a> </dd>
+			            			 <dd><a href="/cn/pages?cid=436&pid=29">学生社团</a> </dd>
+			            			 <dd><a href="/cn/activity?cid=27&pid=25">校园活动</a> </dd>
+			            			 <dd><a href="/cn/pages?cid=489&pid=29">签证居留</a> </dd>
+			            			 <dd><a href="/cn/article?cid=167&pid=29">校规校纪</a> </dd>
+			            			 <dd><a href="/cn/pages?cid=512&pid=29">实习就业</a> </dd>
+			            			 <dd><a href="/cn/pages?cid=90&pid=29">心理咨询</a> </dd>
+			            			 <dd><a href="/cn/download?cid=499&pid=29">资料下载</a> </dd>
+			            			 <dd><a href="/cn/pages?cid=518&pid=29">安全专栏</a> </dd>
+			        </dl>
+    </div>
+    <div class="mid fl">
+        <h3>留学项目</h3>
+        <h4>常规项目:</h4>
+        <ul>
+		 		  <li><a href="/cn/course?cid=10&pid=8&type_id=2&k=0">本科生项目</a> </li>
+		 		  <li><a href="/cn/course?cid=10&pid=8&type_id=2&k=1">硕士研究生项目</a> </li>
+		 		  <li><a href="/cn/course?cid=10&pid=8&type_id=2&k=2">博士研究生项目</a> </li>
+		 		  <li><a href="/cn/course?cid=10&pid=8&type_id=2&k=3">汉语进修项目</a> </li>
+		 		  <li><a href="/cn/course?cid=10&pid=8&type_id=2&k=4">短期项目</a> </li>
+		            
+           
+        </ul>
+        <h4>特色项目:</h4>
+        <ul>
+           		  <li><a href="/cn/course?cid=10&pid=8&type_id=1&k=0&k=0">英文授课学位项目</a> </li>
+		 		  <li><a href="/cn/course?cid=10&pid=8&type_id=1&k=1">英文授课学分项目</a> </li>
+		 		  <li><a href="/cn/course?cid=10&pid=2&type_id=1&k=3&k=2">本科学分项目</a> </li>
+		 		  <li><a href="/cn/course?cid=10&pid=2&type_id=1&k=4&k=3">研究生学分项目</a> </li>
+		 		  <li><a href="/cn/course?cid=10&pid=8&type_id=1&k=4">研究学者项目</a> </li>
+		         </ul>
+    </div>
+    <div class="mid right fl">
+        <h3>
+	联系我们
+</h3>
+<h4>
+	北京师范大学留学生办公室
+</h4>
+<p>
+	<span>地址:</span><em> 北京市海淀区新街口外大街19号，京师大厦9910</em> 
+</p>
+<p>
+	邮政编码: 100875
+</p>
+<p>
+	传真: 86-10-5 880-0823
+</p>
+<p>
+	邮箱地址: isp@bnu.edu.cn
+</p>
+<img src="/themes/1/images/webchat2.jpg" alt="" height="150" width="150" /> 
+    </div>
+    <div class="clear"></div>
+</div>
+<!--pop_menu  end-->
+
+
+<script>
+    
+    $(function(){
+        var btn_main_menu = $(".t_menu");
+        var btn_main_close = $(".pop_menu .close");
+        var btn_nav_li = $(".header li");
+
+        var win_pop = $(".pop_menu");
+        var dropdown = $(".header .dropdown");
+
+        var tmp = '';
+
+        var bnu_nav_hide = function(t){
+            win_pop.fadeOut('400');
+            dropdown.fadeOut('400');
+            btn_nav_li.removeClass('is_active');
+            tmp = '';
+        };
+
+        var win_init = function(){
+            btn_main_menu.on('click', function() {
+                bnu_nav_hide();
+                win_pop.fadeIn('400');
+            });
+
+            btn_main_close.on('click', function() {
+                bnu_nav_hide();
+            });
+
+            btn_nav_li.on('click', function() {
+                var t = $(this);
+                var d = t.find('.dropdown');
+                var n = btn_nav_li.index(t);
+                if(tmp !== n){
+                    bnu_nav_hide();
+                    t.addClass('is_active');
+                    d.fadeIn('400',function(){
+                        tmp = btn_nav_li.index(t);
+                    });
+                    return true;
+                }
+                bnu_nav_hide();
+            });
+        }
+
+        win_init();
+    });
+
+</script>
+<!-- video -->
+
+<div class="bottom clear">
+	<div class="inner">
+		<div class="w_1200 clearfix">
+			<div class="box">
+				<p>
+					关于我们
+				</p>
+				<dl>
+					<dd>
+						<a href="/cn/pages?cid=484&amp;pid=24">关于北京</a> 
+					</dd>
+					<dd>
+						<a href="/cn/about/detail?cid=24&amp;detail=3&amp;pid=24">关于北师大</a> 
+					</dd>
+					<dd>
+						<a href="/cn/contact?cid=348&amp;pid=111">留学生办公室</a> 
+					</dd>
+					<dd>
+						<a href="/cn/article?cid=54&amp;pid=24">名师风采</a> 
+					</dd>
+				</dl>
+			</div>
+			<div class="box">
+				<p>
+					招生
+				</p>
+				<dl>
+					<dd>
+						<a href="/cn/course?cid=10&amp;pid=8&amp;type_id=2&amp;k=0">本科生项目</a> 
+					</dd>
+					<dd>
+						<a href="/cn/course?cid=10&amp;pid=8&amp;type_id=2&amp;k=1">硕士研究生项目</a> 
+					</dd>
+					<dd>
+						<a href="/cn/course?cid=10&amp;pid=8&amp;type_id=2&amp;k=2">博士研究生项目</a> 
+					</dd>
+					<dd>
+						<a href="/cn/course?cid=10&amp;pid=8&amp;type_id=1&amp;k=2">英文授课研究生项目</a> 
+					</dd>
+					<dd>
+						<a href="/cn/course?cid=10&amp;pid=8&amp;type_id=2&amp;k=3">汉语进修生项目</a> 
+					</dd>
+				</dl>
+			</div>
+			<div class="box">
+				<p>
+					学习与生活
+				</p>
+				<dl>
+					<dd>
+						<a href="/uploads/201512/19/aa_bnu.pdf">新生须知</a> 
+					</dd>
+					<dd>
+						<a href="/cn/activity?cid=27&amp;pid=25">学生社团</a> 
+					</dd>
+					<dd>
+						<a href="/cn/facilities?cid=155&amp;pid=24">校园设施</a> 
+					</dd>
+					<dd>
+						<a href="/cn/pages?cid=512&amp;pid=29">实习就业</a> 
+					</dd>
+				</dl>
+			</div>
+			<div class="box">
+				<p>
+					奖学金
+				</p>
+				<dl>
+					<dd>
+						<a href="/cn/pages?cid=283&amp;pid=99">中国政府奖学金</a> 
+					</dd>
+					<dd>
+						<a href="/cn/pages?cid=460&amp;pid=99">孔子学院奖学金</a> 
+					</dd>
+					<dd>
+						<a href="http://ccsp.chinese.cn/" target="_blank">孔子新汉学计划</a> 
+					</dd>
+					<dd>
+						<a href="/cn/pages?cid=462&amp;pid=99">北京市外国留学生奖学金</a> 
+					</dd>
+					<dd>
+						<a href="/cn/pages?cid=361&amp;pid=99">北京师范大学奖学金</a> 
+					</dd>
+				</dl>
+			</div>
+		</div>
+		<div class="share w_1200">
+			<div class="logo">
+				<a href="javascript:;"></a> 
+			</div>
+			<div class="share_btn">
+				<a href="javascript:;" class="a_1"></a> <a target="_blank" href="http://e.weibo.com/lovebnu/profile" class="a_4"></a> <a href="javascript:;" class="a_3"></a> <a href="javascript:;" class="a_2"> 
+				<div class="wechat">
+					<div class="arrow">
+					</div>
+<img src="/themes/1/images/f_erweima.jpg" /> 
+				</div>
+</a> 
+			</div>
+		</div>
+	</div>
+</div>
+<div class="footer">
+	<div class="w_1200">
+		<p>
+			版权所有@北京师范大学
+		</p>
+		<p>
+			技术支持: <a target="_blank" href="http://www.cucas.edu.cn">CUCAS</a> 
+		</p>
+	</div>
+</div><div id="goTopBtn"></div>
+<script>
+
+ $(function(){
+        var btn_nav_li = $(".header2 li");
+        var dropdown = $(".header2 .dropdown");
+
+        var tmp = '';
+
+        var bnu_nav_hide = function(){
+            dropdown.fadeOut('400');
+            btn_nav_li.removeClass('is_active');
+            tmp = '';
+        };
+
+        var win_init = function(){
+
+            btn_nav_li.on('click', function() {
+                var t = $(this);
+                var d = t.find('.dropdown');
+                var n = btn_nav_li.index(t);
+                if(tmp !== n){
+                    bnu_nav_hide();
+                    t.addClass('is_active');
+                    d.fadeIn('400',function(){
+                        tmp = btn_nav_li.index(t);
+                    });
+                    return true;
+                }
+                bnu_nav_hide();
+            });
+        };
+
+        win_init();
+    });
+
+     function show_video(id){
+         art.dialog.open('/videos/show?video_id='+id,{
+             width:690,
+             height:520,
+             lock:true
+         });
+     }
+
+    var cid = 0;
+    if(cid != ""){
+        var dd = $("dd[data-cid='"+cid+"']");
+        var dl = dd.parents().eq(0);
+        var li = dd.parents().eq(1);
+
+        li.addClass('active');
+        dl.show();
+    }
+</script>

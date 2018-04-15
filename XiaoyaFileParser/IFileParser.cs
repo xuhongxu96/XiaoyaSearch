@@ -9,6 +9,7 @@ namespace XiaoyaFileParser
     {
         UrlFile UrlFile { get; set; }
         Task<IList<string>> GetUrlsAsync();
+        Task<IList<LinkInfo>> GetLinksAsync();
         Task<IList<Token>> GetTokensAsync();
         Task<string> GetTitleAsync();
         Task<string> GetContentAsync();

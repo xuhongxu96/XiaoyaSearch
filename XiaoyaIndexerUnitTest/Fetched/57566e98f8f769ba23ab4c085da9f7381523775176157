@@ -1,0 +1,1174 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>INTERNATIONAL STUDENTS OFFICE</title>
+    <link href="/themes/1/css/semantic.min.css" rel="stylesheet" type="text/css"/>
+    <link href="/themes/1/css/style.css" rel="stylesheet" type="text/css"/>
+    <script src="/themes/1/js/core.js" type="text/javascript"></script>
+    <script src="/themes/1/js/jquery.SuperSlide.2.1.1.js" type="text/javascript"></script>
+    <script src="/themes/1/js/semantic.min.js" type="text/javascript"></script>
+    <script src="/themes/1/js/common.js" type="text/javascript"></script>
+	<style>
+	body {font-family:'Segoe UI','微软雅黑', sans-serif; font-size: 16px;}
+	</style>
+</head>
+<body>
+<div id="top">
+    <div class="t_menu fl">
+        <a href="javascript:;"></a>
+    </div>
+    <div class="language fl">
+        <a href="/cn/index">中文</a><span>|</span>
+        <a href="/en/index">English</a>
+    </div>
+    <div class="t_right fr">
+        <a href="http://apply.bnu.edu.cn/" target="_blank" class="fl">Apply now</a>        <form class="fl" name="frmm" id="frmm" onsubmit="return checkfrmm();" method="get" action="/en/search">
+            <input id="search_input1" name="search" type="text"/>
+            <input type="submit" value=""/>
+        </form>
+    </div>
+</div>
+                                    <div class="header">
+    <div class="logo"><a href="javascript:;">
+		<span class="logo_s"></span>
+        <span class="logo_bg"></span>
+	</a></div>
+    <div class="h_left fl">
+        <ul>
+            <li><a href="/en/about?cid=1&pid=1">ABOUT BNU</a></li>
+            <li class="has"><a href="javascript:;" data-title="ADMISSIONS">ADMISSIONS</a>
+				<div class="dropdown">
+                    <div class="box fl">
+                    <h3>Programs</h3>
+                        <dl>
+							                            <dd>
+                                <h4><a href="/en/course?cid=10&pid=2&type_id=2&k=0">Bachelor Degree Program</a></h4>
+
+                            </dd>
+							                            <dd>
+                                <h4><a href="/en/course?cid=10&pid=2&type_id=2&k=1">Master Degree Program</a></h4>
+
+                            </dd>
+							                            <dd>
+                                <h4><a href="/en/course?cid=10&pid=2&type_id=2&k=2">Ph.D Program</a></h4>
+
+                            </dd>
+							                            <dd>
+                                <h4><a href="/en/course?cid=10&pid=2&type_id=2&k=3">Chinese Language Program</a></h4>
+
+                            </dd>
+							                            <dd>
+                                <h4><a href="/en/course?cid=10&pid=2&type_id=2&k=4">Short-term Program</a></h4>
+
+                            </dd>
+							                            
+                            <div><a href="javascript:;">EMD Handbook Download</a></div>
+                        </dl>
+                    </div>
+                    <div class="box fl">
+                        <h3>Feature Programs</h3>
+                        
+                        <dl>
+                                                        <dd>
+                                <h4><a href="/en/course?cid=10&pid=2&type_id=1&k=0">English-Taught Degree Program</a></h4>
+
+                            </dd>
+							                            <dd>
+                                <h4><a href="/en/course?cid=10&pid=2&type_id=1&k=1">English-Taught Credit Program</a></h4>
+
+                            </dd>
+							                            <dd>
+                                <h4><a href="/en/course?cid=10&pid=2&type_id=1&k=2">Undergraduate Credit Program</a></h4>
+
+                            </dd>
+							                            <dd>
+                                <h4><a href="/en/course?cid=10&pid=2&type_id=1&k=3">Graduate Credit Program</a></h4>
+
+                            </dd>
+							                            <dd>
+                                <h4><a href="/en/course?cid=10&pid=2&type_id=1&k=4">Research Scholar Program</a></h4>
+
+                            </dd>
+							                            
+                        </dl>
+                    </div>
+                    <div class="box fl">
+                        <h3>Other Focus</h3>
+                        <dl>
+                            <ul>
+                            <li>
+	<a href="/en/videos?cid=353&amp;pid=352" target="_blank">Our Stories @ BNU</a> 
+</li>
+<li>
+	<a href="/en/accommodation?cid=13&amp;pid=3" target="_blank">Accommodation service</a> 
+</li>
+<li>
+	<a href="/en/pages?cid=195&amp;pid=183" target="_blank">Pick up service</a> 
+</li>
+<li>
+	<a href="/en/pages?cid=124&amp;pid=205" target="_blank">Scholarship</a> 
+</li>
+<li>
+	<a href="/en/single_page_fragment?id=3" target="_blank">Fees</a> 
+</li>
+<li>
+	<a href="/en/facilities?cid=14&amp;pid=3" target="_blank">Facilities</a> 
+</li>
+<li>
+	<a href="/en/pages?cid=193&amp;pid=184" target="_blank">Internship Employment</a> 
+</li>							<!--                                <li><a href="">Students at Beijing Normal University</a> </li>
+							                                <li><a href="">Accommodation service</a> </li>
+							                                <li><a href="">Pick up service</a> </li>
+							                                <li><a href="">Scholarship</a> </li>
+							                                <li><a href="/en/facilities?cid=14&pid=3">Facilities</a> </li>
+							                                <li><a href="">Internship Employment</a> </li>
+							  -->
+                            </ul>
+                        </dl>
+                    </div>
+                    <div class="box fl">
+                        <a href="http://apply.bnu.edu.cn/" target="_blank">Apply Now</a>                        <a href="/en/admission?cid=2&pid=8">Guidance</a>                    </div>
+                </div>
+			</li>
+            <li class="has"><a href="javascript:;" data-title="STUDY & LIFE">STUDY & LIFE</a>
+			
+			<div class="dropdown dropdown2">
+                    <div class="box">
+                        <div class="left fl">
+                            <h3>Prospective Students</h3>
+                            <ul>
+                                                                                                        <li><a href="/en/accommodation?cid=13&pid=3">Accommodation</a> </li>
+                                                                                                        <li><a href="/en/pages?cid=196&pid=183">Visa</a> </li>
+                                                                                                        <li><a href="/en/pages?cid=370&pid=183">Insurance</a> </li>
+                                                                                                        <li><a href="/en/pages?cid=197&pid=183">Physical Examination</a> </li>
+                                                                                                        <li><a href="/en/pages?cid=195&pid=183">Pick up</a> </li>
+                                                                                                        <li><a href="/en/pages?cid=371&pid=183">How to get to BNU</a> </li>
+                                                                                                        <li><a href="/en/pages?cid=199&pid=183">Registration</a> </li>
+                                                                                                        <li><a href="/en/pages?cid=198&pid=183">Payment</a> </li>
+                                                                                                        <li><a href="/en/pages?cid=200&pid=183">Campus Map</a> </li>
+                                                            </ul>
+                        </div>
+                        <div class="right fr">
+							<a href="/uploads/pdf/c_en_bnu.pdf" target="_blank" style="display:block;"><img src="/themes/1/images/f_handbook.jpg"/><p style="text-align:center; font-size:14px; color:#fff;">Freshman Handbook</p></a>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="left fl">
+                            <h3>Current Students</h3>
+                            <ul>
+                                                                                                        <li><a href="/en/pages?cid=189&pid=184" >Calendar</a> </li>
+                                                                                                        <li><a href="/en/pages?cid=378&pid=184" >Academic Guidance</a> </li>
+                                                                                                        <li><a href="/en/pages?cid=190&pid=184" >library</a> </li>
+                                                                                                        <li><a href="/en/pages?cid=485&pid=184" >Life service</a> </li>
+                                                                                                        <li><a href="/en/pages?cid=439&pid=184" >Students Association</a> </li>
+                                                                                                        <li><a href="/en/activity?cid=173&pid=3" >Campus Activities</a> </li>
+                                                                                                        <li><a href="/en/pages?cid=496&pid=184" >Visa</a> </li>
+                                                                                                        <li><a href="/en/article?cid=375&pid=184" >Regulations</a> </li>
+                                                                                                        <li><a href="/en/pages?cid=193&pid=184" >Internship</a> </li>
+                                                                                                        <li><a href="/en/pages?cid=192&pid=184" >Psychological Consulting</a> </li>
+                                                                                                        <li><a href="/en/download?cid=500&pid=184" >Download</a> </li>
+                                                                                                        <li><a href="/en/pages?cid=520&pid=184" >Safty Reminder</a> </li>
+                                                            </ul>
+                        </div>
+                        <div class="right fr">
+                            <a href="/uploads/201512/19/b_bnu.pdf" target="_blank" style="display:block;"><img src="/themes/1/images/lxzn.jpg" width="160" height="120"/><p style="text-align:center; font-size:14px; color:#fff;">Handbook</p></a>
+                        </div>
+                    </div>
+					<div class="box">
+						<a href="/en/activity?cid=173&pid=3">Guidance</a>					</div>
+                </div>
+			
+			</li>
+        </ul>
+    </div>
+    <div class="h_right fr">
+        <ul>
+            <li class="has"><a href="javascript:;" data-title="SCHOLARSHIP">SCHOLARSHIP</a>
+			<div class="dropdown dropdown3">
+                    <div class="box fl">
+                        <h3>Prospective Students</h3>
+                        <dl>
+                                                                                    <dd>
+                                <h4><a href="/en/pages?cid=522&pid=205" >Chinese Government Scholarship</a></h4>
+                            </dd>
+							                                                        <dd>
+                                <h4><a href="/en/pages?cid=476&pid=205" >Confucius Institute Scholarship</a></h4>
+                            </dd>
+							                                                        <dd>
+                                <h4><a href="/en/pages?cid=339&pid=205" >Confucius China Studies Program</a></h4>
+                            </dd>
+							                                                        <dd>
+                                <h4><a href="/en/Pages?cid=508&pid=205" >Beijing Government Scholarship</a></h4>
+                            </dd>
+							                                                        <dd>
+                                <h4><a href="/en/Pages?cid=505&pid=205" >Beijing Normal University Scholarship</a></h4>
+                            </dd>
+							                            
+                            <div><a href="/en/pages?cid=124&pid=205">More</a></div>
+                        </dl>
+                                            </div>
+                    <div class="box fl box2">
+                        <h3>Current Students</h3>
+                                                <dl>
+                                                                                  <dd>
+                                <h4><a href="/en/pages?cid=479&pid=206"  >Chinese Government Scholarship</a></h4>
+                                <p></p>
+                            </dd>
+							                                                       <dd>
+                                <h4><a href="/en/pages?cid=510&pid=206"  >Beijing Government Scholarship</a></h4>
+                                <p></p>
+                            </dd>
+							                                                       <dd>
+                                <h4><a href="/en/pages?cid=482&pid=206"  >Beijing Normal University Scholarship</a></h4>
+                                <p></p>
+                            </dd>
+							                           
+                            <div><a href="/en/pages?cid=479&pid=206" class="clear">More</a></div>
+                        </dl>
+                    </div>
+                    <div class="box fl">
+
+                        <a href="http://apply.bnu.edu.cn/" target="_blank">Apply Now</a>                        <a href="/en/scholarship?cid=4&pid=4">Guidance</a>                    </div>
+                </div>
+			</li>
+            <li><a href="/en/alumni?cid=5&pid=5">ALUMNI</a></li>
+            <li><a href="/en/contact?cid=169&pid=6">CONTACT US</a></li>
+        </ul>
+    </div>
+
+</div>
+
+
+
+
+<script>
+	$(window).scroll(function(){
+        var top =$(window).scrollTop();
+        $(".header").addClass("fix-on header-collapsed");
+        if(top <= 0){
+            $(".header").removeClass("fix-on header-collapsed");
+        }
+    });
+	
+
+    function checkfrmm(){
+        var search1 = document.getElementById("search_input1").value;
+        if (search1 == '' ) {
+            $("#frmm").find('input').attr("placeholder","Please input text");
+            return false;
+        }
+    }
+
+    $('.ui.dropdown.lang').dropdown({action: 'combo'});
+</script>
+<script src="/themes/1/js/artDialog/jquery.artDialog.js?skin=simple"></script>
+<script src="/themes/1/js/artDialog/plugins/iframeTools.js"></script>
+<link href="/themes/1/css/index.css" rel="stylesheet" type="text/css"/>
+<script src="/themes/1/js/indexShow.js" type="text/javascript"></script>
+<div class="banner1">
+    <img src="/themes/1/images/banner1.jpg"/>
+    <div class="text w_1200">
+        <h2 id="png">Welcome to <br />beijing normal university</h2>
+        <p id="png">Learn, so as to instruct others, Act, to serve as example to all</p>
+    </div>
+</div>
+
+    <div class="rbsBJ">
+        <div id="wrapper" style="margin:0px auto;">
+            <div class="indexShow" id="imgShow">
+                <ul class="imgBox">
+
+                                                <li class="li1">
+                                <div class="bg bj4"></div>
+                                <div>
+                                    <div class="tit">
+                                        <a target="_blank" href="/en/course?cid=10&pid=8&type_id=2&k=3" id="tit_1">
+                                            Chinese Language Program                                        </a>
+                                    </div>
+                                    <a href="/en/course?cid=10&pid=8&type_id=2&k=3" target="_blank" class="show_img">
+                                        <img  alt="" src="/uploads/201609/19/G919554948764881.jpg"  data="edit_Img" id="img_1"/>
+                                    </a>
+                                    <div class="showColor6">
+                                        <div class="tit2">
+                                            <ul>
+	<li>
+		<a href="/en/course?cid=10&pid=8&type_id=2&k=3"><span style="font-size:12px;">Different Levels of Classes & Small Class Teaching</span></a> 
+	</li>
+	<li>
+		<a href="/en/course?cid=10&pid=8&type_id=2&k=3"><span style="font-size:12px;">Strong and Committed Teachers & Full Range of Curriculum</span></a> 
+	</li>
+	<li>
+		<a href="/en/course?cid=10&pid=8&type_id=2&k=3"><span style="font-size:12px;">Edutainment & Extracurricular Activity</span></a> 
+	</li>
+</ul>                                        </div>
+                                        <!-- <p>
+											<span id="datezx_1" style="font-size: 14px; margin-top: 20px;">
+												2015 ~ 2016 Admissions
+											</span>
+										</p> -->
+                                    </div>
+                                </div>
+                            </li>
+                                                    <li class="li2">
+                                <div class="bg bj4"></div>
+                                <div>
+                                    <div class="tit">
+                                        <a target="_blank" href="/en/course?cid=10&pid=8&type_id=1&k=0" id="tit_1">
+                                            English-Taught Program                                        </a>
+                                    </div>
+                                    <a href="/en/course?cid=10&pid=8&type_id=1&k=0" target="_blank" class="show_img">
+                                        <img  alt="" src="/uploads/201512/15/FC15637235215625.jpg"  data="edit_Img" id="img_1"/>
+                                    </a>
+                                    <div class="showColor6">
+                                        <div class="tit2">
+                                            <ul>
+	<li>
+		<a href=" /en/course/detail?cid=10&course_id=587&pid=8"><span style="font-size:12px;">Comparative Education (PHD) </span></a> 
+	</li>
+	<li>
+		<a href="/en/course/detail?cid=10&course_id=428&pid=8 "><span style="font-size:12px;">Comparative Education (Master) </span></a> 
+	</li>
+	<li>
+		<a href="/en/course/detail?cid=10&course_id=499&pid=8 "><span style="font-size:12px;">Management of Higher Education(Master) </span></a> 
+	</li>
+	<li>
+		<a href=" /en/course/detail?cid=10&course_id=531&pid=8"><span style="font-size:12px;">Public Management(Master) </span></a> 
+	</li>
+	<li>
+		<a href="/en/course/detail?cid=10&course_id=456&pid=8 "><span style="font-size:12px;">Environmental Science(Master) </span></a> 
+	</li>
+	<li>
+		<a href="/en/course/detail?cid=10&course_id=562&pid=8 "><span style="font-size:12px;">World Economy(Master) </span></a> 
+	</li>
+	<li>
+		<a href="/en/course/detail?cid=10&course_id=490&pid=8 "><span style="font-size:12px;">Chinese Law(Master)</span></a> 
+	</li>
+</ul>                                        </div>
+                                        <!-- <p>
+											<span id="datezx_1" style="font-size: 14px; margin-top: 20px;">
+												2015 ~ 2016 Admissions
+											</span>
+										</p> -->
+                                    </div>
+                                </div>
+                            </li>
+                                                    <li class="li3">
+                                <div class="bg bj4"></div>
+                                <div>
+                                    <div class="tit">
+                                        <a target="_blank" href="/en/course?cid=10&pid=8&type_id=2&k=1" id="tit_1">
+                                            Top Majors of Master Degree                                        </a>
+                                    </div>
+                                    <a href="/en/course?cid=10&pid=8&type_id=2&k=1" target="_blank" class="show_img">
+                                        <img  alt="" src="/uploads/201512/15/FC15637921198969.jpg"  data="edit_Img" id="img_1"/>
+                                    </a>
+                                    <div class="showColor6">
+                                        <div class="tit2">
+                                            <ul>
+	<li>
+		<a target="_blank" href="/en/course/detail?cid=10&course_id=395&pid=2"><span style="font-size:12px;">MBA</span></a> 
+	</li>
+	<li>
+		<a target="_blank" href="/en/course/detail?cid=10&course_id=531&pid=2"><span style="font-size:12px;">Public </span></a><a target="_blank" href="/en/course/detail?cid=10&course_id=531&pid=2"><span style="font-size:12px;">Administration</span></a> 
+	</li>
+	<li>
+		<a target="_blank" href="/en/course/detail?cid=10&course_id=555&pid=2"><span style="font-size:12px;"> Master of Teaching Chinese to Speakers of Other Languages </span></a> 
+	</li>
+	<li>
+		<a target="_blank" href="/en/course/detail?cid=10&course_id=428&pid=2"><span style="font-size:12px;">Comparative Education </span></a> 
+	</li>
+	<li>
+		<a target="_blank" href="/en/course/detail?cid=10&course_id=562&pid=2"><span style="font-size:12px;">Global Economy</span></a> 
+	</li>
+	<li>
+		<a target="_blank" href="/en/course/detail?cid=10&course_id=456&pid=2"><span style="font-size:12px;">Environmental Science</span> </a> 
+	</li>
+</ul>                                        </div>
+                                        <!-- <p>
+											<span id="datezx_1" style="font-size: 14px; margin-top: 20px;">
+												2015 ~ 2016 Admissions
+											</span>
+										</p> -->
+                                    </div>
+                                </div>
+                            </li>
+                                                    <li class="li4">
+                                <div class="bg bj4"></div>
+                                <div>
+                                    <div class="tit">
+                                        <a target="_blank" href="/en/course?cid=10&pid=8&type_id=2&k=0" id="tit_1">
+                                            Degree Program                                        </a>
+                                    </div>
+                                    <a href="/en/course?cid=10&pid=8&type_id=2&k=0" target="_blank" class="show_img">
+                                        <img  alt="" src="/uploads/201609/19/G919553170951684.jpg"  data="edit_Img" id="img_1"/>
+                                    </a>
+                                    <div class="showColor6">
+                                        <div class="tit2">
+                                            <ul>
+	<li>
+		<a href="/en/course?cid=10&pid=8&type_id=2&k=0" target="_blank"><span style="font-size:12px;">Bachelor Degree Program</span></a> 
+	</li>
+	<li>
+		<a href="/en/course?cid=10&pid=8&type_id=2&k=1" target="_blank"><span style="font-size:12px;">Master Degree Program</span></a> 
+	</li>
+	<li>
+		<a href="/en/course?cid=10&pid=8&type_id=2&k=2" target="_blank"><span style="font-size:12px;">Ph•D Degree Program</span></a> 
+	</li>
+</ul>                                        </div>
+                                        <!-- <p>
+											<span id="datezx_1" style="font-size: 14px; margin-top: 20px;">
+												2015 ~ 2016 Admissions
+											</span>
+										</p> -->
+                                    </div>
+                                </div>
+                            </li>
+                                                    <li class="li5">
+                                <div class="bg bj4"></div>
+                                <div>
+                                    <div class="tit">
+                                        <a target="_blank" href="/en/course?cid=10&amp;pid=8&amp;type_id=1&amp;k=2" id="tit_1">
+                                            Credit & Research Program                                        </a>
+                                    </div>
+                                    <a href="/en/course?cid=10&amp;pid=8&amp;type_id=1&amp;k=2" target="_blank" class="show_img">
+                                        <img  alt="" src="/uploads/201512/15/FC15646974310664.jpg"  data="edit_Img" id="img_1"/>
+                                    </a>
+                                    <div class="showColor6">
+                                        <div class="tit2">
+                                            <ul>
+	<li>
+		<a target="_blank" href="/en/course?cid=10&amp;pid=8&amp;type_id=1&amp;k=2"><span style="font-size:12px;">Undergraduate Credit Program</span></a> 
+	</li>
+	<li>
+		<a target="_blank" href="/en/course?cid=10&amp;pid=8&amp;type_id=1&amp;k=3"><span style="font-size:12px;">Graduate Credit Program</span></a> 
+	</li>
+	<li>
+		<a target="_blank" href="/en/course?cid=10&amp;pid=8&amp;type_id=1&amp;k=4"><span style="font-size:12px;">Research Scholar Program</span></a> 
+	</li>
+	<li>
+		<a target="_blank" href="/en/course?cid=10&amp;pid=8&amp;type_id=2&amp;k=4"><span style="font-size:12px;">Summer &amp; Spring Short-term Chinese Language Program</span></a> 
+	</li>
+</ul>                                        </div>
+                                        <!-- <p>
+											<span id="datezx_1" style="font-size: 14px; margin-top: 20px;">
+												2015 ~ 2016 Admissions
+											</span>
+										</p> -->
+                                    </div>
+                                </div>
+                            </li>
+                                                    <li class="li6">
+                                <div class="bg bj4"></div>
+                                <div>
+                                    <div class="tit">
+                                        <a target="_blank" href="/en/course?cid=10&pid=8&type_id=2&k=4" id="tit_1">
+                                            Short Term Program                                        </a>
+                                    </div>
+                                    <a href="/en/course?cid=10&pid=8&type_id=2&k=4" target="_blank" class="show_img">
+                                        <img  alt="" src="/uploads/201609/19/G919541748048372.png"  data="edit_Img" id="img_1"/>
+                                    </a>
+                                    <div class="showColor6">
+                                        <div class="tit2">
+                                            <ul>
+	<li>
+		<a target="_blank" href="/en/course?cid=10&pid=8&type_id=2&k=4"><span style="font-size:12px;">Small size class</span></a> 
+	</li>
+	<li>
+		<a target="_blank" href="/en/course?cid=10&pid=8&type_id=2&k=4"><span style="font-size:12px;">Teaching in different levels</span></a> 
+	</li>
+	<li>
+		<a target="_blank" href="/en/course?cid=10&pid=8&type_id=2&k=4"><span style="font-size:12px;">Highly experienced and fully professional teachers</span></a> 
+	</li>
+</ul>                                        </div>
+                                        <!-- <p>
+											<span id="datezx_1" style="font-size: 14px; margin-top: 20px;">
+												2015 ~ 2016 Admissions
+											</span>
+										</p> -->
+                                    </div>
+                                </div>
+                            </li>
+                                                    <li class="li7">
+                                <div class="bg bj4"></div>
+                                <div>
+                                    <div class="tit">
+                                        <a target="_blank" href="/en/course?cid=10&pid=8&type_id=2&k=0" id="tit_1">
+                                            Top Majors of Bachelor Degree                                        </a>
+                                    </div>
+                                    <a href="/en/course?cid=10&pid=8&type_id=2&k=0" target="_blank" class="show_img">
+                                        <img  alt="" src="/uploads/201609/19/G919544780746922.jpg"  data="edit_Img" id="img_1"/>
+                                    </a>
+                                    <div class="showColor6">
+                                        <div class="tit2">
+                                            <ul>
+	<li>
+		<a target="_blank" href="/en/course/detail?cid=10&course_id=1&pid=2"><span style="font-size:12px;">Chinese Language</span></a> 
+	</li>
+	<li>
+		<a target="_blank" href="/en/course/detail?cid=10&course_id=40&pid=2"><span style="font-size:12px;">Chinese Language and Literature</span></a> 
+	</li>
+	<li>
+		<a target="_blank" href="/en/course/detail?cid=10&course_id=48&pid=2"><span style="font-size:12px;">Business Administration</span></a> 
+	</li>
+	<li>
+		<a target="_blank" href="/en/course/detail?cid=10&course_id=52&pid=2"><span style="font-size:12px;">Education</span></a> 
+	</li>
+	<li>
+		<a target="_blank" href="/en/course/detail?cid=10&course_id=71&pid=2"><span style="font-size:12px;">Psychology</span></a> 
+	</li>
+	<li>
+		<a target="_blank" href="/en/course/detail?cid=10&course_id=42&pid=2"><span style="font-size:12px;">History</span></a> 
+	</li>
+	<li>
+		<a target="_blank" href="/en/course/detail?cid=10&course_id=60&pid=2"><span style="font-size:12px;">Dancing</span></a> 
+	</li>
+</ul>                                        </div>
+                                        <!-- <p>
+											<span id="datezx_1" style="font-size: 14px; margin-top: 20px;">
+												2015 ~ 2016 Admissions
+											</span>
+										</p> -->
+                                    </div>
+                                </div>
+                            </li>
+                                                    <li class="li8">
+                                <div class="bg bj4"></div>
+                                <div>
+                                    <div class="tit">
+                                        <a target="_blank" href="/en/course?cid=10&pid=8&type_id=2&k=2" id="tit_1">
+                                            Top Majors of Ph•D Degree                                        </a>
+                                    </div>
+                                    <a href="/en/course?cid=10&pid=8&type_id=2&k=2" target="_blank" class="show_img">
+                                        <img  alt="" src="/uploads/201512/15/FC15648791175170.jpg"  data="edit_Img" id="img_1"/>
+                                    </a>
+                                    <div class="showColor6">
+                                        <div class="tit2">
+                                            <ul>
+	<li>
+		<a target="_blank" href="/en/course/detail?cid=10&course_id=587&pid=2"><span style="font-size:12px;">Comparative Education </span></a> 
+	</li>
+	<li>
+		<a target="_blank" href="/en/course/detail?cid=10&course_id=623&pid=2"><span style="font-size:12px;">Linguistics and Applied Linguistics</span></a> 
+	</li>
+	<li>
+		<a target="_blank" href="/en/course/detail?cid=10&course_id=657&pid=2"><span style="font-size:12px;">Chinese Language and Philology </span></a> 
+	</li>
+	<li>
+		<a target="_blank" href="/en/course/detail?cid=10&course_id=623&pid=2"><span style="font-size:12px;">Linguistics and Applied Linguistics </span></a> 
+	</li>
+	<li>
+		<a target="_blank" href="/en/course/detail?cid=10&course_id=565&pid=2"><span style="font-size:12px;">Administration</span> </a> 
+	</li>
+</ul>                                        </div>
+                                        <!-- <p>
+											<span id="datezx_1" style="font-size: 14px; margin-top: 20px;">
+												2015 ~ 2016 Admissions
+											</span>
+										</p> -->
+                                    </div>
+                                </div>
+                            </li>
+                                                    <li class="li9">
+                                <div class="bg bj4"></div>
+                                <div>
+                                    <div class="tit">
+                                        <a target="_blank" href="javascript:;" id="tit_1">
+                                            National Excellent Courses                                        </a>
+                                    </div>
+                                    <a href="javascript:;" target="_blank" class="show_img">
+                                        <img  alt="" src="/uploads/201711/02/HB02090918864872.jpg"  data="edit_Img" id="img_1"/>
+                                    </a>
+                                    <div class="showColor6">
+                                        <div class="tit2">
+                                            <style>
+.imgBox .li9 .tit {font-size:20px;}
+</style>
+<ul>
+	<li>
+		<a href="/en/course?cid=10&amp;pid=8&amp;type_id=1&amp;k=0&amp;k=0"><span style="font-size:12px;">National Excellent English-taught Courses for International Students</span></a> 
+	</li>
+</ul>                                        </div>
+                                        <!-- <p>
+											<span id="datezx_1" style="font-size: 14px; margin-top: 20px;">
+												2015 ~ 2016 Admissions
+											</span>
+										</p> -->
+                                    </div>
+                                </div>
+                            </li>
+                                                    <li class="li10">
+                                <div class="bg bj4"></div>
+                                <div>
+                                    <div class="tit">
+                                        <a target="_blank" href="javascript:;" id="tit_1">
+                                            BNU Excellent Courses                                        </a>
+                                    </div>
+                                    <a href="javascript:;" target="_blank" class="show_img">
+                                        <img  alt="" src="/uploads/201711/02/HB02091619338518.jpg"  data="edit_Img" id="img_1"/>
+                                    </a>
+                                    <div class="showColor6">
+                                        <div class="tit2">
+                                            <ul>
+	<li>
+		<a href="/en/course?cid=10&pid=8&type_id=1&k=0&k=0"><span style="font-size:12px;">BNU English-taught Excellent Courses for International Students</span></a> 
+	</li>
+</ul>                                        </div>
+                                        <!-- <p>
+											<span id="datezx_1" style="font-size: 14px; margin-top: 20px;">
+												2015 ~ 2016 Admissions
+											</span>
+										</p> -->
+                                    </div>
+                                </div>
+                            </li>
+                        
+                </ul>
+                <ol class="showTab">
+                    <li class="active"><a href="javascript:void(0);"></a></li>
+                    <li><a href="javascript:void(0);"></a></li>
+                    <li><a href="javascript:void(0);"></a></li>
+                    <li><a href="javascript:void(0);"></a></li>
+                    <li><a href="javascript:void(0);"></a></li>
+                    <li><a href="javascript:void(0);"></a></li>
+                    <li><a href="javascript:void(0);"></a></li>
+                    <li><a href="javascript:void(0);"></a></li>
+                    <li><a href="javascript:void(0);"></a></li>
+                    <li><a href="javascript:void(0);"></a></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="news_notice">
+            <div class="w_1200">
+                <div class="notice fl">
+                    <h3>What&#39;s On @ BNU</h3>
+
+                                                <div class="n_box ">
+                                <dl>
+                                    <dt class="fl">
+                                    <p>10</p>
+                                    Apr                                    </dt>
+                                    <dd class="fl">
+                                        <h4><a href="/en/affiche/detail?cid=20&detail=277&pid=18">Instructors for Non-English Major students</a></h4>
+                                        <p><!-- <em>2015 ~ 2016 Admissions. </em> <span>|</span> -->
+
+                                            Instructors for Non-English Major students...                                        </p>
+                                    </dd>
+                                </dl>
+                            </div>
+
+                                                    <div class="n_box  n_box2">
+                                <dl>
+                                    <dt class="fl">
+                                    <p>02</p>
+                                    Apr                                    </dt>
+                                    <dd class="fl">
+                                        <h4><a href="/en/affiche/detail?cid=20&detail=276&pid=18">Enjoy freely - Monthly activity: Trip to Badaling Great Wall notice</a></h4>
+                                        <p><!-- <em>2015 ~ 2016 Admissions. </em> <span>|</span> -->
+
+                                            
+	Enjoy freely - Monthly activity: Trip
+to Badaling Great Wall notice
+
+
+	In order to enrich the study life of International
+...                                        </p>
+                                    </dd>
+                                </dl>
+                            </div>
+
+                                                    <div class="n_box ">
+                                <dl>
+                                    <dt class="fl">
+                                    <p>27</p>
+                                    Mar                                    </dt>
+                                    <dd class="fl">
+                                        <h4><a href="/en/affiche/detail?cid=20&detail=274&pid=18">Notice for inviting Int'l Students from ASEAN Countries Participate in the</a></h4>
+                                        <p><!-- <em>2015 ~ 2016 Admissions. </em> <span>|</span> -->
+
+                                            
+	
+	
+...                                        </p>
+                                    </dd>
+                                </dl>
+                            </div>
+
+                                            <div class="btn">
+                        <div class="left fl"></div>
+                        <a target="_blank" href="/en/affiche?cid=20&pid=18" class="fl"><span>More</span></a>
+                        <div class="right fl"></div>
+                    </div>
+                </div>
+                <div class="news fl">
+                    <h3>News</h3>
+
+                                                <dl>
+                                <dt class="fl"><img width="80px" height="80px" src="/themes/1/images/news_1.jpg"/> </dt>
+                                <dd><a target="_blank" href="/en/news/detail?cid=19&detail=55&pid=18">BNU Vice President Zhou Zuoyu visited International students during the Spring Festival greeting activity.</a> </dd>
+                            </dl>
+                                                    <dl>
+                                <dt class="fl"><img width="80px" height="80px" src="/themes/1/images/news_1.jpg"/> </dt>
+                                <dd><a target="_blank" href="/en/news/detail?cid=19&detail=51&pid=18">Beijing Normal University Holds International Students Publicity Ambassador Project Initiative</a> </dd>
+                            </dl>
+                        
+                    <ul>
+                                                        <li><a target="_blank" href="/en/news/detail?cid=19&detail=55&pid=18">BNU Vice President Zhou Zuoyu visited International students during the Spring Festival greeting activity.</a> </li>
+                                                            <li><a target="_blank" href="/en/news/detail?cid=19&detail=51&pid=18">Beijing Normal University Holds International Students Publicity Ambassador Project Initiative</a> </li>
+                                                            <li><a target="_blank" href="/en/news/detail?cid=19&detail=48&pid=18">NIGHT FOR NEW: BEIJING INTERNATIONAL STUDENTS NIGHT 2017</a> </li>
+                            
+                    </ul>
+                    <div class="btn">
+                        <div class="left fl"></div>
+                        <a target="_blank" href="/en/news?cid=19&pid=18" class="fl"><span>More</span></a>
+                        <div class="right fl"></div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="content">
+        <!--视频模块 - 开始-->
+        <!--<div class="videos">
+	<div class="w_1200">
+		<div class="v_left fl">
+			<a href="/uploads/201512/14/Introduction of BNU-English_Compress.MP4" onclick="show_video('http://video.weibo.com/show?fid=1034:b83e2bf5f5dc710b8eb1b7fd43b31277')"> <img src="/uploads/201512/15/FC15519514174091.jpg" alt="" height="450" width="600" /> 
+			<div class="text">
+				<h4>
+					Introduction of BNU
+				</h4>
+				<p>
+					Beijing Normal University, a key university under the administration of the Ministry of Education, is a renowned institution of higher education known for teacher education, education science and basic learning in both the arts and the sciences.
+				</p>
+			</div>
+<span></span> </a> 
+		</div>
+		<div class="v_right fl">
+			<ul>
+				<li>
+					<a href="/uploads/201512/14/Welcome to BNU_Compress.MP4" onclick="show_video('http://video.weibo.com/show?fid=1034:b83e2bf5f5dc710b8eb1b7fd43b31277')"> <img src="/uploads/201512/15/FC15521723651829.jpg" alt="" height="217" width="298" /> 
+					<div class="text">
+						<span></span> 
+						<p>
+							Welcome to BNU
+						</p>
+					</div>
+</a> 
+				</li>
+				<li class="box2">
+					<a href="/en/activity?cid=173&amp;pid=3" onclick="show_video('http://video.weibo.com/show?fid=1034:b83e2bf5f5dc710b8eb1b7fd43b31277')"> <img src="/uploads/201512/15/FC15516518669254.jpg" alt="" height="217" width="298" /> 
+					<div class="text">
+						<p>
+							Festival of Chinese Culture and Art Communication
+						</p>
+<em>LEARN MORE</em> 
+					</div>
+</a> 
+				</li>
+				<li class="box2 box3">
+					<a href="/en/facilities?cid=14&amp;pid=3"> <img src="/uploads/201512/15/FC15513859485151.jpg" alt="" height="217" width="298" /> 
+					<div class="text">
+						<p>
+							Facilities in Beijing Normal University
+						</p>
+<em>LEARN MORE</em> 
+					</div>
+</a> 
+				</li>
+				<li class="box2 box4">
+					<a href="/en/activity?cid=173&amp;pid=3"> <img src="/uploads/201512/15/FC15510040600431.jpg" alt="" height="217" width="298" /> 
+					<div class="text">
+						<p>
+							International Students' Night
+						</p>
+<em>LEARN MORE</em> 
+					</div>
+</a> 
+				</li>
+			</ul>
+		</div>
+		<div class="clear">
+		</div>
+	</div>
+</div>-->
+        <div class="videos">
+            <div class="w_1200">
+                            <div class="v_left fl">
+                    <a href="javascript:;" onclick="show_video(39)"  > <img src="/uploads/201512/15/FC15519514174091.jpg" alt="" height="450" width="600" />
+                    <div class="text">
+                        <h4>
+                            Introduction of BNU                        </h4>
+                        <p>
+                                                    </p>
+                    </div>
+        <span></span> </a> 
+                </div>
+                                <div class="v_right fl">
+                    <ul>
+                                            <li>
+                            <a href="javascript:;" onclick="show_video(40)"  > <img src="/uploads/201512/17/FC17384965680878.jpg" alt="" height="217" width="298" />
+                            <div class="text">
+                                <span></span> 
+                                <p>
+                                    Welcome to BNU                                </p>
+                            </div>
+        </a> 
+                        </li>
+                                                                        <li class="box2">
+                            <a href="javascript:;" onclick="show_video(34)"  > <img src="/uploads/201512/17/FC17375786808520.jpg" alt="" height="217" width="298" />
+                            <div class="text">
+                                <p>
+                                    Welcome to Study in College of Chinese language of BNU                                </p>
+        <!-- <em>Learn More</em>  -->
+                            </div>
+        </a> 
+                        </li>
+                                                                        <li class="box2 box3">
+                            <a href="javascript:;" onclick="show_video(35)"  > <img src="/uploads/201512/17/FC17378501190291.jpg" alt="" height="217" width="298" />
+                            <div class="text">
+                                <p>
+                                    Chinese language Course                                </p>
+        <!-- <em>Learn More</em>  -->
+                            </div>
+        </a> 
+                        </li>
+                                                                        <li class="box2 box4">
+                            <a href="/en/videos?cid=353&pid=352" target="_black" > <img src="/uploads/201512/17/FC17386982356066.jpg" alt="" height="217" width="298" />
+                            <div class="text">
+                                <p>
+                                   Our Stories @ BNU                                </p>
+        <em>Learn More</em> 
+                            </div>
+        </a> 
+                        </li>
+                                            </ul>
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+        </div>
+
+
+        <!--友情链接 2016年1月25日17:33:33-->
+        <div class="link">
+	<div class="w_1200">
+		<h3>
+			Links
+		</h3>
+		<p>
+			<a target="_blank" href="http://www.bnu.edu.cn/">BNU</a> <span>|</span> <a target="_blank" href="http://zyfw.bnu.edu.cn/bnujw/">Course Selection System</a> <span>|</span> <a target="_blank" href="http://apply.bnu.edu.cn/booking/reservingRoom/login.do">Online Inquiry System for Apartment </a> <span>|</span> <a target="_blank" href="http://www.hanban.edu.cn/">Confucius Institute Headquarters (Hanban) </a> <span>|</span> <a target="_blank" href="http://www.chinesetest.cn/gosign.do?id=2&amp;lid=828635">HSK</a> 
+		</p>
+		<p>
+			<a target="_blank" href="http://www.csc.edu.cn/">China Scholarship Council</a> <span>|</span> <a target="_blank" href="http://www.cdgdc.edu.cn/cn/">China Qualification Verification(CQV)</a> <span>|</span> <a target="_blank" href="http://www.bjgaj.gov.cn/web/">Beijing Municipal Public Security Bureau </a> <span>|</span> <a target="_blank" href="http://www.lxbx.net/">Ping An Insure</a> 
+		</p>
+	</div>
+</div>
+
+        <!--视频模块 - 结束-->
+
+    </div>
+<!--pop_menu  start-->
+<div class="pop_menu">
+    <a href="javascript:;" class="close"></a>
+    <div class="tool fl">
+        <h3>presto tool</h3>
+        <a href="http://apply.bnu.edu.cn/" target="_blank" class="apply">Apply Online</a>
+		<dl>
+            <h4>Prospective Students:</h4>
+			            			 <dd><a href="/en/accommodation?cid=13&pid=3">Accommodation</a> </dd>
+			            			 <dd><a href="/en/pages?cid=196&pid=183">Visa</a> </dd>
+			            			 <dd><a href="/en/pages?cid=370&pid=183">Insurance</a> </dd>
+			            			 <dd><a href="/en/pages?cid=197&pid=183">Physical Examination</a> </dd>
+			            			 <dd><a href="/en/pages?cid=195&pid=183">Pick up</a> </dd>
+			            			 <dd><a href="/en/pages?cid=371&pid=183">How to get to BNU</a> </dd>
+			            			 <dd><a href="/en/pages?cid=199&pid=183">Registration</a> </dd>
+			            			 <dd><a href="/en/pages?cid=198&pid=183">Payment</a> </dd>
+			            			 <dd><a href="/en/pages?cid=200&pid=183">Campus Map</a> </dd>
+			           
+           
+        </dl>
+        <dl style="padding-left: 30px;">
+            <h4>Current Students:</h4>
+                        			 <dd><a href="/en/pages?cid=189&pid=184">Calendar</a> </dd>
+			            			 <dd><a href="/en/pages?cid=378&pid=184">Academic Guidance</a> </dd>
+			            			 <dd><a href="/en/pages?cid=190&pid=184">library</a> </dd>
+			            			 <dd><a href="/en/pages?cid=485&pid=184">Life service</a> </dd>
+			            			 <dd><a href="/en/pages?cid=439&pid=184">Students Association</a> </dd>
+			            			 <dd><a href="/en/activity?cid=173&pid=3">Campus Activities</a> </dd>
+			            			 <dd><a href="/en/pages?cid=496&pid=184">Visa</a> </dd>
+			            			 <dd><a href="/en/article?cid=375&pid=184">Regulations</a> </dd>
+			            			 <dd><a href="/en/pages?cid=193&pid=184">Internship</a> </dd>
+			            			 <dd><a href="/en/pages?cid=192&pid=184">Psychological Consulting</a> </dd>
+			            			 <dd><a href="/en/download?cid=500&pid=184">Download</a> </dd>
+			            			 <dd><a href="/en/pages?cid=520&pid=184">Safty Reminder</a> </dd>
+			        </dl>
+    </div>
+    <div class="mid fl">
+        <h3>Study abroad program</h3>
+        <h4>Programs:</h4>
+        <ul>
+		 		  <li><a href="/en/course?cid=10&pid=2&type_id=2&k=0">Bachelor Degree Program</a> </li>
+		 		  <li><a href="/en/course?cid=10&pid=2&type_id=2&k=1">Master Degree Program</a> </li>
+		 		  <li><a href="/en/course?cid=10&pid=2&type_id=2&k=2">Ph.D Program</a> </li>
+		 		  <li><a href="/en/course?cid=10&pid=2&type_id=2&k=3">Chinese Language Program</a> </li>
+		 		  <li><a href="/en/course?cid=10&pid=2&type_id=2&k=4">Short-term Program</a> </li>
+		            
+           
+        </ul>
+        <h4>Feature Programs:</h4>
+        <ul>
+           		  <li><a href="/en/course?cid=10&pid=2&type_id=1&k=0">English-Taught Degree Program</a> </li>
+		 		  <li><a href="/en/course?cid=10&pid=2&type_id=1&k=1">English-Taught Credit Program</a> </li>
+		 		  <li><a href="/en/course?cid=10&pid=2&type_id=1&k=2">Undergraduate Credit Program</a> </li>
+		 		  <li><a href="/en/course?cid=10&pid=2&type_id=1&k=3">Graduate Credit Program</a> </li>
+		 		  <li><a href="/en/course?cid=10&pid=2&type_id=1&k=4">Research Scholar Program</a> </li>
+		         </ul>
+    </div>
+    <div class="mid right fl">
+        <h3>
+	Contact us
+</h3>
+<h4>
+	Beijing normal university international students office
+</h4>
+<p>
+	<span>Address:</span><em> haidian district of Beijing xinjiekou 19 jingshi outside, street building 9910</em> 
+</p>
+<p>
+	Zip code: 100875
+</p>
+<p>
+	Fax: 86-10-5 880-0823
+</p>
+<p>
+	E-mail:isp@bnu.edu.cn
+</p>
+<img src="/themes/1/images/webchat2.jpg" alt="" height="150" width="150" /> 
+    </div>
+    <div class="clear"></div>
+</div>
+<!--pop_menu  end-->
+
+
+<script>
+    
+    $(function(){
+        var btn_main_menu = $(".t_menu");
+        var btn_main_close = $(".pop_menu .close");
+        var btn_nav_li = $(".header li");
+
+        var win_pop = $(".pop_menu");
+        var dropdown = $(".header .dropdown");
+
+        var tmp = '';
+
+        var bnu_nav_hide = function(t){
+            win_pop.fadeOut('400');
+            dropdown.fadeOut('400');
+            btn_nav_li.removeClass('is_active');
+            tmp = '';
+        };
+
+        var win_init = function(){
+            btn_main_menu.on('click', function() {
+                bnu_nav_hide();
+                win_pop.fadeIn('400');
+            });
+
+            btn_main_close.on('click', function() {
+                bnu_nav_hide();
+            });
+
+            btn_nav_li.on('click', function() {
+                var t = $(this);
+                var d = t.find('.dropdown');
+                var n = btn_nav_li.index(t);
+                if(tmp !== n){
+                    bnu_nav_hide();
+                    t.addClass('is_active');
+                    d.fadeIn('400',function(){
+                        tmp = btn_nav_li.index(t);
+                    });
+                    return true;
+                }
+                bnu_nav_hide();
+            });
+        }
+
+        win_init();
+    });
+
+</script>
+<!-- video -->
+
+<div class="bottom clear">
+	<div class="inner">
+		<div class="w_1200 clearfix">
+			<div class="box">
+				<p>
+					About us
+				</p>
+				<dl>
+					<dd>
+						<a href="/en/pages?cid=488&amp;pid=1">About Beijing</a> 
+					</dd>
+					<dd>
+						<a href="/en/about?cid=1&amp;pid=1">About BNU</a> 
+					</dd>
+					<dd>
+						<a href="/en/contact?cid=169&amp;pid=6" target="_blank">About ISO</a> 
+					</dd>
+					<dd>
+						<a href="/en/article?cid=91&amp;pid=1">Famous Professors</a> 
+					</dd>
+				</dl>
+			</div>
+			<div class="box">
+				<p>
+					Admissions
+				</p>
+				<dl>
+					<dd>
+						<a href="/en/course?cid=10&amp;pid=2&amp;type_id=2&amp;k=0">Bachelor Degree Program</a> 
+					</dd>
+					<dd>
+						<a href="/en/course?cid=10&amp;pid=2&amp;type_id=2&amp;k=1">Master Degree Program</a> 
+					</dd>
+					<dd>
+						<a href="/en/course?cid=10&amp;pid=2&amp;type_id=2&amp;k=2">Ph•D Program</a> 
+					</dd>
+					<dd>
+						<a href="/en/course?cid=10&amp;pid=2&amp;type_id=1&amp;k=0">English-taught Program</a> 
+					</dd>
+					<dd>
+						<a href="/en/course?cid=10&amp;pid=2&amp;type_id=2&amp;k=3">Chinese Language Program</a> 
+					</dd>
+				</dl>
+			</div>
+			<div class="box">
+				<p>
+					Study &amp; Life
+				</p>
+				<dl>
+					<dd>
+						<a href="/uploads/201512/19/bb_bnu.pdf">Orientation </a> 
+					</dd>
+					<dd>
+						<a href="/en/activity?cid=173&amp;pid=3">Students Association </a> 
+					</dd>
+					<dd>
+						<a href="/en/facilities?cid=14&amp;pid=3">Facilities</a> 
+					</dd>
+					<dd>
+						<a href="/en/pages?cid=193&amp;pid=184">Internship &amp; Employment</a> 
+					</dd>
+				</dl>
+			</div>
+			<div class="box">
+				<p>
+					Scholarship
+				</p>
+				<dl>
+					<dd>
+						<a href="/en/pages?cid=124&amp;pid=205">Chinese Government Scholarship</a> 
+					</dd>
+					<dd>
+						<a href="/en/pages?cid=475&amp;pid=205">Confucius Institute Scholarship </a> 
+					</dd>
+					<dd>
+						<a href="/en/pages?cid=339&amp;pid=205">Confucius China Studies Program</a> 
+					</dd>
+					<dd>
+						<a href="/en/pages?cid=477&amp;pid=205">Beijing Government Scholarship</a> 
+					</dd>
+					<dd>
+						<a href="/en/pages?cid=478&amp;pid=205">Beijing Normal University Scholarship</a> 
+					</dd>
+				</dl>
+			</div>
+		</div>
+		<div class="share w_1200">
+			<div class="logo">
+				<a href="javascript:;"></a> 
+			</div>
+			<div class="share_btn">
+				<a href="javascript:;" class="a_1"></a> <a target="_blank" href="http://e.weibo.com/lovebnu/profile" class="a_4"></a> <a href="javascript:;" class="a_3"></a> <a href="javascript:;" class="a_2"> 
+				<div class="wechat">
+					<div class="arrow">
+					</div>
+<img src="/themes/1/images/f_erweima.jpg" /> 
+				</div>
+</a> 
+			</div>
+		</div>
+	</div>
+</div>
+<div class="footer">
+	<div class="w_1200">
+		<p>
+			Copyright &copy; 2016 Beijing Normal University. All rights reserved
+		</p>
+		<p>
+			Technical Support: <a href="www.cucas.edu.cn">CUCAS</a> 
+		</p>
+	</div>
+</div><div id="goTopBtn"></div>
+<script>
+
+ $(function(){
+        var btn_nav_li = $(".header2 li");
+        var dropdown = $(".header2 .dropdown");
+
+        var tmp = '';
+
+        var bnu_nav_hide = function(){
+            dropdown.fadeOut('400');
+            btn_nav_li.removeClass('is_active');
+            tmp = '';
+        };
+
+        var win_init = function(){
+
+            btn_nav_li.on('click', function() {
+                var t = $(this);
+                var d = t.find('.dropdown');
+                var n = btn_nav_li.index(t);
+                if(tmp !== n){
+                    bnu_nav_hide();
+                    t.addClass('is_active');
+                    d.fadeIn('400',function(){
+                        tmp = btn_nav_li.index(t);
+                    });
+                    return true;
+                }
+                bnu_nav_hide();
+            });
+        };
+
+        win_init();
+    });
+
+     function show_video(id){
+         art.dialog.open('/videos/show?video_id='+id,{
+             width:690,
+             height:520,
+             lock:true
+         });
+     }
+
+    var cid = 0;
+    if(cid != ""){
+        var dd = $("dd[data-cid='"+cid+"']");
+        var dl = dd.parents().eq(0);
+        var li = dd.parents().eq(1);
+
+        li.addClass('active');
+        dl.show();
+    }
+</script>

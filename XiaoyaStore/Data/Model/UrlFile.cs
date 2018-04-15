@@ -56,6 +56,10 @@ namespace XiaoyaStore.Data.Model
         [ConcurrencyCheck]
         public UrlFileIndexStatus IndexStatus { get; set; }
         /// <summary>
+        /// PageRank
+        /// </summary>
+        public double PageRank { get; set; } = 0.01;
+        /// <summary>
         /// Seconds offset between present and last update
         /// </summary>
         [ConcurrencyCheck]
