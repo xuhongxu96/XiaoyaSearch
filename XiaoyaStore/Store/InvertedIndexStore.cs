@@ -31,7 +31,25 @@ namespace XiaoyaStore.Store
         {
             mCache = new DictionaryCache<CacheIndex, IReadOnlyList<InvertedIndex>>(
                 TimeSpan.FromDays(5),
-                GetCache);
+                GetCache/*,
+                LoadCaches*/);
+        }
+
+        protected IEnumerable<Tuple<CacheIndex, IReadOnlyList<InvertedIndex>>> LoadCaches()
+        {
+            using (var context = NewContext())
+            {
+                foreach (var item in context.InvertedIndices
+                .GroupBy(o => new CacheIndex
+                {
+                    urlFileId = o.UrlFileId,
+                    word = o.Word,
+                    indexType = o.IndexType,
+                }))
+                {
+                    yield return Tuple.Create(item.Key, item.ToList().AsReadOnly() as IReadOnlyList<InvertedIndex>);
+                }
+            }
         }
 
         protected IReadOnlyList<InvertedIndex> GetCache(CacheIndex cacheIndex)
@@ -43,7 +61,7 @@ namespace XiaoyaStore.Store
                    .Where(o => o.Word == cacheIndex.word)
                    .Where(o => o.IndexType == cacheIndex.indexType)
                    .OrderBy(o => o.Position)
-                   .ToList().AsReadOnly();
+                   .ToList();
             }
         }
 

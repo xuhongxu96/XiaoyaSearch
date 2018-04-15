@@ -17,7 +17,21 @@ namespace XiaoyaStore.Store
         {
             mCache = new DictionaryCache<string, IReadOnlyDictionary<int, UrlFileIndexStat>>(
                 TimeSpan.FromDays(5),
-                GetCache);
+                GetCache,
+                LoadCaches);
+        }
+
+        protected IEnumerable<Tuple<string, IReadOnlyDictionary<int, UrlFileIndexStat>>> LoadCaches()
+        {
+            using (var context = NewContext())
+            {
+                foreach (var item in context.UrlFileIndexStats.GroupBy(o => o.Word))
+                {
+                    yield return Tuple.Create(item.Key, 
+                        item.ToDictionary(o => o.UrlFileId, o => o) as IReadOnlyDictionary<int, UrlFileIndexStat>);
+                }
+
+            }
         }
 
         protected IReadOnlyDictionary<int, UrlFileIndexStat> GetCache(string word)
@@ -26,8 +40,7 @@ namespace XiaoyaStore.Store
             {
                 return context.UrlFileIndexStats
                     .Where(o => o.Word == word)
-                    .GroupBy(o => o.UrlFileId)
-                    .ToDictionary(o => o.Key, o => o.SingleOrDefault());
+                    .ToDictionary(o => o.UrlFileId, o => o);
             }
         }
 

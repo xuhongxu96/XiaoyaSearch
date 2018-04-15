@@ -16,12 +16,23 @@ namespace XiaoyaStore.Store
 
         public IndexStatStore(DbContextOptions options = null) : base(options)
         {
-            mCache = new DictionaryCache<string, IndexStat>(TimeSpan.FromDays(5), GetCache);
+            mCache = new DictionaryCache<string, IndexStat>(TimeSpan.FromDays(5), GetCache, LoadCaches);
         }
 
         public IndexStat LoadByWord(string word)
         {
             return mCache.Get(word);
+        }
+
+        protected IEnumerable<Tuple<string, IndexStat>> LoadCaches()
+        {
+            using (var context = NewContext())
+            {
+                foreach (var item in context.IndexStats)
+                {
+                    yield return Tuple.Create(item.Word, item);
+                }
+            }
         }
 
         protected IndexStat GetCache(string word)
