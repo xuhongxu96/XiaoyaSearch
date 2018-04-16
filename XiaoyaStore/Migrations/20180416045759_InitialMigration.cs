@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace XiaoyaStore.Migrations
 {
-    public partial class init : Migration
+    public partial class InitialMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -62,18 +62,18 @@ namespace XiaoyaStore.Migrations
                 {
                     UrlFileId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Charset = table.Column<string>(nullable: true),
+                    Charset = table.Column<string>(type: "nvarchar(30)", nullable: true),
                     Content = table.Column<string>(nullable: true),
                     CreatedAt = table.Column<DateTime>(nullable: false),
-                    FileHash = table.Column<string>(nullable: true),
-                    FilePath = table.Column<string>(nullable: true),
+                    FileHash = table.Column<string>(type: "nvarchar(300)", nullable: true),
+                    FilePath = table.Column<string>(type: "nvarchar(300)", nullable: true),
                     IndexStatus = table.Column<int>(nullable: false),
-                    MimeType = table.Column<string>(nullable: true),
+                    MimeType = table.Column<string>(type: "nvarchar(50)", nullable: true),
                     PageRank = table.Column<double>(nullable: false),
                     Title = table.Column<string>(nullable: true),
                     UpdateIntervalSeconds = table.Column<double>(nullable: false),
                     UpdatedAt = table.Column<DateTime>(nullable: false),
-                    Url = table.Column<string>(nullable: true)
+                    Url = table.Column<string>(type: "nvarchar(300)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -162,6 +162,11 @@ namespace XiaoyaStore.Migrations
                 name: "IX_UrlFileIndexStats_Word_UrlFileId_Weight_WordFrequency",
                 table: "UrlFileIndexStats",
                 columns: new[] { "Word", "UrlFileId", "Weight", "WordFrequency" });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_UrlFiles_FileHash",
+                table: "UrlFiles",
+                column: "FileHash");
 
             migrationBuilder.CreateIndex(
                 name: "IX_UrlFiles_FilePath",

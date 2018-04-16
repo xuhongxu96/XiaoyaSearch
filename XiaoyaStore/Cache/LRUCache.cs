@@ -79,8 +79,20 @@ namespace XiaoyaStore.Cache
         {
             foreach (var item in mLoadCachesMethod().Take(mLruSize))
             {
-                AddItem(item.Item1, item.Item2);
+                Add(item.Item1, item.Item2);
             }
+        }
+
+        [MethodImpl(MethodImplOptions.Synchronized)]
+        public void Add(TKey key, TValue value)
+        {
+            if (mDictionary.TryGetValue(key, out CacheData oldValue))
+            {
+                mLruList.Remove(oldValue.lruNode);
+                mDictionary.Remove(key);
+            }
+
+            AddItem(key, value);
         }
 
         [MethodImpl(MethodImplOptions.Synchronized)]

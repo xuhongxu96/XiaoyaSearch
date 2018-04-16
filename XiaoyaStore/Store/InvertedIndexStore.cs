@@ -179,7 +179,10 @@ namespace XiaoyaStore.Store
                 context.UrlFiles.Single(o => o.UrlFileId == urlFileId).IndexStatus
                 = UrlFile.UrlFileIndexStatus.Indexed;
 
-                context.SaveChanges();
+                lock (mSyncLock)
+                {
+                    context.SaveChanges();
+                }
             }
 
         }

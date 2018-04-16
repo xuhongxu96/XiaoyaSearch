@@ -12,8 +12,8 @@ using XiaoyaStore.Data.Model;
 namespace XiaoyaStore.Migrations
 {
     [DbContext(typeof(XiaoyaSearchContext))]
-    [Migration("20180415081631_init")]
-    partial class init
+    [Migration("20180416045759_InitialMigration")]
+    partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -75,7 +75,8 @@ namespace XiaoyaStore.Migrations
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Charset")
-                        .IsConcurrencyToken();
+                        .IsConcurrencyToken()
+                        .HasColumnType("nvarchar(30)");
 
                     b.Property<string>("Content")
                         .IsConcurrencyToken();
@@ -83,16 +84,19 @@ namespace XiaoyaStore.Migrations
                     b.Property<DateTime>("CreatedAt");
 
                     b.Property<string>("FileHash")
-                        .IsConcurrencyToken();
+                        .IsConcurrencyToken()
+                        .HasColumnType("nvarchar(300)");
 
                     b.Property<string>("FilePath")
-                        .IsConcurrencyToken();
+                        .IsConcurrencyToken()
+                        .HasColumnType("nvarchar(300)");
 
                     b.Property<int>("IndexStatus")
                         .IsConcurrencyToken();
 
                     b.Property<string>("MimeType")
-                        .IsConcurrencyToken();
+                        .IsConcurrencyToken()
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<double>("PageRank");
 
@@ -104,9 +108,12 @@ namespace XiaoyaStore.Migrations
                     b.Property<DateTime>("UpdatedAt")
                         .IsConcurrencyToken();
 
-                    b.Property<string>("Url");
+                    b.Property<string>("Url")
+                        .HasColumnType("nvarchar(300)");
 
                     b.HasKey("UrlFileId");
+
+                    b.HasIndex("FileHash");
 
                     b.HasIndex("FilePath")
                         .IsUnique()

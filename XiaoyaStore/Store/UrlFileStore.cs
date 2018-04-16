@@ -165,5 +165,28 @@ namespace XiaoyaStore.Store
                 return urlFile;
             }
         }
+
+        public IEnumerable<UrlFile> LoadByHash(string hash)
+        {
+            using (var context = NewContext())
+            {
+                foreach (var item in context.UrlFiles.Where(o => o.FileHash == hash))
+                {
+                    yield return item;
+                }
+            }
+        }
+
+        public UrlFile UpdateUrl(int id, string url)
+        {
+            using (var context = NewContext())
+            {
+                var urlFile = context.UrlFiles.Single(o => o.UrlFileId == id);
+                urlFile.Url = url;
+                context.SaveChanges();
+
+                return urlFile;
+            }
+        }
     }
 }

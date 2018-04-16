@@ -84,31 +84,40 @@ namespace XiaoyaCrawler
                         urlFile.Title = parseResult.Title;
                         urlFile.Content = parseResult.Content;
 
-                        urlFile = mConfig.UrlFileStore.Save(urlFile);
-
                         // Judge if there are other files that have similar content as this
-                        mSimilarContentJudger.AddContentAsync(url, parseResult.Content);
-
-                        var urls = parseResult.Links.Select(o => o.Url);
-
-                        // Save links
-                        mConfig.LinkStore.ClearAndSaveLinksForUrlFile(urlFile.UrlFileId,
-                            parseResult.Links.Select(o => new Link
+                        var sameUrlFile = mSimilarContentJudger.JudgeContent(urlFile);
+                        if (sameUrlFile != null)
+                        {
+                            // has same file, use short URL
+                            if (urlFile.Url.Length < sameUrlFile.Url.Length)
                             {
-                                Text = o.Text,
-                                Url = o.Url,
-                                UrlFileId = urlFile.UrlFileId,
-                            }));
-
-                        // Filter urls
-                        foreach (var filter in mUrlFilters)
-                        {
-                            urls = filter.Filter(urls).Distinct();
+                                mConfig.UrlFileStore.UpdateUrl(sameUrlFile.UrlFileId, urlFile.Url);
+                            }
                         }
-                        // Add newly-found urls
-                        foreach (var parsedUrl in urls)
+                        else
                         {
-                            mUrlFrontier.PushUrl(parsedUrl);
+                            urlFile = mConfig.UrlFileStore.Save(urlFile);
+                            var urls = parseResult.Links.Select(o => o.Url);
+
+                            // Save links
+                            mConfig.LinkStore.ClearAndSaveLinksForUrlFile(urlFile.UrlFileId,
+                                parseResult.Links.Select(o => new Link
+                                {
+                                    Text = o.Text,
+                                    Url = o.Url,
+                                    UrlFileId = urlFile.UrlFileId,
+                                }));
+
+                            // Filter urls
+                            foreach (var filter in mUrlFilters)
+                            {
+                                urls = filter.Filter(urls).Distinct();
+                            }
+                            // Add newly-found urls
+                            foreach (var parsedUrl in urls)
+                            {
+                                mUrlFrontier.PushUrl(parsedUrl);
+                            }
                         }
                         // Push back this url
                         mUrlFrontier.PushBackUrl(url);

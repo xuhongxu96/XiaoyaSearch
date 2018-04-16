@@ -7,6 +7,7 @@ using XiaoyaStore.Helper;
 using XiaoyaCrawler.Config;
 using XiaoyaCrawler.Parser;
 using XiaoyaLogger;
+using XiaoyaStore.Data.Model;
 
 namespace XiaoyaCrawler.SimilarContentManager
 {
@@ -23,11 +24,20 @@ namespace XiaoyaCrawler.SimilarContentManager
             mConfig = config;
         }
 
-        public async void AddContentAsync(string url, string content)
+        public UrlFile JudgeContent(UrlFile urlFile)
         {
-            await Task.Run(() =>
+            var sameFiles = mConfig.UrlFileStore.LoadByHash(urlFile.FileHash);
+            var host = UrlHelper.GetHost(urlFile.Url);
+
+            foreach (var file in sameFiles)
             {
-            });
+                if (urlFile.Content == file.Content && UrlHelper.GetHost(file.Url) == host)
+                {
+                    return file;
+                }
+            }
+
+            return null;
         }
     }
 }

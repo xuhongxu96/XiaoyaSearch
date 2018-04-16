@@ -12,6 +12,8 @@ namespace XiaoyaStore.Store
     {
         protected LRUCache<string, List<Link>> mCache;
 
+        static object mSyncLock = new object();
+
         public LinkStore(DbContextOptions options = null) : base(options)
         {
             mCache = new LRUCache<string, List<Link>>(TimeSpan.FromDays(1), GetCache, null, 1_000_000);
@@ -41,9 +43,12 @@ namespace XiaoyaStore.Store
         {
             using (var context = NewContext())
             {
-                context.RemoveRange(context.Links.Where(o => o.UrlFileId == urlFileId));
+                context.Links.RemoveRange(context.Links.Where(o => o.UrlFileId == urlFileId));
                 context.Links.AddRange(links);
-                context.SaveChanges();
+                lock (mSyncLock)
+                {
+                    context.SaveChanges();
+                }
             }
         }
 

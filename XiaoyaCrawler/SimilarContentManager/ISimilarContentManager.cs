@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using XiaoyaCrawler.Parser;
+using XiaoyaStore.Data.Model;
 
 namespace XiaoyaCrawler.SimilarContentManager
 {
@@ -15,8 +16,8 @@ namespace XiaoyaCrawler.SimilarContentManager
         /// <summary>
         /// Judge if the content has been seen before
         /// </summary>
-        /// <param name="url">Web url</param>
-        /// <param name="content">Web content to be judged</param>
-        void AddContentAsync(string url, string content);
+        /// <param name="urlFile">Fetched UrlFile</param>
+        /// <returns>The UrlFile that has same content. If no same file, retunrs null</returns>
+        UrlFile JudgeContent(UrlFile urlFile);
     }
 }

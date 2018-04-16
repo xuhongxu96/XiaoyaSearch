@@ -20,6 +20,7 @@ namespace XiaoyaStore.Data.Model
         /// <summary>
         /// Url
         /// </summary>
+        [Column(TypeName = "nvarchar(300)")]
         public string Url { get; set; }
         /// <summary>
         /// Title
@@ -29,11 +30,13 @@ namespace XiaoyaStore.Data.Model
         /// Fetched content file path
         /// </summary>
         [ConcurrencyCheck]
+        [Column(TypeName = "nvarchar(300)")]
         public string FilePath { get; set; }
         /// <summary>
         /// Hash of fetched content file
         /// </summary>
         [ConcurrencyCheck]
+        [Column(TypeName = "nvarchar(300)")]
         public string FileHash { get; set; }
         /// <summary>
         /// Text content of file
@@ -44,11 +47,13 @@ namespace XiaoyaStore.Data.Model
         /// Fetched content charset
         /// </summary>
         [ConcurrencyCheck]
+        [Column(TypeName = "nvarchar(30)")]
         public string Charset { get; set; }
         /// <summary>
         /// Fetched content MIME type
         /// </summary>
         [ConcurrencyCheck]
+        [Column(TypeName = "nvarchar(50)")]
         public string MimeType { get; set; }
         /// <summary>
         /// Is Indexed

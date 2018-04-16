@@ -59,6 +59,9 @@ GROUP BY Word");
                 .IsUnique();
 
             modelBuilder.Entity<UrlFile>()
+                .HasIndex(o => o.FileHash);
+
+            modelBuilder.Entity<UrlFile>()
                 .HasIndex(o => new { o.UpdatedAt, o.IndexStatus });
 
             modelBuilder.Entity<UrlFile>()
@@ -134,6 +137,9 @@ GROUP BY Word");
 
             modelBuilder.Entity<Link>()
                 .HasIndex(o => o.Url);
+
+            modelBuilder.Entity<Link>()
+                .HasIndex(o => o.UrlFileId);
 
             #endregion
         }
