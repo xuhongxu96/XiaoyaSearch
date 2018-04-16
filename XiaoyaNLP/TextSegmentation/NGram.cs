@@ -19,13 +19,13 @@ namespace XiaoyaNLP.TextSegmentation
 
         public IEnumerable<TextSegment> Segment(string sentence)
         {
-            var match = CommonRegex.RegexAnyChars.Match(sentence);
+            var match = CommonRegex.AnyChars.Match(sentence);
             while (match.Success)
             {
                 var subSentence = match.Value;
                 var index = match.Index;
 
-                if (CommonRegex.RegexChineseChars.IsMatch(subSentence) || !mOnlySegmentChinese)
+                if (CommonRegex.ChineseChars.IsMatch(subSentence) || !mOnlySegmentChinese)
                 {
                     for (int i = 0; i <= subSentence.Length - mGramCount; ++i)
                     {

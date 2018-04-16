@@ -9,8 +9,8 @@ namespace XiaoyaNLP.Encoding
     {
         public static bool IsValidString(string content)
         {
-            var charCount = CommonRegex.RegexAllFullWidthChar.Matches(content).Count;
-            var notCharCount = CommonRegex.RegexAllNotChar.Matches(content).Count;
+            var charCount = CommonRegex.AllValidFullWidthChar.Matches(content).Count;
+            var notCharCount = CommonRegex.AllInvalidChar.Matches(content).Count;
 
             if (notCharCount >= Math.Max(charCount / 2, 5))
             {

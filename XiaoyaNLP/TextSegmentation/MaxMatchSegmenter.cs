@@ -63,7 +63,7 @@ namespace XiaoyaNLP.TextSegmentation
 
         public IEnumerable<TextSegment> Segment(string sentence)
         {
-            var match = CommonRegex.RegexAnyChars.Match(sentence);
+            var match = CommonRegex.AnyChars.Match(sentence);
 
             if (!EncodingDetector.IsValidString(sentence))
             {
@@ -75,7 +75,7 @@ namespace XiaoyaNLP.TextSegmentation
                 var subSentence = match.Value;
                 var index = match.Index;
 
-                if (CommonRegex.RegexChineseChars.IsMatch(subSentence))
+                if (CommonRegex.ChineseChars.IsMatch(subSentence))
                 {
                     foreach (var segment in SegmentChineseSentence(subSentence, index))
                     {

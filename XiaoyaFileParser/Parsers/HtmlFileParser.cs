@@ -8,14 +8,13 @@ using XiaoyaFileParser.Config;
 using XiaoyaStore.Data.Model;
 using AngleSharp.Extensions;
 using System.Text.RegularExpressions;
-using XiaoyaCommon.Helper;
 using System.Linq;
+using XiaoyaNLP.Helper;
 
 namespace XiaoyaFileParser.Parsers
 {
     public class HtmlFileParser : TextFileParser
     {
-        static readonly Regex sTrimmer = new Regex(@"\s\s+");
 
         protected HtmlParser mParser = new HtmlParser();
 
@@ -82,7 +81,7 @@ namespace XiaoyaFileParser.Parsers
                 }
                 else
                 {
-                    mTextContent = sTrimmer.Replace(mTextContent.Trim(), "\n");
+                    mTextContent = TextHelper.ReplaceSpaces(mTextContent);
                 }
             }
             return mTextContent;

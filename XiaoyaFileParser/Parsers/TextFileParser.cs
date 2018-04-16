@@ -9,8 +9,8 @@ using XiaoyaNLP.TextSegmentation;
 using XiaoyaStore.Data.Model;
 using System.Linq;
 using static XiaoyaFileParser.Model.Token;
-using XiaoyaCommon.Helper;
 using XiaoyaNLP.Encoding;
+using XiaoyaNLP.Helper;
 
 namespace XiaoyaFileParser.Parsers
 {
@@ -126,7 +126,7 @@ namespace XiaoyaFileParser.Parsers
                         Encoding.GetEncoding(mEncoding));
                 }
 
-                mContent = TextHelper.ToDBC(mContent.ToLower());
+                mContent = TextHelper.FullWidthCharToHalfWidthChar(mContent.ToLower());
             }
             return mContent;
         }
