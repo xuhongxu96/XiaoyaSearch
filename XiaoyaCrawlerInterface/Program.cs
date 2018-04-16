@@ -40,9 +40,9 @@ namespace XiaoyaCrawlerInterface
             var config = new XiaoyaCrawler.Config.CrawlerConfig
             {
                 InitUrls = arguments.InitUrl.Split(","),
-                UrlFileStore = new UrlFileStore(options),
+                UrlFileStore = new UrlFileStore(options, false),
                 UrlFrontierItemStore = new UrlFrontierItemStore(options),
-                LinkStore = new LinkStore(options),
+                LinkStore = new LinkStore(options, false),
                 FetchDirectory = arguments.FetchDir,
                 LogDirectory = arguments.LogDir,
                 MaxFetchingConcurrency = int.Parse(arguments.ThreadCount),

@@ -63,12 +63,11 @@ namespace XiaoyaIndexer
         protected void IndexFile(UrlFile urlFile)
         {
             mIndexSemaphore.Wait();
-
+            mLogger.Log(nameof(SimpleIndexer), "Indexing Url: " + urlFile.Url);
             mTasks.Add(Task.Run(() =>
             {
                 try
                 {
-                    mLogger.Log(nameof(SimpleIndexer), "Indexing Url: " + urlFile.Url);
 
                     UniversalFileParser parser = new UniversalFileParser
                     {

@@ -26,19 +26,23 @@ namespace XiaoyaStore.Cache
         protected LinkedList<TKey> mLruList
             = new LinkedList<TKey>();
 
+        protected bool mIsEnabled;
+
         protected Thread mLoadCachesThread = null;
 
         public LRUCache(TimeSpan expiredTime,
             Func<TKey, TValue> getValueMethod,
             Func<IEnumerable<Tuple<TKey, TValue>>> loadCachesMethod = null,
-            int LRUSize = 0)
+            int LRUSize = 0,
+            bool isEnabled = true)
         {
             mExpiredTime = expiredTime;
             mGetValueMethod = getValueMethod;
             mLoadCachesMethod = loadCachesMethod;
             mLruSize = LRUSize;
+            mIsEnabled = isEnabled;
 
-            if (mLoadCachesMethod != null)
+            if (mIsEnabled && mLoadCachesMethod != null)
             {
                 mLoadCachesThread = new Thread(LoadCaches)
                 {
@@ -86,6 +90,8 @@ namespace XiaoyaStore.Cache
         [MethodImpl(MethodImplOptions.Synchronized)]
         public void Add(TKey key, TValue value)
         {
+            if (!mIsEnabled) return;
+
             if (mDictionary.TryGetValue(key, out CacheData oldValue))
             {
                 mLruList.Remove(oldValue.lruNode);
@@ -98,6 +104,11 @@ namespace XiaoyaStore.Cache
         [MethodImpl(MethodImplOptions.Synchronized)]
         public TValue Get(TKey key)
         {
+            if (!mIsEnabled)
+            {
+                return mGetValueMethod(key);
+            }
+
             if (mDictionary.TryGetValue(key, out CacheData value))
             {
                 mLruList.Remove(value.lruNode);
@@ -121,6 +132,8 @@ namespace XiaoyaStore.Cache
         [MethodImpl(MethodImplOptions.Synchronized)]
         public bool IsValid(TKey key)
         {
+            if (!mIsEnabled) return false;
+
             if (mDictionary.TryGetValue(key, out CacheData value))
             {
                 if (value.expiredTime > DateTime.Now)

@@ -14,9 +14,9 @@ namespace XiaoyaStore.Store
 
         static object mSyncLock = new object();
 
-        public LinkStore(DbContextOptions options = null) : base(options)
+        public LinkStore(DbContextOptions options = null, bool enableCache = true) : base(options)
         {
-            mCache = new LRUCache<string, List<Link>>(TimeSpan.FromDays(1), GetCache, null, 1_000_000);
+            mCache = new LRUCache<string, List<Link>>(TimeSpan.FromDays(1), GetCache, null, 1_000_000, enableCache);
         }
 
         protected IEnumerable<Tuple<string, List<Link>>> LoadCaches()

@@ -27,18 +27,10 @@ namespace XiaoyaStore.Store
 
         protected LRUCache<CacheIndex, IReadOnlyList<InvertedIndex>> mCache;
 
-        public InvertedIndexStore(DbContextOptions options = null, bool autoLoadCache = true) : base(options)
+        public InvertedIndexStore(DbContextOptions options = null, bool enableCache = true) : base(options)
         {
-            if (autoLoadCache)
-            {
                 mCache = new LRUCache<CacheIndex, IReadOnlyList<InvertedIndex>>(
-                    TimeSpan.FromDays(5), GetCache, LoadCaches, 100_000_000);
-            }
-            else
-            { 
-                mCache = new LRUCache<CacheIndex, IReadOnlyList<InvertedIndex>>(
-                    TimeSpan.FromDays(5), GetCache, null, 100_000_000);
-            }
+                    TimeSpan.FromDays(5), GetCache, LoadCaches, 100_000_000, enableCache);
         }
 
         protected IEnumerable<Tuple<CacheIndex, IReadOnlyList<InvertedIndex>>> LoadCaches()
@@ -96,19 +88,16 @@ namespace XiaoyaStore.Store
         {
             using (var context = NewContext())
             {
+                context.ChangeTracker.AutoDetectChangesEnabled = false;
+    
                 var urlFile = context.UrlFiles.SingleOrDefault(o => o.UrlFileId == urlFileId);
                 if (urlFile == null)
                 {
                     return;
                 }
-                var toBeRemovedIndices = from o in context.InvertedIndices
-                                         where o.UrlFileId == urlFileId
-                                         select o;
-                var toBeRemovedUrlFileIndexStats = from o in context.UrlFileIndexStats
-                                                   where o.UrlFileId == urlFileId
-                                                   select o;
-                context.RemoveRange(toBeRemovedIndices);
-                context.RemoveRange(toBeRemovedUrlFileIndexStats);
+
+                context.Database.ExecuteSqlCommand($"DELETE FROM InvertedIndices WHERE UrlFileId = {urlFileId}");
+                context.Database.ExecuteSqlCommand($"DELETE FROM UrlFileIndexStats WHERE UrlFileId = {urlFileId}");
 
                 context.InvertedIndices.AddRange(invertedIndices);
 
@@ -126,6 +115,14 @@ namespace XiaoyaStore.Store
 
                 if (!context.Database.IsSqlServer())
                 {
+
+                    var toBeRemovedIndices = from o in context.InvertedIndices
+                                             where o.UrlFileId == urlFileId
+                                             select o;
+                    var toBeRemovedUrlFileIndexStats = from o in context.UrlFileIndexStats
+                                                       where o.UrlFileId == urlFileId
+                                                       select o;
+
                     lock (mSyncLock)
                     {
                         var toBeRemovedWordCountDict = toBeRemovedUrlFileIndexStats.ToDictionary(o => o.Word, o => o.WordFrequency);

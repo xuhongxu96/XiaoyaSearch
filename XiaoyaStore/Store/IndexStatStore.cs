@@ -14,9 +14,9 @@ namespace XiaoyaStore.Store
     {
         protected LRUCache<string, IndexStat> mCache;
 
-        public IndexStatStore(DbContextOptions options = null) : base(options)
+        public IndexStatStore(DbContextOptions options = null, bool enableCache = true) : base(options)
         {
-            mCache = new LRUCache<string, IndexStat>(TimeSpan.FromDays(5), GetCache, LoadCaches, 1_000_000);
+            mCache = new LRUCache<string, IndexStat>(TimeSpan.FromDays(5), GetCache, LoadCaches, 1_000_000, enableCache);
         }
 
         public IndexStat LoadByWord(string word)

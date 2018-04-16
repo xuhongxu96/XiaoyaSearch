@@ -16,9 +16,9 @@ namespace XiaoyaStore.Store
     {
         protected LRUCache<int, UrlFile> mCache;
 
-        public UrlFileStore(DbContextOptions options = null) : base(options)
+        public UrlFileStore(DbContextOptions options = null, bool enableCache = true) : base(options)
         {
-            mCache = new LRUCache<int, UrlFile>(TimeSpan.FromDays(1), GetCache, null, 100_000);
+            mCache = new LRUCache<int, UrlFile>(TimeSpan.FromDays(1), GetCache, null, 100_000, enableCache);
         }
 
         protected UrlFile GetCache(int id)
