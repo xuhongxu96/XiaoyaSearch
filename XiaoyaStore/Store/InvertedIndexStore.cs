@@ -27,10 +27,18 @@ namespace XiaoyaStore.Store
 
         protected LRUCache<CacheIndex, IReadOnlyList<InvertedIndex>> mCache;
 
-        public InvertedIndexStore(DbContextOptions options = null) : base(options)
+        public InvertedIndexStore(DbContextOptions options = null, bool autoLoadCache = true) : base(options)
         {
-            mCache = new LRUCache<CacheIndex, IReadOnlyList<InvertedIndex>>(
-                TimeSpan.FromDays(5), GetCache, LoadCaches, 100_000_000);
+            if (autoLoadCache)
+            {
+                mCache = new LRUCache<CacheIndex, IReadOnlyList<InvertedIndex>>(
+                    TimeSpan.FromDays(5), GetCache, LoadCaches, 100_000_000);
+            }
+            else
+            { 
+                mCache = new LRUCache<CacheIndex, IReadOnlyList<InvertedIndex>>(
+                    TimeSpan.FromDays(5), GetCache, null, 100_000_000);
+            }
         }
 
         protected IEnumerable<Tuple<CacheIndex, IReadOnlyList<InvertedIndex>>> LoadCaches()

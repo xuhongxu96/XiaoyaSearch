@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 using XiaoyaNLP.Helper;
 
@@ -7,16 +8,20 @@ namespace XiaoyaNLP.Encoding
 {
     public static class EncodingDetector
     {
-        public static bool IsValidString(string content)
+        public static string GetEncoding(string filePath)
         {
-            var charCount = CommonRegex.AllValidFullWidthChar.Matches(content).Count;
-            var notCharCount = CommonRegex.AllInvalidChar.Matches(content).Count;
-
-            if (notCharCount >= Math.Max(charCount / 2, 5))
+            var detector = new UniversalDetector(null);
+            using (var stream = File.OpenRead(filePath))
             {
-                return false;
+                byte[] DetectBuff = new byte[4096];
+                while (stream.Read(DetectBuff, 0, DetectBuff.Length) > 0 && !detector.IsDone())
+                {
+                    detector.HandleData(DetectBuff, 0, DetectBuff.Length);
+                }
+                detector.DataEnd();
             }
-            return true;
+
+            return detector.GetDetectedCharset();
         }
     }
 }

@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/35/trunk/NUniversalCharDet/Prober/StateMachine
+END
+ISO2022JPSMModel.cs
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/18/trunk/NUniversalCharDet/Prober/StateMachine/ISO2022JPSMModel.cs
+END
+ISO2022KRSMModel.cs
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/19/trunk/NUniversalCharDet/Prober/StateMachine/ISO2022KRSMModel.cs
+END
+EUCJPSMModel.cs
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/15/trunk/NUniversalCharDet/Prober/StateMachine/EUCJPSMModel.cs
+END
+CodingStateMachine.cs
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/35/trunk/NUniversalCharDet/Prober/StateMachine/CodingStateMachine.cs
+END
+SJISSMModel.cs
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/20/trunk/NUniversalCharDet/Prober/StateMachine/SJISSMModel.cs
+END
+EUCKRSMModel.cs
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/17/trunk/NUniversalCharDet/Prober/StateMachine/EUCKRSMModel.cs
+END
+PkgInt.cs
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/15/trunk/NUniversalCharDet/Prober/StateMachine/PkgInt.cs
+END
+SMModel.cs
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/15/trunk/NUniversalCharDet/Prober/StateMachine/SMModel.cs
+END
+HZSMModel.cs
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/17/trunk/NUniversalCharDet/Prober/StateMachine/HZSMModel.cs
+END
+ISO2022CNSMModel.cs
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/17/trunk/NUniversalCharDet/Prober/StateMachine/ISO2022CNSMModel.cs
+END
+UCS2BESMModel.cs
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/20/trunk/NUniversalCharDet/Prober/StateMachine/UCS2BESMModel.cs
+END
+GB18030SMModel.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/17/trunk/NUniversalCharDet/Prober/StateMachine/GB18030SMModel.cs
+END
+UTF8SMModel.cs
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/20/trunk/NUniversalCharDet/Prober/StateMachine/UTF8SMModel.cs
+END
+Big5SMModel.cs
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/26/trunk/NUniversalCharDet/Prober/StateMachine/Big5SMModel.cs
+END
+EUCTWSMModel.cs
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/17/trunk/NUniversalCharDet/Prober/StateMachine/EUCTWSMModel.cs
+END

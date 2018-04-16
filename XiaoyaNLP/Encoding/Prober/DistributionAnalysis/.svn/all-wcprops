@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/10/trunk/NUniversalCharDet/Prober/DistributionAnalysis
+END
+EUCTWDistributionAnalysis.cs
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/10/trunk/NUniversalCharDet/Prober/DistributionAnalysis/EUCTWDistributionAnalysis.cs
+END
+SJISDistributionAnalysis.cs
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/10/trunk/NUniversalCharDet/Prober/DistributionAnalysis/SJISDistributionAnalysis.cs
+END
+EUCKRDistributionAnalysis.cs
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/10/trunk/NUniversalCharDet/Prober/DistributionAnalysis/EUCKRDistributionAnalysis.cs
+END
+CharDistributionAnalysis.cs
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/7/trunk/NUniversalCharDet/Prober/DistributionAnalysis/CharDistributionAnalysis.cs
+END
+GB2312DistributionAnalysis.cs
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/10/trunk/NUniversalCharDet/Prober/DistributionAnalysis/GB2312DistributionAnalysis.cs
+END
+JISDistributionAnalysis.cs
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/9/trunk/NUniversalCharDet/Prober/DistributionAnalysis/JISDistributionAnalysis.cs
+END
+Big5DistributionAnalysis.cs
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/7/trunk/NUniversalCharDet/Prober/DistributionAnalysis/Big5DistributionAnalysis.cs
+END
+EUCJPDistributionAnalysis.cs
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/9/trunk/NUniversalCharDet/Prober/DistributionAnalysis/EUCJPDistributionAnalysis.cs
+END

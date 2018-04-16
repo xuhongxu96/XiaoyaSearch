@@ -29,17 +29,11 @@ namespace XiaoyaFileParser.Parsers
                 mLinkInfo = null;
                 mTitle = mUrlFile.Title;
                 mTextContent = mUrlFile.Content;
+                mEncoding = mUrlFile.Charset;
                 if (new FileInfo(mUrlFile.FilePath).Length > 4 * 1024 * 1024)
                 {
                     throw new FileLoadException(mUrlFile.FilePath + " is too big to parse");
                 }
-
-                mEncoding = UrlFile.Charset;
-                if (mEncoding == null || mEncoding == "")
-                {
-                    mEncoding = "utf-8";
-                }
-                mEncoding = mEncoding.ToLower();
             }
         }
 
@@ -116,16 +110,16 @@ namespace XiaoyaFileParser.Parsers
         {
             if (mContent == null)
             {
+                if (mEncoding == null)
+                {
+                    mEncoding = EncodingDetector.GetEncoding(UrlFile.FilePath);
+                    if (mEncoding == null)
+                    {
+                        throw new NotSupportedException($"Invalid text encoding: {UrlFile.Url}");
+                    }
+                }
                 mContent = await File.ReadAllTextAsync(UrlFile.FilePath,
                     Encoding.GetEncoding(mEncoding));
-
-                if (mEncoding == "utf-8" && !EncodingDetector.IsValidString(mContent))
-                {
-                    mEncoding = "gbk";
-                    mContent = await File.ReadAllTextAsync(UrlFile.FilePath,
-                        Encoding.GetEncoding(mEncoding));
-                }
-
                 mContent = TextHelper.FullWidthCharToHalfWidthChar(mContent.ToLower());
             }
             return mContent;
@@ -154,9 +148,11 @@ namespace XiaoyaFileParser.Parsers
         {
             if (mTitle == null)
             {
+                var content = await GetContentAsync();
+
                 await Task.Run(() =>
                 {
-                    mTitle = mContent.Split(new char[] { '\n' }, StringSplitOptions.RemoveEmptyEntries).FirstOrDefault();
+                    mTitle = content.Split(new char[] { '\n' }, StringSplitOptions.RemoveEmptyEntries).FirstOrDefault();
                     if (mTitle == null)
                     {
                         mTitle = "";

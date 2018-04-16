@@ -13,6 +13,7 @@ using XiaoyaCrawler.Config;
 using XiaoyaLogger;
 using XiaoyaFileParser;
 using XiaoyaCommon.Helper;
+using XiaoyaNLP.Encoding;
 
 namespace XiaoyaCrawler.Fetcher
 {
@@ -109,14 +110,21 @@ namespace XiaoyaCrawler.Fetcher
                 if (!UniversalFileParser.IsSupported(contentType))
                 {
                     File.Delete(filePath);
+                    mLogger.Log(nameof(SimpleFetcher), $"Deleted Not-Supported MIME type ({contentType}): {url}");
                     return null;
+                }
+
+                var charset = EncodingDetector.GetEncoding(filePath);
+                if (charset == null)
+                {
+                    charset = type.CharSet;
                 }
 
                 return new UrlFile
                 {
                     Url = url,
                     FilePath = filePath,
-                    Charset = type.CharSet,
+                    Charset = charset,
                     MimeType = contentType,
                     FileHash = HashHelper.GetFileMd5(filePath),
                 };

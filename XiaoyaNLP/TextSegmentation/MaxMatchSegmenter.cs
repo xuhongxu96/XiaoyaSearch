@@ -65,11 +65,6 @@ namespace XiaoyaNLP.TextSegmentation
         {
             var match = CommonRegex.AnyChars.Match(sentence);
 
-            if (!EncodingDetector.IsValidString(sentence))
-            {
-                yield break;
-            }
-
             while (match.Success)
             {
                 var subSentence = match.Value;

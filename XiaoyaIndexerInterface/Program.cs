@@ -31,17 +31,12 @@ namespace XiaoyaIndexerInterface
                     break;
             }
 
-            using (var context = new XiaoyaSearchContext(options))
-            {
-                context.Database.Migrate();
-            }
-
             var config = new IndexerConfig
             {
                 LogDirectory = arguments.LogDir,
                 UrlFileStore = new UrlFileStore(options),
                 LinkStore = new LinkStore(options),
-                InvertedIndexStore = new InvertedIndexStore(options),
+                InvertedIndexStore = new InvertedIndexStore(options, false),
                 MaxIndexingConcurrency = int.Parse(arguments.ThreadCount),
             };
 

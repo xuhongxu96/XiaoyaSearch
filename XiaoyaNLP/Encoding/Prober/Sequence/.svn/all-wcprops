@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/14/trunk/NUniversalCharDet/Prober/Sequence
+END
+MacCyrillicModel.cs
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/14/trunk/NUniversalCharDet/Prober/Sequence/MacCyrillicModel.cs
+END
+Win1251BulgarianModel.cs
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/14/trunk/NUniversalCharDet/Prober/Sequence/Win1251BulgarianModel.cs
+END
+Koi8rModel.cs
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/13/trunk/NUniversalCharDet/Prober/Sequence/Koi8rModel.cs
+END
+Latin5Model .cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/14/trunk/NUniversalCharDet/Prober/Sequence/Latin5Model%20.cs
+END
+GreekModel.cs
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/12/trunk/NUniversalCharDet/Prober/Sequence/GreekModel.cs
+END
+Latin7Model.cs
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/14/trunk/NUniversalCharDet/Prober/Sequence/Latin7Model.cs
+END
+BulgarianModel.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/12/trunk/NUniversalCharDet/Prober/Sequence/BulgarianModel.cs
+END
+Win1251Model.cs
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/14/trunk/NUniversalCharDet/Prober/Sequence/Win1251Model.cs
+END
+SequenceModel.cs
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/12/trunk/NUniversalCharDet/Prober/Sequence/SequenceModel.cs
+END
+Win1253Model.cs
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/14/trunk/NUniversalCharDet/Prober/Sequence/Win1253Model.cs
+END
+Ibm855Model.cs
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/12/trunk/NUniversalCharDet/Prober/Sequence/Ibm855Model.cs
+END
+CyrillicModel.cs
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/12/trunk/NUniversalCharDet/Prober/Sequence/CyrillicModel.cs
+END
+Ibm866Model.cs
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/13/trunk/NUniversalCharDet/Prober/Sequence/Ibm866Model.cs
+END
+HebrewModel.cs
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/12/trunk/NUniversalCharDet/Prober/Sequence/HebrewModel.cs
+END
+Latin5BulgarianModel.cs
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/13/trunk/NUniversalCharDet/Prober/Sequence/Latin5BulgarianModel.cs
+END

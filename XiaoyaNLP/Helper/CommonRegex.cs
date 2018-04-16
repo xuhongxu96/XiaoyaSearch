@@ -7,16 +7,6 @@ namespace XiaoyaNLP.Helper
 {
     public static class CommonRegex
     {
-        public static readonly Regex AllValidFullWidthChar = 
-            new Regex("[\u4E00-\u9FD5！？｡＂＃＄％＆＇ 　￥（）＊＋，－／：；＜＝＞＠［＼］" +
-                "＾＿｀｛｜｝～｟｠｢｣､、〃》「」『』【】〔〕〖〗〘〙〚〛©•〜〝〞〟〰〾〿" +
-                "–—‘’‛“”„‟…‧﹏]", RegexOptions.Compiled);
-
-        public static readonly Regex AllInvalidChar =
-            new Regex("[^\u4E00-\u9FD5！？｡＂＃＄％＆＇ 　￥（）＊＋，－／：；＜＝＞＠［＼］" +
-                "＾＿｀｛｜｝～｟｠｢｣､、〃》「」『』【】〔〕〖〗〘〙〚〛©•〜〝〞〟〰〾〿" +
-                "–—‘’‛“”„‟…‧﹏\\x00-\\x7F]", RegexOptions.Compiled);
-
         public static readonly Regex Trimmer = new Regex(@"\s\s+");
 
         public static readonly Regex AllChars = new Regex(@"([\u4E00-\u9FD5a-zA-Z0-9]+)", RegexOptions.Compiled);

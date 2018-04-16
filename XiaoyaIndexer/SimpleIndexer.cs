@@ -70,11 +70,6 @@ namespace XiaoyaIndexer
                 {
                     mLogger.Log(nameof(SimpleIndexer), "Indexing Url: " + urlFile.Url);
 
-                    if (!EncodingDetector.IsValidString(urlFile.Content))
-                    {
-                        throw new NotSupportedException("Invalid content");
-                    }
-
                     UniversalFileParser parser = new UniversalFileParser
                     {
                         UrlFile = urlFile
@@ -89,14 +84,14 @@ namespace XiaoyaIndexer
 
                     IList<Token> tokens = parser.GetTokensAsync(links).GetAwaiter().GetResult();
 
-                    var invertedIndices = from token in tokens
+                    var invertedIndices = (from token in tokens
                                           select new InvertedIndex
                                           {
                                               Word = token.Text,
                                               Position = token.Position,
                                               UrlFileId = urlFile.UrlFileId,
                                               IndexType = ConvertType(token.Type),
-                                          };
+                                          }).ToList();
 
                     // lock (mSyncLock)
                     {
