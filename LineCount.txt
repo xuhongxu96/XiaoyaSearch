@@ -7,91 +7,114 @@
    343 XiaoyaCommon/DataStructure/ConcurrentPriorityQueue.cs
     23 XiaoyaCommon/Helper/FileHelper.cs
     37 XiaoyaCommon/Helper/HashHelper.cs
+    18 XiaoyaCommon/Helper/MimeHelper.cs
     15 XiaoyaCommon/Helper/ScoringHelpers.cs
-    13 XiaoyaCommon/Helper/UrlHelper.cs
-    25 XiaoyaCrawler/Config/CrawlerConfig.cs
-   215 XiaoyaCrawler/Crawler.cs
+    30 XiaoyaCommon/Helper/TextHelper.cs
+    41 XiaoyaCommon/Helper/UrlHelper.cs
+    30 XiaoyaCrawler/Config/CrawlerConfig.cs
+   245 XiaoyaCrawler/Crawler.cs
     19 XiaoyaCrawler/Fetcher/IFetcher.cs
-   128 XiaoyaCrawler/Fetcher/SimpleFetcher.cs
+   141 XiaoyaCrawler/Fetcher/SimpleFetcher.cs
     19 XiaoyaCrawler/ICrawler.cs
     24 XiaoyaCrawler/Parser/IParser.cs
-    21 XiaoyaCrawler/Parser/ParseResult.cs
-    43 XiaoyaCrawler/Parser/SimpleParser.cs
-    22 XiaoyaCrawler/SimilarContentManager/ISimilarContentManager.cs
-    33 XiaoyaCrawler/SimilarContentManager/SimpleSimilarContentManager.cs
+    26 XiaoyaCrawler/Parser/ParseResult.cs
+    44 XiaoyaCrawler/Parser/SimpleParser.cs
+    23 XiaoyaCrawler/SimilarContentManager/ISimilarContentManager.cs
+    43 XiaoyaCrawler/SimilarContentManager/SimpleSimilarContentManager.cs
     25 XiaoyaCrawler/UrlFilter/DomainUrlFilter.cs
     21 XiaoyaCrawler/UrlFilter/IUrlFilter.cs
-    35 XiaoyaCrawler/UrlFrontier/IUrlFrontier.cs
-    86 XiaoyaCrawler/UrlFrontier/SimpleUrlFrontier.cs
-    40 XiaoyaCrawlerInterface/CrawlerArguments.cs
-    76 XiaoyaCrawlerInterface/Program.cs
-   135 XiaoyaCrawlerUnitTest/CrawlerUnitTest.cs
-    30 XiaoyaCrawlerUnitTest/DomainUrlFilterUnitTest.cs
+    23 XiaoyaCrawler/UrlFilter/UrlNormalizer.cs
+    31 XiaoyaCrawler/UrlFrontier/IUrlFrontier.cs
+    69 XiaoyaCrawler/UrlFrontier/SimpleUrlFrontier.cs
+    46 XiaoyaCrawlerInterface/CrawlerArguments.cs
+    74 XiaoyaCrawlerInterface/Program.cs
+   137 XiaoyaCrawlerUnitTest/CrawlerUnitTest.cs
+    31 XiaoyaCrawlerUnitTest/DomainUrlFilterUnitTest.cs
    102 XiaoyaCrawlerUnitTest/FetcherUnitTest.cs
-   126 XiaoyaCrawlerUnitTest/ParserUnitTest.cs
+   128 XiaoyaCrawlerUnitTest/ParserUnitTest.cs
    221 XiaoyaCrawlerUnitTest/UrlFrontierUnitTest.cs
     13 XiaoyaFileParser/Config/FileParserConfig.cs
-    16 XiaoyaFileParser/IFileParser.cs
+    18 XiaoyaFileParser/IFileParser.cs
+    12 XiaoyaFileParser/Model/LinkInfo.cs
     18 XiaoyaFileParser/Model/Token.cs
-    78 XiaoyaFileParser/Parsers/HtmlFileParser.cs
-   109 XiaoyaFileParser/Parsers/TextFileParser.cs
-    93 XiaoyaFileParser/UniversalFileParser.cs
-    17 XiaoyaIndexer/Config/IndexerConfig.cs
+   108 XiaoyaFileParser/Parsers/HtmlFileParser.cs
+   169 XiaoyaFileParser/Parsers/TextFileParser.cs
+   102 XiaoyaFileParser/UniversalFileParser.cs
+    18 XiaoyaIndexer/Config/IndexerConfig.cs
     15 XiaoyaIndexer/IIndexer.cs
-   155 XiaoyaIndexer/SimpleIndexer.cs
-    34 XiaoyaIndexerInterface/IndexerArguments.cs
-    51 XiaoyaIndexerInterface/Program.cs
-    84 XiaoyaIndexerUnitTest/IndexerUnitTest.cs
-   163 XiaoyaLogger/RuntimeLogger.cs
-    19 XiaoyaNLP/Helper/CommonRegex.cs
+   161 XiaoyaIndexer/SimpleIndexer.cs
+    40 XiaoyaIndexerInterface/IndexerArguments.cs
+    53 XiaoyaIndexerInterface/Program.cs
+    96 XiaoyaIndexerUnitTest/IndexerUnitTest.cs
+   188 XiaoyaLogger/RuntimeLogger.cs
+    22 XiaoyaNLP/Encoding/EncodingDetector.cs
+    23 XiaoyaNLP/Helper/CommonRegex.cs
     11 XiaoyaNLP/TextSegmentation/ITextSegmenter.cs
-    88 XiaoyaNLP/TextSegmentation/MaxMatchSegmenter.cs
+   106 XiaoyaNLP/TextSegmentation/MaxMatchSegmenter.cs
     53 XiaoyaNLP/TextSegmentation/NGram.cs
     13 XiaoyaNLP/TextSegmentation/TextSegment.cs
-    36 XiaoyaNLPUnitTest/TextSegmentation/MaxMatchSegmenterUnitTest.cs
+    39 XiaoyaNLPUnitTest/TextSegmentation/MaxMatchSegmenterUnitTest.cs
     83 XiaoyaNLPUnitTest/TextSegmentation/NGramUnitTest.cs
     13 XiaoyaQueryParser/Config/QueryParserConfig.cs
-    59 XiaoyaQueryParser/QueryParser/SimpleQueryParser.cs
+     8 XiaoyaQueryParser/QueryParser/IQueryParser.cs
+    13 XiaoyaQueryParser/QueryParser/ParsedQuery.cs
+    65 XiaoyaQueryParser/QueryParser/SimpleQueryParser.cs
     45 XiaoyaQueryParserUnitTest/SimpleQueryParserUnitTest.cs
     15 XiaoyaRanker/Config/RankerConfig.cs
+    27 XiaoyaRanker/DomainDepthRanker/DomainDepthRanker.cs
     11 XiaoyaRanker/IRanker.cs
-    96 XiaoyaRanker/QueryTermProximityRanker/QueryTermProximityRanker.cs
-    45 XiaoyaRanker/VectorSpaceModelRanker/VectorSpaceModelRanker.cs
+    34 XiaoyaRanker/IntegratedRanker.cs
+    99 XiaoyaRanker/QueryTermProximityRanker/QueryTermProximityRanker.cs
+    72 XiaoyaRanker/VectorSpaceModelRanker/VectorSpaceModelRanker.cs
     67 XiaoyaRankerUnitTest/QueryTermProximityRankerUnitTest.cs
     67 XiaoyaRankerUnitTest/VectorSpaceModelRankerUnitTest.cs
    170 XiaoyaRetriever/BooleanRetriever/BooleanRetriever.cs
     15 XiaoyaRetriever/Config/RetrieverConfig.cs
-    77 XiaoyaRetriever/Expression/And.cs
+    89 XiaoyaRetriever/Expression/And.cs
     43 XiaoyaRetriever/Expression/Not.cs
-    59 XiaoyaRetriever/Expression/Or.cs
+    71 XiaoyaRetriever/Expression/Or.cs
     22 XiaoyaRetriever/Expression/SearchExpression.cs
     52 XiaoyaRetriever/Expression/Word.cs
      9 XiaoyaRetriever/IRetriever.cs
-   151 XiaoyaRetriever/InexactTopKRetriever/InexactTopKRetriever.cs
-    54 XiaoyaRetriever/RetrievedUrlFilePositions.cs
+   221 XiaoyaRetriever/InexactTopKRetriever/InexactTopKRetriever.cs
     29 XiaoyaRetriever/WordPosition.cs
-   119 XiaoyaRetrieverUnitTest/BooleanRetrieverUnitTest.cs
-   154 XiaoyaRetrieverUnitTest/InexactTopKRetrieverUnitTest.cs
-    18 XiaoyaStore/Data/Model/IndexStat.cs
-    35 XiaoyaStore/Data/Model/InvertedIndex.cs
-    81 XiaoyaStore/Data/Model/UrlFile.cs
-    18 XiaoyaStore/Data/Model/UrlFileIndexStat.cs
-    44 XiaoyaStore/Data/Model/UrlFrontierItem.cs
-    87 XiaoyaStore/Data/XiaoyaSearchContext.cs
+   117 XiaoyaRetrieverUnitTest/BooleanRetrieverUnitTest.cs
+   157 XiaoyaRetrieverUnitTest/InexactTopKRetrieverUnitTest.cs
+    22 XiaoyaSearch/Config/SearchEngineConfig.cs
+    99 XiaoyaSearch/SearchEngine.cs
+    13 XiaoyaSearch/SearchResult.cs
+    77 XiaoyaSearchInterface/Program.cs
+    34 XiaoyaSearchInterface/SearchArguments.cs
+    77 XiaoyaSearchUnitTest/SearchEngineUnitTest.cs
+   134 XiaoyaStore/Cache/LRUCache.cs
+    20 XiaoyaStore/Data/Model/IndexStat.cs
+    42 XiaoyaStore/Data/Model/InvertedIndex.cs
+    14 XiaoyaStore/Data/Model/Link.cs
+    94 XiaoyaStore/Data/Model/UrlFile.cs
+    21 XiaoyaStore/Data/Model/UrlFileIndexStat.cs
+    54 XiaoyaStore/Data/Model/UrlFrontierItem.cs
+    13 XiaoyaStore/Data/Model/UrlHostStat.cs
+   161 XiaoyaStore/Data/XiaoyaSearchContext.cs
+   230 XiaoyaStore/Migrations/20180416045759_InitialMigration.Designer.cs
+   249 XiaoyaStore/Migrations/20180416045759_InitialMigration.cs
+   229 XiaoyaStore/Migrations/XiaoyaSearchContextModelSnapshot.cs
     29 XiaoyaStore/Store/BaseStore.cs
      8 XiaoyaStore/Store/IIndexStatStore.cs
     18 XiaoyaStore/Store/IInvertedIndexStore.cs
+    10 XiaoyaStore/Store/ILinkStore.cs
     13 XiaoyaStore/Store/IUrlFileIndexStatStore.cs
-    19 XiaoyaStore/Store/IUrlFileStore.cs
-    16 XiaoyaStore/Store/IUrlFrontierItemStore.cs
-    23 XiaoyaStore/Store/IndexStatStore.cs
-   239 XiaoyaStore/Store/InvertedIndexStore.cs
-    57 XiaoyaStore/Store/UrlFileIndexStatStore.cs
-   151 XiaoyaStore/Store/UrlFileStore.cs
-   212 XiaoyaStore/Store/UrlFrontierItemStore.cs
+    21 XiaoyaStore/Store/IUrlFileStore.cs
+    15 XiaoyaStore/Store/IUrlFrontierItemStore.cs
+    46 XiaoyaStore/Store/IndexStatStore.cs
+   257 XiaoyaStore/Store/InvertedIndexStore.cs
+    60 XiaoyaStore/Store/LinkStore.cs
+    81 XiaoyaStore/Store/UrlFileIndexStatStore.cs
+   192 XiaoyaStore/Store/UrlFileStore.cs
+   244 XiaoyaStore/Store/UrlFrontierItemStore.cs
     64 XiaoyaStoreUnitTest/IndexStatStoreUnitTest.cs
    537 XiaoyaStoreUnitTest/InvertedIndexStoreUnitTest.cs
+    76 XiaoyaStoreUnitTest/LRUCacheUnitTest.cs
     80 XiaoyaStoreUnitTest/UrlFileIndexStatStoreUnitTest.cs
    370 XiaoyaStoreUnitTest/UrlFileStoreUnitTest.cs
-   487 XiaoyaStoreUnitTest/UrlFrontierItemStoreUnitTest.cs
-  7374 total
+   527 XiaoyaStoreUnitTest/UrlFrontierItemStoreUnitTest.cs
+  9522 total

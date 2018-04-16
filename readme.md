@@ -1,12 +1,20 @@
 # Xiaoya Search
 
-Xiaoya Search is a simple search engine for LAN. It provides clear interface and structure.
+Xiaoya Search is a simple search engine for LAN, which provides clear interface and structure.
 
 Xiaoya Search mainly aims at educational use, and doesn't support distributed crawling and indexing, which means the proficiency may be not as good as expected.
 
 However, it is sufficient for a small LAN, such as campus network. 
 
 My initial goal is to deploy this search engine in Beijing Normal University.
+
+## Line Count
+
+Line count is calculated by: 
+
+``` shell
+git ls-files *.cs | xargs wc -l > linecount.txt
+```
 
 ## Structure
 
@@ -17,7 +25,7 @@ My initial goal is to deploy this search engine in Beijing Normal University.
     - UrlFrontier
 	- Fetcher
 	- Parser
-	- SimilarContentManager (Not implemented yet)
+	- SimilarContentManager
 	- UrlFilter (To confine urls within the specific LAN domain)
 - XiaoyaCrawlerInterface  
   Commandline interface for XiaoyaCrawler
@@ -39,6 +47,7 @@ My initial goal is to deploy this search engine in Beijing Normal University.
 - XiaoyaRanker
 	- QueryTermProximityRanker
 	- VectorSpaceModelRanker
+	- DomainDepthRanker
 - XiaoyaQueryParser  
   Parse free-text query to SearchExpression for XiaoyaRetriever
 - XiaoyaStore
@@ -52,6 +61,8 @@ My initial goal is to deploy this search engine in Beijing Normal University.
 	  Manage word frequency and document frequency of words in inverted index
 	- UrlFileIndexStatStore  
 	  Manage word frequency in each UrlFile
+	- LinkStore
+		Manage links in UrlFiles
 - XiaoyaLogger  
   A concurrent logger
 
