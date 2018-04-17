@@ -44,15 +44,11 @@ namespace XiaoyaCrawler.Fetcher
         /// <returns>Local url to downloaded content</returns>
         public async Task<UrlFile> FetchAsync(string url)
         {
-            if (!url.Contains(":"))
-            {
-                return null;
-            }
+            var uri = new Uri(url);
 
-            var protocol = url.Substring(0, url.IndexOf(":"));
-            if (protocol != "http" && protocol != "https")
+            if (uri.Scheme != "http" && uri.Scheme != "https")
             {
-                return null;
+                throw new NotSupportedException("Not supported Uri Scheme: " + uri.Scheme);
             }
 
             // Target path to save downloaded web file

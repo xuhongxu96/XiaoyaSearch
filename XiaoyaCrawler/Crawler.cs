@@ -131,6 +131,13 @@ namespace XiaoyaCrawler
                             mUrlFrontier.PushBackUrl(url);
                         }
                     }
+                    catch (UriFormatException e)
+                    {
+                        mLogger.LogException(nameof(Crawler), "Invalid Uri: " + url, e);
+                        mErrorLogger.LogException(nameof(Crawler), "Invalid Uri: " + url, e);
+
+                        mUrlFrontier.RemoveUrl(url);
+                    }
                     catch (IOException e)
                     {
                         mLogger.LogException(nameof(Crawler), "Failed to fetch: " + url, e);
