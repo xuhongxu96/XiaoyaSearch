@@ -12,12 +12,13 @@ namespace XiaoyaCrawler.UrlFilter
         {
             foreach (var url in urls)
             {
-                var uri = new Uri(url);
-                var result = url;
+                var normUrl = Uri.EscapeUriString(url);
+                var uri = new Uri(normUrl);
+                string result;
 
                 if (uri.Query.Contains("?"))
                 {
-                    var exceptQuery = url.Substring(0, url.Length - uri.Query.Length - uri.Fragment.Length);
+                    var exceptQuery = normUrl.Substring(0, normUrl.Length - uri.Query.Length - uri.Fragment.Length);
                     var queries = HttpUtility.ParseQueryString(uri.Query);
                     var newQuery = new List<string>();
                     foreach (var key in queries.AllKeys.Distinct())
@@ -32,7 +33,7 @@ namespace XiaoyaCrawler.UrlFilter
                 }
                 else
                 {
-                    result = new Uri(url).ToString();
+                    result = new Uri(normUrl).ToString();
                 }
 
                 if (result.EndsWith("#") || result.EndsWith("/"))
