@@ -62,7 +62,7 @@ GROUP BY Word");
                 .HasIndex(o => o.FileHash);
 
             modelBuilder.Entity<UrlFile>()
-                .HasIndex(o => new { o.UpdatedAt, o.IndexStatus });
+                .HasIndex(o => new { o.IndexStatus, o.UpdatedAt });
 
             modelBuilder.Entity<UrlFile>()
                 .HasIndex(o => o.IndexStatus);

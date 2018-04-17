@@ -12,5 +12,6 @@ namespace XiaoyaStore.Store
         UrlFrontierItem LoadByUrl(string url);
         UrlFrontierItem Push(string url);
         UrlFrontierItem PushBack(string url, bool failed = false);
+        void Remove(string url);
     }
 }

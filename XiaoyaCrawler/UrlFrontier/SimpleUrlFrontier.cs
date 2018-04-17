@@ -65,5 +65,11 @@ namespace XiaoyaCrawler.UrlFrontier
             mConfig.UrlFrontierItemStore.PushBack(url, failed);
             mLogger.Log(nameof(SimpleUrlFrontier), "Pushed Back Url: " + url);
         }
+
+        public void RemoveUrl(string url)
+        {
+            mConfig.UrlFrontierItemStore.Remove(url);
+            mLogger.Log(nameof(SimpleUrlFrontier), "Removed Url: " + url);
+        }
     }
 }

@@ -27,5 +27,10 @@ namespace XiaoyaCrawler.UrlFrontier
         /// </summary>
         /// <param name="url">Url</param>
         void PushBackUrl(string url, bool failed = false);
+        /// <summary>
+        /// Remove Url
+        /// </summary>
+        /// <param name="url">Url</param>
+        void RemoveUrl(string url);
     }
 }

@@ -68,8 +68,13 @@ namespace XiaoyaCrawler.Fetcher
                     && statusCode != HttpStatusCode.OK)
                 {
                     mLogger.Log(nameof(SimpleFetcher), "Status: " + statusCode + " " + url);
+                    if (statusCode == HttpStatusCode.NotFound)
+                    {
+                        throw new FileNotFoundException("Not Found: " + url);
+                    }
                     return null;
                 }
+
 
                 if (mConfig.UsePhantomJS && (type == null || type.MediaType == "text/html"))
                 {

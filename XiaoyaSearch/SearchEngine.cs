@@ -21,7 +21,8 @@ namespace XiaoyaSearch
         protected IRanker mRanker;
         protected IRanker mProRanker;
 
-        protected const int PageSize = 20;
+        protected const int ResultSize = 400;
+        protected const int PageSize = 400;
 
         public SearchEngine(SearchEngineConfig config)
         {
@@ -36,7 +37,7 @@ namespace XiaoyaSearch
                 UrlFileIndexStatStore = config.UrlFileIndexStatStore,
                 UrlFileStore = config.UrlFileStore,
                 InvertedIndexStore = config.InvertedIndexStore,
-            }, 300);
+            }, ResultSize);
 
             var rankerConfig = new RankerConfig
             {

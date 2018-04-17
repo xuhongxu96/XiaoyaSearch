@@ -19,8 +19,7 @@ namespace XiaoyaCrawler.SimilarContentManager
 
         public SimpleSimilarContentManager(CrawlerConfig config)
         {
-            mLogger = new RuntimeLogger(
-                Path.Combine(config.LogDirectory, "SimpleSimilarContentManager.Log"));
+            mLogger = new RuntimeLogger(Path.Combine(config.LogDirectory, "Crawler.Log"), true);
             mConfig = config;
         }
 
@@ -33,6 +32,7 @@ namespace XiaoyaCrawler.SimilarContentManager
             {
                 if (urlFile.Content == file.Content && UrlHelper.GetHost(file.Url) == host)
                 {
+                    mLogger.Log(nameof(SimpleSimilarContentManager), $"Find Same UrlFile for {urlFile.Url}: {file.Url}");
                     return file;
                 }
             }

@@ -96,8 +96,12 @@ namespace XiaoyaStore.Store
         {
             using (var context = NewContext())
             {
+                context.BulkDelete(context.InvertedIndices.Where(o => o.UrlFileId == urlFileId).ToList());
+                context.BulkDelete(context.UrlFileIndexStats.Where(o => o.UrlFileId == urlFileId).ToList());
+                /*
                 context.Database.ExecuteSqlCommand($"DELETE FROM InvertedIndices WHERE UrlFileId = {urlFileId}");
                 context.Database.ExecuteSqlCommand($"DELETE FROM UrlFileIndexStats WHERE UrlFileId = {urlFileId}");
+                */
             }
         }
 
@@ -114,7 +118,6 @@ namespace XiaoyaStore.Store
                         Weight = CalculateWeight(urlFile, g.Key, g.Count(), g.Min(o => o.Position)),
                     }).ToList();
 
-            // context.UrlFileIndexStats.AddRange(urlFileIndexStats);
             context.BulkInsert(urlFileIndexStats);
 
             return urlFileIndexStats;
@@ -196,7 +199,6 @@ namespace XiaoyaStore.Store
                 ClearInvertedIndicesOf(urlFileId);
 
                 context.BulkInsert(invertedIndices);
-                // context.InvertedIndices.AddRange(invertedIndices);
 
                 var urlFileIndexStats = SaveUrlFileIndexStats(context, urlFile, invertedIndices);
 

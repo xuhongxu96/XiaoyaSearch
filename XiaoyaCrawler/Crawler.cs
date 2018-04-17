@@ -31,7 +31,7 @@ namespace XiaoyaCrawler
 
         private SemaphoreSlim mFetchSemaphore;
         private object mSyncLock = new object();
-        private ConcurrentBag<Task> mTasks = new ConcurrentBag<Task>();
+        private ConcurrentDictionary<Task, bool> mTasks = new ConcurrentDictionary<Task, bool>();
 
         /// <summary>
         /// Logger
@@ -94,6 +94,13 @@ namespace XiaoyaCrawler
                                 mConfig.UrlFileStore.UpdateUrl(sameUrlFile.UrlFileId, urlFile.Url);
                                 // Push back this url
                                 mUrlFrontier.PushBackUrl(url);
+                                // Remove that url
+                                mUrlFrontier.RemoveUrl(sameUrlFile.Url);
+                            }
+                            else
+                            {
+                                // Remove this url
+                                mUrlFrontier.RemoveUrl(url);
                             }
                         }
                         else
@@ -124,9 +131,22 @@ namespace XiaoyaCrawler
                             mUrlFrontier.PushBackUrl(url);
                         }
                     }
-                    catch (NotSupportedException)
+                    catch (FileNotFoundException e)
+                    {
+                        mLogger.LogException(nameof(Crawler), "Not Found: " + url, e);
+                        mErrorLogger.LogException(nameof(Crawler), "Not Found: " + url, e);
+
+                        mUrlFrontier.RemoveUrl(url);
+                    }
+                    catch (NotSupportedException e)
                     {
                         File.Delete(urlFile.FilePath);
+
+                        mLogger.LogException(nameof(Crawler), "Not supported file format: " + url, e);
+                        mErrorLogger.LogException(nameof(Crawler), "Not supported file format: " + url, e);
+
+                        // Retry
+                        mUrlFrontier.PushBackUrl(url, true);
                     }
                 }
                 catch (Exception e) when (
@@ -149,8 +169,11 @@ namespace XiaoyaCrawler
                     mLogger.Log(nameof(Crawler), "End Crawl: " + url);
                     mFetchSemaphore.Release();
                 }
+            }).ContinueWith(task =>
+            {
+                mTasks.TryRemove(task, out bool v);
             });
-            mTasks.Add(t);
+            mTasks.TryAdd(t, true);
         }
 
         public async Task StartAsync(bool restart = false)
@@ -200,9 +223,9 @@ namespace XiaoyaCrawler
                     {
                         FetchUrlAsync(url.Url);
                     }
-                    else if (mTasks.Any(o => !o.IsCompleted))
+                    else if (mTasks.Keys.Any())
                     {
-                        Task.WaitAny(mTasks.ToArray());
+                        Task.WaitAny(mTasks.Keys.ToArray());
                     }
                     else
                     {
@@ -229,7 +252,7 @@ namespace XiaoyaCrawler
             {
                 try
                 {
-                    Task.WaitAll(mTasks.ToArray());
+                    Task.WaitAll(mTasks.Keys.ToArray());
                     lock (mSyncLock)
                     {
                         Status = CrawlerStatus.STOPPED;

@@ -27,7 +27,7 @@ namespace XiaoyaIndexer
         protected CancellationTokenSource mCancellationTokenSource = null;
 
         private SemaphoreSlim mIndexSemaphore;
-        private ConcurrentBag<Task> mTasks = new ConcurrentBag<Task>();
+        private ConcurrentDictionary<Task, bool> mTasks = new ConcurrentDictionary<Task, bool>();
         private object mSyncLock = new object();
 
         public bool IsWaiting { get; private set; } = false;
@@ -43,7 +43,7 @@ namespace XiaoyaIndexer
 
         public void WaitAll()
         {
-            Task.WaitAll(mTasks.ToArray());
+            Task.WaitAll(mTasks.Keys.ToArray());
         }
 
         protected static InvertedIndexType ConvertType(TokenType type)
@@ -64,7 +64,7 @@ namespace XiaoyaIndexer
         {
             mIndexSemaphore.Wait();
             mLogger.Log(nameof(SimpleIndexer), "Indexing Url: " + urlFile.Url);
-            mTasks.Add(Task.Run(() =>
+            mTasks.TryAdd(Task.Run(() =>
             {
                 try
                 {
@@ -78,7 +78,7 @@ namespace XiaoyaIndexer
                         .Select(o => new LinkInfo
                         {
                             Text = o.Text,
-                            Url = o.Url,
+                            Url = mConfig.UrlFileStore.LoadById(o.UrlFileId).Url,
                         });
 
                     IList<Token> tokens = parser.GetTokensAsync(links).GetAwaiter().GetResult();
@@ -108,7 +108,10 @@ namespace XiaoyaIndexer
                 {
                     mIndexSemaphore.Release();
                 }
-            }));
+            }).ContinueWith(task => 
+            {
+                mTasks.TryRemove(task, out bool value);
+            }), true);
         }
 
         public async Task CreateIndexAsync()

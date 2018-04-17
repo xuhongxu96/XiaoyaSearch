@@ -24,45 +24,54 @@ namespace XiaoyaStore.Store
                 // Add all init urls
                 foreach (var url in initUrls)
                 {
-                    if (!context.UrlFrontierItems.Any(o => o.Url == url))
+                    if (context.UrlFrontierItems.Any(o => o.Url == url))
                     {
-                        var host = UrlHelper.GetHost(url);
-
-                        if (host != "")
-                        {
-                            if (hostCount.ContainsKey(host))
-                            {
-                                hostCount[host]++;
-                            }
-                            else
-                            {
-                                hostCount[host] = 1;
-                            }
-                        }
-
-                        var item = new UrlFrontierItem
-                        {
-                            Url = url,
-                            Host = host,
-                            UrlDepth = UrlHelper.GetDomainDepth(url),
-                            PlannedTime = DateTime.Now,
-                            FailedTimes = 0,
-                            UpdatedAt = DateTime.Now,
-                            CreatedAt = DateTime.Now,
-                            IsPopped = false,
-                        };
-
-                        context.UrlFrontierItems.Add(item);
+                        continue;
                     }
+                    var host = UrlHelper.GetHost(url);
+
+                    if (host != "")
+                    {
+                        if (hostCount.ContainsKey(host))
+                        {
+                            hostCount[host]++;
+                        }
+                        else
+                        {
+                            hostCount[host] = 1;
+                        }
+                    }
+
+                    var item = new UrlFrontierItem
+                    {
+                        Url = url,
+                        Host = host,
+                        UrlDepth = UrlHelper.GetDomainDepth(url),
+                        PlannedTime = DateTime.Now,
+                        FailedTimes = 0,
+                        UpdatedAt = DateTime.Now,
+                        CreatedAt = DateTime.Now,
+                        IsPopped = false,
+                    };
+
+                    context.UrlFrontierItems.Add(item);
                 }
 
                 foreach (var host in hostCount)
                 {
-                    context.UrlHostStats.Add(new UrlHostStat
+                    var hostStat = context.UrlHostStats.SingleOrDefault(o => o.Host == host.Key);
+                    if (hostStat == null)
                     {
-                        Host = host.Key,
-                        Count = host.Value,
-                    });
+                        context.UrlHostStats.Add(new UrlHostStat
+                        {
+                            Host = host.Key,
+                            Count = host.Value,
+                        });
+                    }
+                    else
+                    {
+                        hostStat.Count += host.Value;
+                    }
                 }
                 context.SaveChanges();
             }
@@ -238,6 +247,24 @@ namespace XiaoyaStore.Store
                 catch (DbUpdateException)
                 { }
                 return item;
+            }
+        }
+
+        public void Remove(string url)
+        {
+            using (var context = NewContext())
+            {
+                var item = context.UrlFrontierItems.SingleOrDefault(o => o.Url == url);
+                if (item != null)
+                {
+                    var host = context.UrlHostStats.SingleOrDefault(o => o.Host == item.Host);
+                    if (host != null)
+                    {
+                        host.Count--;
+                    }
+                    context.Remove(item);
+                }
+                context.SaveChanges();
             }
         }
     }

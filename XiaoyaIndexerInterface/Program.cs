@@ -34,7 +34,7 @@ namespace XiaoyaIndexerInterface
             var config = new IndexerConfig
             {
                 LogDirectory = arguments.LogDir,
-                UrlFileStore = new UrlFileStore(options, false),
+                UrlFileStore = new UrlFileStore(options, true),
                 LinkStore = new LinkStore(options, false),
                 InvertedIndexStore = new InvertedIndexStore(options, false),
                 MaxIndexingConcurrency = int.Parse(arguments.ThreadCount),
