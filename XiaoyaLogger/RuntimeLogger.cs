@@ -37,11 +37,14 @@ namespace XiaoyaLogger
             WriteAsync();
         }
 
-        public RuntimeLogger(string logFileName, bool doWriteToConsole = false)
+        public RuntimeLogger(string logFileName = null, bool doWriteToConsole = false)
         {
-            if (!Directory.Exists(Path.GetDirectoryName(logFileName)))
+            if (logFileName != null)
             {
-                Directory.CreateDirectory(Path.GetDirectoryName(logFileName));
+                if (!Directory.Exists(Path.GetDirectoryName(logFileName)))
+                {
+                    Directory.CreateDirectory(Path.GetDirectoryName(logFileName));
+                }
             }
             mLogFileName = logFileName;
             mDoWriteToConsole = doWriteToConsole;
@@ -50,7 +53,7 @@ namespace XiaoyaLogger
         public void Log(string className, string message)
         {
             var content = string.Format(
-                "{0}\r\n{1}\r\n{2}\r\n\r\n",
+                "{0}\t{1}\r\n{2}\r\n\r\n",
                 DateTime.Now.ToString(),
                 className,
                 message
@@ -125,7 +128,7 @@ namespace XiaoyaLogger
 
                         do
                         {
-                            if (data.fileName != fileName)
+                            if (data.fileName != fileName && data.fileName != null)
                             {
                                 // Different file
                                 if (writer != null)
@@ -158,18 +161,21 @@ namespace XiaoyaLogger
                                 }
                             }
 
-                            writer.Write(data.content);
-                            flushCount++;
-
                             if (data.doWriteToConsole)
                             {
                                 Console.WriteLine(data.content);
                             }
 
-                            if (flushCount % 50 == 0)
+                            if (data.fileName != null)
                             {
-                                writer.Flush();
-                                flushCount = 0;
+                                writer.Write(data.content);
+                                flushCount++;
+
+                                if (flushCount % 50 == 0)
+                                {
+                                    writer.Flush();
+                                    flushCount = 0;
+                                }
                             }
 
                         } while (mQueue.TryTake(out data, TimeSpan.FromMilliseconds(100)));

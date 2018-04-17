@@ -182,7 +182,16 @@ namespace XiaoyaStore.Store
             using (var context = NewContext())
             {
                 var urlFile = context.UrlFiles.Single(o => o.UrlFileId == id);
-                urlFile.Url = url;
+
+                var sameUrl = context.UrlFiles.SingleOrDefault(o => o.Url == url);
+                if (sameUrl != null)
+                {
+                    context.UrlFiles.Remove(urlFile);
+                }
+                else
+                {
+                    urlFile.Url = url;
+                }
                 context.SaveChanges();
 
                 return urlFile;

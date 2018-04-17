@@ -92,6 +92,8 @@ namespace XiaoyaCrawler
                             if (urlFile.Url.Length < sameUrlFile.Url.Length)
                             {
                                 mConfig.UrlFileStore.UpdateUrl(sameUrlFile.UrlFileId, urlFile.Url);
+                                // Push back this url
+                                mUrlFrontier.PushBackUrl(url);
                             }
                         }
                         else
@@ -118,9 +120,9 @@ namespace XiaoyaCrawler
                             {
                                 mUrlFrontier.PushUrl(parsedUrl);
                             }
+                            // Push back this url
+                            mUrlFrontier.PushBackUrl(url);
                         }
-                        // Push back this url
-                        mUrlFrontier.PushBackUrl(url);
                     }
                     catch (NotSupportedException)
                     {

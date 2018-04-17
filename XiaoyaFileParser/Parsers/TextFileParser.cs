@@ -54,6 +54,8 @@ namespace XiaoyaFileParser.Parsers
         public virtual async Task<IList<Token>> GetTokensAsync()
         {
             var textContent = await GetTextContentAsync();
+            textContent = TextHelper.RemoveConsecutiveNonsense(textContent);
+
             var title = await GetTitleAsync();
 
             var result = new List<Token>();
@@ -88,7 +90,7 @@ namespace XiaoyaFileParser.Parsers
             var result = await GetTokensAsync();
 
             var positionOffset = 0;
-            foreach (var link in linkInfos)
+            foreach (var link in linkInfos.Distinct())
             {
                 foreach (var segment in mConfig.TextSegmenter.Segment(link.Text))
                 {
