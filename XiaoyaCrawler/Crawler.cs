@@ -131,10 +131,10 @@ namespace XiaoyaCrawler
                             mUrlFrontier.PushBackUrl(url);
                         }
                     }
-                    catch (FileNotFoundException e)
+                    catch (IOException e)
                     {
-                        mLogger.LogException(nameof(Crawler), "Not Found: " + url, e);
-                        mErrorLogger.LogException(nameof(Crawler), "Not Found: " + url, e);
+                        mLogger.LogException(nameof(Crawler), "Failed to fetch: " + url, e);
+                        mErrorLogger.LogException(nameof(Crawler), "Failed to fetch: " + url, e);
 
                         mUrlFrontier.RemoveUrl(url);
                     }

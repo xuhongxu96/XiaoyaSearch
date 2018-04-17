@@ -45,7 +45,7 @@ namespace XiaoyaStore.Store
                     var item = new UrlFrontierItem
                     {
                         Url = url,
-                        Host = host,
+                        Host = host,    
                         UrlDepth = UrlHelper.GetDomainDepth(url),
                         PlannedTime = DateTime.Now,
                         FailedTimes = 0,

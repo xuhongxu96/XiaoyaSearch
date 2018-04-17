@@ -8,8 +8,25 @@ using XiaoyaCrawler.UrlFilter;
 namespace XiaoyaCrawlerUnitTest
 {
     [TestClass]
-    public class DomainUrlFilterUnitTest
+    public class UrlFilterUnitTest
     {
+        [TestMethod]
+        public void TestA()
+        {
+            var normalizer = new UrlNormalizer();
+            var results = normalizer.Filter(new List<string>
+            {
+                "http://532movie.bnu.edu.cn/index.php?s=video/search/wd/%E9%99%88%E8%B5%AB",
+                "http://baidu.com/a?x=1&f=3&x=3",
+            });
+
+            foreach (var url in results)
+            {
+                Console.WriteLine(url);
+            }
+
+            Assert.AreEqual(2, results.Count());
+        }
         [TestMethod]
         public void TestFilter()
         {

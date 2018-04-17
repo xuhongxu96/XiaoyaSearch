@@ -10,11 +10,18 @@ using AngleSharp.Extensions;
 using System.Text.RegularExpressions;
 using System.Linq;
 using XiaoyaNLP.Helper;
+using AngleSharp.Dom;
 
 namespace XiaoyaFileParser.Parsers
 {
     public class HtmlFileParser : TextFileParser
     {
+        readonly List<string> TagsToRemove = new List<string>
+        {
+            "script",
+            "style",
+            "img",
+        };
 
         protected HtmlParser mParser = new HtmlParser();
 
@@ -67,11 +74,19 @@ namespace XiaoyaFileParser.Parsers
 
                 var document = await mParser.ParseAsync(content);
 
-                var scripts = document.GetElementsByTagName("script");
-
-                foreach (var script in scripts)
+                var comments = document.Descendents<IComment>();
+                foreach (var element in comments)
                 {
-                    script.Parent.RemoveChild(script);
+                    element.Parent.RemoveChild(element);
+                }
+
+                foreach (var tag in TagsToRemove)
+                {
+                    var elements = document.GetElementsByTagName(tag);
+                    foreach (var element in elements)
+                    {
+                        element.Parent.RemoveChild(element);
+                    }
                 }
 
                 mTextContent = document.Body.Text();

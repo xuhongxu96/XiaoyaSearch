@@ -20,8 +20,13 @@ namespace XiaoyaNLP.Encoding
                 }
                 detector.DataEnd();
             }
-
+            if (detector.GetDetectedCharset() == null)
+            {
+                return "UTF-8";
+            }
             return detector.GetDetectedCharset();
         }
+
+
     }
 }

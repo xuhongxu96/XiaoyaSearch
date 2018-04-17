@@ -68,11 +68,7 @@ namespace XiaoyaCrawler.Fetcher
                     && statusCode != HttpStatusCode.OK)
                 {
                     mLogger.Log(nameof(SimpleFetcher), "Status: " + statusCode + " " + url);
-                    if (statusCode == HttpStatusCode.NotFound)
-                    {
-                        throw new FileNotFoundException("Not Found: " + url);
-                    }
-                    return null;
+                    throw new IOException(statusCode.ToString() + ": " + url);
                 }
 
 
@@ -80,7 +76,7 @@ namespace XiaoyaCrawler.Fetcher
                 {
                     // If config is set to use PhantomJS and web content type is HTML, 
                     // use PhantomJS to fetch real web page content
-                    File.WriteAllText(filePath, 
+                    File.WriteAllText(filePath,
                         FetchPageContentByPhantomJS(url, mConfig.PhantomJSDriverPath));
                 }
                 else
