@@ -11,13 +11,15 @@ namespace XiaoyaCrawlerUnitTest
     public class UrlFilterUnitTest
     {
         [TestMethod]
-        public void TestA()
+        public void TestNormalizer()
         {
             var normalizer = new UrlNormalizer();
             var results = normalizer.Filter(new List<string>
             {
                 "http://532movie.bnu.edu.cn/index.php?s=video/search/wd/%E9%99%88%E8%B5%AB",
-                "http://baidu.com/a?x=1&f=3&x=3",
+                "http://baidu.com/a?x=1&f=3&x=3&x=2",
+                "http://baidu.com/a?x=1,2&f=3&x=3&x=2",
+                "http://cas.bnu.edu.cn/cas/login?service=http://532movie.bnu.edu.cn/index.php?s=User/bnulogin"
             });
 
             foreach (var url in results)
@@ -25,8 +27,9 @@ namespace XiaoyaCrawlerUnitTest
                 Console.WriteLine(url);
             }
 
-            Assert.AreEqual(2, results.Count());
+            Assert.AreEqual(4, results.Count());
         }
+
         [TestMethod]
         public void TestFilter()
         {

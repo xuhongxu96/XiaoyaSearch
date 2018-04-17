@@ -15,15 +15,30 @@ namespace XiaoyaCrawler.UrlFilter
                 var uri = new Uri(url);
                 var result = url;
 
-                var exceptQuery = url.Substring(0, url.Length - uri.Query.Length);
-                var queries = HttpUtility.ParseQueryString(uri.Query);
-                var newQuery = "?";
-                foreach (var key in queries.AllKeys.Distinct())
+                if (uri.Query.Contains("?"))
                 {
-                     newQuery += key + "=" + queries.Get(key);
+                    var exceptQuery = url.Substring(0, url.Length - uri.Query.Length);
+                    var queries = HttpUtility.ParseQueryString(uri.Query);
+                    var newQuery = new List<string>();
+                    foreach (var key in queries.AllKeys.Distinct())
+                    {
+                        var value = queries.Get(key)
+                            .Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries)
+                            .LastOrDefault();
+                        newQuery.Add(key + "=" + value);
+                    }
+
+                    result = new Uri(exceptQuery + "?" + string.Join("&", newQuery)).ToString();
+                }
+                else
+                {
+                    result = new Uri(url).ToString();
                 }
 
-                result = new Uri(exceptQuery + newQuery).ToString();
+                if (result.EndsWith("#") || result.EndsWith("/"))
+                {
+                    result = result.Substring(0, result.Length - 1);
+                }
 
                 yield return result;
             }
