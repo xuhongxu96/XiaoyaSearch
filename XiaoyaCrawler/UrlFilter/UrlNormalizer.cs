@@ -17,7 +17,7 @@ namespace XiaoyaCrawler.UrlFilter
 
                 if (uri.Query.Contains("?"))
                 {
-                    var exceptQuery = url.Substring(0, url.Length - uri.Query.Length);
+                    var exceptQuery = url.Substring(0, url.Length - uri.Query.Length - uri.Fragment.Length);
                     var queries = HttpUtility.ParseQueryString(uri.Query);
                     var newQuery = new List<string>();
                     foreach (var key in queries.AllKeys.Distinct())
@@ -28,7 +28,7 @@ namespace XiaoyaCrawler.UrlFilter
                         newQuery.Add(key + "=" + value);
                     }
 
-                    result = new Uri(exceptQuery + "?" + string.Join("&", newQuery)).ToString();
+                    result = new Uri(exceptQuery + "?" + string.Join("&", newQuery) + uri.Fragment).ToString();
                 }
                 else
                 {
