@@ -9,48 +9,106 @@
     37 XiaoyaCommon/Helper/HashHelper.cs
     18 XiaoyaCommon/Helper/MimeHelper.cs
     15 XiaoyaCommon/Helper/ScoringHelpers.cs
-    30 XiaoyaCommon/Helper/TextHelper.cs
     41 XiaoyaCommon/Helper/UrlHelper.cs
     30 XiaoyaCrawler/Config/CrawlerConfig.cs
-   245 XiaoyaCrawler/Crawler.cs
+   278 XiaoyaCrawler/Crawler.cs
     19 XiaoyaCrawler/Fetcher/IFetcher.cs
-   141 XiaoyaCrawler/Fetcher/SimpleFetcher.cs
+   146 XiaoyaCrawler/Fetcher/SimpleFetcher.cs
     19 XiaoyaCrawler/ICrawler.cs
     24 XiaoyaCrawler/Parser/IParser.cs
-    26 XiaoyaCrawler/Parser/ParseResult.cs
-    44 XiaoyaCrawler/Parser/SimpleParser.cs
+    30 XiaoyaCrawler/Parser/ParseResult.cs
+    45 XiaoyaCrawler/Parser/SimpleParser.cs
     23 XiaoyaCrawler/SimilarContentManager/ISimilarContentManager.cs
     43 XiaoyaCrawler/SimilarContentManager/SimpleSimilarContentManager.cs
-    25 XiaoyaCrawler/UrlFilter/DomainUrlFilter.cs
+    37 XiaoyaCrawler/UrlFilter/DomainUrlFilter.cs
     21 XiaoyaCrawler/UrlFilter/IUrlFilter.cs
-    23 XiaoyaCrawler/UrlFilter/UrlNormalizer.cs
-    31 XiaoyaCrawler/UrlFrontier/IUrlFrontier.cs
-    69 XiaoyaCrawler/UrlFrontier/SimpleUrlFrontier.cs
+    62 XiaoyaCrawler/UrlFilter/UrlNormalizer.cs
+    36 XiaoyaCrawler/UrlFrontier/IUrlFrontier.cs
+    75 XiaoyaCrawler/UrlFrontier/SimpleUrlFrontier.cs
     46 XiaoyaCrawlerInterface/CrawlerArguments.cs
-    74 XiaoyaCrawlerInterface/Program.cs
+    69 XiaoyaCrawlerInterface/Program.cs
    137 XiaoyaCrawlerUnitTest/CrawlerUnitTest.cs
-    31 XiaoyaCrawlerUnitTest/DomainUrlFilterUnitTest.cs
    102 XiaoyaCrawlerUnitTest/FetcherUnitTest.cs
    128 XiaoyaCrawlerUnitTest/ParserUnitTest.cs
+    53 XiaoyaCrawlerUnitTest/UrlFilterUnitTest.cs
    221 XiaoyaCrawlerUnitTest/UrlFrontierUnitTest.cs
     13 XiaoyaFileParser/Config/FileParserConfig.cs
-    18 XiaoyaFileParser/IFileParser.cs
-    12 XiaoyaFileParser/Model/LinkInfo.cs
+    20 XiaoyaFileParser/IFileParser.cs
+    34 XiaoyaFileParser/Model/LinkInfo.cs
     18 XiaoyaFileParser/Model/Token.cs
-   108 XiaoyaFileParser/Parsers/HtmlFileParser.cs
-   169 XiaoyaFileParser/Parsers/TextFileParser.cs
-   102 XiaoyaFileParser/UniversalFileParser.cs
+   122 XiaoyaFileParser/Parsers/HtmlFileParser.cs
+   192 XiaoyaFileParser/Parsers/TextFileParser.cs
+   107 XiaoyaFileParser/UniversalFileParser.cs
     18 XiaoyaIndexer/Config/IndexerConfig.cs
     15 XiaoyaIndexer/IIndexer.cs
-   161 XiaoyaIndexer/SimpleIndexer.cs
+   158 XiaoyaIndexer/SimpleIndexer.cs
     40 XiaoyaIndexerInterface/IndexerArguments.cs
-    53 XiaoyaIndexerInterface/Program.cs
+    48 XiaoyaIndexerInterface/Program.cs
     96 XiaoyaIndexerUnitTest/IndexerUnitTest.cs
-   188 XiaoyaLogger/RuntimeLogger.cs
-    22 XiaoyaNLP/Encoding/EncodingDetector.cs
-    23 XiaoyaNLP/Helper/CommonRegex.cs
+   194 XiaoyaLogger/RuntimeLogger.cs
+   512 XiaoyaNLP/Encoding/ByteBuffer.cs
+    39 XiaoyaNLP/Encoding/Constants.cs
+    32 XiaoyaNLP/Encoding/EncodingDetector.cs
+     8 XiaoyaNLP/Encoding/ICharsetListener.cs
+   118 XiaoyaNLP/Encoding/Prober/Big5Prober.cs
+   142 XiaoyaNLP/Encoding/Prober/CharsetProber.cs
+    70 XiaoyaNLP/Encoding/Prober/ContextAnalysis/EUCJPContextAnalysis.cs
+   242 XiaoyaNLP/Encoding/Prober/ContextAnalysis/JapaneseContextAnalysis.cs
+    67 XiaoyaNLP/Encoding/Prober/ContextAnalysis/SJISContextAnalysis.cs
+   934 XiaoyaNLP/Encoding/Prober/DistributionAnalysis/Big5DistributionAnalysis.cs
+    95 XiaoyaNLP/Encoding/Prober/DistributionAnalysis/CharDistributionAnalysis.cs
+    38 XiaoyaNLP/Encoding/Prober/DistributionAnalysis/EUCJPDistributionAnalysis.cs
+   604 XiaoyaNLP/Encoding/Prober/DistributionAnalysis/EUCKRDistributionAnalysis.cs
+   433 XiaoyaNLP/Encoding/Prober/DistributionAnalysis/EUCTWDistributionAnalysis.cs
+   480 XiaoyaNLP/Encoding/Prober/DistributionAnalysis/GB2312DistributionAnalysis.cs
+   552 XiaoyaNLP/Encoding/Prober/DistributionAnalysis/JISDistributionAnalysis.cs
+    56 XiaoyaNLP/Encoding/Prober/DistributionAnalysis/SJISDistributionAnalysis.cs
+   112 XiaoyaNLP/Encoding/Prober/EUCJPProber.cs
+   118 XiaoyaNLP/Encoding/Prober/EUCKRProber.cs
+   107 XiaoyaNLP/Encoding/Prober/EUCTWProber.cs
+    99 XiaoyaNLP/Encoding/Prober/EscCharsetProber.cs
+   117 XiaoyaNLP/Encoding/Prober/GB18030Prober.cs
+   183 XiaoyaNLP/Encoding/Prober/HebrewProber.cs
+   171 XiaoyaNLP/Encoding/Prober/Latin1Prober.cs
+   141 XiaoyaNLP/Encoding/Prober/MBCSGroupProber.cs
+   160 XiaoyaNLP/Encoding/Prober/SBCSGroupProber.cs
+   111 XiaoyaNLP/Encoding/Prober/SJISProber.cs
+   156 XiaoyaNLP/Encoding/Prober/Sequence/BulgarianModel.cs
+   156 XiaoyaNLP/Encoding/Prober/Sequence/CyrillicModel.cs
+   156 XiaoyaNLP/Encoding/Prober/Sequence/GreekModel.cs
+   175 XiaoyaNLP/Encoding/Prober/Sequence/HebrewModel.cs
+    37 XiaoyaNLP/Encoding/Prober/Sequence/Ibm855Model.cs
+    38 XiaoyaNLP/Encoding/Prober/Sequence/Ibm866Model.cs
+    38 XiaoyaNLP/Encoding/Prober/Sequence/Koi8rModel.cs
+    38 XiaoyaNLP/Encoding/Prober/Sequence/Latin5BulgarianModel.cs
+    38 XiaoyaNLP/Encoding/Prober/Sequence/Latin7Model.cs
+    38 XiaoyaNLP/Encoding/Prober/Sequence/MacCyrillicModel.cs
+    59 XiaoyaNLP/Encoding/Prober/Sequence/SequenceModel.cs
+    38 XiaoyaNLP/Encoding/Prober/Sequence/Win1251BulgarianModel.cs
+    38 XiaoyaNLP/Encoding/Prober/Sequence/Win1251Model.cs
+    38 XiaoyaNLP/Encoding/Prober/Sequence/Win1253Model.cs
+   159 XiaoyaNLP/Encoding/Prober/SingleByteCharsetProber.cs
+    77 XiaoyaNLP/Encoding/Prober/StateMachine/Big5SMModel.cs
+    50 XiaoyaNLP/Encoding/Prober/StateMachine/CodingStateMachine.cs
+    77 XiaoyaNLP/Encoding/Prober/StateMachine/EUCJPSMModel.cs
+    76 XiaoyaNLP/Encoding/Prober/StateMachine/EUCKRSMModel.cs
+    79 XiaoyaNLP/Encoding/Prober/StateMachine/EUCTWSMModel.cs
+    80 XiaoyaNLP/Encoding/Prober/StateMachine/GB18030SMModel.cs
+    78 XiaoyaNLP/Encoding/Prober/StateMachine/HZSMModel.cs
+    81 XiaoyaNLP/Encoding/Prober/StateMachine/ISO2022CNSMModel.cs
+    85 XiaoyaNLP/Encoding/Prober/StateMachine/ISO2022JPSMModel.cs
+    77 XiaoyaNLP/Encoding/Prober/StateMachine/ISO2022KRSMModel.cs
+    83 XiaoyaNLP/Encoding/Prober/StateMachine/PkgInt.cs
+    79 XiaoyaNLP/Encoding/Prober/StateMachine/SJISSMModel.cs
+    62 XiaoyaNLP/Encoding/Prober/StateMachine/SMModel.cs
+    79 XiaoyaNLP/Encoding/Prober/StateMachine/UCS2BESMModel.cs
+   100 XiaoyaNLP/Encoding/Prober/StateMachine/UTF8SMModel.cs
+   105 XiaoyaNLP/Encoding/Prober/UTF8Prober.cs
+   309 XiaoyaNLP/Encoding/UniversalDetector.cs
+    29 XiaoyaNLP/Helper/CommonRegex.cs
+    73 XiaoyaNLP/Helper/TextHelper.cs
     11 XiaoyaNLP/TextSegmentation/ITextSegmenter.cs
-   106 XiaoyaNLP/TextSegmentation/MaxMatchSegmenter.cs
+   101 XiaoyaNLP/TextSegmentation/MaxMatchSegmenter.cs
     53 XiaoyaNLP/TextSegmentation/NGram.cs
     13 XiaoyaNLP/TextSegmentation/TextSegment.cs
     39 XiaoyaNLPUnitTest/TextSegmentation/MaxMatchSegmenterUnitTest.cs
@@ -81,40 +139,40 @@
    117 XiaoyaRetrieverUnitTest/BooleanRetrieverUnitTest.cs
    157 XiaoyaRetrieverUnitTest/InexactTopKRetrieverUnitTest.cs
     22 XiaoyaSearch/Config/SearchEngineConfig.cs
-    99 XiaoyaSearch/SearchEngine.cs
+   100 XiaoyaSearch/SearchEngine.cs
     13 XiaoyaSearch/SearchResult.cs
     77 XiaoyaSearchInterface/Program.cs
     34 XiaoyaSearchInterface/SearchArguments.cs
     77 XiaoyaSearchUnitTest/SearchEngineUnitTest.cs
-   134 XiaoyaStore/Cache/LRUCache.cs
+   147 XiaoyaStore/Cache/LRUCache.cs
     20 XiaoyaStore/Data/Model/IndexStat.cs
     42 XiaoyaStore/Data/Model/InvertedIndex.cs
     14 XiaoyaStore/Data/Model/Link.cs
-    94 XiaoyaStore/Data/Model/UrlFile.cs
+    96 XiaoyaStore/Data/Model/UrlFile.cs
     21 XiaoyaStore/Data/Model/UrlFileIndexStat.cs
     54 XiaoyaStore/Data/Model/UrlFrontierItem.cs
     13 XiaoyaStore/Data/Model/UrlHostStat.cs
-   161 XiaoyaStore/Data/XiaoyaSearchContext.cs
-   230 XiaoyaStore/Migrations/20180416045759_InitialMigration.Designer.cs
-   249 XiaoyaStore/Migrations/20180416045759_InitialMigration.cs
-   229 XiaoyaStore/Migrations/XiaoyaSearchContextModelSnapshot.cs
+   164 XiaoyaStore/Data/XiaoyaSearchContext.cs
+   237 XiaoyaStore/Migrations/20180418032428_InitialCreate.Designer.cs
+   260 XiaoyaStore/Migrations/20180418032428_InitialCreate.cs
+   236 XiaoyaStore/Migrations/XiaoyaSearchContextModelSnapshot.cs
     29 XiaoyaStore/Store/BaseStore.cs
      8 XiaoyaStore/Store/IIndexStatStore.cs
-    18 XiaoyaStore/Store/IInvertedIndexStore.cs
+    19 XiaoyaStore/Store/IInvertedIndexStore.cs
     10 XiaoyaStore/Store/ILinkStore.cs
     13 XiaoyaStore/Store/IUrlFileIndexStatStore.cs
     21 XiaoyaStore/Store/IUrlFileStore.cs
-    15 XiaoyaStore/Store/IUrlFrontierItemStore.cs
+    16 XiaoyaStore/Store/IUrlFrontierItemStore.cs
     46 XiaoyaStore/Store/IndexStatStore.cs
-   257 XiaoyaStore/Store/InvertedIndexStore.cs
+   285 XiaoyaStore/Store/InvertedIndexStore.cs
     60 XiaoyaStore/Store/LinkStore.cs
     81 XiaoyaStore/Store/UrlFileIndexStatStore.cs
-   192 XiaoyaStore/Store/UrlFileStore.cs
-   244 XiaoyaStore/Store/UrlFrontierItemStore.cs
+   202 XiaoyaStore/Store/UrlFileStore.cs
+   271 XiaoyaStore/Store/UrlFrontierItemStore.cs
     64 XiaoyaStoreUnitTest/IndexStatStoreUnitTest.cs
    537 XiaoyaStoreUnitTest/InvertedIndexStoreUnitTest.cs
     76 XiaoyaStoreUnitTest/LRUCacheUnitTest.cs
     80 XiaoyaStoreUnitTest/UrlFileIndexStatStoreUnitTest.cs
    370 XiaoyaStoreUnitTest/UrlFileStoreUnitTest.cs
    527 XiaoyaStoreUnitTest/UrlFrontierItemStoreUnitTest.cs
-  9522 total
+ 18361 total
