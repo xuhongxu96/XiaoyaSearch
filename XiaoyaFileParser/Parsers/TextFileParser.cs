@@ -30,6 +30,7 @@ namespace XiaoyaFileParser.Parsers
                 mTitle = mUrlFile.Title;
                 mTextContent = mUrlFile.Content;
                 mEncoding = mUrlFile.Charset;
+                mPublishDate = mUrlFile.PublishDate;
                 if (new FileInfo(mUrlFile.FilePath).Length > 4 * 1024 * 1024)
                 {
                     throw new FileLoadException(mUrlFile.FilePath + " is too big to parse");
@@ -42,6 +43,7 @@ namespace XiaoyaFileParser.Parsers
         protected string mContent = null;
         protected string mTextContent = null;
         protected List<LinkInfo> mLinkInfo = null;
+        protected DateTime mPublishDate = DateTime.MinValue;
 
         public TextFileParser() { }
 
@@ -162,6 +164,29 @@ namespace XiaoyaFileParser.Parsers
                 });
             }
             return mTitle;
+        }
+
+        public async Task<DateTime> GetPublishDateAsync()
+        {
+            if (mPublishDate == DateTime.MinValue)
+            {
+                var content = await GetContentAsync();
+
+                var dates = TextHelper.ExtractDateTime(content);
+                if (dates.Any())
+                {
+                    mPublishDate = dates.First();
+                    if (mPublishDate > DateTime.Now)
+                    {
+                        mPublishDate = DateTime.Now;
+                    }
+                }
+                else
+                {
+                    mPublishDate = DateTime.Now;
+                }
+            }
+            return mPublishDate;
         }
     }
 }

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace XiaoyaStore.Migrations
 {
-    public partial class InitialMigration : Migration
+    public partial class InitialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -70,6 +70,7 @@ namespace XiaoyaStore.Migrations
                     IndexStatus = table.Column<int>(nullable: false),
                     MimeType = table.Column<string>(type: "nvarchar(50)", nullable: true),
                     PageRank = table.Column<double>(nullable: false),
+                    PublishDate = table.Column<DateTime>(nullable: false),
                     Title = table.Column<string>(nullable: true),
                     UpdateIntervalSeconds = table.Column<double>(nullable: false),
                     UpdatedAt = table.Column<DateTime>(nullable: false),
@@ -132,6 +133,11 @@ namespace XiaoyaStore.Migrations
                 column: "Url");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Links_UrlFileId",
+                table: "Links",
+                column: "UrlFileId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_UrlFileIndexStats_UrlFileId",
                 table: "UrlFileIndexStats",
                 column: "UrlFileId");
@@ -181,6 +187,11 @@ namespace XiaoyaStore.Migrations
                 column: "IndexStatus");
 
             migrationBuilder.CreateIndex(
+                name: "IX_UrlFiles_PublishDate",
+                table: "UrlFiles",
+                column: "PublishDate");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_UrlFiles_Url",
                 table: "UrlFiles",
                 column: "Url",
@@ -188,9 +199,9 @@ namespace XiaoyaStore.Migrations
                 filter: "[Url] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
-                name: "IX_UrlFiles_UpdatedAt_IndexStatus",
+                name: "IX_UrlFiles_IndexStatus_UpdatedAt",
                 table: "UrlFiles",
-                columns: new[] { "UpdatedAt", "IndexStatus" });
+                columns: new[] { "IndexStatus", "UpdatedAt" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_UrlFrontierItems_IsPopped",

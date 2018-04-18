@@ -19,7 +19,7 @@ namespace XiaoyaStore.Store
                 TimeSpan.FromDays(5),
                 GetCache,
                 LoadCaches,
-                10_000_000);
+                20_000_000);
         }
 
         protected IEnumerable<Tuple<string, IReadOnlyDictionary<int, UrlFileIndexStat>>> LoadCaches()

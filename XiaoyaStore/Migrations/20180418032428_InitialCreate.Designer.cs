@@ -12,8 +12,8 @@ using XiaoyaStore.Data.Model;
 namespace XiaoyaStore.Migrations
 {
     [DbContext(typeof(XiaoyaSearchContext))]
-    [Migration("20180416045759_InitialMigration")]
-    partial class InitialMigration
+    [Migration("20180418032428_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -66,6 +66,8 @@ namespace XiaoyaStore.Migrations
 
                     b.HasIndex("Url");
 
+                    b.HasIndex("UrlFileId");
+
                     b.ToTable("Links");
                 });
 
@@ -100,6 +102,9 @@ namespace XiaoyaStore.Migrations
 
                     b.Property<double>("PageRank");
 
+                    b.Property<DateTime>("PublishDate")
+                        .IsConcurrencyToken();
+
                     b.Property<string>("Title");
 
                     b.Property<double>("UpdateIntervalSeconds")
@@ -121,11 +126,13 @@ namespace XiaoyaStore.Migrations
 
                     b.HasIndex("IndexStatus");
 
+                    b.HasIndex("PublishDate");
+
                     b.HasIndex("Url")
                         .IsUnique()
                         .HasFilter("[Url] IS NOT NULL");
 
-                    b.HasIndex("UpdatedAt", "IndexStatus");
+                    b.HasIndex("IndexStatus", "UpdatedAt");
 
                     b.ToTable("UrlFiles");
                 });

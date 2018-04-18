@@ -11,15 +11,27 @@ namespace XiaoyaCrawler.UrlFilter
     {
 
         private Regex mDomainPattern;
+        private Regex mBlackPattern = null;
 
-        public DomainUrlFilter(string domainPattern)
+        public DomainUrlFilter(string domainPattern, string blackPattern = null)
         {
-            mDomainPattern = new Regex(domainPattern);
+            mDomainPattern = new Regex(domainPattern, RegexOptions.Compiled);
+            if (blackPattern != null)
+            {
+                mBlackPattern = new Regex(blackPattern, RegexOptions.Compiled);
+            }
         }
 
         public IEnumerable<string> Filter(IEnumerable<string> urls)
         {
-            return urls.Where(o => mDomainPattern.IsMatch(o));
+            if (mBlackPattern == null)
+            {
+                return urls.Where(o => mDomainPattern.IsMatch(o));
+            }
+            else
+            {
+                return urls.Where(o => mDomainPattern.IsMatch(o) && !mBlackPattern.IsMatch(o));
+            }
         }
     }
 }

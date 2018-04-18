@@ -67,6 +67,9 @@ GROUP BY Word");
             modelBuilder.Entity<UrlFile>()
                 .HasIndex(o => o.IndexStatus);
 
+            modelBuilder.Entity<UrlFile>()
+                .HasIndex(o => o.PublishDate);
+
             #endregion
 
             #region InvertedIndex

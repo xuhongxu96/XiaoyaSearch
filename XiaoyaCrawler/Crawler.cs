@@ -83,6 +83,7 @@ namespace XiaoyaCrawler
                         // Store parsed content
                         urlFile.Title = parseResult.Title;
                         urlFile.Content = parseResult.Content;
+                        urlFile.PublishDate = parseResult.PublishDate;
 
                         // Judge if there are other files that have similar content as this
                         var sameUrlFile = mSimilarContentJudger.JudgeContent(urlFile);
@@ -131,20 +132,6 @@ namespace XiaoyaCrawler
                             mUrlFrontier.PushBackUrl(url);
                         }
                     }
-                    catch (UriFormatException e)
-                    {
-                        mLogger.LogException(nameof(Crawler), "Invalid Uri: " + url, e);
-                        mErrorLogger.LogException(nameof(Crawler), "Invalid Uri: " + url, e);
-
-                        mUrlFrontier.RemoveUrl(url);
-                    }
-                    catch (IOException e)
-                    {
-                        mLogger.LogException(nameof(Crawler), "Failed to fetch: " + url, e);
-                        mErrorLogger.LogException(nameof(Crawler), "Failed to fetch: " + url, e);
-
-                        mUrlFrontier.RemoveUrl(url);
-                    }
                     catch (NotSupportedException e)
                     {
                         File.Delete(urlFile.FilePath);
@@ -156,10 +143,24 @@ namespace XiaoyaCrawler
                         mUrlFrontier.PushBackUrl(url, true);
                     }
                 }
+                catch (UriFormatException e)
+                {
+                    mLogger.LogException(nameof(Crawler), "Invalid Uri: " + url, e);
+                    mErrorLogger.LogException(nameof(Crawler), "Invalid Uri: " + url, e);
+
+                    mUrlFrontier.RemoveUrl(url);
+                }
+                catch (IOException e)
+                {
+                    mLogger.LogException(nameof(Crawler), "Failed to fetch: " + url, e);
+                    mErrorLogger.LogException(nameof(Crawler), "Failed to fetch: " + url, e);
+
+                    mUrlFrontier.RemoveUrl(url);
+                }
                 catch (Exception e) when (
-                    e is OperationCanceledException
-                    || e is TaskCanceledException
-                )
+                        e is OperationCanceledException
+                        || e is TaskCanceledException
+                    )
                 {
                     mUrlFrontier.PushBackUrl(url);
                 }
@@ -177,9 +178,9 @@ namespace XiaoyaCrawler
                     mFetchSemaphore.Release();
                 }
             }).ContinueWith(task =>
-            {
-                mTasks.TryRemove(task, out bool v);
-            });
+                {
+                    mTasks.TryRemove(task, out bool v);
+                });
             mTasks.TryAdd(t, true);
         }
 

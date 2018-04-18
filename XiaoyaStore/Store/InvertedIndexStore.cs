@@ -38,7 +38,7 @@ namespace XiaoyaStore.Store
         public InvertedIndexStore(DbContextOptions options = null, bool enableCache = true, RuntimeLogger logger = null) : base(options)
         {
             mCache = new LRUCache<CacheIndex, IReadOnlyList<InvertedIndex>>(
-                TimeSpan.FromDays(5), GetCache, LoadCaches, 100_000_000, enableCache);
+                TimeSpan.FromDays(5), GetCache, LoadCaches, 30_000_000, enableCache);
         }
 
         protected IEnumerable<Tuple<CacheIndex, IReadOnlyList<InvertedIndex>>> LoadCaches()
@@ -85,11 +85,11 @@ namespace XiaoyaStore.Store
                 content = "";
             }
 
-            return (title.Contains(word) ? 2.0 * word.Length : 1.0)
-                / (1 + title.Length)
-                * wordFrequency
-                / (1 + 10 * UrlHelper.GetDomainDepth(urlFile.Url))
-                + 3 * (minPosition / (1 + content.Length));
+            return (title.Contains(word) ? 2.0 * word.Length : 1.0) / (1 + title.Length)
+                + wordFrequency * word.Length / (1 + content.Length)
+                + Math.Exp(-UrlHelper.GetDomainDepth(urlFile.Url))
+                + 3 * (1 + content.Length) / (1 + minPosition)
+                + Math.Exp(-Math.Max(0, DateTime.Now.Subtract(urlFile.PublishDate).TotalDays / 30 - 3));
         }
 
         public void ClearInvertedIndicesOf(int urlFileId)
@@ -108,6 +108,7 @@ namespace XiaoyaStore.Store
         private IEnumerable<UrlFileIndexStat> SaveUrlFileIndexStats(XiaoyaSearchContext context,
             UrlFile urlFile, IEnumerable<InvertedIndex> invertedIndices)
         {
+
             var urlFileIndexStats = invertedIndices
                     .GroupBy(o => o.Word)
                     .Select(g => new UrlFileIndexStat

@@ -17,6 +17,8 @@ namespace XiaoyaNLP.Helper
 
         public static readonly Regex WeekDay = new Regex(@"([一二三四五六日])", RegexOptions.Compiled);
 
+        public static readonly Regex DateRegex = new Regex(@"[^\d](19\d\d|20\d\d)[^\d]{1,3}(0[1-9]|1[0-2])[^\d]{1,3}(0[1-9]|1\d|2\d|3[01])[^\d]", RegexOptions.Compiled);
+
         public static readonly Regex ChineseChars = new Regex(@"([\u4E00-\u9FD5]+)", RegexOptions.Compiled);
         public static readonly Regex EnglishChars = new Regex(@"[a-zA-Z]", RegexOptions.Compiled);
         public static readonly Regex DigitChars = new Regex(@"\n", RegexOptions.Compiled);

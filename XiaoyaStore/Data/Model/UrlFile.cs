@@ -81,6 +81,8 @@ namespace XiaoyaStore.Data.Model
                 UpdateIntervalSeconds = value.TotalSeconds;
             }
         }
+        [ConcurrencyCheck]
+        public DateTime PublishDate { get; set; }
         /// <summary>
         /// Updated at
         /// </summary>

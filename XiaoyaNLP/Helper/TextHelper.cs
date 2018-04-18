@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 
 namespace XiaoyaNLP.Helper
 {
-    public class TextHelper
+    public static class TextHelper
     {
         public static string ReplaceSpaces(string input, string replacement = "\n")
         {
@@ -39,6 +39,35 @@ namespace XiaoyaNLP.Helper
             }));
 
             return result;
+        }
+
+        public static IEnumerable<DateTime> ExtractDateTime(string input)
+        {
+            var match = CommonRegex.DateRegex.Match(input);
+            while (match.Success)
+            {
+                DateTime result;
+
+                var group = match.Groups;
+                if (group.Count == 4
+                    && int.TryParse(group[1].Value, out int year)
+                    && int.TryParse(group[2].Value, out int month)
+                    && int.TryParse(group[3].Value, out int day))
+                {
+                    try
+                    {
+                        result = new DateTime(year, month, day);
+                    }
+                    catch (ArgumentOutOfRangeException)
+                    {
+                        match.NextMatch();
+                        continue;
+                    }
+                    yield return result;
+                }
+
+                match.NextMatch();
+            }
         }
     }
 }

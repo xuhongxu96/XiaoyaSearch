@@ -18,7 +18,7 @@ namespace XiaoyaStore.Store
 
         public UrlFileStore(DbContextOptions options = null, bool enableCache = true) : base(options)
         {
-            mCache = new LRUCache<int, UrlFile>(TimeSpan.FromDays(1), GetCache, null, 100_000, enableCache);
+            mCache = new LRUCache<int, UrlFile>(TimeSpan.FromDays(1), GetCache, null, 500_000, enableCache);
         }
 
         protected UrlFile GetCache(int id)
@@ -144,6 +144,7 @@ namespace XiaoyaStore.Store
                     oldUrlFile.FileHash = urlFile.FileHash;
                     oldUrlFile.Title = urlFile.Title;
                     oldUrlFile.Content = urlFile.Content;
+                    oldUrlFile.PublishDate = urlFile.PublishDate;
                     oldUrlFile.Charset = urlFile.Charset;
                     oldUrlFile.MimeType = urlFile.MimeType;
 

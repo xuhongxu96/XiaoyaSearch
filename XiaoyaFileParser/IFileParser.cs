@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using XiaoyaFileParser.Model;
 using XiaoyaStore.Data.Model;
@@ -15,5 +16,6 @@ namespace XiaoyaFileParser
         Task<string> GetTitleAsync();
         Task<string> GetContentAsync();
         Task<string> GetTextContentAsync();
+        Task<DateTime> GetPublishDateAsync();
     }
 }

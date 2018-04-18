@@ -38,6 +38,7 @@ namespace XiaoyaCrawler.Parser
                 Title = await parser.GetTitleAsync(),
                 Content = await parser.GetTextContentAsync(),
                 Links = await parser.GetLinksAsync(),
+                PublishDate = await parser.GetPublishDateAsync(),
             };
         }
     }

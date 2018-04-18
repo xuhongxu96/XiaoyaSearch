@@ -12,36 +12,50 @@ namespace XiaoyaCrawler.UrlFilter
         {
             foreach (var url in urls)
             {
-                var normUrl = Uri.EscapeUriString(url);
-                var uri = new Uri(normUrl);
                 string result;
 
-                if (uri.Query.Contains("?"))
+                try
                 {
-                    var exceptQuery = normUrl.Substring(0, normUrl.Length - uri.Query.Length - uri.Fragment.Length);
-                    var queries = HttpUtility.ParseQueryString(uri.Query);
-                    var newQuery = new List<string>();
-                    foreach (var key in queries.AllKeys.Distinct())
+                    var normUrl = Uri.EscapeUriString(url);
+                    var uri = new Uri(normUrl);
+
+                    if (uri.Scheme != "http" && uri.Scheme != "https")
                     {
-                        var value = queries.Get(key)
-                            .Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries)
-                            .LastOrDefault();
-                        newQuery.Add(key + "=" + value);
+                        continue;
                     }
 
-                    result = new Uri(exceptQuery + "?" + string.Join("&", newQuery) + uri.Fragment).ToString();
-                }
-                else
-                {
-                    result = new Uri(normUrl).ToString();
-                }
+                    if (uri.Query.Contains("?"))
+                    {
+                        var exceptQuery = normUrl.Substring(0, normUrl.Length - uri.Query.Length - uri.Fragment.Length);
+                        var queries = HttpUtility.ParseQueryString(uri.Query);
+                        var newQuery = new List<string>();
+                        foreach (var key in queries.AllKeys.Distinct())
+                        {
+                            var value = queries.Get(key)
+                                .Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries)
+                                .LastOrDefault();
+                            newQuery.Add(key + "=" + value);
+                        }
 
-                if (result.EndsWith("#") || result.EndsWith("/"))
+                        result = new Uri(exceptQuery + "?" + string.Join("&", newQuery) + uri.Fragment).ToString();
+                    }
+                    else
+                    {
+                        result = new Uri(normUrl).ToString();
+                    }
+
+                    if (result.EndsWith("#") || result.EndsWith("/"))
+                    {
+                        result = result.Substring(0, result.Length - 1);
+                    }
+                }
+                catch (UriFormatException)
                 {
-                    result = result.Substring(0, result.Length - 1);
+                    continue;
                 }
 
                 yield return result;
+
             }
         }
     }

@@ -65,6 +65,8 @@ namespace XiaoyaStore.Migrations
 
                     b.HasIndex("Url");
 
+                    b.HasIndex("UrlFileId");
+
                     b.ToTable("Links");
                 });
 
@@ -99,6 +101,9 @@ namespace XiaoyaStore.Migrations
 
                     b.Property<double>("PageRank");
 
+                    b.Property<DateTime>("PublishDate")
+                        .IsConcurrencyToken();
+
                     b.Property<string>("Title");
 
                     b.Property<double>("UpdateIntervalSeconds")
@@ -120,11 +125,13 @@ namespace XiaoyaStore.Migrations
 
                     b.HasIndex("IndexStatus");
 
+                    b.HasIndex("PublishDate");
+
                     b.HasIndex("Url")
                         .IsUnique()
                         .HasFilter("[Url] IS NOT NULL");
 
-                    b.HasIndex("UpdatedAt", "IndexStatus");
+                    b.HasIndex("IndexStatus", "UpdatedAt");
 
                     b.ToTable("UrlFiles");
                 });
