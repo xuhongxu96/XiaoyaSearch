@@ -12,7 +12,7 @@ namespace XiaoyaRetriever.InexactTopKRetriever
 {
     public class InexactTopKRetriever : IRetriever
     {
-        protected readonly double[] WORD_WEIGHT_THRESHOLDS_FOR_TIERS = new double[] { double.MaxValue / 2, 5, 2, 1, 0.1, 0 };
+        protected readonly double[] WORD_WEIGHT_THRESHOLDS_FOR_TIERS = new double[] { double.MaxValue / 2, 3, 2.5, 2, 1.5, 1, 0 };
 
         protected RetrieverConfig mConfig;
         protected int mTopK;

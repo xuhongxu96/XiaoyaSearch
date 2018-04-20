@@ -85,11 +85,20 @@ namespace XiaoyaStore.Store
                 content = "";
             }
 
-            return (title.Contains(word) ? 2.0 * word.Length : 1.0) / (1 + title.Length)
-                + wordFrequency * word.Length / (1 + content.Length)
-                + Math.Exp(-UrlHelper.GetDomainDepth(urlFile.Url))
-                + 3 * (1 + content.Length) / (1 + minPosition)
-                + Math.Exp(-Math.Max(0, DateTime.Now.Subtract(urlFile.PublishDate).TotalDays / 30 - 3));
+            if (content.Contains(word))
+            {
+                return (title.Contains(word) ? 5.0 * word.Length : 1.0) / (1 + title.Length)
+                    + wordFrequency * word.Length / (1 + content.Length)
+                    + Math.Exp(-UrlHelper.GetDomainDepth(urlFile.Url))
+                    + 1 - (1 + minPosition) / (1 + content.Length)
+                    + Math.Exp(-Math.Max(0, DateTime.Now.Subtract(urlFile.PublishDate).TotalDays / 30 - 3));
+            }
+            else
+            {
+                return (title.Contains(word) ? 5.0 * word.Length : 2.0) / (1 + title.Length)
+                    + Math.Exp(-UrlHelper.GetDomainDepth(urlFile.Url))
+                    + Math.Exp(-Math.Max(0, DateTime.Now.Subtract(urlFile.PublishDate).TotalDays / 30 - 3));
+            }
         }
 
         public void ClearInvertedIndicesOf(int urlFileId)

@@ -83,13 +83,14 @@ namespace XiaoyaSearch
             {
                 int subResultsLength = Math.Min(PageSize, count - PageSize * i);
                 var subResults = results.GetRange(i * PageSize, subResultsLength);
+                /*
                 var proScores = mProRanker.Rank(subResults.Select(o => o.UrlFileId), parsedQuery.Words).ToList();
 
                 for (int j = 0; j < subResultsLength; ++j)
                 {
                     subResults[j].ProScore = proScores[j];
                 }
-
+                */
                 foreach (var proResult in subResults.OrderByDescending(o => o.ProScore))
                 {
                     yield return proResult;

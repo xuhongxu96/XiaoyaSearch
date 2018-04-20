@@ -32,11 +32,18 @@ namespace XiaoyaCrawler.Parser
             {
                 UrlFile = urlFile
             };
-            
+
+            var content = await parser.GetTextContentAsync();
+
+            if (content.Trim() == "")
+            {
+                throw new InvalidDataException("Empty content");
+            }
+
             return new ParseResult
             {
                 Title = await parser.GetTitleAsync(),
-                Content = await parser.GetTextContentAsync(),
+                Content = content,
                 Links = await parser.GetLinksAsync(),
                 PublishDate = await parser.GetPublishDateAsync(),
             };

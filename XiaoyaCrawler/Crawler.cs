@@ -143,6 +143,13 @@ namespace XiaoyaCrawler
                         mUrlFrontier.PushBackUrl(url, true);
                     }
                 }
+                catch(InvalidDataException e)
+                {
+                    mLogger.LogException(nameof(Crawler), "Invalid data: " + url, e);
+                    mErrorLogger.LogException(nameof(Crawler), "Invalid data: " + url, e);
+
+                    mUrlFrontier.RemoveUrl(url);
+                }
                 catch (UriFormatException e)
                 {
                     mLogger.LogException(nameof(Crawler), "Invalid Uri: " + url, e);

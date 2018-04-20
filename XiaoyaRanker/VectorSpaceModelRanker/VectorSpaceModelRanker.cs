@@ -24,6 +24,7 @@ namespace XiaoyaRanker.VectorSpaceModelRanker
         {
             var documentCount = mConfig.UrlFileStore.Count();
 
+            // TODO: pre-cache urlFileIds and words InvertedIndices
             foreach (var urlFileId in urlFileIds)
             {
                 var urlFile = mConfig.UrlFileStore.LoadById(urlFileId);
