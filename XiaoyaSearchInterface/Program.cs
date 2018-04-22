@@ -35,7 +35,6 @@ namespace XiaoyaSearchInterface
                 UrlFileStore = new UrlFileStore(options),
                 InvertedIndexStore = new InvertedIndexStore(options),
                 IndexStatStore = new IndexStatStore(options),
-                UrlFileIndexStatStore = new UrlFileIndexStatStore(options),
             };
 
             var engine = new SearchEngine(config);

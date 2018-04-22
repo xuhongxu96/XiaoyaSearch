@@ -2,41 +2,34 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
 using System.Text;
 
 namespace XiaoyaStore.Data.Model
 {
     public class InvertedIndex
     {
-        public enum InvertedIndexType
-        {
-            Body, Title, Link
-        }
-
-        /// <summary>
-        /// Id
-        /// </summary>
         public int InvertedIndexId { get; set; }
-        /// <summary>
-        /// Word
-        /// </summary>
         [ConcurrencyCheck]
         [Column(TypeName = "nvarchar(30)")]
         public string Word { get; set; }
-        /// <summary>
-        /// Id of UrlFile in which the word occurs
-        /// </summary>
         [ConcurrencyCheck]
         public int UrlFileId { get; set; }
-        /// <summary>
-        /// Position the word occurs in the UrlFile
-        /// </summary>
         [ConcurrencyCheck]
-        public int Position { get; set; }
-        /// <summary>
-        /// Type
-        /// </summary>
+        public long WordFrequency { get; set; }
         [ConcurrencyCheck]
-        public InvertedIndexType IndexType { get; set; } = InvertedIndexType.Body;
+        public double Weight { get; set; }
+        [ConcurrencyCheck]
+        public string Positions { get; set; }
+        [ConcurrencyCheck]
+        public int OccurencesInTitle{ get; set; }
+        [ConcurrencyCheck]
+        public int OccurencesInLinks { get; set; }
+
+        public List<int> PositionArr
+        {
+            get => Positions.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries).Select(o => int.Parse(o)).ToList();
+
+        }
     }
 }

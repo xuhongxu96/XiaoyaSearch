@@ -11,12 +11,17 @@ using System.Linq;
 using static XiaoyaFileParser.Model.Token;
 using XiaoyaNLP.Encoding;
 using XiaoyaNLP.Helper;
+using System.Diagnostics;
 
 namespace XiaoyaFileParser.Parsers
 {
-    public class TextFileParser : IFileParser
+    public class PdfFileParser : IFileParser
     {
-        protected string mEncoding;
+#if DEBUG
+        protected const string exeFileName = "../../../../Resources/pdftotext.exe";
+#else
+        protected const string exeFileName = "../Resources/pdftotext.exe";
+#endif
 
         protected UrlFile mUrlFile;
         public UrlFile UrlFile
@@ -29,7 +34,6 @@ namespace XiaoyaFileParser.Parsers
                 mLinkInfo = null;
                 mTitle = TextHelper.NormalizeString(mUrlFile.Title);
                 mTextContent = TextHelper.NormalizeString(mUrlFile.Content);
-                mEncoding = mUrlFile.Charset;
                 mPublishDate = mUrlFile.PublishDate;
                 if (new FileInfo(mUrlFile.FilePath).Length > 4 * 1024 * 1024)
                 {
@@ -45,9 +49,9 @@ namespace XiaoyaFileParser.Parsers
         protected List<LinkInfo> mLinkInfo = null;
         protected DateTime mPublishDate = DateTime.MinValue;
 
-        public TextFileParser() { }
+        public PdfFileParser() { }
 
-        public TextFileParser(FileParserConfig config)
+        public PdfFileParser(FileParserConfig config)
         {
             Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
             mConfig = config;
@@ -63,7 +67,7 @@ namespace XiaoyaFileParser.Parsers
             var result = new List<Token>();
             var wordDict = new Dictionary<string, Token>();
 
-            foreach (var segment in mConfig.TextSegmenter.Segment(textContent).GroupBy(o => o.Word.ToLower()))
+            foreach (var segment in mConfig.TextSegmenter.Segment(textContent).GroupBy(o => o.Word))
             {
                 var token = new Token
                 {
@@ -78,7 +82,7 @@ namespace XiaoyaFileParser.Parsers
                 wordDict.Add(token.Word, token);
             }
 
-            foreach (var segment in mConfig.TextSegmenter.Segment(title).GroupBy(o => o.Word.ToLower()))
+            foreach (var segment in mConfig.TextSegmenter.Segment(title).GroupBy(o => o.Word))
             {
                 if (wordDict.ContainsKey(segment.Key))
                 {
@@ -111,7 +115,7 @@ namespace XiaoyaFileParser.Parsers
 
             foreach (var link in linkInfos.Distinct())
             {
-                foreach (var segment in mConfig.TextSegmenter.Segment(link.Text).GroupBy(o => o.Word.ToLower()))
+                foreach (var segment in mConfig.TextSegmenter.Segment(link.Text).GroupBy(o => o.Word))
                 {
                     if (wordDict.ContainsKey(segment.Key))
                     {
@@ -142,16 +146,12 @@ namespace XiaoyaFileParser.Parsers
         {
             if (mContent == null)
             {
-                if (mEncoding == null)
-                {
-                    mEncoding = EncodingDetector.GetEncoding(UrlFile.FilePath);
-                    if (mEncoding == null)
-                    {
-                        throw new NotSupportedException($"Invalid text encoding: {UrlFile.Url}");
-                    }
-                }
-                mContent = await File.ReadAllTextAsync(UrlFile.FilePath,
-                    Encoding.GetEncoding(mEncoding));
+                var tempOutput = Path.GetTempFileName();
+
+                var process = Process.Start(exeFileName, "-enc UTF-8 " + mUrlFile.FilePath + " " + tempOutput);
+                process.WaitForExit();
+
+                mContent = await File.ReadAllTextAsync(tempOutput);
                 mContent = TextHelper.NormalizeString(mContent);
             }
             return mContent;

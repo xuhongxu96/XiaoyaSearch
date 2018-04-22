@@ -15,7 +15,7 @@ namespace XiaoyaNLPUnitTest.TextSegmentation
         {
             var segmenter = new MaxMatchSegmenter();
             var segments = segmenter.Segment("1.2中文分词中华人民共和国Hello World!你\n好，我 们2.2.3.4");
-            var words = segments.Select(o => o.Text);
+            var words = segments.Select(o => o.Word);
 
             Assert.IsTrue(words.Contains("1.2"));
             Assert.IsTrue(words.Contains("中文"));
@@ -32,7 +32,7 @@ namespace XiaoyaNLPUnitTest.TextSegmentation
 
             foreach (var segment in segments)
             {
-                Console.WriteLine(string.Format("{0}: {1}", segment.Text, segment.Position));
+                Console.WriteLine(string.Format("{0}: {1}", segment.Word, segment.Position));
             }
         }
     }

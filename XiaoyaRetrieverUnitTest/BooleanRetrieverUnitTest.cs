@@ -41,7 +41,6 @@ namespace XiaoyaRetrieverUnitTest
             {
                 IndexStatStore = new IndexStatStore(options),
                 InvertedIndexStore = new InvertedIndexStore(options),
-                UrlFileIndexStatStore = new UrlFileIndexStatStore(options),
                 UrlFileStore = new UrlFileStore(options),
             });
 
@@ -92,7 +91,6 @@ namespace XiaoyaRetrieverUnitTest
             {
                 IndexStatStore = new IndexStatStore(options),
                 InvertedIndexStore = new InvertedIndexStore(options),
-                UrlFileIndexStatStore = new UrlFileIndexStatStore(options),
                 UrlFileStore = new UrlFileStore(options),
             });
 

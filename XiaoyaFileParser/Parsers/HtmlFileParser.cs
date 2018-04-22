@@ -57,7 +57,7 @@ namespace XiaoyaFileParser.Parsers
                         mLinkInfo.Add(new LinkInfo
                         {
                             Url = absoluteUrl.ToString(),
-                            Text = text.Trim(),
+                            Text = text.Trim().ToLower(),
                         });
                     }
                 }

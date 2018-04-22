@@ -85,6 +85,7 @@ namespace XiaoyaFileParser
             {
                 case "text/html":
                 case "text/plain":
+                case "application/pdf":
                     return true;
                 default:
                     return false;
@@ -99,6 +100,8 @@ namespace XiaoyaFileParser
                     return new HtmlFileParser(config);
                 case "text/plain":
                     return new TextFileParser(config);
+                case "application/pdf":
+                    return new PdfFileParser(config);
                 default:
                     throw new NotSupportedException(mimeType + " not supported");
             }

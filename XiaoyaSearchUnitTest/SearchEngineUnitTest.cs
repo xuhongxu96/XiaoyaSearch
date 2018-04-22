@@ -24,7 +24,6 @@ namespace XiaoyaSearchUnitTest
             var engine = new SearchEngine(new SearchEngineConfig
             {
                 IndexStatStore = new IndexStatStore(options),
-                UrlFileIndexStatStore = new UrlFileIndexStatStore(options),
                 UrlFileStore = new UrlFileStore(options),
                 InvertedIndexStore = new InvertedIndexStore(options),
             });
@@ -53,7 +52,6 @@ namespace XiaoyaSearchUnitTest
             var engine = new SearchEngine(new SearchEngineConfig
             {
                 IndexStatStore = new IndexStatStore(options),
-                UrlFileIndexStatStore = new UrlFileIndexStatStore(options),
                 UrlFileStore = new UrlFileStore(options),
                 InvertedIndexStore = new InvertedIndexStore(options),
             });

@@ -31,9 +31,8 @@ namespace XiaoyaRanker.QueryTermProximityRanker
                 foreach (var word in words)
                 {
                     var positions = mConfig.InvertedIndexStore
-                        .LoadByWordInUrlFileOrderByPosition(id, word)
-                        .Select(o => o.Position)
-                        .ToList();
+                        .LoadByWordInUrlFile(id, word)
+                        .PositionArr;
 
                     if (positions.Count == 0)
                     {

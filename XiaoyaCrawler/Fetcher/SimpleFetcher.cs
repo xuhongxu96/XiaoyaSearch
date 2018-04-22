@@ -88,7 +88,7 @@ namespace XiaoyaCrawler.Fetcher
                     }
                     else
                     {
-                        return null;
+                        throw new NotSupportedException("Not supported media type: " + type?.MediaType);
                     }
                 }
 

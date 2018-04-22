@@ -41,6 +41,22 @@ namespace XiaoyaNLP.Helper
             return result;
         }
 
+        public static string RemoveSpecialCharacters(string input)
+        {
+            return CommonRegex.AllNonChars.Replace(input, "");
+        }
+
+        public static string NormalizeString(string input)
+        {
+            if (input == null) return null;
+
+            var result = FullWidthCharToHalfWidthChar(input);
+            result = RemoveSpecialCharacters(result);
+            result = result.ToLower();
+
+            return result;
+        }
+
         public static IEnumerable<DateTime> ExtractDateTime(string input)
         {
             var match = CommonRegex.DateRegex.Match(input);

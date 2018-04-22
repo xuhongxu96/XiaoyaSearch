@@ -26,7 +26,7 @@ namespace XiaoyaRetriever.InexactTopKRetriever
 
         protected IEnumerable<int> RetrieveWord(Word word, double minWeight, double maxWeight)
         {
-            var result = from index in mConfig.UrlFileIndexStatStore.LoadByWord(word.Value)
+            var result = from index in mConfig.InvertedIndexStore.LoadByWord(word.Value)
                          where index.Weight >= minWeight && index.Weight < maxWeight
                          orderby index.Weight descending
                          select index.UrlFileId;

@@ -16,6 +16,7 @@ using static XiaoyaFileParser.Model.Token;
 using System.Collections.Concurrent;
 using Microsoft.EntityFrameworkCore;
 using XiaoyaNLP.Encoding;
+using XiaoyaCommon.Helper;
 
 namespace XiaoyaIndexer
 {
@@ -28,7 +29,6 @@ namespace XiaoyaIndexer
 
         private SemaphoreSlim mIndexSemaphore;
         private ConcurrentDictionary<Task, bool> mTasks = new ConcurrentDictionary<Task, bool>();
-        private object mSyncLock = new object();
 
         public bool IsWaiting { get; private set; } = false;
 
@@ -44,20 +44,6 @@ namespace XiaoyaIndexer
         public void WaitAll()
         {
             Task.WaitAll(mTasks.Keys.ToArray());
-        }
-
-        protected static InvertedIndexType ConvertType(TokenType type)
-        {
-            switch (type)
-            {
-                case TokenType.Body:
-                default:
-                    return InvertedIndexType.Body;
-                case TokenType.Title:
-                    return InvertedIndexType.Title;
-                case TokenType.Link:
-                    return InvertedIndexType.Link;
-            }
         }
 
         protected void IndexFile(UrlFile urlFile)
@@ -78,24 +64,30 @@ namespace XiaoyaIndexer
                         .Select(o => new LinkInfo
                         {
                             Text = o.Text,
-                            Url = mConfig.UrlFileStore.LoadById(o.UrlFileId).Url,
-                        });
+                            Url = mConfig.UrlFileStore.LoadById(o.UrlFileId)?.Url,
+                        })
+                        .Where(o => o.Url != null);
 
                     IList<Token> tokens = parser.GetTokensAsync(links).GetAwaiter().GetResult();
 
                     var invertedIndices = (from token in tokens
-                                          select new InvertedIndex
-                                          {
-                                              Word = token.Text,
-                                              Position = token.Position,
-                                              UrlFileId = urlFile.UrlFileId,
-                                              IndexType = ConvertType(token.Type),
-                                          }).ToList();
+                                           select new InvertedIndex
+                                           {
+                                               Word = token.Word,
+                                               Positions = string.Join(",", token.Positions),
+                                               UrlFileId = urlFile.UrlFileId,
+                                               WordFrequency = token.WordFrequency,
+                                               OccurencesInTitle = token.OccurenceInTitle,
+                                               OccurencesInLinks = token.OccurenceInLinks,
+                                               Weight = ScoringHelper.CalculateIndexWeight(urlFile.Title,
+                                                                                           urlFile.Content,
+                                                                                           urlFile.Url,
+                                                                                           urlFile.PublishDate,
+                                                                                           token.Word, token.WordFrequency,
+                                                                                           token.Positions.FirstOrDefault()),
+                                           }).ToList();
 
-                    // lock (mSyncLock)
-                    {
-                        mConfig.InvertedIndexStore.ClearAndSaveInvertedIndices(urlFile, invertedIndices);
-                    }
+                    mConfig.InvertedIndexStore.ClearAndSaveInvertedIndices(urlFile, invertedIndices);
 
                     mLogger.Log(nameof(SimpleIndexer), "Indexed Url: " + urlFile.Url);
                 }
@@ -108,7 +100,7 @@ namespace XiaoyaIndexer
                 {
                     mIndexSemaphore.Release();
                 }
-            }).ContinueWith(task => 
+            }).ContinueWith(task =>
             {
                 mTasks.TryRemove(task, out bool value);
             }), true);

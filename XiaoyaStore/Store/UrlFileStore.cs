@@ -29,6 +29,23 @@ namespace XiaoyaStore.Store
             }
         }
 
+        public void CacheUrlFiles(IEnumerable<int> urlFileIds)
+        {
+            mCache.LoadCaches(() => LoadCachesOfUrlFiles(urlFileIds));
+        }
+
+        protected IEnumerable<Tuple<int, UrlFile>> LoadCachesOfUrlFiles(IEnumerable<int> urlFileIds)
+        {
+            using (var context = NewContext())
+            {
+                foreach (var item in context.UrlFiles
+                    .Where(o => urlFileIds.Contains(o.UrlFileId)))
+                {
+                    yield return Tuple.Create(item.UrlFileId, item);
+                }
+            }
+        }
+
         public int Count()
         {
             using (var context = NewContext())

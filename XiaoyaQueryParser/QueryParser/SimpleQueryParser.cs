@@ -38,7 +38,7 @@ namespace XiaoyaQueryParser.QueryParser
 
                     foreach (var segment in segments)
                     {
-                        subAnd.Add(segment.Text);
+                        subAnd.Add(segment.Word);
                     }
 
                     result.Add(new Not(subAnd));
@@ -49,8 +49,8 @@ namespace XiaoyaQueryParser.QueryParser
 
                     foreach (var segment in segments)
                     {
-                        result.Add(segment.Text);
-                        words.Add(segment.Text);
+                        result.Add(segment.Word);
+                        words.Add(segment.Word);
                     }
                 }
             }

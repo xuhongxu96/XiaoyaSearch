@@ -34,7 +34,6 @@ namespace XiaoyaRankerUnitTest
             {
                 UrlFileStore = new UrlFileStore(options),
                 IndexStatStore = new IndexStatStore(options),
-                UrlFileIndexStatStore = new UrlFileIndexStatStore(options),
                 InvertedIndexStore = new InvertedIndexStore(options),
             });
 

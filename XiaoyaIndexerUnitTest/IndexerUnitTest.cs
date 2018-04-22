@@ -42,7 +42,6 @@ namespace XiaoyaIndexerUnitTest
             using (var context = new XiaoyaSearchContext(options))
             {
                 context.RemoveRange(context.InvertedIndices);
-                context.RemoveRange(context.UrlFileIndexStats);
                 context.RemoveRange(context.IndexStats);
                 context.SaveChanges();
             }

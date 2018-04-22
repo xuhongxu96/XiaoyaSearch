@@ -24,7 +24,6 @@ namespace XiaoyaRanker.VectorSpaceModelRanker
         {
             var documentCount = mConfig.UrlFileStore.Count();
 
-            // TODO: pre-cache urlFileIds and words InvertedIndices
             foreach (var urlFileId in urlFileIds)
             {
                 var urlFile = mConfig.UrlFileStore.LoadById(urlFileId);
@@ -36,30 +35,30 @@ namespace XiaoyaRanker.VectorSpaceModelRanker
                 double score = 0;
                 foreach (var word in words)
                 {
-                    var urlFileIndexStat = mConfig.UrlFileIndexStatStore.LoadByWordInUrlFile(urlFileId, word);
+                    var urlFileIndexStat = mConfig.InvertedIndexStore.LoadByWordInUrlFile(urlFileId, word);
 
                     if (urlFileIndexStat == null)
                     {
                         continue;
                     }
 
-                    var wordFrequencyInTitle = 
-                        mConfig.InvertedIndexStore.LoadByWordInUrlFileOrderByPosition(urlFileId, word, InvertedIndexType.Title).Count();
+                    var wordFrequencyInTitle =
+                        mConfig.InvertedIndexStore.LoadByWordInUrlFile(urlFileId, word).OccurencesInTitle;
                     var wordFrequencyInLinks =
-                        mConfig.InvertedIndexStore.LoadByWordInUrlFileOrderByPosition(urlFileId, word, InvertedIndexType.Link).Count();
+                        mConfig.InvertedIndexStore.LoadByWordInUrlFile(urlFileId, word).OccurencesInLinks;
                     var wordFrequencyInDocument = urlFileIndexStat.WordFrequency;
 
                     var indexStat = mConfig.IndexStatStore.LoadByWord(word);
                     var documentFrequency = indexStat.DocumentFrequency;
 
                     var wordScore =
-                        ScoringHelpers.TfIdf(wordFrequencyInDocument, documentFrequency, documentCount);
+                        ScoringHelper.TfIdf(wordFrequencyInDocument, documentFrequency, documentCount);
 
                     var titleWordScore =
-                        ScoringHelpers.TfIdf(wordFrequencyInTitle, documentFrequency, documentCount);
+                        ScoringHelper.TfIdf(wordFrequencyInTitle, documentFrequency, documentCount);
 
                     var linkWordScore =
-                        ScoringHelpers.TfIdf(wordFrequencyInLinks, documentFrequency, documentCount);
+                        ScoringHelper.TfIdf(wordFrequencyInLinks, documentFrequency, documentCount);
 
                     titleScore += titleWordScore * word.Length / titleLength;
                     linkScore += linkWordScore;

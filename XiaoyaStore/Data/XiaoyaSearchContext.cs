@@ -13,7 +13,6 @@ namespace XiaoyaStore.Data
         public DbSet<UrlFile> UrlFiles { get; set; }
         public DbSet<InvertedIndex> InvertedIndices { get; set; }
         public DbSet<IndexStat> IndexStats { get; set; }
-        public DbSet<UrlFileIndexStat> UrlFileIndexStats { get; set; }
         public DbSet<UrlHostStat> UrlHostStats { get; set; }
         public DbSet<Link> Links { get; set; }
 
@@ -25,9 +24,14 @@ SELECT
         Word,
         COUNT_BIG(*) AS DocumentFrequency,
 		SUM(WordFrequency) AS WordFrequency
-FROM dbo.UrlFileIndexStats
-GROUP BY Word");
+FROM dbo.InvertedIndices
+GROUP BY Word
+
+GO
+
+CREATE UNIQUE CLUSTERED INDEX IndexStatsIdx ON dbo.IndexStats(Word)");
         *
+        * 
         * 
         * 
         */
@@ -75,56 +79,34 @@ GROUP BY Word");
             #region InvertedIndex
 
             modelBuilder.Entity<InvertedIndex>()
-               .HasIndex(o => new { o.UrlFileId, o.Word, o.Position, o.IndexType })
+               .HasIndex(o => new { o.Word, o.UrlFileId })
                .IsUnique();
 
             modelBuilder.Entity<InvertedIndex>()
-               .HasIndex(o => o.UrlFileId);
+              .HasIndex(o => new { o.Word, o.UrlFileId, o.Weight });
+
+            modelBuilder.Entity<InvertedIndex>()
+              .HasIndex(o => new { o.Word });
+
+            modelBuilder.Entity<InvertedIndex>()
+              .HasIndex(o => new { o.Weight });
+
+            modelBuilder.Entity<InvertedIndex>()
+              .HasIndex(o => new { o.UrlFileId });
+
+            modelBuilder.Entity<InvertedIndex>()
+                .Ignore(o => o.PositionArr);
 
             #endregion
 
             #region IndexStat
 
-            if (Database.IsSqlServer())
-            {
-                // modelBuilder.Ignore<IndexStat>();
+            modelBuilder.Entity<IndexStat>()
+                .HasIndex(o => o.Word)
+                .IsUnique();
 
-                //*
-                modelBuilder.Entity<IndexStat>()
-                    .Ignore(o => o.IndexStatId);
-
-                modelBuilder.Entity<IndexStat>()
-                            .HasKey(o => o.Word);
-                // */
-            }
-            else
-            {
-                modelBuilder.Entity<IndexStat>()
-                    .HasIndex(o => o.Word)
-                    .IsUnique();
-            }
-            #endregion
-
-            #region UrlFileIndexStat
-
-            modelBuilder.Entity<UrlFileIndexStat>()
-                            .HasIndex(o => new { o.Word, o.UrlFileId })
-                            .IsUnique();
-
-            modelBuilder.Entity<UrlFileIndexStat>()
-                            .HasIndex(o => new { o.Word, o.UrlFileId, o.Weight, o.WordFrequency });
-
-            modelBuilder.Entity<UrlFileIndexStat>()
-                .HasIndex(o => o.WordFrequency);
-
-            modelBuilder.Entity<UrlFileIndexStat>()
-                .HasIndex(o => o.Word);
-
-            modelBuilder.Entity<UrlFileIndexStat>()
-                .HasIndex(o => o.Weight);
-
-            modelBuilder.Entity<UrlFileIndexStat>()
-                .HasIndex(o => o.UrlFileId);
+            modelBuilder.Entity<IndexStat>()
+               .HasIndex(o => o.WordFrequency);
 
             #endregion
 
@@ -151,7 +133,6 @@ GROUP BY Word");
         {
             if (!optionsBuilder.IsConfigured)
             {
-                // optionsBuilder.UseSqlite("Data Source=Db/XiaoyaSearch.db");
                 optionsBuilder.UseSqlServer("Data Source=IR-PC;Initial Catalog=XiaoyaSearch;Integrated Security=True");
             }
         }

@@ -28,7 +28,7 @@ namespace XiaoyaStore.Store
         {
             using (var context = NewContext())
             {
-                foreach (var item in context.IndexStats)
+                foreach (var item in context.IndexStats.OrderByDescending(o => o.WordFrequency))
                 {
                     yield return Tuple.Create(item.Word, item);
                 }
@@ -39,7 +39,7 @@ namespace XiaoyaStore.Store
         {
             using (var context = NewContext())
             {
-                return context.IndexStats.SingleOrDefault(o => o.Word == word);
+                return context.IndexStats.AsNoTracking().SingleOrDefault(o => o.Word == word);
             }
         }
     }

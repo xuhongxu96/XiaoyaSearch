@@ -15,7 +15,6 @@ namespace XiaoyaSearch.Config
             = new MaxMatchSegmenter();
 
         public IUrlFileStore UrlFileStore { get; set; }
-        public IUrlFileIndexStatStore UrlFileIndexStatStore { get; set; }
         public IIndexStatStore IndexStatStore { get; set; }
         public IInvertedIndexStore InvertedIndexStore { get; set; }
     }

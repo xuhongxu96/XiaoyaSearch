@@ -48,7 +48,7 @@ namespace XiaoyaStore.Cache
                 {
                     Priority = ThreadPriority.BelowNormal,
                 };
-                mLoadCachesThread.Start();
+                // mLoadCachesThread.Start();
             }
         }
 
@@ -82,6 +82,14 @@ namespace XiaoyaStore.Cache
         protected void LoadCaches()
         {
             foreach (var item in mLoadCachesMethod().Take(mLruSize))
+            {
+                Add(item.Item1, item.Item2);
+            }
+        }
+
+        public void LoadCaches(Func<IEnumerable<Tuple<TKey, TValue>>> loadCachesMethod)
+        {
+            foreach (var item in loadCachesMethod().Take(mLruSize))
             {
                 Add(item.Item1, item.Item2);
             }

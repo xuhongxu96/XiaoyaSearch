@@ -20,12 +20,14 @@ namespace XiaoyaSearch
         protected IRetriever mRetriever;
         protected IRanker mRanker;
         protected IRanker mProRanker;
+        protected SearchEngineConfig mConfig;
 
         protected const int ResultSize = 1000;
         protected const int PageSize = 1000;
 
         public SearchEngine(SearchEngineConfig config)
         {
+            mConfig = config;
             mQueryParser = new SimpleQueryParser(new QueryParserConfig
             {
                 TextSegmenter = config.TextSegmenter,
@@ -34,7 +36,6 @@ namespace XiaoyaSearch
             mRetriever = new InexactTopKRetriever(new RetrieverConfig
             {
                 IndexStatStore = config.IndexStatStore,
-                UrlFileIndexStatStore = config.UrlFileIndexStatStore,
                 UrlFileStore = config.UrlFileStore,
                 InvertedIndexStore = config.InvertedIndexStore,
             }, ResultSize);
@@ -42,7 +43,6 @@ namespace XiaoyaSearch
             var rankerConfig = new RankerConfig
             {
                 IndexStatStore = config.IndexStatStore,
-                UrlFileIndexStatStore = config.UrlFileIndexStatStore,
                 UrlFileStore = config.UrlFileStore,
                 InvertedIndexStore = config.InvertedIndexStore,
             };
@@ -64,6 +64,9 @@ namespace XiaoyaSearch
             var urlFileIds = mRetriever.Retrieve(parsedQuery.Expression).ToList();
             var count = urlFileIds.Count;
 
+            mConfig.UrlFileStore.CacheUrlFiles(urlFileIds);
+            mConfig.InvertedIndexStore.CacheWordsInUrlFiles(urlFileIds, parsedQuery.Words);
+
             var scores = mRanker.Rank(urlFileIds, parsedQuery.Words).ToList();
 
             var results = new List<SearchResult>();
@@ -83,14 +86,14 @@ namespace XiaoyaSearch
             {
                 int subResultsLength = Math.Min(PageSize, count - PageSize * i);
                 var subResults = results.GetRange(i * PageSize, subResultsLength);
-                /*
+                
                 var proScores = mProRanker.Rank(subResults.Select(o => o.UrlFileId), parsedQuery.Words).ToList();
 
                 for (int j = 0; j < subResultsLength; ++j)
                 {
                     subResults[j].ProScore = proScores[j];
                 }
-                */
+                
                 foreach (var proResult in subResults.OrderByDescending(o => o.ProScore))
                 {
                     yield return proResult;

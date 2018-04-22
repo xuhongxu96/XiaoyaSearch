@@ -15,7 +15,7 @@ namespace XiaoyaNLPUnitTest.TextSegmentation
         {
             var nGram = new NGram();
             var segments = nGram.Segment("大家好！Hello world我是大笨蛋，哈哈哈哈2018!");
-            var words = segments.Select(o => o.Text);
+            var words = segments.Select(o => o.Word);
 
             Assert.IsTrue(words.Contains("家好"));
             Assert.IsTrue(words.Contains("lo"));
@@ -29,7 +29,7 @@ namespace XiaoyaNLPUnitTest.TextSegmentation
 
             foreach (var segment in segments)
             {
-                Console.WriteLine(string.Format("{0}: {1}", segment.Text, segment.Position));
+                Console.WriteLine(string.Format("{0}: {1}", segment.Word, segment.Position));
             }
         }
 
@@ -38,7 +38,7 @@ namespace XiaoyaNLPUnitTest.TextSegmentation
         {
             var nGram = new NGram(3);
             var segments = nGram.Segment("大家好！Hello world我是大笨蛋，哈哈哈哈2018!");
-            var words = segments.Select(o => o.Text);
+            var words = segments.Select(o => o.Word);
 
             Assert.IsTrue(words.Contains("大家好"));
             Assert.IsTrue(words.Contains("llo"));
@@ -52,7 +52,7 @@ namespace XiaoyaNLPUnitTest.TextSegmentation
 
             foreach (var segment in segments)
             {
-                Console.WriteLine(string.Format("{0}: {1}", segment.Text, segment.Position));
+                Console.WriteLine(string.Format("{0}: {1}", segment.Word, segment.Position));
             }
         }
 
@@ -61,7 +61,7 @@ namespace XiaoyaNLPUnitTest.TextSegmentation
         {
             var nGram = new NGram(2, true);
             var segments = nGram.Segment("大家好！Hello world我是大笨蛋，哈哈哈哈2018!");
-            var words = segments.Select(o => o.Text);
+            var words = segments.Select(o => o.Word);
 
             Assert.IsTrue(words.Contains("家好"));
             Assert.IsTrue(words.Contains("Hello"));
@@ -76,7 +76,7 @@ namespace XiaoyaNLPUnitTest.TextSegmentation
 
             foreach (var segment in segments)
             {
-                Console.WriteLine(string.Format("{0}: {1}", segment.Text, segment.Position));
+                Console.WriteLine(string.Format("{0}: {1}", segment.Word, segment.Position));
             }
         }
     }
