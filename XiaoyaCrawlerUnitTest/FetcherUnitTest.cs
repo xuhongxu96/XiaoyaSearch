@@ -1,6 +1,7 @@
 using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -84,8 +85,10 @@ namespace XiaoyaCrawlerUnitTest
         {
             InitDatabase(fetcher =>
             {
-                var urlFile = fetcher.FetchAsync("xxxx://bnu.edu.cn").GetAwaiter().GetResult();
-                Assert.IsNull(urlFile);
+                Assert.ThrowsException<NotSupportedException>(() =>
+                {
+                    var urlFile = fetcher.FetchAsync("xxxx://bnu.edu.cn").GetAwaiter().GetResult();
+                });
             });
         }
 
@@ -94,8 +97,10 @@ namespace XiaoyaCrawlerUnitTest
         {
             InitDatabase(fetcher =>
             {
-                var urlFile = fetcher.FetchAsync("http://www.bnu.edu.cn/xxxxx").GetAwaiter().GetResult();
-                Assert.IsNull(urlFile);
+                Assert.ThrowsException<IOException>(() =>
+                {
+                    var urlFile = fetcher.FetchAsync("http://www.bnu.edu.cn/xxxxx").GetAwaiter().GetResult();
+                });
             });
         }
     }

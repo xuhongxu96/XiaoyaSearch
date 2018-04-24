@@ -31,7 +31,7 @@ namespace XiaoyaCrawler.Fetcher
             mLogger = new RuntimeLogger(Path.Combine(config.LogDirectory, "Crawler.Log"));
             if (Directory.Exists(config.FetchDirectory))
             {
-                Directory.Delete(mConfig.FetchDirectory, true);
+                Directory.Delete(config.FetchDirectory, true);
             }
             else
             {

@@ -56,7 +56,7 @@ namespace XiaoyaRankerUnitTest
 
                 if (scores[i] == maxScore)
                 {
-                    Assert.AreEqual("http://news.bnu.edu.cn/sswgh/", urlFiles[i].Url);
+                    Assert.AreEqual("http://news.bnu.edu.cn/ztxw/jzgjdxxzit/", urlFiles[i].Url);
                 }
             }
 

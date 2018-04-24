@@ -31,10 +31,10 @@ namespace XiaoyaRanker.QueryTermProximityRanker
                 foreach (var word in words)
                 {
                     var positions = mConfig.InvertedIndexStore
-                        .LoadByWordInUrlFile(id, word)
+                        .LoadByWordInUrlFile(id, word)?
                         .PositionArr;
 
-                    if (positions.Count == 0)
+                    if (positions == null || positions.Count == 0)
                     {
                         yield return 0;
                         skip = true;

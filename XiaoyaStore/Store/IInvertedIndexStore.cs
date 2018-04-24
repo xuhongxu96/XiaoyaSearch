@@ -13,5 +13,6 @@ namespace XiaoyaStore.Store
         InvertedIndex LoadByWordInUrlFile(int urlFileId, string word);
         InvertedIndex LoadByWordInUrlFile(UrlFile urlFile, string word);
         void CacheWordsInUrlFiles(IEnumerable<int> urlFileIds, IEnumerable<string> words);
+        void WaitForIndexStat();
     }
 }

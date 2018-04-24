@@ -20,8 +20,13 @@ namespace XiaoyaStore.Store
 {
     public class InvertedIndexStore : BaseStore, IInvertedIndexStore
     {
-        protected object mSyncLock = new object();
-        protected object mDictSyncLock = new object();
+        private object mSyncLock = new object();
+        private object mDictSyncLock = new object();
+
+        private object mSavingIndexStatLock = new object();
+        private bool mSavingIndexStat = false;
+
+        private RuntimeLogger mLogger = null;
 
         public struct CacheIndex
         {
@@ -99,6 +104,8 @@ namespace XiaoyaStore.Store
 
             mWordCache = new ComparableLRUCache<CacheWord, CacheWordItem>(
                 TimeSpan.FromDays(1), GetWordCache, UpdateWordCache, CompareWordCache, LoadWordCaches, 1_000_000, enableCache);
+
+            mLogger = logger;
 
             var thread = new Thread(FlushIndexStat)
             {
@@ -252,7 +259,6 @@ namespace XiaoyaStore.Store
         {
             using (var context = NewContext())
             {
-                Console.WriteLine(cacheIndex.word + " " + cacheIndex.urlFileId);
                 return context.InvertedIndices
                     .AsNoTracking()
                     .SingleOrDefault(o => o.UrlFileId == cacheIndex.urlFileId
@@ -268,15 +274,29 @@ namespace XiaoyaStore.Store
                 foreach (var item in context.InvertedIndices.Where(o => o.UrlFileId == urlFileId))
                 {
                     list.Add(item);
-                    if (list.Count % 10000 == 0)
+                    if (list.Count % 500000 == 0)
                     {
-                        context.BulkDelete(list);
+                        if (context.Database.IsSqlServer())
+                        {
+                            context.BulkDelete(list);
+                        }
+                        else
+                        {
+                            context.RemoveRange(list);
+                        }
                         list.Clear();
                     }
                 }
                 if (list.Count > 0)
                 {
-                    context.BulkDelete(list);
+                    if (context.Database.IsSqlServer())
+                    {
+                        context.BulkDelete(list);
+                    }
+                    else
+                    {
+                        context.RemoveRange(list);
+                    }
                 }
             }
         }
@@ -340,6 +360,11 @@ namespace XiaoyaStore.Store
 
                 List<KeyValuePair<string, IndexStatDeltaItem>> indexStatDeltas;
 
+                lock (mSavingIndexStatLock)
+                {
+                    mSavingIndexStat = true;
+                }
+
                 lock (mDictSyncLock)
                 {
                     indexStatDeltas = mIndexStatDict
@@ -393,14 +418,30 @@ namespace XiaoyaStore.Store
 
                             }
 
-                            context.BulkInsert(addedStats.ToList());
-                            context.BulkUpdate(changedStats.ToList());
+                            if (context.Database.IsSqlServer())
+                            {
+                                context.BulkInsert(addedStats.ToList());
+                                context.BulkUpdate(changedStats.ToList());
+                            }
+                            else
+                            {
+                                context.AddRange(addedStats.ToList());
+                                context.UpdateRange(changedStats.ToList());
+                            }
+                            
                             context.SaveChanges();
                             break;
                         }
-                        catch (Exception)
-                        { }
+                        catch (Exception e)
+                        {
+                            mLogger?.LogException(nameof(InvertedIndexStore), "Error while saving index stats", e);
+                        }
                     }
+                }
+
+                lock (mSavingIndexStatLock)
+                {
+                    mSavingIndexStat = false;
                 }
             }
         }
@@ -426,19 +467,33 @@ namespace XiaoyaStore.Store
 
                 ClearInvertedIndicesOf(urlFileId);
 
-                List<InvertedIndex> list = new List<InvertedIndex>();
+                var list = new List<InvertedIndex>();
                 foreach (var index in invertedIndices)
                 {
                     list.Add(index);
-                    if (list.Count % 10000 == 0)
+                    if (list.Count % 500000 == 0)
                     {
-                        context.BulkInsert(list);
+                        if (context.Database.IsSqlServer())
+                        {
+                            context.BulkInsert(list);
+                        }
+                        else
+                        {
+                            context.AddRange(list);
+                        }
                         list.Clear();
                     }
                 }
                 if (list.Count > 0)
                 {
-                    context.BulkInsert(list);
+                    if (context.Database.IsSqlServer())
+                    {
+                        context.BulkInsert(list);
+                    }
+                    else
+                    {
+                        context.AddRange(list);
+                    }
                 }
                 urlFile.IndexStatus = UrlFile.UrlFileIndexStatus.Indexed;
 
@@ -482,6 +537,14 @@ namespace XiaoyaStore.Store
         public InvertedIndex LoadByWordInUrlFile(UrlFile urlFile, string word)
         {
             return LoadByWordInUrlFile(urlFile.UrlFileId, word);
+        }
+
+        public void WaitForIndexStat()
+        {
+            while (!mIndexStatDict.IsEmpty || mSavingIndexStat)
+            {
+                Thread.Sleep(3000);
+            }
         }
     }
 }

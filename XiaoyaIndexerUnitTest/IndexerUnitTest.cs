@@ -51,6 +51,7 @@ namespace XiaoyaIndexerUnitTest
                 LogDirectory = logDir,
                 UrlFileStore = new UrlFileStore(options),
                 InvertedIndexStore = new InvertedIndexStore(options),
+                LinkStore = new LinkStore(options),
             };
 
             IIndexer indexer = new SimpleIndexer(config);
@@ -68,6 +69,8 @@ namespace XiaoyaIndexerUnitTest
             indexer.WaitAll();
 
             indexer.StopIndex();
+
+            config.InvertedIndexStore.WaitForIndexStat();
 
             using (var context = new XiaoyaSearchContext(options))
             {

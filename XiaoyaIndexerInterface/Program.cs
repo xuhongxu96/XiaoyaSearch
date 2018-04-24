@@ -4,6 +4,7 @@ using System.IO;
 using XiaoyaCommon.ArgumentParser;
 using XiaoyaIndexer;
 using XiaoyaIndexer.Config;
+using XiaoyaLogger;
 using XiaoyaStore.Data;
 using XiaoyaStore.Store;
 
@@ -36,7 +37,8 @@ namespace XiaoyaIndexerInterface
                 LogDirectory = arguments.LogDir,
                 UrlFileStore = new UrlFileStore(options, true),
                 LinkStore = new LinkStore(options, false),
-                InvertedIndexStore = new InvertedIndexStore(options, false),
+                InvertedIndexStore = new InvertedIndexStore(options, false, 
+                    new RuntimeLogger(Path.Combine(arguments.LogDir, "Indexer Error.Log"), true)),
                 MaxIndexingConcurrency = int.Parse(arguments.ThreadCount),
             };
 

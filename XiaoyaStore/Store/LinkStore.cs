@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using XiaoyaStore.Data.Model;
 using System.Linq;
 using XiaoyaStore.Cache;
+using EFCore.BulkExtensions;
 
 namespace XiaoyaStore.Store
 {
@@ -43,8 +44,64 @@ namespace XiaoyaStore.Store
         {
             using (var context = NewContext())
             {
-                context.Links.RemoveRange(context.Links.Where(o => o.UrlFileId == urlFileId));
-                context.Links.AddRange(links);
+                var list = new List<Link>();
+                foreach (var link in context.Links.Where(o => o.UrlFileId == urlFileId))
+                {
+                    list.Add(link);
+                    if (list.Count % 10000 == 0)
+                    {
+                        if (context.Database.IsSqlServer())
+                        {
+                            context.BulkDelete(list);
+                        }
+                        else
+                        {
+                            context.RemoveRange(list);
+                        }
+                        list.Clear();
+                    }
+                }
+                if (list.Count > 0)
+                {
+                    if (context.Database.IsSqlServer())
+                    {
+                        context.BulkDelete(list);
+                    }
+                    else
+                    {
+                        context.RemoveRange(list);
+                    }
+                }
+
+                list.Clear();
+                foreach (var link in links)
+                {
+                    list.Add(link);
+                    if (list.Count % 10000 == 0)
+                    {
+                        if (context.Database.IsSqlServer())
+                        {
+                            context.BulkInsert(list);
+                        }
+                        else
+                        {
+                            context.AddRange(list);
+                        }
+                        list.Clear();
+                    }
+                }
+                if (list.Count > 0)
+                {
+                    if (context.Database.IsSqlServer())
+                    {
+                        context.BulkInsert(list);
+                    }
+                    else
+                    {
+                        context.AddRange(list);
+                    }
+                }
+
                 lock (mSyncLock)
                 {
                     context.SaveChanges();
