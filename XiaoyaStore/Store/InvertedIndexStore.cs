@@ -50,6 +50,37 @@ namespace XiaoyaStore.Store
             }
         }
 
+        public struct CacheWord
+        {
+            public string word;
+            public double minWeight;
+
+            public override bool Equals(object obj)
+            {
+                if (!(obj is CacheWord))
+                {
+                    return false;
+                }
+
+                var word = (CacheWord)obj;
+                return this.word == word.word;
+            }
+
+            public override int GetHashCode()
+            {
+                var hashCode = 1788406269;
+                hashCode = hashCode * -1521134295 + base.GetHashCode();
+                hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(word);
+                return hashCode;
+            }
+        }
+
+        public struct CacheWordItem
+        {
+            public double minWeight;
+            public HashSet<int> urlFileIds;
+        }
+
         public struct IndexStatDeltaItem
         {
             public string word;
@@ -57,13 +88,17 @@ namespace XiaoyaStore.Store
             public int documentFrequencyDelta;
         }
 
-        protected LRUCache<CacheIndex, InvertedIndex> mCache;
+        protected LRUCache<CacheIndex, InvertedIndex> mWordUrlFileCache;
+        protected ComparableLRUCache<CacheWord, CacheWordItem> mWordCache;
         protected ConcurrentDictionary<string, IndexStatDeltaItem> mIndexStatDict = new ConcurrentDictionary<string, IndexStatDeltaItem>();
 
         public InvertedIndexStore(DbContextOptions options = null, bool enableCache = true, RuntimeLogger logger = null) : base(options)
         {
-            mCache = new LRUCache<CacheIndex, InvertedIndex>(
-                TimeSpan.FromDays(5), GetCache, LoadCaches, 30_000_000, enableCache);
+            mWordUrlFileCache = new LRUCache<CacheIndex, InvertedIndex>(
+                TimeSpan.FromDays(5), GetWordUrlFileCache, LoadWordUrlFileCaches, 30_000_000, enableCache);
+
+            mWordCache = new ComparableLRUCache<CacheWord, CacheWordItem>(
+                TimeSpan.FromDays(1), GetWordCache, UpdateWordCache, CompareWordCache, LoadWordCaches, 1_000_000, enableCache);
 
             var thread = new Thread(FlushIndexStat)
             {
@@ -72,12 +107,101 @@ namespace XiaoyaStore.Store
             thread.Start();
         }
 
-        public void CacheWordsInUrlFiles(IEnumerable<int> urlFileIds, IEnumerable<string> words)
+        private bool CompareWordCache(CacheWord word, CacheWordItem value)
         {
-            mCache.LoadCaches(() => LoadCachesOfWordsInUrlFiles(urlFileIds, words));
+            return word.minWeight >= value.minWeight;
         }
 
-        protected IEnumerable<Tuple<CacheIndex, InvertedIndex>> LoadCachesOfWordsInUrlFiles(IEnumerable<int> urlFileIds, IEnumerable<string> words)
+        private CacheWordItem UpdateWordCache(CacheWord word, CacheWordItem value)
+        {
+            using (var context = NewContext())
+            {
+                var result = context.InvertedIndices.Where(o => o.Word == word.word)
+                    .Where(o => o.Weight >= word.minWeight)
+                    .Where(o => o.Weight < value.minWeight)
+                    .OrderByDescending(o => o.Weight)
+                    .Select(o => o.UrlFileId)
+                    .ToHashSet();
+
+                result.UnionWith(value.urlFileIds);
+
+                return new CacheWordItem
+                {
+                    urlFileIds = result,
+                    minWeight = word.minWeight,
+                };
+            }
+        }
+
+        private IEnumerable<Tuple<CacheWord, CacheWordItem>> LoadWordCaches()
+        {
+            using (var context = NewContext())
+            {
+                foreach (var stat in context.IndexStats.OrderByDescending(o => o.WordFrequency))
+                {
+                    var result = context.InvertedIndices.Where(o => o.Word == stat.Word)
+                    .Where(o => o.Weight >= 2)
+                    .OrderByDescending(o => o.Weight)
+                    .Select(o => o.UrlFileId)
+                    .ToHashSet();
+
+                    yield return Tuple.Create(new CacheWord
+                    {
+                        word = stat.Word,
+                        minWeight = 2,
+                    }, new CacheWordItem
+                    {
+                        urlFileIds = result,
+                        minWeight = 2,
+                    });
+                }
+            }
+        }
+
+        private CacheWordItem GetWordCache(CacheWord word)
+        {
+            using (var context = NewContext())
+            {
+                var result = context.InvertedIndices.Where(o => o.Word == word.word)
+                    .Where(o => o.Weight >= word.minWeight)
+                    .OrderByDescending(o => o.Weight)
+                    .Select(o => o.UrlFileId)
+                    .ToHashSet();
+
+                return new CacheWordItem
+                {
+                    urlFileIds = result,
+                    minWeight = word.minWeight,
+                };
+            }
+        }
+
+        public void CacheWordsInUrlFiles(IEnumerable<int> urlFileIds, IEnumerable<string> words)
+        {
+            var wordSet = words.ToHashSet();
+            foreach (var word in words)
+            {
+                bool allValid = true;
+                foreach (var id in urlFileIds)
+                {
+                    if (!mWordUrlFileCache.IsValid(new CacheIndex
+                    {
+                        word = word,
+                        urlFileId = id,
+                    }))
+                    {
+                        allValid = false;
+                    }
+                }
+                if (allValid)
+                {
+                    wordSet.Remove(word);
+                }
+            }
+            mWordUrlFileCache.LoadCaches(() => LoadCachesOfWordsInUrlFiles(urlFileIds, wordSet));
+        }
+
+        private IEnumerable<Tuple<CacheIndex, InvertedIndex>> LoadCachesOfWordsInUrlFiles(IEnumerable<int> urlFileIds, IEnumerable<string> words)
         {
             using (var context = NewContext())
             {
@@ -94,7 +218,7 @@ namespace XiaoyaStore.Store
             }
         }
 
-        protected IEnumerable<Tuple<CacheIndex, InvertedIndex>> LoadCaches()
+        private IEnumerable<Tuple<CacheIndex, InvertedIndex>> LoadWordUrlFileCaches()
         {
             using (var context = NewContext())
             {
@@ -109,7 +233,7 @@ namespace XiaoyaStore.Store
             }
         }
 
-        protected InvertedIndex GetCache(CacheIndex cacheIndex)
+        private InvertedIndex GetWordUrlFileCache(CacheIndex cacheIndex)
         {
             using (var context = NewContext())
             {
@@ -125,7 +249,20 @@ namespace XiaoyaStore.Store
         {
             using (var context = NewContext())
             {
-                context.BulkDelete(context.InvertedIndices.Where(o => o.UrlFileId == urlFileId).ToList());
+                var list = new List<InvertedIndex>();
+                foreach (var item in context.InvertedIndices.Where(o => o.UrlFileId == urlFileId))
+                {
+                    list.Add(item);
+                    if (list.Count % 10000 == 0)
+                    {
+                        context.BulkDelete(list);
+                        list.Clear();
+                    }
+                }
+                if (list.Count > 0)
+                {
+                    context.BulkDelete(list);
+                }
             }
         }
 
@@ -184,7 +321,7 @@ namespace XiaoyaStore.Store
         {
             while (true)
             {
-                Thread.Sleep(10000);
+                Thread.Sleep(5000);
 
                 List<KeyValuePair<string, IndexStatDeltaItem>> indexStatDeltas;
 
@@ -195,58 +332,60 @@ namespace XiaoyaStore.Store
                     mIndexStatDict.Clear();
                 }
 
-                var err = indexStatDeltas.GroupBy(o => o.Value.word)
-                    .Where(o => o.Count() != 1)
-                    .ToList();
-
-                var addedStats = new List<IndexStat>();
-                var changedStats = new List<IndexStat>();
+                var addedStats = new HashSet<IndexStat>();
+                var changedStats = new HashSet<IndexStat>();
 
                 int i = 0;
 
                 using (var context = NewContext())
                 {
-                    context.ChangeTracker.AutoDetectChangesEnabled = false;
-                    foreach (var item in indexStatDeltas)
+                    while (true)
                     {
-                        i++;
-                        var word = item.Key;
-                        var wordFrequencyDelta = item.Value.wordFrequencyDelta;
-                        var docFrequencyDelta = item.Value.documentFrequencyDelta;
-
-                        var stat = context.IndexStats.SingleOrDefault(o => o.Word == word);
-                        if (stat == null)
+                        try
                         {
-                            stat = new IndexStat
+                            context.Database.SetCommandTimeout(TimeSpan.FromMinutes(10));
+                            context.ChangeTracker.AutoDetectChangesEnabled = false;
+                            foreach (var item in indexStatDeltas)
                             {
-                                Word = word,
-                                WordFrequency = wordFrequencyDelta,
-                                DocumentFrequency = docFrequencyDelta,
-                            };
-                            addedStats.Add(stat);
-                        }
-                        else
-                        {
-                            stat.WordFrequency += wordFrequencyDelta;
-                            stat.DocumentFrequency += docFrequencyDelta;
-                            if (!changedStats.Contains(stat))
-                            {
-                                changedStats.Add(stat);
-                            }
-                            else
-                            {
-                                changedStats.Add(stat);
-                            }
-                        }
+                                i++;
+                                var word = item.Key;
+                                var wordFrequencyDelta = item.Value.wordFrequencyDelta;
+                                var docFrequencyDelta = item.Value.documentFrequencyDelta;
 
+                                var stat = context.IndexStats.SingleOrDefault(o => o.Word == word);
+                                if (stat == null)
+                                {
+                                    stat = new IndexStat
+                                    {
+                                        Word = word,
+                                        WordFrequency = wordFrequencyDelta,
+                                        DocumentFrequency = docFrequencyDelta,
+                                    };
+                                    if (!addedStats.Contains(stat))
+                                    {
+                                        addedStats.Add(stat);
+                                    }
+                                }
+                                else
+                                {
+                                    stat.WordFrequency += wordFrequencyDelta;
+                                    stat.DocumentFrequency += docFrequencyDelta;
+                                    if (!changedStats.Contains(stat))
+                                    {
+                                        changedStats.Add(stat);
+                                    }
+                                }
+
+                            }
+
+                            context.BulkInsert(addedStats.ToList());
+                            context.BulkUpdate(changedStats.ToList());
+                            context.SaveChanges();
+                            break;
+                        }
+                        catch (Exception)
+                        { }
                     }
-                    var err2 = changedStats.GroupBy(o => o.IndexStatId)
-                    .Where(o => o.Count() != 1)
-                    .ToList();
-
-                    context.BulkInsert(addedStats);
-                    context.BulkUpdate(changedStats);
-                    context.SaveChanges();
                 }
             }
         }
@@ -255,6 +394,7 @@ namespace XiaoyaStore.Store
         {
             using (var context = NewContext())
             {
+                context.Database.SetCommandTimeout(TimeSpan.FromMinutes(10));
                 context.ChangeTracker.AutoDetectChangesEnabled = false;
 
                 var urlFile = context.UrlFiles.SingleOrDefault(o => o.UrlFileId == urlFileId);
@@ -270,8 +410,21 @@ namespace XiaoyaStore.Store
                     .ToList();
 
                 ClearInvertedIndicesOf(urlFileId);
-                context.BulkInsert(invertedIndices);
 
+                List<InvertedIndex> list = new List<InvertedIndex>();
+                foreach (var index in invertedIndices)
+                {
+                    list.Add(index);
+                    if (list.Count % 10000 == 0)
+                    {
+                        context.BulkInsert(list);
+                        list.Clear();
+                    }
+                }
+                if (list.Count > 0)
+                {
+                    context.BulkInsert(list);
+                }
                 urlFile.IndexStatus = UrlFile.UrlFileIndexStatus.Indexed;
 
                 context.UrlFiles.Update(urlFile);
@@ -293,21 +446,18 @@ namespace XiaoyaStore.Store
             ClearInvertedIndicesOf(urlFile.UrlFileId);
         }
 
-        public IEnumerable<InvertedIndex> LoadByWord(string word)
+        public HashSet<int> LoadUrlFileIdsByWord(string word, double minWeight = 0)
         {
-            using (var context = NewContext())
+            return mWordCache.Get(new CacheWord
             {
-                var indices = context.InvertedIndices.Where(o => o.Word == word);
-                foreach (var index in indices)
-                {
-                    yield return index;
-                }
-            }
+                word = word,
+                minWeight = minWeight,
+            }).urlFileIds;
         }
 
         public InvertedIndex LoadByWordInUrlFile(int urlFileId, string word)
         {
-            return mCache.Get(new CacheIndex
+            return mWordUrlFileCache.Get(new CacheIndex
             {
                 urlFileId = urlFileId,
                 word = word,

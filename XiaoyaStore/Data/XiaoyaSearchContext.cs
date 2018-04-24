@@ -83,7 +83,7 @@ CREATE UNIQUE CLUSTERED INDEX IndexStatsIdx ON dbo.IndexStats(Word)");
                .IsUnique();
 
             modelBuilder.Entity<InvertedIndex>()
-              .HasIndex(o => new { o.Word, o.UrlFileId, o.Weight });
+              .HasIndex(o => new { o.Word, o.Weight });
 
             modelBuilder.Entity<InvertedIndex>()
               .HasIndex(o => new { o.Word });

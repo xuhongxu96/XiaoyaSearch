@@ -15,7 +15,6 @@ namespace XiaoyaRetriever.Expression
 
         protected long mFrequency = 1;
         public override long Frequency => mFrequency;
-        public long DocumentFrequency { get; protected set; } = 0;
 
         public override bool IsIncluded => true;
 
@@ -31,8 +30,7 @@ namespace XiaoyaRetriever.Expression
             var stat = config.IndexStatStore.LoadByWord(Value);
             if (stat != null)
             {
-                mFrequency = stat.WordFrequency;
-                DocumentFrequency = stat.DocumentFrequency;
+                mFrequency = stat.DocumentFrequency;
             }
             mConfig = config;
         }

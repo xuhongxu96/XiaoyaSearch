@@ -31,7 +31,16 @@ namespace XiaoyaStore.Store
 
         public void CacheUrlFiles(IEnumerable<int> urlFileIds)
         {
-            mCache.LoadCaches(() => LoadCachesOfUrlFiles(urlFileIds));
+            var urlFileIdSet = urlFileIds.ToHashSet();
+            foreach (var id in urlFileIds)
+            {
+                if (mCache.IsValid(id))
+                {
+                    urlFileIdSet.Remove(id);
+                }
+            }
+
+            mCache.LoadCaches(() => LoadCachesOfUrlFiles(urlFileIdSet));
         }
 
         protected IEnumerable<Tuple<int, UrlFile>> LoadCachesOfUrlFiles(IEnumerable<int> urlFileIds)

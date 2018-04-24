@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -33,7 +34,7 @@ namespace XiaoyaStore.Cache
         public LRUCache(TimeSpan expiredTime,
             Func<TKey, TValue> getValueMethod,
             Func<IEnumerable<Tuple<TKey, TValue>>> loadCachesMethod = null,
-            int LRUSize = 0,
+            int LRUSize = 10_000,
             bool isEnabled = true)
         {
             mExpiredTime = expiredTime;
@@ -48,7 +49,7 @@ namespace XiaoyaStore.Cache
                 {
                     Priority = ThreadPriority.BelowNormal,
                 };
-                // mLoadCachesThread.Start();
+                mLoadCachesThread.Start();
             }
         }
 
@@ -62,6 +63,12 @@ namespace XiaoyaStore.Cache
         [MethodImpl(MethodImplOptions.Synchronized)]
         protected void AddItem(TKey k, TValue v)
         {
+            AddItem(k, v, DateTime.Now.Add(mExpiredTime));
+        }
+
+        [MethodImpl(MethodImplOptions.Synchronized)]
+        protected void AddItem(TKey k, TValue v, DateTime expiredTime)
+        {
             if (mDictionary.Count >= mLruSize)
             {
                 RemoveFirst();
@@ -71,7 +78,7 @@ namespace XiaoyaStore.Cache
             var data = new CacheData
             {
                 value = v,
-                expiredTime = DateTime.Now.Add(mExpiredTime),
+                expiredTime = expiredTime,
                 lruNode = node,
             };
 
@@ -110,7 +117,7 @@ namespace XiaoyaStore.Cache
         }
 
         [MethodImpl(MethodImplOptions.Synchronized)]
-        public TValue Get(TKey key)
+        public virtual TValue Get(TKey key)
         {
             if (!mIsEnabled)
             {
@@ -151,5 +158,6 @@ namespace XiaoyaStore.Cache
             }
             return false;
         }
+
     }
 }

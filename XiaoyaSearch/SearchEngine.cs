@@ -22,8 +22,8 @@ namespace XiaoyaSearch
         protected IRanker mProRanker;
         protected SearchEngineConfig mConfig;
 
-        protected const int ResultSize = 1000;
-        protected const int PageSize = 1000;
+        protected const int ResultSize = 500;
+        protected const int PageSize = 500;
 
         public SearchEngine(SearchEngineConfig config)
         {
@@ -59,15 +59,28 @@ namespace XiaoyaSearch
                 yield break;
             }
 
+            Console.WriteLine("Begin search");
+
             var parsedQuery = mQueryParser.Parse(query);
+
+            Console.WriteLine("Parsed query");
 
             var urlFileIds = mRetriever.Retrieve(parsedQuery.Expression).ToList();
             var count = urlFileIds.Count;
 
-            mConfig.UrlFileStore.CacheUrlFiles(urlFileIds);
+            Console.WriteLine("Retrieved docs");
+
             mConfig.InvertedIndexStore.CacheWordsInUrlFiles(urlFileIds, parsedQuery.Words);
 
+            Console.WriteLine("Cached words");
+
+            mConfig.UrlFileStore.CacheUrlFiles(urlFileIds);
+
+            Console.WriteLine("Cached docs");
+
             var scores = mRanker.Rank(urlFileIds, parsedQuery.Words).ToList();
+
+            Console.WriteLine("Ranked docs");
 
             var results = new List<SearchResult>();
 

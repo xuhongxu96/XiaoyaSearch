@@ -61,11 +61,16 @@ namespace XiaoyaRanker.QueryTermProximityRanker
                         wordPosition.Add(wordPositions[i][pointers[i]]);
                     }
 
-                    var windowLength = wordPosition.Max() - wordPosition.Min();
-
-                    if (minWindowLength == -1 || minWindowLength > windowLength)
+                    if (wordPosition.Distinct().Count() == wordPosition.Count)
                     {
-                        minWindowLength = windowLength;
+                        // doesn't have duplicate positions (to deal with the situation that the same word occurs more than one time)
+
+                        var windowLength = wordPosition.Max() - wordPosition.Min();
+
+                        if (minWindowLength == -1 || minWindowLength > windowLength)
+                        {
+                            minWindowLength = windowLength;
+                        }
                     }
 
                     var movePointerIndex = -1;
@@ -74,7 +79,7 @@ namespace XiaoyaRanker.QueryTermProximityRanker
                     {
                         var currentPointer = pointers[i];
                         if (currentPointer + 1 < wordPositions[i].Count
-                            && (movePointerIndex == -1 
+                            && (movePointerIndex == -1
                             || wordPositions[i][currentPointer] < wordPositions[movePointerIndex][pointers[movePointerIndex]]))
                         {
                             movePointerIndex = i;
@@ -91,7 +96,14 @@ namespace XiaoyaRanker.QueryTermProximityRanker
                     }
                 }
 
-                yield return (double)wordTotalLength / (minWindowLength + lastWordLength);
+                if (minWindowLength == -1)
+                {
+                    yield return 0;
+                }
+                else
+                {
+                    yield return (double)wordTotalLength / (minWindowLength + lastWordLength);
+                }
             }
         }
     }

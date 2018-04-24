@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using XiaoyaCommon.Helper;
 using XiaoyaRetriever.Config;
 using XiaoyaRetriever.Expression;
+using XiaoyaStore.Cache;
 using XiaoyaStore.Data.Model;
 using XiaoyaStore.Helper;
 
@@ -12,11 +14,16 @@ namespace XiaoyaRetriever.InexactTopKRetriever
 {
     public class InexactTopKRetriever : IRetriever
     {
-        protected readonly double[] WORD_WEIGHT_THRESHOLDS_FOR_TIERS = new double[] { double.MaxValue / 2, 3, 2.5, 2, 1.5, 1, 0 };
+        protected readonly double[] WORD_WEIGHT_THRESHOLDS_FOR_TIERS = new double[] { double.MaxValue / 2, 2.5, 2.1, 1, 0 };
 
         protected RetrieverConfig mConfig;
         protected int mTopK;
-        // protected Dictionary<string, IEnumerable<int>> mWordCaches = new Dictionary<string, IEnumerable<int>>();
+
+        public class CacheWord
+        {
+            public int minWeightIndex;
+            public HashSet<int> urlFileIds;
+        }
 
         public InexactTopKRetriever(RetrieverConfig config, int k = 1000)
         {
@@ -24,30 +31,19 @@ namespace XiaoyaRetriever.InexactTopKRetriever
             mTopK = k;
         }
 
-        protected IEnumerable<int> RetrieveWord(Word word, double minWeight, double maxWeight)
+        protected IEnumerable<int> RetrieveWord(Word word, int minWeightIndex)
         {
-            var result = from index in mConfig.InvertedIndexStore.LoadByWord(word.Value)
-                         where index.Weight >= minWeight && index.Weight < maxWeight
-                         orderby index.Weight descending
-                         select index.UrlFileId;
-            /*
-            if (mWordCaches.ContainsKey(word.Value))
-            {
-                result = result.Union(mWordCaches[word.Value]);
-            }
-            mWordCaches[word.Value] = result;
-            */
-            return result;
+            return mConfig.InvertedIndexStore.LoadUrlFileIdsByWord(word.Value,
+                                    WORD_WEIGHT_THRESHOLDS_FOR_TIERS[minWeightIndex]);
         }
 
-        protected IEnumerable<int> RetrieveNot(Not notExp, double minWeight, double maxWeight)
+        protected IEnumerable<int> RetrieveNot(Not notExp, int minWeightIndex)
         {
-            return from position in
-                       RetrieveExpression(notExp.Operand, -minWeight, double.MaxValue - maxWeight)
+            return from position in RetrieveExpression(notExp.Operand, WORD_WEIGHT_THRESHOLDS_FOR_TIERS.Length - minWeightIndex - 1)
                    select position;
         }
 
-        protected IEnumerable<int> RetrieveAnd(And andExp, double minWeight, double maxWeight)
+        protected IEnumerable<int> RetrieveAnd(And andExp, int minWeightIndex)
         {
             IEnumerable<int> result = null;
 
@@ -56,7 +52,7 @@ namespace XiaoyaRetriever.InexactTopKRetriever
                 // Someone is included
                 foreach (var operand in andExp.OrderBy(o => o.Frequency))
                 {
-                    var nextIndices = RetrieveExpression(operand, minWeight, maxWeight);
+                    var nextIndices = RetrieveExpression(operand, minWeightIndex);
 
                     if (result == null)
                     {
@@ -80,7 +76,7 @@ namespace XiaoyaRetriever.InexactTopKRetriever
                 // None is included
                 foreach (var operand in andExp.OrderByDescending(o => o.Frequency))
                 {
-                    var nextIndices = RetrieveExpression(operand, minWeight, maxWeight);
+                    var nextIndices = RetrieveExpression(operand, minWeightIndex);
 
                     if (result == null)
                     {
@@ -96,7 +92,7 @@ namespace XiaoyaRetriever.InexactTopKRetriever
         }
 
 
-        protected IEnumerable<int> RetrieveOr(Or orExp, double minWeight, double maxWeight)
+        protected IEnumerable<int> RetrieveOr(Or orExp, int minWeightIndex)
         {
             IEnumerable<int> result = null;
 
@@ -105,7 +101,7 @@ namespace XiaoyaRetriever.InexactTopKRetriever
                 // All are included
                 foreach (var operand in orExp.OrderBy(o => o.Frequency))
                 {
-                    var nextIndices = RetrieveExpression(operand, minWeight, maxWeight);
+                    var nextIndices = RetrieveExpression(operand, minWeightIndex);
 
                     if (result == null)
                     {
@@ -122,7 +118,7 @@ namespace XiaoyaRetriever.InexactTopKRetriever
                 // Someone is not included
                 foreach (var operand in orExp.OrderByDescending(o => o.Frequency))
                 {
-                    var nextIndices = RetrieveExpression(operand, minWeight, maxWeight);
+                    var nextIndices = RetrieveExpression(operand, minWeightIndex);
 
                     if (result == null)
                     {
@@ -144,23 +140,23 @@ namespace XiaoyaRetriever.InexactTopKRetriever
             return result;
         }
 
-        protected IEnumerable<int> RetrieveExpression(SearchExpression expression, double minWeight, double maxWeight)
+        protected IEnumerable<int> RetrieveExpression(SearchExpression expression, int minWeightIndex)
         {
             if (expression is Word word)
             {
-                return RetrieveWord(word, minWeight, maxWeight);
+                return RetrieveWord(word, minWeightIndex);
             }
             else if (expression is Not notExp)
             {
-                return RetrieveNot(notExp, minWeight, maxWeight);
+                return RetrieveNot(notExp, minWeightIndex);
             }
             else if (expression is And andExp)
             {
-                return RetrieveAnd(andExp, minWeight, maxWeight);
+                return RetrieveAnd(andExp, minWeightIndex);
             }
             else if (expression is Or orExp)
             {
-                return RetrieveOr(orExp, minWeight, maxWeight);
+                return RetrieveOr(orExp, minWeightIndex);
             }
             throw new NotSupportedException("Not supported search expression");
         }
@@ -175,9 +171,7 @@ namespace XiaoyaRetriever.InexactTopKRetriever
 
             for (int tier = 1; tier < WORD_WEIGHT_THRESHOLDS_FOR_TIERS.Length; ++tier)
             {
-                var result = RetrieveExpression(expression,
-                    WORD_WEIGHT_THRESHOLDS_FOR_TIERS[tier],
-                    WORD_WEIGHT_THRESHOLDS_FOR_TIERS[tier - 1]);
+                var result = RetrieveExpression(expression, tier);
 
                 foreach (var urlFileId in result)
                 {
