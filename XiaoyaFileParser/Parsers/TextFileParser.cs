@@ -31,12 +31,10 @@ namespace XiaoyaFileParser.Parsers
                 mTextContent = TextHelper.NormalizeString(mUrlFile.Content);
                 mEncoding = mUrlFile.Charset;
                 mPublishDate = mUrlFile.PublishDate;
-                if (new FileInfo(mUrlFile.FilePath).Length > 4 * 1024 * 1024)
-                {
-                    throw new FileLoadException(mUrlFile.FilePath + " is too big to parse");
-                }
             }
         }
+
+        public string FilePath { get; set; }
 
         protected FileParserConfig mConfig = new FileParserConfig();
         protected string mTitle = null;
@@ -144,13 +142,13 @@ namespace XiaoyaFileParser.Parsers
             {
                 if (mEncoding == null)
                 {
-                    mEncoding = EncodingDetector.GetEncoding(UrlFile.FilePath);
+                    mEncoding = EncodingDetector.GetEncoding(FilePath);
                     if (mEncoding == null)
                     {
                         throw new NotSupportedException($"Invalid text encoding: {UrlFile.Url}");
                     }
                 }
-                mContent = await File.ReadAllTextAsync(UrlFile.FilePath,
+                mContent = await File.ReadAllTextAsync(FilePath,
                     Encoding.GetEncoding(mEncoding));
                 mContent = TextHelper.NormalizeString(mContent);
             }

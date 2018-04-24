@@ -16,26 +16,6 @@ namespace XiaoyaStore.Data
         public DbSet<UrlHostStat> UrlHostStats { get; set; }
         public DbSet<Link> Links { get; set; }
 
-        /*
-         * Additional Migration
-         * 
-      migrationBuilder.Sql(@"CREATE VIEW dbo.IndexStats WITH SCHEMABINDING AS 
-SELECT 
-        Word,
-        COUNT_BIG(*) AS DocumentFrequency,
-		SUM(WordFrequency) AS WordFrequency
-FROM dbo.InvertedIndices
-GROUP BY Word
-
-GO
-
-CREATE UNIQUE CLUSTERED INDEX IndexStatsIdx ON dbo.IndexStats(Word)");
-        *
-        * 
-        * 
-        * 
-        */
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             #region UrlFrontierItem
@@ -73,6 +53,9 @@ CREATE UNIQUE CLUSTERED INDEX IndexStatsIdx ON dbo.IndexStats(Word)");
 
             modelBuilder.Entity<UrlFile>()
                 .HasIndex(o => o.PublishDate);
+
+            modelBuilder.Entity<UrlFile>()
+                .HasIndex(o => o.PageRank);
 
             #endregion
 

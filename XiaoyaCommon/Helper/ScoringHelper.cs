@@ -17,8 +17,11 @@ namespace XiaoyaCommon.Helper
             string content,
             string url,
             DateTime publishDate,
-            string word, 
-            long wordFrequency, 
+            int occurenceInTitle,
+            int occurenceInLinks,
+            int linkCount,
+            string word,
+            long wordFrequency,
             int minPosition)
         {
             if (title == null)
@@ -33,7 +36,8 @@ namespace XiaoyaCommon.Helper
 
             if (content.Contains(word))
             {
-                return (title.Contains(word) ? 5.0 * word.Length : 1.0) / (1 + title.Length)
+                return (occurenceInTitle * 5 * word.Length) / (1 + title.Length)
+                    + (occurenceInLinks * 5) / (1 + linkCount)
                     + wordFrequency * word.Length / (1 + content.Length)
                     + Math.Exp(-UrlHelper.GetDomainDepth(url))
                     + 1 - (1 + minPosition) / (1 + content.Length)
@@ -41,7 +45,8 @@ namespace XiaoyaCommon.Helper
             }
             else
             {
-                return (title.Contains(word) ? 5.0 * word.Length : 2.0) / (1 + title.Length)
+                return (occurenceInTitle * 10 * word.Length) / (1 + title.Length)
+                    + (occurenceInLinks * 5 + 1.0) / (1 + linkCount)
                     + Math.Exp(-UrlHelper.GetDomainDepth(url))
                     + Math.Exp(-Math.Max(0, DateTime.Now.Subtract(publishDate).TotalDays / 30 - 3));
             }

@@ -30,7 +30,8 @@ namespace XiaoyaCrawler.Parser
         {
             IFileParser parser = new UniversalFileParser
             {
-                UrlFile = urlFile
+                UrlFile = urlFile,
+                FilePath = urlFile.FilePath,
             };
 
             var content = await parser.GetTextContentAsync();

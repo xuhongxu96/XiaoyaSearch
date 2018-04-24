@@ -35,12 +35,10 @@ namespace XiaoyaFileParser.Parsers
                 mTitle = TextHelper.NormalizeString(mUrlFile.Title);
                 mTextContent = TextHelper.NormalizeString(mUrlFile.Content);
                 mPublishDate = mUrlFile.PublishDate;
-                if (new FileInfo(mUrlFile.FilePath).Length > 4 * 1024 * 1024)
-                {
-                    throw new FileLoadException(mUrlFile.FilePath + " is too big to parse");
-                }
             }
         }
+
+        public string FilePath { get; set; }
 
         protected FileParserConfig mConfig = new FileParserConfig();
         protected string mTitle = null;
@@ -148,7 +146,7 @@ namespace XiaoyaFileParser.Parsers
             {
                 var tempOutput = Path.GetTempFileName();
 
-                var process = Process.Start(exeFileName, "-enc UTF-8 " + mUrlFile.FilePath + " " + tempOutput);
+                var process = Process.Start(exeFileName, "-enc UTF-8 " + FilePath + " " + tempOutput);
                 process.WaitForExit();
 
                 mContent = await File.ReadAllTextAsync(tempOutput);

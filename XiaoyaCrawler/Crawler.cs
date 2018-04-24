@@ -134,13 +134,15 @@ namespace XiaoyaCrawler
                     }
                     catch (NotSupportedException e)
                     {
-                        File.Delete(urlFile.FilePath);
-
                         mLogger.LogException(nameof(Crawler), "Not supported file format: " + url, e);
                         mErrorLogger.LogException(nameof(Crawler), "Not supported file format: " + url, e);
 
                         // Retry
                         mUrlFrontier.PushBackUrl(url, true);
+                    }
+                    finally
+                    {
+                        File.Delete(urlFile.FilePath);
                     }
                 }
                 catch(InvalidDataException e)

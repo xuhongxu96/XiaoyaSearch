@@ -66,7 +66,8 @@ namespace XiaoyaIndexer
                             Text = o.Text,
                             Url = mConfig.UrlFileStore.LoadById(o.UrlFileId)?.Url,
                         })
-                        .Where(o => o.Url != null);
+                        .Where(o => o.Url != null)
+                        .ToList();
 
                     IList<Token> tokens = parser.GetTokensAsync(links).GetAwaiter().GetResult();
 
@@ -83,7 +84,11 @@ namespace XiaoyaIndexer
                                                                                            urlFile.Content,
                                                                                            urlFile.Url,
                                                                                            urlFile.PublishDate,
-                                                                                           token.Word, token.WordFrequency,
+                                                                                           token.OccurenceInTitle,
+                                                                                           token.OccurenceInLinks,
+                                                                                           links.Count,
+                                                                                           token.Word,
+                                                                                           token.WordFrequency,
                                                                                            token.Positions.FirstOrDefault()),
                                            }).ToList();
 

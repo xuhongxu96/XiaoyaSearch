@@ -42,6 +42,8 @@ namespace XiaoyaStore.Migrations
                         .IsUnique()
                         .HasFilter("[Word] IS NOT NULL");
 
+                    b.HasIndex("WordFrequency");
+
                     b.ToTable("IndexStats");
                 });
 
@@ -84,7 +86,7 @@ namespace XiaoyaStore.Migrations
                         .IsUnique()
                         .HasFilter("[Word] IS NOT NULL");
 
-                    b.HasIndex("Word", "UrlFileId", "Weight");
+                    b.HasIndex("Word", "Weight");
 
                     b.ToTable("InvertedIndices");
                 });
@@ -163,6 +165,8 @@ namespace XiaoyaStore.Migrations
                         .HasFilter("[FilePath] IS NOT NULL");
 
                     b.HasIndex("IndexStatus");
+
+                    b.HasIndex("PageRank");
 
                     b.HasIndex("PublishDate");
 

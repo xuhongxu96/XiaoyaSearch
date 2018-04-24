@@ -9,7 +9,7 @@ namespace XiaoyaStore.Store
         void ClearAndSaveInvertedIndices(UrlFile urlFile, IList<InvertedIndex> invertedIndices);
         void ClearInvertedIndicesOf(int urlFileId);
         void ClearInvertedIndicesOf(UrlFile urlFile);
-        HashSet<int> LoadUrlFileIdsByWord(string word, double minWeight = 0);
+        IEnumerable<int> LoadUrlFileIdsByWord(string word, double minWeight = 0);
         InvertedIndex LoadByWordInUrlFile(int urlFileId, string word);
         InvertedIndex LoadByWordInUrlFile(UrlFile urlFile, string word);
         void CacheWordsInUrlFiles(IEnumerable<int> urlFileIds, IEnumerable<string> words);

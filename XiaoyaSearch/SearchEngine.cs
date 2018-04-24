@@ -22,8 +22,8 @@ namespace XiaoyaSearch
         protected IRanker mProRanker;
         protected SearchEngineConfig mConfig;
 
-        protected const int ResultSize = 500;
-        protected const int PageSize = 500;
+        protected const int ResultSize = 1000;
+        protected const int PageSize = 1000;
 
         public SearchEngine(SearchEngineConfig config)
         {
@@ -60,27 +60,33 @@ namespace XiaoyaSearch
             }
 
             Console.WriteLine("Begin search");
+            var time = DateTime.Now;
 
             var parsedQuery = mQueryParser.Parse(query);
 
-            Console.WriteLine("Parsed query");
+            Console.WriteLine("Parsed query " + (DateTime.Now - time).TotalMilliseconds);
+            time = DateTime.Now;
 
             var urlFileIds = mRetriever.Retrieve(parsedQuery.Expression).ToList();
             var count = urlFileIds.Count;
 
-            Console.WriteLine("Retrieved docs");
+            Console.WriteLine("Retrieved docs " + (DateTime.Now - time).TotalMilliseconds);
+            time = DateTime.Now;
 
             mConfig.InvertedIndexStore.CacheWordsInUrlFiles(urlFileIds, parsedQuery.Words);
 
-            Console.WriteLine("Cached words");
+            Console.WriteLine("Cached words " + (DateTime.Now - time).TotalMilliseconds);
+            time = DateTime.Now;
 
             mConfig.UrlFileStore.CacheUrlFiles(urlFileIds);
 
-            Console.WriteLine("Cached docs");
+            Console.WriteLine("Cached docs " + (DateTime.Now - time).TotalMilliseconds);
+            time = DateTime.Now;
 
             var scores = mRanker.Rank(urlFileIds, parsedQuery.Words).ToList();
 
-            Console.WriteLine("Ranked docs");
+            Console.WriteLine("Ranked docs 1 " + (DateTime.Now - time).TotalMilliseconds);
+            time = DateTime.Now;
 
             var results = new List<SearchResult>();
 
@@ -106,7 +112,10 @@ namespace XiaoyaSearch
                 {
                     subResults[j].ProScore = proScores[j];
                 }
-                
+
+                Console.WriteLine("Ranked docs 2 " + (DateTime.Now - time).TotalMilliseconds);
+                time = DateTime.Now;
+
                 foreach (var proResult in subResults.OrderByDescending(o => o.ProScore))
                 {
                     yield return proResult;

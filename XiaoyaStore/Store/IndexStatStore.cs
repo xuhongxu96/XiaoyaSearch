@@ -30,6 +30,11 @@ namespace XiaoyaStore.Store
             {
                 foreach (var item in context.IndexStats.OrderByDescending(o => o.WordFrequency))
                 {
+                    if (mCache.IsValid(item.Word))
+                    {
+                        continue;
+                    }
+
                     yield return Tuple.Create(item.Word, item);
                 }
             }

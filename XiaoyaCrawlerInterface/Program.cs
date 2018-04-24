@@ -50,7 +50,7 @@ namespace XiaoyaCrawlerInterface
 
             var urlFilters = new List<IUrlFilter>
             {
-                new DomainUrlFilter(@"^http(s)?://(.*?)\.(bnu\.edu\.cn|oiegg.com)", @"cless\.bnu\.edu\.cn|/search[\./]"),
+                new DomainUrlFilter(@"^http(s)?://(.*?)\.(bnu\.edu\.cn|oiegg.com)", @"cless\.bnu\.edu\.cn|/search[\./]|pb\.ss\.graduate\.bnu\.edu\.cn"),
                 new UrlNormalizer(),
             };
 

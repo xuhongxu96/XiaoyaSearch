@@ -20,12 +20,28 @@ namespace XiaoyaFileParser
             set
             {
                 mUrlFile = value;
-                if (!File.Exists(mUrlFile.FilePath))
-                {
-                    throw new FileNotFoundException(mUrlFile.FilePath + " doesn't exist");
-                }
                 mCurrentParser = GetParser(mUrlFile.MimeType, mConfig);
                 mCurrentParser.UrlFile = mUrlFile;
+            }
+        }
+
+        protected string mFilePath = null;
+        public string FilePath
+        {
+            get => mFilePath;
+            set
+            {
+                mFilePath = value;
+
+                if (FilePath != null
+                    && FilePath != ""
+                    && File.Exists(FilePath)
+                    && new FileInfo(FilePath).Length > 10 * 1024 * 1024)
+                {
+                    throw new FileLoadException(mUrlFile.FilePath + " is too big to parse");
+                }
+
+                mCurrentParser.FilePath = mFilePath;
             }
         }
 

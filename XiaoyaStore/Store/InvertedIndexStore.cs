@@ -78,7 +78,7 @@ namespace XiaoyaStore.Store
         public struct CacheWordItem
         {
             public double minWeight;
-            public HashSet<int> urlFileIds;
+            public List<int> urlFileIds;
         }
 
         public struct IndexStatDeltaItem
@@ -121,15 +121,12 @@ namespace XiaoyaStore.Store
                     .Where(o => o.Weight < value.minWeight)
                     .OrderByDescending(o => o.Weight)
                     .Select(o => o.UrlFileId)
-                    .ToHashSet();
+                    .ToList();
 
-                result.UnionWith(value.urlFileIds);
+                value.urlFileIds.AddRange(result);
+                value.minWeight = word.minWeight;
 
-                return new CacheWordItem
-                {
-                    urlFileIds = result,
-                    minWeight = word.minWeight,
-                };
+                return value;
             }
         }
 
@@ -139,11 +136,20 @@ namespace XiaoyaStore.Store
             {
                 foreach (var stat in context.IndexStats.OrderByDescending(o => o.WordFrequency))
                 {
+                    if (mWordCache.IsValid(new CacheWord
+                    {
+                        word = stat.Word,
+                        minWeight = 2,
+                    }))
+                    {
+                        continue;
+                    }
+
                     var result = context.InvertedIndices.Where(o => o.Word == stat.Word)
                     .Where(o => o.Weight >= 2)
                     .OrderByDescending(o => o.Weight)
                     .Select(o => o.UrlFileId)
-                    .ToHashSet();
+                    .ToList();
 
                     yield return Tuple.Create(new CacheWord
                     {
@@ -166,7 +172,7 @@ namespace XiaoyaStore.Store
                     .Where(o => o.Weight >= word.minWeight)
                     .OrderByDescending(o => o.Weight)
                     .Select(o => o.UrlFileId)
-                    .ToHashSet();
+                    .ToList();
 
                 return new CacheWordItem
                 {
@@ -209,6 +215,15 @@ namespace XiaoyaStore.Store
                     .Where(o => urlFileIds.Contains(o.UrlFileId) && words.Contains(o.Word))
                     .OrderByDescending(o => o.Weight))
                 {
+                    if (mWordUrlFileCache.IsValid(new CacheIndex
+                    {
+                        word = item.Word,
+                        urlFileId = item.UrlFileId,
+                    }))
+                    {
+                        continue;
+                    }
+
                     yield return Tuple.Create(new CacheIndex
                     {
                         urlFileId = item.UrlFileId,
@@ -446,7 +461,7 @@ namespace XiaoyaStore.Store
             ClearInvertedIndicesOf(urlFile.UrlFileId);
         }
 
-        public HashSet<int> LoadUrlFileIdsByWord(string word, double minWeight = 0)
+        public IEnumerable<int> LoadUrlFileIdsByWord(string word, double minWeight = 0)
         {
             return mWordCache.Get(new CacheWord
             {

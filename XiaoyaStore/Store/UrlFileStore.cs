@@ -48,8 +48,14 @@ namespace XiaoyaStore.Store
             using (var context = NewContext())
             {
                 foreach (var item in context.UrlFiles
-                    .Where(o => urlFileIds.Contains(o.UrlFileId)))
+                    .Where(o => urlFileIds.Contains(o.UrlFileId))
+                    .OrderByDescending(o => o.PageRank))
                 {
+                    if (mCache.IsValid(item.UrlFileId))
+                    {
+                        continue;
+                    }
+
                     yield return Tuple.Create(item.UrlFileId, item);
                 }
             }

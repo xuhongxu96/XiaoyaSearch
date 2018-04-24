@@ -125,6 +125,11 @@ namespace XiaoyaStore.Migrations
                 filter: "[Word] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
+                name: "IX_IndexStats_WordFrequency",
+                table: "IndexStats",
+                column: "WordFrequency");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_InvertedIndices_UrlFileId",
                 table: "InvertedIndices",
                 column: "UrlFileId");
@@ -147,9 +152,9 @@ namespace XiaoyaStore.Migrations
                 filter: "[Word] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
-                name: "IX_InvertedIndices_Word_UrlFileId_Weight",
+                name: "IX_InvertedIndices_Word_Weight",
                 table: "InvertedIndices",
-                columns: new[] { "Word", "UrlFileId", "Weight" });
+                columns: new[] { "Word", "Weight" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Links_Url",
@@ -177,6 +182,11 @@ namespace XiaoyaStore.Migrations
                 name: "IX_UrlFiles_IndexStatus",
                 table: "UrlFiles",
                 column: "IndexStatus");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_UrlFiles_PageRank",
+                table: "UrlFiles",
+                column: "PageRank");
 
             migrationBuilder.CreateIndex(
                 name: "IX_UrlFiles_PublishDate",
