@@ -20,6 +20,8 @@ namespace XiaoyaStore.Store
 {
     public class InvertedIndexStore : BaseStore, IInvertedIndexStore
     {
+        private const int BatchSize = 500000;
+
         private object mSyncLock = new object();
         private object mDictSyncLock = new object();
 
@@ -274,7 +276,7 @@ namespace XiaoyaStore.Store
                 foreach (var item in context.InvertedIndices.Where(o => o.UrlFileId == urlFileId))
                 {
                     list.Add(item);
-                    if (list.Count % 500000 == 0)
+                    if (list.Count % BatchSize == 0)
                     {
                         if (context.Database.IsSqlServer())
                         {
@@ -415,7 +417,6 @@ namespace XiaoyaStore.Store
                                         changedStats.Add(stat);
                                     }
                                 }
-
                             }
 
                             if (context.Database.IsSqlServer())
@@ -471,7 +472,7 @@ namespace XiaoyaStore.Store
                 foreach (var index in invertedIndices)
                 {
                     list.Add(index);
-                    if (list.Count % 500000 == 0)
+                    if (list.Count % BatchSize == 0)
                     {
                         if (context.Database.IsSqlServer())
                         {

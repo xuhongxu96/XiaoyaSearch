@@ -37,6 +37,7 @@ namespace XiaoyaIndexerInterface
                 LogDirectory = arguments.LogDir,
                 UrlFileStore = new UrlFileStore(options, true),
                 LinkStore = new LinkStore(options, false),
+                IndexStatStore = new IndexStatStore(options, true),
                 InvertedIndexStore = new InvertedIndexStore(options, false, 
                     new RuntimeLogger(Path.Combine(arguments.LogDir, "Indexer Error.Log"), true)),
                 MaxIndexingConcurrency = int.Parse(arguments.ThreadCount),

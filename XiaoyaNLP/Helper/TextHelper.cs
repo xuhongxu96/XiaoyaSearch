@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
+using XiaoyaNLP.WordStemmer;
 
 namespace XiaoyaNLP.Helper
 {
@@ -52,6 +53,18 @@ namespace XiaoyaNLP.Helper
 
             var result = FullWidthCharToHalfWidthChar(input);
             result = RemoveSpecialCharacters(result);
+            result = result.ToLower();
+
+            return result;
+        }
+
+        public static string NormalizeIndexWord(string input)
+        {
+            if (input == null) return null;
+
+            var result = FullWidthCharToHalfWidthChar(input);
+            result = RemoveSpecialCharacters(result);
+            result = new EnglishPorter2Stemmer().Stem(result).Value;
             result = result.ToLower();
 
             return result;

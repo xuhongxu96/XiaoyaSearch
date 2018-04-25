@@ -14,7 +14,7 @@ using AngleSharp.Dom;
 
 namespace XiaoyaFileParser.Parsers
 {
-    public class HtmlFileParser : TextFileParser
+    public class HtmlFileParser : TextFileParser, IFileParser
     {
         readonly List<string> TagsToRemove = new List<string>
         {

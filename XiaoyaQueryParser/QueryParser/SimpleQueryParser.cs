@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using XiaoyaNLP.Helper;
 using XiaoyaQueryParser.Config;
 using XiaoyaRetriever.Expression;
 
@@ -38,7 +39,8 @@ namespace XiaoyaQueryParser.QueryParser
 
                     foreach (var segment in segments)
                     {
-                        subAnd.Add(segment.Word);
+                        var word = TextHelper.NormalizeIndexWord(segment.Word);
+                        subAnd.Add(word);
                     }
 
                     result.Add(new Not(subAnd));
@@ -49,8 +51,10 @@ namespace XiaoyaQueryParser.QueryParser
 
                     foreach (var segment in segments)
                     {
-                        result.Add(segment.Word);
-                        words.Add(segment.Word);
+                        var word = TextHelper.NormalizeIndexWord(segment.Word);
+
+                        result.Add(word);
+                        words.Add(word);
                     }
                 }
             }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using XiaoyaStore.Helper;
 
@@ -19,9 +20,11 @@ namespace XiaoyaCommon.Helper
             DateTime publishDate,
             int occurenceInTitle,
             int occurenceInLinks,
-            int linkCount,
+            IEnumerable<string> linkTexts,
             string word,
             long wordFrequency,
+            long documentFrequency,
+            int documentCount,
             int minPosition)
         {
             if (title == null)
@@ -34,22 +37,28 @@ namespace XiaoyaCommon.Helper
                 content = "";
             }
 
+            var linkTotalLength = linkTexts.Sum(o => o.Length);
+
+            double idf = Math.Log(documentCount + 1) - Math.Log(documentFrequency);
+            double score;
             if (content.Contains(word))
             {
-                return (occurenceInTitle * 5 * word.Length) / (1 + title.Length)
-                    + (occurenceInLinks * 5) / (1 + linkCount)
+                score = (occurenceInTitle * 3 * word.Length) / (1 + title.Length)
+                    + (occurenceInLinks * 5 * word.Length) / (1 + linkTotalLength)
                     + wordFrequency * word.Length / (1 + content.Length)
-                    + Math.Exp(-UrlHelper.GetDomainDepth(url))
                     + 1 - (1 + minPosition) / (1 + content.Length)
+                    + Math.Exp(-UrlHelper.GetDomainDepth(url))
                     + Math.Exp(-Math.Max(0, DateTime.Now.Subtract(publishDate).TotalDays / 30 - 3));
             }
             else
             {
-                return (occurenceInTitle * 10 * word.Length) / (1 + title.Length)
-                    + (occurenceInLinks * 5 + 1.0) / (1 + linkCount)
+                score = (occurenceInTitle * 4 * word.Length) / (1 + title.Length)
+                    + (occurenceInLinks * 6 * word.Length) / (1 + linkTotalLength)
                     + Math.Exp(-UrlHelper.GetDomainDepth(url))
                     + Math.Exp(-Math.Max(0, DateTime.Now.Subtract(publishDate).TotalDays / 30 - 3));
             }
+
+            return score * idf;
         }
     }
 }

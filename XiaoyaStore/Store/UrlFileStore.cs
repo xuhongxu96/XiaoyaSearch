@@ -65,7 +65,7 @@ namespace XiaoyaStore.Store
         {
             using (var context = NewContext())
             {
-                return context.UrlFiles.Count();
+                return context.UrlFiles.Max(o => o.UrlFileId);
             }
         }
 
