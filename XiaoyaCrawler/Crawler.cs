@@ -107,35 +107,38 @@ namespace XiaoyaCrawler
                                     // Remove this url
                                     mUrlFrontier.RemoveUrl(url);
                                 }
+                                return;
                             }
                             else
                             {
                                 urlFile = mConfig.UrlFileStore.Save(urlFile);
-                                var urls = parseResult.Links.Select(o => o.Url);
-
-                                // Save links
-                                mConfig.LinkStore.ClearAndSaveLinksForUrlFile(urlFile.UrlFileId,
-                                    parseResult.Links.Select(o => new Link
-                                    {
-                                        Text = o.Text,
-                                        Url = o.Url,
-                                        UrlFileId = urlFile.UrlFileId,
-                                    }).ToList());
-
-                                // Filter urls
-                                foreach (var filter in mUrlFilters)
-                                {
-                                    urls = filter.Filter(urls).Distinct();
-                                }
-                                // Add newly-found urls
-                                foreach (var parsedUrl in urls)
-                                {
-                                    mUrlFrontier.PushUrl(parsedUrl);
-                                }
-                                // Push back this url
-                                mUrlFrontier.PushBackUrl(url);
                             }
                         }
+
+
+                        var urls = parseResult.Links.Select(o => o.Url);
+
+                        // Save links
+                        mConfig.LinkStore.ClearAndSaveLinksForUrlFile(urlFile.UrlFileId,
+                            parseResult.Links.Select(o => new Link
+                            {
+                                Text = o.Text,
+                                Url = o.Url,
+                                UrlFileId = urlFile.UrlFileId,
+                            }).ToList());
+
+                        // Filter urls
+                        foreach (var filter in mUrlFilters)
+                        {
+                            urls = filter.Filter(urls).Distinct();
+                        }
+                        // Add newly-found urls
+                        foreach (var parsedUrl in urls)
+                        {
+                            mUrlFrontier.PushUrl(parsedUrl);
+                        }
+                        // Push back this url
+                        mUrlFrontier.PushBackUrl(url);
                     }
                     catch (NotSupportedException e)
                     {

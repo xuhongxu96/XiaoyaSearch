@@ -8,6 +8,8 @@ using XiaoyaCrawler.Config;
 using XiaoyaCrawler.Parser;
 using XiaoyaLogger;
 using XiaoyaStore.Data.Model;
+using System.Net;
+using System.Linq;
 
 namespace XiaoyaCrawler.SimilarContentManager
 {
@@ -30,7 +32,9 @@ namespace XiaoyaCrawler.SimilarContentManager
 
             foreach (var file in sameFiles)
             {
-                if (urlFile.Content == file.Content && UrlHelper.GetHost(file.Url) == host)
+                var currentHost = UrlHelper.GetHost(file.Url);
+                if (urlFile.Content == file.Content 
+                    && (currentHost == host || Dns.GetHostAddresses(currentHost).SequenceEqual(Dns.GetHostAddresses(host)) ))
                 {
                     mLogger.Log(nameof(SimpleSimilarContentManager), $"Find Same UrlFile for {urlFile.Url}: {file.Url}");
                     return file;
