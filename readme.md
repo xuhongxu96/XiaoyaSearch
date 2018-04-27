@@ -34,12 +34,14 @@ git ls-files *.cs | xargs wc -l > linecount.txt
 	- Parsers
 		- TextFileParser
 		- HtmlFileParser
+		- PdfFileParser
 - XiaoyaIndexer
 - XiaoyaIndexerInterface  
   Commandline interface for XiaoyaIndexer
 - XiaoyaNLP
   NLP library
 	- TextSegmentation
+	- Encoding Detector
 - XiaoyaRetriever
 	- BooleanRetriever
 	- InexactTopKRetriever
@@ -56,11 +58,9 @@ git ls-files *.cs | xargs wc -l > linecount.txt
 	- UrlFileStore  
 	  Manage fetched web content
 	- InvertedIndexStore  
-	  Manage Inverted Index
+	  Manage Inverted Indices and their frequency and weight (tf-idf)
 	- IndexStatStore  
 	  Manage word frequency and document frequency of words in inverted index
-	- UrlFileIndexStatStore  
-	  Manage word frequency in each UrlFile
 	- LinkStore
 		Manage links in UrlFiles
 - XiaoyaLogger  
