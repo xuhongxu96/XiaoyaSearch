@@ -52,7 +52,6 @@ namespace XiaoyaIndexerUnitTest
                 UrlFileStore = new UrlFileStore(options),
                 InvertedIndexStore = new InvertedIndexStore(options),
                 LinkStore = new LinkStore(options),
-                IndexStatStore = new IndexStatStore(options),
             };
 
             IIndexer indexer = new SimpleIndexer(config);

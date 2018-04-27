@@ -25,7 +25,7 @@ namespace XiaoyaStore.Data
                 .IsUnique();
 
             modelBuilder.Entity<UrlFrontierItem>()
-                .HasIndex(o => new { o.PlannedTime, o.IsPopped });
+                .HasIndex(o => new { o.IsPopped, o.PlannedTime });
 
             modelBuilder.Entity<UrlFrontierItem>()
                 .HasIndex(o => o.IsPopped);

@@ -34,7 +34,7 @@ namespace XiaoyaFileParser.Parsers
             {
                 var tempOutput = Path.GetTempFileName();
 
-                var process = Process.Start(exeFileName, "-enc UTF-8 " + FilePath + " " + tempOutput);
+                var process = Process.Start(exeFileName, "-cfg xpdfrc -enc UTF-8 " + FilePath + " " + tempOutput);
                 process.WaitForExit();
 
                 mContent = await File.ReadAllTextAsync(tempOutput);

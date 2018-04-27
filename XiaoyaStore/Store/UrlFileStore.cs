@@ -149,7 +149,7 @@ namespace XiaoyaStore.Store
                     urlFile.IndexStatus = UrlFile.UrlFileIndexStatus.NotIndexed;
                     urlFile.UpdatedAt = DateTime.Now;
                     urlFile.CreatedAt = DateTime.Now;
-                    urlFile.UpdateInterval = TimeSpan.FromDays(5);
+                    urlFile.UpdateInterval = TimeSpan.FromDays(1);
                     context.UrlFiles.Add(urlFile);
                 }
                 else

@@ -10,7 +10,7 @@ namespace XiaoyaCommon.Helper
     {
         public static double TfIdf(long frequency, long documentFrequency, int documentCount)
         {
-            double idf = Math.Log(documentCount + 1) - Math.Log(documentFrequency);
+            double idf = Math.Log(documentCount + 1) - Math.Log(documentFrequency + 1);
             return Math.Log(frequency + 1) * idf;
         }
 
@@ -22,10 +22,13 @@ namespace XiaoyaCommon.Helper
             int occurenceInLinks,
             IEnumerable<string> linkTexts,
             string word,
+            long wordFrequencyInFile,
+            /*
             long wordFrequency,
             long documentFrequency,
             int documentCount,
-            int minPosition)
+            */
+            List<int> positions)
         {
             if (title == null)
             {
@@ -39,14 +42,14 @@ namespace XiaoyaCommon.Helper
 
             var linkTotalLength = linkTexts.Sum(o => o.Length);
 
-            double idf = Math.Log(documentCount + 1) - Math.Log(documentFrequency);
             double score;
-            if (content.Contains(word))
+
+            if (positions.Any())
             {
                 score = (occurenceInTitle * 3 * word.Length) / (1 + title.Length)
                     + (occurenceInLinks * 5 * word.Length) / (1 + linkTotalLength)
-                    + wordFrequency * word.Length / (1 + content.Length)
-                    + 1 - (1 + minPosition) / (1 + content.Length)
+                    + wordFrequencyInFile * word.Length / (1 + content.Length)
+                    + 1 - (1 + positions.First()) / (1 + content.Length)
                     + Math.Exp(-UrlHelper.GetDomainDepth(url))
                     + Math.Exp(-Math.Max(0, DateTime.Now.Subtract(publishDate).TotalDays / 30 - 3));
             }
@@ -58,7 +61,7 @@ namespace XiaoyaCommon.Helper
                     + Math.Exp(-Math.Max(0, DateTime.Now.Subtract(publishDate).TotalDays / 30 - 3));
             }
 
-            return score * idf;
+            return score;
         }
     }
 }

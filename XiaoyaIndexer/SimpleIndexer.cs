@@ -60,15 +60,10 @@ namespace XiaoyaIndexer
                         UrlFile = urlFile
                     };
 
-                    var links = mConfig.LinkStore.LoadByUrl(urlFile.Url)
-                        .Select(o => new LinkInfo
-                        {
-                            Text = o.Text,
-                            Url = mConfig.UrlFileStore.LoadById(o.UrlFileId)?.Url,
-                        })
-                        .Where(o => o.Url != null);
+                    var links = mConfig.LinkStore.LoadByUrl(urlFile.Url);
+                    var linkTexts = links.Select(o => o.Text).ToList();
 
-                    IList<Token> tokens = parser.GetTokensAsync(links).GetAwaiter().GetResult();
+                    IList<Token> tokens = parser.GetTokensAsync(linkTexts).GetAwaiter().GetResult();
 
                     var invertedIndices = (from token in tokens
                                            select new InvertedIndex
@@ -85,12 +80,15 @@ namespace XiaoyaIndexer
                                                                                            urlFile.PublishDate,
                                                                                            token.OccurenceInTitle,
                                                                                            token.OccurenceInLinks,
-                                                                                           links.Select(o => o.Text),
+                                                                                           linkTexts,
                                                                                            token.Word,
                                                                                            token.WordFrequency,
-                                                                                           mConfig.IndexStatStore.LoadByWord(token.Word).DocumentFrequency,
+                                                                                           /*
+                                                                                           mConfig.IndexStatStore.LoadByWord(token.Word)?.WordFrequency ?? 0,
+                                                                                           mConfig.IndexStatStore.LoadByWord(token.Word)?.DocumentFrequency ?? 0,
                                                                                            mConfig.UrlFileStore.Count(),
-                                                                                           token.Positions.FirstOrDefault()),
+                                                                                           */
+                                                                                           token.Positions),
                                            }).ToList();
 
                     mConfig.InvertedIndexStore.ClearAndSaveInvertedIndices(urlFile, invertedIndices);

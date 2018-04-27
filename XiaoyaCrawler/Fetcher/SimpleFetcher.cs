@@ -32,6 +32,7 @@ namespace XiaoyaCrawler.Fetcher
             if (Directory.Exists(config.FetchDirectory))
             {
                 Directory.Delete(config.FetchDirectory, true);
+                Directory.CreateDirectory(config.FetchDirectory);
             }
             else
             {

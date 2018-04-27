@@ -94,14 +94,14 @@ namespace XiaoyaFileParser.Parsers
             return result;
         }
 
-        public virtual async Task<IList<Token>> GetTokensAsync(IEnumerable<LinkInfo> linkInfos)
+        public virtual async Task<IList<Token>> GetTokensAsync(IEnumerable<string> linkTexts)
         {
             var result = await GetTokensAsync();
             var wordDict = result.ToDictionary(o => o.Word);
 
-            foreach (var link in linkInfos.Distinct())
+            foreach (var link in linkTexts)
             {
-                foreach (var segment in mConfig.TextSegmenter.Segment(link.Text).GroupBy(o => TextHelper.NormalizeIndexWord(o.Word)))
+                foreach (var segment in mConfig.TextSegmenter.Segment(link).GroupBy(o => TextHelper.NormalizeIndexWord(o.Word)))
                 {
                     if (wordDict.ContainsKey(segment.Key))
                     {

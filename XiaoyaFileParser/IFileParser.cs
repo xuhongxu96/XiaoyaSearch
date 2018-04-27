@@ -13,7 +13,7 @@ namespace XiaoyaFileParser
         Task<IList<string>> GetUrlsAsync();
         Task<IList<LinkInfo>> GetLinksAsync();
         Task<IList<Token>> GetTokensAsync();
-        Task<IList<Token>> GetTokensAsync(IEnumerable<LinkInfo> linkInfos);
+        Task<IList<Token>> GetTokensAsync(IEnumerable<string> linkTexts);
         Task<string> GetTitleAsync();
         Task<string> GetContentAsync();
         Task<string> GetTextContentAsync();

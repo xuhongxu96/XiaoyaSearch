@@ -15,12 +15,13 @@ using EFCore.BulkExtensions;
 using XiaoyaLogger;
 using System.Timers;
 using System.Threading;
+using Z.EntityFramework.Plus;
 
 namespace XiaoyaStore.Store
 {
     public class InvertedIndexStore : BaseStore, IInvertedIndexStore
     {
-        private const int BatchSize = 500000;
+        private const int BatchSize = 50_000;
 
         private object mSyncLock = new object();
         private object mDictSyncLock = new object();
@@ -272,84 +273,67 @@ namespace XiaoyaStore.Store
         {
             using (var context = NewContext())
             {
-                var list = new List<InvertedIndex>();
-                foreach (var item in context.InvertedIndices.Where(o => o.UrlFileId == urlFileId))
+                if (context.Database.IsSqlServer())
                 {
-                    list.Add(item);
-                    if (list.Count % BatchSize == 0)
-                    {
-                        if (context.Database.IsSqlServer())
-                        {
-                            context.BulkDelete(list);
-                        }
-                        else
-                        {
-                            context.RemoveRange(list);
-                        }
-                        list.Clear();
-                    }
+                    context.InvertedIndices.Where(o => o.UrlFileId == urlFileId).Delete(o => o.BatchSize = BatchSize);
                 }
-                if (list.Count > 0)
+                else
                 {
-                    if (context.Database.IsSqlServer())
-                    {
-                        context.BulkDelete(list);
-                    }
-                    else
-                    {
-                        context.RemoveRange(list);
-                    }
+                    context.RemoveRange(context.InvertedIndices.Where(o => o.UrlFileId == urlFileId));
                 }
             }
         }
 
-        private void SaveIndexStats(XiaoyaSearchContext context, UrlFile urlFile,
+        private void SaveIndexStats(UrlFile urlFile,
             IEnumerable<InvertedIndex> invertedIndices)
         {
-            var toBeRemovedIndices = from o in context.InvertedIndices
-                                     where o.UrlFileId == urlFile.UrlFileId
-                                     select o;
 
-            var toBeRemovedWordCountDict = toBeRemovedIndices.ToDictionary(o => o.Word, o => o.WordFrequency);
-            var wordCountDict = invertedIndices.ToDictionary(o => o.Word, o => o.WordFrequency);
-            var stats = new List<IndexStat>();
-
-            foreach (var word in toBeRemovedWordCountDict.Keys.Union(wordCountDict.Keys))
+            using (var context = NewContext())
             {
-                var wordFrequencyDelta = wordCountDict.GetValueOrDefault(word, 0)
-                    - toBeRemovedWordCountDict.GetValueOrDefault(word, 0);
-                var docFrequencyDelta = 0;
+                var toBeRemovedIndices = context.InvertedIndices.FromSql($"SELECT * FROM InvertedIndices WHERE UrlFileId = {urlFile.UrlFileId}");
 
-                var hasWordBefore = toBeRemovedWordCountDict.ContainsKey(word);
-                var hasWordNow = wordCountDict.ContainsKey(word);
+                var toBeRemovedWordCountDict = toBeRemovedIndices.ToDictionary(o => o.Word, o => o.WordFrequency);
 
-                if (hasWordBefore && hasWordNow && wordFrequencyDelta == 0)
-                {
-                    continue;
-                }
+                var wordCountDict = invertedIndices.ToDictionary(o => o.Word, o => o.WordFrequency);
+                var stats = new List<IndexStat>();
 
-                if (hasWordBefore && !hasWordNow)
+                foreach (var word in toBeRemovedWordCountDict.Keys.Union(wordCountDict.Keys))
                 {
-                    docFrequencyDelta = -1;
-                }
-                else if (!hasWordBefore && hasWordNow)
-                {
-                    docFrequencyDelta = 1;
-                }
+                    var wordFrequencyDelta = wordCountDict.GetValueOrDefault(word, 0)
+                        - toBeRemovedWordCountDict.GetValueOrDefault(word, 0);
+                    var docFrequencyDelta = 0;
 
-                lock (mDictSyncLock)
-                {
-                    mIndexStatDict.AddOrUpdate(word, new IndexStatDeltaItem
+                    var hasWordBefore = toBeRemovedWordCountDict.ContainsKey(word);
+                    var hasWordNow = wordCountDict.ContainsKey(word);
+
+                    if (hasWordBefore && hasWordNow && wordFrequencyDelta == 0)
                     {
-                        word = word,
-                        wordFrequencyDelta = wordFrequencyDelta,
-                        documentFrequencyDelta = docFrequencyDelta,
-                    }, (k, v) =>
+                        continue;
+                    }
+
+                    if (hasWordBefore && !hasWordNow)
                     {
-                        v.wordFrequencyDelta += wordFrequencyDelta;
-                        v.documentFrequencyDelta += docFrequencyDelta;
-                        return v;
-                    });
+                        docFrequencyDelta = -1;
+                    }
+                    else if (!hasWordBefore && hasWordNow)
+                    {
+                        docFrequencyDelta = 1;
+                    }
+
+                    lock (mDictSyncLock)
+                    {
+                        mIndexStatDict.AddOrUpdate(word, new IndexStatDeltaItem
+                        {
+                            word = word,
+                            wordFrequencyDelta = wordFrequencyDelta,
+                            documentFrequencyDelta = docFrequencyDelta,
+                        }, (k, v) =>
+                        {
+                            v.wordFrequencyDelta += wordFrequencyDelta;
+                            v.documentFrequencyDelta += docFrequencyDelta;
+                            return v;
+                        });
+                    }
                 }
             }
         }
@@ -360,7 +344,9 @@ namespace XiaoyaStore.Store
             {
                 Thread.Sleep(5000);
 
-                List<KeyValuePair<string, IndexStatDeltaItem>> indexStatDeltas;
+                mLogger?.Log(nameof(InvertedIndexStore), "Flushing Index Stats");
+
+                Dictionary<string, IndexStatDeltaItem> indexStatDeltas;
 
                 lock (mSavingIndexStatLock)
                 {
@@ -369,8 +355,7 @@ namespace XiaoyaStore.Store
 
                 lock (mDictSyncLock)
                 {
-                    indexStatDeltas = mIndexStatDict
-                        .ToList();
+                    indexStatDeltas = mIndexStatDict.ToDictionary(o => o.Key, o => o.Value);
                     mIndexStatDict.Clear();
                 }
 
@@ -378,66 +363,66 @@ namespace XiaoyaStore.Store
                 var changedStats = new HashSet<IndexStat>();
 
                 int i = 0;
-
-                using (var context = NewContext())
+                try
                 {
-                    while (true)
+                    
+                    using (var context = NewContext())
                     {
-                        try
+                        context.Database.SetCommandTimeout(TimeSpan.FromMinutes(10));
+                        context.ChangeTracker.AutoDetectChangesEnabled = false;
+
+                        var indexStats = context.IndexStats.Where(o => indexStatDeltas.ContainsKey(o.Word)).ToDictionary(o => o.Word);
+
+                        foreach (var item in indexStatDeltas)
                         {
-                            context.Database.SetCommandTimeout(TimeSpan.FromMinutes(10));
-                            context.ChangeTracker.AutoDetectChangesEnabled = false;
-                            foreach (var item in indexStatDeltas)
-                            {
-                                i++;
-                                var word = item.Key;
-                                var wordFrequencyDelta = item.Value.wordFrequencyDelta;
-                                var docFrequencyDelta = item.Value.documentFrequencyDelta;
+                            i++;
+                            var word = item.Key;
+                            var wordFrequencyDelta = item.Value.wordFrequencyDelta;
+                            var docFrequencyDelta = item.Value.documentFrequencyDelta;
 
-                                var stat = context.IndexStats.SingleOrDefault(o => o.Word == word);
-                                if (stat == null)
-                                {
-                                    stat = new IndexStat
-                                    {
-                                        Word = word,
-                                        WordFrequency = wordFrequencyDelta,
-                                        DocumentFrequency = docFrequencyDelta,
-                                    };
-                                    if (!addedStats.Contains(stat))
-                                    {
-                                        addedStats.Add(stat);
-                                    }
-                                }
-                                else
-                                {
-                                    stat.WordFrequency += wordFrequencyDelta;
-                                    stat.DocumentFrequency += docFrequencyDelta;
-                                    if (!changedStats.Contains(stat))
-                                    {
-                                        changedStats.Add(stat);
-                                    }
-                                }
-                            }
-
-                            if (context.Database.IsSqlServer())
+                            var stat = indexStats.GetValueOrDefault(word, null);
+                            if (stat == null)
                             {
-                                context.BulkInsert(addedStats.ToList());
-                                context.BulkUpdate(changedStats.ToList());
+                                stat = new IndexStat
+                                {
+                                    Word = word,
+                                    WordFrequency = wordFrequencyDelta,
+                                    DocumentFrequency = docFrequencyDelta,
+                                };
+                                if (!addedStats.Contains(stat))
+                                {
+                                    addedStats.Add(stat);
+                                }
                             }
                             else
                             {
-                                context.AddRange(addedStats.ToList());
-                                context.UpdateRange(changedStats.ToList());
+                                stat.WordFrequency += wordFrequencyDelta;
+                                stat.DocumentFrequency += docFrequencyDelta;
+                                if (!changedStats.Contains(stat))
+                                {
+                                    changedStats.Add(stat);
+                                }
                             }
-                            
-                            context.SaveChanges();
-                            break;
                         }
-                        catch (Exception e)
+
+                        if (context.Database.IsSqlServer())
                         {
-                            mLogger?.LogException(nameof(InvertedIndexStore), "Error while saving index stats", e);
+                            context.BulkInsert(addedStats.ToList());
+                            context.BulkUpdate(changedStats.ToList());
                         }
+                        else
+                        {
+                            context.AddRange(addedStats.ToList());
+                            context.UpdateRange(changedStats.ToList());
+                        }
+
+                        context.SaveChanges();
+                        mLogger?.Log(nameof(InvertedIndexStore), "Flushed Index Stats");
                     }
+                }
+                catch (Exception e)
+                {
+                    mLogger?.LogException(nameof(InvertedIndexStore), "Error while saving index stats", e);
                 }
 
                 lock (mSavingIndexStatLock)
@@ -460,19 +445,42 @@ namespace XiaoyaStore.Store
                     return;
                 }
 
-                SaveIndexStats(context, urlFile, invertedIndices);
-
-                var err = invertedIndices.GroupBy(o => o.Word.ToLower())
-                    .Where(o => o.Count() != 1)
-                    .ToList();
+                SaveIndexStats(urlFile, invertedIndices);
 
                 ClearInvertedIndicesOf(urlFileId);
 
-                var list = new List<InvertedIndex>();
-                foreach (var index in invertedIndices)
+                if (invertedIndices.Count <= BatchSize)
                 {
-                    list.Add(index);
-                    if (list.Count % BatchSize == 0)
+                    if (context.Database.IsSqlServer())
+                    {
+                        context.BulkInsert(invertedIndices);
+                    }
+                    else
+                    {
+                        context.AddRange(invertedIndices);
+                    }
+                }
+                else
+                {
+                    var list = new List<InvertedIndex>(BatchSize);
+
+                    foreach (var index in invertedIndices)
+                    {
+                        list.Add(index);
+                        if (list.Count % BatchSize == 0)
+                        {
+                            if (context.Database.IsSqlServer())
+                            {
+                                context.BulkInsert(list);
+                            }
+                            else
+                            {
+                                context.AddRange(list);
+                            }
+                            list.Clear();
+                        }
+                    }
+                    if (list.Count > 0)
                     {
                         if (context.Database.IsSqlServer())
                         {
@@ -482,20 +490,9 @@ namespace XiaoyaStore.Store
                         {
                             context.AddRange(list);
                         }
-                        list.Clear();
                     }
                 }
-                if (list.Count > 0)
-                {
-                    if (context.Database.IsSqlServer())
-                    {
-                        context.BulkInsert(list);
-                    }
-                    else
-                    {
-                        context.AddRange(list);
-                    }
-                }
+
                 urlFile.IndexStatus = UrlFile.UrlFileIndexStatus.Indexed;
 
                 context.UrlFiles.Update(urlFile);

@@ -6,11 +6,13 @@ using XiaoyaStore.Data.Model;
 using System.Linq;
 using XiaoyaStore.Cache;
 using EFCore.BulkExtensions;
+using Z.EntityFramework.Plus;
 
 namespace XiaoyaStore.Store
 {
     public class LinkStore : BaseStore, ILinkStore
     {
+        private const int BatchSize = 100_000;
         protected LRUCache<string, List<Link>> mCache;
 
         static object mSyncLock = new object();
@@ -40,44 +42,50 @@ namespace XiaoyaStore.Store
         }
 
 
-        public void ClearAndSaveLinksForUrlFile(int urlFileId, IEnumerable<Link> links)
+        public void ClearAndSaveLinksForUrlFile(int urlFileId, IList<Link> links)
         {
             using (var context = NewContext())
             {
-                var list = new List<Link>();
-                foreach (var link in context.Links.Where(o => o.UrlFileId == urlFileId))
+                if (context.Database.IsSqlServer())
                 {
-                    list.Add(link);
-                    if (list.Count % 10000 == 0)
-                    {
-                        if (context.Database.IsSqlServer())
-                        {
-                            context.BulkDelete(list);
-                        }
-                        else
-                        {
-                            context.RemoveRange(list);
-                        }
-                        list.Clear();
-                    }
+                    context.Links.Where(o => o.UrlFileId == urlFileId).Delete(o => o.BatchSize = BatchSize);
                 }
-                if (list.Count > 0)
+                else
+                {
+                    context.RemoveRange(context.Links.Where(o => o.UrlFileId == urlFileId));
+                }
+
+                if (links.Count() <= BatchSize)
                 {
                     if (context.Database.IsSqlServer())
                     {
-                        context.BulkDelete(list);
+                        context.BulkInsert(links);
                     }
                     else
                     {
-                        context.RemoveRange(list);
+                        context.AddRange(links);
                     }
                 }
-
-                list.Clear();
-                foreach (var link in links)
+                else
                 {
-                    list.Add(link);
-                    if (list.Count % 10000 == 0)
+                    var list = new List<Link>(BatchSize);
+                    foreach (var link in links)
+                    {
+                        list.Add(link);
+                        if (list.Count % 10000 == 0)
+                        {
+                            if (context.Database.IsSqlServer())
+                            {
+                                context.BulkInsert(list);
+                            }
+                            else
+                            {
+                                context.AddRange(list);
+                            }
+                            list.Clear();
+                        }
+                    }
+                    if (list.Count > 0)
                     {
                         if (context.Database.IsSqlServer())
                         {
@@ -87,18 +95,6 @@ namespace XiaoyaStore.Store
                         {
                             context.AddRange(list);
                         }
-                        list.Clear();
-                    }
-                }
-                if (list.Count > 0)
-                {
-                    if (context.Database.IsSqlServer())
-                    {
-                        context.BulkInsert(list);
-                    }
-                    else
-                    {
-                        context.AddRange(list);
                     }
                 }
 

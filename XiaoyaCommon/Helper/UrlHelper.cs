@@ -15,7 +15,12 @@ namespace XiaoyaStore.Helper
         {
             try
             {
-                return new Uri(url).Host;
+                var host = new Uri(url).Host;
+                if (host.StartsWith("www."))
+                {
+                    host = host.Substring(4);
+                }
+                return host;
             }
             catch (Exception)
             {

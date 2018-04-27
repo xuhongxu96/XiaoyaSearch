@@ -75,9 +75,9 @@ namespace XiaoyaFileParser
             return await mCurrentParser?.GetTokensAsync();
         }
 
-        public async Task<IList<Token>> GetTokensAsync(IEnumerable<LinkInfo> linkInfos)
+        public async Task<IList<Token>> GetTokensAsync(IEnumerable<string> linkTexts)
         {
-            return await mCurrentParser?.GetTokensAsync(linkInfos);
+            return await mCurrentParser?.GetTokensAsync(linkTexts);
         }
 
         public async Task<IList<string>> GetUrlsAsync()

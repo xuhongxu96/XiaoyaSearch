@@ -30,7 +30,8 @@ namespace XiaoyaCrawler
         protected CancellationTokenSource mCancellationTokenSource;
 
         private SemaphoreSlim mFetchSemaphore;
-        private object mSyncLock = new object();
+        private object mStatusSyncLock = new object();
+        private object mSaveSyncLock = new object();
         private ConcurrentDictionary<Task, bool> mTasks = new ConcurrentDictionary<Task, bool>();
 
         /// <summary>
@@ -85,56 +86,61 @@ namespace XiaoyaCrawler
                         urlFile.Content = parseResult.Content;
                         urlFile.PublishDate = parseResult.PublishDate;
 
-                        // Judge if there are other files that have similar content as this
-                        var sameUrlFile = mSimilarContentJudger.JudgeContent(urlFile);
-                        if (sameUrlFile != null)
+                        lock (mSaveSyncLock)
                         {
-                            // has same file, use short URL
-                            if (urlFile.Url.Length < sameUrlFile.Url.Length)
+
+                            // Judge if there are other files that have similar content as this
+                            var sameUrlFile = mSimilarContentJudger.JudgeContent(urlFile);
+                            if (sameUrlFile != null)
                             {
-                                mConfig.UrlFileStore.UpdateUrl(sameUrlFile.UrlFileId, urlFile.Url);
-                                // Push back this url
-                                mUrlFrontier.PushBackUrl(url);
-                                // Remove that url
-                                mUrlFrontier.RemoveUrl(sameUrlFile.Url);
+                                // has same file, use short URL
+                                if (urlFile.Url.Length < sameUrlFile.Url.Length)
+                                {
+                                    mConfig.UrlFileStore.UpdateUrl(sameUrlFile.UrlFileId, urlFile.Url);
+                                    // Push back this url
+                                    mUrlFrontier.PushBackUrl(url);
+                                    // Remove that url
+                                    mUrlFrontier.RemoveUrl(sameUrlFile.Url);
+                                }
+                                else
+                                {
+                                    // Remove this url
+                                    mUrlFrontier.RemoveUrl(url);
+                                }
                             }
                             else
                             {
-                                // Remove this url
-                                mUrlFrontier.RemoveUrl(url);
-                            }
-                        }
-                        else
-                        {
-                            urlFile = mConfig.UrlFileStore.Save(urlFile);
-                            var urls = parseResult.Links.Select(o => o.Url);
+                                urlFile = mConfig.UrlFileStore.Save(urlFile);
+                                var urls = parseResult.Links.Select(o => o.Url);
 
-                            // Save links
-                            mConfig.LinkStore.ClearAndSaveLinksForUrlFile(urlFile.UrlFileId,
-                                parseResult.Links.Select(o => new Link
+                                // Save links
+                                mConfig.LinkStore.ClearAndSaveLinksForUrlFile(urlFile.UrlFileId,
+                                    parseResult.Links.Select(o => new Link
+                                    {
+                                        Text = o.Text,
+                                        Url = o.Url,
+                                        UrlFileId = urlFile.UrlFileId,
+                                    }).ToList());
+
+                                // Filter urls
+                                foreach (var filter in mUrlFilters)
                                 {
-                                    Text = o.Text,
-                                    Url = o.Url,
-                                    UrlFileId = urlFile.UrlFileId,
-                                }));
-
-                            // Filter urls
-                            foreach (var filter in mUrlFilters)
-                            {
-                                urls = filter.Filter(urls).Distinct();
+                                    urls = filter.Filter(urls).Distinct();
+                                }
+                                // Add newly-found urls
+                                foreach (var parsedUrl in urls)
+                                {
+                                    mUrlFrontier.PushUrl(parsedUrl);
+                                }
+                                // Push back this url
+                                mUrlFrontier.PushBackUrl(url);
                             }
-                            // Add newly-found urls
-                            foreach (var parsedUrl in urls)
-                            {
-                                mUrlFrontier.PushUrl(parsedUrl);
-                            }
-                            // Push back this url
-                            mUrlFrontier.PushBackUrl(url);
                         }
                     }
                     catch (NotSupportedException e)
                     {
-                        mLogger.LogException(nameof(Crawler), "Not supported file format: " + url, e);
+
+                        // mLogger.LogException(nameof(Crawler), "Not supported file format: " + url, e);
                         mErrorLogger.LogException(nameof(Crawler), "Not supported file format: " + url, e);
 
                         // Retry
@@ -145,12 +151,13 @@ namespace XiaoyaCrawler
                         File.Delete(urlFile.FilePath);
                     }
                 }
-                catch(InvalidDataException e)
+                catch (InvalidDataException e)
                 {
                     mLogger.LogException(nameof(Crawler), "Invalid data: " + url, e);
                     mErrorLogger.LogException(nameof(Crawler), "Invalid data: " + url, e);
 
-                    mUrlFrontier.RemoveUrl(url);
+                    // Retry
+                    mUrlFrontier.PushBackUrl(url, true);
                 }
                 catch (UriFormatException e)
                 {
@@ -161,7 +168,7 @@ namespace XiaoyaCrawler
                 }
                 catch (IOException e)
                 {
-                    mLogger.LogException(nameof(Crawler), "Failed to fetch: " + url, e);
+                    // mLogger.LogException(nameof(Crawler), "Failed to fetch: " + url, e);
                     mErrorLogger.LogException(nameof(Crawler), "Failed to fetch: " + url, e);
 
                     mUrlFrontier.RemoveUrl(url);
@@ -196,7 +203,7 @@ namespace XiaoyaCrawler
         public async Task StartAsync(bool restart = false)
         {
             mLogger.Log(nameof(Crawler), "Running");
-            lock (mSyncLock)
+            lock (mStatusSyncLock)
             {
                 if (Status == CrawlerStatus.RUNNING)
                 {
@@ -254,7 +261,7 @@ namespace XiaoyaCrawler
 
         public async Task StopAsync()
         {
-            lock (mSyncLock)
+            lock (mStatusSyncLock)
             {
                 if (Status != CrawlerStatus.RUNNING)
                 {
@@ -270,7 +277,7 @@ namespace XiaoyaCrawler
                 try
                 {
                     Task.WaitAll(mTasks.Keys.ToArray());
-                    lock (mSyncLock)
+                    lock (mStatusSyncLock)
                     {
                         Status = CrawlerStatus.STOPPED;
                     }
