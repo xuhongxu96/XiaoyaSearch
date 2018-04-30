@@ -159,14 +159,14 @@ namespace XiaoyaStore.Store
                             || (urlFile.Content != "" && oldUrlFile.Content != urlFile.Content))
                     {
                         // Updated
-                        var updateInterval = DateTime.Now.Subtract(oldUrlFile.UpdatedAt);
-
                         oldUrlFile.UpdatedAt = DateTime.Now;
-                        oldUrlFile.UpdateInterval
-                            = (oldUrlFile.UpdateInterval * 3 + updateInterval) / 4;
-
+                        
                         oldUrlFile.IndexStatus = UrlFile.UrlFileIndexStatus.NotIndexed;
                     }
+
+                    var updateInterval = DateTime.Now.Subtract(oldUrlFile.UpdatedAt);
+                    oldUrlFile.UpdateInterval
+                        = (oldUrlFile.UpdateInterval * 3 + updateInterval) / 4;
 
                     // Delete old file
                     File.Delete(oldUrlFile.FilePath);

@@ -21,7 +21,19 @@ namespace XiaoyaStore.Store
 
         public IndexStat LoadByWord(string word)
         {
-            return mCache.Get(word);
+            var indexStat = mCache.Get(word);
+
+            if (indexStat.DocumentFrequency < 0)
+            {
+                indexStat.DocumentFrequency = 0;
+            }
+
+            if (indexStat.WordFrequency < 0)
+            {
+                indexStat.WordFrequency = 0;
+            }
+
+            return indexStat;
         }
 
         protected IEnumerable<Tuple<string, IndexStat>> LoadCaches()

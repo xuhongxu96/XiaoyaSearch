@@ -20,7 +20,7 @@ namespace XiaoyaRetriever.BooleanRetriever
         protected IEnumerable<int> RetrieveWord(Word word)
         {
             return from index in mConfig.InvertedIndexStore.LoadUrlFileIdsByWord(word.Value)
-                   select index;
+                   select index.UrlFileId;
         }
 
         protected IEnumerable<int> RetrieveNot(Not notExp)
@@ -36,7 +36,7 @@ namespace XiaoyaRetriever.BooleanRetriever
             if (andExp.IsIncluded)
             {
                 // Someone is included
-                foreach (var operand in andExp.OrderBy(o => o.Frequency))
+                foreach (var operand in andExp.OrderBy(o => o.DocumentFrequency))
                 {
                     var nextIndices = RetrieveExpression(operand);
 
@@ -60,7 +60,7 @@ namespace XiaoyaRetriever.BooleanRetriever
             else
             {
                 // None is included
-                foreach (var operand in andExp.OrderByDescending(o => o.Frequency))
+                foreach (var operand in andExp.OrderByDescending(o => o.DocumentFrequency))
                 {
                     var nextIndices = RetrieveExpression(operand);
 
@@ -85,7 +85,7 @@ namespace XiaoyaRetriever.BooleanRetriever
             if (orExp.IsIncluded)
             {
                 // All are included
-                foreach (var operand in orExp.OrderBy(o => o.Frequency))
+                foreach (var operand in orExp.OrderBy(o => o.DocumentFrequency))
                 {
                     var nextIndices = RetrieveExpression(operand);
 
@@ -102,7 +102,7 @@ namespace XiaoyaRetriever.BooleanRetriever
             else
             {
                 // Someone is not included
-                foreach (var operand in orExp.OrderByDescending(o => o.Frequency))
+                foreach (var operand in orExp.OrderByDescending(o => o.DocumentFrequency))
                 {
                     var nextIndices = RetrieveExpression(operand);
 

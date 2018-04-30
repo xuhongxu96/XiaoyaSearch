@@ -11,7 +11,7 @@ namespace XiaoyaCommon.Helper
         public static double TfIdf(long frequency, long documentFrequency, int documentCount)
         {
             double idf = Math.Log(documentCount + 1) - Math.Log(documentFrequency + 1);
-            return Math.Log(frequency + 1) * idf;
+            return (1 + Math.Log(frequency + 1)) * idf;
         }
 
         public static double CalculateIndexWeight(string title,

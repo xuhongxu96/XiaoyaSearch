@@ -50,7 +50,7 @@ namespace XiaoyaRetriever.InexactTopKRetriever
             if (andExp.IsIncluded)
             {
                 // Someone is included
-                foreach (var operand in andExp.OrderBy(o => o.Frequency))
+                foreach (var operand in andExp.OrderBy(o => o.DocumentFrequency))
                 {
                     var nextIndices = RetrieveExpression(operand, minWeightIndex);
 
@@ -74,7 +74,7 @@ namespace XiaoyaRetriever.InexactTopKRetriever
             else
             {
                 // None is included
-                foreach (var operand in andExp.OrderByDescending(o => o.Frequency))
+                foreach (var operand in andExp.OrderByDescending(o => o.DocumentFrequency))
                 {
                     var nextIndices = RetrieveExpression(operand, minWeightIndex);
 
@@ -99,7 +99,7 @@ namespace XiaoyaRetriever.InexactTopKRetriever
             if (orExp.IsIncluded)
             {
                 // All are included
-                foreach (var operand in orExp.OrderBy(o => o.Frequency))
+                foreach (var operand in orExp.OrderBy(o => o.DocumentFrequency))
                 {
                     var nextIndices = RetrieveExpression(operand, minWeightIndex);
 
@@ -116,7 +116,7 @@ namespace XiaoyaRetriever.InexactTopKRetriever
             else
             {
                 // Someone is not included
-                foreach (var operand in orExp.OrderByDescending(o => o.Frequency))
+                foreach (var operand in orExp.OrderByDescending(o => o.DocumentFrequency))
                 {
                     var nextIndices = RetrieveExpression(operand, minWeightIndex);
 

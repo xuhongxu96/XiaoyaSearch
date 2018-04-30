@@ -32,6 +32,7 @@ namespace XiaoyaCrawler
         private SemaphoreSlim mFetchSemaphore;
         private object mStatusSyncLock = new object();
         private object mSaveSyncLock = new object();
+        private object mPushUrlSyncLock = new object();
         private ConcurrentDictionary<Task, bool> mTasks = new ConcurrentDictionary<Task, bool>();
 
         /// <summary>
@@ -132,13 +133,18 @@ namespace XiaoyaCrawler
                         {
                             urls = filter.Filter(urls).Distinct();
                         }
-                        // Add newly-found urls
-                        foreach (var parsedUrl in urls)
+                        
+                        lock (mPushUrlSyncLock)
                         {
-                            mUrlFrontier.PushUrl(parsedUrl);
+                            // Add newly-found urls
+                            foreach (var parsedUrl in urls)
+                            {
+                                mUrlFrontier.PushUrl(parsedUrl);
+                            }
+
+                            // Push back this url
+                            mUrlFrontier.PushBackUrl(url);
                         }
-                        // Push back this url
-                        mUrlFrontier.PushBackUrl(url);
                     }
                     catch (NotSupportedException e)
                     {

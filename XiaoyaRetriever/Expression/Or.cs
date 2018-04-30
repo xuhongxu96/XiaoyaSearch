@@ -13,7 +13,7 @@ namespace XiaoyaRetriever.Expression
         protected List<SearchExpression> mOperands = new List<SearchExpression>();
 
         protected long mFrequency = 1;
-        public override long Frequency => mFrequency;
+        public override long DocumentFrequency => mFrequency;
         /// <summary>
         /// Included only when all operands are included.
         /// </summary>
@@ -33,7 +33,7 @@ namespace XiaoyaRetriever.Expression
 
             if (mOperands.Any())
             {
-                mFrequency = (from o in mOperands select o.Frequency).Max();
+                mFrequency = (from o in mOperands select o.DocumentFrequency).Max();
             }
             else
             {

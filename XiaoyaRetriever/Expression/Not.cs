@@ -12,7 +12,7 @@ namespace XiaoyaRetriever.Expression
         public SearchExpression Operand { get; private set; }
 
         protected long mFrequency = 1;
-        public override long Frequency => mFrequency;
+        public override long DocumentFrequency => mFrequency;
 
         public override bool IsIncluded => !Operand.IsIncluded;
 
@@ -25,7 +25,7 @@ namespace XiaoyaRetriever.Expression
         {
             Operand.SetConfig(config);
 
-            mFrequency = long.MaxValue - Operand.Frequency;
+            mFrequency = long.MaxValue - Operand.DocumentFrequency;
         }
 
         public override bool Equals(object obj)

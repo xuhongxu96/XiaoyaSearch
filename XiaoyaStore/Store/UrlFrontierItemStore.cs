@@ -1,4 +1,4 @@
-﻿    using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -45,7 +45,7 @@ namespace XiaoyaStore.Store
                     var item = new UrlFrontierItem
                     {
                         Url = url,
-                        Host = host,    
+                        Host = host,
                         UrlDepth = UrlHelper.GetDomainDepth(url),
                         PlannedTime = DateTime.Now,
                         FailedTimes = 0,
@@ -138,13 +138,8 @@ namespace XiaoyaStore.Store
 
                     context.UrlFrontierItems.Add(item);
 
-                    try
-                    {
-                        // Attempt to save changes to the database
-                        context.SaveChanges();
-                    }
-                    catch (DbUpdateException)
-                    { }
+                    // Attempt to save changes to the database
+                    context.SaveChanges();
                 }
 
                 return item;
@@ -195,13 +190,9 @@ namespace XiaoyaStore.Store
                     item.PlannedTime = DateTime.Now.AddMonths(3);
                 }
 
-                try
-                {
-                    // Attempt to save changes to the database
-                    context.SaveChanges();
-                }
-                catch (DbUpdateException)
-                { }
+                // Attempt to save changes to the database
+                context.SaveChanges();
+
                 return item;
             }
         }
@@ -240,12 +231,8 @@ namespace XiaoyaStore.Store
                 item.IsPopped = true;
                 item.UpdatedAt = DateTime.Now;
 
-                try
-                {
-                    context.SaveChanges();
-                }
-                catch (DbUpdateException)
-                { }
+                context.SaveChanges();
+
                 return item;
             }
         }

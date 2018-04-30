@@ -8,7 +8,7 @@ namespace XiaoyaRetriever.Expression
 {
     public abstract class SearchExpression
     {
-        public abstract long Frequency { get; }
+        public abstract long DocumentFrequency { get; }
         public abstract bool IsIncluded { get; }
         public virtual bool IsParsedFromFreeText => false;
 
