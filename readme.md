@@ -8,14 +8,6 @@ However, it is sufficient for a small LAN, such as campus network.
 
 My initial goal is to deploy this search engine in Beijing Normal University.
 
-## Line Count
-
-Line count is calculated by: 
-
-``` shell
-git ls-files *.cs | xargs wc -l > linecount.txt
-```
-
 ## Structure
 
 - XiaoyaCommon  
@@ -65,6 +57,14 @@ git ls-files *.cs | xargs wc -l > linecount.txt
 		Manage links in UrlFiles
 - XiaoyaLogger  
   A concurrent logger
+
+## Line Count
+
+Line count is calculated by: 
+
+``` shell
+git ls-files *.cs | xargs wc -l > linecount.txt
+```
 
   ---
 
