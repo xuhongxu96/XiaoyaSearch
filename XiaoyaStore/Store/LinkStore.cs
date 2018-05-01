@@ -41,6 +41,22 @@ namespace XiaoyaStore.Store
             }
         }
 
+        public void FilterLinks(IList<Link> links)
+        {
+            using (var context = NewContext())
+            {
+                var linkMap = context.SameUrls.Where(o => links.Select(p => p.Url).Contains(o.RawUrl))
+                    .ToDictionary(o => o.RawUrl);
+
+                foreach (var link in links)
+                {
+                    if (linkMap.ContainsKey(link.Url))
+                    {
+                        link.Url = linkMap[link.Url].Url;
+                    }
+                }
+            }
+        }
 
         public void ClearAndSaveLinksForUrlFile(int urlFileId, IList<Link> links)
         {

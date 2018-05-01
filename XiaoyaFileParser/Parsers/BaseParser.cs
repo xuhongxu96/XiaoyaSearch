@@ -21,6 +21,7 @@ namespace XiaoyaFileParser.Parsers
                 mUrlFile = value;
                 mContent = null;
                 mLinkInfo = null;
+                mHeaders = null;
                 mTitle = TextHelper.NormalizeString(mUrlFile.Title);
                 mTextContent = TextHelper.NormalizeString(mUrlFile.Content);
                 mPublishDate = mUrlFile.PublishDate;
@@ -34,6 +35,7 @@ namespace XiaoyaFileParser.Parsers
         protected string mContent = null;
         protected string mTextContent = null;
         protected List<LinkInfo> mLinkInfo = null;
+        protected List<string> mHeaders = null;
         protected DateTime mPublishDate = DateTime.MinValue;
 
         public BaseParser() { }
@@ -49,6 +51,7 @@ namespace XiaoyaFileParser.Parsers
             textContent = TextHelper.RemoveConsecutiveNonsense(textContent);
 
             var title = await GetTitleAsync();
+            var headers = await GetHeadersAsync();
 
             var result = new List<Token>();
             var wordDict = new Dictionary<string, Token>();
@@ -61,8 +64,9 @@ namespace XiaoyaFileParser.Parsers
                     Positions = segment.Select(o => o.Position).OrderBy(o => o).ToList(),
                     Length = segment.Key.Length,
                     WordFrequency = segment.Count(),
-                    OccurenceInLinks = 0,
-                    OccurenceInTitle = 0,
+                    OccurencesInLinks = 0,
+                    OccurencesInTitle = 0,
+                    OccurencesInHeaders = 0,
                 };
                 result.Add(token);
                 wordDict.Add(token.Word, token);
@@ -72,7 +76,7 @@ namespace XiaoyaFileParser.Parsers
             {
                 if (wordDict.ContainsKey(segment.Key))
                 {
-                    wordDict[segment.Key].OccurenceInTitle = segment.Count();
+                    wordDict[segment.Key].OccurencesInTitle = segment.Count();
                     wordDict[segment.Key].WordFrequency += segment.Count();
                 }
                 else
@@ -83,11 +87,38 @@ namespace XiaoyaFileParser.Parsers
                         Positions = new List<int>(),
                         Length = segment.Key.Length,
                         WordFrequency = segment.Count(),
-                        OccurenceInLinks = 0,
-                        OccurenceInTitle = segment.Count(),
+                        OccurencesInLinks = 0,
+                        OccurencesInTitle = segment.Count(),
+                        OccurencesInHeaders = 0,
                     };
                     result.Add(token);
                     wordDict.Add(token.Word, token);
+                }
+            }
+
+            foreach (var header in headers)
+            {
+                foreach (var segment in mConfig.TextSegmenter.Segment(title).GroupBy(o => TextHelper.NormalizeIndexWord(o.Word)))
+                {
+                    if (wordDict.ContainsKey(segment.Key))
+                    {
+                        wordDict[segment.Key].OccurencesInHeaders = segment.Count();
+                    }
+                    else
+                    {
+                        var token = new Token
+                        {
+                            Word = segment.Key,
+                            Positions = new List<int>(),
+                            Length = segment.Key.Length,
+                            WordFrequency = segment.Count(),
+                            OccurencesInLinks = 0,
+                            OccurencesInTitle = 0,
+                            OccurencesInHeaders = segment.Count(),
+                        };
+                        result.Add(token);
+                        wordDict.Add(token.Word, token);
+                    }
                 }
             }
 
@@ -105,7 +136,7 @@ namespace XiaoyaFileParser.Parsers
                 {
                     if (wordDict.ContainsKey(segment.Key))
                     {
-                        wordDict[segment.Key].OccurenceInLinks += segment.Count();
+                        wordDict[segment.Key].OccurencesInLinks += segment.Count();
                         wordDict[segment.Key].WordFrequency += segment.Count();
                     }
                     else
@@ -116,8 +147,9 @@ namespace XiaoyaFileParser.Parsers
                             Positions = new List<int>(),
                             Length = segment.Key.Length,
                             WordFrequency = segment.Count(),
-                            OccurenceInLinks = segment.Count(),
-                            OccurenceInTitle = 0,
+                            OccurencesInLinks = segment.Count(),
+                            OccurencesInTitle = 0,
+                            OccurencesInHeaders = 0,
                         };
                         result.Add(token);
                         wordDict.Add(token.Word, token);
@@ -189,5 +221,13 @@ namespace XiaoyaFileParser.Parsers
         }
 
         public abstract Task<string> GetContentAsync();
+
+        public virtual async Task<IList<string>> GetHeadersAsync()
+        {
+            return await Task.Run(() =>
+            {
+                return new List<string>();
+            });
+        }
     }
 }

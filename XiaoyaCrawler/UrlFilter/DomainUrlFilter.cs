@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using XiaoyaStore.Data.Model;
 
 namespace XiaoyaCrawler.UrlFilter
 {
@@ -22,15 +23,15 @@ namespace XiaoyaCrawler.UrlFilter
             }
         }
 
-        public IEnumerable<string> Filter(IEnumerable<string> urls)
+        public IEnumerable<Link> Filter(IEnumerable<Link> links)
         {
             if (mBlackPattern == null)
             {
-                return urls.Where(o => mDomainPattern.IsMatch(o));
+                return links.Where(o => mDomainPattern.IsMatch(o.Url));
             }
             else
             {
-                return urls.Where(o => mDomainPattern.IsMatch(o) && !mBlackPattern.IsMatch(o));
+                return links.Where(o => mDomainPattern.IsMatch(o.Url) && !mBlackPattern.IsMatch(o.Url));
             }
         }
     }

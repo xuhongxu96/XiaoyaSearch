@@ -70,7 +70,7 @@ namespace XiaoyaStoreUnitTest
                 }
 
                 var urlFrontierItemStore = new UrlFrontierItemStore(options);
-                urlFrontierItemStore.Push("http://baidu.com");
+                urlFrontierItemStore.PushUrls(new List<string> { "http://baidu.com" });
 
                 using (var context = new XiaoyaSearchContext(options))
                 {
@@ -498,10 +498,7 @@ namespace XiaoyaStoreUnitTest
                     MimeType = "text/html",
                 });
 
-                urlFrontierItemStore.Push("http://a.com/c");
-                urlFrontierItemStore.Push("http://a.com/b");
-                urlFrontierItemStore.Push("http://c.com/d");
-                urlFrontierItemStore.Push("http://b.com/");
+                urlFrontierItemStore.PushUrls(new List<string> { "http://a.com/c", "http://a.com/b", "http://c.com/d", "http://b.com/" });
 
                 var item = urlFrontierItemStore.PopUrlForCrawl();
                 Assert.AreEqual("http://b.com/", item.Url);

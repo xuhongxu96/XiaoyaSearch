@@ -21,7 +21,7 @@ namespace XiaoyaCrawler.Parser
         /// <summary>
         /// Urls in web file
         /// </summary>
-        public IEnumerable<LinkInfo> Links { get; set; }
+        public IList<LinkInfo> Links { get; set; }
         /// <summary>
         /// Published Date
         /// </summary>

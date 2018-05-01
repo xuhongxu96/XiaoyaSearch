@@ -22,8 +22,8 @@ namespace XiaoyaSearch
         protected IRanker mProRanker;
         protected SearchEngineConfig mConfig;
 
-        protected const int ResultSize = 1000;
-        protected const int PageSize = 1000;
+        protected const int ResultSize = 500;
+        protected const int PageSize = 500;
 
         public SearchEngine(SearchEngineConfig config)
         {

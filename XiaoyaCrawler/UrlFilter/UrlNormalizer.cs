@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Web;
+using XiaoyaStore.Data.Model;
 
 namespace XiaoyaCrawler.UrlFilter
 {
@@ -13,15 +14,15 @@ namespace XiaoyaCrawler.UrlFilter
             "orderby", "order", "filter", "referer"
         };
 
-        public IEnumerable<string> Filter(IEnumerable<string> urls)
+        public IEnumerable<Link> Filter(IEnumerable<Link> links)
         {
-            foreach (var url in urls)
+            foreach (var link in links)
             {
                 string result;
 
                 try
                 {
-                    var normUrl = Uri.EscapeUriString(url);
+                    var normUrl = Uri.EscapeUriString(link.Url);
                     var uri = new Uri(normUrl);
 
                     if (uri.Scheme != "http" && uri.Scheme != "https")
@@ -29,7 +30,7 @@ namespace XiaoyaCrawler.UrlFilter
                         continue;
                     }
 
-                    if (uri.Query.Contains("?"))
+                    if (uri.Query.Contains("?") && uri.Query.Contains("="))
                     {
                         var exceptQueryAndFragment = normUrl.Substring(0, normUrl.Length - uri.Query.Length - uri.Fragment.Length);
                         var queries = HttpUtility.ParseQueryString(uri.Query);
@@ -56,14 +57,20 @@ namespace XiaoyaCrawler.UrlFilter
                     {
                         result = new Uri(normUrl).ToString();
                     }
-                    
+
                 }
                 catch (UriFormatException)
                 {
                     continue;
                 }
 
-                yield return result;
+                yield return new Link
+                {
+                    LinkId = link.LinkId,
+                    UrlFileId = link.UrlFileId,
+                    Text = link.Text,
+                    Url = result,
+                };
 
             }
         }

@@ -23,6 +23,11 @@ namespace XiaoyaStore.Store
         {
             var indexStat = mCache.Get(word);
 
+            if (indexStat == null)
+            {
+                return null;
+            }
+
             if (indexStat.DocumentFrequency < 0)
             {
                 indexStat.DocumentFrequency = 0;

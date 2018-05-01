@@ -16,11 +16,21 @@ namespace XiaoyaFileParser.Parsers
 {
     public class HtmlFileParser : TextFileParser, IFileParser
     {
-        readonly List<string> TagsToRemove = new List<string>
+        private readonly List<string> TagsToRemove = new List<string>
         {
             "script",
             "style",
             "img",
+        };
+
+        private readonly List<string> HeaderElementTags = new List<string>
+        {
+            "h1", "h2", "h3", "h4", "h5"
+        };
+
+        private readonly List<string> LinkElementTags = new List<string>
+        {
+            "a", "img", "area", "span"
         };
 
         protected HtmlParser mParser = new HtmlParser();
@@ -43,26 +53,34 @@ namespace XiaoyaFileParser.Parsers
                 mLinkInfo = new List<LinkInfo>();
 
                 var document = await mParser.ParseAsync(content);
-                var links = document.GetElementsByTagName("a");
-                foreach (var link in links)
+
+                foreach (var tag in LinkElementTags)
                 {
-                    var href = link.GetAttribute("href");
-                    var text = link.Text();
-                    if (text == null)
+                    var links = document.GetElementsByTagName(tag);
+                    foreach (var link in links)
                     {
-                        text = "";
-                    }
-                    if (Uri.TryCreate(new Uri(UrlFile.Url), href, out Uri absoluteUrl))
-                    {
-                        mLinkInfo.Add(new LinkInfo
+                        try
                         {
-                            Url = absoluteUrl.ToString(),
-                            Text = text.Trim().ToLower(),
-                        });
+                            var href = link.GetAttribute("href");
+                            var text = link.Text();
+                            if (text == null)
+                            {
+                                text = "";
+                            }
+                            if (Uri.TryCreate(new Uri(UrlFile.Url), href, out Uri absoluteUrl))
+                            {
+                                mLinkInfo.Add(new LinkInfo
+                                {
+                                    Url = absoluteUrl.ToString(),
+                                    Text = TextHelper.ReplaceSpaces(text.ToLower(), ""),
+                                });
+                            }
+                        }
+                        catch (Exception)
+                        { }
                     }
                 }
             }
-
             return mLinkInfo;
         }
 
@@ -70,6 +88,7 @@ namespace XiaoyaFileParser.Parsers
         {
             if (mTextContent == null)
             {
+
                 var content = await GetContentAsync();
 
                 var document = await mParser.ParseAsync(content);
@@ -117,6 +136,27 @@ namespace XiaoyaFileParser.Parsers
                 }
             }
             return mTitle;
+        }
+
+        public override async Task<IList<string>> GetHeadersAsync()
+        {
+            if (mHeaders == null)
+            {
+                var content = await GetContentAsync();
+
+                var document = await mParser.ParseAsync(content);
+
+                mHeaders = new List<string>();
+
+                foreach (var tag in HeaderElementTags)
+                {
+                    foreach (var header in document.GetElementsByTagName(tag))
+                    {
+                        mHeaders.Add(TextHelper.ReplaceSpaces(header.Text().ToLower(), ""));
+                    }
+                }
+            }
+            return mHeaders;
         }
     }
 }

@@ -16,8 +16,6 @@ namespace XiaoyaFileParser.Parsers
 {
     public class TextFileParser : BaseParser, IFileParser
     {
-        protected string mEncoding;
-
         public TextFileParser() : base() { }
 
         public TextFileParser(FileParserConfig config) : base(config)
@@ -29,16 +27,8 @@ namespace XiaoyaFileParser.Parsers
         {
             if (mContent == null)
             {
-                if (mEncoding == null)
-                {
-                    mEncoding = EncodingDetector.GetEncoding(FilePath);
-                    if (mEncoding == null)
-                    {
-                        throw new NotSupportedException($"Invalid text encoding: {UrlFile.Url}");
-                    }
-                }
                 mContent = await File.ReadAllTextAsync(FilePath,
-                    Encoding.GetEncoding(mEncoding));
+                    Encoding.GetEncoding(mUrlFile.Charset));
                 mContent = TextHelper.NormalizeString(mContent);
             }
             return mContent;

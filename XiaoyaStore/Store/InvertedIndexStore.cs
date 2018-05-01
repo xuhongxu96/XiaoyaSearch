@@ -103,7 +103,7 @@ namespace XiaoyaStore.Store
         public InvertedIndexStore(DbContextOptions options = null, bool enableCache = true, RuntimeLogger logger = null) : base(options)
         {
             mWordUrlFileCache = new LRUCache<CacheIndex, InvertedIndex>(
-                TimeSpan.FromDays(5), GetWordUrlFileCache, LoadWordUrlFileCaches, 30_000_000, enableCache);
+                TimeSpan.FromDays(5), GetWordUrlFileCache, null, 3_000_000, enableCache);
 
             mWordCache = new ComparableLRUCache<CacheWord, CacheWordItem>(
                 TimeSpan.FromDays(1), GetWordCache, UpdateWordCache, CompareWordCache, LoadWordCaches, 1_000_000, enableCache);
@@ -155,8 +155,7 @@ namespace XiaoyaStore.Store
                         continue;
                     }
 
-                    var result = context.InvertedIndices.Where(o => o.Word == stat.Word)
-                    .Where(o => o.Weight >= 2)
+                    var result = context.InvertedIndices.Where(o => o.Word == stat.Word && o.Weight >= 2)
                     .OrderByDescending(o => o.Weight)
                     .Select(o => o.UrlFileId)
                     .ToList();
@@ -178,8 +177,7 @@ namespace XiaoyaStore.Store
         {
             using (var context = NewContext())
             {
-                var result = context.InvertedIndices.Where(o => o.Word == word.word)
-                    .Where(o => o.Weight >= word.minWeight)
+                var result = context.InvertedIndices.Where(o => o.Word == word.word && o.Weight >= word.minWeight)
                     .OrderByDescending(o => o.Weight)
                     .Select(o => o.UrlFileId)
                     .ToList();
@@ -290,10 +288,18 @@ namespace XiaoyaStore.Store
 
             using (var context = NewContext())
             {
-                var toBeRemovedIndices = context.InvertedIndices.FromSql($"SELECT * FROM InvertedIndices WHERE UrlFileId = {urlFile.UrlFileId}");
-
-                var toBeRemovedWordCountDict = toBeRemovedIndices.ToDictionary(o => o.Word, o => o.WordFrequency);
-
+#if DEBUG
+                    var time = DateTime.Now;
+                    Console.WriteLine("Saving Index Stats: " + urlFile.Url);
+#endif
+                var toBeRemovedWordCountDict = context.InvertedIndices
+                    .Where(o => o.UrlFileId == urlFile.UrlFileId)
+                    .Select(o => new { o.Word, o.WordFrequency })
+                    .ToDictionary(o => o.Word, o => o.WordFrequency);
+#if DEBUG
+                    Console.WriteLine("To Be Removed Indices: " + urlFile.Url + "\n" + (DateTime.Now - time).TotalSeconds);
+                    time = DateTime.Now;
+#endif
                 var wordCountDict = invertedIndices.ToDictionary(o => o.Word, o => o.WordFrequency);
                 var stats = new List<IndexStat>();
 
@@ -342,7 +348,7 @@ namespace XiaoyaStore.Store
         {
             while (true)
             {
-                Thread.Sleep(5000);
+                Thread.Sleep(10000);
 
                 mLogger?.Log(nameof(InvertedIndexStore), "Flushing Index Stats");
 
@@ -365,7 +371,7 @@ namespace XiaoyaStore.Store
                 int i = 0;
                 try
                 {
-                    
+
                     using (var context = NewContext())
                     {
                         context.Database.SetCommandTimeout(TimeSpan.FromMinutes(10));
@@ -445,9 +451,24 @@ namespace XiaoyaStore.Store
                     return;
                 }
 
+#if DEBUG
+                    var time = DateTime.Now;
+                    Console.WriteLine("Saving Index Stats: " + urlFile.Url);
+#endif
+
                 SaveIndexStats(urlFile, invertedIndices);
 
+#if DEBUG
+                    Console.WriteLine("Saved Index Stats: " + urlFile.Url + "\n" + (DateTime.Now - time).TotalSeconds);
+                    time = DateTime.Now;
+#endif
+
                 ClearInvertedIndicesOf(urlFileId);
+
+#if DEBUG
+                    Console.WriteLine("Cleared Indices: " + urlFile.Url + "\n" + (DateTime.Now - time).TotalSeconds);
+                    time = DateTime.Now;
+#endif
 
                 if (invertedIndices.Count <= BatchSize)
                 {
@@ -493,9 +514,19 @@ namespace XiaoyaStore.Store
                     }
                 }
 
+#if DEBUG
+                    Console.WriteLine("Inserted Indices: " + urlFile.Url + "\n" + (DateTime.Now - time).TotalSeconds);
+                    time = DateTime.Now;
+#endif
+
                 urlFile.IndexStatus = UrlFile.UrlFileIndexStatus.Indexed;
 
                 context.UrlFiles.Update(urlFile);
+
+#if DEBUG
+                    Console.WriteLine("Finished Index: " + urlFile.Url + "\n" + (DateTime.Now - time).TotalSeconds);
+                    time = DateTime.Now;
+#endif
 
                 lock (mSyncLock)
                 {

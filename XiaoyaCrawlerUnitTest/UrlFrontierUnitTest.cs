@@ -78,7 +78,7 @@ namespace XiaoyaCrawlerUnitTest
             {
                 var urlFrontier = new SimpleUrlFrontier(config);
 
-                urlFrontier.PushUrl("http://www.baidu.com");
+                urlFrontier.PushUrls(new List<string> { "http://www.baidu.com" });
 
                 using (var context = new XiaoyaSearchContext(options))
                 {
@@ -95,7 +95,7 @@ namespace XiaoyaCrawlerUnitTest
             {
                 var urlFrontier = new SimpleUrlFrontier(config);
 
-                urlFrontier.PushUrl("http://www.baidu.com");
+                urlFrontier.PushUrls(new List<string> { "http://www.baidu.com" });
 
                 using (var context = new XiaoyaSearchContext(options))
                 {
@@ -114,7 +114,7 @@ namespace XiaoyaCrawlerUnitTest
             {
                 var urlFrontier = new SimpleUrlFrontier(config);
 
-                urlFrontier.PushUrl("http://www.baidu.com");
+                urlFrontier.PushUrls(new List<string> { "http://www.baidu.com" });
 
                 using (var context = new XiaoyaSearchContext(options))
                 {
@@ -186,7 +186,7 @@ namespace XiaoyaCrawlerUnitTest
                     for (int j = 0; j < urlN; ++j)
                     {
                         urlFrontier.PopUrl();
-                        urlFrontier.PushUrl(j.ToString());
+                        urlFrontier.PushUrls(new List<string> { j.ToString() });
                     }
                 });
                 tasks.Add(task);

@@ -43,6 +43,7 @@ namespace XiaoyaCrawlerInterface
                 UrlFileStore = new UrlFileStore(options, false),
                 UrlFrontierItemStore = new UrlFrontierItemStore(options),
                 LinkStore = new LinkStore(options, false),
+                SameUrlStore = new SameUrlStore(options),
                 FetchDirectory = arguments.FetchDir,
                 LogDirectory = arguments.LogDir,
                 MaxFetchingConcurrency = int.Parse(arguments.ThreadCount),
@@ -50,7 +51,7 @@ namespace XiaoyaCrawlerInterface
 
             var urlFilters = new List<IUrlFilter>
             {
-                new DomainUrlFilter(@"^http(s)?://[\w\.\-_]*(bnu\.edu\.cn|oiegg.com)", @"(cless\.bnu\.edu\.cn)|(/(search|print|login)[\./])|(pb\.ss\.graduate\.bnu\.edu\.cn)"),
+                new DomainUrlFilter(@"^http(s)?://[\w\.\-_]*(bnu\.edu\.cn|oiegg.com)", @"(v6\.oiegg\.com)|(cless\.bnu\.edu\.cn)|(/(search|print|login|space)[\./])|(pb\.ss\.graduate\.bnu\.edu\.cn)"),
                 new UrlNormalizer(),
             };
 

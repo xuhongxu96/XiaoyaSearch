@@ -17,8 +17,9 @@ namespace XiaoyaRanker.QueryTermProximityRanker
 
         public IEnumerable<double> Rank(IEnumerable<int> urlFileIds, IEnumerable<string> words)
         {
-            var wordCount = words.Count();
-            var wordTotalLength = words.Sum(o => o.Length);
+            var wordList = words.ToList();
+            var wordCount = wordList.Count;
+            var wordTotalLength = wordList.Sum(o => o.Length);
             var lastWordLength = 0;
 
             foreach (var id in urlFileIds)
@@ -28,7 +29,7 @@ namespace XiaoyaRanker.QueryTermProximityRanker
 
                 bool skip = false;
 
-                foreach (var word in words)
+                foreach (var word in wordList)
                 {
                     var positions = mConfig.InvertedIndexStore
                         .LoadByWordInUrlFile(id, word)?
@@ -42,7 +43,6 @@ namespace XiaoyaRanker.QueryTermProximityRanker
                     }
 
                     wordPositions.Add(positions);
-                    lastWordLength = word.Length;
                 }
 
                 if (skip)
@@ -70,6 +70,7 @@ namespace XiaoyaRanker.QueryTermProximityRanker
                         if (minWindowLength == -1 || minWindowLength > windowLength)
                         {
                             minWindowLength = windowLength;
+                            lastWordLength = wordList[wordPosition.IndexOf(wordPosition.Max())].Length;
                         }
                     }
 

@@ -50,7 +50,7 @@ namespace XiaoyaLogger
             mDoWriteToConsole = doWriteToConsole;
         }
 
-        public void Log(string className, string message)
+        public void Log(string className, string message, bool? doWriteToConsole = null)
         {
             var content = string.Format(
                 "{0}\t{1}\r\n{2}\r\n\r\n",
@@ -63,11 +63,11 @@ namespace XiaoyaLogger
             {
                 fileName = mLogFileName,
                 content = content,
-                doWriteToConsole = mDoWriteToConsole,
+                doWriteToConsole = doWriteToConsole ?? mDoWriteToConsole,
             });
         }
 
-        public void LogException(string className, string message, Exception e)
+        public void LogException(string className, string message, Exception e, bool? doWriteToConsole = null)
         {
             var exceptionMessage = e.GetType().Name + "\r\n" + e.Message + "\r\n" + e.StackTrace + "\r\n";
             while (e.InnerException != null)
@@ -88,7 +88,7 @@ namespace XiaoyaLogger
             {
                 fileName = mLogFileName,
                 content = content,
-                doWriteToConsole = mDoWriteToConsole,
+                doWriteToConsole = doWriteToConsole ?? mDoWriteToConsole,
             });
         }
 

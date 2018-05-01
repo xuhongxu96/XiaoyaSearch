@@ -15,6 +15,7 @@ namespace XiaoyaStore.Data
         public DbSet<IndexStat> IndexStats { get; set; }
         public DbSet<UrlHostStat> UrlHostStats { get; set; }
         public DbSet<Link> Links { get; set; }
+        public DbSet<SameUrl> SameUrls { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -53,6 +54,9 @@ namespace XiaoyaStore.Data
 
             modelBuilder.Entity<UrlFile>()
                 .HasIndex(o => o.PublishDate);
+
+            modelBuilder.Entity<UrlFile>()
+                .HasIndex(o => new { o.UrlFileId, o.PageRank });
 
             modelBuilder.Entity<UrlFile>()
                 .HasIndex(o => o.PageRank);
@@ -108,6 +112,17 @@ namespace XiaoyaStore.Data
 
             modelBuilder.Entity<Link>()
                 .HasIndex(o => o.UrlFileId);
+
+            #endregion
+
+            #region SameUrl
+
+            modelBuilder.Entity<SameUrl>()
+                .HasIndex(o => o.RawUrl)
+                .IsUnique();
+
+            modelBuilder.Entity<SameUrl>()
+                .HasIndex(o => o.Url);
 
             #endregion
         }

@@ -15,16 +15,12 @@ namespace XiaoyaStore.Data.Model
         public string Word { get; set; }
         [ConcurrencyCheck]
         public int UrlFileId { get; set; }
-        [ConcurrencyCheck]
         public long WordFrequency { get; set; }
-        [ConcurrencyCheck]
         public double Weight { get; set; }
-        [ConcurrencyCheck]
         public string Positions { get; set; }
-        [ConcurrencyCheck]
         public int OccurencesInTitle{ get; set; }
-        [ConcurrencyCheck]
         public int OccurencesInLinks { get; set; }
+        public int OccurencesInHeaders { get; set; }
 
         public List<int> PositionArr
         {

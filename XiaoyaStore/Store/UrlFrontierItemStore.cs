@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using EFCore.BulkExtensions;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,6 +8,7 @@ using System.Threading.Tasks;
 using XiaoyaStore.Data;
 using XiaoyaStore.Data.Model;
 using XiaoyaStore.Helper;
+using Z.EntityFramework.Plus;
 
 namespace XiaoyaStore.Store
 {
@@ -88,17 +90,51 @@ namespace XiaoyaStore.Store
             }
         }
 
-        public UrlFrontierItem Push(string url)
+        public void PushUrls(IEnumerable<string> urls)
         {
             using (var context = NewContext())
             {
-                var item = context.UrlFrontierItems.SingleOrDefault(o => o.Url == url);
+                context.ChangeTracker.AutoDetectChangesEnabled = false;
 
-                if (item == null)
+                var existedUrlSet = context.UrlFrontierItems
+                    .Where(o => urls.Contains(o.Url))
+                    .Select(o => o.Url);
+
+                var newUrls = urls.Except(existedUrlSet).ToList();
+
+                var hostStats = newUrls.GroupBy(o => UrlHelper.GetHost(o))
+                    .Select(o => new UrlHostStat
+                    {
+                        Host = o.Key,
+                        Count = o.Count()
+                    });
+
+                var existedHostStats = context.UrlHostStats
+                    .Where(o => hostStats.Select(p => p.Host).Contains(o.Host))
+                    .ToDictionary(o => o.Host);
+
+                foreach (var host in hostStats)
                 {
+                    if (existedHostStats.ContainsKey(host.Host))
+                    {
+                        existedHostStats[host.Host].Count += host.Count;
+                    }
+                    else
+                    {
+                        existedHostStats[host.Host] = host;
+                    }
+                }
+
+                context.BulkInsertOrUpdate(existedHostStats.Values.ToList());
+
+                var urlList = new List<UrlFrontierItem>();
+
+                foreach (var url in newUrls)
+                {
+                    // Add this url if not exists yet
+
                     var host = UrlHelper.GetHost(url);
-                    // Add this url for the first time
-                    item = new UrlFrontierItem
+                    var item = new UrlFrontierItem
                     {
                         Url = url,
                         Host = host,
@@ -110,25 +146,12 @@ namespace XiaoyaStore.Store
                         IsPopped = false,
                     };
 
-                    var hostStat = context.UrlHostStats.SingleOrDefault(o => o.Host == host);
-                    if (hostStat == null)
-                    {
-                        if (host != "")
-                        {
-                            context.UrlHostStats.Add(new UrlHostStat
-                            {
-                                Host = host,
-                                Count = 1,
-                            });
-                        }
-                    }
-                    else
-                    {
-                        item.PlannedTime = item.PlannedTime.AddSeconds(hostStat.Count * 10);
-                        hostStat.Count++;
-                    }
-
                     item.PlannedTime = item.PlannedTime.AddHours(item.UrlDepth);
+
+                    if (existedHostStats.ContainsKey(host))
+                    {
+                        item.PlannedTime = item.PlannedTime.AddSeconds(existedHostStats[host].Count * new Random().NextDouble() * 30);
+                    }
 
                     // Don't plan too late
                     if (item.PlannedTime > DateTime.Now.AddDays(3))
@@ -136,13 +159,10 @@ namespace XiaoyaStore.Store
                         item.PlannedTime = DateTime.Now.AddDays(3);
                     }
 
-                    context.UrlFrontierItems.Add(item);
-
-                    // Attempt to save changes to the database
-                    context.SaveChanges();
+                    urlList.Add(item);
                 }
-
-                return item;
+                context.BulkInsert(urlList);
+                context.SaveChanges();
             }
         }
 
@@ -188,6 +208,14 @@ namespace XiaoyaStore.Store
                 if (item.PlannedTime > DateTime.Now.AddMonths(3))
                 {
                     item.PlannedTime = DateTime.Now.AddMonths(3);
+                }
+
+                // Refresh the first 3000 urls
+                if (item.UrlFrontierItemId < 3000
+                    && (item.UpdatedAt - item.CreatedAt).TotalHours < 3
+                    && item.PlannedTime > DateTime.Now.AddHours(5))
+                {
+                    item.PlannedTime = DateTime.Now.AddHours(5);
                 }
 
                 // Attempt to save changes to the database

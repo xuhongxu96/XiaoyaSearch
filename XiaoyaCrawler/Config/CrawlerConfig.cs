@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 using XiaoyaFileParser;
 using XiaoyaStore.Store;
 
@@ -23,8 +24,11 @@ namespace XiaoyaCrawler.Config
 
         public IEnumerable<string> InitUrls { get; set; }
 
+        public Regex NotUseProxyUrlRegex { get; set; } = new Regex(@"bnu\.edu\.cn", RegexOptions.Compiled);
+
         public IUrlFileStore UrlFileStore { get; set; }
         public IUrlFrontierItemStore UrlFrontierItemStore { get; set; }
         public ILinkStore LinkStore { get; set; }
+        public ISameUrlStore SameUrlStore { get; set; }
     }
 }

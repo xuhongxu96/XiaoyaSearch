@@ -7,5 +7,6 @@ namespace XiaoyaStore.Store
     {
         void ClearAndSaveLinksForUrlFile(int urlFileId, IList<Link> links);
         IEnumerable<Link> LoadByUrl(string url);
+        void FilterLinks(IList<Link> links);
     }
 }

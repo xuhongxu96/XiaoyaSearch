@@ -52,27 +52,24 @@ namespace XiaoyaStore.Migrations
                     b.Property<int>("InvertedIndexId")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<int>("OccurencesInLinks")
-                        .IsConcurrencyToken();
+                    b.Property<int>("OccurencesInHeaders");
 
-                    b.Property<int>("OccurencesInTitle")
-                        .IsConcurrencyToken();
+                    b.Property<int>("OccurencesInLinks");
 
-                    b.Property<string>("Positions")
-                        .IsConcurrencyToken();
+                    b.Property<int>("OccurencesInTitle");
+
+                    b.Property<string>("Positions");
 
                     b.Property<int>("UrlFileId")
                         .IsConcurrencyToken();
 
-                    b.Property<double>("Weight")
-                        .IsConcurrencyToken();
+                    b.Property<double>("Weight");
 
                     b.Property<string>("Word")
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(30)");
 
-                    b.Property<long>("WordFrequency")
-                        .IsConcurrencyToken();
+                    b.Property<long>("WordFrequency");
 
                     b.HasKey("InvertedIndexId");
 
@@ -111,6 +108,29 @@ namespace XiaoyaStore.Migrations
                     b.ToTable("Links");
                 });
 
+            modelBuilder.Entity("XiaoyaStore.Data.Model.SameUrl", b =>
+                {
+                    b.Property<int>("SameUrlId")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("RawUrl")
+                        .IsConcurrencyToken()
+                        .HasColumnType("nvarchar(300)");
+
+                    b.Property<string>("Url")
+                        .HasColumnType("nvarchar(300)");
+
+                    b.HasKey("SameUrlId");
+
+                    b.HasIndex("RawUrl")
+                        .IsUnique()
+                        .HasFilter("[RawUrl] IS NOT NULL");
+
+                    b.HasIndex("Url");
+
+                    b.ToTable("SameUrls");
+                });
+
             modelBuilder.Entity("XiaoyaStore.Data.Model.UrlFile", b =>
                 {
                     b.Property<int>("UrlFileId")
@@ -133,8 +153,16 @@ namespace XiaoyaStore.Migrations
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(300)");
 
+                    b.Property<int>("HeaderCount");
+
+                    b.Property<int>("HeaderTotalLength");
+
                     b.Property<int>("IndexStatus")
                         .IsConcurrencyToken();
+
+                    b.Property<int>("LinkCount");
+
+                    b.Property<int>("LinkTotalLength");
 
                     b.Property<string>("MimeType")
                         .IsConcurrencyToken()
@@ -142,16 +170,14 @@ namespace XiaoyaStore.Migrations
 
                     b.Property<double>("PageRank");
 
-                    b.Property<DateTime>("PublishDate")
-                        .IsConcurrencyToken();
+                    b.Property<DateTime>("PublishDate");
 
                     b.Property<string>("Title");
 
                     b.Property<double>("UpdateIntervalSeconds")
                         .IsConcurrencyToken();
 
-                    b.Property<DateTime>("UpdatedAt")
-                        .IsConcurrencyToken();
+                    b.Property<DateTime>("UpdatedAt");
 
                     b.Property<string>("Url")
                         .HasColumnType("nvarchar(300)");
@@ -175,6 +201,8 @@ namespace XiaoyaStore.Migrations
                         .HasFilter("[Url] IS NOT NULL");
 
                     b.HasIndex("IndexStatus", "UpdatedAt");
+
+                    b.HasIndex("UrlFileId", "PageRank");
 
                     b.ToTable("UrlFiles");
                 });
@@ -215,7 +243,7 @@ namespace XiaoyaStore.Migrations
                         .IsUnique()
                         .HasFilter("[Url] IS NOT NULL");
 
-                    b.HasIndex("PlannedTime", "IsPopped");
+                    b.HasIndex("IsPopped", "PlannedTime");
 
                     b.ToTable("UrlFrontierItems");
                 });

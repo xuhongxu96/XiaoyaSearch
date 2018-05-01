@@ -10,7 +10,8 @@ namespace XiaoyaFileParser.Model
         public int Length { get; set; }
         public List<int> Positions { get; set; }
         public int WordFrequency { get; set; }
-        public int OccurenceInTitle { get; set; }
-        public int OccurenceInLinks { get; set; }
+        public int OccurencesInTitle { get; set; }
+        public int OccurencesInLinks { get; set; }
+        public int OccurencesInHeaders { get; set; }
     }
 }

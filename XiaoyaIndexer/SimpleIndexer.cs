@@ -57,11 +57,22 @@ namespace XiaoyaIndexer
 
                     UniversalFileParser parser = new UniversalFileParser
                     {
-                        UrlFile = urlFile
+                        UrlFile = urlFile,
+                        FilePath = urlFile.FilePath,
                     };
+
+#if DEBUG
+                    var time = DateTime.Now;
+                    Console.WriteLine("Loading Links: " + urlFile.Url);
+#endif
 
                     var links = mConfig.LinkStore.LoadByUrl(urlFile.Url);
                     var linkTexts = links.Select(o => o.Text).ToList();
+
+#if DEBUG
+                    Console.WriteLine("Loaded Links: " + urlFile.Url + "\n" + (DateTime.Now - time).TotalSeconds);
+                    time = DateTime.Now;
+#endif
 
                     IList<Token> tokens = parser.GetTokensAsync(linkTexts).GetAwaiter().GetResult();
 
@@ -72,26 +83,51 @@ namespace XiaoyaIndexer
                                                Positions = string.Join(",", token.Positions),
                                                UrlFileId = urlFile.UrlFileId,
                                                WordFrequency = token.WordFrequency,
-                                               OccurencesInTitle = token.OccurenceInTitle,
-                                               OccurencesInLinks = token.OccurenceInLinks,
+                                               OccurencesInTitle = token.OccurencesInTitle,
+                                               OccurencesInLinks = token.OccurencesInLinks,
+                                               OccurencesInHeaders = token.OccurencesInHeaders,
                                                Weight = ScoringHelper.CalculateIndexWeight(urlFile.Title,
                                                                                            urlFile.Content,
                                                                                            urlFile.Url,
                                                                                            urlFile.PublishDate,
-                                                                                           token.OccurenceInTitle,
-                                                                                           token.OccurenceInLinks,
+                                                                                           token.OccurencesInTitle,
+                                                                                           token.OccurencesInLinks,
                                                                                            linkTexts,
                                                                                            token.Word,
                                                                                            token.WordFrequency,
-                                                                                           /*
-                                                                                           mConfig.IndexStatStore.LoadByWord(token.Word)?.WordFrequency ?? 0,
-                                                                                           mConfig.IndexStatStore.LoadByWord(token.Word)?.DocumentFrequency ?? 0,
-                                                                                           mConfig.UrlFileStore.Count(),
-                                                                                           */
                                                                                            token.Positions),
                                            }).ToList();
 
+#if DEBUG
+                    Console.WriteLine("Generated Inverted Indices: " + urlFile.Url + "\n" + (DateTime.Now - time).TotalSeconds);
+                    time = DateTime.Now;
+#endif
+
+                    var headers = parser.GetHeadersAsync().GetAwaiter().GetResult();
+                    urlFile.HeaderTotalLength = headers.Sum(o => o.Length);
+                    urlFile.HeaderCount = headers.Count;
+
+                    urlFile.LinkCount = linkTexts.Count;
+                    urlFile.LinkTotalLength = linkTexts.Sum(o => o.Length);
+
+                    mConfig.UrlFileStore.Save(urlFile, false);
+
+#if DEBUG
+                    Console.WriteLine("Saved Header/Link Properties: " + urlFile.Url + "\n" + (DateTime.Now - time).TotalSeconds);
+                    time = DateTime.Now;
+#endif
+
                     mConfig.InvertedIndexStore.ClearAndSaveInvertedIndices(urlFile, invertedIndices);
+
+#if DEBUG
+                    Console.WriteLine("Saved Indices: " + urlFile.Url + "\n" + (DateTime.Now - time).TotalSeconds);
+                    time = DateTime.Now;
+#endif
+
+                    if (File.Exists(urlFile.FilePath))
+                    {
+                        File.Delete(urlFile.FilePath);
+                    }
 
                     mLogger.Log(nameof(SimpleIndexer), "Indexed Url: " + urlFile.Url);
                 }

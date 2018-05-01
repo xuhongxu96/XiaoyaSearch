@@ -32,7 +32,6 @@ namespace XiaoyaCrawler
         private SemaphoreSlim mFetchSemaphore;
         private object mStatusSyncLock = new object();
         private object mSaveSyncLock = new object();
-        private object mPushUrlSyncLock = new object();
         private ConcurrentDictionary<Task, bool> mTasks = new ConcurrentDictionary<Task, bool>();
 
         /// <summary>
@@ -56,7 +55,15 @@ namespace XiaoyaCrawler
             mSimilarContentJudger = similarContentManager;
             mUrlFilters = urlFilters;
             mLogger = new RuntimeLogger(Path.Combine(config.LogDirectory, "Crawler.Log"), true);
-            mErrorLogger = new RuntimeLogger(Path.Combine(config.LogDirectory, "Crawler Error.Log"), true);
+            mErrorLogger = new RuntimeLogger(Path.Combine(config.LogDirectory, "Crawler Error.Log"), false);
+        }
+
+        private void SafeDeleteUrlFile(UrlFile urlFile)
+        {
+            if (urlFile != null && File.Exists(urlFile.FilePath))
+            {
+                File.Delete(urlFile.FilePath);
+            }
         }
 
         protected void FetchUrlAsync(string url)
@@ -64,11 +71,12 @@ namespace XiaoyaCrawler
             mFetchSemaphore.Wait();
             var t = Task.Run(() =>
             {
-                mLogger.Log(nameof(Crawler), "Begin Crawl: " + url);
+                mLogger.Log(nameof(Crawler), "Begin Crawl: " + url, false);
+                UrlFile urlFile = null;
                 try
                 {
                     // Fetch Url
-                    var urlFile = mFetcher.FetchAsync(url).GetAwaiter().GetResult();
+                    urlFile = mFetcher.FetchAsync(url).GetAwaiter().GetResult();
                     if (urlFile == null)
                     {
                         // Fetched nothing
@@ -77,88 +85,88 @@ namespace XiaoyaCrawler
                         return;
                     }
 
-                    try
+                    // Parse fetched file
+                    var parseResult = mParser.ParseAsync(urlFile).GetAwaiter().GetResult();
+
+                    // Store parsed content
+                    urlFile.Title = parseResult.Title;
+                    urlFile.Content = parseResult.Content;
+                    urlFile.PublishDate = parseResult.PublishDate;
+
+                    var linkList = parseResult.Links.Select(o => new Link
                     {
-                        // Parse fetched file
-                        var parseResult = mParser.ParseAsync(urlFile).GetAwaiter().GetResult();
+                        Text = o.Text,
+                        Url = o.Url,
+                    }).ToList();
 
-                        // Store parsed content
-                        urlFile.Title = parseResult.Title;
-                        urlFile.Content = parseResult.Content;
-                        urlFile.PublishDate = parseResult.PublishDate;
+                    // Filter urls
+                    mConfig.LinkStore.FilterLinks(linkList);
 
-                        lock (mSaveSyncLock)
+                    foreach (var filter in mUrlFilters)
+                    {
+                        linkList = filter.Filter(linkList).Distinct().ToList();
+                    }
+
+                    lock (mSaveSyncLock)
+                    {
+#if DEBUG
+                    var time = DateTime.Now;
+#endif
+
+                        // Judge if there are other files that have similar content as this
+                        var sameUrlFile = mSimilarContentJudger.JudgeContent(urlFile);
+#if DEBUG
+                        Console.WriteLine("Judged Similar: " + url + "\n" + (DateTime.Now - time).TotalSeconds);
+                        time = DateTime.Now;
+#endif
+                        if (sameUrlFile != null)
                         {
-
-                            // Judge if there are other files that have similar content as this
-                            var sameUrlFile = mSimilarContentJudger.JudgeContent(urlFile);
-                            if (sameUrlFile != null)
-                            {
-                                // has same file, use short URL
-                                if (urlFile.Url.Length < sameUrlFile.Url.Length)
-                                {
-                                    mConfig.UrlFileStore.UpdateUrl(sameUrlFile.UrlFileId, urlFile.Url);
-                                    // Push back this url
-                                    mUrlFrontier.PushBackUrl(url);
-                                    // Remove that url
-                                    mUrlFrontier.RemoveUrl(sameUrlFile.Url);
-                                }
-                                else
-                                {
-                                    // Remove this url
-                                    mUrlFrontier.RemoveUrl(url);
-                                }
-                                return;
-                            }
-                            else
-                            {
-                                urlFile = mConfig.UrlFileStore.Save(urlFile);
-                            }
+                            // Has same UrlFile, remove this
+                            mUrlFrontier.RemoveUrl(urlFile.Url);
+                            SafeDeleteUrlFile(urlFile);
+                            return;
                         }
 
+                        urlFile = mConfig.UrlFileStore.Save(urlFile);
 
-                        var urls = parseResult.Links.Select(o => o.Url);
+                        foreach (var link in linkList)
+                        {
+                            link.UrlFileId = urlFile.UrlFileId;
+                        }
+#if DEBUG
+                        Console.WriteLine("Dealt with Similar: " + url + "\n" + (DateTime.Now - time).TotalSeconds);
+                        time = DateTime.Now;
+#endif
+                        var urls = linkList.Select(o => o.Url);
 
                         // Save links
-                        mConfig.LinkStore.ClearAndSaveLinksForUrlFile(urlFile.UrlFileId,
-                            parseResult.Links.Select(o => new Link
-                            {
-                                Text = o.Text,
-                                Url = o.Url,
-                                UrlFileId = urlFile.UrlFileId,
-                            }).ToList());
+                        mConfig.LinkStore.ClearAndSaveLinksForUrlFile(urlFile.UrlFileId, linkList);
+#if DEBUG
+                        time = DateTime.Now;
+#endif
+                        // Add newly-found urls
+                        mUrlFrontier.PushUrls(urls);
 
-                        // Filter urls
-                        foreach (var filter in mUrlFilters)
-                        {
-                            urls = filter.Filter(urls).Distinct();
-                        }
-                        
-                        lock (mPushUrlSyncLock)
-                        {
-                            // Add newly-found urls
-                            foreach (var parsedUrl in urls)
-                            {
-                                mUrlFrontier.PushUrl(parsedUrl);
-                            }
-
-                            // Push back this url
-                            mUrlFrontier.PushBackUrl(url);
-                        }
+                        // Push back this url
+                        mUrlFrontier.PushBackUrl(url);
+#if DEBUG
+                        Console.WriteLine("Pushed Links: " + url + "\n" + (DateTime.Now - time).TotalSeconds);
+                        time = DateTime.Now;
+#endif
                     }
-                    catch (NotSupportedException e)
-                    {
 
-                        // mLogger.LogException(nameof(Crawler), "Not supported file format: " + url, e);
-                        mErrorLogger.LogException(nameof(Crawler), "Not supported file format: " + url, e);
+                    mLogger.Log(nameof(Crawler), "End Crawl: " + url);
+                }
+                catch (NotSupportedException e)
+                {
 
-                        // Retry
-                        mUrlFrontier.PushBackUrl(url, true);
-                    }
-                    finally
-                    {
-                        File.Delete(urlFile.FilePath);
-                    }
+                    mLogger.LogException(nameof(Crawler), "Not supported file format: " + url, e, false);
+                    mErrorLogger.LogException(nameof(Crawler), "Not supported file format: " + url, e);
+
+                    // Retry
+                    mUrlFrontier.PushBackUrl(url, true);
+
+                    SafeDeleteUrlFile(urlFile);
                 }
                 catch (InvalidDataException e)
                 {
@@ -167,6 +175,8 @@ namespace XiaoyaCrawler
 
                     // Retry
                     mUrlFrontier.PushBackUrl(url, true);
+
+                    SafeDeleteUrlFile(urlFile);
                 }
                 catch (UriFormatException e)
                 {
@@ -174,13 +184,17 @@ namespace XiaoyaCrawler
                     mErrorLogger.LogException(nameof(Crawler), "Invalid Uri: " + url, e);
 
                     mUrlFrontier.RemoveUrl(url);
+
+                    SafeDeleteUrlFile(urlFile);
                 }
                 catch (IOException e)
                 {
-                    // mLogger.LogException(nameof(Crawler), "Failed to fetch: " + url, e);
+                    mLogger.LogException(nameof(Crawler), "Failed to fetch: " + url, e, false);
                     mErrorLogger.LogException(nameof(Crawler), "Failed to fetch: " + url, e);
 
                     mUrlFrontier.RemoveUrl(url);
+
+                    SafeDeleteUrlFile(urlFile);
                 }
                 catch (Exception e) when (
                         e is OperationCanceledException
@@ -196,10 +210,11 @@ namespace XiaoyaCrawler
 
                     // Retry
                     mUrlFrontier.PushBackUrl(url, true);
+
+                    SafeDeleteUrlFile(urlFile);
                 }
                 finally
                 {
-                    mLogger.Log(nameof(Crawler), "End Crawl: " + url);
                     mFetchSemaphore.Release();
                 }
             }).ContinueWith(task =>

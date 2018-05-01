@@ -9,6 +9,7 @@ using XiaoyaStore.Cache;
 using XiaoyaStore.Data;
 using XiaoyaStore.Data.Model;
 using XiaoyaStore.Helper;
+using Z.EntityFramework.Plus;
 
 namespace XiaoyaStore.Store
 {
@@ -137,7 +138,7 @@ namespace XiaoyaStore.Store
             }
         }
 
-        public UrlFile Save(UrlFile urlFile)
+        public UrlFile Save(UrlFile urlFile, bool isUpdateContent = true)
         {
             using (var context = NewContext())
             {
@@ -154,22 +155,28 @@ namespace XiaoyaStore.Store
                 }
                 else
                 {
-                    // Exists this url, then judge if two fetched file is same
-                    if ((urlFile.Title != "" && oldUrlFile.Title != urlFile.Title)
-                            || (urlFile.Content != "" && oldUrlFile.Content != urlFile.Content))
+                    if (isUpdateContent)
                     {
-                        // Updated
-                        oldUrlFile.UpdatedAt = DateTime.Now;
-                        
-                        oldUrlFile.IndexStatus = UrlFile.UrlFileIndexStatus.NotIndexed;
+                        // Exists this url, then judge if two fetched file is same
+                        if ((urlFile.Title != "" && oldUrlFile.Title != urlFile.Title)
+                                || (urlFile.Content != "" && oldUrlFile.Content != urlFile.Content))
+                        {
+                            // Updated
+                            oldUrlFile.UpdatedAt = DateTime.Now;
+
+                            oldUrlFile.IndexStatus = UrlFile.UrlFileIndexStatus.NotIndexed;
+                        }
+
+                        var updateInterval = DateTime.Now.Subtract(oldUrlFile.UpdatedAt);
+                        oldUrlFile.UpdateInterval
+                            = (oldUrlFile.UpdateInterval * 3 + updateInterval) / 4;
                     }
 
-                    var updateInterval = DateTime.Now.Subtract(oldUrlFile.UpdatedAt);
-                    oldUrlFile.UpdateInterval
-                        = (oldUrlFile.UpdateInterval * 3 + updateInterval) / 4;
-
-                    // Delete old file
-                    File.Delete(oldUrlFile.FilePath);
+                    if (oldUrlFile.FilePath != urlFile.FilePath)
+                    {
+                        // Delete old file
+                        File.Delete(oldUrlFile.FilePath);
+                    }
 
                     // Update info
                     oldUrlFile.FilePath = urlFile.FilePath;
@@ -179,6 +186,10 @@ namespace XiaoyaStore.Store
                     oldUrlFile.PublishDate = urlFile.PublishDate;
                     oldUrlFile.Charset = urlFile.Charset;
                     oldUrlFile.MimeType = urlFile.MimeType;
+                    oldUrlFile.HeaderCount = urlFile.HeaderCount;
+                    oldUrlFile.HeaderTotalLength = urlFile.HeaderTotalLength;
+                    oldUrlFile.LinkCount = urlFile.LinkCount;
+                    oldUrlFile.LinkTotalLength = urlFile.LinkTotalLength;
 
                     urlFile = oldUrlFile;
                 }
@@ -207,27 +218,6 @@ namespace XiaoyaStore.Store
                 {
                     yield return item;
                 }
-            }
-        }
-
-        public UrlFile UpdateUrl(int id, string url)
-        {
-            using (var context = NewContext())
-            {
-                var urlFile = context.UrlFiles.Single(o => o.UrlFileId == id);
-
-                var sameUrl = context.UrlFiles.SingleOrDefault(o => o.Url == url);
-                if (sameUrl != null)
-                {
-                    context.UrlFiles.Remove(urlFile);
-                }
-                else
-                {
-                    urlFile.Url = url;
-                }
-                context.SaveChanges();
-
-                return urlFile;
             }
         }
     }

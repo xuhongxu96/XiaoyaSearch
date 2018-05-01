@@ -34,7 +34,7 @@ namespace XiaoyaCrawler.Parser
                 FilePath = urlFile.FilePath,
             };
 
-            var content = await parser.GetTextContentAsync();
+            var content = await parser.GetContentAsync();
 
             if (content.Trim() == "")
             {
@@ -44,7 +44,7 @@ namespace XiaoyaCrawler.Parser
             return new ParseResult
             {
                 Title = await parser.GetTitleAsync(),
-                Content = content,
+                Content = await parser.GetTextContentAsync(),
                 Links = await parser.GetLinksAsync(),
                 PublishDate = await parser.GetPublishDateAsync(),
             };

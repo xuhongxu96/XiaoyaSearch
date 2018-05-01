@@ -95,6 +95,11 @@ namespace XiaoyaFileParser
             return await mCurrentParser?.GetPublishDateAsync();
         }
 
+        public async Task<IList<string>> GetHeadersAsync()
+        {
+            return await mCurrentParser?.GetHeadersAsync();
+        }
+
         public static bool IsSupported(string mimeType)
         {
             switch (mimeType)

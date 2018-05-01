@@ -81,16 +81,15 @@ namespace XiaoyaStore.Data.Model
                 UpdateIntervalSeconds = value.TotalSeconds;
             }
         }
-        [ConcurrencyCheck]
+
+        public int LinkCount { get; set; } = 0;
+        public int LinkTotalLength { get; set; } = 0;
+        public int HeaderCount { get; set; } = 0;
+        public int HeaderTotalLength { get; set; } = 0;
+
         public DateTime PublishDate { get; set; }
-        /// <summary>
-        /// Updated at
-        /// </summary>
-        [ConcurrencyCheck]
+
         public DateTime UpdatedAt { get; set; }
-        /// <summary>
-        /// Created at
-        /// </summary>
         public DateTime CreatedAt { get; set; }
     }
 }

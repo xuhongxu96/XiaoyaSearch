@@ -18,10 +18,10 @@ namespace XiaoyaCrawler.UrlFrontier
         /// <returns>Url to be fetched</returns>
         UrlFrontierItem PopUrl();
         /// <summary>
-        /// Push a new url
+        /// Push new urls
         /// </summary>
-        /// <param name="url">New url</param>
-        void PushUrl(string url);
+        /// <param name="urls">New urls</param>
+        void PushUrls(IEnumerable<string> urls);
         /// <summary>
         /// Push back a popped url
         /// </summary>

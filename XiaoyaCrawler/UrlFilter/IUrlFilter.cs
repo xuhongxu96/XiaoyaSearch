@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using XiaoyaStore.Data.Model;
 
 namespace XiaoyaCrawler.UrlFilter
 {
@@ -12,10 +13,10 @@ namespace XiaoyaCrawler.UrlFilter
     public interface IUrlFilter
     {
         /// <summary>
-        /// Filter urls
+        /// Filter urls of links
         /// </summary>
-        /// <param name="urls">Urls to be filtered</param>
+        /// <param name="links">Links to be filtered</param>
         /// <returns>Filtered urls</returns>
-        IEnumerable<string> Filter(IEnumerable<string> urls);
+        IEnumerable<Link> Filter(IEnumerable<Link> links);
     }
 }

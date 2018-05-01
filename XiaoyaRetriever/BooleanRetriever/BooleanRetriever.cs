@@ -20,7 +20,7 @@ namespace XiaoyaRetriever.BooleanRetriever
         protected IEnumerable<int> RetrieveWord(Word word)
         {
             return from index in mConfig.InvertedIndexStore.LoadUrlFileIdsByWord(word.Value)
-                   select index.UrlFileId;
+                   select index;
         }
 
         protected IEnumerable<int> RetrieveNot(Not notExp)

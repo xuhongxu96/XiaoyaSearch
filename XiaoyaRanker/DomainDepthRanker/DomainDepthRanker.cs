@@ -17,10 +17,17 @@ namespace XiaoyaRanker.DomainDepthRanker
 
         public IEnumerable<double> Rank(IEnumerable<int> urlFileIds, IEnumerable<string> words)
         {
-            foreach(var id in urlFileIds)
+            foreach (var id in urlFileIds)
             {
                 var urlFile = mConfig.UrlFileStore.LoadById(id);
-                yield return Math.Exp(-UrlHelper.GetDomainDepth(urlFile.Url));
+                if (urlFile == null)
+                {
+                    yield return 0;
+                }
+                else
+                {
+                    yield return Math.Exp(-UrlHelper.GetDomainDepth(urlFile.Url));
+                }
             }
         }
     }

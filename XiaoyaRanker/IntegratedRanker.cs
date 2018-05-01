@@ -27,7 +27,7 @@ namespace XiaoyaRanker
 
             for (int i = 0; i < scores1.Count; ++i)
             {
-                yield return scores1[i] + 100 * scores2[i] /*+ scores3[i]*/;
+                yield return (scores1[i] / 10 + 5 * scores2[i]) / 6 /*+ scores3[i]*/;
             }
         }
     }

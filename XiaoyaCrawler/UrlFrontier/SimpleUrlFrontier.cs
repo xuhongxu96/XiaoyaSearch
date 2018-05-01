@@ -50,10 +50,10 @@ namespace XiaoyaCrawler.UrlFrontier
         /// Push a new url
         /// </summary>
         /// <param name="url">New url</param>
-        public void PushUrl(string url)
+        public void PushUrls(IEnumerable<string> urls)
         {
-            mConfig.UrlFrontierItemStore.Push(url);
-            mLogger.Log(nameof(SimpleUrlFrontier), "Pushed Url: " + url);
+            mConfig.UrlFrontierItemStore.PushUrls(urls);
+            mLogger.Log(nameof(SimpleUrlFrontier), "Pushed Urls");
         }
 
         /// <summary>

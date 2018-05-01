@@ -8,14 +8,13 @@ namespace XiaoyaStore.Store
 {
     public interface IUrlFileStore
     {
-        UrlFile Save(UrlFile urlFile);
+        UrlFile Save(UrlFile urlFile, bool isUpdateContent = true);
         void RestartIndex();
         UrlFile LoadById(int id);
         UrlFile LoadByUrl(string url);
         IEnumerable<UrlFile> LoadByHash(string hash);
         UrlFile LoadByFilePath(string path);
         UrlFile LoadAnyForIndex();
-        UrlFile UpdateUrl(int id, string url);
         int Count();
         void CacheUrlFiles(IEnumerable<int> urlFileIds);
     }

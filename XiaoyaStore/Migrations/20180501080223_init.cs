@@ -30,6 +30,7 @@ namespace XiaoyaStore.Migrations
                 {
                     InvertedIndexId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    OccurencesInHeaders = table.Column<int>(nullable: false),
                     OccurencesInLinks = table.Column<int>(nullable: false),
                     OccurencesInTitle = table.Column<int>(nullable: false),
                     Positions = table.Column<string>(nullable: true),
@@ -59,6 +60,20 @@ namespace XiaoyaStore.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "SameUrls",
+                columns: table => new
+                {
+                    SameUrlId = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    RawUrl = table.Column<string>(type: "nvarchar(300)", nullable: true),
+                    Url = table.Column<string>(type: "nvarchar(300)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_SameUrls", x => x.SameUrlId);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "UrlFiles",
                 columns: table => new
                 {
@@ -69,7 +84,11 @@ namespace XiaoyaStore.Migrations
                     CreatedAt = table.Column<DateTime>(nullable: false),
                     FileHash = table.Column<string>(type: "nvarchar(300)", nullable: true),
                     FilePath = table.Column<string>(type: "nvarchar(300)", nullable: true),
+                    HeaderCount = table.Column<int>(nullable: false),
+                    HeaderTotalLength = table.Column<int>(nullable: false),
                     IndexStatus = table.Column<int>(nullable: false),
+                    LinkCount = table.Column<int>(nullable: false),
+                    LinkTotalLength = table.Column<int>(nullable: false),
                     MimeType = table.Column<string>(type: "nvarchar(50)", nullable: true),
                     PageRank = table.Column<double>(nullable: false),
                     PublishDate = table.Column<DateTime>(nullable: false),
@@ -167,6 +186,18 @@ namespace XiaoyaStore.Migrations
                 column: "UrlFileId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_SameUrls_RawUrl",
+                table: "SameUrls",
+                column: "RawUrl",
+                unique: true,
+                filter: "[RawUrl] IS NOT NULL");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_SameUrls_Url",
+                table: "SameUrls",
+                column: "Url");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_UrlFiles_FileHash",
                 table: "UrlFiles",
                 column: "FileHash");
@@ -206,6 +237,11 @@ namespace XiaoyaStore.Migrations
                 columns: new[] { "IndexStatus", "UpdatedAt" });
 
             migrationBuilder.CreateIndex(
+                name: "IX_UrlFiles_UrlFileId_PageRank",
+                table: "UrlFiles",
+                columns: new[] { "UrlFileId", "PageRank" });
+
+            migrationBuilder.CreateIndex(
                 name: "IX_UrlFrontierItems_IsPopped",
                 table: "UrlFrontierItems",
                 column: "IsPopped");
@@ -218,9 +254,9 @@ namespace XiaoyaStore.Migrations
                 filter: "[Url] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
-                name: "IX_UrlFrontierItems_PlannedTime_IsPopped",
+                name: "IX_UrlFrontierItems_IsPopped_PlannedTime",
                 table: "UrlFrontierItems",
-                columns: new[] { "PlannedTime", "IsPopped" });
+                columns: new[] { "IsPopped", "PlannedTime" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_UrlHostStats_Host",
@@ -240,6 +276,9 @@ namespace XiaoyaStore.Migrations
 
             migrationBuilder.DropTable(
                 name: "Links");
+
+            migrationBuilder.DropTable(
+                name: "SameUrls");
 
             migrationBuilder.DropTable(
                 name: "UrlFiles");
