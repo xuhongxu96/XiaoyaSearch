@@ -107,6 +107,8 @@ namespace XiaoyaFileParser
                 case "text/html":
                 case "text/plain":
                 case "application/pdf":
+                case "application/vnd.openxmlformats-officedocument.wordprocessingml.document":
+                case "application/vnd.openxmlformats-officedocument.presentationml.presentation":
                     return true;
                 default:
                     return false;
@@ -123,6 +125,10 @@ namespace XiaoyaFileParser
                     return new TextFileParser(config);
                 case "application/pdf":
                     return new PdfFileParser(config);
+                case "application/vnd.openxmlformats-officedocument.wordprocessingml.document":
+                    return new DocxFileParser(config);
+                case "application/vnd.openxmlformats-officedocument.presentationml.presentation":
+                    return new PptxFileParser(config);
                 default:
                     throw new NotSupportedException(mimeType + " not supported");
             }

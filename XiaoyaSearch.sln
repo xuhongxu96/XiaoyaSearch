@@ -41,11 +41,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XiaoyaRankerUnitTest", "Xia
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XiaoyaIndexerInterface", "XiaoyaIndexerInterface\XiaoyaIndexerInterface.csproj", "{78932E20-62B6-42AA-B3FA-6E34593E3FC6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XiaoyaSearch", "XiaoyaSearch\XiaoyaSearch.csproj", "{A276B902-409B-4786-9485-AA8C160786A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XiaoyaSearch", "XiaoyaSearch\XiaoyaSearch.csproj", "{A276B902-409B-4786-9485-AA8C160786A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XiaoyaSearchUnitTest", "XiaoyaSearchUnitTest\XiaoyaSearchUnitTest.csproj", "{114ADAFB-A920-4A80-8507-7924B64072D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XiaoyaSearchUnitTest", "XiaoyaSearchUnitTest\XiaoyaSearchUnitTest.csproj", "{114ADAFB-A920-4A80-8507-7924B64072D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XiaoyaSearchInterface", "XiaoyaSearchInterface\XiaoyaSearchInterface.csproj", "{F02615D8-875C-4804-B3C3-97B90DE9AB94}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XiaoyaSearchInterface", "XiaoyaSearchInterface\XiaoyaSearchInterface.csproj", "{F02615D8-875C-4804-B3C3-97B90DE9AB94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XiaoyaFileParserUnitTest", "XiaoyaFileParserUnitTest\XiaoyaFileParserUnitTest.csproj", "{BCFEB0E6-05B7-4DA6-A13D-2FF46808BD0A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -141,6 +143,10 @@ Global
 		{F02615D8-875C-4804-B3C3-97B90DE9AB94}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F02615D8-875C-4804-B3C3-97B90DE9AB94}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F02615D8-875C-4804-B3C3-97B90DE9AB94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCFEB0E6-05B7-4DA6-A13D-2FF46808BD0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCFEB0E6-05B7-4DA6-A13D-2FF46808BD0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCFEB0E6-05B7-4DA6-A13D-2FF46808BD0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCFEB0E6-05B7-4DA6-A13D-2FF46808BD0A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

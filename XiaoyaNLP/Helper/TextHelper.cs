@@ -50,7 +50,7 @@ namespace XiaoyaNLP.Helper
         {
             if (input == null) return null;
 
-            var result = FullWidthCharToHalfWidthChar(input);
+            var result = FullWidthCharToHalfWidthChar(input.Trim());
             result = RemoveSpecialCharacters(result);
             result = result.ToLower();
 
