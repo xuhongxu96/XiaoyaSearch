@@ -12,4 +12,8 @@
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="JiebaNet.Segmenter" Version="1.0.0.3" />
+  </ItemGroup>
+
 </Project>
