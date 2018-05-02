@@ -40,9 +40,9 @@ namespace XiaoyaRankerUnitTest
 
             var scores = ranker.Rank(from urlFile in urlFiles select urlFile.UrlFileId, new List<string>
             {
-                "工作",
-                "国家政策",
-                "财政",
+                "孔子",
+                "学院",
+                "奖学金",
             }).ToList();
 
             var maxScore = scores.Max();
@@ -56,7 +56,7 @@ namespace XiaoyaRankerUnitTest
 
                 if (scores[i] == maxScore)
                 {
-                    Assert.AreEqual("http://news.bnu.edu.cn/ztxw/jzgjdxxzit/", urlFiles[i].Url);
+                    Assert.AreEqual("http://ocia.bnu.edu.cn/", urlFiles[i].Url);
                 }
             }
 

@@ -61,7 +61,14 @@ namespace XiaoyaStore.Store
                         });
                     }
                     context.UrlHostStats.Delete();
-                    context.BulkInsert(hostStats);
+                    if (context.Database.IsSqlServer())
+                    {
+                        context.BulkInsert(hostStats);
+                    }
+                    else
+                    {
+                        context.AddRange(hostStats);
+                    }
                     context.SaveChanges();
                 }
 
@@ -123,7 +130,7 @@ namespace XiaoyaStore.Store
             {
 #if DEBUG
                 var time = DateTime.Now;
-                Console.WriteLine("Pushing Urls: " + "\n" + (DateTime.Now - time).TotalSeconds); 
+                Console.WriteLine("Pushing Urls: " + "\n" + (DateTime.Now - time).TotalSeconds);
 #endif
                 context.ChangeTracker.AutoDetectChangesEnabled = false;
 
@@ -134,7 +141,7 @@ namespace XiaoyaStore.Store
                 var newUrls = urls.Except(existedUrlSet).ToList();
 
 #if DEBUG
-                Console.WriteLine("Got New Urls: " + "\n" + (DateTime.Now - time).TotalSeconds); 
+                Console.WriteLine("Got New Urls: " + "\n" + (DateTime.Now - time).TotalSeconds);
                 time = DateTime.Now;
 #endif
                 var urlList = new List<UrlFrontierItem>();
@@ -159,7 +166,7 @@ namespace XiaoyaStore.Store
 
                     mHostStat.AddOrUpdate(host, 1, (k, v) => v + 1);
 
-                    item.PlannedTime = item.PlannedTime.AddSeconds(mHostStat[host] * new Random().NextDouble() * 30.0);
+                    item.PlannedTime = item.PlannedTime.AddSeconds(mHostStat[host] * 20.0);
 
                     // Don't plan too late
                     if (item.PlannedTime > DateTime.Now.AddDays(3))
@@ -169,19 +176,24 @@ namespace XiaoyaStore.Store
 
                     urlList.Add(item);
                 }
-                context.BulkInsert(urlList);
+                if (context.Database.IsSqlServer())
+                {
+                    context.BulkInsert(urlList);
+                }
+                else
+                {
+                    context.AddRange(urlList);
+                }
 #if DEBUG
-                Console.WriteLine("Inserted new urls: " + "\n" + (DateTime.Now - time).TotalSeconds); 
+                Console.WriteLine("Inserted new urls: " + "\n" + (DateTime.Now - time).TotalSeconds);
                 time = DateTime.Now;
 #endif
                 try
                 {
                     context.SaveChanges();
                 }
-                catch (SqlException e)
-                {
-                    var t = e;
-                }
+                catch (DbUpdateException)
+                { }
             }
         }
 
@@ -278,9 +290,15 @@ namespace XiaoyaStore.Store
                 item.IsPopped = true;
                 item.UpdatedAt = DateTime.Now;
 
-                context.SaveChanges();
-
-                return item;
+                try
+                {
+                    context.SaveChanges();
+                    return item;
+                }
+                catch (DbUpdateException e)
+                {
+                    return null;
+                }
             }
         }
 

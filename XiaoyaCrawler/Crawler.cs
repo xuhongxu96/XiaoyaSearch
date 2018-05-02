@@ -62,9 +62,10 @@ namespace XiaoyaCrawler
         private void SafeDeleteUrlFile(UrlFile urlFile)
         {
             if (urlFile != null
-                && urlFile.UrlFileId != 0
+                && urlFile.UrlFileId == 0
                 && File.Exists(urlFile.FilePath))
             {
+                mLogger.Log(nameof(Crawler), "Delete UrlFile: " + urlFile.UrlFileId + "  " + urlFile.Url + "  " + urlFile.FilePath);
                 File.Delete(urlFile.FilePath);
             }
         }

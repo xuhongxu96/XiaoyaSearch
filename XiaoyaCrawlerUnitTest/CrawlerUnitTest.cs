@@ -69,6 +69,7 @@ namespace XiaoyaCrawlerUnitTest
                 UrlFileStore = new UrlFileStore(options),
                 UrlFrontierItemStore = new UrlFrontierItemStore(options),
                 LinkStore = new LinkStore(options),
+                SameUrlStore = new SameUrlStore(options),
                 FetchDirectory = fetchDir,
                 LogDirectory = logDir,
                 MaxFetchingConcurrency = 100,
@@ -76,7 +77,7 @@ namespace XiaoyaCrawlerUnitTest
 
             var urlFilters = new List<IUrlFilter>
             {
-                new DomainUrlFilter(@"bnu\.edu\.cn(/[a-zA-Z0-9/]*)?$"),
+                new DomainUrlFilter(@"bnu\.edu\.cn"),
             };
 
             var crawler = new Crawler(
@@ -93,7 +94,7 @@ namespace XiaoyaCrawlerUnitTest
                 crawler.StartAsync().GetAwaiter().GetResult();
             });
 
-            Thread.Sleep(8000);
+            Thread.Sleep(2000);
 
             await crawler.StopAsync();
 
@@ -104,6 +105,15 @@ namespace XiaoyaCrawlerUnitTest
                 urlFileCount = context.UrlFiles.Count();
                 Assert.IsTrue(urlFileCount > 0);
                 Assert.IsTrue(context.UrlFrontierItems.Count() > 0);
+
+                foreach (var urlFile in context.UrlFiles)
+                {
+                    if (!File.Exists(urlFile.FilePath))
+                    {
+                        Assert.Fail(urlFile.Url + ": " + urlFile.FilePath);
+                    }
+                }
+
             }
 
             lock (RuntimeLogger.ReadLock)

@@ -188,7 +188,7 @@ namespace XiaoyaStoreUnitTest
                 {
                     Assert.AreEqual(1, context.UrlFiles.Count());
                     var urlFile = context.UrlFiles.Single();
-                    Assert.AreEqual(TimeSpan.FromDays(5), urlFile.UpdateInterval);
+                    Assert.AreEqual(TimeSpan.FromDays(1), urlFile.UpdateInterval);
                 }
 
                 urlFileStore.Save(new XiaoyaStore.Data.Model.UrlFile
@@ -204,7 +204,7 @@ namespace XiaoyaStoreUnitTest
                 {
                     Assert.AreEqual(1, context.UrlFiles.Count());
                     var urlFile = context.UrlFiles.Single();
-                    Assert.AreNotEqual(TimeSpan.FromDays(5), urlFile.UpdateInterval);
+                    Assert.AreNotEqual(TimeSpan.FromDays(1), urlFile.UpdateInterval);
                 }
             }
             finally

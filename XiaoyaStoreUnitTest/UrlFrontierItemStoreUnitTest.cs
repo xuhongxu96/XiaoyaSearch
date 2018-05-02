@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using XiaoyaStore.Data;
 using XiaoyaStore.Data.Model;
@@ -427,10 +428,10 @@ namespace XiaoyaStoreUnitTest
                 Assert.AreEqual("c", item.Url);
 
                 item = urlFrontierItemStore.PopUrlForCrawl();
-                Assert.AreEqual("b", item.Url);
+                Assert.AreEqual("a", item.Url);
 
                 item = urlFrontierItemStore.PopUrlForCrawl();
-                Assert.AreEqual("a", item.Url);
+                Assert.AreEqual("b", item.Url);
 
                 item = urlFrontierItemStore.PopUrlForCrawl();
                 Assert.IsNull(item);
@@ -498,7 +499,21 @@ namespace XiaoyaStoreUnitTest
                     MimeType = "text/html",
                 });
 
-                urlFrontierItemStore.PushUrls(new List<string> { "http://a.com/c", "http://a.com/b", "http://c.com/d", "http://b.com/" });
+                urlFrontierItemStore.PushUrls(new List<string> { "http://a.com/c" });
+                Thread.Sleep(10);
+                urlFrontierItemStore.PushUrls(new List<string> { "http://a.com/b" });
+                Thread.Sleep(10);
+                urlFrontierItemStore.PushUrls(new List<string> { "http://c.com/d" });
+                Thread.Sleep(10);
+                urlFrontierItemStore.PushUrls(new List<string> { "http://b.com/" });
+
+                using (var context = new XiaoyaSearchContext(options))
+                {
+                    foreach (var t in context.UrlFrontierItems.OrderBy(o => o.PlannedTime))
+                    {
+                        Console.WriteLine(t.Url + " " + t.PlannedTime);
+                    }
+                }
 
                 var item = urlFrontierItemStore.PopUrlForCrawl();
                 Assert.AreEqual("http://b.com/", item.Url);

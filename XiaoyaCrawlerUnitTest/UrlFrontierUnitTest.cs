@@ -137,8 +137,8 @@ namespace XiaoyaCrawlerUnitTest
         [TestMethod]
         public void TestConcurrent()
         {
-            const int concurrentN = 100;
-            const int urlN = 100;
+            const int concurrentN = 50;
+            const int urlN = 20;
 
             bool isDeleted = false;
             while (!isDeleted)
@@ -177,16 +177,18 @@ namespace XiaoyaCrawlerUnitTest
             }
             var tasks = new List<Task>();
 
+            var urlFrontier = new SimpleUrlFrontier(config);
+
             for (int i = 0; i < concurrentN; ++i)
             {
+                int tempI = i;
                 var task = Task.Run(() =>
                 {
-                    var urlFrontier = new SimpleUrlFrontier(config);
-
                     for (int j = 0; j < urlN; ++j)
                     {
+                        int data = tempI * urlN + j;
+                        urlFrontier.PushUrls(new List<string> { data.ToString() });
                         urlFrontier.PopUrl();
-                        urlFrontier.PushUrls(new List<string> { j.ToString() });
                     }
                 });
                 tasks.Add(task);
@@ -194,27 +196,29 @@ namespace XiaoyaCrawlerUnitTest
 
             Task.WaitAll(tasks.ToArray());
 
+            while (urlFrontier.PopUrl() != null) ;
+
             using (var context = new XiaoyaSearchContext(options))
             {
-                Assert.AreEqual(urlN, context.UrlFrontierItems.Count());
+                Assert.AreEqual(urlN * concurrentN, context.UrlFrontierItems.Count());
             }
 
-            var mark = new int[urlN];
+            var mark = new int[urlN * concurrentN];
 
             lock (RuntimeLogger.ReadLock)
             {
                 var logFile = Path.Combine(logDir, "Crawler.log");
                 foreach (var line in File.ReadLines(logFile))
                 {
-                    if (line.StartsWith("Pushed Url: "))
+                    if (line.StartsWith("Popped Url: "))
                     {
-                        var url = line.Substring("Pushed Url: ".Length);
-                        mark[int.Parse(url)]++;
+                        var url = line.Substring("Popped Url: ".Length);
+                        mark[int.Parse(url)] = 1;
                     }
                 }
             }
 
-            Assert.IsTrue(mark.All(o => o == concurrentN));
+            Assert.IsTrue(mark.All(o => o == 1));
 
         }
     }
