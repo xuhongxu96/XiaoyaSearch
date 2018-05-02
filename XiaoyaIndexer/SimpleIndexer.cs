@@ -131,6 +131,13 @@ namespace XiaoyaIndexer
 
                     mLogger.Log(nameof(SimpleIndexer), "Indexed Url: " + urlFile.Url);
                 }
+                catch (FileNotFoundException e)
+                {
+                    mLogger.LogException(nameof(SimpleIndexer), "Missing UrlFile: " + urlFile.Url, e);
+                    mErrorLogger.LogException(nameof(SimpleIndexer), "Missing UrlFile: " + urlFile.Url, e);
+
+                    mConfig.UrlFileStore.ReCrawl(urlFile);
+                }
                 catch (Exception e)
                 {
                     mLogger.LogException(nameof(SimpleIndexer), "Failed to index url: " + urlFile.Url, e);

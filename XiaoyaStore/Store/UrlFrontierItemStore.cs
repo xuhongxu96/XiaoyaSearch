@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -173,7 +174,14 @@ namespace XiaoyaStore.Store
                 Console.WriteLine("Inserted new urls: " + "\n" + (DateTime.Now - time).TotalSeconds); 
                 time = DateTime.Now;
 #endif
-                context.SaveChanges();
+                try
+                {
+                    context.SaveChanges();
+                }
+                catch (SqlException e)
+                {
+                    var t = e;
+                }
             }
         }
 

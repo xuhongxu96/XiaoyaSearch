@@ -17,5 +17,6 @@ namespace XiaoyaStore.Store
         UrlFile LoadAnyForIndex();
         int Count();
         void CacheUrlFiles(IEnumerable<int> urlFileIds);
+        void ReCrawl(UrlFile urlFile);
     }
 }

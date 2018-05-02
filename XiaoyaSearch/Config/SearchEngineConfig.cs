@@ -12,7 +12,7 @@ namespace XiaoyaSearch.Config
     public class SearchEngineConfig
     {
         public ITextSegmenter TextSegmenter { get; set; }
-            = new MaxMatchSegmenter();
+            = new JiebaSegmenter(false);
 
         public IUrlFileStore UrlFileStore { get; set; }
         public IIndexStatStore IndexStatStore { get; set; }

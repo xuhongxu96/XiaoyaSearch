@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -60,7 +61,9 @@ namespace XiaoyaCrawler
 
         private void SafeDeleteUrlFile(UrlFile urlFile)
         {
-            if (urlFile != null && File.Exists(urlFile.FilePath))
+            if (urlFile != null
+                && urlFile.UrlFileId != 0
+                && File.Exists(urlFile.FilePath))
             {
                 File.Delete(urlFile.FilePath);
             }
@@ -100,60 +103,57 @@ namespace XiaoyaCrawler
                     }).ToList();
 
                     // Filter urls
-                    mConfig.LinkStore.FilterLinks(linkList);
-
                     foreach (var filter in mUrlFilters)
                     {
-                        linkList = filter.Filter(linkList).Distinct().ToList();
+                        linkList = filter.Filter(linkList).ToList();
                     }
-
-                    lock (mSaveSyncLock)
-                    {
+                    mConfig.LinkStore.FilterLinks(linkList);
 #if DEBUG
                     var time = DateTime.Now;
 #endif
-
+                    lock (mSaveSyncLock)
+                    {
                         // Judge if there are other files that have similar content as this
-                        var sameUrlFile = mSimilarContentJudger.JudgeContent(urlFile);
+                        var (sameUrl, sameContent) = mSimilarContentJudger.JudgeContent(urlFile);
 #if DEBUG
                         Console.WriteLine("Judged Similar: " + url + "\n" + (DateTime.Now - time).TotalSeconds);
                         time = DateTime.Now;
 #endif
-                        if (sameUrlFile.Url != null)
+                        if (sameUrl != null)
                         {
                             // Has same UrlFile, remove this
                             mUrlFrontier.RemoveUrl(urlFile.Url);
                             SafeDeleteUrlFile(urlFile);
                             return;
                         }
-
-                        urlFile = mConfig.UrlFileStore.Save(urlFile);
-
-                        foreach (var link in linkList)
-                        {
-                            link.UrlFileId = urlFile.UrlFileId;
-                        }
-#if DEBUG
-                        Console.WriteLine("Saved UrlFile: " + url + "\n" + (DateTime.Now - time).TotalSeconds);
-                        time = DateTime.Now;
-#endif
-                        var urls = linkList.Select(o => o.Url);
-
-                        // Save links
-                        mConfig.LinkStore.ClearAndSaveLinksForUrlFile(urlFile.UrlFileId, linkList);
-#if DEBUG
-                        time = DateTime.Now;
-#endif
-                        // Add newly-found urls
-                        mUrlFrontier.PushUrls(urls);
-
-                        // Push back this url
-                        mUrlFrontier.PushBackUrl(url);
-#if DEBUG
-                        Console.WriteLine("Pushed Links: " + url + "\n" + (DateTime.Now - time).TotalSeconds);
-                        time = DateTime.Now;
-#endif
                     }
+
+                    urlFile = mConfig.UrlFileStore.Save(urlFile);
+
+                    foreach (var link in linkList)
+                    {
+                        link.UrlFileId = urlFile.UrlFileId;
+                    }
+#if DEBUG
+                    Console.WriteLine("Saved UrlFile: " + url + "\n" + (DateTime.Now - time).TotalSeconds);
+                    time = DateTime.Now;
+#endif
+                    var urls = linkList.Select(o => o.Url).Distinct();
+
+                    // Save links
+                    mConfig.LinkStore.ClearAndSaveLinksForUrlFile(urlFile.UrlFileId, linkList);
+#if DEBUG
+                     time = DateTime.Now;
+#endif
+                    // Add newly-found urls
+                    mUrlFrontier.PushUrls(urls);
+
+                    // Push back this url
+                    mUrlFrontier.PushBackUrl(url);
+#if DEBUG
+                    Console.WriteLine("Pushed Links: " + url + "\n" + (DateTime.Now - time).TotalSeconds);
+                    time = DateTime.Now;
+#endif
 
                     mLogger.Log(nameof(Crawler), "End Crawl: " + url);
                 }

@@ -222,6 +222,26 @@ namespace XiaoyaStore.Store
             }
         }
 
+        public void ReCrawl(UrlFile urlFile)
+        {
+            using (var context = NewContext())
+            {
+                context.UrlFiles.Where(o => o.UrlFileId == urlFile.UrlFileId)
+                    .Update(o => new UrlFile
+                    {
+                        Content = "",
+                    });
+
+                context.UrlFrontierItems.Where(o => o.Url == urlFile.Url)
+                    .Update(o => new UrlFrontierItem
+                    {
+                        PlannedTime = DateTime.Now,
+                    });
+
+                context.SaveChanges();
+            }
+        }
+
         public IEnumerable<(string Url, string Content)> LoadByHash(string hash)
         {
             using (var context = NewContext())
