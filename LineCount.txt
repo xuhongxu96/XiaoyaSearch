@@ -25,7 +25,7 @@
     36 XiaoyaCrawler/UrlFrontier/IUrlFrontier.cs
     75 XiaoyaCrawler/UrlFrontier/SimpleUrlFrontier.cs
     46 XiaoyaCrawlerInterface/CrawlerArguments.cs
-    70 XiaoyaCrawlerInterface/Program.cs
+    77 XiaoyaCrawlerInterface/Program.cs
    137 XiaoyaCrawlerUnitTest/CrawlerUnitTest.cs
    107 XiaoyaCrawlerUnitTest/FetcherUnitTest.cs
    128 XiaoyaCrawlerUnitTest/ParserUnitTest.cs
@@ -36,10 +36,13 @@
     13 XiaoyaFileParser/Model/LinkInfo.cs
     17 XiaoyaFileParser/Model/Token.cs
    233 XiaoyaFileParser/Parsers/BaseParser.cs
+    95 XiaoyaFileParser/Parsers/DocxFileParser.cs
    162 XiaoyaFileParser/Parsers/HtmlFileParser.cs
     46 XiaoyaFileParser/Parsers/PdfFileParser.cs
+   211 XiaoyaFileParser/Parsers/PptxFileParser.cs
     37 XiaoyaFileParser/Parsers/TextFileParser.cs
-   131 XiaoyaFileParser/UniversalFileParser.cs
+   137 XiaoyaFileParser/UniversalFileParser.cs
+    65 XiaoyaFileParserUnitTest/FileParserUnitTest.cs
     18 XiaoyaIndexer/Config/IndexerConfig.cs
     15 XiaoyaIndexer/IIndexer.cs
    190 XiaoyaIndexer/SimpleIndexer.cs
@@ -109,6 +112,7 @@
     30 XiaoyaNLP/Helper/CommonRegex.cs
    101 XiaoyaNLP/Helper/TextHelper.cs
     11 XiaoyaNLP/TextSegmentation/ITextSegmenter.cs
+    73 XiaoyaNLP/TextSegmentation/JiebaSegmenter.cs
    101 XiaoyaNLP/TextSegmentation/MaxMatchSegmenter.cs
     53 XiaoyaNLP/TextSegmentation/NGram.cs
     13 XiaoyaNLP/TextSegmentation/TextSegment.cs
@@ -116,6 +120,7 @@
     37 XiaoyaNLP/WordStemmer/IPorter2Stemmer.cs
     18 XiaoyaNLP/WordStemmer/IStemmer.cs
     19 XiaoyaNLP/WordStemmer/StemmedWord.cs
+    77 XiaoyaNLPUnitTest/TextSegmentation/JiebaSegmenterUnitTest.cs
     39 XiaoyaNLPUnitTest/TextSegmentation/MaxMatchSegmenterUnitTest.cs
     83 XiaoyaNLPUnitTest/TextSegmentation/NGramUnitTest.cs
     13 XiaoyaQueryParser/Config/QueryParserConfig.cs
@@ -159,8 +164,8 @@
     13 XiaoyaStore/Data/Model/UrlHostStat.cs
    143 XiaoyaStore/Data/XiaoyaSearchContext.cs
      6 XiaoyaStore/ISameUrlStore.cs
-   272 XiaoyaStore/Migrations/20180501080223_init.Designer.cs
-   293 XiaoyaStore/Migrations/20180501080223_init.cs
+   272 XiaoyaStore/Migrations/20180501104244_init.Designer.cs
+   293 XiaoyaStore/Migrations/20180501104244_init.cs
    271 XiaoyaStore/Migrations/XiaoyaSearchContextModelSnapshot.cs
     29 XiaoyaStore/Store/BaseStore.cs
      8 XiaoyaStore/Store/IIndexStatStore.cs
@@ -172,10 +177,10 @@
    579 XiaoyaStore/Store/InvertedIndexStore.cs
    129 XiaoyaStore/Store/LinkStore.cs
     42 XiaoyaStore/Store/SameUrlStore.cs
-   224 XiaoyaStore/Store/UrlFileStore.cs
-   286 XiaoyaStore/Store/UrlFrontierItemStore.cs
+   238 XiaoyaStore/Store/UrlFileStore.cs
+   293 XiaoyaStore/Store/UrlFrontierItemStore.cs
     64 XiaoyaStoreUnitTest/IndexStatStoreUnitTest.cs
     76 XiaoyaStoreUnitTest/LRUCacheUnitTest.cs
    370 XiaoyaStoreUnitTest/UrlFileStoreUnitTest.cs
    524 XiaoyaStoreUnitTest/UrlFrontierItemStoreUnitTest.cs
- 19314 total
+ 19869 total

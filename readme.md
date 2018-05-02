@@ -49,6 +49,8 @@ My initial goal is to deploy this search engine in Beijing Normal University.
 	  Manage urls in UrlFrontier
 	- UrlFileStore  
 	  Manage fetched web content
+    - SameUrlStore
+	  Manage Urls that point to same file
 	- InvertedIndexStore  
 	  Manage Inverted Indices and their frequency and weight (tf-idf)
 	- IndexStatStore  
