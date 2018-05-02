@@ -98,7 +98,7 @@ namespace XiaoyaFileParser.Parsers
 
             foreach (var header in headers)
             {
-                foreach (var segment in mConfig.TextSegmenter.Segment(title).GroupBy(o => TextHelper.NormalizeIndexWord(o.Word)))
+                foreach (var segment in mConfig.TextSegmenter.Segment(header).GroupBy(o => TextHelper.NormalizeIndexWord(o.Word)))
                 {
                     if (wordDict.ContainsKey(segment.Key))
                     {
