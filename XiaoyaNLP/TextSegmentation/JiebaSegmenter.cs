@@ -12,10 +12,17 @@ namespace XiaoyaNLP.TextSegmentation
         protected static JiebaNet.Segmenter.JiebaSegmenter sSegmenter 
             = new JiebaNet.Segmenter.JiebaSegmenter();
         protected const int MaxSegmentLength = 15;
+        protected bool mIsIndex;
+
+        public JiebaSegmenter(bool isIndex = true)
+        {
+            mIsIndex = isIndex;
+        }
 
         protected IEnumerable<TextSegment> SegmentChineseSentence(string sentence, int baseIndex)
         {
-            foreach (var token in sSegmenter.Tokenize(sentence, JiebaNet.Segmenter.TokenizerMode.Search))
+            foreach (var token in sSegmenter.Tokenize(sentence, 
+                mIsIndex ? JiebaNet.Segmenter.TokenizerMode.Search : JiebaNet.Segmenter.TokenizerMode.Default))
             {
                 yield return new TextSegment
                 {

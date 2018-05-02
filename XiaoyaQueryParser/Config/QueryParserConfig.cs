@@ -8,6 +8,6 @@ namespace XiaoyaQueryParser.Config
     public class QueryParserConfig
     {
         public ITextSegmenter TextSegmenter { get; set; }
-            = new MaxMatchSegmenter();
+            = new JiebaSegmenter(false);
     }
 }

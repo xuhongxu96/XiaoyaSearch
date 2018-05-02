@@ -8,6 +8,6 @@ namespace XiaoyaFileParser.Config
     public class FileParserConfig
     {
         public ITextSegmenter TextSegmenter { get; set; } 
-            = new MaxMatchSegmenter();
+            = new JiebaSegmenter();
     }
 }
