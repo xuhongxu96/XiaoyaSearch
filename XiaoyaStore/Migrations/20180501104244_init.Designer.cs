@@ -12,7 +12,7 @@ using XiaoyaStore.Data.Model;
 namespace XiaoyaStore.Migrations
 {
     [DbContext(typeof(XiaoyaSearchContext))]
-    [Migration("20180501080223_init")]
+    [Migration("20180501104244_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -167,7 +167,7 @@ namespace XiaoyaStore.Migrations
 
                     b.Property<string>("MimeType")
                         .IsConcurrencyToken()
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(200)");
 
                     b.Property<double>("PageRank");
 

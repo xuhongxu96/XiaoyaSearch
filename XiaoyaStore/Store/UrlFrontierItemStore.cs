@@ -1,10 +1,13 @@
 ﻿using EFCore.BulkExtensions;
 using Microsoft.EntityFrameworkCore;
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
+using XiaoyaLogger;
 using XiaoyaStore.Data;
 using XiaoyaStore.Data.Model;
 using XiaoyaStore.Helper;
@@ -14,15 +17,61 @@ namespace XiaoyaStore.Store
 {
     public class UrlFrontierItemStore : BaseStore, IUrlFrontierItemStore
     {
-        public UrlFrontierItemStore(DbContextOptions options = null) : base(options)
-        { }
+        private ConcurrentDictionary<string, int> mHostStat = new ConcurrentDictionary<string, int>();
+
+        private RuntimeLogger mLogger = null;
+
+        public UrlFrontierItemStore(DbContextOptions options = null, RuntimeLogger logger = null) : base(options)
+        {
+            using (var context = NewContext())
+            {
+                foreach (var stat in context.UrlHostStats)
+                {
+                    mHostStat.TryAdd(stat.Host, stat.Count);
+                }
+            }
+
+            mLogger = logger;
+
+            var thread = new Thread(FlushHostStat)
+            {
+                Priority = ThreadPriority.AboveNormal,
+            };
+            thread.Start();
+        }
+
+        private void FlushHostStat()
+        {
+            while (true)
+            {
+                Thread.Sleep(10000);
+
+                mLogger?.Log(nameof(UrlFrontierItemStore), "Flushing Host Stats");
+
+                using (var context = NewContext())
+                {
+                    var hostStats = new List<UrlHostStat>();
+                    foreach (var item in mHostStat)
+                    {
+                        hostStats.Add(new UrlHostStat
+                        {
+                            Host = item.Key,
+                            Count = item.Value,
+                        });
+                    }
+                    context.UrlHostStats.Delete();
+                    context.BulkInsert(hostStats);
+                    context.SaveChanges();
+                }
+
+                mLogger?.Log(nameof(UrlFrontierItemStore), "Flushed Host Stats");
+            }
+        }
 
         public void Init(IEnumerable<string> initUrls)
         {
             using (var context = NewContext())
             {
-                var hostCount = new Dictionary<string, int>();
-
                 // Add all init urls
                 foreach (var url in initUrls)
                 {
@@ -34,14 +83,7 @@ namespace XiaoyaStore.Store
 
                     if (host != "")
                     {
-                        if (hostCount.ContainsKey(host))
-                        {
-                            hostCount[host]++;
-                        }
-                        else
-                        {
-                            hostCount[host] = 1;
-                        }
+                        mHostStat.AddOrUpdate(host, 1, (k, v) => v + 1);
                     }
 
                     var item = new UrlFrontierItem
@@ -59,22 +101,6 @@ namespace XiaoyaStore.Store
                     context.UrlFrontierItems.Add(item);
                 }
 
-                foreach (var host in hostCount)
-                {
-                    var hostStat = context.UrlHostStats.SingleOrDefault(o => o.Host == host.Key);
-                    if (hostStat == null)
-                    {
-                        context.UrlHostStats.Add(new UrlHostStat
-                        {
-                            Host = host.Key,
-                            Count = host.Value,
-                        });
-                    }
-                    else
-                    {
-                        hostStat.Count += host.Value;
-                    }
-                }
                 context.SaveChanges();
             }
         }
@@ -94,6 +120,10 @@ namespace XiaoyaStore.Store
         {
             using (var context = NewContext())
             {
+#if DEBUG
+                var time = DateTime.Now;
+                Console.WriteLine("Pushing Urls: " + "\n" + (DateTime.Now - time).TotalSeconds); 
+#endif
                 context.ChangeTracker.AutoDetectChangesEnabled = false;
 
                 var existedUrlSet = context.UrlFrontierItems
@@ -102,37 +132,15 @@ namespace XiaoyaStore.Store
 
                 var newUrls = urls.Except(existedUrlSet).ToList();
 
-                var hostStats = newUrls.GroupBy(o => UrlHelper.GetHost(o))
-                    .Select(o => new UrlHostStat
-                    {
-                        Host = o.Key,
-                        Count = o.Count()
-                    });
-
-                var existedHostStats = context.UrlHostStats
-                    .Where(o => hostStats.Select(p => p.Host).Contains(o.Host))
-                    .ToDictionary(o => o.Host);
-
-                foreach (var host in hostStats)
-                {
-                    if (existedHostStats.ContainsKey(host.Host))
-                    {
-                        existedHostStats[host.Host].Count += host.Count;
-                    }
-                    else
-                    {
-                        existedHostStats[host.Host] = host;
-                    }
-                }
-
-                context.BulkInsertOrUpdate(existedHostStats.Values.ToList());
-
+#if DEBUG
+                Console.WriteLine("Got New Urls: " + "\n" + (DateTime.Now - time).TotalSeconds); 
+                time = DateTime.Now;
+#endif
                 var urlList = new List<UrlFrontierItem>();
 
                 foreach (var url in newUrls)
                 {
                     // Add this url if not exists yet
-
                     var host = UrlHelper.GetHost(url);
                     var item = new UrlFrontierItem
                     {
@@ -148,10 +156,9 @@ namespace XiaoyaStore.Store
 
                     item.PlannedTime = item.PlannedTime.AddHours(item.UrlDepth);
 
-                    if (existedHostStats.ContainsKey(host))
-                    {
-                        item.PlannedTime = item.PlannedTime.AddSeconds(existedHostStats[host].Count * new Random().NextDouble() * 30);
-                    }
+                    mHostStat.AddOrUpdate(host, 1, (k, v) => v + 1);
+
+                    item.PlannedTime = item.PlannedTime.AddSeconds(mHostStat[host] * new Random().NextDouble() * 30.0);
 
                     // Don't plan too late
                     if (item.PlannedTime > DateTime.Now.AddDays(3))
@@ -162,6 +169,10 @@ namespace XiaoyaStore.Store
                     urlList.Add(item);
                 }
                 context.BulkInsert(urlList);
+#if DEBUG
+                Console.WriteLine("Inserted new urls: " + "\n" + (DateTime.Now - time).TotalSeconds); 
+                time = DateTime.Now;
+#endif
                 context.SaveChanges();
             }
         }
@@ -196,10 +207,10 @@ namespace XiaoyaStore.Store
                     item.UpdatedAt = DateTime.Now;
                 }
 
-                var hostStat = context.UrlHostStats.SingleOrDefault(o => o.Host == UrlHelper.GetHost(url));
-                if (hostStat != null)
+                var host = UrlHelper.GetHost(url);
+                if (mHostStat.ContainsKey(host))
                 {
-                    item.PlannedTime = item.PlannedTime.AddSeconds((hostStat.Count - 1) * 10);
+                    item.PlannedTime = item.PlannedTime.AddSeconds((mHostStat[host] - 1) * 10);
                 }
 
                 item.PlannedTime.AddHours(item.UrlDepth);
@@ -272,11 +283,7 @@ namespace XiaoyaStore.Store
                 var item = context.UrlFrontierItems.SingleOrDefault(o => o.Url == url);
                 if (item != null)
                 {
-                    var host = context.UrlHostStats.SingleOrDefault(o => o.Host == item.Host);
-                    if (host != null)
-                    {
-                        host.Count--;
-                    }
+                    mHostStat.AddOrUpdate(UrlHelper.GetHost(url), 0, (k, v) => v - 1);
                     context.Remove(item);
                 }
                 context.SaveChanges();

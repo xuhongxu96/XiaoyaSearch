@@ -89,7 +89,7 @@ namespace XiaoyaStore.Migrations
                     IndexStatus = table.Column<int>(nullable: false),
                     LinkCount = table.Column<int>(nullable: false),
                     LinkTotalLength = table.Column<int>(nullable: false),
-                    MimeType = table.Column<string>(type: "nvarchar(50)", nullable: true),
+                    MimeType = table.Column<string>(type: "nvarchar(200)", nullable: true),
                     PageRank = table.Column<double>(nullable: false),
                     PublishDate = table.Column<DateTime>(nullable: false),
                     Title = table.Column<string>(nullable: true),

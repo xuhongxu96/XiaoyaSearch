@@ -70,8 +70,13 @@ namespace XiaoyaFileParser.Parsers
                         {
                             foreach (var run in body.Descendants<Run>())
                             {
+                                if (run == null)
+                                {
+                                    continue;
+                                }
+
                                 var props = run.RunProperties;
-                                if (props.Bold != null)
+                                if (props != null && props.Bold != null)
                                 {
                                     var text = TextHelper.NormalizeString(run.InnerText.Trim());
                                     if (text != "")

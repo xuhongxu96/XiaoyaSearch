@@ -18,6 +18,6 @@ namespace XiaoyaCrawler.SimilarContentManager
         /// </summary>
         /// <param name="urlFile">Fetched UrlFile</param>
         /// <returns>The UrlFile that has same content. If no same file, retunrs null</returns>
-        UrlFile JudgeContent(UrlFile urlFile);
+        (string Url, string Content) JudgeContent(UrlFile urlFile);
     }
 }

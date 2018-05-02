@@ -25,7 +25,7 @@ namespace XiaoyaCrawler.SimilarContentManager
             mConfig = config;
         }
 
-        public UrlFile JudgeContent(UrlFile urlFile)
+        public (string Url, string Content) JudgeContent(UrlFile urlFile)
         {
             var sameFiles = mConfig.UrlFileStore.LoadByHash(urlFile.FileHash).ToList();
             var host = UrlHelper.GetHost(urlFile.Url);
@@ -57,7 +57,7 @@ namespace XiaoyaCrawler.SimilarContentManager
                 }
             }
 
-            return null;
+            return (null, null);
         }
     }
 }

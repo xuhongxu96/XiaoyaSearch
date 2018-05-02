@@ -11,7 +11,7 @@ namespace XiaoyaCrawler.UrlFilter
     {
         private readonly HashSet<string> UrlQueryKeyFilter = new HashSet<string>
         {
-            "orderby", "order", "filter", "referer"
+            "orderby", "order", "filter", "filterby", "referer", "reply", "replytocom"
         };
 
         public IEnumerable<Link> Filter(IEnumerable<Link> links)

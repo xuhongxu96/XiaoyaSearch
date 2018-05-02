@@ -119,7 +119,7 @@ namespace XiaoyaCrawler
                         Console.WriteLine("Judged Similar: " + url + "\n" + (DateTime.Now - time).TotalSeconds);
                         time = DateTime.Now;
 #endif
-                        if (sameUrlFile != null)
+                        if (sameUrlFile.Url != null)
                         {
                             // Has same UrlFile, remove this
                             mUrlFrontier.RemoveUrl(urlFile.Url);
@@ -134,7 +134,7 @@ namespace XiaoyaCrawler
                             link.UrlFileId = urlFile.UrlFileId;
                         }
 #if DEBUG
-                        Console.WriteLine("Dealt with Similar: " + url + "\n" + (DateTime.Now - time).TotalSeconds);
+                        Console.WriteLine("Saved UrlFile: " + url + "\n" + (DateTime.Now - time).TotalSeconds);
                         time = DateTime.Now;
 #endif
                         var urls = linkList.Select(o => o.Url);

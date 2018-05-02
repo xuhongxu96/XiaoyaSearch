@@ -12,7 +12,7 @@ namespace XiaoyaStore.Store
         void RestartIndex();
         UrlFile LoadById(int id);
         UrlFile LoadByUrl(string url);
-        IEnumerable<UrlFile> LoadByHash(string hash);
+        IEnumerable<(string Url, string Content)> LoadByHash(string hash);
         UrlFile LoadByFilePath(string path);
         UrlFile LoadAnyForIndex();
         int Count();

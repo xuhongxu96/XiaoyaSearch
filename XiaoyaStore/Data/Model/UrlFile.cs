@@ -53,7 +53,7 @@ namespace XiaoyaStore.Data.Model
         /// Fetched content MIME type
         /// </summary>
         [ConcurrencyCheck]
-        [Column(TypeName = "nvarchar(50)")]
+        [Column(TypeName = "nvarchar(200)")]
         public string MimeType { get; set; }
         /// <summary>
         /// Is Indexed

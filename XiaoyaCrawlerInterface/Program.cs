@@ -12,6 +12,7 @@ using XiaoyaStore.Data;
 using Microsoft.EntityFrameworkCore;
 using System.IO;
 using XiaoyaCommon.ArgumentParser;
+using XiaoyaLogger;
 
 namespace XiaoyaCrawlerInterface
 {
@@ -41,7 +42,7 @@ namespace XiaoyaCrawlerInterface
             {
                 InitUrls = arguments.InitUrl.Split(","),
                 UrlFileStore = new UrlFileStore(options, false),
-                UrlFrontierItemStore = new UrlFrontierItemStore(options),
+                UrlFrontierItemStore = new UrlFrontierItemStore(options, new RuntimeLogger(Path.Combine(arguments.LogDir, "Crawler.log"), true)),
                 LinkStore = new LinkStore(options, false),
                 SameUrlStore = new SameUrlStore(options),
                 FetchDirectory = arguments.FetchDir,
@@ -51,9 +52,12 @@ namespace XiaoyaCrawlerInterface
 
             var urlFilters = new List<IUrlFilter>
             {
-                new DomainUrlFilter(@"^http(s)?://[\w\.\-_]*(bnu\.edu\.cn|oiegg.com)",
+                new DomainUrlFilter(@"^http(s)?://[\w\.\-_]*(bnu\.edu\.cn|oiegg.com($|/$|/(index|viewthread|forumdisplay).php))",
                     @"(v6\.oiegg\.com)"
+                    + @"|http://[\w\.\-_]*(oiegg.com)"
                     + @"|((cless|pb\.ss\.graduate|ipv6te)\.bnu\.edu\.cn)"
+                    + @"|brain\.bnu\.edu\.cn/mrbs"
+                    + @"|532movie\.bnu\.edu\.cn/player"
                     + @"|(/(search|print|login|space)[\./])"),
                 new UrlNormalizer(),
             };

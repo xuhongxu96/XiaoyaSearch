@@ -166,13 +166,25 @@ namespace XiaoyaStore.Store
 
                             oldUrlFile.IndexStatus = UrlFile.UrlFileIndexStatus.NotIndexed;
                         }
+                        else
+                        {
+                            // No changes and already indexed, delete file
+                            if (oldUrlFile.IndexStatus == UrlFile.UrlFileIndexStatus.Indexed
+                                && File.Exists(urlFile.FilePath))
+                            {
+                                File.Delete(urlFile.FilePath);
+                            }
+                        }
 
+                        // Update UpdateInterval
                         var updateInterval = DateTime.Now.Subtract(oldUrlFile.UpdatedAt);
                         oldUrlFile.UpdateInterval
                             = (oldUrlFile.UpdateInterval * 3 + updateInterval) / 4;
+
                     }
 
-                    if (oldUrlFile.FilePath != urlFile.FilePath)
+                    if (oldUrlFile.FilePath != urlFile.FilePath
+                            && File.Exists(oldUrlFile.FilePath))
                     {
                         // Delete old file
                         File.Delete(oldUrlFile.FilePath);
@@ -210,13 +222,15 @@ namespace XiaoyaStore.Store
             }
         }
 
-        public IEnumerable<UrlFile> LoadByHash(string hash)
+        public IEnumerable<(string Url, string Content)> LoadByHash(string hash)
         {
             using (var context = NewContext())
             {
-                foreach (var item in context.UrlFiles.Where(o => o.FileHash == hash))
+                foreach (var item in context.UrlFiles
+                    .Where(o => o.FileHash == hash)
+                    .Select(o => Tuple.Create(o.Url, o.Content)))
                 {
-                    yield return item;
+                    yield return (item.Item1, item.Item2);
                 }
             }
         }
