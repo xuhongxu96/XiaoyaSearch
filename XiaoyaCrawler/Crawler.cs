@@ -62,10 +62,9 @@ namespace XiaoyaCrawler
         private void SafeDeleteUrlFile(UrlFile urlFile)
         {
             if (urlFile != null
-                && urlFile.UrlFileId == 0
                 && File.Exists(urlFile.FilePath))
             {
-                mLogger.Log(nameof(Crawler), "Delete UrlFile: " + urlFile.UrlFileId + "  " + urlFile.Url + "  " + urlFile.FilePath);
+                // mLogger.Log(nameof(Crawler), "Delete UrlFile: " + urlFile.UrlFileId + "  " + urlFile.Url + "  " + urlFile.FilePath);
                 File.Delete(urlFile.FilePath);
             }
         }
@@ -95,6 +94,7 @@ namespace XiaoyaCrawler
                     // Store parsed content
                     urlFile.Title = parseResult.Title;
                     urlFile.Content = parseResult.Content;
+                    urlFile.TextContent = parseResult.TextContent;
                     urlFile.PublishDate = parseResult.PublishDate;
 
                     var linkList = parseResult.Links.Select(o => new Link
@@ -124,7 +124,6 @@ namespace XiaoyaCrawler
                         {
                             // Has same UrlFile, remove this
                             mUrlFrontier.RemoveUrl(urlFile.Url);
-                            SafeDeleteUrlFile(urlFile);
                             return;
                         }
                     }
@@ -166,8 +165,6 @@ namespace XiaoyaCrawler
 
                     // Retry
                     mUrlFrontier.PushBackUrl(url, true);
-
-                    SafeDeleteUrlFile(urlFile);
                 }
                 catch (InvalidDataException e)
                 {
@@ -176,8 +173,6 @@ namespace XiaoyaCrawler
 
                     // Retry
                     mUrlFrontier.PushBackUrl(url, true);
-
-                    SafeDeleteUrlFile(urlFile);
                 }
                 catch (UriFormatException e)
                 {
@@ -185,8 +180,6 @@ namespace XiaoyaCrawler
                     mErrorLogger.LogException(nameof(Crawler), "Invalid Uri: " + url, e);
 
                     mUrlFrontier.RemoveUrl(url);
-
-                    SafeDeleteUrlFile(urlFile);
                 }
                 catch (IOException e)
                 {
@@ -194,8 +187,6 @@ namespace XiaoyaCrawler
                     mErrorLogger.LogException(nameof(Crawler), "Failed to fetch: " + url, e);
 
                     mUrlFrontier.RemoveUrl(url);
-
-                    SafeDeleteUrlFile(urlFile);
                 }
                 catch (Exception e) when (
                         e is OperationCanceledException
@@ -211,12 +202,11 @@ namespace XiaoyaCrawler
 
                     // Retry
                     mUrlFrontier.PushBackUrl(url, true);
-
-                    SafeDeleteUrlFile(urlFile);
                 }
                 finally
                 {
                     mFetchSemaphore.Release();
+                    SafeDeleteUrlFile(urlFile);
                 }
             }).ContinueWith(task =>
                 {

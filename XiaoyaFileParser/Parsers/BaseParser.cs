@@ -19,11 +19,11 @@ namespace XiaoyaFileParser.Parsers
             set
             {
                 mUrlFile = value;
-                mContent = null;
                 mLinkInfo = null;
                 mHeaders = null;
-                mTitle = TextHelper.NormalizeString(mUrlFile.Title);
-                mTextContent = TextHelper.NormalizeString(mUrlFile.Content);
+                mTitle = mUrlFile.Title;
+                mContent = mUrlFile.Content;
+                mTextContent = mUrlFile.TextContent;
                 mPublishDate = mUrlFile.PublishDate;
             }
         }
@@ -183,7 +183,7 @@ namespace XiaoyaFileParser.Parsers
         {
             if (mTitle == null)
             {
-                var content = await GetContentAsync();
+                var content = await GetTextContentAsync();
 
                 await Task.Run(() =>
                 {

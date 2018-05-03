@@ -20,10 +20,8 @@ using DocumentFormat.OpenXml.Presentation;
 
 namespace XiaoyaFileParser.Parsers
 {
-    public class PptxFileParser : BaseParser, IFileParser
+    public class PptxFileParser : OfficeParser, IFileParser
     {
-        private const string WordmlNamespace = "http://schemas.openxmlformats.org/wordprocessingml/2006/main";
-
         public PptxFileParser() : base() { }
 
         public PptxFileParser(FileParserConfig config) : base(config)
@@ -180,32 +178,15 @@ namespace XiaoyaFileParser.Parsers
                             GetSlideIdAndText(out string slideText, doc, i);
                             textBuilder.AppendLine(slideText);
                         }
+
+                        mHeaders = GetSlideTitles(doc).ToList();
                     }
                     mContent = textBuilder.ToString();
                 });
                 mContent = TextHelper.NormalizeString(mContent);
+                mContent = mContent.Length + "\n" + mContent + string.Join("\n", mHeaders);
             }
             return mContent;
-        }
-
-        public override async Task<IList<string>> GetHeadersAsync()
-        {
-            if (mHeaders == null)
-            {
-                await Task.Run(() =>
-                {
-                    using (var doc = PresentationDocument.Open(mUrlFile.FilePath, false))
-                    {
-                        if (doc == null)
-                        {
-                            throw new ArgumentNullException("Invalid PPTX");
-                        }
-
-                        mHeaders = GetSlideTitles(doc).ToList();
-                    }
-                });
-            }
-            return mHeaders;
         }
     }
 }

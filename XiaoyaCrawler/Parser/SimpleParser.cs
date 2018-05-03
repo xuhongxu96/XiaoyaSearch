@@ -44,7 +44,8 @@ namespace XiaoyaCrawler.Parser
             return new ParseResult
             {
                 Title = await parser.GetTitleAsync(),
-                Content = await parser.GetTextContentAsync(),
+                Content = content,
+                TextContent = await parser.GetTextContentAsync(),
                 Links = await parser.GetLinksAsync(),
                 PublishDate = await parser.GetPublishDateAsync(),
             };

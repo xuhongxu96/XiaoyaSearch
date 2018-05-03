@@ -520,7 +520,6 @@ namespace XiaoyaStore.Store
 #endif
 
                 urlFile.IndexStatus = UrlFile.UrlFileIndexStatus.Indexed;
-
                 context.UrlFiles.Update(urlFile);
 
 #if DEBUG
@@ -530,7 +529,12 @@ namespace XiaoyaStore.Store
 
                 lock (mSyncLock)
                 {
-                    context.SaveChanges();
+                    try
+                    {
+                        context.SaveChanges();
+                    }
+                    catch (DbUpdateException)
+                    { }
                 }
             }
         }

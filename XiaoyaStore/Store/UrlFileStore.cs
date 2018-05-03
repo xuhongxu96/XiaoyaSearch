@@ -158,12 +158,11 @@ namespace XiaoyaStore.Store
                     if (isUpdateContent)
                     {
                         // Exists this url, then judge if two fetched file is same
-                        if ((urlFile.Title != "" && oldUrlFile.Title != urlFile.Title)
-                                || (urlFile.Content != "" && oldUrlFile.Content != urlFile.Content))
+                        if (oldUrlFile.Title != urlFile.Title
+                                || oldUrlFile.Content != urlFile.Content)
                         {
                             // Updated
                             oldUrlFile.UpdatedAt = DateTime.Now;
-
                             oldUrlFile.IndexStatus = UrlFile.UrlFileIndexStatus.NotIndexed;
                         }
                         else
@@ -194,7 +193,7 @@ namespace XiaoyaStore.Store
                     oldUrlFile.FilePath = urlFile.FilePath;
                     oldUrlFile.FileHash = urlFile.FileHash;
                     oldUrlFile.Title = urlFile.Title;
-                    oldUrlFile.Content = urlFile.Content;
+                    oldUrlFile.TextContent = urlFile.TextContent;
                     oldUrlFile.PublishDate = urlFile.PublishDate;
                     oldUrlFile.Charset = urlFile.Charset;
                     oldUrlFile.MimeType = urlFile.MimeType;
@@ -229,7 +228,7 @@ namespace XiaoyaStore.Store
                 context.UrlFiles.Where(o => o.UrlFileId == urlFile.UrlFileId)
                     .Update(o => new UrlFile
                     {
-                        Content = "",
+                        TextContent = "",
                     });
 
                 context.UrlFrontierItems.Where(o => o.Url == urlFile.Url)
@@ -242,13 +241,13 @@ namespace XiaoyaStore.Store
             }
         }
 
-        public IEnumerable<(string Url, string Content)> LoadByHash(string hash)
+        public IEnumerable<(string Url, string TextContent)> LoadByHash(string hash)
         {
             using (var context = NewContext())
             {
                 foreach (var item in context.UrlFiles
                     .Where(o => o.FileHash == hash)
-                    .Select(o => Tuple.Create(o.Url, o.Content)))
+                    .Select(o => Tuple.Create(o.Url, o.TextContent)))
                 {
                     yield return (item.Item1, item.Item2);
                 }

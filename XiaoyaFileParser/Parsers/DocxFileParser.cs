@@ -18,10 +18,8 @@ using DocumentFormat.OpenXml.Wordprocessing;
 
 namespace XiaoyaFileParser.Parsers
 {
-    public class DocxFileParser : BaseParser, IFileParser
+    public class DocxFileParser : OfficeParser, IFileParser
     {
-        private const string WordmlNamespace = "http://schemas.openxmlformats.org/wordprocessingml/2006/main";
-
         public DocxFileParser() : base() { }
 
         public DocxFileParser(FileParserConfig config) : base(config)
@@ -47,27 +45,7 @@ namespace XiaoyaFileParser.Parsers
                             {
                                 textBuilder.AppendLine(par.InnerText);
                             }
-                        }
-                    }
-                    mContent = textBuilder.ToString();
-                });
-                mContent = TextHelper.NormalizeString(mContent);
-            }
-            return mContent;
-        }
 
-        public override async Task<IList<string>> GetHeadersAsync()
-        {
-            if (mHeaders == null)
-            {
-                mHeaders = new List<string>();
-                await Task.Run(() =>
-                {
-                    using (var doc = WordprocessingDocument.Open(mUrlFile.FilePath, false))
-                    {
-                        Body body = doc.MainDocumentPart.Document.Body;
-                        if (body != null)
-                        {
                             foreach (var run in body.Descendants<Run>())
                             {
                                 if (run == null)
@@ -87,9 +65,14 @@ namespace XiaoyaFileParser.Parsers
                             }
                         }
                     }
+                    mContent = textBuilder.ToString();
+                    mContent = mContent.Length + "\n" + mContent + string.Join("\n", mHeaders);
                 });
+                mContent = TextHelper.NormalizeString(mContent);
             }
-            return mHeaders;
+            return mContent;
         }
+
+        
     }
 }

@@ -48,7 +48,7 @@ namespace XiaoyaCrawler.SimilarContentManager
                 catch (Exception)
                 { }
 
-                if (urlFile.Content == file.Content
+                if (urlFile.TextContent == file.TextContent
                     && (currentHost == host || isSameDns))
                 {
                     mConfig.SameUrlStore.Save(urlFile.Url, file.Url);

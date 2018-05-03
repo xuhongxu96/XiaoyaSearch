@@ -15,9 +15,13 @@ namespace XiaoyaCrawler.Parser
         /// </summary>
         public string Title { get; set; }
         /// <summary>
-        /// Content of web file
+        /// Raw content of web file
         /// </summary>
         public string Content { get; set; }
+        /// <summary>
+        /// Text content of web file
+        /// </summary>
+        public string TextContent { get; set; }
         /// <summary>
         /// Urls in web file
         /// </summary>

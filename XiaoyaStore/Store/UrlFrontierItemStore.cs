@@ -162,17 +162,9 @@ namespace XiaoyaStore.Store
                         IsPopped = false,
                     };
 
-                    item.PlannedTime = item.PlannedTime.AddHours(item.UrlDepth);
-
                     mHostStat.AddOrUpdate(host, 1, (k, v) => v + 1);
 
-                    item.PlannedTime = item.PlannedTime.AddSeconds(mHostStat[host] * 20.0);
-
-                    // Don't plan too late
-                    if (item.PlannedTime > DateTime.Now.AddDays(3))
-                    {
-                        item.PlannedTime = DateTime.Now.AddDays(3);
-                    }
+                    item.Priority = mHostStat[host] + item.UrlDepth * 10;
 
                     urlList.Add(item);
                 }
@@ -214,7 +206,7 @@ namespace XiaoyaStore.Store
                 {
                     // Failed to fetch last time
                     item.FailedTimes++;
-                    item.PlannedTime = DateTime.Now.AddDays(item.FailedTimes * 2);
+                    item.PlannedTime = DateTime.Now.AddDays(item.FailedTimes);
                     item.IsPopped = false;
                     item.UpdatedAt = DateTime.Now;
                 }
@@ -230,27 +222,18 @@ namespace XiaoyaStore.Store
                 var host = UrlHelper.GetHost(url);
                 if (mHostStat.ContainsKey(host))
                 {
-                    item.PlannedTime = item.PlannedTime.AddSeconds((mHostStat[host] - 1) * 10);
+                    item.Priority = mHostStat[host];
                 }
 
-                item.PlannedTime.AddHours(item.UrlDepth);
-
-                // Don't plan too late
-                if (item.PlannedTime > DateTime.Now.AddMonths(3))
-                {
-                    item.PlannedTime = DateTime.Now.AddMonths(3);
-                }
-
-                // Refresh the first 3000 urls
-                if (item.UrlFrontierItemId < 3000
-                    && (item.UpdatedAt - item.CreatedAt).TotalHours < 3
-                    && item.PlannedTime > DateTime.Now.AddHours(5))
-                {
-                    item.PlannedTime = DateTime.Now.AddHours(5);
-                }
+                item.Priority += item.UrlDepth * 10;
 
                 // Attempt to save changes to the database
-                context.SaveChanges();
+                try
+                {
+                    context.SaveChanges();
+                }
+                catch (DbUpdateException)
+                { }
 
                 return item;
             }
@@ -272,14 +255,15 @@ namespace XiaoyaStore.Store
                 if (context.Database.IsSqlServer())
                 {
                     item = context.UrlFrontierItems
-                        .FromSql("SELECT TOP 1 * FROM UrlFrontierItems WHERE IsPopped = 0 ORDER BY PlannedTime")
+                        .FromSql("SELECT TOP 1 * FROM UrlFrontierItems WHERE IsPopped = 0 AND PlannedTime <= GETDATE() ORDER BY Priority, PlannedTime")
                         .FirstOrDefault();
                 }
                 else
                 {
+                    var now = DateTime.Now;
                     item = context.UrlFrontierItems
-                        .Where(o => !o.IsPopped)
-                        .OrderBy(o => o.PlannedTime)
+                        .Where(o => !o.IsPopped && o.PlannedTime <= now)
+                        .OrderBy(o => new { o.Priority, o.PlannedTime })
                         .FirstOrDefault();
                 }
                 if (item == null)

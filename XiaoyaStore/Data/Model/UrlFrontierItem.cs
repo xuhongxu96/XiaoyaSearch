@@ -19,12 +19,10 @@ namespace XiaoyaStore.Data.Model
         /// <summary>
         /// Host of url
         /// </summary>
-        [ConcurrencyCheck]
         public string Host { get; set; }
         /// <summary>
         /// Depth of url (Number of '/')
         /// </summary>
-        [ConcurrencyCheck]
         public int UrlDepth { get; set; }
         /// <summary>
         /// Date time for next crawling this url
@@ -32,9 +30,12 @@ namespace XiaoyaStore.Data.Model
         [ConcurrencyCheck]
         public DateTime PlannedTime { get; set; }
         /// <summary>
+        /// Priority (High value means low priority)
+        /// </summary>
+        public int Priority { get; set; }
+        /// <summary>
         /// Times that failed to fetch this url
         /// </summary>
-        [ConcurrencyCheck]
         public int FailedTimes { get; set; }
         /// <summary>
         /// Is this url popped from url frontier

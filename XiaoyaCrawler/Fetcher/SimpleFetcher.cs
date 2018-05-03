@@ -35,10 +35,11 @@ namespace XiaoyaCrawler.Fetcher
         public SimpleFetcher(CrawlerConfig config)
         {
             mLogger = new RuntimeLogger(Path.Combine(config.LogDirectory, "Crawler.Log"));
-            if (!Directory.Exists(config.FetchDirectory))
+            if (Directory.Exists(config.FetchDirectory))
             {
-                Directory.CreateDirectory(config.FetchDirectory);
+                Directory.Delete(config.FetchDirectory, true);
             }
+            Directory.CreateDirectory(config.FetchDirectory);
 
             mConfig = config;
 

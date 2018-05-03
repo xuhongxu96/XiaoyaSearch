@@ -83,8 +83,8 @@ namespace XiaoyaIndexerUnitTest
                     Assert.IsTrue(urlFile.IndexStatus == UrlFileIndexStatus.Indexed);
 
                     var id = urlFile.UrlFileId;
-                    if (urlFile.Content.Trim() != ""
-                        && CommonRegex.AllChars.IsMatch(urlFile.Content.Trim()))
+                    if (urlFile.TextContent.Trim() != ""
+                        && CommonRegex.AllChars.IsMatch(urlFile.TextContent.Trim()))
                     {
                         var indices = context.InvertedIndices
                             .Where(o => o.UrlFileId == id);

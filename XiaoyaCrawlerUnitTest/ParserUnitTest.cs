@@ -91,7 +91,7 @@ namespace XiaoyaCrawlerUnitTest
 
                 Assert.AreEqual(
                     Regex.Replace("hello, world! 你好,世界!百度google返回", @"\s", ""),
-                    Regex.Replace(parseResult.Content, @"\s", "")
+                    Regex.Replace(parseResult.TextContent, @"\s", "")
                     );
                 var urls = parseResult.Links.Select(o => o.Url).ToList();
                 Assert.AreEqual(3, urls.Count);

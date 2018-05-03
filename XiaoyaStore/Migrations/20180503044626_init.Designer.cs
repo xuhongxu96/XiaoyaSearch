@@ -12,7 +12,7 @@ using XiaoyaStore.Data.Model;
 namespace XiaoyaStore.Migrations
 {
     [DbContext(typeof(XiaoyaSearchContext))]
-    [Migration("20180501104244_init")]
+    [Migration("20180503044626_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -173,6 +173,9 @@ namespace XiaoyaStore.Migrations
 
                     b.Property<DateTime>("PublishDate");
 
+                    b.Property<string>("TextContent")
+                        .IsConcurrencyToken();
+
                     b.Property<string>("Title");
 
                     b.Property<double>("UpdateIntervalSeconds")
@@ -215,11 +218,9 @@ namespace XiaoyaStore.Migrations
 
                     b.Property<DateTime>("CreatedAt");
 
-                    b.Property<int>("FailedTimes")
-                        .IsConcurrencyToken();
+                    b.Property<int>("FailedTimes");
 
-                    b.Property<string>("Host")
-                        .IsConcurrencyToken();
+                    b.Property<string>("Host");
 
                     b.Property<bool>("IsPopped")
                         .IsConcurrencyToken();
@@ -227,14 +228,15 @@ namespace XiaoyaStore.Migrations
                     b.Property<DateTime>("PlannedTime")
                         .IsConcurrencyToken();
 
+                    b.Property<int>("Priority");
+
                     b.Property<DateTime>("UpdatedAt")
                         .IsConcurrencyToken();
 
                     b.Property<string>("Url")
                         .IsConcurrencyToken();
 
-                    b.Property<int>("UrlDepth")
-                        .IsConcurrencyToken();
+                    b.Property<int>("UrlDepth");
 
                     b.HasKey("UrlFrontierItemId");
 
@@ -244,7 +246,7 @@ namespace XiaoyaStore.Migrations
                         .IsUnique()
                         .HasFilter("[Url] IS NOT NULL");
 
-                    b.HasIndex("IsPopped", "PlannedTime");
+                    b.HasIndex("IsPopped", "PlannedTime", "Priority");
 
                     b.ToTable("UrlFrontierItems");
                 });

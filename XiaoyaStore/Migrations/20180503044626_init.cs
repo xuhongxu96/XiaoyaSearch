@@ -92,6 +92,7 @@ namespace XiaoyaStore.Migrations
                     MimeType = table.Column<string>(type: "nvarchar(200)", nullable: true),
                     PageRank = table.Column<double>(nullable: false),
                     PublishDate = table.Column<DateTime>(nullable: false),
+                    TextContent = table.Column<string>(nullable: true),
                     Title = table.Column<string>(nullable: true),
                     UpdateIntervalSeconds = table.Column<double>(nullable: false),
                     UpdatedAt = table.Column<DateTime>(nullable: false),
@@ -113,6 +114,7 @@ namespace XiaoyaStore.Migrations
                     Host = table.Column<string>(nullable: true),
                     IsPopped = table.Column<bool>(nullable: false),
                     PlannedTime = table.Column<DateTime>(nullable: false),
+                    Priority = table.Column<int>(nullable: false),
                     UpdatedAt = table.Column<DateTime>(nullable: false),
                     Url = table.Column<string>(nullable: true),
                     UrlDepth = table.Column<int>(nullable: false)
@@ -254,9 +256,9 @@ namespace XiaoyaStore.Migrations
                 filter: "[Url] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
-                name: "IX_UrlFrontierItems_IsPopped_PlannedTime",
+                name: "IX_UrlFrontierItems_IsPopped_PlannedTime_Priority",
                 table: "UrlFrontierItems",
-                columns: new[] { "IsPopped", "PlannedTime" });
+                columns: new[] { "IsPopped", "PlannedTime", "Priority" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_UrlHostStats_Host",

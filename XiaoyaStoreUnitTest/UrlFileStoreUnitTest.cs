@@ -36,7 +36,7 @@ namespace XiaoyaStoreUnitTest
                 {
                     Url = "http://www.bnu.edu.cn",
                     FilePath = @"D:\a.html",
-                    Content = "abcd",
+                    TextContent = "abcd",
                     Charset = "utf8",
                     MimeType = "text/html",
                 });
@@ -75,7 +75,7 @@ namespace XiaoyaStoreUnitTest
                 {
                     Url = "http://www.bnu.edu.cn",
                     FilePath = @"D:\a.html",
-                    Content = "abcd",
+                    TextContent = "abcd",
                     Charset = "utf8",
                     MimeType = "text/html",
                 });
@@ -86,7 +86,7 @@ namespace XiaoyaStoreUnitTest
                 {
                     Url = "http://www.bnu.edu.cn/news",
                     FilePath = @"D:\b.html",
-                    Content = "abcdef",
+                    TextContent = "abcdef",
                     Charset = "utf8",
                     MimeType = "text/html",
                 });
@@ -127,7 +127,7 @@ namespace XiaoyaStoreUnitTest
                 {
                     Url = "http://www.bnu.edu.cn",
                     FilePath = @"D:\a.html",
-                    Content = "abcd",
+                    TextContent = "abcd",
                     Charset = "utf8",
                     MimeType = "text/html",
                 });
@@ -138,7 +138,7 @@ namespace XiaoyaStoreUnitTest
                 {
                     Url = "http://www.bnu.edu.cn/news",
                     FilePath = @"D:\b.html",
-                    Content = "abcdef",
+                    TextContent = "abcdef",
                     Charset = "utf8",
                     MimeType = "text/html",
                 });
@@ -179,7 +179,7 @@ namespace XiaoyaStoreUnitTest
                 {
                     Url = "http://www.bnu.edu.cn",
                     FilePath = @"D:\a.html",
-                    Content = "abcd",
+                    TextContent = "abcd",
                     Charset = "utf8",
                     MimeType = "text/html",
                 });
@@ -195,7 +195,7 @@ namespace XiaoyaStoreUnitTest
                 {
                     Url = "http://www.bnu.edu.cn",
                     FilePath = @"D:\b.html",
-                    Content = "abcdef",
+                    TextContent = "abcdef",
                     Charset = "utf8",
                     MimeType = "text/html",
                 });
@@ -235,7 +235,7 @@ namespace XiaoyaStoreUnitTest
                 {
                     Url = "http://www.bnu.edu.cn",
                     FilePath = @"D:\a.html",
-                    Content = "abcd",
+                    TextContent = "abcd",
                     Charset = "utf8",
                     MimeType = "text/html",
                 });
@@ -243,7 +243,7 @@ namespace XiaoyaStoreUnitTest
                 {
                     Url = "http://www.bnu.edu.cn/news",
                     FilePath = @"D:\b.html",
-                    Content = "abcdef",
+                    TextContent = "abcdef",
                     Charset = "utf8",
                     MimeType = "text/html",
                 });
@@ -284,7 +284,7 @@ namespace XiaoyaStoreUnitTest
                 {
                     Url = "http://www.bnu.edu.cn",
                     FilePath = @"D:\a.html",
-                    Content = "abcd",
+                    TextContent = "abcd",
                     Charset = "utf8",
                     MimeType = "text/html",
                 });
@@ -292,7 +292,7 @@ namespace XiaoyaStoreUnitTest
                 {
                     Url = "http://www.bnu.edu.cn/news",
                     FilePath = @"D:\b.html",
-                    Content = "abcdef",
+                    TextContent = "abcdef",
                     Charset = "utf8",
                     MimeType = "text/html",
                 });
@@ -333,7 +333,7 @@ namespace XiaoyaStoreUnitTest
                 {
                     Url = "http://www.bnu.edu.cn",
                     FilePath = @"D:\a.html",
-                    Content = "abcd",
+                    TextContent = "abcd",
                     Charset = "utf8",
                     MimeType = "text/html",
                 });
@@ -341,7 +341,7 @@ namespace XiaoyaStoreUnitTest
                 {
                     Url = "http://www.bnu.edu.cn/news",
                     FilePath = @"D:\b.html",
-                    Content = "abcdef",
+                    TextContent = "abcdef",
                     Charset = "utf8",
                     MimeType = "text/html",
                 });

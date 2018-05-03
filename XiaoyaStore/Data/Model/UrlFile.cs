@@ -39,10 +39,15 @@ namespace XiaoyaStore.Data.Model
         [Column(TypeName = "nvarchar(300)")]
         public string FileHash { get; set; }
         /// <summary>
-        /// Text content of file
+        /// Raw content of file
         /// </summary>
         [ConcurrencyCheck]
         public string Content { get; set; } = null;
+        /// <summary>
+        /// Text content of file
+        /// </summary>
+        [ConcurrencyCheck]
+        public string TextContent { get; set; } = null;
         /// <summary>
         /// Fetched content charset
         /// </summary>

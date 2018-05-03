@@ -58,7 +58,6 @@ namespace XiaoyaIndexer
                     UniversalFileParser parser = new UniversalFileParser
                     {
                         UrlFile = urlFile,
-                        FilePath = urlFile.FilePath,
                     };
 
 #if DEBUG
@@ -87,7 +86,7 @@ namespace XiaoyaIndexer
                                                OccurencesInLinks = token.OccurencesInLinks,
                                                OccurencesInHeaders = token.OccurencesInHeaders,
                                                Weight = ScoringHelper.CalculateIndexWeight(urlFile.Title,
-                                                                                           urlFile.Content,
+                                                                                           urlFile.TextContent,
                                                                                            urlFile.Url,
                                                                                            urlFile.PublishDate,
                                                                                            token.OccurencesInTitle,

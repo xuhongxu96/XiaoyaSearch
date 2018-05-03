@@ -34,7 +34,7 @@ namespace XiaoyaRanker.VectorSpaceModelRanker
                     continue;
                 }
                 var titleLength = urlFile.Title.Length + 1;
-                var contentLength = urlFile.Content.Length + 1;
+                var contentLength = urlFile.TextContent.Length + 1;
 
                 double headerScore = 0;
                 double linkScore = 0;

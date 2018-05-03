@@ -12,6 +12,7 @@ namespace XiaoyaNLP.Helper
         {
             return CommonRegex.ConsecutiveTrimmer.Replace(input.Trim(), replacement);
         }
+
         public static string FullWidthCharToHalfWidthChar(string input)
         {
             return input.Normalize(NormalizationForm.FormKC);
@@ -88,13 +89,13 @@ namespace XiaoyaNLP.Helper
                     }
                     catch (ArgumentOutOfRangeException)
                     {
-                        match.NextMatch();
+                        match = match.NextMatch();
                         continue;
                     }
                     yield return result;
                 }
 
-                match.NextMatch();
+                match = match.NextMatch();
             }
         }
     }
