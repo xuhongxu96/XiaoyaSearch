@@ -161,9 +161,10 @@ namespace XiaoyaFileParser.Parsers
         {
             if (mContent == null)
             {
+                mHeaders = new List<string>();
+                var textBuilder = new StringBuilder();
                 await Task.Run(() =>
                 {
-                    var textBuilder = new StringBuilder();
                     using (var doc = PresentationDocument.Open(mUrlFile.FilePath, false))
                     {
                         if (doc == null)
@@ -181,9 +182,8 @@ namespace XiaoyaFileParser.Parsers
 
                         mHeaders = GetSlideTitles(doc).ToList();
                     }
-                    mContent = textBuilder.ToString();
                 });
-                mContent = TextHelper.NormalizeString(mContent);
+                mContent = TextHelper.NormalizeString(textBuilder.ToString());
                 mContent = mContent.Length + "\n" + mContent + string.Join("\n", mHeaders);
             }
             return mContent;

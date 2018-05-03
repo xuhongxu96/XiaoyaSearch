@@ -187,7 +187,7 @@ namespace XiaoyaFileParser.Parsers
 
                 await Task.Run(() =>
                 {
-                    mTitle = content.Split(new char[] { '\n' }, StringSplitOptions.RemoveEmptyEntries).FirstOrDefault();
+                    mTitle = content.Split(new char[] { '\n', 'r' }, StringSplitOptions.RemoveEmptyEntries).FirstOrDefault();
                     if (mTitle == null)
                     {
                         mTitle = "";
