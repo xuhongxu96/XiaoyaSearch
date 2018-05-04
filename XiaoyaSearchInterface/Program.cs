@@ -59,7 +59,7 @@ namespace XiaoyaSearchInterface
 
                     if (result.WordPositions == null)
                     {
-                        Console.WriteLine("  " + urlFile.TextContent.Substring(0, 50).Replace("\n", "  "));
+                        Console.WriteLine("  " + urlFile.TextContent.Substring(0, 50).Replace("\r", "").Replace("\n", "  "));
                     }
                     else
                     {
@@ -72,7 +72,8 @@ namespace XiaoyaSearchInterface
 
                         Console.WriteLine("  "
                             + content.Substring(minPos,
-                            Math.Min(maxPos.Position - minPos + maxPos.Word.Length + 50, content.Length - minPos)).Replace("\n", "  "));
+                            Math.Min(maxPos.Position - minPos + maxPos.Word.Length + 50, content.Length - minPos))
+                            .Replace("\r", "").Replace("\n", "  "));
                     }
 
                     Console.WriteLine("");
