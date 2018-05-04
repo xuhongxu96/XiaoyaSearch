@@ -1,0 +1,8 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<form asp-controller="Index" asp-action="Search" method="get">
+    <input type="text" name="query" placeholder="搜索" />
+    <input type="submit" value="搜索" />
+</form>

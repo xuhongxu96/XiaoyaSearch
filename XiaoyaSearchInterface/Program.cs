@@ -40,7 +40,7 @@ namespace XiaoyaSearchInterface
             };
 
             var engine = new SearchEngine(config);
-            var store = new UrlFileStore(options);
+            var urlFileStore = config.UrlFileStore;
 
             while (true)
             {
@@ -53,7 +53,7 @@ namespace XiaoyaSearchInterface
 
                 foreach (var result in results)
                 {
-                    var urlFile = store.LoadById(result.UrlFileId);
+                    var urlFile = urlFileStore.LoadById(result.UrlFileId);
 
                     Console.WriteLine("{0}: {1} ({2}, {3})", result.UrlFileId, urlFile.Url, result.Score, result.ProScore);
 

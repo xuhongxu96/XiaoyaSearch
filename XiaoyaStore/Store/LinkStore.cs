@@ -99,6 +99,10 @@ namespace XiaoyaStore.Store
                                 context.AddRange(list);
                             }
                             list.Clear();
+                            lock (mSyncLock)
+                            {
+                                context.SaveChanges();
+                            }
                         }
                     }
                     if (list.Count > 0)
