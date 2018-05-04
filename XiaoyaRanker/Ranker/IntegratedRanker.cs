@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using XiaoyaRanker.Config;
 
-namespace XiaoyaRanker
+namespace XiaoyaRanker.Ranker
 {
     public class IntegratedRanker : IRanker
     {

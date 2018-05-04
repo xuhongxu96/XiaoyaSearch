@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System;
+using System.Linq;
 using XiaoyaCommon.ArgumentParser;
+using XiaoyaNLP.Helper;
 using XiaoyaSearch;
 using XiaoyaSearch.Config;
 using XiaoyaStore.Data;
@@ -54,6 +56,26 @@ namespace XiaoyaSearchInterface
                     var urlFile = store.LoadById(result.UrlFileId);
 
                     Console.WriteLine("{0}: {1} ({2}, {3})", result.UrlFileId, urlFile.Url, result.Score, result.ProScore);
+
+                    if (result.WordPositions == null)
+                    {
+                        Console.WriteLine("  " + urlFile.TextContent.Substring(0, 50).Replace("\n", "  "));
+                    }
+                    else
+                    {
+                        var orderPos = result.WordPositions.OrderBy(o => o.Position);
+                        var minWordPos = orderPos.First();
+                        var minPos = Math.Max(minWordPos.Position - 50, 0);
+                        var maxPos = orderPos.Last();
+
+                        var content = urlFile.TextContent;
+
+                        Console.WriteLine("  "
+                            + content.Substring(minPos,
+                            Math.Min(maxPos.Position - minPos + maxPos.Word.Length + 50, content.Length - minPos)).Replace("\n", "  "));
+                    }
+
+                    Console.WriteLine("");
 
                     count++;
 

@@ -15,21 +15,15 @@ namespace XiaoyaNLP.Helper
 
         public static string FullWidthCharToHalfWidthChar(string input)
         {
-            return input.Normalize(NormalizationForm.FormKC);
+            return input
+                .Replace("、", ",")
+                .Replace("。", ".")
+                .Normalize(NormalizationForm.FormKC);
         }
 
         public static string RemoveConsecutiveNonsense(string input)
         {
-            var result = CommonRegex.ConsecutiveSymbolNumbers.Replace(input, new MatchEvaluator(match =>
-            {
-                if (match.Value.Length > 12)
-                {
-                    return "";
-                }
-                return match.Value;
-            }));
-
-            result = CommonRegex.ConsecutiveWeekDay.Replace(result, new MatchEvaluator(match =>
+            var result = CommonRegex.ConsecutiveWeekDay.Replace(input, new MatchEvaluator(match =>
             {
                 var weekDayMatches = CommonRegex.WeekDay.Matches(match.Value);
                 if (weekDayMatches.Count >= 7)

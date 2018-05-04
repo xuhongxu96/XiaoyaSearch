@@ -34,6 +34,7 @@ namespace XiaoyaFileParser.Parsers
                         mTextContent = content.Substring(line0.Length + 1, contentLength);
                     }
                 }
+                mTextContent = TextHelper.RemoveConsecutiveNonsense(mTextContent);
             }
             return mTextContent;
         }

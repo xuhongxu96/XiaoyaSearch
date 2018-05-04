@@ -115,7 +115,7 @@ namespace XiaoyaFileParser.Parsers
                 }
                 else
                 {
-                    mTextContent = TextHelper.ReplaceSpaces(mTextContent);
+                    mTextContent = TextHelper.RemoveConsecutiveNonsense(TextHelper.ReplaceSpaces(mTextContent));
                 }
             }
             return mTextContent;

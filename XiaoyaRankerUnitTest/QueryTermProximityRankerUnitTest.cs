@@ -2,7 +2,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.IO;
 using XiaoyaRanker.Config;
-using XiaoyaRanker.QueryTermProximityRanker;
 using XiaoyaStore.Data;
 using XiaoyaStore.Store;
 using System.Linq;
@@ -10,6 +9,7 @@ using System.Collections;
 using System.Collections.Generic;
 using XiaoyaStore.Data.Model;
 using System;
+using XiaoyaRanker.PositionRanker.QueryTermProximityRanker;
 
 namespace XiaoyaRankerUnitTest
 {
@@ -59,8 +59,8 @@ namespace XiaoyaRankerUnitTest
                 }
             }
 
-            Assert.IsTrue(scores.Any(o => Math.Abs(o - (8 / 28)) < double.Epsilon));
-            Assert.AreEqual(scores.Count - 1, scores.Count(o => o == 0));
+            Assert.IsTrue(scores.Select(o => o.Score).Any(o => Math.Abs(o - (8 / 28)) < double.Epsilon));
+            Assert.AreEqual(scores.Count - 1, scores.Select(o => o.Score).Count(o => o == 0));
         }
     }
 }

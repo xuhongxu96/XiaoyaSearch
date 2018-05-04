@@ -48,7 +48,6 @@ namespace XiaoyaFileParser.Parsers
         public virtual async Task<IList<Token>> GetTokensAsync()
         {
             var textContent = await GetTextContentAsync();
-            textContent = TextHelper.RemoveConsecutiveNonsense(textContent);
 
             var title = await GetTitleAsync();
             var headers = await GetHeadersAsync();

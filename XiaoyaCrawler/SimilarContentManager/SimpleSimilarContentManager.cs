@@ -32,12 +32,12 @@ namespace XiaoyaCrawler.SimilarContentManager
 
             foreach (var file in sameFiles)
             {
-                if (file.Url == urlFile.Url)
+                if (file.url == urlFile.Url)
                 {
                     continue;
                 }
 
-                var currentHost = UrlHelper.GetHost(file.Url);
+                var currentHost = UrlHelper.GetHost(file.url);
 
                 bool isSameDns = false;
 
@@ -48,11 +48,11 @@ namespace XiaoyaCrawler.SimilarContentManager
                 catch (Exception)
                 { }
 
-                if (urlFile.TextContent == file.TextContent
+                if (urlFile.TextContent == file.textContent
                     && (currentHost == host || isSameDns))
                 {
-                    mConfig.SameUrlStore.Save(urlFile.Url, file.Url);
-                    mLogger.Log(nameof(SimpleSimilarContentManager), $"Find Same UrlFile for {urlFile.Url}: {file.Url}");
+                    mConfig.SameUrlStore.Save(urlFile.Url, file.url);
+                    mLogger.Log(nameof(SimpleSimilarContentManager), $"Find Same UrlFile for {urlFile.Url}: {file.url}");
                     return file;
                 }
             }

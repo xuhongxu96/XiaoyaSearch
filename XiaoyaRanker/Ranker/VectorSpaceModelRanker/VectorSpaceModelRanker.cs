@@ -6,7 +6,7 @@ using XiaoyaCommon.Helper;
 using XiaoyaRanker.Config;
 using static XiaoyaStore.Data.Model.InvertedIndex;
 
-namespace XiaoyaRanker.VectorSpaceModelRanker
+namespace XiaoyaRanker.Ranker.VectorSpaceModelRanker
 {
     public class VectorSpaceModelRanker : IRanker
     {

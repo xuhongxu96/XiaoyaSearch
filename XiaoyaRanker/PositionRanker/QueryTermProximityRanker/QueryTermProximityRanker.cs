@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using XiaoyaRanker.Config;
 
-namespace XiaoyaRanker.QueryTermProximityRanker
+namespace XiaoyaRanker.PositionRanker.QueryTermProximityRanker
 {
-    public class QueryTermProximityRanker : IRanker
+    public class QueryTermProximityRanker : IPositionRanker
     {
         protected RankerConfig mConfig;
 
@@ -15,19 +15,19 @@ namespace XiaoyaRanker.QueryTermProximityRanker
             mConfig = config;
         }
 
-        public IEnumerable<double> Rank(IEnumerable<int> urlFileIds, IEnumerable<string> words)
+        public IEnumerable<ScoreWithWordPositions> Rank(IEnumerable<int> urlFileIds, IEnumerable<string> words)
         {
             var wordList = words.ToList();
             var wordCount = wordList.Count;
             var wordTotalLength = wordList.Sum(o => o.Length);
             var lastWordLength = 0;
+            var notExistedWordCount = 0;
 
             foreach (var id in urlFileIds)
             {
                 var wordPositions = new List<List<int>>(wordCount);
+                List<int> bestWordPosition = null;
                 var pointers = new int[wordCount];
-
-                bool skip = false;
 
                 foreach (var word in wordList)
                 {
@@ -37,17 +37,13 @@ namespace XiaoyaRanker.QueryTermProximityRanker
 
                     if (positions == null || positions.Count == 0)
                     {
-                        yield return 0;
-                        skip = true;
-                        break;
+                        wordPositions.Add(new List<int> { -1 });
+                        notExistedWordCount++;
                     }
-
-                    wordPositions.Add(positions);
-                }
-
-                if (skip)
-                {
-                    continue;
+                    else
+                    {
+                        wordPositions.Add(positions);
+                    }
                 }
 
                 var minWindowLength = -1;
@@ -61,16 +57,21 @@ namespace XiaoyaRanker.QueryTermProximityRanker
                         wordPosition.Add(wordPositions[i][pointers[i]]);
                     }
 
-                    if (wordPosition.Distinct().Count() == wordPosition.Count)
+                    var validWordPosition = wordPosition.Where(o => o != -1).ToList();
+
+                    if (validWordPosition.Distinct().Count() == validWordPosition.Count
+                        && validWordPosition.Count > 0)
                     {
                         // doesn't have duplicate positions (to deal with the situation that the same word occurs more than one time)
 
-                        var windowLength = wordPosition.Max() - wordPosition.Min();
+                        var windowLength = validWordPosition.Max() - validWordPosition.Min();
 
                         if (minWindowLength == -1 || minWindowLength > windowLength)
                         {
+                            // update window length
                             minWindowLength = windowLength;
-                            lastWordLength = wordList[wordPosition.IndexOf(wordPosition.Max())].Length;
+                            bestWordPosition = wordPosition;
+                            lastWordLength = wordList[wordPosition.IndexOf(validWordPosition.Max())].Length;
                         }
                     }
 
@@ -99,11 +100,23 @@ namespace XiaoyaRanker.QueryTermProximityRanker
 
                 if (minWindowLength == -1)
                 {
-                    yield return 0;
+                    yield return new ScoreWithWordPositions
+                    {
+                        Score = 0,
+                        WordPositions = null,
+                    };
                 }
                 else
                 {
-                    yield return (double)wordTotalLength / (minWindowLength + lastWordLength);
+                    yield return new ScoreWithWordPositions
+                    {
+                        Score = (double)wordTotalLength / (minWindowLength + lastWordLength),
+                        WordPositions = bestWordPosition.Zip(wordList, (p, w) => new ScoreWithWordPositions.WordPosition
+                        {
+                            Word = w,
+                            Position = p,
+                        }),
+                    };
                 }
             }
         }

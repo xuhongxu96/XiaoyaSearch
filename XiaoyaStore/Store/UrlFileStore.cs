@@ -241,7 +241,7 @@ namespace XiaoyaStore.Store
             }
         }
 
-        public IEnumerable<(string Url, string TextContent)> LoadByHash(string hash)
+        public IEnumerable<(string url, string textContent)> LoadByHash(string hash)
         {
             using (var context = NewContext())
             {

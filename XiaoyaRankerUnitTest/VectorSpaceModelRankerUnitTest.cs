@@ -2,7 +2,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.IO;
 using XiaoyaRanker.Config;
-using XiaoyaRanker.QueryTermProximityRanker;
 using XiaoyaStore.Data;
 using XiaoyaStore.Store;
 using System.Linq;
@@ -10,7 +9,7 @@ using System.Collections;
 using System.Collections.Generic;
 using XiaoyaStore.Data.Model;
 using System;
-using XiaoyaRanker.VectorSpaceModelRanker;
+using XiaoyaRanker.Ranker.VectorSpaceModelRanker;
 
 namespace XiaoyaRankerUnitTest
 {

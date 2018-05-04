@@ -6,8 +6,9 @@ using XiaoyaQueryParser.Config;
 using XiaoyaQueryParser.QueryParser;
 using XiaoyaRanker;
 using XiaoyaRanker.Config;
-using XiaoyaRanker.QueryTermProximityRanker;
-using XiaoyaRanker.VectorSpaceModelRanker;
+using XiaoyaRanker.PositionRanker;
+using XiaoyaRanker.PositionRanker.QueryTermProximityRanker;
+using XiaoyaRanker.Ranker;
 using XiaoyaRetriever;
 using XiaoyaRetriever.Config;
 using XiaoyaRetriever.InexactTopKRetriever;
@@ -20,7 +21,7 @@ namespace XiaoyaSearch
         protected IQueryParser mQueryParser;
         protected IRetriever mRetriever;
         protected IRanker mRanker;
-        protected IRanker mProRanker;
+        protected IPositionRanker mProRanker;
         protected SearchEngineConfig mConfig;
 
         protected const int ResultSize = 500;
@@ -119,7 +120,8 @@ namespace XiaoyaSearch
 
                 for (int j = 0; j < subResultsLength; ++j)
                 {
-                    subResults[j].ProScore = proScores[j];
+                    subResults[j].ProScore = proScores[j].Score;
+                    subResults[j].WordPositions = proScores[j].WordPositions?.Where(o => o.Position != -1);
                 }
 
                 Console.WriteLine("Ranked docs 2 " + (DateTime.Now - time).TotalMilliseconds);

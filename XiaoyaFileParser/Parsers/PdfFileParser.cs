@@ -42,5 +42,14 @@ namespace XiaoyaFileParser.Parsers
             }
             return mContent;
         }
+
+        public override async Task<string> GetTextContentAsync()
+        {
+            if (mTextContent == null)
+            {
+                mTextContent = TextHelper.RemoveConsecutiveNonsense(await base.GetTextContentAsync());
+            }
+            return mTextContent;
+        }
     }
 }

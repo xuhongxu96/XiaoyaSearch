@@ -4,7 +4,7 @@ using System.Text;
 using XiaoyaRanker.Config;
 using XiaoyaStore.Helper;
 
-namespace XiaoyaRanker.DomainDepthRanker
+namespace XiaoyaRanker.Ranker.DomainDepthRanker
 {
     public class DomainDepthRanker : IRanker
     {
