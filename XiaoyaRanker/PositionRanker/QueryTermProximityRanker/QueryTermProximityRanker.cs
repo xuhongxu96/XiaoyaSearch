@@ -19,12 +19,13 @@ namespace XiaoyaRanker.PositionRanker.QueryTermProximityRanker
         {
             var wordList = words.ToList();
             var wordCount = wordList.Count;
-            var wordTotalLength = wordList.Sum(o => o.Length);
-            var lastWordLength = 0;
-            var notExistedWordCount = 0;
 
             foreach (var id in urlFileIds)
             {
+                var lastWordLength = 0;
+                var wordTotalLength = 0;
+                var notExistedWordCount = 0;
+
                 var wordPositions = new List<List<int>>(wordCount);
                 List<int> bestWordPosition = null;
                 var pointers = new int[wordCount];
@@ -43,6 +44,7 @@ namespace XiaoyaRanker.PositionRanker.QueryTermProximityRanker
                     else
                     {
                         wordPositions.Add(positions);
+                        wordTotalLength += word.Length;
                     }
                 }
 
@@ -110,7 +112,7 @@ namespace XiaoyaRanker.PositionRanker.QueryTermProximityRanker
                 {
                     yield return new ScoreWithWordPositions
                     {
-                        Score = (double)wordTotalLength / (minWindowLength + lastWordLength),
+                        Score = (double)wordTotalLength / (minWindowLength + lastWordLength) / (1 + notExistedWordCount),
                         WordPositions = bestWordPosition.Zip(wordList, (p, w) => new ScoreWithWordPositions.WordPosition
                         {
                             Word = w,

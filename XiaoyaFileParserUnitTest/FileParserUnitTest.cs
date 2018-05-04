@@ -59,7 +59,7 @@ namespace XiaoyaFileParserUnitTest
 
             var content = parser.GetContentAsync().GetAwaiter().GetResult();
             Console.WriteLine(content);
-            Assert.IsTrue(content.Contains("研究关键领域集中于雷达声呐"));
+            Assert.IsTrue(content.Contains("研究关键领域集中于雷达"));
         }
     }
 }

@@ -37,7 +37,10 @@ namespace XiaoyaStore.Store
                     });
                 foreach (var stat in hostStats)
                 {
-                    mHostStat.TryAdd(stat.Host, stat.Count);
+                    if (stat.Host != null)
+                    {
+                        mHostStat.TryAdd(stat.Host, stat.Count);
+                    }
                 }
             }
 
@@ -291,7 +294,8 @@ namespace XiaoyaStore.Store
                         var now = DateTime.Now;
                         urls = context.UrlFrontierItems
                             .Where(o => !o.IsPopped && o.PlannedTime <= now)
-                            .OrderBy(o => new { o.Priority, o.PlannedTime })
+                            .OrderBy(o => o.Priority)
+                            .ThenBy(o => o.PlannedTime)
                             .Select(o => o.Url)
                             .Take(100)
                             .ToList();

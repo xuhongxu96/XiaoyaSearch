@@ -105,15 +105,6 @@ namespace XiaoyaCrawlerUnitTest
                 urlFileCount = context.UrlFiles.Count();
                 Assert.IsTrue(urlFileCount > 0);
                 Assert.IsTrue(context.UrlFrontierItems.Count() > 0);
-
-                foreach (var urlFile in context.UrlFiles)
-                {
-                    if (!File.Exists(urlFile.FilePath))
-                    {
-                        Assert.Fail(urlFile.Url + ": " + urlFile.FilePath);
-                    }
-                }
-
             }
 
             lock (RuntimeLogger.ReadLock)
