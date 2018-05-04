@@ -32,7 +32,7 @@ namespace XiaoyaCrawler.UrlFrontier
         /// Pop next url to be fetched
         /// </summary>
         /// <returns>Url to be fetched</returns>
-        public UrlFrontierItem PopUrl()
+        public string PopUrl()
         {
             var item = mConfig.UrlFrontierItemStore.PopUrlForCrawl();
 
@@ -41,7 +41,7 @@ namespace XiaoyaCrawler.UrlFrontier
                 return null;
             }
 
-            mLogger.Log(nameof(SimpleUrlFrontier), "Popped Url: " + item.Url);
+            mLogger.Log(nameof(SimpleUrlFrontier), "Popped Url: " + item);
 
             return item;
         }

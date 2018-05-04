@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using XiaoyaQueryParser.Config;
 using XiaoyaQueryParser.QueryParser;
 using XiaoyaRanker;
@@ -73,14 +74,22 @@ namespace XiaoyaSearch
             Console.WriteLine("Retrieved docs " + (DateTime.Now - time).TotalMilliseconds);
             time = DateTime.Now;
 
-            mConfig.InvertedIndexStore.CacheWordsInUrlFiles(urlFileIds, parsedQuery.Words);
+            Task.WaitAll(new Task[] {
+                Task.Run(() =>
+                {
+                    var innerTime = DateTime.Now;
+                    mConfig.InvertedIndexStore.CacheWordsInUrlFiles(urlFileIds, parsedQuery.Words);
+                    Console.WriteLine("Cached words " + (DateTime.Now - innerTime).TotalMilliseconds);
+                }),
+                Task.Run(() =>
+                {
+                    var innerTime = DateTime.Now;
+                    mConfig.UrlFileStore.CacheUrlFiles(urlFileIds);
+                    Console.WriteLine("Cached docs " + (DateTime.Now - innerTime).TotalMilliseconds);
+                }),
+            });
 
-            Console.WriteLine("Cached words " + (DateTime.Now - time).TotalMilliseconds);
-            time = DateTime.Now;
-
-            mConfig.UrlFileStore.CacheUrlFiles(urlFileIds);
-
-            Console.WriteLine("Cached docs " + (DateTime.Now - time).TotalMilliseconds);
+            Console.WriteLine("Cached all " + (DateTime.Now - time).TotalMilliseconds);
             time = DateTime.Now;
 
             var scores = mRanker.Rank(urlFileIds, parsedQuery.Words).ToList();
@@ -105,7 +114,7 @@ namespace XiaoyaSearch
             {
                 int subResultsLength = Math.Min(PageSize, count - PageSize * i);
                 var subResults = results.GetRange(i * PageSize, subResultsLength);
-                
+
                 var proScores = mProRanker.Rank(subResults.Select(o => o.UrlFileId), parsedQuery.Words).ToList();
 
                 for (int j = 0; j < subResultsLength; ++j)

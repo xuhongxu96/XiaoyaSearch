@@ -215,18 +215,19 @@ namespace XiaoyaStoreUnitTest
                 using (var context = new XiaoyaSearchContext(options))
                 {
                     Assert.AreEqual(2, context.UrlFrontierItems.Count());
+
+
+                    var item = context.UrlFrontierItems.Single(o => o.Url == urlFrontierItemStore.PopUrlForCrawl());
+                    Assert.AreEqual("http://baidu.com", item.Url);
+                    Assert.IsTrue(item.IsPopped);
+
+                    item = context.UrlFrontierItems.Single(o => o.Url == urlFrontierItemStore.PopUrlForCrawl());
+                    Assert.AreEqual("http://xuhongxu.com", item.Url);
+                    Assert.IsTrue(item.IsPopped);
+
+                    item = context.UrlFrontierItems.Single(o => o.Url == urlFrontierItemStore.PopUrlForCrawl());
+                    Assert.IsNull(item);
                 }
-
-                var item = urlFrontierItemStore.PopUrlForCrawl();
-                Assert.AreEqual("http://baidu.com", item.Url);
-                Assert.IsTrue(item.IsPopped);
-
-                item = urlFrontierItemStore.PopUrlForCrawl();
-                Assert.AreEqual("http://xuhongxu.com", item.Url);
-                Assert.IsTrue(item.IsPopped);
-
-                item = urlFrontierItemStore.PopUrlForCrawl();
-                Assert.IsNull(item);
             }
             finally
             {
@@ -261,25 +262,25 @@ namespace XiaoyaStoreUnitTest
                 using (var context = new XiaoyaSearchContext(options))
                 {
                     Assert.AreEqual(2, context.UrlFrontierItems.Count());
+
+                    var item = context.UrlFrontierItems.Single(o => o.Url == urlFrontierItemStore.PopUrlForCrawl());
+                    Assert.AreEqual("http://baidu.com", item.Url);
+                    Assert.IsTrue(item.IsPopped);
+
+                    item = urlFrontierItemStore.PushBack("http://baidu.com");
+                    Assert.AreEqual("http://baidu.com", item.Url);
+                    Assert.AreEqual(1, item.FailedTimes);
+                    Assert.IsTrue(item.PlannedTime > DateTime.Now);
+                    Assert.IsFalse(item.IsPopped);
+
+                    item = context.UrlFrontierItems.Single(o => o.Url == urlFrontierItemStore.PopUrlForCrawl());
+                    Assert.AreEqual("http://xuhongxu.com", item.Url);
+                    Assert.IsTrue(item.IsPopped);
+
+                    item = context.UrlFrontierItems.Single(o => o.Url == urlFrontierItemStore.PopUrlForCrawl());
+                    Assert.AreEqual("http://baidu.com", item.Url);
+                    Assert.IsTrue(item.IsPopped);
                 }
-
-                var item = urlFrontierItemStore.PopUrlForCrawl();
-                Assert.AreEqual("http://baidu.com", item.Url);
-                Assert.IsTrue(item.IsPopped);
-
-                item = urlFrontierItemStore.PushBack("http://baidu.com");
-                Assert.AreEqual("http://baidu.com", item.Url);
-                Assert.AreEqual(1, item.FailedTimes);
-                Assert.IsTrue(item.PlannedTime > DateTime.Now);
-                Assert.IsFalse(item.IsPopped);
-
-                item = urlFrontierItemStore.PopUrlForCrawl();
-                Assert.AreEqual("http://xuhongxu.com", item.Url);
-                Assert.IsTrue(item.IsPopped);
-
-                item = urlFrontierItemStore.PopUrlForCrawl();
-                Assert.AreEqual("http://baidu.com", item.Url);
-                Assert.IsTrue(item.IsPopped);
             }
             finally
             {
@@ -314,35 +315,35 @@ namespace XiaoyaStoreUnitTest
                 using (var context = new XiaoyaSearchContext(options))
                 {
                     Assert.AreEqual(2, context.UrlFrontierItems.Count());
+
+                    var item = context.UrlFrontierItems.Single(o => o.Url == urlFrontierItemStore.PopUrlForCrawl());
+                    Assert.AreEqual("http://baidu.com", item.Url);
+                    Assert.IsTrue(item.IsPopped);
+
+                    var urlFileStore = new UrlFileStore(options);
+                    urlFileStore.Save(new UrlFile
+                    {
+                        Url = "http://baidu.com",
+                        FilePath = @"D:\a.html",
+                        FileHash = "abcd",
+                        Charset = "utf8",
+                        MimeType = "text/html",
+                    });
+
+                    item = urlFrontierItemStore.PushBack("http://baidu.com");
+                    Assert.AreEqual("http://baidu.com", item.Url);
+                    Assert.AreEqual(0, item.FailedTimes);
+                    Assert.IsTrue(item.PlannedTime > DateTime.Now);
+                    Assert.IsFalse(item.IsPopped);
+
+                    item = context.UrlFrontierItems.Single(o => o.Url == urlFrontierItemStore.PopUrlForCrawl());
+                    Assert.AreEqual("http://xuhongxu.com", item.Url);
+                    Assert.IsTrue(item.IsPopped);
+
+                    item = context.UrlFrontierItems.Single(o => o.Url == urlFrontierItemStore.PopUrlForCrawl());
+                    Assert.AreEqual("http://baidu.com", item.Url);
+                    Assert.IsTrue(item.IsPopped);
                 }
-
-                var item = urlFrontierItemStore.PopUrlForCrawl();
-                Assert.AreEqual("http://baidu.com", item.Url);
-                Assert.IsTrue(item.IsPopped);
-
-                var urlFileStore = new UrlFileStore(options);
-                urlFileStore.Save(new UrlFile
-                {
-                    Url = "http://baidu.com",
-                    FilePath = @"D:\a.html",
-                    FileHash = "abcd",
-                    Charset = "utf8",
-                    MimeType = "text/html",
-                });
-
-                item = urlFrontierItemStore.PushBack("http://baidu.com");
-                Assert.AreEqual("http://baidu.com", item.Url);
-                Assert.AreEqual(0, item.FailedTimes);
-                Assert.IsTrue(item.PlannedTime > DateTime.Now);
-                Assert.IsFalse(item.IsPopped);
-
-                item = urlFrontierItemStore.PopUrlForCrawl();
-                Assert.AreEqual("http://xuhongxu.com", item.Url);
-                Assert.IsTrue(item.IsPopped);
-
-                item = urlFrontierItemStore.PopUrlForCrawl();
-                Assert.AreEqual("http://baidu.com", item.Url);
-                Assert.IsTrue(item.IsPopped);
             }
             finally
             {
@@ -400,41 +401,42 @@ namespace XiaoyaStoreUnitTest
                         },
                     });
                     context.SaveChanges();
+
+
+                    var urlFrontierItemStore = new UrlFrontierItemStore(options);
+                    var item = context.UrlFrontierItems.Single(o => o.Url == urlFrontierItemStore.PopUrlForCrawl());
+                    Assert.AreEqual("a", item.Url);
+
+                    var urlFileStore = new UrlFileStore(options);
+                    urlFileStore.Save(new UrlFile
+                    {
+                        Url = "a",
+                        FilePath = @"D:\a.html",
+                        FileHash = "abcd",
+                        Charset = "utf8",
+                        MimeType = "text/html",
+                    });
+
+                    urlFrontierItemStore.PushBack("a");
+
+                    item = context.UrlFrontierItems.Single(o => o.Url == urlFrontierItemStore.PopUrlForCrawl());
+                    Assert.AreEqual("b", item.Url);
+
+                    item = urlFrontierItemStore.PushBack("b");
+                    Assert.AreEqual(1, item.FailedTimes);
+
+                    item = context.UrlFrontierItems.Single(o => o.Url == urlFrontierItemStore.PopUrlForCrawl());
+                    Assert.AreEqual("c", item.Url);
+
+                    item = context.UrlFrontierItems.Single(o => o.Url == urlFrontierItemStore.PopUrlForCrawl());
+                    Assert.AreEqual("a", item.Url);
+
+                    item = context.UrlFrontierItems.Single(o => o.Url == urlFrontierItemStore.PopUrlForCrawl());
+                    Assert.AreEqual("b", item.Url);
+
+                    item = context.UrlFrontierItems.Single(o => o.Url == urlFrontierItemStore.PopUrlForCrawl());
+                    Assert.IsNull(item);
                 }
-
-                var urlFrontierItemStore = new UrlFrontierItemStore(options);
-                var item = urlFrontierItemStore.PopUrlForCrawl();
-                Assert.AreEqual("a", item.Url);
-
-                var urlFileStore = new UrlFileStore(options);
-                urlFileStore.Save(new UrlFile
-                {
-                    Url = "a",
-                    FilePath = @"D:\a.html",
-                    FileHash = "abcd",
-                    Charset = "utf8",
-                    MimeType = "text/html",
-                });
-
-                urlFrontierItemStore.PushBack("a");
-
-                item = urlFrontierItemStore.PopUrlForCrawl();
-                Assert.AreEqual("b", item.Url);
-
-                item = urlFrontierItemStore.PushBack("b");
-                Assert.AreEqual(1, item.FailedTimes);
-
-                item = urlFrontierItemStore.PopUrlForCrawl();
-                Assert.AreEqual("c", item.Url);
-
-                item = urlFrontierItemStore.PopUrlForCrawl();
-                Assert.AreEqual("a", item.Url);
-
-                item = urlFrontierItemStore.PopUrlForCrawl();
-                Assert.AreEqual("b", item.Url);
-
-                item = urlFrontierItemStore.PopUrlForCrawl();
-                Assert.IsNull(item);
             }
             finally
             {
@@ -513,22 +515,23 @@ namespace XiaoyaStoreUnitTest
                     {
                         Console.WriteLine(t.Url + " " + t.PlannedTime);
                     }
+
+
+                    var item = context.UrlFrontierItems.Single(o => o.Url == urlFrontierItemStore.PopUrlForCrawl());
+                    Assert.AreEqual("http://b.com/", item.Url);
+
+                    item = context.UrlFrontierItems.Single(o => o.Url == urlFrontierItemStore.PopUrlForCrawl());
+                    Assert.AreEqual("http://a.com/c", item.Url);
+
+                    item = context.UrlFrontierItems.Single(o => o.Url == urlFrontierItemStore.PopUrlForCrawl());
+                    Assert.AreEqual("http://c.com/d", item.Url);
+
+                    item = context.UrlFrontierItems.Single(o => o.Url == urlFrontierItemStore.PopUrlForCrawl());
+                    Assert.AreEqual("http://a.com/b", item.Url);
+
+                    item = context.UrlFrontierItems.Single(o => o.Url == urlFrontierItemStore.PopUrlForCrawl());
+                    Assert.IsNull(item);
                 }
-
-                var item = urlFrontierItemStore.PopUrlForCrawl();
-                Assert.AreEqual("http://b.com/", item.Url);
-
-                item = urlFrontierItemStore.PopUrlForCrawl();
-                Assert.AreEqual("http://a.com/c", item.Url);
-
-                item = urlFrontierItemStore.PopUrlForCrawl();
-                Assert.AreEqual("http://c.com/d", item.Url);
-
-                item = urlFrontierItemStore.PopUrlForCrawl();
-                Assert.AreEqual("http://a.com/b", item.Url);
-
-                item = urlFrontierItemStore.PopUrlForCrawl();
-                Assert.IsNull(item);
             }
             finally
             {

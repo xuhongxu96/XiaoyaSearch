@@ -50,7 +50,7 @@ namespace XiaoyaStore.Store
             {
                 foreach (var item in context.UrlFiles
                     .Where(o => urlFileIds.Contains(o.UrlFileId))
-                    .OrderByDescending(o => o.PageRank))
+                    /*.OrderByDescending(o => o.PageRank)*/)
                 {
                     if (mCache.IsValid(item.UrlFileId))
                     {

@@ -57,6 +57,7 @@ namespace XiaoyaCrawlerInterface
                     + @"|http://[\w\.\-_]*(oiegg.com)"
                     + @"|((cless|pb\.ss\.graduate|ipv6te)\.bnu\.edu\.cn)"
                     + @"|brain\.bnu\.edu\.cn/mrbs"
+                    + @"cogs\.bnu\.edu\.cn/index\.php?action=page&pid=12"
                     + @"|532movie\.bnu\.edu\.cn/player"
                     + @"|(/(search|print|login|space)[\./])"),
                 new UrlNormalizer(),

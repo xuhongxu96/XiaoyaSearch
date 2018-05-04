@@ -16,7 +16,7 @@ namespace XiaoyaCrawler.UrlFrontier
         /// Pop next url to be fetched
         /// </summary>
         /// <returns>Url to be fetched</returns>
-        UrlFrontierItem PopUrl();
+        string PopUrl();
         /// <summary>
         /// Push new urls
         /// </summary>

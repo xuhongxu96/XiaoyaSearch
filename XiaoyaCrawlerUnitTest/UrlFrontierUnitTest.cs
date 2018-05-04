@@ -103,7 +103,7 @@ namespace XiaoyaCrawlerUnitTest
                 }
 
                 var item = urlFrontier.PopUrl();
-                Assert.AreEqual("http://www.baidu.com", item.Url);
+                Assert.AreEqual("http://www.baidu.com", item);
             });
         }
 
@@ -122,7 +122,7 @@ namespace XiaoyaCrawlerUnitTest
                 }
 
                 var item = urlFrontier.PopUrl();
-                Assert.AreEqual("http://www.baidu.com", item.Url);
+                Assert.AreEqual("http://www.baidu.com", item);
 
                 urlFrontier.PushBackUrl("http://www.baidu.com");
                 using (var context = new XiaoyaSearchContext(options))

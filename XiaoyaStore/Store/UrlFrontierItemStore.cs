@@ -19,14 +19,23 @@ namespace XiaoyaStore.Store
     public class UrlFrontierItemStore : BaseStore, IUrlFrontierItemStore
     {
         private ConcurrentDictionary<string, int> mHostStat = new ConcurrentDictionary<string, int>();
+        private ConcurrentQueue<string> mUrlQueue = new ConcurrentQueue<string>();
 
         private RuntimeLogger mLogger = null;
+        private object mUrlQueueLock = new object();
 
         public UrlFrontierItemStore(DbContextOptions options = null, RuntimeLogger logger = null) : base(options)
         {
             using (var context = NewContext())
             {
-                foreach (var stat in context.UrlHostStats)
+                var hostStats = context.UrlFrontierItems
+                    .GroupBy(o => o.Host)
+                    .Select(o => new UrlHostStat
+                    {
+                        Host = o.Key,
+                        Count = o.Count(),
+                    });
+                foreach (var stat in hostStats)
                 {
                     mHostStat.TryAdd(stat.Host, stat.Count);
                 }
@@ -34,13 +43,16 @@ namespace XiaoyaStore.Store
 
             mLogger = logger;
 
+            
             var thread = new Thread(FlushHostStat)
             {
                 Priority = ThreadPriority.AboveNormal,
             };
             thread.Start();
+            
         }
 
+        
         private void FlushHostStat()
         {
             while (true)
@@ -75,6 +87,7 @@ namespace XiaoyaStore.Store
                 mLogger?.Log(nameof(UrlFrontierItemStore), "Flushed Host Stats");
             }
         }
+        
 
         public void Init(IEnumerable<string> initUrls)
         {
@@ -247,43 +260,73 @@ namespace XiaoyaStore.Store
             }
         }
 
-        public UrlFrontierItem PopUrlForCrawl()
+        public string PopUrlForCrawl()
         {
-            using (var context = NewContext())
+            if (mUrlQueue.TryDequeue(out string url))
             {
-                UrlFrontierItem item;
-                if (context.Database.IsSqlServer())
+                return url;
+            }
+
+            lock (mUrlQueueLock)
+            {
+                if (mUrlQueue.TryDequeue(out url))
                 {
-                    item = context.UrlFrontierItems
-                        .FromSql("SELECT TOP 1 * FROM UrlFrontierItems WHERE IsPopped = 0 AND PlannedTime <= GETDATE() ORDER BY Priority, PlannedTime")
-                        .FirstOrDefault();
-                }
-                else
-                {
-                    var now = DateTime.Now;
-                    item = context.UrlFrontierItems
-                        .Where(o => !o.IsPopped && o.PlannedTime <= now)
-                        .OrderBy(o => new { o.Priority, o.PlannedTime })
-                        .FirstOrDefault();
-                }
-                if (item == null)
-                {
-                    return null;
+                    return url;
                 }
 
-                item.IsPopped = true;
-                item.UpdatedAt = DateTime.Now;
+                using (var context = NewContext())
+                {
+                    IEnumerable<string> urls;
+                    if (context.Database.IsSqlServer())
+                    {
+                        urls = context.UrlFrontierItems
+                            .FromSql("SELECT TOP 100 * FROM UrlFrontierItems WHERE IsPopped = 0 AND PlannedTime <= GETDATE() ORDER BY Priority, PlannedTime")
+                            .Select(o => o.Url)
+                            .Take(100)
+                            .ToList();
 
-                try
-                {
-                    context.SaveChanges();
-                    return item;
-                }
-                catch (DbUpdateException e)
-                {
-                    return null;
+                    }
+                    else
+                    {
+                        var now = DateTime.Now;
+                        urls = context.UrlFrontierItems
+                            .Where(o => !o.IsPopped && o.PlannedTime <= now)
+                            .OrderBy(o => new { o.Priority, o.PlannedTime })
+                            .Select(o => o.Url)
+                            .Take(100)
+                            .ToList();
+                    }
+
+                    context.UrlFrontierItems
+                        .Where(o => urls.Contains(o.Url))
+                        .Update(o => new UrlFrontierItem
+                        {
+                            IsPopped = true,
+                            UpdatedAt = DateTime.Now,
+                        });
+
+                    try
+                    {
+                        context.SaveChanges();
+                    }
+                    catch (DbUpdateException)
+                    {
+                        return null;
+                    }
+
+                    foreach (var item in urls)
+                    {
+                        mUrlQueue.Enqueue(item);
+                    }
                 }
             }
+
+            if (mUrlQueue.TryDequeue(out url))
+            {
+                return url;
+            }
+
+            return null;
         }
 
         public void Remove(string url)

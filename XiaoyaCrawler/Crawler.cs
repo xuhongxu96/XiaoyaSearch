@@ -72,9 +72,9 @@ namespace XiaoyaCrawler
         protected void FetchUrlAsync(string url)
         {
             mFetchSemaphore.Wait();
+            mLogger.Log(nameof(Crawler), "Begin Crawl: " + url, true);
             var t = Task.Run(() =>
             {
-                mLogger.Log(nameof(Crawler), "Begin Crawl: " + url, false);
                 UrlFile urlFile = null;
                 try
                 {
@@ -246,7 +246,7 @@ namespace XiaoyaCrawler
                         break;
                     }
 
-                    UrlFrontierItem url = null;
+                    string url = null;
 
                     try
                     {
@@ -260,7 +260,7 @@ namespace XiaoyaCrawler
 
                     if (url != null)
                     {
-                        FetchUrlAsync(url.Url);
+                        FetchUrlAsync(url);
                     }
                     else if (mTasks.Keys.Any())
                     {

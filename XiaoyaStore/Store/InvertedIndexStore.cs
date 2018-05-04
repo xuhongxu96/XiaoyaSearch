@@ -221,7 +221,7 @@ namespace XiaoyaStore.Store
             {
                 foreach (var item in context.InvertedIndices
                     .Where(o => urlFileIds.Contains(o.UrlFileId) && words.Contains(o.Word))
-                    .OrderByDescending(o => o.Weight))
+                    /*.OrderByDescending(o => o.Weight)*/)
                 {
                     if (mWordUrlFileCache.IsValid(new CacheIndex
                     {
