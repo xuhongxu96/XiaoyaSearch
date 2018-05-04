@@ -72,7 +72,7 @@ namespace XiaoyaFileParser.Parsers
                                 mLinkInfo.Add(new LinkInfo
                                 {
                                     Url = absoluteUrl.ToString(),
-                                    Text = TextHelper.ReplaceSpaces(text.ToLower(), ""),
+                                    Text = TextHelper.ReplaceSpaces(text.ToLower(), " "),
                                 });
                             }
                         }
@@ -152,7 +152,11 @@ namespace XiaoyaFileParser.Parsers
                 {
                     foreach (var header in document.GetElementsByTagName(tag))
                     {
-                        mHeaders.Add(TextHelper.ReplaceSpaces(header.Text().ToLower(), ""));
+                        var text = TextHelper.ReplaceSpaces(header.Text().ToLower(), " ");
+                        if (text != "")
+                        {
+                            mHeaders.Add(text);
+                        }
                     }
                 }
             }

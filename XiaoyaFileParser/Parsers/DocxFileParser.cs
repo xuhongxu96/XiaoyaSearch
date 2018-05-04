@@ -84,7 +84,7 @@ namespace XiaoyaFileParser.Parsers
                                     }
                                     currentPar = run.Parent;
                                     var text = TextHelper.NormalizeString(currentPar.InnerText.Trim());
-                                    if (text != "" && TextHelper.ReplaceSpaces(text, "").Length < 50)
+                                    if (text != "" && TextHelper.ReplaceSpaces(text, " ").Length < 50)
                                     {
                                         headers.Add((text, fontSize));
                                     }

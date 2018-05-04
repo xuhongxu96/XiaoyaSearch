@@ -7,7 +7,8 @@ namespace XiaoyaNLP.Helper
 {
     public static class CommonRegex
     {
-        public static readonly Regex ConsecutiveTrimmer = new Regex(@"\s\s+|　", RegexOptions.Compiled );
+        public static readonly Regex SpacesBetweenNonAlphanum = new Regex(@"(?<![a-zA-Z0-9]) (?![a-zA-Z0-9])", RegexOptions.Compiled);
+        public static readonly Regex ConsecutiveSpaces = new Regex(@"\s\s+", RegexOptions.Compiled);
 
         public static readonly Regex AllChars = new Regex(@"([\u4E00-\u9FA0\x00-\xff]+)", RegexOptions.Compiled);
         public static readonly Regex AllNonChars = new Regex(@"([^\u4E00-\u9FA0\x00-\xff]+)", RegexOptions.Compiled);

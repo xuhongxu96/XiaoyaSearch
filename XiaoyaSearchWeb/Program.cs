@@ -18,7 +18,11 @@ namespace XiaoyaSearchWeb
         }
 
         public static IWebHost BuildWebHost(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
+            WebHost.CreateDefaultBuilder(args.Skip(1).ToArray())
+                .UseUrls(new string[]
+                {
+                    "http://*:" + args[0],
+                })
                 .UseStartup<Startup>()
                 .Build();
     }

@@ -16,25 +16,27 @@ namespace XiaoyaSearchWeb.Controllers
             return View();
         }
 
-        public async Task<string> Search(string query)
+        public async Task<IActionResult> Search(string query)
         {
-            var stringBuilder = new StringBuilder();
+            var searchResults = new List<SearchResultItem>();
 
             await Task.Run(() =>
             {
                 var results = EngineOptions.SearchEngine.Search(query);
-                var count = 0;
 
                 foreach (var result in results)
                 {
                     var urlFile = EngineOptions.UrlFileStore.LoadById(result.UrlFileId);
 
-                    stringBuilder.AppendFormat("{0}: {1} ({2}, {3})\n", result.UrlFileId, urlFile.Url, result.Score, result.ProScore);
-                    stringBuilder.AppendLine(urlFile.Title);
+                    var searchResultItem = new SearchResultItem();
+                    searchResultItem.Title = urlFile.Title;
+                    searchResultItem.Url = urlFile.Url;
+                    searchResultItem.Score = result.Score;
+                    searchResultItem.ProScore = result.ProScore;
 
                     if (result.WordPositions == null)
                     {
-                        stringBuilder.AppendLine("  " + urlFile.TextContent.Substring(0, 50).Replace("\r", "").Replace("\n", "  "));
+                        searchResultItem.Details = urlFile.TextContent.Substring(0, 50).Replace("\r", "").Replace("\n", "  ");
                     }
                     else
                     {
@@ -45,19 +47,16 @@ namespace XiaoyaSearchWeb.Controllers
 
                         var content = urlFile.TextContent;
 
-                        stringBuilder.AppendLine("  "
-                            + content.Substring(minPos,
+                        searchResultItem.Details = content.Substring(minPos,
                             Math.Min(maxPos.Position - minPos + maxPos.Word.Length + 50, content.Length - minPos))
-                            .Replace("\r", "").Replace("\n", "  "));
+                            .Replace("\r", "").Replace("\n", "  ");
                     }
 
-                    stringBuilder.AppendLine("\n");
-
-                    count++;
+                    searchResults.Add(searchResultItem);
                 }
             });
 
-            return stringBuilder.ToString();
+            return View("Index", searchResults);
 
         }
 

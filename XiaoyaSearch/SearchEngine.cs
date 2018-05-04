@@ -24,8 +24,8 @@ namespace XiaoyaSearch
         protected IPositionRanker mProRanker;
         protected SearchEngineConfig mConfig;
 
-        protected const int ResultSize = 500;
-        protected const int PageSize = 500;
+        protected const int ResultSize = 300;
+        protected const int PageSize = 300;
 
         public SearchEngine(SearchEngineConfig config)
         {
@@ -55,11 +55,12 @@ namespace XiaoyaSearch
 
         public IEnumerable<SearchResult> Search(string query)
         {
-            query = query.Trim();
-            if (query == "")
+            if (query == null || query.Trim() == "")
             {
                 yield break;
             }
+            query = query.Trim();
+            
 
             Console.WriteLine("Begin search");
             var time = DateTime.Now;

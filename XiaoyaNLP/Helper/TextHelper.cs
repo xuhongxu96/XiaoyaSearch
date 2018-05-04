@@ -10,7 +10,8 @@ namespace XiaoyaNLP.Helper
     {
         public static string ReplaceSpaces(string input, string replacement = "\n")
         {
-            return CommonRegex.ConsecutiveTrimmer.Replace(input.Trim(), replacement);
+            input = CommonRegex.ConsecutiveSpaces.Replace(input.Trim(), replacement);
+            return CommonRegex.SpacesBetweenNonAlphanum.Replace(input.Trim(), "");
         }
 
         public static string FullWidthCharToHalfWidthChar(string input)
