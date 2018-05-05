@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using XiaoyaRanker.Config;
+using XiaoyaRanker.RankerDebugInfo;
 
 namespace XiaoyaRanker.PositionRanker.QueryTermProximityRanker
 {
@@ -104,15 +105,24 @@ namespace XiaoyaRanker.PositionRanker.QueryTermProximityRanker
                 {
                     yield return new ScoreWithWordPositions
                     {
-                        Score = 0,
+                        Value = 0,
+                        DebugInfo = new DebugInfo(nameof(QueryTermProximityRanker),
+                            "Error", "No Word Was Found"),
                         WordPositions = null,
                     };
                 }
                 else
                 {
+                    var debugInfo = new DebugInfo(nameof(QueryTermProximityRanker));
+                    debugInfo.Properties["MinWindowLength"] = new StringDebugInfoValue(minWindowLength.ToString());
+                    debugInfo.Properties["LastWordLength"] = new StringDebugInfoValue(lastWordLength.ToString());
+                    debugInfo.Properties["WordTotalLength"] = new StringDebugInfoValue(wordTotalLength.ToString());
+                    debugInfo.Properties["NotExistedWordCount"] = new StringDebugInfoValue(notExistedWordCount.ToString());
+
                     yield return new ScoreWithWordPositions
                     {
-                        Score = (double)wordTotalLength / (minWindowLength + lastWordLength) / (1 + notExistedWordCount),
+                        Value = (double)wordTotalLength / (minWindowLength + lastWordLength) / (1 + notExistedWordCount),
+                        DebugInfo = debugInfo,
                         WordPositions = bestWordPosition.Zip(wordList, (p, w) => new ScoreWithWordPositions.WordPosition
                         {
                             Word = w,

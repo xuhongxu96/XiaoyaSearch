@@ -35,7 +35,7 @@ namespace XiaoyaFileParser.Parsers
         protected string mContent = null;
         protected string mTextContent = null;
         protected List<LinkInfo> mLinkInfo = null;
-        protected List<string> mHeaders = null;
+        protected List<Header> mHeaders = null;
         protected DateTime mPublishDate = DateTime.MinValue;
 
         public BaseParser() { }
@@ -97,11 +97,11 @@ namespace XiaoyaFileParser.Parsers
 
             foreach (var header in headers)
             {
-                foreach (var segment in mConfig.TextSegmenter.Segment(header).GroupBy(o => TextHelper.NormalizeIndexWord(o.Word)))
+                foreach (var segment in mConfig.TextSegmenter.Segment(header.Text).GroupBy(o => TextHelper.NormalizeIndexWord(o.Word)))
                 {
                     if (wordDict.ContainsKey(segment.Key))
                     {
-                        wordDict[segment.Key].OccurencesInHeaders = segment.Count();
+                        wordDict[segment.Key].OccurencesInHeaders = segment.Count() * (6 - header.Level);
                     }
                     else
                     {
@@ -113,7 +113,7 @@ namespace XiaoyaFileParser.Parsers
                             WordFrequency = segment.Count(),
                             OccurencesInLinks = 0,
                             OccurencesInTitle = 0,
-                            OccurencesInHeaders = segment.Count(),
+                            OccurencesInHeaders = segment.Count() * (6 - header.Level),
                         };
                         result.Add(token);
                         wordDict.Add(token.Word, token);
@@ -186,10 +186,15 @@ namespace XiaoyaFileParser.Parsers
 
                 await Task.Run(() =>
                 {
-                    mTitle = content.Split(new char[] { '\n', 'r' }, StringSplitOptions.RemoveEmptyEntries).FirstOrDefault();
+                    var lines = content.Split(new char[] { '\n' }, StringSplitOptions.RemoveEmptyEntries);
+                    mTitle = lines.FirstOrDefault();
                     if (mTitle == null)
                     {
                         mTitle = "";
+                    }
+                    else if (mTitle.Length < 4 && lines.Length > 1)
+                    {
+                        mTitle += "  " + lines[1];
                     }
                 });
             }
@@ -221,11 +226,11 @@ namespace XiaoyaFileParser.Parsers
 
         public abstract Task<string> GetContentAsync();
 
-        public virtual async Task<IList<string>> GetHeadersAsync()
+        public virtual async Task<IList<Header>> GetHeadersAsync()
         {
             return await Task.Run(() =>
             {
-                return new List<string>();
+                return new List<Header>();
             });
         }
     }

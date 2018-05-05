@@ -36,6 +36,7 @@ namespace XiaoyaSearchWeb
                 UrlFileStore = EngineOptions.UrlFileStore,
                 IndexStatStore = EngineOptions.IndexStatStore,
                 InvertedIndexStore = EngineOptions.InvertedIndexStore,
+                LogDirectory = @"E:\XiaoyaSearch\Logs"
             });
         }
 

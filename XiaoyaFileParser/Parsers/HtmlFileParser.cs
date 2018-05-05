@@ -11,6 +11,7 @@ using System.Text.RegularExpressions;
 using System.Linq;
 using XiaoyaNLP.Helper;
 using AngleSharp.Dom;
+using XiaoyaStore.Helper;
 
 namespace XiaoyaFileParser.Parsers
 {
@@ -129,16 +130,31 @@ namespace XiaoyaFileParser.Parsers
 
                 var document = await mParser.ParseAsync(content);
 
-                mTitle = document.Title;
-                if (mTitle == null)
+                mTitle = document.Title ?? "";
+
+                var headers = await GetHeadersAsync();
+                var firstHeader = headers.FirstOrDefault();
+
+                if (firstHeader != null
+                    && headers.Count(o => o.Level == firstHeader.Level) == 1
+                    && UrlHelper.GetDomainDepth(mUrlFile.Url) > 0
+                    && !mTitle.Contains("-")
+                    && !mTitle.Contains(firstHeader.Text))
                 {
-                    mTitle = "";
+                    if (mTitle == "")
+                    {
+                        mTitle = firstHeader.Text;
+                    }
+                    else
+                    {
+                        mTitle = firstHeader.Text + " - " + mTitle;
+                    }
                 }
             }
             return mTitle;
         }
 
-        public override async Task<IList<string>> GetHeadersAsync()
+        public override async Task<IList<Header>> GetHeadersAsync()
         {
             if (mHeaders == null)
             {
@@ -146,16 +162,22 @@ namespace XiaoyaFileParser.Parsers
 
                 var document = await mParser.ParseAsync(content);
 
-                mHeaders = new List<string>();
+                mHeaders = new List<Header>();
 
-                foreach (var tag in HeaderElementTags)
+                for (int i = 0; i < HeaderElementTags.Count; ++i)
                 {
+                    var tag = HeaderElementTags[i];
+
                     foreach (var header in document.GetElementsByTagName(tag))
                     {
-                        var text = TextHelper.ReplaceSpaces(header.Text().ToLower(), " ");
+                        var text = TextHelper.RemoveSpaceToSymbol(TextHelper.ReplaceSpaces(header.Text().ToLower(), " "), ":");
                         if (text != "")
                         {
-                            mHeaders.Add(text);
+                            mHeaders.Add(new Header
+                            {
+                                Level = i + 1,
+                                Text = text,
+                            });
                         }
                     }
                 }

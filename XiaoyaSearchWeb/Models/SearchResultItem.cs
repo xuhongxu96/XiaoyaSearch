@@ -11,7 +11,11 @@ namespace XiaoyaSearchWeb.Models
         public string Url { get; set; }
         public string Details { get; set; }
 
+        public DateTime PublishDate { get; set; }
+
         public double Score { get; set; }
+        public string ScoreDebugInfo { get; set; }
         public double ProScore { get; set; }
+        public string ProScoreDebugInfo { get; set; }
     }
 }

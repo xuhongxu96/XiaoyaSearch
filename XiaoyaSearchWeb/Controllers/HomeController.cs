@@ -18,7 +18,10 @@ namespace XiaoyaSearchWeb.Controllers
 
         public async Task<IActionResult> Search(string query)
         {
-            var searchResults = new List<SearchResultItem>();
+            var searchResults = new WebSearchResult
+            {
+                Query = query.Trim(),
+            };
 
             await Task.Run(() =>
             {
@@ -28,15 +31,21 @@ namespace XiaoyaSearchWeb.Controllers
                 {
                     var urlFile = EngineOptions.UrlFileStore.LoadById(result.UrlFileId);
 
-                    var searchResultItem = new SearchResultItem();
-                    searchResultItem.Title = urlFile.Title;
-                    searchResultItem.Url = urlFile.Url;
-                    searchResultItem.Score = result.Score;
-                    searchResultItem.ProScore = result.ProScore;
+                    var searchResultItem = new SearchResultItem
+                    {
+                        Title = urlFile.Title,
+                        Url = urlFile.Url,
+                        PublishDate = urlFile.PublishDate,
+                        Score = result.Score.Value,
+                        ProScore = result.ProScore.Value,
+                        ScoreDebugInfo = result.Score.ToString(),
+                        ProScoreDebugInfo = result.ProScore.ToString(),
+                    };
 
                     if (result.WordPositions == null)
                     {
-                        searchResultItem.Details = urlFile.TextContent.Substring(0, 50).Replace("\r", "").Replace("\n", "  ");
+                        searchResultItem.Details = urlFile.TextContent
+                            .Substring(0, Math.Min(50, urlFile.TextContent.Length)).Replace("\r", "").Replace("\n", "  ");
                     }
                     else
                     {
@@ -52,7 +61,7 @@ namespace XiaoyaSearchWeb.Controllers
                             .Replace("\r", "").Replace("\n", "  ");
                     }
 
-                    searchResults.Add(searchResultItem);
+                    searchResults.Items.Add(searchResultItem);
                 }
             });
 

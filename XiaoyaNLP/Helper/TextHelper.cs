@@ -14,6 +14,12 @@ namespace XiaoyaNLP.Helper
             return CommonRegex.SpacesBetweenNonAlphanum.Replace(input.Trim(), "");
         }
 
+        public static string RemoveSpaceToSymbol(string input, string symbol)
+        {
+            var regex = new Regex(@"(\s|^)([^\s]*)" + Regex.Escape(symbol), RegexOptions.Compiled);
+            return regex.Replace(input, "");
+        }
+
         public static string FullWidthCharToHalfWidthChar(string input)
         {
             return input
@@ -48,7 +54,7 @@ namespace XiaoyaNLP.Helper
 
             var result = FullWidthCharToHalfWidthChar(input.Trim());
             result = RemoveSpecialCharacters(result);
-            result = result.ToLower();
+            result = result.ToLower().Replace("\r", "");
 
             return result;
         }

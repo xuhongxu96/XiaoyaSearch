@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using XiaoyaCommon.Helper;
 using XiaoyaRanker.Config;
+using XiaoyaRanker.RankerDebugInfo;
 using static XiaoyaStore.Data.Model.InvertedIndex;
 
 namespace XiaoyaRanker.Ranker.VectorSpaceModelRanker
@@ -12,16 +13,16 @@ namespace XiaoyaRanker.Ranker.VectorSpaceModelRanker
     {
         protected RankerConfig mConfig;
         protected const double ContentFactor = 1;
-        protected const double TitleFactor = 5;
+        protected const double TitleFactor = 10;
         protected const double LinkFactor = 20;
-        protected const double HeaderFactor = 10;
+        protected const double HeaderFactor = 15;
 
         public VectorSpaceModelRanker(RankerConfig config)
         {
             mConfig = config;
         }
 
-        public IEnumerable<double> Rank(IEnumerable<int> urlFileIds, IEnumerable<string> words)
+        public IEnumerable<Score> Rank(IEnumerable<int> urlFileIds, IEnumerable<string> words)
         {
             var documentCount = mConfig.UrlFileStore.Count();
 
@@ -30,7 +31,12 @@ namespace XiaoyaRanker.Ranker.VectorSpaceModelRanker
                 var urlFile = mConfig.UrlFileStore.LoadById(urlFileId);
                 if (urlFile == null)
                 {
-                    yield return 0;
+                    yield return new Score
+                    {
+                        Value = 0,
+                        DebugInfo = new DebugInfo(nameof(VectorSpaceModelRanker), 
+                            "Error", "UrlFile Not Found"),
+                    };
                     continue;
                 }
                 var titleLength = urlFile.Title.Length + 1;
@@ -70,16 +76,28 @@ namespace XiaoyaRanker.Ranker.VectorSpaceModelRanker
                     var headerWordScore =
                         ScoringHelper.TfIdf(wordFrequencyInHeaders, documentFrequency, documentCount);
 
-                    titleScore += titleWordScore * word.Length / titleLength;
-                    linkScore += linkWordScore * word.Length / (1 + urlFile.LinkTotalLength);
-                    headerScore += headerWordScore * word.Length / (1 + urlFile.HeaderTotalLength);
+                    titleScore += titleWordScore * Math.Min(1, (0.3 + word.Length / titleLength));
+                    linkScore += linkWordScore / urlFile.LinkCount; // * word.Length / (1 + urlFile.LinkTotalLength);
+                    headerScore += headerWordScore; // * word.Length / (1 + urlFile.HeaderTotalLength);
                     contentScore += wordScore * Math.Min(1, (0.3 + word.Length / contentLength));
                 }
-                yield return (ContentFactor * contentScore
+                var finalScore = (ContentFactor * contentScore
                     + TitleFactor * titleScore 
                     + LinkFactor * linkScore
                     + HeaderFactor * headerScore) 
                     / (ContentFactor + TitleFactor + LinkFactor + HeaderFactor);
+
+                var debugInfo = new DebugInfo(nameof(VectorSpaceModelRanker));
+                debugInfo.Properties["ContentScore"] = new StringDebugInfoValue(contentScore.ToString());
+                debugInfo.Properties["TitleScore"] = new StringDebugInfoValue(titleScore.ToString());
+                debugInfo.Properties["HeaderScore"] = new StringDebugInfoValue(headerScore.ToString());
+                debugInfo.Properties["LinkScore"] = new StringDebugInfoValue(linkScore.ToString());
+
+                yield return new Score
+                {
+                    Value = finalScore,
+                    DebugInfo = debugInfo,
+                };
             }
         }
     }

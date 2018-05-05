@@ -11,7 +11,7 @@ namespace XiaoyaCommon.Helper
         public static double TfIdf(long frequency, long documentFrequency, int documentCount)
         {
             double idf = Math.Log(documentCount + 1) - Math.Log(documentFrequency + 1);
-            return (1 + Math.Log(frequency + 1)) * idf;
+            return (1 + Math.Log(frequency + 0.1)) * idf;
         }
 
         public static double CalculateIndexWeight(string title,
@@ -40,14 +40,14 @@ namespace XiaoyaCommon.Helper
                 content = "";
             }
 
-            var linkTotalLength = linkTexts.Sum(o => o.Length);
+            var linkCount = linkTexts.Count();
 
             double score;
 
             if (positions.Any())
             {
                 score = (occurenceInTitle * 3 * word.Length) / (1 + title.Length)
-                    + (occurenceInLinks * 5 * word.Length) / (1 + linkTotalLength)
+                    + (occurenceInLinks * 5) / (1 + linkCount)
                     + wordFrequencyInFile * word.Length / (1 + content.Length)
                     + 1 - (1 + positions.First()) / (1 + content.Length)
                     + Math.Exp(-UrlHelper.GetDomainDepth(url))
@@ -56,7 +56,7 @@ namespace XiaoyaCommon.Helper
             else
             {
                 score = (occurenceInTitle * 4 * word.Length) / (1 + title.Length)
-                    + (occurenceInLinks * 6 * word.Length) / (1 + linkTotalLength)
+                    + (occurenceInLinks * 6) / (1 + linkCount)
                     + Math.Exp(-UrlHelper.GetDomainDepth(url))
                     + Math.Exp(-Math.Max(0, DateTime.Now.Subtract(publishDate).TotalDays / 30 - 3));
             }

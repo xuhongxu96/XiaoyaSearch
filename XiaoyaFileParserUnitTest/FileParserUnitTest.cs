@@ -1,5 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using System.Linq;
 using XiaoyaCommon.Helper;
 using XiaoyaFileParser.Parsers;
 
@@ -32,7 +33,7 @@ namespace XiaoyaFileParserUnitTest
             {
                 Console.WriteLine(header);
             }
-            Assert.IsTrue(headers.Contains("可行性论述"));
+            Assert.IsTrue(headers.Select(o => o.Text).Contains("可行性论述"));
 
             var content = parser.GetContentAsync().GetAwaiter().GetResult();
             Console.WriteLine(content);
@@ -55,7 +56,7 @@ namespace XiaoyaFileParserUnitTest
             {
                 Console.WriteLine(header);
             }
-            Assert.IsTrue(headers.Contains("应用领域"));
+            Assert.IsTrue(headers.Select(o => o.Text).Contains("应用领域"));
 
             var content = parser.GetContentAsync().GetAwaiter().GetResult();
             Console.WriteLine(content);

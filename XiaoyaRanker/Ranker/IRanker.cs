@@ -6,6 +6,6 @@ namespace XiaoyaRanker.Ranker
 {
     public interface IRanker
     {
-        IEnumerable<double> Rank(IEnumerable<int> urlFileIds, IEnumerable<string> words);
+        IEnumerable<Score> Rank(IEnumerable<int> urlFileIds, IEnumerable<string> words);
     }
 }

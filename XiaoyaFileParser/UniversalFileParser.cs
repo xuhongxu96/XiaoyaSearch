@@ -95,7 +95,7 @@ namespace XiaoyaFileParser
             return await mCurrentParser?.GetPublishDateAsync();
         }
 
-        public async Task<IList<string>> GetHeadersAsync()
+        public async Task<IList<Header>> GetHeadersAsync()
         {
             return await mCurrentParser?.GetHeadersAsync();
         }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using XiaoyaRanker;
 using static XiaoyaRanker.PositionRanker.ScoreWithWordPositions;
 
 namespace XiaoyaSearch
@@ -8,8 +9,8 @@ namespace XiaoyaSearch
     public class SearchResult
     {
         public int UrlFileId { get; set; }
-        public double Score { get; set; }
-        public double ProScore { get; set; }
+        public Score Score { get; set; }
+        public Score ProScore { get; set; }
         public IEnumerable<WordPosition> WordPositions { get; set; }
     }
 }

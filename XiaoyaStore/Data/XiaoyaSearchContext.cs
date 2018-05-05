@@ -31,6 +31,9 @@ namespace XiaoyaStore.Data
             modelBuilder.Entity<UrlFrontierItem>()
                 .HasIndex(o => o.IsPopped);
 
+            modelBuilder.Entity<UrlFrontierItem>()
+                .HasIndex(o => o.Host);
+
             #endregion
 
             #region UrlFile

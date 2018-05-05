@@ -111,8 +111,15 @@ namespace XiaoyaFileParser.Parsers
 
                     headers.Insert(0, (title, int.MaxValue));
 
+                    var levels = headers.Select(o => o.FontSize).Distinct().OrderByDescending(o => o).ToList();
+                    var levelDict = new Dictionary<int, int>();
+                    for (int i = 1; i <= levels.Count; ++i)
+                    {
+                        levelDict[levels[i]] = i;
+                    }
+
                     mContent = mContent.Length + "\n" + mContent
-                        + string.Join("\n", headers.Select(o => o.Text));
+                        + string.Join("\n", headers.Select(o => levelDict[o.FontSize] + "\n" + o.Text));
                 });
 
             }

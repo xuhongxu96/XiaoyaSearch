@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using XiaoyaLogger;
 using XiaoyaQueryParser.Config;
 using XiaoyaQueryParser.QueryParser;
 using XiaoyaRanker;
@@ -24,8 +26,12 @@ namespace XiaoyaSearch
         protected IPositionRanker mProRanker;
         protected SearchEngineConfig mConfig;
 
-        protected const int ResultSize = 300;
-        protected const int PageSize = 300;
+        protected RuntimeLogger mLogger;
+
+        protected const int ResultSize = 150;
+        protected const int PageSize = 150;
+
+        protected static volatile int SessionId = 0;
 
         public SearchEngine(SearchEngineConfig config)
         {
@@ -51,6 +57,8 @@ namespace XiaoyaSearch
 
             mRanker = new IntegratedRanker(rankerConfig);
             mProRanker = new QueryTermProximityRanker(rankerConfig);
+
+            mLogger = new RuntimeLogger(Path.Combine(config.LogDirectory, "SearchEngine.Log"), true);
         }
 
         public IEnumerable<SearchResult> Search(string query)
@@ -60,20 +68,22 @@ namespace XiaoyaSearch
                 yield break;
             }
             query = query.Trim();
-            
 
-            Console.WriteLine("Begin search");
+            var session = SessionId++;
+
+            mLogger.Log(nameof(SearchEngine), session + "\tSearching: " + query);
+
             var time = DateTime.Now;
 
             var parsedQuery = mQueryParser.Parse(query);
 
-            Console.WriteLine("Parsed query " + (DateTime.Now - time).TotalMilliseconds);
+            mLogger.Log(nameof(SearchEngine), session + "\tParsed query " + (DateTime.Now - time).TotalMilliseconds);
             time = DateTime.Now;
 
             var urlFileIds = mRetriever.Retrieve(parsedQuery.Expression).ToList();
             var count = urlFileIds.Count;
 
-            Console.WriteLine("Retrieved docs " + (DateTime.Now - time).TotalMilliseconds);
+            mLogger.Log(nameof(SearchEngine), session + "\tRetrieved docs " + (DateTime.Now - time).TotalMilliseconds);
             time = DateTime.Now;
 
             Task.WaitAll(new Task[] {
@@ -81,22 +91,22 @@ namespace XiaoyaSearch
                 {
                     var innerTime = DateTime.Now;
                     mConfig.InvertedIndexStore.CacheWordsInUrlFiles(urlFileIds, parsedQuery.Words);
-                    Console.WriteLine("Cached words " + (DateTime.Now - innerTime).TotalMilliseconds);
+                    mLogger.Log(nameof(SearchEngine), session + "\tCached words " + (DateTime.Now - innerTime).TotalMilliseconds);
                 }),
                 Task.Run(() =>
                 {
                     var innerTime = DateTime.Now;
                     mConfig.UrlFileStore.CacheUrlFiles(urlFileIds);
-                    Console.WriteLine("Cached docs " + (DateTime.Now - innerTime).TotalMilliseconds);
+                    mLogger.Log(nameof(SearchEngine), session + "\tCached docs " + (DateTime.Now - innerTime).TotalMilliseconds);
                 }),
             });
 
-            Console.WriteLine("Cached all " + (DateTime.Now - time).TotalMilliseconds);
+            mLogger.Log(nameof(SearchEngine), session + "\tCached all " + (DateTime.Now - time).TotalMilliseconds);
             time = DateTime.Now;
 
             var scores = mRanker.Rank(urlFileIds, parsedQuery.Words).ToList();
 
-            Console.WriteLine("Ranked docs 1 " + (DateTime.Now - time).TotalMilliseconds);
+            mLogger.Log(nameof(SearchEngine), session + "\tRanked docs 1 " + (DateTime.Now - time).TotalMilliseconds);
             time = DateTime.Now;
 
             var results = new List<SearchResult>();
@@ -110,7 +120,7 @@ namespace XiaoyaSearch
                 });
             }
 
-            results = results.OrderByDescending(o => o.Score).ToList();
+            results = results.OrderByDescending(o => o.Score.Value).ToList();
 
             for (int i = 0; i < (PageSize - 1 + count) / PageSize; ++i)
             {
@@ -121,14 +131,14 @@ namespace XiaoyaSearch
 
                 for (int j = 0; j < subResultsLength; ++j)
                 {
-                    subResults[j].ProScore = proScores[j].Score;
+                    subResults[j].ProScore = proScores[j];
                     subResults[j].WordPositions = proScores[j].WordPositions?.Where(o => o.Position != -1);
                 }
 
-                Console.WriteLine("Ranked docs 2 " + (DateTime.Now - time).TotalMilliseconds);
+                mLogger.Log(nameof(SearchEngine), session + "\tRanked docs 2 " + (DateTime.Now - time).TotalMilliseconds);
                 time = DateTime.Now;
 
-                foreach (var proResult in subResults.OrderByDescending(o => o.ProScore))
+                foreach (var proResult in subResults.OrderByDescending(o => o.ProScore.Value))
                 {
                     yield return proResult;
                 }

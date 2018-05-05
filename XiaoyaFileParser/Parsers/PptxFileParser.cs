@@ -161,7 +161,7 @@ namespace XiaoyaFileParser.Parsers
         {
             if (mContent == null)
             {
-                mHeaders = new List<string>();
+                var headers = new List<string>();
                 var textBuilder = new StringBuilder();
                 await Task.Run(() =>
                 {
@@ -180,11 +180,11 @@ namespace XiaoyaFileParser.Parsers
                             textBuilder.AppendLine(slideText);
                         }
 
-                        mHeaders = GetSlideTitles(doc).ToList();
+                        headers = GetSlideTitles(doc).ToList();
                     }
                 });
                 mContent = TextHelper.NormalizeString(textBuilder.ToString());
-                mContent = mContent.Length + "\n" + mContent + string.Join("\n", mHeaders);
+                mContent = mContent.Length + "\n" + mContent + string.Join("\n", headers.Select(o => "1\n" + o));
             }
             return mContent;
         }

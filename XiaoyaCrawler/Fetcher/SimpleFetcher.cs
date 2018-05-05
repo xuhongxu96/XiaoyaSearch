@@ -65,6 +65,73 @@ namespace XiaoyaCrawler.Fetcher
         }
 
 
+        private string DetectEncoding(string filePath, string defaultEncoding)
+        {
+            string detectedCharset = null;
+
+            int lineCount = 0;
+            bool isHtml = false;
+
+            foreach (var line in File.ReadLines(filePath))
+            {
+                var lineContent = line.ToLower().Trim();
+
+                // skip empty lines
+                if (lineContent == "")
+                {
+                    continue;
+                }
+
+                // 10 lines but no <html>, give up
+                if (lineCount++ > 10 && !isHtml)
+                {
+                    break;
+                }
+                // found <html>
+                if (!isHtml && lineContent.Contains("<html"))
+                {
+                    isHtml = true;
+                }
+                // Arrived <body>, give up
+                if (lineContent.Contains("<body"))
+                {
+                    break;
+                }
+
+                // Already detected <html>, then found <meta>
+                if (isHtml)
+                {
+                    var match = Html4CharsetRegex.Match(lineContent);
+                    if (match.Success && match.Groups.Count == 2)
+                    {
+                        detectedCharset = match.Groups[1].Value;
+                        break;
+                    }
+
+                    match = Html5CharsetRegex.Match(lineContent);
+                    if (match.Success && match.Groups.Count == 2)
+                    {
+                        detectedCharset = match.Groups[1].Value;
+                        break;
+                    }
+                }
+            }
+
+            var autoDetectedCharset = EncodingDetector.GetEncoding(filePath);
+
+            if (detectedCharset == null || autoDetectedCharset == "UTF-8")
+            {
+                detectedCharset = autoDetectedCharset;
+                if (detectedCharset == null)
+                {
+                    detectedCharset = defaultEncoding;
+                }
+            }
+
+            return detectedCharset.ToUpper();
+        }
+
+
 
         /// <summary>
         /// Fetch the web content in the specific url
@@ -145,66 +212,7 @@ namespace XiaoyaCrawler.Fetcher
             }
             #endregion
 
-            #region Detect File Encoding
-            string detectedCharset = null;
-
-            int lineCount = 0;
-            bool isHtml = false;
-
-            foreach (var line in File.ReadLines(filePath))
-            {
-                var lineContent = line.ToLower().Trim();
-
-                // skip empty lines
-                if (lineContent == "")
-                {
-                    continue;
-                }
-
-                // 10 lines but no <html>, give up
-                if (lineCount++ > 10 && !isHtml)
-                {
-                    break;
-                }
-                // found <html>
-                if (!isHtml && lineContent.Contains("<html"))
-                {
-                    isHtml = true;
-                }
-                // Arrived <body>, give up
-                if (lineContent.Contains("<body"))
-                {
-                    break;
-                }
-
-                // Already detected <html>, then found <meta>
-                if (isHtml)
-                {
-                    var match = Html4CharsetRegex.Match(lineContent);
-                    if (match.Success && match.Groups.Count == 2)
-                    {
-                        detectedCharset = match.Groups[1].Value;
-                        break;
-                    }
-
-                    match = Html5CharsetRegex.Match(lineContent);
-                    if (match.Success && match.Groups.Count == 2)
-                    {
-                        detectedCharset = match.Groups[1].Value;
-                        break;
-                    }
-                }
-            }
-
-            if (detectedCharset == null)
-            {
-                detectedCharset = EncodingDetector.GetEncoding(filePath);
-                if (detectedCharset == null)
-                {
-                    detectedCharset = contentType.CharSet;
-                }
-            }
-            #endregion
+            var detectedCharset = DetectEncoding(filePath, contentType.CharSet);
 
             return new UrlFile
             {

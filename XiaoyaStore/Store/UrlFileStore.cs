@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -48,8 +50,9 @@ namespace XiaoyaStore.Store
         {
             using (var context = NewContext())
             {
+                var urlFileIdSet = new HashSet<int>(urlFileIds);
                 foreach (var item in context.UrlFiles
-                    .Where(o => urlFileIds.Contains(o.UrlFileId))
+                    .Where(o => urlFileIdSet.Contains(o.UrlFileId))
                     /*.OrderByDescending(o => o.PageRank)*/)
                 {
                     if (mCache.IsValid(item.UrlFileId))

@@ -37,6 +37,7 @@ namespace XiaoyaSearchInterface
                 UrlFileStore = new UrlFileStore(options),
                 InvertedIndexStore = new InvertedIndexStore(options),
                 IndexStatStore = new IndexStatStore(options),
+                LogDirectory = arguments.LogDir,
             };
 
             var engine = new SearchEngine(config);

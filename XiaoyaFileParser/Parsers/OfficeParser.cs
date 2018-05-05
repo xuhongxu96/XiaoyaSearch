@@ -39,11 +39,11 @@ namespace XiaoyaFileParser.Parsers
             return mTextContent;
         }
 
-        public override async Task<IList<string>> GetHeadersAsync()
+        public override async Task<IList<Header>> GetHeadersAsync()
         {
             if (mHeaders == null)
             {
-                mHeaders = new List<string>();
+                mHeaders = new List<Header>();
 
                 var content = await GetContentAsync();
 
@@ -52,8 +52,17 @@ namespace XiaoyaFileParser.Parsers
                     var line0 = content.Substring(0, content.IndexOf('\n'));
                     if (int.TryParse(line0, out int contentLength))
                     {
-                        mHeaders = content.Substring(line0.Length + 1 + contentLength)
+                        var headerList = content.Substring(line0.Length + 1 + contentLength)
                             .Split(new char[] { '\n' }, StringSplitOptions.RemoveEmptyEntries).ToList();
+
+                        for (int i = 0; i < headerList.Count; i += 2)
+                        {
+                            mHeaders.Add(new Header
+                            {
+                                Level = int.Parse(headerList[i]),
+                                Text = headerList[i + 1],
+                            });
+                        }
                     }
                 }
             }
@@ -66,7 +75,7 @@ namespace XiaoyaFileParser.Parsers
             {
                 var headers = await GetHeadersAsync();
 
-                mTitle = headers.FirstOrDefault();
+                mTitle = headers.FirstOrDefault()?.Text;
                 if (mTitle == null || mTitle == "")
                 {
                     mTitle = await base.GetTitleAsync();

@@ -44,7 +44,7 @@ namespace XiaoyaRankerUnitTest
                 "½±Ñ§½ð",
             }).ToList();
 
-            var scores = results.Select(o => o.Score).ToList();
+            var scores = results.Select(o => o.Value).ToList();
 
             var maxScore = scores.Max();
 

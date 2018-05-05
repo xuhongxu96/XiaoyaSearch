@@ -103,8 +103,8 @@ namespace XiaoyaIndexer
 #endif
 
                     var headers = parser.GetHeadersAsync().GetAwaiter().GetResult();
-                    urlFile.HeaderTotalLength = headers.Sum(o => o.Length);
-                    urlFile.HeaderCount = headers.Count;
+                    urlFile.HeaderTotalLength = headers.Sum(o => o.Text.Length);
+                    urlFile.HeaderCount = headers.Sum(o => (6 - o.Level));
 
                     urlFile.LinkCount = linkTexts.Count;
                     urlFile.LinkTotalLength = linkTexts.Sum(o => o.Length);

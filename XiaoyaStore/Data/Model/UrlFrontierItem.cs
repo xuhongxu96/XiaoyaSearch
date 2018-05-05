@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace XiaoyaStore.Data.Model
@@ -15,10 +16,12 @@ namespace XiaoyaStore.Data.Model
         /// Url
         /// </summary>
         [ConcurrencyCheck]
+        [Column(TypeName = "nvarchar(300)")]
         public string Url { get; set; }
         /// <summary>
         /// Host of url
         /// </summary>
+        [Column(TypeName = "nvarchar(300)")]
         public string Host { get; set; }
         /// <summary>
         /// Depth of url (Number of '/')
