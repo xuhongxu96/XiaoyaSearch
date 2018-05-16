@@ -138,7 +138,7 @@ namespace XiaoyaCrawler.Fetcher
         /// </summary>
         /// <param name="url">Url in which to fetch the content</param>
         /// <returns>Local url to downloaded content</returns>
-        public async Task<UrlFile> FetchAsync(string url)
+        public async Task<FetchedFile> FetchAsync(string url)
         {
             var uri = new Uri(url);
 
@@ -160,7 +160,7 @@ namespace XiaoyaCrawler.Fetcher
                 && statusCode != HttpStatusCode.OK)
             {
                 mLogger.Log(nameof(SimpleFetcher), "Status: " + statusCode + " " + url);
-                throw new IOException(statusCode.ToString() + ": " + url);
+                throw new IOException(statusCode.ToString());
             }
 
             if (mConfig.UsePhantomJS && (contentType == null || contentType.MediaType == "text/html"))
@@ -214,13 +214,13 @@ namespace XiaoyaCrawler.Fetcher
 
             var detectedCharset = DetectEncoding(filePath, contentType.CharSet);
 
-            return new UrlFile
+            return new FetchedFile
             {
-                Url = url,
-                FilePath = filePath,
-                Charset = detectedCharset,
-                MimeType = detectedContentType,
-                FileHash = HashHelper.GetFileMd5(filePath),
+                url = url,
+                filePath = filePath,
+                charset = detectedCharset,
+                mimeType = detectedContentType,
+                fileHash = HashHelper.GetFileMd5(filePath),
             };
         }
 

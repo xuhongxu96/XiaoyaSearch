@@ -1,13 +1,15 @@
-﻿using Microsoft.Data.Sqlite;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using RocksDbSharp;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using XiaoyaStore.Config;
 using XiaoyaStore.Data;
+using XiaoyaStore.Data.MergeOperator;
 using XiaoyaStore.Data.Model;
 using XiaoyaStore.Store;
 
@@ -16,521 +18,241 @@ namespace XiaoyaStoreUnitTest
     [TestClass]
     public class UrlFrontierItemStoreUnitTest
     {
+        StoreConfig config = new StoreConfig
+        {
+            StoreDirectory = "Store",
+        };
+
+        string dbName = "UrlFrontierItems";
+
         [TestMethod]
         public void TestInit()
         {
-            var connection = new SqliteConnection("DataSource=:memory:");
-            connection.Open();
+            StoreTestHelper.DeleteDb(config, dbName);
 
-            var options = new DbContextOptionsBuilder<XiaoyaSearchContext>()
-                .UseSqlite(connection)
-                .Options;
-
-            try
+            using (var urlFrontierItemStore = new UrlFrontierItemStore(config))
             {
-                using (var context = new XiaoyaSearchContext(options))
-                {
-                    context.Database.EnsureCreated();
-                }
-
-                var urlFrontierItemStore = new UrlFrontierItemStore(options);
                 urlFrontierItemStore.Init(new List<string>
                 {
                     "http://baidu.com",
                     "http://xuhongxu.com",
                 });
-
-                using (var context = new XiaoyaSearchContext(options))
-                {
-                    Assert.AreEqual(2, context.UrlFrontierItems.Count());
-                    Assert.AreEqual("http://baidu.com", context.UrlFrontierItems.ToList()[0].Url);
-                    Assert.AreEqual("http://xuhongxu.com", context.UrlFrontierItems.ToList()[1].Url);
-                }
             }
-            finally
+
+            using (var helper = new StoreTestHelper(config, dbName))
             {
-                connection.Close();
+                var cf = new ColumnFamilies
+                {
+                    { "HostCount", new ColumnFamilyOptions().SetMergeOperator(new CounterOperator()) },
+                };
+                helper.OpenDb(cf);
+
+                var urls = new List<string>();
+
+                using (var iter = helper.Db.NewIterator())
+                {
+                    for (iter.SeekToFirst(); iter.Valid(); iter.Next())
+                    {
+                        var item = ModelSerializer.DeserializeModel<UrlFrontierItem>(iter.Value());
+                        urls.Add(item.Url);
+                    }
+                }
+                Assert.IsTrue(urls.Contains("http://baidu.com"));
+                Assert.IsTrue(urls.Contains("http://xuhongxu.com"));
             }
         }
 
         [TestMethod]
-        public void TestSave()
+        public void TestPushUrls()
         {
-            var connection = new SqliteConnection("DataSource=:memory:");
-            connection.Open();
+            StoreTestHelper.DeleteDb(config, dbName);
 
-            var options = new DbContextOptionsBuilder<XiaoyaSearchContext>()
-                .UseSqlite(connection)
-                .Options;
-
-            try
+            using (var urlFrontierItemStore = new UrlFrontierItemStore(config))
             {
-                using (var context = new XiaoyaSearchContext(options))
+                urlFrontierItemStore.PushUrls(new List<string>
                 {
-                    context.Database.EnsureCreated();
-                }
-
-                var urlFrontierItemStore = new UrlFrontierItemStore(options);
-                urlFrontierItemStore.PushUrls(new List<string> { "http://baidu.com" });
-
-                using (var context = new XiaoyaSearchContext(options))
-                {
-                    Assert.AreEqual(1, context.UrlFrontierItems.Count());
-                    Assert.AreEqual("http://baidu.com", context.UrlFrontierItems.ToList()[0].Url);
-                }
+                    "http://baidu.com",
+                    "http://xuhongxu.com",
+                });
             }
-            finally
+
+            using (var urlFrontierItemStore = new UrlFrontierItemStore(config))
             {
-                connection.Close();
+                urlFrontierItemStore.PushUrls(new List<string>
+                {
+                    "http://google.com",
+                });
+            }
+
+
+            using (var helper = new StoreTestHelper(config, dbName))
+            {
+                var cf = new ColumnFamilies
+                {
+                    { "HostCount", new ColumnFamilyOptions().SetMergeOperator(new CounterOperator()) },
+                };
+                helper.OpenDb(cf);
+
+
+                var urls = new List<string>();
+
+                using (var iter = helper.Db.NewIterator())
+                {
+                    for (iter.SeekToFirst(); iter.Valid(); iter.Next())
+                    {
+                        var item = ModelSerializer.DeserializeModel<UrlFrontierItem>(iter.Value());
+                        urls.Add(item.Url);
+                    }
+                }
+                Assert.IsTrue(urls.Contains("http://baidu.com"));
+                Assert.IsTrue(urls.Contains("http://xuhongxu.com"));
+                Assert.IsTrue(urls.Contains("http://google.com"));
             }
         }
 
         [TestMethod]
         public void TestPushBack()
         {
-            var connection = new SqliteConnection("DataSource=:memory:");
-            connection.Open();
+            StoreTestHelper.DeleteDb(config, dbName);
 
-            var options = new DbContextOptionsBuilder<XiaoyaSearchContext>()
-                .UseSqlite(connection)
-                .Options;
-
-            try
+            string poppedUrl;
+            using (var urlFrontierItemStore = new UrlFrontierItemStore(config))
             {
-                using (var context = new XiaoyaSearchContext(options))
-                {
-                    context.Database.EnsureCreated();
-                }
-
-                var urlFrontierItemStore = new UrlFrontierItemStore(options);
-                urlFrontierItemStore.Init(new List<string>
-                {
-                    "http://baidu.com",
-                });
-
-                using (var context = new XiaoyaSearchContext(options))
-                {
-                    Assert.AreEqual(1, context.UrlFrontierItems.Count());
-                    Assert.AreEqual("http://baidu.com", context.UrlFrontierItems.Single().Url);
-                }
-
-                urlFrontierItemStore.PushBack("http://baidu.com");
-
-                using (var context = new XiaoyaSearchContext(options))
-                {
-                    Assert.AreEqual(1, context.UrlFrontierItems.Count());
-                    var item = context.UrlFrontierItems.Single();
-                    Assert.AreEqual("http://baidu.com", item.Url);
-                    Assert.AreEqual(0, item.FailedTimes);
-                }
-
-                using (var context = new XiaoyaSearchContext(options))
-                {
-                    var item = context.UrlFrontierItems.First();
-                    item.IsPopped = true;
-                    context.SaveChanges();
-                }
-
-                urlFrontierItemStore.PushBack("http://baidu.com");
-
-                using (var context = new XiaoyaSearchContext(options))
-                {
-                    Assert.AreEqual(1, context.UrlFrontierItems.Count());
-                    var item = context.UrlFrontierItems.Single();
-                    Assert.AreEqual("http://baidu.com", item.Url);
-                    Assert.AreEqual(1, item.FailedTimes);
-                }
-            }
-            finally
-            {
-                connection.Close();
-            }
-        }
-
-        [TestMethod]
-        public void TestLoadByUrl()
-        {
-            var connection = new SqliteConnection("DataSource=:memory:");
-            connection.Open();
-
-            var options = new DbContextOptionsBuilder<XiaoyaSearchContext>()
-                .UseSqlite(connection)
-                .Options;
-
-            try
-            {
-                using (var context = new XiaoyaSearchContext(options))
-                {
-                    context.Database.EnsureCreated();
-                }
-
-                var urlFrontierItemStore = new UrlFrontierItemStore(options);
-                urlFrontierItemStore.Init(new List<string>
+                urlFrontierItemStore.PushUrls(new List<string>
                 {
                     "http://baidu.com",
                     "http://xuhongxu.com",
                 });
 
-                using (var context = new XiaoyaSearchContext(options))
-                {
-                    Assert.AreEqual(2, context.UrlFrontierItems.Count());
-                }
+                Assert.IsFalse(urlFrontierItemStore.PushBack("http://baidu.com",
+                    TimeSpan.FromDays(1)));
 
-                var item = urlFrontierItemStore.LoadByUrl("http://xuhongxu.com");
+                Assert.IsFalse(urlFrontierItemStore.PushBack("http://a.com",
+                    TimeSpan.FromDays(1)));
 
-                Assert.IsNotNull(item);
-                Assert.AreEqual("http://xuhongxu.com", item.Url);
-                Assert.IsTrue(item.PlannedTime <= DateTime.Now);
+                poppedUrl = urlFrontierItemStore.PopUrlForCrawl();
+
+                Assert.IsTrue(urlFrontierItemStore.PushBack(poppedUrl,
+                    TimeSpan.FromDays(1)));
             }
-            finally
+
+            using (var helper = new StoreTestHelper(config, dbName))
             {
-                connection.Close();
-            }
-        }
-
-        [TestMethod]
-        public void TestPopUrlForCrawl()
-        {
-            var connection = new SqliteConnection("DataSource=:memory:");
-            connection.Open();
-
-            var options = new DbContextOptionsBuilder<XiaoyaSearchContext>()
-                .UseSqlite(connection)
-                .Options;
-
-            try
-            {
-                using (var context = new XiaoyaSearchContext(options))
+                var cf = new ColumnFamilies
                 {
-                    context.Database.EnsureCreated();
-                }
+                    { "HostCount", new ColumnFamilyOptions().SetMergeOperator(new CounterOperator()) },
+                };
+                helper.OpenDb(cf);
 
-                var urlFrontierItemStore = new UrlFrontierItemStore(options);
-                urlFrontierItemStore.Init(new List<string>
+                var urls = new List<string>();
+
+                using (var iter = helper.Db.NewIterator())
                 {
-                    "http://baidu.com",
-                    "http://xuhongxu.com",
-                });
-
-                using (var context = new XiaoyaSearchContext(options))
-                {
-                    Assert.AreEqual(2, context.UrlFrontierItems.Count());
-
-
-                    var item = context.UrlFrontierItems.Single(o => o.Url == urlFrontierItemStore.PopUrlForCrawl());
-                    Assert.AreEqual("http://baidu.com", item.Url);
-                    Assert.IsTrue(item.IsPopped);
-
-                    item = context.UrlFrontierItems.Single(o => o.Url == urlFrontierItemStore.PopUrlForCrawl());
-                    Assert.AreEqual("http://xuhongxu.com", item.Url);
-                    Assert.IsTrue(item.IsPopped);
-
-                    var url = urlFrontierItemStore.PopUrlForCrawl();
-                    Assert.IsNull(url);
-                }
-            }
-            finally
-            {
-                connection.Close();
-            }
-        }
-
-        [TestMethod]
-        public void TestPopUrlForCrawlAndPushBackWithoutUrlFile()
-        {
-            var connection = new SqliteConnection("DataSource=:memory:");
-            connection.Open();
-
-            var options = new DbContextOptionsBuilder<XiaoyaSearchContext>()
-                .UseSqlite(connection)
-                .Options;
-
-            try
-            {
-                using (var context = new XiaoyaSearchContext(options))
-                {
-                    context.Database.EnsureCreated();
-                }
-
-                var urlFrontierItemStore = new UrlFrontierItemStore(options);
-                urlFrontierItemStore.Init(new List<string>
-                {
-                    "http://baidu.com",
-                    "http://xuhongxu.com",
-                });
-
-                using (var context = new XiaoyaSearchContext(options))
-                {
-                    Assert.AreEqual(2, context.UrlFrontierItems.Count());
-
-                    var item = context.UrlFrontierItems.Single(o => o.Url == urlFrontierItemStore.PopUrlForCrawl());
-                    Assert.AreEqual("http://baidu.com", item.Url);
-                    Assert.IsTrue(item.IsPopped);
-
-                    item = urlFrontierItemStore.PushBack("http://baidu.com");
-                    Assert.AreEqual("http://baidu.com", item.Url);
-                    Assert.AreEqual(1, item.FailedTimes);
-                    Assert.IsTrue(item.PlannedTime > DateTime.Now);
-                    Assert.IsFalse(item.IsPopped);
-
-                    item = context.UrlFrontierItems.Single(o => o.Url == urlFrontierItemStore.PopUrlForCrawl());
-                    Assert.AreEqual("http://xuhongxu.com", item.Url);
-                    Assert.IsTrue(item.IsPopped);
-
-                    var url = urlFrontierItemStore.PopUrlForCrawl();
-                    Assert.IsNull(url);
-                }
-            }
-            finally
-            {
-                connection.Close();
-            }
-        }
-
-        [TestMethod]
-        public void TestPopUrlForCrawlAndPushBackWithUrlFile()
-        {
-            var connection = new SqliteConnection("DataSource=:memory:");
-            connection.Open();
-
-            var options = new DbContextOptionsBuilder<XiaoyaSearchContext>()
-                .UseSqlite(connection)
-                .Options;
-
-            try
-            {
-                using (var context = new XiaoyaSearchContext(options))
-                {
-                    context.Database.EnsureCreated();
-                }
-
-                var urlFrontierItemStore = new UrlFrontierItemStore(options);
-                urlFrontierItemStore.Init(new List<string>
-                {
-                    "http://baidu.com",
-                    "http://xuhongxu.com",
-                });
-
-                using (var context = new XiaoyaSearchContext(options))
-                {
-                    Assert.AreEqual(2, context.UrlFrontierItems.Count());
-
-                    var item = context.UrlFrontierItems.Single(o => o.Url == urlFrontierItemStore.PopUrlForCrawl());
-                    Assert.AreEqual("http://baidu.com", item.Url);
-                    Assert.IsTrue(item.IsPopped);
-
-                    var urlFileStore = new UrlFileStore(options);
-                    urlFileStore.Save(new UrlFile
+                    for (iter.SeekToFirst(); iter.Valid(); iter.Next())
                     {
-                        Url = "http://baidu.com",
-                        FilePath = @"D:\a.html",
-                        FileHash = "abcd",
-                        Charset = "utf8",
-                        MimeType = "text/html",
-                    });
-
-                    item = urlFrontierItemStore.PushBack("http://baidu.com");
-                    Assert.AreEqual("http://baidu.com", item.Url);
-                    Assert.AreEqual(0, item.FailedTimes);
-                    Assert.IsTrue(item.PlannedTime > DateTime.Now);
-                    Assert.IsFalse(item.IsPopped);
-
-                    item = context.UrlFrontierItems.Single(o => o.Url == urlFrontierItemStore.PopUrlForCrawl());
-                    Assert.AreEqual("http://xuhongxu.com", item.Url);
-                    Assert.IsTrue(item.IsPopped);
-
-                    var url = urlFrontierItemStore.PopUrlForCrawl();
-                    Assert.IsNull(url);
-                }
-            }
-            finally
-            {
-                connection.Close();
-            }
-        }
-
-        [TestMethod]
-        public void TestPopUrlForCrawlInOrder()
-        {
-            var connection = new SqliteConnection("DataSource=:memory:");
-            connection.Open();
-
-            var options = new DbContextOptionsBuilder<XiaoyaSearchContext>()
-                .UseSqlite(connection)
-                .Options;
-
-            try
-            {
-                using (var context = new XiaoyaSearchContext(options))
-                {
-                    context.Database.EnsureCreated();
-                }
-
-                using (var context = new XiaoyaSearchContext(options))
-                {
-                    context.UrlFrontierItems.AddRange(new List<UrlFrontierItem>
-                    {
-                        new UrlFrontierItem
+                        var item = ModelSerializer.DeserializeModel<UrlFrontierItem>(iter.Value());
+                        if (item.Url == poppedUrl)
                         {
-                            Url = "a",
-                            PlannedTime = DateTime.Now,
-                            Priority = 0,
-                            FailedTimes = 0,
-                            IsPopped = false,
-                            UpdatedAt = DateTime.Now,
-                            CreatedAt = DateTime.Now,
-                        },
-                        new UrlFrontierItem
-                        {
-                            Url = "c",
-                            PlannedTime = DateTime.Now,
-                            Priority = 2,
-                            FailedTimes = 0,
-                            IsPopped = false,
-                            UpdatedAt = DateTime.Now,
-                            CreatedAt = DateTime.Now,
-                        },
-                        new UrlFrontierItem
-                        {
-                            Url = "b",
-                            PlannedTime = DateTime.Now,
-                            Priority = 1,
-                            FailedTimes = 0,
-                            IsPopped = false,
-                            UpdatedAt = DateTime.Now,
-                            CreatedAt = DateTime.Now,
-                        },
-                    });
-                    context.SaveChanges();
-
-
-                    var urlFrontierItemStore = new UrlFrontierItemStore(options);
-                    var url = urlFrontierItemStore.PopUrlForCrawl();
-                    Assert.AreEqual("a", url);
-
-                    var urlFileStore = new UrlFileStore(options);
-                    urlFileStore.Save(new UrlFile
-                    {
-                        Url = "a",
-                        FilePath = @"D:\a.html",
-                        FileHash = "abcd",
-                        Charset = "utf8",
-                        MimeType = "text/html",
-                    });
-
-                    urlFrontierItemStore.PushBack("a");
-
-                    url = urlFrontierItemStore.PopUrlForCrawl();
-                    Assert.AreEqual("b", url);
-
-                    var item = urlFrontierItemStore.PushBack("b");
-                    Assert.AreEqual(1, item.FailedTimes);
-
-                    url = urlFrontierItemStore.PopUrlForCrawl();
-                    Assert.AreEqual("c", url);
-
-                    url = urlFrontierItemStore.PopUrlForCrawl();
-                    Assert.IsNull(url);
-                }
-            }
-            finally
-            {
-                connection.Close();
-            }
-        }
-
-        [TestMethod]
-        public void TestPopUrlForCrawlPerHostAndDepth()
-        {
-            var connection = new SqliteConnection("DataSource=:memory:");
-            connection.Open();
-
-            var options = new DbContextOptionsBuilder<XiaoyaSearchContext>()
-                .UseSqlite(connection)
-                .Options;
-
-            try
-            {
-                using (var context = new XiaoyaSearchContext(options))
-                {
-                    context.Database.EnsureCreated();
-                }
-
-                var urlFrontierItemStore = new UrlFrontierItemStore(options);
-
-                var urlFileStore = new UrlFileStore(options);
-
-                urlFileStore.Save(new UrlFile
-                {
-                    Url = "http://a.com/c",
-                    FilePath = @"D:\a.html",
-                    FileHash = "abcd",
-                    Charset = "utf8",
-                    MimeType = "text/html",
-                });
-
-                urlFileStore.Save(new UrlFile
-                {
-                    Url = "http://a.com/b",
-                    FilePath = @"D:\b.html",
-                    FileHash = "abcd",
-                    Charset = "utf8",
-                    MimeType = "text/html",
-                });
-
-                urlFileStore.Save(new UrlFile
-                {
-                    Url = "http://c.com/d",
-                    FilePath = @"D:\c.html",
-                    FileHash = "abcd",
-                    Charset = "utf8",
-                    MimeType = "text/html",
-                });
-
-                urlFileStore.Save(new UrlFile
-                {
-                    Url = "http://b.com/",
-                    FilePath = @"D:\d.html",
-                    FileHash = "abcd",
-                    Charset = "utf8",
-                    MimeType = "text/html",
-                });
-
-                urlFrontierItemStore.PushUrls(new List<string> { "http://a.com/c" });
-                Thread.Sleep(10);
-                urlFrontierItemStore.PushUrls(new List<string> { "http://a.com/b" });
-                Thread.Sleep(10);
-                urlFrontierItemStore.PushUrls(new List<string> { "http://c.com/d" });
-                Thread.Sleep(10);
-                urlFrontierItemStore.PushUrls(new List<string> { "http://b.com/" });
-
-                using (var context = new XiaoyaSearchContext(options))
-                {
-                    foreach (var t in context.UrlFrontierItems.OrderBy(o => o.Priority))
-                    {
-                        Console.WriteLine(t.Url + " " + t.Priority);
+                            Console.WriteLine("PlannedTime: {0}", item.PlannedTime);
+                            Console.WriteLine("Priority: {0}", item.Priority);
+                            Assert.IsTrue(item.PlannedTime > DateTime.Now.AddHours(1));
+                        }
                     }
-
-
-                    var url = urlFrontierItemStore.PopUrlForCrawl();
-                    Assert.AreEqual("http://b.com/", url);
-
-                    url = urlFrontierItemStore.PopUrlForCrawl();
-                    Assert.AreEqual("http://a.com/c", url);
-
-                    url = urlFrontierItemStore.PopUrlForCrawl();
-                    Assert.AreEqual("http://c.com/d", url);
-
-                    url = urlFrontierItemStore.PopUrlForCrawl();
-                    Assert.AreEqual("http://a.com/b", url);
-
-                    url = urlFrontierItemStore.PopUrlForCrawl();
-                    Assert.IsNull(url);
                 }
             }
-            finally
+        }
+
+        [TestMethod]
+        public void TestRemove()
+        {
+            StoreTestHelper.DeleteDb(config, dbName);
+
+            string poppedUrl;
+            using (var urlFrontierItemStore = new UrlFrontierItemStore(config))
             {
-                connection.Close();
+                urlFrontierItemStore.PushUrls(new List<string>
+                {
+                    "http://baidu.com",
+                    "http://xuhongxu.com",
+                });
+
+                poppedUrl = urlFrontierItemStore.PopUrlForCrawl();
+
+                urlFrontierItemStore.Remove(poppedUrl);
+            }
+
+            using (var helper = new StoreTestHelper(config, dbName))
+            {
+                var cf = new ColumnFamilies
+                {
+                    { "HostCount", new ColumnFamilyOptions().SetMergeOperator(new CounterOperator()) },
+                };
+                helper.OpenDb(cf);
+
+                var urls = new List<string>();
+
+                using (var iter = helper.Db.NewIterator())
+                {
+                    for (iter.SeekToFirst(); iter.Valid(); iter.Next())
+                    {
+                        var item = ModelSerializer.DeserializeModel<UrlFrontierItem>(iter.Value());
+                        if (item.Url == poppedUrl)
+                        {
+                            Assert.Fail(item.Url + " should be removed");
+                        }
+                    }
+                }
+            }
+        }
+
+        [TestMethod]
+        public void TestGetHostCount()
+        {
+            StoreTestHelper.DeleteDb(config, dbName);
+
+            using (var urlFrontierItemStore = new UrlFrontierItemStore(config))
+            {
+                urlFrontierItemStore.PushUrls(new List<string>
+                {
+                    "http://baidu.com",
+                    "http://xuhongxu.com",
+                    "http://xuhongxu.com/a",
+                    "http://xuhongxu.com/b",
+                });
+            }
+
+            using (var urlFrontierItemStore = new UrlFrontierItemStore(config))
+            {
+                Assert.AreEqual(1, urlFrontierItemStore.GetHostCount("baidu.com"));
+                Assert.AreEqual(3, urlFrontierItemStore.GetHostCount("xuhongxu.com"));
+            }
+
+            using (var urlFrontierItemStore = new UrlFrontierItemStore(config))
+            {
+                urlFrontierItemStore.PushUrls(new List<string>
+                {
+                    "http://baidu.com/a",
+                    "http://xuhongxu.com",
+                    "http://xuhongxu.com/c",
+                    "http://xuhongxu.com/d",
+                });
+            }
+
+            using (var urlFrontierItemStore = new UrlFrontierItemStore(config))
+            {
+                Assert.AreEqual(2, urlFrontierItemStore.GetHostCount("baidu.com"));
+                Assert.AreEqual(5, urlFrontierItemStore.GetHostCount("xuhongxu.com"));
+            }
+
+            using (var urlFrontierItemStore = new UrlFrontierItemStore(config))
+            {
+                urlFrontierItemStore.Remove("http://xuhongxu.com");
+            }
+
+            using (var urlFrontierItemStore = new UrlFrontierItemStore(config))
+            {
+                Assert.AreEqual(2, urlFrontierItemStore.GetHostCount("baidu.com"));
+                Assert.AreEqual(4, urlFrontierItemStore.GetHostCount("xuhongxu.com"));
             }
         }
     }

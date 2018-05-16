@@ -14,6 +14,6 @@ namespace XiaoyaCrawler.Fetcher
         /// </summary>
         /// <param name="url">Url in which to fetch the content</param>
         /// <returns>Local url to downloaded content</returns>
-        Task<UrlFile> FetchAsync(string url);
+        Task<FetchedFile> FetchAsync(string url);
     }
 }

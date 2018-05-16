@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -59,28 +60,18 @@ namespace XiaoyaCrawler
             mErrorLogger = new RuntimeLogger(Path.Combine(config.LogDirectory, "Crawler Error.Log"), false);
         }
 
-        private void SafeDeleteUrlFile(UrlFile urlFile)
-        {
-            if (urlFile != null
-                && File.Exists(urlFile.FilePath))
-            {
-                // mLogger.Log(nameof(Crawler), "Delete UrlFile: " + urlFile.UrlFileId + "  " + urlFile.Url + "  " + urlFile.FilePath);
-                File.Delete(urlFile.FilePath);
-            }
-        }
-
         protected void FetchUrlAsync(string url)
         {
             mFetchSemaphore.Wait();
             mLogger.Log(nameof(Crawler), "Begin Crawl: " + url, true);
             var t = Task.Run(() =>
             {
-                UrlFile urlFile = null;
+                FetchedFile fetchedFile = null;
                 try
                 {
                     // Fetch Url
-                    urlFile = mFetcher.FetchAsync(url).GetAwaiter().GetResult();
-                    if (urlFile == null)
+                    fetchedFile = mFetcher.FetchAsync(url).GetAwaiter().GetResult();
+                    if (fetchedFile == null)
                     {
                         // Fetched nothing
                         // Push back this url
@@ -89,62 +80,44 @@ namespace XiaoyaCrawler
                     }
 
                     // Parse fetched file
-                    var parseResult = mParser.ParseAsync(urlFile).GetAwaiter().GetResult();
+                    var parseResult = mParser.ParseAsync(fetchedFile).GetAwaiter().GetResult();
 
-                    // Store parsed content
-                    urlFile.Title = parseResult.Title;
-                    urlFile.Content = parseResult.Content;
-                    urlFile.TextContent = parseResult.TextContent;
-                    urlFile.PublishDate = parseResult.PublishDate;
-
-                    var linkList = parseResult.Links.Select(o => new Link
-                    {
-                        Text = o.Text,
-                        Url = o.Url,
-                    }).ToList();
-
+                    var linkList = parseResult.Links;
                     // Filter urls
                     foreach (var filter in mUrlFilters)
                     {
                         linkList = filter.Filter(linkList).ToList();
                     }
-                    mConfig.LinkStore.FilterLinks(linkList);
 #if DEBUG
                     var time = DateTime.Now;
 #endif
                     lock (mSaveSyncLock)
                     {
                         // Judge if there are other files that have similar content as this
-                        var (sameUrl, sameContent) = mSimilarContentJudger.JudgeContent(urlFile);
+                        var (sameUrl, sameContent) = mSimilarContentJudger.JudgeContent(fetchedFile, parseResult.TextContent);
 #if DEBUG
                         Console.WriteLine("Judged Similar: " + url + "\n" + (DateTime.Now - time).TotalSeconds);
                         time = DateTime.Now;
 #endif
                         if (sameUrl != null)
                         {
-                            // Has same UrlFile, remove this
-                            mUrlFrontier.RemoveUrl(urlFile.Url);
                             return;
                         }
                     }
 
-                    urlFile = mConfig.UrlFileStore.Save(urlFile);
+                    // TODO: Save UrlFile
 
-                    foreach (var link in linkList)
-                    {
-                        link.UrlFileId = urlFile.UrlFileId;
-                    }
 #if DEBUG
                     Console.WriteLine("Saved UrlFile: " + url + "\n" + (DateTime.Now - time).TotalSeconds);
                     time = DateTime.Now;
 #endif
-                    var urls = linkList.Select(o => o.Url).Distinct();
 
-                    // Save links
-                    mConfig.LinkStore.ClearAndSaveLinksForUrlFile(urlFile.UrlFileId, linkList);
+                    // TODO: Save links
+
 #if DEBUG
-                     time = DateTime.Now;
+                    time = DateTime.Now;
 #endif
+                    var urls = linkList.Select(o => o.Url).Distinct();
                     // Add newly-found urls
                     mUrlFrontier.PushUrls(urls);
 
@@ -159,7 +132,6 @@ namespace XiaoyaCrawler
                 }
                 catch (NotSupportedException e)
                 {
-
                     mLogger.LogException(nameof(Crawler), "Not supported file format: " + url, e, false);
                     mErrorLogger.LogException(nameof(Crawler), "Not supported file format: " + url, e);
 
@@ -206,7 +178,10 @@ namespace XiaoyaCrawler
                 finally
                 {
                     mFetchSemaphore.Release();
-                    SafeDeleteUrlFile(urlFile);
+                    if (fetchedFile != null && File.Exists(fetchedFile.filePath))
+                    {
+                        File.Delete(fetchedFile.filePath);
+                    }
                 }
             }).ContinueWith(task =>
                 {

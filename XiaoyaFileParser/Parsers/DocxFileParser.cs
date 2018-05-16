@@ -34,7 +34,7 @@ namespace XiaoyaFileParser.Parsers
                 {
                     var headers = new List<(string Text, int FontSize)>();
                     var textBuilder = new StringBuilder();
-                    using (var doc = WordprocessingDocument.Open(mUrlFile.FilePath, false))
+                    using (var doc = WordprocessingDocument.Open(mFilePath, false))
                     {
                         if (doc == null)
                         {

@@ -27,8 +27,8 @@ namespace XiaoyaFileParser.Parsers
         {
             if (mContent == null)
             {
-                mContent = await File.ReadAllTextAsync(FilePath,
-                    Encoding.GetEncoding(mUrlFile.Charset));
+                mContent = await File.ReadAllTextAsync(mFilePath,
+                    Encoding.GetEncoding(mCharset));
                 mContent = TextHelper.NormalizeString(mContent);
             }
             return mContent;

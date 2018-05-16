@@ -8,8 +8,7 @@ namespace XiaoyaFileParser
 {
     public interface IFileParser
     {
-        UrlFile UrlFile { get; set; }
-        string FilePath { get; set; }
+        void SetFile(string mimeType, string url, string charset, string filePath = null);
         Task<IList<string>> GetUrlsAsync();
         Task<IList<LinkInfo>> GetLinksAsync();
         Task<IList<Header>> GetHeadersAsync();

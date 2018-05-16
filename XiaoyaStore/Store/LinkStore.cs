@@ -1,127 +1,143 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Microsoft.EntityFrameworkCore;
 using XiaoyaStore.Data.Model;
 using System.Linq;
 using XiaoyaStore.Cache;
-using EFCore.BulkExtensions;
-using Z.EntityFramework.Plus;
+using XiaoyaStore.Config;
+using RocksDbSharp;
+using XiaoyaStore.Data;
+using XiaoyaStore.Data.MergeOperator;
 
 namespace XiaoyaStore.Store
 {
-    public class LinkStore : BaseStore, ILinkStore
+    public class LinkStore : CounterStore
     {
-        private const int BatchSize = 100_000;
-        protected LRUCache<string, List<Link>> mCache;
+        private static readonly byte[] MetaMaxLinkId = "MaxLinkId".GetBytes();
 
-        static object mSyncLock = new object();
+        public override string DbFileName => "Links";
 
-        public LinkStore(DbContextOptions options = null, bool enableCache = true) : base(options)
+        ColumnFamilyHandle mUrlIndexColumnFamily;
+        ColumnFamilyHandle mUrlFileIdIndexColumnFamily;
+
+        protected LRUCache<string, IEnumerable<Link>> mCache;
+
+        public LinkStore(StoreConfig config,
+            bool isReadOnly = false, bool enableCache = true)
+            : base(config, isReadOnly)
         {
-            mCache = new LRUCache<string, List<Link>>(TimeSpan.FromDays(1), GetCache, null, 30_000_000, enableCache);
+            var columnFamilyOptions
+                = new ColumnFamilyOptions().SetMergeOperator(new IdListConcatOperator());
+
+            var columnFamilies = new ColumnFamilies
+            {
+                {"UrlIndex", columnFamilyOptions },
+                {"UrlFileIdIndex", columnFamilyOptions },
+            };
+
+            OpenDb(columnFamilies);
+
+            mUrlIndexColumnFamily = mDb.GetColumnFamily("UrlIndex");
+            mUrlFileIdIndexColumnFamily = mDb.GetColumnFamily("UrlFileIdIndex");
+
+            mCache = new LRUCache<string, IEnumerable<Link>>(TimeSpan.FromDays(1), GetCache, null, 30_000_000, enableCache);
         }
 
-        protected IEnumerable<Tuple<string, List<Link>>> LoadCaches()
+        private IdList GetLinksByUrl(string url)
         {
-            using (var context = NewContext())
+            var data = mDb.Get(url.GetBytes(), mUrlIndexColumnFamily);
+            if (data == null)
             {
-                foreach (var link in context.Links.GroupBy(o => o.Url))
+                return new IdList
                 {
-                    yield return Tuple.Create(link.Key, link.ToList());
+                    Ids = new HashSet<long>(),
+                };
+            }
+            var model = ModelSerializer.DeserializeModel<IdList>(data);
+            return model;
+        }
+
+        private IdList GetLinksByUrlFileId(long urlFileId)
+        {
+            var data = mDb.Get(urlFileId.GetBytes(), mUrlFileIdIndexColumnFamily);
+            if (data == null)
+            {
+                return new IdList
+                {
+                    Ids = new HashSet<long>(),
+                };
+            }
+            var model = ModelSerializer.DeserializeModel<IdList>(data);
+            return model;
+        }
+
+        protected IEnumerable<Link> GetCache(string url)
+        {
+            var links = GetModelsByIds<Link>(GetLinksByUrl(url).Ids).ToHashSet();
+            return links.Where(o => o != null);
+        }
+
+        private void ClearLinksForUrlFile(WriteBatch batch, long urlFileId)
+        {
+            var linkIds = GetLinksByUrlFileId(urlFileId);
+
+            // For all links
+            foreach (var oldLink in GetModelsByIds<Link>(linkIds.Ids))
+            {
+                // Delete old url index
+                var newValue = new IdList
+                {
+                    Ids = new HashSet<long> { urlFileId },
+                    IsAdd = false,
+                };
+                mDb.Merge(oldLink.Url.GetBytes(), ModelSerializer.SerializeModel(newValue), mUrlIndexColumnFamily);
+            }
+
+            // Delete links
+            foreach (var id in linkIds.Ids)
+            {
+                batch.Delete(id.GetBytes());
+            }
+
+            // Delete UrlFileId index
+            batch.Delete(urlFileId.GetBytes(), mUrlFileIdIndexColumnFamily);
+        }
+
+        public void SaveLinksForUrlFile(long urlFileId, long oldUrlFileId, IList<Link> links)
+        {
+            using (var batch = new WriteBatch())
+            {
+
+                if (oldUrlFileId != 0)
+                {
+                    ClearLinksForUrlFile(batch, oldUrlFileId);
                 }
-            }
-        }
 
-        protected List<Link> GetCache(string url)
-        {
-            using (var context = NewContext())
-            {
-                return context.Links.Where(o => o.Url == url).ToList();
-            }
-        }
-
-        public void FilterLinks(IList<Link> links)
-        {
-            using (var context = NewContext())
-            {
-                var linkMap = context.SameUrls.Where(o => links.Select(p => p.Url).Contains(o.RawUrl))
-                    .ToDictionary(o => o.RawUrl);
-
+                // Add links and url index
                 foreach (var link in links)
                 {
-                    if (linkMap.ContainsKey(link.Url))
-                    {
-                        link.Url = linkMap[link.Url].Url;
-                    }
-                }
-            }
-        }
+                    // Assign new link id
+                    link.LinkId = GetAndUpdateCount(MetaMaxLinkId, 1) + 1;
 
-        public void ClearAndSaveLinksForUrlFile(int urlFileId, IList<Link> links)
-        {
-            using (var context = NewContext())
-            {
-                if (context.Database.IsSqlServer())
-                {
-                    context.Links.Where(o => o.UrlFileId == urlFileId).Delete(o => o.BatchSize = BatchSize);
-                }
-                else
-                {
-                    context.RemoveRange(context.Links.Where(o => o.UrlFileId == urlFileId));
+                    // Add new url index
+                    var urlList = new IdList
+                    {
+                        Ids = new HashSet<long> { link.LinkId },
+                    };
+                    batch.Merge(link.Url.GetBytes(), ModelSerializer.SerializeModel(urlList), mUrlIndexColumnFamily);
+
+                    // Add link
+                    batch.Put(link.LinkId.GetBytes(), ModelSerializer.SerializeModel(link));
                 }
 
-                if (links.Count() <= BatchSize)
+                // Update UrlFileId index
+                var linkIdList = new IdList
                 {
-                    if (context.Database.IsSqlServer())
-                    {
-                        context.BulkInsert(links);
-                    }
-                    else
-                    {
-                        context.AddRange(links);
-                    }
-                }
-                else
-                {
-                    var list = new List<Link>(BatchSize);
-                    foreach (var link in links)
-                    {
-                        list.Add(link);
-                        if (list.Count % 10000 == 0)
-                        {
-                            if (context.Database.IsSqlServer())
-                            {
-                                context.BulkInsert(list);
-                            }
-                            else
-                            {
-                                context.AddRange(list);
-                            }
-                            list.Clear();
-                            lock (mSyncLock)
-                            {
-                                context.SaveChanges();
-                            }
-                        }
-                    }
-                    if (list.Count > 0)
-                    {
-                        if (context.Database.IsSqlServer())
-                        {
-                            context.BulkInsert(list);
-                        }
-                        else
-                        {
-                            context.AddRange(list);
-                        }
-                    }
-                }
+                    Ids = new HashSet<long>(links.Select(o => o.LinkId)),
+                };
+                batch.Put(urlFileId.GetBytes(), ModelSerializer.SerializeModel(linkIdList), mUrlFileIdIndexColumnFamily);
 
-                lock (mSyncLock)
-                {
-                    context.SaveChanges();
-                }
+                mDb.Write(batch);
             }
         }
 

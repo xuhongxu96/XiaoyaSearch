@@ -11,7 +11,7 @@ using XiaoyaStore.Data.Model;
 using XiaoyaIndexer.Config;
 using XiaoyaLogger;
 using System.IO;
-using static XiaoyaStore.Data.Model.InvertedIndex;
+using static XiaoyaStore.Data.Model.Postings;
 using static XiaoyaFileParser.Model.Token;
 using System.Collections.Concurrent;
 using Microsoft.EntityFrameworkCore;
@@ -76,7 +76,7 @@ namespace XiaoyaIndexer
                     IList<Token> tokens = parser.GetTokensAsync(linkTexts).GetAwaiter().GetResult();
 
                     var invertedIndices = (from token in tokens
-                                           select new InvertedIndex
+                                           select new Postings
                                            {
                                                Word = token.Word,
                                                Positions = string.Join(",", token.Positions),

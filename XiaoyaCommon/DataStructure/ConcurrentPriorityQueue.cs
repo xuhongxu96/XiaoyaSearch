@@ -15,22 +15,37 @@ namespace System.Collections.Concurrent
     /// <typeparam name="TKey">Specifies the type of keys used to prioritize values.</typeparam> 
     /// <typeparam name="TValue">Specifies the type of elements in the queue.</typeparam> 
     [DebuggerDisplay("Count={Count}")]
-    public class ConcurrentPriorityQueue<TKey, TValue> :
+    public class ConcurrentPriorityQueue<TKey, TValue, TComparableKey> :
         IProducerConsumerCollection<KeyValuePair<TKey, TValue>>
         where TKey : IComparable<TKey>
     {
         private readonly object _syncLock = new object();
         private readonly MinBinaryHeap _minHeap = new MinBinaryHeap();
+        private readonly HashSet<TComparableKey> _values = new HashSet<TComparableKey>();
+        private Func<TValue, TComparableKey> _comparableKeyFunc;
 
         /// <summary>Initializes a new instance of the ConcurrentPriorityQueue class.</summary> 
-        public ConcurrentPriorityQueue() { }
+        public ConcurrentPriorityQueue(Func<TValue, TComparableKey> comparableKeyFunc)
+        {
+            _comparableKeyFunc = comparableKeyFunc;
+        }
 
         /// <summary>Initializes a new instance of the ConcurrentPriorityQueue class that contains elements copied from the specified collection.</summary> 
         /// <param name="collection">The collection whose elements are copied to the new ConcurrentPriorityQueue.</param> 
-        public ConcurrentPriorityQueue(IEnumerable<KeyValuePair<TKey, TValue>> collection)
+        public ConcurrentPriorityQueue(IEnumerable<KeyValuePair<TKey, TValue>> collection,
+            Func<TValue, TComparableKey> comparableKeyFunc)
         {
+            _comparableKeyFunc = comparableKeyFunc;
             if (collection == null) throw new ArgumentNullException("collection");
             foreach (var item in collection) _minHeap.Insert(item);
+        }
+
+        public bool ContainsValue(TComparableKey value)
+        {
+            lock (_syncLock)
+            {
+                return _values.Contains(value);
+            }
         }
 
         /// <summary>Adds the key/value pair to the priority queue.</summary> 
@@ -45,7 +60,11 @@ namespace System.Collections.Concurrent
         /// <param name="item">The key/value pair to be added to the queue.</param> 
         public void Enqueue(KeyValuePair<TKey, TValue> item)
         {
-            lock (_syncLock) _minHeap.Insert(item);
+            lock (_syncLock)
+            {
+                _minHeap.Insert(item);
+                _values.Add(_comparableKeyFunc(item.Value));
+            }
         }
 
         /// <summary>Attempts to remove and return the next prioritized item in the queue.</summary> 
@@ -58,12 +77,13 @@ namespace System.Collections.Concurrent
         /// </returns> 
         public bool TryDequeue(out KeyValuePair<TKey, TValue> result)
         {
-            result = default(KeyValuePair<TKey, TValue>);
+            result = default;
             lock (_syncLock)
             {
                 if (_minHeap.Count > 0)
                 {
                     result = _minHeap.Remove();
+                    _values.Remove(_comparableKeyFunc(result.Value));
                     return true;
                 }
             }
@@ -80,7 +100,7 @@ namespace System.Collections.Concurrent
         /// </returns> 
         public bool TryPeek(out KeyValuePair<TKey, TValue> result)
         {
-            result = default(KeyValuePair<TKey, TValue>);
+            result = default;
             lock (_syncLock)
             {
                 if (_minHeap.Count > 0)
@@ -93,7 +113,14 @@ namespace System.Collections.Concurrent
         }
 
         /// <summary>Empties the queue.</summary> 
-        public void Clear() { lock (_syncLock) _minHeap.Clear(); }
+        public void Clear()
+        {
+            lock (_syncLock)
+            {
+                _minHeap.Clear();
+                _values.Clear();
+            }
+        }
 
         /// <summary>Gets whether the queue is empty.</summary> 
         public bool IsEmpty { get { return Count == 0; } }

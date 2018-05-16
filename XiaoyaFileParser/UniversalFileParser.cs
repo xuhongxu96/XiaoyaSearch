@@ -13,36 +13,18 @@ namespace XiaoyaFileParser
 {
     public class UniversalFileParser : IFileParser
     {
-        protected UrlFile mUrlFile;
-        public UrlFile UrlFile
+        public void SetFile(string mimeType, string url, string charset, string filePath = null)
         {
-            get => mUrlFile;
-            set
+            if (filePath != null
+                    && filePath != ""
+                    && File.Exists(filePath)
+                    && new FileInfo(filePath).Length > 10 * 1024 * 1024)
             {
-                mUrlFile = value;
-                mCurrentParser = GetParser(mUrlFile.MimeType, mConfig);
-                mCurrentParser.UrlFile = mUrlFile;
+                throw new FileLoadException(filePath + " is too big to parse");
             }
-        }
 
-        protected string mFilePath = null;
-        public string FilePath
-        {
-            get => mFilePath;
-            set
-            {
-                mFilePath = value;
-
-                if (FilePath != null
-                    && FilePath != ""
-                    && File.Exists(FilePath)
-                    && new FileInfo(FilePath).Length > 10 * 1024 * 1024)
-                {
-                    throw new FileLoadException(mUrlFile.FilePath + " is too big to parse");
-                }
-
-                mCurrentParser.FilePath = mFilePath;
-            }
+            mCurrentParser = GetParser(mimeType, mConfig);
+            mCurrentParser.SetFile(filePath, url, charset, mimeType);
         }
 
         protected FileParserConfig mConfig = new FileParserConfig();

@@ -12,23 +12,18 @@ namespace XiaoyaFileParser.Parsers
 {
     public abstract class BaseParser : IFileParser
     {
-        protected UrlFile mUrlFile;
-        public UrlFile UrlFile
-        {
-            get => mUrlFile;
-            set
-            {
-                mUrlFile = value;
-                mLinkInfo = null;
-                mHeaders = null;
-                mTitle = mUrlFile.Title;
-                mContent = mUrlFile.Content;
-                mTextContent = mUrlFile.TextContent;
-                mPublishDate = mUrlFile.PublishDate;
-            }
-        }
+        protected string mFilePath = null;
+        protected string mMimeType;
+        protected string mCharset;
+        protected string mUrl;
 
-        public string FilePath { get; set; }
+        public void SetFile(string mimeType, string url, string charset, string filePath = null)
+        {
+            mMimeType = mimeType;
+            mUrl = url;
+            mCharset = charset;
+            mFilePath = filePath;
+        }
 
         protected FileParserConfig mConfig = new FileParserConfig();
         protected string mTitle = null;

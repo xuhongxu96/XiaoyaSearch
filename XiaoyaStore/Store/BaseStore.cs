@@ -1,28 +1,93 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using RocksDbSharp;
 using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using System.Text;
+using XiaoyaStore.Config;
 using XiaoyaStore.Data;
+using XiaoyaStore.Data.MergeOperator;
 
 namespace XiaoyaStore.Store
 {
-    public abstract class BaseStore
+    public abstract class BaseStore : IDisposable
     {
-        protected DbContextOptions mOptions = null;
-        public BaseStore(DbContextOptions options = null)
+        protected StoreConfig mConfig;
+        protected bool mIsReadOnly;
+
+        public abstract string DbFileName { get; }
+
+        protected string DbPath { get; private set; }
+
+        protected RocksDb mDb;
+
+        public BaseStore(StoreConfig config, bool isReadOnly)
         {
-            mOptions = options;
+            mConfig = config;
+            mIsReadOnly = isReadOnly;
+
+            if (!Directory.Exists(config.StoreDirectory))
+            {
+                Directory.CreateDirectory(config.StoreDirectory);
+            }
+
+            DbPath = Path.Combine(config.StoreDirectory, DbFileName + ".db");
         }
 
-        protected XiaoyaSearchContext NewContext()
+        protected IEnumerable<T> GetModelsByIds<T>(IEnumerable<long> ids) where T : class
         {
-            if (mOptions == null)
+            var pairs = mDb.MultiGet(ids.Select(o => o.GetBytes()).ToArray());
+            if (pairs == null)
             {
-                return new XiaoyaSearchContext();
+                yield break;
+            }
+
+            foreach (var pair in pairs)
+            {
+                if (pair.Value == null)
+                {
+                    yield return default;
+                }
+                else
+                {
+                    var item = ModelSerializer.DeserializeModel<T>(pair.Value);
+                    yield return item;
+                }
+            }
+        }
+
+        public virtual void OpenDb(ColumnFamilies columnFamilies = null)
+        {
+            if (columnFamilies == null)
+            {
+                columnFamilies = new ColumnFamilies();
+            }
+
+            var options = new DbOptions()
+                .SetCreateIfMissing(true)
+                .SetCreateMissingColumnFamilies(true);
+
+            if (mIsReadOnly)
+            {
+                mDb = RocksDb.OpenReadOnly(options, DbPath, columnFamilies, false);
             }
             else
             {
-                return new XiaoyaSearchContext(mOptions);
+                mDb = RocksDb.Open(options, DbPath, columnFamilies);
+            }
+        }
+
+        ~BaseStore()
+        {
+            Dispose();
+        }
+
+        public virtual void Dispose()
+        {
+            if (mDb != null)
+            {
+                mDb.Dispose();
+                mDb = null;
             }
         }
     }

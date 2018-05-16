@@ -68,7 +68,7 @@ namespace XiaoyaFileParser.Parsers
                             {
                                 text = "";
                             }
-                            if (Uri.TryCreate(new Uri(UrlFile.Url), href, out Uri absoluteUrl))
+                            if (Uri.TryCreate(new Uri(mUrl), href, out Uri absoluteUrl))
                             {
                                 mLinkInfo.Add(new LinkInfo
                                 {
@@ -137,7 +137,7 @@ namespace XiaoyaFileParser.Parsers
 
                 if (firstHeader != null
                     && headers.Count(o => o.Level == firstHeader.Level) == 1
-                    && UrlHelper.GetDomainDepth(mUrlFile.Url) > 0
+                    && UrlHelper.GetDomainDepth(mUrl) > 0
                     && !mTitle.Contains("-")
                     && !mTitle.Contains(firstHeader.Text))
                 {

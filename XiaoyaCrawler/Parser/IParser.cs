@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using XiaoyaStore.Data.Model;
 using XiaoyaCrawler.Config;
 using XiaoyaLogger;
+using XiaoyaCrawler.Fetcher;
 
 namespace XiaoyaCrawler.Parser
 {
@@ -13,12 +14,6 @@ namespace XiaoyaCrawler.Parser
     /// </summary>
     public interface IParser
     {
-        /// <summary>
-        /// Parse a url file
-        /// </summary>
-        /// <param name="urlFile">Url file</param>
-        /// <returns>Parsing result containing text content and urls in file
-        /// Returns null if cannot parse the file</returns>
-        Task<ParseResult> ParseAsync(UrlFile urlFile);
+        Task<ParseResult> ParseAsync(FetchedFile fetchedFile);
     }
 }

@@ -8,6 +8,7 @@ using XiaoyaStore.Helper;
 using XiaoyaCrawler.Config;
 using XiaoyaFileParser;
 using XiaoyaLogger;
+using XiaoyaCrawler.Fetcher;
 
 namespace XiaoyaCrawler.Parser
 {
@@ -21,18 +22,20 @@ namespace XiaoyaCrawler.Parser
         }
 
         /// <summary>
-        /// Parse a url file
+        /// Parse a fetched file
         /// </summary>
-        /// <param name="urlFile">Url file</param>
+        /// <param name="fetchedFile">Fetched file</param>
         /// <returns>Parsing result containing text content and urls in file
         /// Returns null if cannot parse the file</returns>
-        public async Task<ParseResult> ParseAsync(UrlFile urlFile)
+        public async Task<ParseResult> ParseAsync(FetchedFile fetchedFile)
         {
-            IFileParser parser = new UniversalFileParser
+            if (fetchedFile == null)
             {
-                UrlFile = urlFile,
-                FilePath = urlFile.FilePath,
-            };
+                throw new ArgumentNullException(nameof(fetchedFile));
+            }
+
+            IFileParser parser = new UniversalFileParser();
+            parser.SetFile(fetchedFile.mimeType, fetchedFile.url, fetchedFile.charset, fetchedFile.filePath);
 
             var content = await parser.GetContentAsync();
 

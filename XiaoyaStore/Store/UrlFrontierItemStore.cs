@@ -1,350 +1,251 @@
-﻿using EFCore.BulkExtensions;
-using Microsoft.EntityFrameworkCore;
+﻿using Bond;
+using Bond.IO.Safe;
+using Bond.Protocols;
+using RocksDbSharp;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using XiaoyaLogger;
+using XiaoyaStore.Config;
 using XiaoyaStore.Data;
+using XiaoyaStore.Data.MergeOperator;
 using XiaoyaStore.Data.Model;
 using XiaoyaStore.Helper;
-using Z.EntityFramework.Plus;
 
 namespace XiaoyaStore.Store
 {
-    public class UrlFrontierItemStore : BaseStore, IUrlFrontierItemStore
+    public class UrlFrontierItemStore : BaseStore
     {
-        private ConcurrentDictionary<string, int> mHostStat = new ConcurrentDictionary<string, int>();
-        private ConcurrentQueue<string> mUrlQueue = new ConcurrentQueue<string>();
+        public override string DbFileName => "UrlFrontierItems";
 
-        private RuntimeLogger mLogger = null;
+        ColumnFamilyHandle mHostCountColumnFamily;
+
+        private ReaderWriterLock mReaderWriterLock = new ReaderWriterLock();
+
+        private ConcurrentPriorityQueue<UrlFrontierItemKey, UrlFrontierItem, string> mUrlQueue =
+            new ConcurrentPriorityQueue<UrlFrontierItemKey, UrlFrontierItem, string>(o => o.Url);
+
+        private ConcurrentDictionary<string, UrlFrontierItem> mPoppedUrlDict
+            = new ConcurrentDictionary<string, UrlFrontierItem>();
+
         private object mUrlQueueLock = new object();
 
-        public UrlFrontierItemStore(DbContextOptions options = null, RuntimeLogger logger = null) : base(options)
+        public UrlFrontierItemStore(StoreConfig config, bool isReadOnly = false)
+            : base(config, isReadOnly)
         {
-            using (var context = NewContext())
+            var defaultOptions = new ColumnFamilyOptions();
+            var options = new ColumnFamilyOptions().SetMergeOperator(new CounterOperator());
+            var columnFamilies = new ColumnFamilies
             {
-                var hostStats = context.UrlFrontierItems
-                    .GroupBy(o => o.Host)
-                    .Select(o => new UrlHostStat
-                    {
-                        Host = o.Key,
-                        Count = o.Count(),
-                    });
-                foreach (var stat in hostStats)
-                {
-                    if (stat.Host != null)
-                    {
-                        mHostStat.TryAdd(stat.Host, stat.Count);
-                    }
-                }
-            }
-
-            mLogger = logger;
-
-            
-            var thread = new Thread(FlushHostStat)
-            {
-                Priority = ThreadPriority.AboveNormal,
+                { "default",  defaultOptions },
+                { "HostCount", options },
             };
-            thread.Start();
-            
+
+            OpenDb(columnFamilies);
+
+            mHostCountColumnFamily = mDb.GetColumnFamily("HostCount");
+            LoadUrlFrontierItems();
         }
 
-        
-        private void FlushHostStat()
+        public long GetHostCount(string host)
         {
-            while (true)
+            var data = mDb.Get(host.GetBytes(), mHostCountColumnFamily);
+            if (data == null)
             {
-                Thread.Sleep(10000);
-
-                mLogger?.Log(nameof(UrlFrontierItemStore), "Flushing Host Stats");
-
-                using (var context = NewContext())
-                {
-                    var hostStats = new List<UrlHostStat>();
-                    foreach (var item in mHostStat)
-                    {
-                        hostStats.Add(new UrlHostStat
-                        {
-                            Host = item.Key,
-                            Count = item.Value,
-                        });
-                    }
-                    context.UrlHostStats.Delete();
-                    if (context.Database.IsSqlServer())
-                    {
-                        context.BulkInsert(hostStats);
-                    }
-                    else
-                    {
-                        context.AddRange(hostStats);
-                    }
-                    context.SaveChanges();
-                }
-
-                mLogger?.Log(nameof(UrlFrontierItemStore), "Flushed Host Stats");
+                return 0;
+            }
+            else
+            {
+                return data.GetLong();
             }
         }
-        
+
+        private void SaveNewUrl(UrlFrontierItem item)
+        {
+            using (var batch = new WriteBatch())
+            {
+                var data = ModelSerializer.SerializeModel(item);
+                batch.Put(item.Url.GetBytes(), data);
+                batch.Merge(item.Host.GetBytes(), ((long)1).GetBytes(), mHostCountColumnFamily);
+                mDb.Write(batch);
+            }
+        }
+
+        private void LoadUrlFrontierItems()
+        {
+            mConfig.Logger?.Log(nameof(UrlFrontierItemStore), "Loading UrlFrontierItems");
+
+            using (var iter = mDb.NewIterator())
+            {
+                for (iter.SeekToFirst(); iter.Valid(); iter.Next())
+                {
+                    var data = iter.Value();
+
+                    var item = ModelSerializer.DeserializeModel<UrlFrontierItem>(data);
+                    mUrlQueue.Enqueue(item.Key, item);
+                }
+            }
+            mConfig.Logger?.Log(nameof(UrlFrontierItemStore), "Loaded UrlFrontierItems");
+        }
+
 
         public void Init(IEnumerable<string> initUrls)
         {
-            using (var context = NewContext())
+            // Add all init urls
+            foreach (var url in initUrls)
             {
-                // Add all init urls
-                foreach (var url in initUrls)
+                if (mUrlQueue.ContainsValue(url))
                 {
-                    if (context.UrlFrontierItems.Any(o => o.Url == url))
-                    {
-                        continue;
-                    }
-                    var host = UrlHelper.GetHost(url);
-
-                    if (host != "")
-                    {
-                        mHostStat.AddOrUpdate(host, 1, (k, v) => v + 1);
-                    }
-
-                    var item = new UrlFrontierItem
-                    {
-                        Url = url,
-                        Host = host,
-                        UrlDepth = UrlHelper.GetDomainDepth(url),
-                        PlannedTime = DateTime.Now,
-                        FailedTimes = 0,
-                        UpdatedAt = DateTime.Now,
-                        CreatedAt = DateTime.Now,
-                        IsPopped = false,
-                    };
-
-                    context.UrlFrontierItems.Add(item);
+                    // Already exists, skip
+                    continue;
                 }
 
-                context.SaveChanges();
-            }
-        }
+                var item = new UrlFrontierItem
+                {
+                    Url = url,
+                    PlannedTime = DateTime.Now.ToUniversalTime(),
+                    FailedTimes = 0,
+                    UpdatedAt = DateTime.Now.ToUniversalTime(),
+                    CreatedAt = DateTime.Now.ToUniversalTime(),
+                };
 
-        public void RestartCrawl()
-        {
-            using (var context = NewContext())
-            {
-                // Pop all urls
-                context.Database.ExecuteSqlCommand("UPDATE UrlFrontierItems SET IsPopped = 0 WHERE IsPopped = 1");
+                SaveNewUrl(item);
 
-                context.SaveChanges();
+                mUrlQueue.Enqueue(item.Key, item);
             }
         }
 
         public void PushUrls(IEnumerable<string> urls)
         {
-            using (var context = NewContext())
+            foreach (var url in urls)
             {
-#if DEBUG
-                var time = DateTime.Now;
-                Console.WriteLine("Pushing Urls: " + "\n" + (DateTime.Now - time).TotalSeconds);
-#endif
-                context.ChangeTracker.AutoDetectChangesEnabled = false;
-
-                var existedUrlSet = context.UrlFrontierItems
-                    .Where(o => urls.Contains(o.Url))
-                    .Select(o => o.Url);
-
-                var newUrls = urls.Except(existedUrlSet).ToList();
-
-#if DEBUG
-                Console.WriteLine("Got New Urls: " + "\n" + (DateTime.Now - time).TotalSeconds);
-                time = DateTime.Now;
-#endif
-                var urlList = new List<UrlFrontierItem>();
-
-                foreach (var url in newUrls)
+                try
                 {
-                    // Add this url if not exists yet
-                    var host = UrlHelper.GetHost(url);
-                    var item = new UrlFrontierItem
+                    mReaderWriterLock.AcquireReaderLock(1000);
+
+                    if (mUrlQueue.ContainsValue(url)
+                    || mPoppedUrlDict.ContainsKey(url))
                     {
-                        Url = url,
-                        Host = host,
-                        UrlDepth = UrlHelper.GetDomainDepth(url),
-                        PlannedTime = DateTime.Now,
-                        FailedTimes = 0,
-                        UpdatedAt = DateTime.Now,
-                        CreatedAt = DateTime.Now,
-                        IsPopped = false,
-                    };
-
-                    mHostStat.AddOrUpdate(host, 1, (k, v) => v + 1);
-
-                    item.Priority = mHostStat[host] + item.UrlDepth * 10;
-
-                    urlList.Add(item);
+                        // Already exists or is popped, skip
+                        continue;
+                    }
                 }
-                if (context.Database.IsSqlServer())
+                finally
                 {
-                    context.BulkInsert(urlList);
+                    mReaderWriterLock.ReleaseReaderLock();
                 }
-                else
+
+                var item = new UrlFrontierItem
                 {
-                    context.AddRange(urlList);
-                }
-#if DEBUG
-                Console.WriteLine("Inserted new urls: " + "\n" + (DateTime.Now - time).TotalSeconds);
-                time = DateTime.Now;
-#endif
-                try
-                {
-                    context.SaveChanges();
-                }
-                catch (DbUpdateException)
-                { }
+                    Url = url,
+                    PlannedTime = DateTime.Now.ToUniversalTime(),
+                    FailedTimes = 0,
+                    UpdatedAt = DateTime.Now.ToUniversalTime(),
+                    CreatedAt = DateTime.Now.ToUniversalTime(),
+                };
+
+                var urlDepth = UrlHelper.GetDomainDepth(url);
+
+                // Update host stats
+                var hostCount = GetHostCount(item.Host);
+
+                // Calculate priority
+                item.Priority = hostCount + urlDepth * 10;
+
+                SaveNewUrl(item);
+
+                mUrlQueue.Enqueue(item.Key, item);
             }
         }
 
-        public UrlFrontierItem PushBack(string url, bool failed = false)
+        public bool PushBack(string url, TimeSpan updateInterval, bool failed = false)
         {
-            using (var context = NewContext())
+            try
             {
-                var item = context.UrlFrontierItems.SingleOrDefault(o => o.Url == url);
+                mReaderWriterLock.AcquireReaderLock(1000);
 
-                if (item == null || !item.IsPopped)
+                if (!mPoppedUrlDict.ContainsKey(url))
                 {
-                    // If no item or not popped but added again, skip
-                    return item;
+                    // Not popped, skip
+                    return false;
                 }
-
-                var urlFile = context.UrlFiles.SingleOrDefault(o => o.Url == url);
-                if (failed || urlFile == null)
-                {
-                    // Failed to fetch last time
-                    item.FailedTimes++;
-                    item.PlannedTime = DateTime.Now.AddDays(item.FailedTimes);
-                    item.IsPopped = false;
-                    item.UpdatedAt = DateTime.Now;
-                }
-                else
-                {
-                    // Add this url again
-                    item.FailedTimes = 0;
-                    item.PlannedTime = DateTime.Now.Add(urlFile.UpdateInterval);
-                    item.IsPopped = false;
-                    item.UpdatedAt = DateTime.Now;
-                }
-
-                var host = UrlHelper.GetHost(url);
-                if (mHostStat.ContainsKey(host))
-                {
-                    item.Priority = mHostStat[host];
-                }
-
-                item.Priority += item.UrlDepth * 10;
-
-                // Attempt to save changes to the database
-                try
-                {
-                    context.SaveChanges();
-                }
-                catch (DbUpdateException)
-                { }
-
-                return item;
             }
-        }
-
-        public UrlFrontierItem LoadByUrl(string url)
-        {
-            using (var context = NewContext())
+            finally
             {
-                return context.UrlFrontierItems.SingleOrDefault(o => o.Url == url);
+                mReaderWriterLock.ReleaseReaderLock();
             }
+
+            if (!mPoppedUrlDict.TryRemove(url, out var item))
+            {
+                // Fail to push back
+                return false;
+            }
+
+            if (failed)
+            {
+                // Failed to fetch last time
+                item.FailedTimes++;
+                item.PlannedTime = DateTime.Now.ToUniversalTime().AddDays(item.FailedTimes);
+                item.UpdatedAt = DateTime.Now.ToUniversalTime();
+            }
+            else
+            {
+                // Add this url again
+                item.FailedTimes = 0;
+                item.PlannedTime = DateTime.Now.ToUniversalTime().Add(updateInterval);
+                item.UpdatedAt = DateTime.Now.ToUniversalTime();
+            }
+
+            var urlDepth = UrlHelper.GetDomainDepth(url);
+
+            item.Priority = GetHostCount(item.Host);
+            item.Priority += urlDepth * 10;
+
+            // Persist data
+            var data = ModelSerializer.SerializeModel(item);
+            mDb.Put(url.GetBytes(), data);
+
+            mUrlQueue.Enqueue(item.Key, item);
+
+            return true;
         }
 
         public string PopUrlForCrawl()
         {
-            if (mUrlQueue.TryDequeue(out string url))
+            try
             {
-                return url;
-            }
+                mReaderWriterLock.AcquireWriterLock(1000);
 
-            lock (mUrlQueueLock)
-            {
-                if (mUrlQueue.TryDequeue(out url))
+                if (mUrlQueue.TryDequeue(out var result)
+                && mPoppedUrlDict.TryAdd(result.Value.Url, result.Value))
                 {
-                    return url;
+                    return result.Value.Url;
                 }
 
-                using (var context = NewContext())
-                {
-                    IEnumerable<string> urls;
-                    if (context.Database.IsSqlServer())
-                    {
-                        urls = context.UrlFrontierItems
-                            .FromSql("SELECT TOP 100 * FROM UrlFrontierItems WHERE IsPopped = 0 AND PlannedTime <= GETDATE() ORDER BY Priority, PlannedTime")
-                            .Select(o => o.Url)
-                            .Take(100)
-                            .ToList();
-
-                    }
-                    else
-                    {
-                        var now = DateTime.Now;
-                        urls = context.UrlFrontierItems
-                            .Where(o => !o.IsPopped && o.PlannedTime <= now)
-                            .OrderBy(o => o.Priority)
-                            .ThenBy(o => o.PlannedTime)
-                            .Select(o => o.Url)
-                            .Take(100)
-                            .ToList();
-                    }
-
-                    context.UrlFrontierItems
-                        .Where(o => urls.Contains(o.Url))
-                        .Update(o => new UrlFrontierItem
-                        {
-                            IsPopped = true,
-                            UpdatedAt = DateTime.Now,
-                        });
-
-                    try
-                    {
-                        context.SaveChanges();
-                    }
-                    catch (DbUpdateException)
-                    {
-                        return null;
-                    }
-
-                    foreach (var item in urls)
-                    {
-                        mUrlQueue.Enqueue(item);
-                    }
-                }
+                return null;
             }
-
-            if (mUrlQueue.TryDequeue(out url))
+            finally
             {
-                return url;
+                mReaderWriterLock.ReleaseWriterLock();
             }
-
-            return null;
         }
 
         public void Remove(string url)
         {
-            using (var context = NewContext())
+            using (var batch = new WriteBatch())
             {
-                var item = context.UrlFrontierItems.SingleOrDefault(o => o.Url == url);
-                if (item != null)
-                {
-                    mHostStat.AddOrUpdate(UrlHelper.GetHost(url), 0, (k, v) => v - 1);
-                    context.Remove(item);
-                }
-                context.SaveChanges();
+                batch.Delete(url.GetBytes());
+                batch.Merge(UrlHelper.GetHost(url).GetBytes(), ((long)-1).GetBytes(), mHostCountColumnFamily);
+                mDb.Write(batch);
             }
         }
     }
+
 }

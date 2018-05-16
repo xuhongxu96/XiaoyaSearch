@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Store">
+      <UniqueIdentifier>{6c732a9b-c222-4377-89d7-e21b90482423}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Store">
+      <UniqueIdentifier>{51632d93-f27d-4c5e-964d-b030a6c7a8b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Model">
+      <UniqueIdentifier>{2b08e446-9495-4942-9bfa-e5e03a2c0761}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Model">
+      <UniqueIdentifier>{a509a290-6508-46ba-b54e-3782b66671d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Config">
+      <UniqueIdentifier>{20d0a0d9-09c2-4bf1-87ce-4092169ab9c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Helper">
+      <UniqueIdentifier>{cb8d465d-8856-4ce9-b509-cf972ea60215}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Exception">
+      <UniqueIdentifier>{4ec1f62c-7253-45f6-95d6-9963807b34ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Store\MergeOperator">
+      <UniqueIdentifier>{1fd6d0e2-3929-4df0-b53a-1c9e8cb41595}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Store\MergeOperator">
+      <UniqueIdentifier>{0db7c143-546b-4729-8ea5-97958c769fb7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="models_apply.h">
+      <Filter>Header Files\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="models_reflection.h">
+      <Filter>Header Files\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="models_types.h">
+      <Filter>Header Files\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseStore.h">
+      <Filter>Header Files\Store</Filter>
+    </ClInclude>
+    <ClInclude Include="UrlFrontierItemStore.h">
+      <Filter>Header Files\Store</Filter>
+    </ClInclude>
+    <ClInclude Include="ModelCompare.h">
+      <Filter>Header Files\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="UrlHelper.h">
+      <Filter>Header Files\Helper</Filter>
+    </ClInclude>
+    <ClInclude Include="DateTimeHelper.h">
+      <Filter>Header Files\Helper</Filter>
+    </ClInclude>
+    <ClInclude Include="StoreException.h">
+      <Filter>Header Files\Exception</Filter>
+    </ClInclude>
+    <ClInclude Include="CounterOperator.h">
+      <Filter>Header Files\Store\MergeOperator</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="models_apply.cpp">
+      <Filter>Source Files\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="models_types.cpp">
+      <Filter>Source Files\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseStore.cpp">
+      <Filter>Source Files\Store</Filter>
+    </ClCompile>
+    <ClCompile Include="StoreConfig.h">
+      <Filter>Header Files\Config</Filter>
+    </ClCompile>
+    <ClCompile Include="SerializerHelper.h">
+      <Filter>Header Files\Helper</Filter>
+    </ClCompile>
+    <ClCompile Include="UrlFrontierItemStore.cpp">
+      <Filter>Source Files\Store</Filter>
+    </ClCompile>
+    <ClCompile Include="ModelCompare.cpp">
+      <Filter>Source Files\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="CounterOperator.cpp">
+      <Filter>Source Files\Store\MergeOperator</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="models.bond">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

@@ -165,7 +165,7 @@ namespace XiaoyaFileParser.Parsers
                 var textBuilder = new StringBuilder();
                 await Task.Run(() =>
                 {
-                    using (var doc = PresentationDocument.Open(mUrlFile.FilePath, false))
+                    using (var doc = PresentationDocument.Open(mFilePath, false))
                     {
                         if (doc == null)
                         {

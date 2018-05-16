@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Web;
+using XiaoyaFileParser.Model;
 using XiaoyaStore.Data.Model;
 
 namespace XiaoyaCrawler.UrlFilter
@@ -14,7 +15,7 @@ namespace XiaoyaCrawler.UrlFilter
             "orderby", "order", "filter", "filterby", "referer", "reply", "replytocom", "authorid"
         };
 
-        public IEnumerable<Link> Filter(IEnumerable<Link> links)
+        public IEnumerable<LinkInfo> Filter(IEnumerable<LinkInfo> links)
         {
             foreach (var link in links)
             {

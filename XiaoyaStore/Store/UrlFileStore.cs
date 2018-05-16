@@ -1,200 +1,207 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Storage;
+﻿using Bond;
+using Bond.IO.Safe;
+using Bond.Protocols;
+using RocksDbSharp;
 using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using XiaoyaStore.Cache;
+using XiaoyaStore.Config;
 using XiaoyaStore.Data;
+using XiaoyaStore.Data.MergeOperator;
 using XiaoyaStore.Data.Model;
 using XiaoyaStore.Helper;
-using Z.EntityFramework.Plus;
+
 
 namespace XiaoyaStore.Store
 {
-    public class UrlFileStore : BaseStore, IUrlFileStore
+    public class UrlFileStore : CounterStore
     {
-        protected LRUCache<int, UrlFile> mCache;
+        private static readonly byte[] MetaMaxUrlFileId = "MaxUrlFileId".GetBytes();
 
-        public UrlFileStore(DbContextOptions options = null, bool enableCache = true) : base(options)
+        public override string DbFileName => "UrlFiles";
+
+        ColumnFamilyHandle mUrlFileIndexQueueColumnFamily;
+        ColumnFamilyHandle mUrlIndexColumnFamily;
+        ColumnFamilyHandle mHashIndexColumnFamily;
+
+        Iterator mIndexQueueIter = null;
+
+        private LRUCache<long, UrlFile> mCache;
+
+        public UrlFileStore(StoreConfig config,
+            bool isReadOnly = false,
+            bool enableCache = true) : base(config, isReadOnly)
         {
-            mCache = new LRUCache<int, UrlFile>(TimeSpan.FromDays(1), GetCache, null, 500_000, enableCache);
+            var columnFamilyOptions
+            = new ColumnFamilyOptions().SetMergeOperator(new IdListConcatOperator());
+
+            var columnFamilies = new ColumnFamilies
+            {
+                {"UrlFileIndexQueue", columnFamilyOptions },
+                {"UrlIndex", columnFamilyOptions },
+                {"HashIndex", columnFamilyOptions },
+            };
+
+            OpenDb(columnFamilies);
+
+            mUrlFileIndexQueueColumnFamily = mDb.GetColumnFamily("UrlFileIndexQueue");
+            mUrlIndexColumnFamily = mDb.GetColumnFamily("UrlIndex");
+            mHashIndexColumnFamily = mDb.GetColumnFamily("HashIndex");
+
+            mCache = new LRUCache<long, UrlFile>(TimeSpan.FromDays(1), GetUrlFile, null, 500_000, enableCache);
         }
 
-        protected UrlFile GetCache(int id)
+        private UrlFile GetUrlFile(long id)
         {
-            using (var context = NewContext())
+            var key = id.GetBytes();
+
+            var data = mDb.Get(key);
+            if (data == null)
             {
-                return context.UrlFiles.SingleOrDefault(o => o.UrlFileId == id);
+                return null;
             }
+
+            return ModelSerializer.DeserializeModel<UrlFile>(data);
         }
 
-        public void CacheUrlFiles(IEnumerable<int> urlFileIds)
+        protected IEnumerable<Tuple<long, UrlFile>> LoadCachesOfUrlFiles(IEnumerable<long> urlFileIds)
         {
-            var urlFileIdSet = urlFileIds.ToHashSet();
-            foreach (var id in urlFileIds)
+            var urlFileIdSet = new HashSet<long>(urlFileIds);
+
+            foreach (var item in GetModelsByIds<UrlFile>(urlFileIds))
             {
-                if (mCache.IsValid(id))
+                if (mCache.IsValid(item.UrlFileId))
                 {
-                    urlFileIdSet.Remove(id);
+                    continue;
                 }
-            }
 
-            mCache.LoadCaches(() => LoadCachesOfUrlFiles(urlFileIdSet));
-        }
-
-        protected IEnumerable<Tuple<int, UrlFile>> LoadCachesOfUrlFiles(IEnumerable<int> urlFileIds)
-        {
-            using (var context = NewContext())
-            {
-                var urlFileIdSet = new HashSet<int>(urlFileIds);
-                foreach (var item in context.UrlFiles
-                    .Where(o => urlFileIdSet.Contains(o.UrlFileId))
-                    /*.OrderByDescending(o => o.PageRank)*/)
-                {
-                    if (mCache.IsValid(item.UrlFileId))
-                    {
-                        continue;
-                    }
-
-                    yield return Tuple.Create(item.UrlFileId, item);
-                }
+                yield return Tuple.Create(item.UrlFileId, item);
             }
         }
 
-        public int Count()
+        public long Count()
         {
-            using (var context = NewContext())
-            {
-                return context.UrlFiles.Max(o => o.UrlFileId);
-            }
-        }
-
-        public void RestartIndex()
-        {
-            using (var context = NewContext())
-            {
-                context.Database.ExecuteSqlCommand("UPDATE UrlFiles SET IndexStatus = 0 WHERE IndexStatus = 1");
-            }
+            return GetMaxUrlFileId();
         }
 
         public UrlFile LoadAnyForIndex()
         {
-            using (var context = NewContext())
+            if (mIndexQueueIter == null || !mIndexQueueIter.Valid())
             {
-                UrlFile urlFile;
-                if (context.Database.IsSqlServer())
+                if (mIndexQueueIter != null)
                 {
-                    urlFile = context.UrlFiles
-                        .FromSql("SELECT TOP 1 * FROM UrlFiles WHERE IndexStatus = 0 ORDER BY UpdatedAt")
-                        .FirstOrDefault();
+                    mIndexQueueIter.Dispose();
                 }
-                else
-                {
-                    urlFile = context.UrlFiles
-                        .Where(o => o.IndexStatus == UrlFile.UrlFileIndexStatus.NotIndexed)
-                        .OrderBy(o => o.UpdatedAt)
-                        .FirstOrDefault();
-                }
-
-                if (urlFile == null)
+                mIndexQueueIter = mDb.NewIterator(mUrlFileIndexQueueColumnFamily);
+                mIndexQueueIter.SeekToFirst();
+                if (!mIndexQueueIter.Valid())
                 {
                     return null;
                 }
-
-                urlFile.IndexStatus = UrlFile.UrlFileIndexStatus.Indexing;
-
-                try
-                {
-                    context.SaveChanges();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    return null;
-                }
-
-                return urlFile;
             }
+
+            var urlFileId = BitConverter.ToInt64(mIndexQueueIter.Value(), 0);
+            return GetUrlFile(urlFileId);
         }
 
-        public UrlFile LoadByFilePath(string path)
+        public void FinishIndex(int urlFileId)
         {
-            using (var context = NewContext())
+            mDb.Remove(urlFileId.GetBytes(), mUrlFileIndexQueueColumnFamily);
+        }
+
+        private long GetMaxUrlFileId()
+        {
+            return GetCount(MetaMaxUrlFileId);
+        }
+
+        private IdList GetUrlFileByHash(string hash)
+        {
+            var data = mDb.Get(hash.GetBytes(), mHashIndexColumnFamily);
+            if (data == null)
             {
-                return context.UrlFiles.SingleOrDefault(o => o.FilePath == path);
+                return null;
+            }
+            else
+            {
+                var model = ModelSerializer.DeserializeModel<IdList>(data);
+                return model;
             }
         }
 
-        public UrlFile LoadById(int id)
+        public UrlFile LoadById(long id)
         {
             return mCache.Get(id);
         }
 
         public UrlFile LoadByUrl(string url)
         {
-            using (var context = NewContext())
+            var data = mDb.Get(url, mUrlIndexColumnFamily);
+            if (data == null)
             {
-                return context.UrlFiles.SingleOrDefault(o => o.Url == url);
+                return null;
             }
+
+            var urlFileId = long.Parse(data);
+
+            return LoadById(urlFileId);
         }
 
-        public UrlFile Save(UrlFile urlFile, bool isUpdateContent = true)
+        public UrlFile Save(UrlFile urlFile, out long oldUrlFileId)
         {
-            using (var context = NewContext())
+            // Find if the url exists
+            var oldUrlFile = LoadByUrl(urlFile.Url);
+            var addToIndex = false;
+            using (var batch = new WriteBatch())
             {
-                // Find if the url exists
-                var oldUrlFile = context.UrlFiles.SingleOrDefault(o => o.Url == urlFile.Url);
+
                 if (oldUrlFile == null)
                 {
+                    oldUrlFileId = 0;
                     // first see this url, add to database
-                    urlFile.IndexStatus = UrlFile.UrlFileIndexStatus.NotIndexed;
                     urlFile.UpdatedAt = DateTime.Now;
                     urlFile.CreatedAt = DateTime.Now;
                     urlFile.UpdateInterval = TimeSpan.FromDays(1);
-                    context.UrlFiles.Add(urlFile);
+
+                    addToIndex = true;
                 }
                 else
                 {
-                    if (isUpdateContent)
+                    oldUrlFileId = oldUrlFile.UrlFileId;
+
+                    // Exists this url, then judge if two fetched file is same
+                    if (oldUrlFile.Title != urlFile.Title
+                            || oldUrlFile.Content != urlFile.Content)
                     {
-                        // Exists this url, then judge if two fetched file is same
-                        if (oldUrlFile.Title != urlFile.Title
-                                || oldUrlFile.Content != urlFile.Content)
-                        {
-                            // Updated
-                            oldUrlFile.UpdatedAt = DateTime.Now;
-                            oldUrlFile.IndexStatus = UrlFile.UrlFileIndexStatus.NotIndexed;
-                        }
-                        else
-                        {
-                            // No changes and already indexed, delete file
-                            if (oldUrlFile.IndexStatus == UrlFile.UrlFileIndexStatus.Indexed
-                                && File.Exists(urlFile.FilePath))
-                            {
-                                File.Delete(urlFile.FilePath);
-                            }
-                        }
-
-                        // Update UpdateInterval
-                        var updateInterval = DateTime.Now.Subtract(oldUrlFile.UpdatedAt);
-                        oldUrlFile.UpdateInterval
-                            = (oldUrlFile.UpdateInterval * 3 + updateInterval) / 4;
-
+                        // Updated
+                        oldUrlFile.UpdatedAt = DateTime.Now;
+                        addToIndex = true;
                     }
 
-                    if (oldUrlFile.FilePath != urlFile.FilePath
-                            && File.Exists(oldUrlFile.FilePath))
+                    // Update UpdateInterval
+                    var updateInterval = DateTime.Now.Subtract(oldUrlFile.UpdatedAt);
+                    oldUrlFile.UpdateInterval
+                        = (oldUrlFile.UpdateInterval * 3 + updateInterval) / 4;
+
+                    // Remove old hash index if changed
+                    if (oldUrlFile.FileHash != urlFile.FileHash)
                     {
-                        // Delete old file
-                        File.Delete(oldUrlFile.FilePath);
+                        var removingHashIndex = new IdList
+                        {
+                            Ids = new HashSet<long> { oldUrlFileId },
+                            IsAdd = false,
+                        };
+                        batch.Merge(oldUrlFile.FileHash.GetBytes(),
+                            ModelSerializer.SerializeModel(removingHashIndex), mHashIndexColumnFamily);
+
+                        oldUrlFile.FileHash = urlFile.FileHash;
                     }
 
-                    // Update info
+                    // Update other info
                     oldUrlFile.FilePath = urlFile.FilePath;
-                    oldUrlFile.FileHash = urlFile.FileHash;
                     oldUrlFile.Title = urlFile.Title;
                     oldUrlFile.TextContent = urlFile.TextContent;
                     oldUrlFile.PublishDate = urlFile.PublishDate;
@@ -202,59 +209,45 @@ namespace XiaoyaStore.Store
                     oldUrlFile.MimeType = urlFile.MimeType;
                     oldUrlFile.HeaderCount = urlFile.HeaderCount;
                     oldUrlFile.HeaderTotalLength = urlFile.HeaderTotalLength;
-                    oldUrlFile.LinkCount = urlFile.LinkCount;
-                    oldUrlFile.LinkTotalLength = urlFile.LinkTotalLength;
+                    oldUrlFile.InLinkCount = urlFile.InLinkCount;
+                    oldUrlFile.InLinkTotalLength = urlFile.InLinkTotalLength;
+
+                    // Remove old UrlFile
+                    batch.Delete(oldUrlFileId.GetBytes());
 
                     urlFile = oldUrlFile;
                 }
 
-                try
-                {
-                    context.SaveChanges();
-                }
-                catch (DbUpdateConcurrencyException e)
-                {
-                    File.Delete(urlFile.FilePath);
+                // Assign new id
+                var id = urlFile.UrlFileId = GetAndUpdateCount(MetaMaxUrlFileId, 1) + 1;
 
-                    e.Entries.Single().Reload();
-                    context.SaveChanges();
+                // Overwrite url index
+                batch.Put(urlFile.Url.GetBytes(), id.GetBytes(), mUrlIndexColumnFamily);
+
+                // Add new hash index
+                var deltaHashIndex = new IdList
+                {
+                    Ids = new HashSet<long> { id },
+                };
+                batch.Merge(urlFile.FileHash.GetBytes(), ModelSerializer.SerializeModel(deltaHashIndex), mHashIndexColumnFamily);
+
+                // Add new UrlFile
+                batch.Put(id.GetBytes(), ModelSerializer.SerializeModel(urlFile));
+
+                if (addToIndex)
+                {
+                    batch.Put(id.GetBytes(), id.GetBytes(), mUrlFileIndexQueueColumnFamily);
                 }
 
-                return urlFile;
+                mDb.Write(batch);
             }
+
+            return urlFile;
         }
 
-        public void ReCrawl(UrlFile urlFile)
+        public IEnumerable<UrlFile> LoadByHash(string hash)
         {
-            using (var context = NewContext())
-            {
-                context.UrlFiles.Where(o => o.UrlFileId == urlFile.UrlFileId)
-                    .Update(o => new UrlFile
-                    {
-                        TextContent = "",
-                    });
-
-                context.UrlFrontierItems.Where(o => o.Url == urlFile.Url)
-                    .Update(o => new UrlFrontierItem
-                    {
-                        PlannedTime = DateTime.Now,
-                    });
-
-                context.SaveChanges();
-            }
-        }
-
-        public IEnumerable<(string url, string textContent)> LoadByHash(string hash)
-        {
-            using (var context = NewContext())
-            {
-                foreach (var item in context.UrlFiles
-                    .Where(o => o.FileHash == hash)
-                    .Select(o => Tuple.Create(o.Url, o.TextContent)))
-                {
-                    yield return (item.Item1, item.Item2);
-                }
-            }
+            return GetModelsByIds<UrlFile>(GetUrlFileByHash(hash).Ids);
         }
     }
 }

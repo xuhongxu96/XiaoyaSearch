@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using XiaoyaCrawler.Fetcher;
 using XiaoyaCrawler.Parser;
 using XiaoyaStore.Data.Model;
 
@@ -13,11 +14,6 @@ namespace XiaoyaCrawler.SimilarContentManager
     /// </summary>
     public interface ISimilarContentManager
     {
-        /// <summary>
-        /// Judge if the content has been seen before
-        /// </summary>
-        /// <param name="urlFile">Fetched UrlFile</param>
-        /// <returns>The UrlFile that has same content. If no same file, retunrs null</returns>
-        (string Url, string Content) JudgeContent(UrlFile urlFile);
+        (string Url, string Content) JudgeContent(FetchedFile fetchedFile, string textContent);
     }
 }

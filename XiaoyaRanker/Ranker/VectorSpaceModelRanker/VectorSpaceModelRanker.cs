@@ -5,7 +5,7 @@ using System.Text;
 using XiaoyaCommon.Helper;
 using XiaoyaRanker.Config;
 using XiaoyaRanker.RankerDebugInfo;
-using static XiaoyaStore.Data.Model.InvertedIndex;
+using static XiaoyaStore.Data.Model.Postings;
 
 namespace XiaoyaRanker.Ranker.VectorSpaceModelRanker
 {

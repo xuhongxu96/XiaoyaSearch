@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using XiaoyaFileParser.Model;
 using XiaoyaStore.Data.Model;
 
 namespace XiaoyaCrawler.UrlFilter
@@ -23,7 +24,7 @@ namespace XiaoyaCrawler.UrlFilter
             }
         }
 
-        public IEnumerable<Link> Filter(IEnumerable<Link> links)
+        public IEnumerable<LinkInfo> Filter(IEnumerable<LinkInfo> links)
         {
             if (mBlackPattern == null)
             {
