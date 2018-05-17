@@ -11,7 +11,11 @@ namespace XiaoyaStore
 		public:
 			static inline uint64_t Now()
 			{
-				return static_cast<uint16_t>(std::time(nullptr));
+				using namespace std::chrono;
+				milliseconds ms = duration_cast< milliseconds >(
+					system_clock::now().time_since_epoch()
+					);
+				return ms.count();
 			}
 
 			static inline int64_t FromSeconds(double seconds)

@@ -208,7 +208,7 @@ bool UrlFrontierItemStore::PushBackUrl(const std::string url,
 	{
 		// Successfully fetched
 		item.FailedTimes = 0;
-		item.PlannedTime = DateTimeHelper::Now();
+		item.PlannedTime = DateTimeHelper::Now() + updateInterval;
 	}
 	item.UpdatedAt = DateTimeHelper::Now();
 
@@ -266,7 +266,7 @@ void XiaoyaStore::Store::UrlFrontierItemStore::RemoveUrl(std::string & url)
 uint64_t XiaoyaStore::Store::UrlFrontierItemStore::GetHostCount(const std::string host)
 {
 	std::string data;
-	auto status = mDb->Get(ReadOptions(), host, &data);
+	auto status = mDb->Get(ReadOptions(), mCFHandles[HostCountCF].get(), host, &data);
 	if (status.IsNotFound())
 	{
 		return 0;

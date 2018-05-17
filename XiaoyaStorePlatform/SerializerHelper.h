@@ -19,7 +19,7 @@ namespace XiaoyaStore
 
 				T model;
 				bond::Deserialize(reader, model);
-				return model;
+				return std::move(model);
 			}
 
 			template <typename T>
@@ -32,7 +32,7 @@ namespace XiaoyaStore
 				bond::Serialize(model, writer);
 
 				auto blob = output.GetBuffer();
-				return std::string(blob.begin(), blob.end());
+				return std::move(std::string(blob.begin(), blob.end()));
 			}
 
 			static uint64_t DeserializeUInt64(const std::string &data)
@@ -47,12 +47,12 @@ namespace XiaoyaStore
 
 			static std::string SerializeInt64(const int64_t num)
 			{
-				return std::bitset<sizeof(int64_t) * 8>(num).to_string();
+				return std::move(std::bitset<sizeof(int64_t) * 8>(num).to_string());
 			}
 
 			static std::string SerializeUInt64(const uint64_t num)
 			{
-				return std::bitset<sizeof(uint64_t) * 8>(num).to_string();
+				return std::move(std::bitset<sizeof(uint64_t) * 8>(num).to_string());
 			}
 		};
 	}
