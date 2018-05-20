@@ -6,7 +6,7 @@ namespace XiaoyaStore
 {
 	namespace Helper
 	{
-		class SerializerHelper
+		class SerializeHelper
 		{
 		public:
 			template <typename T>

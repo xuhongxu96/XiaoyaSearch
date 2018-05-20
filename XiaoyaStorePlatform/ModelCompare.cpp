@@ -8,3 +8,8 @@ bool XiaoyaStore::Model::ModelCompare::operator()(const UrlFrontierItem &item1, 
 	auto result = key1 > key2;
 	return result;
 }
+
+bool XiaoyaStore::Model::ModelCompare::operator()(const UrlFile & item1, const UrlFile & item2) const
+{
+	return item1.UpdatedAt > item2.UpdatedAt;
+}

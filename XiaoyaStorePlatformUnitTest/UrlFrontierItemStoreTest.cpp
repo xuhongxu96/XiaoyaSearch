@@ -8,8 +8,8 @@ using namespace XiaoyaStore::Model;
 using namespace XiaoyaStore::Helper;
 using namespace rocksdb;
 
-TEST(UrlFrontierItemStoreTest, TestInit) {
-
+TEST(UrlFrontierItemStoreTest, TestInit)
+{
 	DbTestHelper::DeleteDB<UrlFrontierItemStore>();
 
 	auto config = DbTestHelper::InitStoreConfig();
@@ -36,7 +36,7 @@ TEST(UrlFrontierItemStoreTest, TestInit) {
 		std::unique_ptr<Iterator> iter(db->NewIterator(ReadOptions()));
 		for (iter->SeekToFirst(); iter->Valid(); iter->Next())
 		{
-			auto item = SerializerHelper::Deserialize<UrlFrontierItem>(iter->value().ToString());
+			auto item = SerializeHelper::Deserialize<UrlFrontierItem>(iter->value().ToString());
 			items.insert(item.Url);
 		}
 
@@ -52,7 +52,7 @@ TEST(UrlFrontierItemStoreTest, TestInit) {
 		for (host_iter->SeekToFirst(); host_iter->Valid(); host_iter->Next())
 		{
 			auto url = host_iter->key().ToString();
-			auto count = SerializerHelper::DeserializeUInt64(host_iter->value().ToString());
+			auto count = SerializeHelper::DeserializeUInt64(host_iter->value().ToString());
 			host[url] = count;
 		}
 
@@ -82,7 +82,7 @@ TEST(UrlFrontierItemStoreTest, TestInit) {
 		std::unique_ptr<Iterator> iter(db->NewIterator(ReadOptions()));
 		for (iter->SeekToFirst(); iter->Valid(); iter->Next())
 		{
-			auto item = SerializerHelper::Deserialize<UrlFrontierItem>(iter->value().ToString());
+			auto item = SerializeHelper::Deserialize<UrlFrontierItem>(iter->value().ToString());
 			items.insert(item.Url);
 		}
 
@@ -100,7 +100,7 @@ TEST(UrlFrontierItemStoreTest, TestInit) {
 		for (host_iter->SeekToFirst(); host_iter->Valid(); host_iter->Next())
 		{
 			auto url = host_iter->key().ToString();
-			auto count = SerializerHelper::DeserializeUInt64(host_iter->value().ToString());
+			auto count = SerializeHelper::DeserializeUInt64(host_iter->value().ToString());
 			host[url] = count;
 		}
 
@@ -110,7 +110,8 @@ TEST(UrlFrontierItemStoreTest, TestInit) {
 	}
 }
 
-TEST(UrlFrontierItemStoreTest, TestPushUrls) {
+TEST(UrlFrontierItemStoreTest, TestPushUrls)
+{
 
 	DbTestHelper::DeleteDB<UrlFrontierItemStore>();
 
@@ -138,7 +139,7 @@ TEST(UrlFrontierItemStoreTest, TestPushUrls) {
 		std::unique_ptr<Iterator> iter(db->NewIterator(ReadOptions()));
 		for (iter->SeekToFirst(); iter->Valid(); iter->Next())
 		{
-			auto item = SerializerHelper::Deserialize<UrlFrontierItem>(iter->value().ToString());
+			auto item = SerializeHelper::Deserialize<UrlFrontierItem>(iter->value().ToString());
 			items.insert(item.Url);
 		}
 
@@ -154,7 +155,7 @@ TEST(UrlFrontierItemStoreTest, TestPushUrls) {
 		for (host_iter->SeekToFirst(); host_iter->Valid(); host_iter->Next())
 		{
 			auto url = host_iter->key().ToString();
-			auto count = SerializerHelper::DeserializeUInt64(host_iter->value().ToString());
+			auto count = SerializeHelper::DeserializeUInt64(host_iter->value().ToString());
 			host[url] = count;
 		}
 
@@ -184,7 +185,7 @@ TEST(UrlFrontierItemStoreTest, TestPushUrls) {
 		std::unique_ptr<Iterator> iter(db->NewIterator(ReadOptions()));
 		for (iter->SeekToFirst(); iter->Valid(); iter->Next())
 		{
-			auto item = SerializerHelper::Deserialize<UrlFrontierItem>(iter->value().ToString());
+			auto item = SerializeHelper::Deserialize<UrlFrontierItem>(iter->value().ToString());
 			items.insert(item.Url);
 		}
 
@@ -202,7 +203,7 @@ TEST(UrlFrontierItemStoreTest, TestPushUrls) {
 		for (host_iter->SeekToFirst(); host_iter->Valid(); host_iter->Next())
 		{
 			auto url = host_iter->key().ToString();
-			auto count = SerializerHelper::DeserializeUInt64(host_iter->value().ToString());
+			auto count = SerializeHelper::DeserializeUInt64(host_iter->value().ToString());
 			host[url] = count;
 		}
 
@@ -212,7 +213,8 @@ TEST(UrlFrontierItemStoreTest, TestPushUrls) {
 	}
 }
 
-TEST(UrlFrontierItemStoreTest, TestPushBackUrl) {
+TEST(UrlFrontierItemStoreTest, TestPushBackUrl)
+{
 
 	DbTestHelper::DeleteDB<UrlFrontierItemStore>();
 
@@ -246,7 +248,7 @@ TEST(UrlFrontierItemStoreTest, TestPushBackUrl) {
 		std::unique_ptr<Iterator> iter(db->NewIterator(ReadOptions()));
 		for (iter->SeekToFirst(); iter->Valid(); iter->Next())
 		{
-			auto item = SerializerHelper::Deserialize<UrlFrontierItem>(iter->value().ToString());
+			auto item = SerializeHelper::Deserialize<UrlFrontierItem>(iter->value().ToString());
 			if (item.Url == poppedUrl)
 			{
 				std::cout << item.Url << std::endl;
@@ -259,7 +261,8 @@ TEST(UrlFrontierItemStoreTest, TestPushBackUrl) {
 	}
 }
 
-TEST(UrlFrontierItemStoreTest, TestRemoveUrl) {
+TEST(UrlFrontierItemStoreTest, TestRemoveUrl)
+{
 
 	DbTestHelper::DeleteDB<UrlFrontierItemStore>();
 
@@ -290,13 +293,14 @@ TEST(UrlFrontierItemStoreTest, TestRemoveUrl) {
 		std::unique_ptr<Iterator> iter(db->NewIterator(ReadOptions()));
 		for (iter->SeekToFirst(); iter->Valid(); iter->Next())
 		{
-			auto item = SerializerHelper::Deserialize<UrlFrontierItem>(iter->value().ToString());
+			auto item = SerializeHelper::Deserialize<UrlFrontierItem>(iter->value().ToString());
 			ASSERT_NE(poppedUrl, item.Url);
 		}
 	}
 }
 
-TEST(UrlFrontierItemStoreTest, TestGetHostCount) {
+TEST(UrlFrontierItemStoreTest, TestGetHostCount)
+{
 
 	DbTestHelper::DeleteDB<UrlFrontierItemStore>();
 
@@ -317,7 +321,8 @@ TEST(UrlFrontierItemStoreTest, TestGetHostCount) {
 	}
 }
 
-TEST(UrlFrontierItemStoreTest, TestPopUrl) {
+TEST(UrlFrontierItemStoreTest, TestPopUrl) 
+{
 
 	DbTestHelper::DeleteDB<UrlFrontierItemStore>();
 
@@ -327,10 +332,10 @@ TEST(UrlFrontierItemStoreTest, TestPopUrl) {
 	{
 		UrlFrontierItemStore store(config);
 		store.PushUrls({
-										// PlannedTime,	Priority
-			"http://baidu.com",			// t0,			0 + 0 * 10 = 0
-			"http://baidu.com/a",		// t0,			1 + 1 * 10 = 11
-			"http://xuhongxu.com/b",	// t0,			0 + 1 * 10 = 10
+			// PlannedTime,	Priority
+"http://baidu.com",			// t0,			0 + 0 * 10 = 0
+"http://baidu.com/a",		// t0,			1 + 1 * 10 = 11
+"http://xuhongxu.com/b",	// t0,			0 + 1 * 10 = 10
 		});
 
 		std::string url;
@@ -338,7 +343,7 @@ TEST(UrlFrontierItemStoreTest, TestPopUrl) {
 		store.PopUrl(url);
 		ASSERT_EQ("http://baidu.com", url);
 
-		/*	
+		/*
 		"http://baidu.com/a",		// t0,		1 + 1 * 10 = 11
 		"http://xuhongxu.com/b",	// t0,		0 + 1 * 10 = 10
 		*/

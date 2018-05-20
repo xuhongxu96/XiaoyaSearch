@@ -78,6 +78,15 @@
     <ClInclude Include="CounterOperator.h">
       <Filter>Header Files\Store\MergeOperator</Filter>
     </ClInclude>
+    <ClInclude Include="UrlFileStore.h">
+      <Filter>Header Files\Store</Filter>
+    </ClInclude>
+    <ClInclude Include="IdListOperator.h">
+      <Filter>Header Files\Store\MergeOperator</Filter>
+    </ClInclude>
+    <ClInclude Include="CounterBaseStore.h">
+      <Filter>Header Files\Store</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -95,9 +104,6 @@
     <ClCompile Include="StoreConfig.h">
       <Filter>Header Files\Config</Filter>
     </ClCompile>
-    <ClCompile Include="SerializerHelper.h">
-      <Filter>Header Files\Helper</Filter>
-    </ClCompile>
     <ClCompile Include="UrlFrontierItemStore.cpp">
       <Filter>Source Files\Store</Filter>
     </ClCompile>
@@ -106,6 +112,18 @@
     </ClCompile>
     <ClCompile Include="CounterOperator.cpp">
       <Filter>Source Files\Store\MergeOperator</Filter>
+    </ClCompile>
+    <ClCompile Include="UrlFileStore.cpp">
+      <Filter>Source Files\Store</Filter>
+    </ClCompile>
+    <ClCompile Include="IdListOperator.cpp">
+      <Filter>Source Files\Store\MergeOperator</Filter>
+    </ClCompile>
+    <ClCompile Include="CounterBaseStore.cpp">
+      <Filter>Source Files\Store</Filter>
+    </ClCompile>
+    <ClCompile Include="SerializeHelper.h">
+      <Filter>Header Files\Helper</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -9,6 +9,8 @@ namespace XiaoyaStore
 		struct ModelCompare
 		{
 			bool operator() (const UrlFrontierItem &item1, const UrlFrontierItem &item2) const;
+
+			bool operator() (const UrlFile &item1, const UrlFile &item2) const;
 		};
 	}
 }

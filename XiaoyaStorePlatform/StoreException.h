@@ -8,17 +8,25 @@ namespace XiaoyaStore
 	{
 		class StoreException
 		{
+			rocksdb::Status mStatus;
 			std::string mMessage;
 		public:
-			StoreException(std::string &message) : mMessage(message)
+			StoreException(rocksdb::Status status, std::string &message)
+				: mMessage(message), mStatus(status)
 			{ }
 
-			StoreException(const char *message = "") : mMessage(message)
+			StoreException(rocksdb::Status status, const char *message = "") 
+				: mMessage(message), mStatus(status)
 			{ }
 
 			inline std::string GetMessage()
 			{
 				return mMessage;
+			}
+
+			inline rocksdb::Status GetStatus()
+			{
+				return mStatus;
 			}
 		};
 	}

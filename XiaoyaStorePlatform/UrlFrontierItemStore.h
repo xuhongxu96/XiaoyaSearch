@@ -130,7 +130,7 @@ namespace XiaoyaStore
 			*/
 			uint64_t GetHostCount(const std::string host);
 
-			// Inherited via BaseStore
+			/// Get ColumnFamilyDescriptors
 			static const std::vector<rocksdb::ColumnFamilyDescriptor>
 				GetColumnFamilyDescriptors();
 		};

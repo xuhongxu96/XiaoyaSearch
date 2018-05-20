@@ -17,7 +17,8 @@ const std::string UrlFrontierItemStore::DbName = "UrlFrontierItemStore";
 const std::string UrlFrontierItemStore::HostCountCFName = "host_count";
 const size_t UrlFrontierItemStore::HostCountCF = 1;
 
-const std::vector<ColumnFamilyDescriptor> UrlFrontierItemStore::GetColumnFamilyDescriptors()
+const std::vector<ColumnFamilyDescriptor>
+UrlFrontierItemStore::GetColumnFamilyDescriptors() 
 {
 	ColumnFamilyOptions hostCountOptions;
 	hostCountOptions.merge_operator.reset(new MergeOperator::CounterOperator());
@@ -31,18 +32,13 @@ const std::vector<ColumnFamilyDescriptor> UrlFrontierItemStore::GetColumnFamilyD
 
 void UrlFrontierItemStore::LoadUrlFrontierItems()
 {
-	std::cout << "Loading UrlFrontierItems" << std::endl;
-
 	std::unique_ptr<Iterator> iter(mDb->NewIterator(ReadOptions()));
 	for (iter->SeekToFirst(); iter->Valid(); iter->Next())
 	{
-		auto slice = iter->value();
-		auto item = SerializerHelper::Deserialize<UrlFrontierItem>(slice.ToString());
+		auto item = SerializeHelper::Deserialize<UrlFrontierItem>(iter->value().ToString());
 
 		AddToQueue(item);
 	}
-
-	std::cout << "Loaded UrlFrontierItems" << std::endl;
 }
 
 UrlFrontierItem UrlFrontierItemStore::CreateItem(const std::string & url) const
@@ -65,26 +61,26 @@ void UrlFrontierItemStore::SaveNewItem(UrlFrontierItem &item)
 
 	auto host = UrlHelper::GetHost(item.Url);
 
-	auto data = SerializerHelper::Serialize(item);
+	auto data = SerializeHelper::Serialize(item);
 
 	batch.Put(item.Url, data);
-	batch.Merge(mCFHandles[HostCountCF].get(), host, SerializerHelper::SerializeInt64(1));
+	batch.Merge(mCFHandles[HostCountCF].get(), host, SerializeHelper::SerializeInt64(1));
 
 	auto status = mDb->Write(WriteOptions(), &batch);
 
 	if (!status.ok())
 	{
-		throw StoreException("Failed to save new item (" + item.Url + "): " + status.ToString());
+		throw StoreException(status, "UrlFrontierItemStore::SaveNewItem failed to save new item (" + item.Url + "): " + status.ToString());
 	}
 }
 
 void XiaoyaStore::Store::UrlFrontierItemStore::UpdateItem(Model::UrlFrontierItem & item)
 {
-	auto data = SerializerHelper::Serialize(item);
+	auto data = SerializeHelper::Serialize(item);
 	auto status = mDb->Put(WriteOptions(), item.Url, data);
 	if (!status.ok())
 	{
-		throw StoreException("Failed to update item (" + item.Url + "): " + status.ToString());
+		throw StoreException(status, "UrlFrontierItemStore::UpdateItem failed to update item (" + item.Url + "): " + status.ToString());
 	}
 }
 
@@ -255,11 +251,11 @@ void XiaoyaStore::Store::UrlFrontierItemStore::RemoveUrl(std::string & url)
 	auto host = UrlHelper::GetHost(url);
 
 	batch.Delete(url);
-	batch.Merge(mCFHandles[HostCountCF].get(), host, SerializerHelper::SerializeInt64(-1));
+	batch.Merge(mCFHandles[HostCountCF].get(), host, SerializeHelper::SerializeInt64(-1));
 	auto status = mDb->Write(WriteOptions(), &batch);
 	if (!status.ok())
 	{
-		throw StoreException("Failed to remove url (" + url + "): " + status.ToString());
+		throw StoreException(status, "UrlFrontierItemStore::RemoveUrl failed to remove url (" + url + "): " + status.ToString());
 	}
 }
 
@@ -273,7 +269,7 @@ uint64_t XiaoyaStore::Store::UrlFrontierItemStore::GetHostCount(const std::strin
 	}
 	else if (!status.ok())
 	{
-		throw StoreException("Failed to get host count (" + host + "): " + status.ToString());
+		throw StoreException(status, "UrlFrontierItemStore::GetHostCount failed to get host count (" + host + "): " + status.ToString());
 	}
-	return SerializerHelper::DeserializeUInt64(data);
+	return SerializeHelper::DeserializeUInt64(data);
 }

@@ -8,9 +8,13 @@
 #include "gtest/gtest.h"
 
 #include "../XiaoyaStorePlatform/StoreConfig.h"
-#include "../XiaoyaStorePlatform/UrlFrontierItemStore.h"
-#include "../XiaoyaStorePlatform/SerializerHelper.h"
+#include "../XiaoyaStorePlatform/SerializeHelper.h"
 #include "../XiaoyaStorePlatform/DateTimeHelper.h"
+#include "../XiaoyaStorePlatform/StoreException.h"
+
+#include "../XiaoyaStorePlatform/CounterBaseStore.h"
+#include "../XiaoyaStorePlatform/UrlFrontierItemStore.h"
+#include "../XiaoyaStorePlatform/UrlFileStore.h"
 
 #include <thread>
 #include <chrono>

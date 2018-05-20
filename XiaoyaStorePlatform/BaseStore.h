@@ -3,7 +3,7 @@
 #include "stdafx.h"
 
 #include "StoreConfig.h"
-#include "SerializerHelper.h"
+#include "SerializeHelper.h"
 
 namespace XiaoyaStore
 {
@@ -41,9 +41,10 @@ namespace XiaoyaStore
 			/*
 			Constructor
 
-			\param dbFileName File name of the database bound to the class
-			\param config Store configurations
-			\param isReadOnly Open the database in readonly mode.
+			\param	dbFileName	File name of the database bound to the class
+			\param	columnFamilyDescriptors	ColumnFamilyDescriptors
+			\param	config		Store configurations
+			\param	isReadOnly	Open the database in readonly mode.
 			*/
 			BaseStore(const std::string &dbFileName,
 				const std::vector<rocksdb::ColumnFamilyDescriptor> &columnFamilyDescriptors,
