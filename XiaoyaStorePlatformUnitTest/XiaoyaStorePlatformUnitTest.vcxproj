@@ -38,6 +38,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DbTestHelper.cpp" />
+    <ClCompile Include="PostingListStoreTest.cpp" />
     <ClCompile Include="UrlFrontierItemStoreTest.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

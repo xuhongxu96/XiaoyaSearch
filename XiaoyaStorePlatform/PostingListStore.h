@@ -32,7 +32,7 @@ namespace XiaoyaStore
 
 			\param	deltaPostingList	Delta change of PostingList
 			*/
-			void SavePostingList(Model::PostingList &deltaPostingList);
+			void SavePostingList(const Model::PostingList &deltaPostingList);
 
 			/**
 			Load PostingList by word
@@ -42,7 +42,7 @@ namespace XiaoyaStore
 
 			\return	Return true if posting list is successfully loaded
 			*/
-			bool LoadPostingList(std::string &word, Model::PostingList &outPostingList);
+			bool LoadPostingList(const std::string &word, Model::PostingList &outPostingList) const;
 
 			/// Get ColumnFamilyDescriptors
 			static const std::vector<rocksdb::ColumnFamilyDescriptor>

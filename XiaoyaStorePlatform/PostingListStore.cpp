@@ -12,17 +12,19 @@ using namespace XiaoyaStore::Store;
 using namespace XiaoyaStore::Helper;
 using namespace XiaoyaStore::Exception;
 
+const std::string PostingListStore::DbName = "PostingListStore";
+
 PostingListStore::PostingListStore(StoreConfig config, bool isReadOnly)
 	: BaseStore(DbName, GetColumnFamilyDescriptors(), config, isReadOnly)
 { }
 
-void PostingListStore::SavePostingList(PostingList & deltaPostingList)
+void PostingListStore::SavePostingList(const PostingList & deltaPostingList)
 {
 	auto data = SerializeHelper::Serialize(deltaPostingList);
 	mDb->Merge(WriteOptions(), deltaPostingList.Word, data);
 }
 
-bool PostingListStore::LoadPostingList(std::string & word, PostingList & outPostingList)
+bool PostingListStore::LoadPostingList(const std::string &word, PostingList & outPostingList) const
 {
 	std::string data;
 	auto status = mDb->Get(ReadOptions(), word, &data);
