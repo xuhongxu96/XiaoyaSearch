@@ -87,6 +87,12 @@
     <ClInclude Include="CounterBaseStore.h">
       <Filter>Header Files\Store</Filter>
     </ClInclude>
+    <ClInclude Include="PostingListStore.h">
+      <Filter>Header Files\Store</Filter>
+    </ClInclude>
+    <ClInclude Include="PostingListOperator.h">
+      <Filter>Header Files\Store\MergeOperator</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -124,6 +130,12 @@
     </ClCompile>
     <ClCompile Include="SerializeHelper.h">
       <Filter>Header Files\Helper</Filter>
+    </ClCompile>
+    <ClCompile Include="PostingListStore.cpp">
+      <Filter>Source Files\Store</Filter>
+    </ClCompile>
+    <ClCompile Include="PostingListOperator.cpp">
+      <Filter>Source Files\Store\MergeOperator</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
