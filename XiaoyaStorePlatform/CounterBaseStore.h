@@ -19,7 +19,11 @@ namespace XiaoyaStore
 		{
 			size_t mCounterCF;	//< Handle index of counter ColumnFamily
 
-			mutable std::shared_mutex mCounterMutex;	// Mutex for update counter;
+			std::map<std::string, uint64_t> mCounterMap; //< In-Memory counter
+			mutable std::shared_mutex mCounterMutex;	//< Mutex for update counter map;
+
+			/// Load counter from database
+			void LoadCounter();
 
 			/**
 			Get value of key without lock (internal use)
@@ -30,12 +34,20 @@ namespace XiaoyaStore
 			uint64_t GetValueInternal(const std::string &key) const;
 
 			/**
-			Update value for key without lock (internal use)
+			Update value for key in memory without lock (internal use)
 
 			\param	key	Key
 			\param	delta	Delta value to update
 			*/
-			void UpdateValueInternal(const std::string &key, int64_t delta = 1);
+			void UpdateValueInMemoryInternal(const std::string &key, int64_t delta);
+
+			/**
+			Update value for key in database without lock (internal use)
+
+			\param	key	Key
+			\param	delta	Delta value to update
+			*/
+			void UpdateValueInDatabaseInternal(const std::string &key, uint64_t value);
 		protected:
 			/**
 			Get value of key

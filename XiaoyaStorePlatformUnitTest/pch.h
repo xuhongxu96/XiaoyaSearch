@@ -16,6 +16,7 @@
 #include "../XiaoyaStorePlatform/UrlFrontierItemStore.h"
 #include "../XiaoyaStorePlatform/UrlFileStore.h"
 #include "../XiaoyaStorePlatform/PostingListStore.h"
+#include "../XiaoyaStorePlatform/LinkStore.h"
 
 #include <thread>
 #include <chrono>

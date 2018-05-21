@@ -97,7 +97,7 @@ namespace XiaoyaStore
 			Save new UrlFile and get id of old UrlFile with the same url
 
 			\param	urlFile	New UrlFile
-			\return	Id of old UrlFile which has the same url with the new UrlFile. If no old UrlFile, return -1.
+			\return	Id of old UrlFile which has the same url with the new UrlFile. If no old UrlFile, return 0.
 			*/
 			uint64_t SaveUrlFileAndGetOldId(Model::UrlFile &urlFile);
 

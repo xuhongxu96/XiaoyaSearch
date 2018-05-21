@@ -93,6 +93,9 @@
     <ClInclude Include="PostingListOperator.h">
       <Filter>Header Files\Store\MergeOperator</Filter>
     </ClInclude>
+    <ClInclude Include="LinkStore.h">
+      <Filter>Header Files\Store</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -136,6 +139,9 @@
     </ClCompile>
     <ClCompile Include="PostingListOperator.cpp">
       <Filter>Source Files\Store\MergeOperator</Filter>
+    </ClCompile>
+    <ClCompile Include="LinkStore.cpp">
+      <Filter>Source Files\Store</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

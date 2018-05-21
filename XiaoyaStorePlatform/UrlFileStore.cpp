@@ -195,7 +195,7 @@ uint64_t UrlFileStore::SaveUrlFileAndGetOldId(UrlFile & urlFile)
 	else
 	{
 		// New Url
-		oldUrlFileId = -1;
+		oldUrlFileId = 0;
 
 		urlFile.UpdatedAt = now;
 		urlFile.CreatedAt = now;
@@ -274,6 +274,7 @@ UrlFileStore::GetColumnFamilyDescriptors()
 {
 	ColumnFamilyOptions idListOptions;
 	idListOptions.merge_operator.reset(new MergeOperator::IdListOperator());
+	idListOptions.max_successive_merges = 1000;
 
 	return std::move(std::vector<ColumnFamilyDescriptor>
 	{

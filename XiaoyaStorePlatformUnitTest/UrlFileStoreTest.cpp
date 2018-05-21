@@ -8,7 +8,9 @@ using namespace XiaoyaStore::Model;
 using namespace XiaoyaStore::Helper;
 using namespace rocksdb;
 
-UrlFile FakeUrlFile(std::string url, uint64_t updateInterval, std::string hash = "a")
+UrlFile FakeUrlFile(const std::string &url,
+	const uint64_t updateInterval,
+	const std::string &hash = "a")
 {
 	UrlFile urlFile;
 	urlFile.Charset = "UTF-8";
@@ -256,7 +258,7 @@ TEST(UrlFileStoreTest, TestGetForIndexAndFinishIndex)
 
 		ASSERT_TRUE(store.GetForIndex(urlFile));
 		ASSERT_EQ("http://www.b.com", urlFile.Url);
-		
+
 		store.FinishIndex(urlFile.Url);
 
 		ASSERT_TRUE(store.GetForIndex(urlFile));
@@ -303,4 +305,77 @@ TEST(UrlFileStoreTest, TestGetForIndexAndFinishIndex)
 
 		ASSERT_FALSE(store.GetForIndex(urlFile));
 	}
+}
+
+TEST(UrlFileStoreTest, StressTestSave)
+{
+	const int testCount = 5000;
+
+	DbTestHelper::DeleteDB<UrlFileStore>();
+
+	auto config = DbTestHelper::InitStoreConfig();
+
+	auto beginTime = DateTimeHelper::Now();
+	{
+		UrlFileStore store(config);
+		for (int i = 1; i <= testCount; ++i)
+		{
+			auto urlFile = FakeUrlFile("http://www.a" + std::to_string(i) + ".com",
+				DateTimeHelper::FromDays(2), std::to_string(i));
+			ASSERT_EQ(-1, store.SaveUrlFileAndGetOldId(urlFile));
+			ASSERT_EQ(i, urlFile.UrlFileId);
+			if (i % 10 == 0)
+			{
+				std::cerr << i << std::endl;
+			}
+		}
+	}
+	auto seconds = (DateTimeHelper::Now() - beginTime) / 1000.0;
+	std::cerr << "Used: " << seconds << " seconds" << std::endl;
+}
+
+TEST(UrlFileStoreTest, StressTestLoad)
+{
+	const int testCount = 5000;
+
+	DbTestHelper::DeleteDB<UrlFileStore>();
+
+	auto config = DbTestHelper::InitStoreConfig();
+
+	{
+		UrlFileStore store(config);
+		for (int i = 1; i <= testCount; ++i)
+		{
+			auto urlFile = FakeUrlFile("http://www.a" + std::to_string(i) + ".com",
+				DateTimeHelper::FromDays(2), std::to_string(i));
+			ASSERT_EQ(-1, store.SaveUrlFileAndGetOldId(urlFile));
+			ASSERT_EQ(i, urlFile.UrlFileId);
+
+			if (i % 10 == 0)
+			{
+				std::cerr << i << std::endl;
+			}
+		}
+	}
+
+	std::cerr << "Saved All. Start Testing Load..." << std::endl;
+
+	auto beginTime = DateTimeHelper::Now();
+	{
+		UrlFileStore store(config);
+		UrlFile urlFile;
+		for (int i = 1; i <= testCount; ++i)
+		{
+			auto result = store.GetUrlFile(i, urlFile);
+			ASSERT_TRUE(result);
+			ASSERT_EQ(i, urlFile.UrlFileId);
+
+			if (i % 10 == 0)
+			{
+				std::cerr << i << std::endl;
+			}
+		}
+	}
+	auto seconds = (DateTimeHelper::Now() - beginTime) / 1000.0;
+	std::cerr << "Used: " << seconds << " seconds" << std::endl;
 }
