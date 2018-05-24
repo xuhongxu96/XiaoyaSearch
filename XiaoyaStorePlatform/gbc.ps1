@@ -1,3 +1,3 @@
-$Env:path += ";C:\Users\xuhongxu\Source\Libs\vcpkg\packages\bond_x64-windows\tools"
+protoc -I . --cpp_out=. ./models.proto
 
-gbc.exe c++ models.bond
+protoc -I . --cpp_out=. ./rpc.proto --plugin=protoc-gen-grpc=`C:\Users\xuhongxu\Source\Libs\vcpkg\installed\x86-windows\tools\grpc\grpc_cpp_plugin.exe`

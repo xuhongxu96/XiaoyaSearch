@@ -10,29 +10,34 @@ using namespace XiaoyaStore::Helper;
 bool IdListOperator::FullMergeV2(const MergeOperationInput & merge_in,
 	MergeOperationOutput * merge_out) const
 {
-	auto ids = merge_in.existing_value == nullptr ?
-		std::set<uint64_t>() 
-		: SerializeHelper::Deserialize<IdList>(merge_in.existing_value->ToString()).Ids;
+	std::set<uint64_t> idSet;
+	if (merge_in.existing_value != nullptr)
+	{
+		auto ids = SerializeHelper::Deserialize<IdList>(
+			merge_in.existing_value->ToString()).ids();
+		idSet.insert(ids.begin(), ids.end());
+	}
 
 	for (auto operand : merge_in.operand_list)
 	{
 		auto delta = SerializeHelper::Deserialize<IdList>(operand.ToString());
-		if (delta.IsAdd)
+		if (delta.is_add())
 		{
-			ids.insert(delta.Ids.begin(), delta.Ids.end());
+			idSet.insert(delta.ids().begin(), delta.ids().end());
 		}
 		else
 		{
 			std::set<uint64_t> result;
-			std::set_difference(ids.begin(), ids.end(), delta.Ids.begin(), delta.Ids.end(),
+			std::set_difference(idSet.begin(), idSet.end(), delta.ids().begin(), delta.ids().end(),
 				std::inserter(result, result.end()));
-			ids.swap(result);
+			idSet.swap(result);
 		}
 	}
 
 	IdList result;
-	result.IsAdd = true;
-	result.Ids = ids;
+	result.set_is_add(true);
+	*result.mutable_ids()
+		= ::google::protobuf::RepeatedField<google::protobuf::uint64>(idSet.begin(), idSet.end());
 
 	merge_out->new_value = SerializeHelper::Serialize(result);
 	return true;
@@ -47,9 +52,9 @@ bool IdListOperator::PartialMerge(const Slice & key,
 	auto leftDelta = SerializeHelper::Deserialize<IdList>(left_operand.ToString());
 	auto rightDelta = SerializeHelper::Deserialize<IdList>(right_operand.ToString());
 
-	if (leftDelta.IsAdd == rightDelta.IsAdd)
+	if (leftDelta.is_add() == rightDelta.is_add())
 	{
-		leftDelta.Ids.insert(rightDelta.Ids.begin(), rightDelta.Ids.end());
+		leftDelta.mutable_ids()->MergeFrom(rightDelta.ids());
 		*new_value = SerializeHelper::Serialize(leftDelta);
 		return true;
 	}

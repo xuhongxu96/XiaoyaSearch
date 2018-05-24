@@ -18,7 +18,7 @@ const std::string UrlFrontierItemStore::HostCountCFName = "host_count";
 const size_t UrlFrontierItemStore::HostCountCF = 1;
 
 const std::vector<ColumnFamilyDescriptor>
-UrlFrontierItemStore::GetColumnFamilyDescriptors() 
+UrlFrontierItemStore::GetColumnFamilyDescriptors()
 {
 	ColumnFamilyOptions hostCountOptions;
 	hostCountOptions.merge_operator.reset(new MergeOperator::CounterOperator());
@@ -46,11 +46,11 @@ UrlFrontierItem UrlFrontierItemStore::CreateItem(const std::string & url) const
 	auto now = DateTimeHelper::Now();
 
 	UrlFrontierItem item;
-	item.Url = url;
-	item.PlannedTime = now;
-	item.FailedTimes = 0;
-	item.UpdatedAt = now;
-	item.CreatedAt = now;
+	item.set_url(url);
+	item.set_planned_time(now);
+	item.set_failed_times(0);
+	item.set_updated_at(now);
+	item.set_created_at(now);
 
 	return std::move(item);
 }
@@ -59,28 +59,32 @@ void UrlFrontierItemStore::SaveNewItem(UrlFrontierItem &item)
 {
 	WriteBatch batch;
 
-	auto host = UrlHelper::GetHost(item.Url);
+	auto host = UrlHelper::GetHost(item.url());
 
 	auto data = SerializeHelper::Serialize(item);
 
-	batch.Put(item.Url, data);
+	batch.Put(item.url(), data);
 	batch.Merge(mCFHandles[HostCountCF].get(), host, SerializeHelper::SerializeInt64(1));
 
 	auto status = mDb->Write(WriteOptions(), &batch);
 
 	if (!status.ok())
 	{
-		throw StoreException(status, "UrlFrontierItemStore::SaveNewItem failed to save new item (" + item.Url + "): " + status.ToString());
+		throw StoreException(status, 
+			"UrlFrontierItemStore::SaveNewItem failed to save new item (" 
+			+ item.url() + "): " + status.ToString());
 	}
 }
 
 void XiaoyaStore::Store::UrlFrontierItemStore::UpdateItem(Model::UrlFrontierItem & item)
 {
 	auto data = SerializeHelper::Serialize(item);
-	auto status = mDb->Put(WriteOptions(), item.Url, data);
+	auto status = mDb->Put(WriteOptions(), item.url(), data);
 	if (!status.ok())
 	{
-		throw StoreException(status, "UrlFrontierItemStore::UpdateItem failed to update item (" + item.Url + "): " + status.ToString());
+		throw StoreException(status, 
+			"UrlFrontierItemStore::UpdateItem failed to update item ("
+			+ item.url() + "): " + status.ToString());
 	}
 }
 
@@ -89,7 +93,7 @@ void XiaoyaStore::Store::UrlFrontierItemStore::AddToQueue(UrlFrontierItem & item
 	std::unique_lock<std::shared_mutex> lock(mSharedMutexForQueue);
 
 	mUrlQueue.push(item);
-	mUrlSet.insert(item.Url);
+	mUrlSet.insert(item.url());
 }
 
 bool XiaoyaStore::Store::UrlFrontierItemStore::HasUrl(const std::string & url) const
@@ -168,7 +172,7 @@ void UrlFrontierItemStore::PushUrls(const std::vector<std::string>& urls)
 
 		auto hostCount = GetHostCount(host);
 
-		item.Priority = hostCount + depth * 10;
+		item.set_priority(hostCount + depth * 10);
 
 		SaveNewItem(item);
 		AddToQueue(item);
@@ -196,23 +200,23 @@ bool UrlFrontierItemStore::PushBackUrl(const std::string url,
 	if (failed)
 	{
 		// Failed to fetch
-		item.FailedTimes++;
-		item.PlannedTime = DateTimeHelper::Now()
-			+ DateTimeHelper::FromDays(item.FailedTimes);
+		item.set_failed_times(item.failed_times() + 1);
+		item.set_planned_time(DateTimeHelper::Now()
+			+ DateTimeHelper::FromDays(item.failed_times()));
 	}
 	else
 	{
 		// Successfully fetched
-		item.FailedTimes = 0;
-		item.PlannedTime = DateTimeHelper::Now() + updateInterval;
+		item.set_failed_times(0);
+		item.set_planned_time(DateTimeHelper::Now() + updateInterval);
 	}
-	item.UpdatedAt = DateTimeHelper::Now();
+	item.set_updated_at(DateTimeHelper::Now());
 
 	auto depth = UrlHelper::GetDomainDepth(url);
 	auto host = UrlHelper::GetHost(url);
 	auto hostCount = GetHostCount(host);
 
-	item.Priority = hostCount + depth * 10;
+	item.set_priority(hostCount + depth * 10);
 
 	UpdateItem(item);
 	AddToQueue(item);
@@ -233,12 +237,12 @@ const bool XiaoyaStore::Store::UrlFrontierItemStore::PopUrl(std::string &url)
 	auto item = mUrlQueue.top();
 	mUrlQueue.pop();
 
-	if (mPoppedUrlMap.count(item.Url) > 0)
+	if (mPoppedUrlMap.count(item.url()) > 0)
 	{
 		return false;
 	}
 
-	url = item.Url;
+	url = item.url();
 	mPoppedUrlMap.insert(std::make_pair(url, std::move(item)));
 
 	return true;

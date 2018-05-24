@@ -11,28 +11,32 @@ public:
 	static void OpenDB(std::unique_ptr<rocksdb::DB> &db,
 		std::vector<std::unique_ptr<rocksdb::ColumnFamilyHandle>> &handles)
 	{
+		using namespace XiaoyaStore::Store;
+		using namespace XiaoyaStore::Exception;
 		// Unmanaged pointers to get values from API call
 		rocksdb::DB* db_ptr;
 		std::vector<rocksdb::ColumnFamilyHandle*> handle_ptrs;
 
 		auto cfd = std::is_base_of<CounterBaseStore, T>::value ?
-			XiaoyaStore::Store::CounterBaseStore::AddIdColumnFamilyDescriptor(T::GetColumnFamilyDescriptors())
+			CounterBaseStore::AddIdColumnFamilyDescriptor(T::GetColumnFamilyDescriptors())
 			: T::GetColumnFamilyDescriptors();
 
-		auto status = DB::Open(Options(), storeDir + "\\" + T::DbName, cfd, &handle_ptrs, &db_ptr);
+		auto status = DB::Open(Options(), storeDir + "\\" + T::DbName, 
+			cfd, &handle_ptrs, &db_ptr);
 
 		if (!status.ok())
 		{
-			throw XiaoyaStore::Exception::StoreException(status, "Failed to open DB: " + T::DbName);
+			throw StoreException(status, "Failed to open DB: " + T::DbName);
 		}
 
 		// Manage pointers using std::unique_ptr
 		db.reset(db_ptr);
 
 		handles.resize(handle_ptrs.size());
-		for (int i = 0; i < handles.size(); ++i)
+		for (size_t i = 0; i < handles.size(); ++i)
 		{
-			handles[i] = std::move(std::unique_ptr<rocksdb::ColumnFamilyHandle>(handle_ptrs[i]));
+			handles[i] = std::move(std::unique_ptr<rocksdb::ColumnFamilyHandle>(
+				handle_ptrs[i]));
 		}
 	}
 

@@ -96,10 +96,10 @@ namespace XiaoyaStore
 			/**
 			Save new UrlFile and get id of old UrlFile with the same url
 
-			\param	urlFile	New UrlFile
+			\param	inOutUrlFile	Pass in new UrlFile and output it with its assigned Id.
 			\return	Id of old UrlFile which has the same url with the new UrlFile. If no old UrlFile, return 0.
 			*/
-			uint64_t SaveUrlFileAndGetOldId(Model::UrlFile &urlFile);
+			uint64_t SaveUrlFileAndGetOldId(Model::UrlFile &inOutUrlFile);
 
 			/**
 			Get the number of UrlFiles 
@@ -122,7 +122,7 @@ namespace XiaoyaStore
 
 			\param	urlFile	Url of indexed UrlFile
 			*/
-			void FinishIndex(std::string &url);
+			void FinishIndex(const std::string &url);
 
 			/// Get ColumnFamilyDescriptors
 			static const std::vector<rocksdb::ColumnFamilyDescriptor>

@@ -40,6 +40,12 @@
     <Filter Include="Source Files\Store\MergeOperator">
       <UniqueIdentifier>{0db7c143-546b-4729-8ea5-97958c769fb7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Service">
+      <UniqueIdentifier>{f63fbfec-fe7c-4f18-ba01-ed9e9ea69fad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Service">
+      <UniqueIdentifier>{68a3cf97-dde5-46bd-a2ab-56a29d068dcc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -47,15 +53,6 @@
     </ClInclude>
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="models_apply.h">
-      <Filter>Header Files\Model</Filter>
-    </ClInclude>
-    <ClInclude Include="models_reflection.h">
-      <Filter>Header Files\Model</Filter>
-    </ClInclude>
-    <ClInclude Include="models_types.h">
-      <Filter>Header Files\Model</Filter>
     </ClInclude>
     <ClInclude Include="BaseStore.h">
       <Filter>Header Files\Store</Filter>
@@ -96,16 +93,19 @@
     <ClInclude Include="LinkStore.h">
       <Filter>Header Files\Store</Filter>
     </ClInclude>
+    <ClInclude Include="InvertedIndexStore.h">
+      <Filter>Header Files\Store</Filter>
+    </ClInclude>
+    <ClInclude Include="models.pb.h">
+      <Filter>Header Files\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="rpc.pb.h">
+      <Filter>Header Files\Service</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
       <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="models_apply.cpp">
-      <Filter>Source Files\Model</Filter>
-    </ClCompile>
-    <ClCompile Include="models_types.cpp">
-      <Filter>Source Files\Model</Filter>
     </ClCompile>
     <ClCompile Include="BaseStore.cpp">
       <Filter>Source Files\Store</Filter>
@@ -143,9 +143,21 @@
     <ClCompile Include="LinkStore.cpp">
       <Filter>Source Files\Store</Filter>
     </ClCompile>
+    <ClCompile Include="InvertedIndexStore.cpp">
+      <Filter>Source Files\Store</Filter>
+    </ClCompile>
+    <ClCompile Include="rpc.pb.cc">
+      <Filter>Source Files\Service</Filter>
+    </ClCompile>
+    <ClCompile Include="models.pb.cc">
+      <Filter>Source Files\Model</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="models.bond">
+    <None Include="models.proto">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="rpc.proto">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>

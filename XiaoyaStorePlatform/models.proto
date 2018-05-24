@@ -1,0 +1,95 @@
+syntax = "proto3";
+
+package XiaoyaStore.Model;
+
+message UrlFrontierItem
+{
+	string url = 1;
+
+	uint64 planned_time = 2;
+	uint64 priority = 3;
+	uint32 failed_times = 4;
+	
+	uint64 urlfile_id = 5;
+
+	uint64 updated_at = 6;
+	uint64 created_at = 7;
+}
+
+message PostingList
+{
+	string word = 1;
+
+	uint64 word_frequency = 2;
+	uint64 document_frequency = 3;
+
+	repeated uint64 postings = 4;
+	bool is_add = 5;
+}
+
+message IndexKey
+{
+	uint64 urlfile_id = 1;
+	string word = 2;
+}
+
+message Index
+{
+	uint64 index_id = 1;
+
+	IndexKey key = 2;
+
+	uint32 word_frequency = 3;
+	double weight = 4;
+
+	uint32 occurences_in_title = 5;
+	uint32 occurences_in_links = 6;
+	uint32 occurences_in_headers = 7;
+
+	repeated uint32 positions = 8;
+}
+
+message UrlFile
+{
+	uint64 urlfile_id = 1;
+	
+	string url = 2;
+	string title = 3;
+	string file_path = 4;
+	string file_hash = 5;
+	string content = 6;
+	string text_content = 7;
+	string charset = 8;
+	string mime_type = 9;
+
+	double page_rank = 10;
+
+	uint32 in_link_count = 11;
+	uint32 in_link_total_length = 12;
+
+	uint32 header_count = 13;
+	uint32 header_total_length = 14;
+
+	uint64 publish_date = 15;
+
+	uint64 update_interval = 16;
+
+	uint64 updated_at = 17;
+	uint64 created_at = 18;
+}
+
+message Link
+{
+	uint64 link_id = 1;
+
+	uint64 urlfile_id = 2;
+	string url = 3;
+
+	string text = 4;
+}
+
+message IdList
+{
+	repeated uint64 ids = 1;
+	bool is_add = 2;
+}

@@ -21,10 +21,10 @@ PostingListStore::PostingListStore(StoreConfig config, bool isReadOnly)
 void PostingListStore::SavePostingList(const PostingList & deltaPostingList)
 {
 	auto data = SerializeHelper::Serialize(deltaPostingList);
-	mDb->Merge(WriteOptions(), deltaPostingList.Word, data);
+	mDb->Merge(WriteOptions(), deltaPostingList.word(), data);
 }
 
-bool PostingListStore::LoadPostingList(const std::string &word, PostingList & outPostingList) const
+bool PostingListStore::GetPostingList(const std::string &word, PostingList & outPostingList) const
 {
 	std::string data;
 	auto status = mDb->Get(ReadOptions(), word, &data);
@@ -34,7 +34,7 @@ bool PostingListStore::LoadPostingList(const std::string &word, PostingList & ou
 	}
 	else if (!status.ok())
 	{
-		throw StoreException(status, "PostingListStore::LoadPostingList failed to load: " + word);
+		throw StoreException(status, "PostingListStore::GetPostingList failed to load: " + word);
 	}
 	outPostingList = SerializeHelper::Deserialize<PostingList>(data);
 	return true;

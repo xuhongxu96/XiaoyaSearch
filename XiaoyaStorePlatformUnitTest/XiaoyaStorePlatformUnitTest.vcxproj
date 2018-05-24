@@ -38,6 +38,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DbTestHelper.cpp" />
+    <ClCompile Include="InvertedIndexStoreTest.cpp" />
     <ClCompile Include="LinkStoreTest.cpp" />
     <ClCompile Include="PostingListStoreTest.cpp" />
     <ClCompile Include="UrlFrontierItemStoreTest.cpp" />

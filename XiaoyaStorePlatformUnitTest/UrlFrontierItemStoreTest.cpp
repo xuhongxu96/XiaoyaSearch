@@ -37,7 +37,7 @@ TEST(UrlFrontierItemStoreTest, TestInit)
 		for (iter->SeekToFirst(); iter->Valid(); iter->Next())
 		{
 			auto item = SerializeHelper::Deserialize<UrlFrontierItem>(iter->value().ToString());
-			items.insert(item.Url);
+			items.insert(item.url());
 		}
 
 		ASSERT_EQ(1, items.count("http://baidu.com"));
@@ -83,7 +83,7 @@ TEST(UrlFrontierItemStoreTest, TestInit)
 		for (iter->SeekToFirst(); iter->Valid(); iter->Next())
 		{
 			auto item = SerializeHelper::Deserialize<UrlFrontierItem>(iter->value().ToString());
-			items.insert(item.Url);
+			items.insert(item.url());
 		}
 
 		ASSERT_EQ(1, items.count("http://baidu.com"));
@@ -140,7 +140,7 @@ TEST(UrlFrontierItemStoreTest, TestPushUrls)
 		for (iter->SeekToFirst(); iter->Valid(); iter->Next())
 		{
 			auto item = SerializeHelper::Deserialize<UrlFrontierItem>(iter->value().ToString());
-			items.insert(item.Url);
+			items.insert(item.url());
 		}
 
 		ASSERT_EQ(1, items.count("http://baidu.com"));
@@ -186,7 +186,7 @@ TEST(UrlFrontierItemStoreTest, TestPushUrls)
 		for (iter->SeekToFirst(); iter->Valid(); iter->Next())
 		{
 			auto item = SerializeHelper::Deserialize<UrlFrontierItem>(iter->value().ToString());
-			items.insert(item.Url);
+			items.insert(item.url());
 		}
 
 		ASSERT_EQ(1, items.count("http://baidu.com"));
@@ -249,13 +249,13 @@ TEST(UrlFrontierItemStoreTest, TestPushBackUrl)
 		for (iter->SeekToFirst(); iter->Valid(); iter->Next())
 		{
 			auto item = SerializeHelper::Deserialize<UrlFrontierItem>(iter->value().ToString());
-			if (item.Url == poppedUrl)
+			if (item.url() == poppedUrl)
 			{
-				std::cout << item.Url << std::endl;
-				std::cout << item.PlannedTime << std::endl;
-				std::cout << item.Priority << std::endl;
+				std::cout << item.url() << std::endl;
+				std::cout << item.planned_time() << std::endl;
+				std::cout << item.priority() << std::endl;
 
-				ASSERT_GT(item.PlannedTime, DateTimeHelper::Now() + DateTimeHelper::FromHours(1));
+				ASSERT_GT(item.planned_time(), DateTimeHelper::Now() + DateTimeHelper::FromHours(1));
 			}
 		}
 	}
@@ -294,7 +294,7 @@ TEST(UrlFrontierItemStoreTest, TestRemoveUrl)
 		for (iter->SeekToFirst(); iter->Valid(); iter->Next())
 		{
 			auto item = SerializeHelper::Deserialize<UrlFrontierItem>(iter->value().ToString());
-			ASSERT_NE(poppedUrl, item.Url);
+			ASSERT_NE(poppedUrl, item.url());
 		}
 	}
 }

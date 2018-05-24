@@ -1,0 +1,174 @@
+syntax = "proto3";
+
+import "models.proto";
+
+package XiaoyaStore.Service;
+
+message Result
+{
+	bool is_successful = 1;
+}
+
+message ResultWithUrl
+{
+	bool is_successful = 1;
+	string url = 2;
+}
+
+message ResultWithCount
+{
+	bool is_successful = 1;
+	uint64 count = 2;
+}
+
+message ResultWithUrlFile
+{
+	bool is_successful = 1;
+	XiaoyaStore.Model.UrlFile urlfile = 2;
+}
+
+message ResultWithUrlFiles
+{
+	bool is_successful = 1;
+	repeated XiaoyaStore.Model.UrlFile urlfiles = 2;
+}
+
+message ResultWithUrlFileAndOldId
+{
+	bool is_successful = 1;
+	uint64 old_urlfile_id = 2;
+	XiaoyaStore.Model.UrlFile urlfile = 3;
+}
+
+message ResultWithPostingList
+{
+	bool is_successful = 1;
+	XiaoyaStore.Model.PostingList postinglist = 2;
+}
+
+message ResultWithLink
+{
+	bool is_successful = 1;
+	XiaoyaStore.Model.Link link = 2;
+}
+
+message ResultWithLinks
+{
+	bool is_successful = 1;
+	repeated XiaoyaStore.Model.Link links = 2;
+}
+
+message ResultWithIndex
+{
+	bool is_successful = 1;
+	XiaoyaStore.Model.Index index = 2;
+}
+
+message ArgVoid { }
+
+message ArgId
+{
+	uint64 id = 1;
+}
+
+message ArgUrl
+{
+	string url = 1;
+}
+
+message ArgHash
+{
+	string hash = 1;
+}
+
+message ArgWord
+{
+	string word = 1;
+}
+
+message ArgHost
+{
+	string host = 1;
+}
+
+message ArgUrls
+{
+	repeated string urls = 1;
+}
+
+message ArgUrlFile
+{
+	XiaoyaStore.Model.UrlFile urlfile = 1;
+}
+
+message ArgPushBackUrl
+{
+	string url = 1;
+	uint64 update_interval = 2;
+	bool failed = 3;
+}
+
+message ArgPostingList
+{
+	XiaoyaStore.Model.PostingList postinglist = 1;
+}
+
+message ArgSaveLinkOfUrlFile
+{
+	uint64 urlfile_id = 1;
+	uint64 old_urlfile_id = 2;
+	repeated XiaoyaStore.Model.Link links = 3;
+}
+
+message ArgClearAndSaveIndicesOf
+{
+	uint64 urlfile_id = 1;
+	uint64 old_urlfile_id = 2;
+	repeated XiaoyaStore.Model.Index indices = 3;
+}
+
+message ArgIndexKey
+{
+	uint64 urlfile_id = 1;
+	string word = 2;
+}
+
+service UrlFrontierItemService
+{
+	rpc Init(ArgUrls) returns (Result);
+	rpc PushUrls(ArgUrls) returns (Result);
+	rpc PushBackUrl(ArgPushBackUrl) returns (Result);
+	rpc PopUrl(ArgVoid) returns (ResultWithUrl);
+	rpc RemoveUrl(ArgUrl) returns (Result);
+	rpc GetHostCount(ArgHost) returns (ResultWithCount);
+}
+
+service UrlFileStoreService
+{
+	rpc GetUrlFileById(ArgId) returns (ResultWithUrlFile);
+	rpc GetUrlFileByUrl(ArgUrl) returns (ResultWithUrlFile);
+	rpc GetUrlFilesByHash(ArgHash) returns (ResultWithUrlFiles);
+	rpc SaveUrlFileAndGetOldId(ArgUrlFile) returns (ResultWithUrlFileAndOldId);
+	rpc GetCount(ArgVoid) returns (ResultWithCount);
+	rpc GetForIndex(ArgVoid) returns (ResultWithUrlFile);
+	rpc FinishIndex(ArgUrl) returns (Result);
+}
+
+service PostingListService
+{
+	rpc SavePostingList(ArgPostingList) returns (Result);
+	rpc GetPostingList(ArgWord) returns (ResultWithPostingList);
+}
+
+service LinkService
+{
+	rpc SaveLinkOfUrlFile(ArgSaveLinkOfUrlFile) returns (Result);
+	rpc GetLinkById(ArgId) returns (ResultWithLink);
+	rpc GetLinksByUrl(ArgUrl) returns (ResultWithLinks);
+}
+
+service InvertedIndexService
+{
+	rpc ClearAndSaveIndicesOf(ArgClearAndSaveIndicesOf) returns (Result);
+	rpc GetIndex(ArgIndexKey) returns (ResultWithIndex);
+}

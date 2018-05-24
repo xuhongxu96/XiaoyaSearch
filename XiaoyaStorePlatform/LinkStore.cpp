@@ -67,16 +67,17 @@ void LinkStore::ClearLinksOfUrlFile(const uint64_t urlFileId, WriteBatch &batch)
 	IdList oldLinkIdList;
 	if (GetLinkIds(urlFileId, oldLinkIdList))
 	{
-		for (auto oldLinkId : oldLinkIdList.Ids)
+		for (auto oldLinkId : oldLinkIdList.ids())
 		{
 			// Remove old url index
 			Link oldLink;
 			if (GetLink(oldLinkId, oldLink))
 			{
 				IdList deltaUrlIndex;
-				deltaUrlIndex.IsAdd = false;
-				deltaUrlIndex.Ids = { oldLink.LinkId };
-				batch.Merge(mCFHandles[UrlIndexCF].get(), oldLink.Url,
+				deltaUrlIndex.set_is_add(false);
+				deltaUrlIndex.add_ids(oldLink.link_id());
+
+				batch.Merge(mCFHandles[UrlIndexCF].get(), oldLink.url(),
 					SerializeHelper::Serialize(deltaUrlIndex));
 			}
 
@@ -95,7 +96,7 @@ LinkStore::LinkStore(StoreConfig config, bool isReadOnly)
 { }
 
 void LinkStore::SaveLinksOfUrlFile(const uint64_t urlFileId,
-	const uint64_t oldUrlFileId, std::vector<Link> links)
+	const uint64_t oldUrlFileId, const std::vector<Link> &links)
 {
 	WriteBatch batch;
 
@@ -105,28 +106,29 @@ void LinkStore::SaveLinksOfUrlFile(const uint64_t urlFileId,
 	}
 
 	IdList deltaUrlFileIdIndex;
-	deltaUrlFileIdIndex.IsAdd = true;
-	deltaUrlFileIdIndex.Ids = std::set<uint64_t>();
+	deltaUrlFileIdIndex.set_is_add(true);
 
 	// Add links and url index
 	for (auto link : links)
 	{
 		// Assign new link id
-		link.LinkId = GetAndUpdateValue(MetaMaxLinkId, 1) + 1;
+		auto id = GetAndUpdateValue(MetaMaxLinkId, 1) + 1;
+		link.set_link_id(id);
 
 		// Add new url index
 		IdList deltaUrlIndex;
-		deltaUrlIndex.IsAdd = true;
-		deltaUrlIndex.Ids = { link.LinkId };
-		batch.Merge(mCFHandles[UrlIndexCF].get(), link.Url,
+		deltaUrlIndex.set_is_add(true);
+		deltaUrlIndex.add_ids(id);
+
+		batch.Merge(mCFHandles[UrlIndexCF].get(), link.url(),
 			SerializeHelper::Serialize(deltaUrlIndex));
 
 		// Add link
-		batch.Put(SerializeHelper::SerializeUInt64(link.LinkId),
+		batch.Put(SerializeHelper::SerializeUInt64(id),
 			SerializeHelper::Serialize(link));
 
 		// Add UrlFileId index
-		deltaUrlFileIdIndex.Ids.insert(link.LinkId);
+		deltaUrlFileIdIndex.add_ids(id);
 	}
 
 	// Update UrlFileId index
@@ -166,7 +168,7 @@ std::vector<Link> LinkStore::GetLinksByUrl(const std::string &url) const
 	IdList idList;
 	if (GetLinkIds(url, idList))
 	{
-		for (auto id : idList.Ids)
+		for (auto id : idList.ids())
 		{
 			Link link;
 			if (GetLink(id, link))

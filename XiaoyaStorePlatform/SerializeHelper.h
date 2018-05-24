@@ -10,29 +10,26 @@ namespace XiaoyaStore
 		{
 		public:
 			template <typename T>
-			static T Deserialize(const std::string &data)
+			static typename boost::enable_if<
+				std::is_base_of<::google::protobuf::Message, T>,
+				T>::type
+			Deserialize(const std::string &data)
 			{
-				auto charArr = data.c_str();
-
-				bond::InputBuffer input(charArr, data.length());
-				bond::FastBinaryReader<bond::InputBuffer> reader(input);
-
 				T model;
-				bond::Deserialize(reader, model);
+				model.ParseFromString(data);
+
 				return std::move(model);
 			}
 
 			template <typename T>
-			static typename boost::enable_if<std::is_class<typename T::Schema::fields>, std::string>::type
+			static typename boost::enable_if<
+				std::is_base_of<::google::protobuf::Message, T>,
+				std::string>::type
 				Serialize(const T& model)
 			{
-				bond::OutputBuffer output;
-				bond::FastBinaryWriter<bond::OutputBuffer> writer(output);
-
-				bond::Serialize(model, writer);
-
-				auto blob = output.GetBuffer();
-				return std::move(std::string(blob.begin(), blob.end()));
+				std::string data;
+				model.SerializeToString(&data);
+				return std::move(data);
 			}
 
 			static uint64_t DeserializeUInt64(const std::string &data)

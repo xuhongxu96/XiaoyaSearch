@@ -10,42 +10,68 @@ using namespace XiaoyaStore::Helper;
 bool PostingListOperator::FullMergeV2(const MergeOperationInput & merge_in,
 	MergeOperationOutput * merge_out) const
 {
-	auto postingList = merge_in.existing_value == nullptr ?
-		PostingList()
-		: SerializeHelper::Deserialize<PostingList>(merge_in.existing_value->ToString());
+	std::set<uint64_t> postingSet;
+	uint64_t wordFrequency = 0, documentFrequency = 0;
+	std::string word;
+	if (merge_in.existing_value != nullptr)
+	{
+		auto postingList = SerializeHelper::Deserialize<PostingList>(
+			merge_in.existing_value->ToString());
+		postingSet.insert(postingList.postings().begin(), postingList.postings().end());
+		wordFrequency = postingList.word_frequency();
+		documentFrequency = postingList.document_frequency();
+		word = postingList.word();
+	}
 
 	for (auto operand : merge_in.operand_list)
 	{
 		auto delta = SerializeHelper::Deserialize<PostingList>(operand.ToString());
-		if (delta.IsAdd)
+		if (delta.is_add())
 		{
-			postingList.Postings.insert(delta.Postings.begin(), delta.Postings.end());
+			postingSet.insert(delta.postings().begin(), delta.postings().end());
+
+			wordFrequency += delta.word_frequency();
+			documentFrequency += delta.document_frequency();
 		}
 		else
 		{
 			std::set<uint64_t> result;
-			std::set_difference(postingList.Postings.begin(), 
-				postingList.Postings.end(), 
-				delta.Postings.begin(),
-				delta.Postings.end(),
+			std::set_difference(postingSet.begin(),
+				postingSet.end(),
+				delta.postings().begin(),
+				delta.postings().end(),
 				std::inserter(result, result.end()));
-			postingList.Postings.swap(result);
+			postingSet.swap(result);
+
+			wordFrequency -= delta.word_frequency();
+			documentFrequency -= delta.document_frequency();
 		}
-		postingList.WordFrequency += delta.WordFrequency;
-		postingList.DocumentFrequency += delta.DocumentFrequency;
+		if (word.empty())
+		{
+			word = delta.word();
+		}
 	}
 
-	if (postingList.WordFrequency < 0)
+	if (wordFrequency < 0)
 	{
-		postingList.WordFrequency = 0;
+		wordFrequency = 0;
 	}
 
-	if (postingList.DocumentFrequency < 0)
+	if (documentFrequency < 0)
 	{
-		postingList.DocumentFrequency = 0;
+		documentFrequency = 0;
 	}
 
-	merge_out->new_value = SerializeHelper::Serialize(postingList);
+	PostingList result;
+	result.set_is_add(true);
+	*result.mutable_postings()
+		= ::google::protobuf::RepeatedField<google::protobuf::uint64>(
+			postingSet.begin(), postingSet.end());
+	result.set_word_frequency(wordFrequency);
+	result.set_document_frequency(documentFrequency);
+	result.set_word(word);
+
+	merge_out->new_value = SerializeHelper::Serialize(result);
 	return true;
 }
 
@@ -58,11 +84,11 @@ bool PostingListOperator::PartialMerge(const Slice & key,
 	auto leftDelta = SerializeHelper::Deserialize<PostingList>(left_operand.ToString());
 	auto rightDelta = SerializeHelper::Deserialize<PostingList>(right_operand.ToString());
 
-	if (leftDelta.IsAdd == rightDelta.IsAdd)
+	if (leftDelta.is_add() == rightDelta.is_add())
 	{
-		leftDelta.Postings.insert(rightDelta.Postings.begin(), rightDelta.Postings.end());
-		leftDelta.WordFrequency += rightDelta.WordFrequency;
-		leftDelta.DocumentFrequency += rightDelta.DocumentFrequency;
+		leftDelta.mutable_postings()->MergeFrom(rightDelta.postings());
+		leftDelta.set_word_frequency(leftDelta.word_frequency() + rightDelta.word_frequency());
+		leftDelta.set_document_frequency(leftDelta.document_frequency() + rightDelta.document_frequency());
 		*new_value = SerializeHelper::Serialize(leftDelta);
 		return true;
 	}

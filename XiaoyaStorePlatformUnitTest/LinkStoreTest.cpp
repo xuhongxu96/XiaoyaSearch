@@ -13,9 +13,9 @@ Link FakeLink(const uint64_t urlFileId,
 	const std::string &text = "a")
 {
 	Link link;
-	link.UrlFileId = urlFileId;
-	link.Text = text;
-	link.Url = url;
+	link.set_urlfile_id(urlFileId);
+	link.set_text(text);
+	link.set_url(url);
 	return link;
 }
 
@@ -54,13 +54,13 @@ TEST(LinkStoreTest, TestSaveLinksOfNewUrlFile)
 		for (iter->SeekToFirst(); iter->Valid(); iter->Next())
 		{
 			auto item = SerializeHelper::Deserialize<Link>(iter->value().ToString());
-			if (items.count(item.Url) == 0)
+			if (items.count(item.url()) == 0)
 			{
-				items[item.Url] = 1;
+				items[item.url()] = 1;
 			}
 			else
 			{
-				items[item.Url]++;
+				items[item.url()]++;
 			}
 		}
 
@@ -74,10 +74,13 @@ TEST(LinkStoreTest, TestSaveLinksOfNewUrlFile)
 			std::string data;
 			db->Get(ReadOptions(), handles[LinkStore::UrlIndexCF].get(), "http://www.a.com", &data);
 			auto idList = SerializeHelper::Deserialize<IdList>(data);
-			ASSERT_EQ(3, idList.Ids.size());
+			ASSERT_EQ(3, idList.ids_size());
+
+			std::set<uint64_t> idSet(idList.ids().begin(), idList.ids().end());
+
 			for (uint64_t i = 1; i <= 3; ++i)
 			{
-				ASSERT_EQ(1, idList.Ids.count(i));
+				ASSERT_EQ(1, idSet.count(i));
 			}
 		}
 
@@ -86,10 +89,13 @@ TEST(LinkStoreTest, TestSaveLinksOfNewUrlFile)
 			db->Get(ReadOptions(), handles[LinkStore::UrlFileIdIndexCF].get(), 
 				SerializeHelper::SerializeUInt64(1), &data);
 			auto idList = SerializeHelper::Deserialize<IdList>(data);
-			ASSERT_EQ(8, idList.Ids.size());
+			ASSERT_EQ(8, idList.ids_size());
+
+			std::set<uint64_t> idSet(idList.ids().begin(), idList.ids().end());
+
 			for (uint64_t i = 1; i <= 8; ++i)
 			{
-				ASSERT_EQ(1, idList.Ids.count(i));
+				ASSERT_EQ(1, idSet.count(i));
 			}
 		}
 	}
@@ -143,13 +149,13 @@ TEST(LinkStoreTest, TestSaveLinksOfUpdatedUrlFile)
 		for (iter->SeekToFirst(); iter->Valid(); iter->Next())
 		{
 			auto item = SerializeHelper::Deserialize<Link>(iter->value().ToString());
-			if (items.count(item.Url) == 0)
+			if (items.count(item.url()) == 0)
 			{
-				items[item.Url] = 1;
+				items[item.url()] = 1;
 			}
 			else
 			{
-				items[item.Url]++;
+				items[item.url()]++;
 			}
 		}
 
@@ -163,8 +169,11 @@ TEST(LinkStoreTest, TestSaveLinksOfUpdatedUrlFile)
 			std::string data;
 			db->Get(ReadOptions(), handles[LinkStore::UrlIndexCF].get(), "http://www.a.com", &data);
 			auto idList = SerializeHelper::Deserialize<IdList>(data);
-			ASSERT_EQ(1, idList.Ids.size());
-			ASSERT_EQ(1, idList.Ids.count(9));
+
+			std::set<uint64_t> idSet(idList.ids().begin(), idList.ids().end());
+
+			ASSERT_EQ(1, idList.ids_size());
+			ASSERT_EQ(1, idSet.count(9));
 		}
 
 		{
@@ -176,10 +185,12 @@ TEST(LinkStoreTest, TestSaveLinksOfUpdatedUrlFile)
 			db->Get(ReadOptions(), handles[LinkStore::UrlFileIdIndexCF].get(), 
 				SerializeHelper::SerializeUInt64(2), &data);
 			auto idList = SerializeHelper::Deserialize<IdList>(data);
-			ASSERT_EQ(8, idList.Ids.size());
+			ASSERT_EQ(8, idList.ids_size());
+
+			std::set<uint64_t> idSet(idList.ids().begin(), idList.ids().end());
 			for (uint64_t i = 9; i <= 16; ++i)
 			{
-				ASSERT_EQ(1, idList.Ids.count(i));
+				ASSERT_EQ(1, idSet.count(i));
 			}
 		}
 	}

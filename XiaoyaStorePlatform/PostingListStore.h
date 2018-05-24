@@ -35,14 +35,14 @@ namespace XiaoyaStore
 			void SavePostingList(const Model::PostingList &deltaPostingList);
 
 			/**
-			Load PostingList by word
+			Get PostingList by word
 
 			\param	word	Word
 			\param	outPostingList	Output PostingList
 
 			\return	Return true if posting list is successfully loaded
 			*/
-			bool LoadPostingList(const std::string &word, Model::PostingList &outPostingList) const;
+			bool GetPostingList(const std::string &word, Model::PostingList &outPostingList) const;
 
 			/// Get ColumnFamilyDescriptors
 			static const std::vector<rocksdb::ColumnFamilyDescriptor>

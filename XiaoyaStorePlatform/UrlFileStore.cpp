@@ -131,9 +131,9 @@ std::vector<UrlFile> UrlFileStore::GetUrlFilesByHash(const std::string & hash)
 	IdList idList;
 	if (GetUrlFileIdListByHash(hash, idList))
 	{
-		result.reserve(idList.Ids.size());
+		result.reserve(idList.ids_size());
 
-		for (auto id : idList.Ids)
+		for (auto id : idList.ids())
 		{
 			UrlFile urlFile;
 			if (GetUrlFile(id, urlFile))
@@ -154,70 +154,70 @@ uint64_t UrlFileStore::SaveUrlFileAndGetOldId(UrlFile & urlFile)
 	auto now = DateTimeHelper::Now();
 
 	UrlFile oldUrlFile;
-	if (GetUrlFile(urlFile.Url, oldUrlFile))
+	if (GetUrlFile(urlFile.url(), oldUrlFile))
 	{
 		// Exists old UrlFile with the same Url
-		oldUrlFileId = oldUrlFile.UrlFileId;
+		oldUrlFileId = oldUrlFile.urlfile_id();
 
-		auto updateInterval = now - oldUrlFile.UpdatedAt;
+		auto updateInterval = now - oldUrlFile.updated_at();
 
-		urlFile.CreatedAt = oldUrlFile.CreatedAt;
-		urlFile.UpdateInterval =
-			static_cast<uint64_t>((oldUrlFile.UpdateInterval * 3.0 + updateInterval) / 4.0);
+		urlFile.set_created_at(oldUrlFile.created_at());
+		urlFile.set_update_interval(
+			static_cast<uint64_t>((oldUrlFile.update_interval() * 3.0 
+				+ updateInterval) / 4.0));
 
-		if (oldUrlFile.Title != urlFile.Title
-			|| oldUrlFile.Content != urlFile.Content)
+		if (oldUrlFile.title() != urlFile.title()
+			|| oldUrlFile.content() != urlFile.content())
 		{
 			// Title or Content changed
-			urlFile.UpdatedAt = now;
+			urlFile.set_updated_at(now);
 			willAddToIndexQueue = true;
 		}
 		else
 		{
-			urlFile.UpdatedAt = oldUrlFile.UpdatedAt;
+			urlFile.set_updated_at(oldUrlFile.updated_at());
 		}
 
-		if (oldUrlFile.FileHash != urlFile.FileHash)
+		if (oldUrlFile.file_hash() != urlFile.file_hash())
 		{
 			// Hash changed, remove old hash index
 			IdList removingHashIndex;
-			removingHashIndex.IsAdd = false;
-			removingHashIndex.Ids = std::set<uint64_t>();
-			removingHashIndex.Ids.insert(oldUrlFile.UrlFileId);
+			removingHashIndex.set_is_add(false);
+			removingHashIndex.add_ids(oldUrlFile.urlfile_id());
 
-			batch.Merge(mCFHandles[HashIndexCF].get(), oldUrlFile.FileHash,
+			batch.Merge(mCFHandles[HashIndexCF].get(), oldUrlFile.file_hash(),
 				SerializeHelper::Serialize(removingHashIndex));
 		}
 
 		// Delete old UrlFile
-		batch.Delete(SerializeHelper::SerializeUInt64(oldUrlFile.UrlFileId));
+		batch.Delete(SerializeHelper::SerializeUInt64(oldUrlFile.urlfile_id()));
 	}
 	else
 	{
 		// New Url
 		oldUrlFileId = 0;
 
-		urlFile.UpdatedAt = now;
-		urlFile.CreatedAt = now;
-		urlFile.UpdateInterval = DateTimeHelper::FromDays(1);
+		urlFile.set_updated_at(now);
+		urlFile.set_created_at(now);
+		urlFile.set_update_interval(DateTimeHelper::FromDays(1));
 
 		willAddToIndexQueue = true;
 	}
 
 	// Assign new id
-	auto id = urlFile.UrlFileId = GetAndUpdateValue(MetaMaxUrlFileId, 1) + 1;
+	auto id = GetAndUpdateValue(MetaMaxUrlFileId, 1) + 1;
+	urlFile.set_urlfile_id(id);
 	auto idData = SerializeHelper::SerializeUInt64(id);
 
 	// Overwrite url index
-	batch.Put(mCFHandles[UrlIndexCF].get(), urlFile.Url, idData);
+	batch.Put(mCFHandles[UrlIndexCF].get(), urlFile.url(), idData);
 
 	// Add new hash index
 	IdList newHashIndex;
-	newHashIndex.IsAdd = true;
-	newHashIndex.Ids = std::set<uint64_t>();
-	newHashIndex.Ids.insert(id);
+	newHashIndex.set_is_add(true);
+	newHashIndex.add_ids(id);
 
-	batch.Merge(mCFHandles[HashIndexCF].get(), urlFile.FileHash,
+	batch.Merge(mCFHandles[HashIndexCF].get(), urlFile.file_hash(),
 		SerializeHelper::Serialize(newHashIndex));
 
 	// Add new UrlFile
@@ -226,7 +226,7 @@ uint64_t UrlFileStore::SaveUrlFileAndGetOldId(UrlFile & urlFile)
 	if (willAddToIndexQueue)
 	{
 		// Add to IndexQueue
-		batch.Put(mCFHandles[IndexQueueCF].get(), urlFile.Url, idData);
+		batch.Put(mCFHandles[IndexQueueCF].get(), urlFile.url(), idData);
 		AddToIndexQueue(urlFile);
 	}
 
@@ -234,7 +234,7 @@ uint64_t UrlFileStore::SaveUrlFileAndGetOldId(UrlFile & urlFile)
 	if (!status.ok())
 	{
 		throw StoreException(status,
-			"UrlFileStore::SaveUrlFileAndGetOldId failed to save: " + urlFile.Url);
+			"UrlFileStore::SaveUrlFileAndGetOldId failed to save: " + urlFile.url());
 	}
 
 	return oldUrlFileId;
@@ -259,7 +259,7 @@ bool UrlFileStore::GetForIndex(UrlFile &outUrlFile) const
 	return true;
 }
 
-void XiaoyaStore::Store::UrlFileStore::FinishIndex(std::string &url)
+void XiaoyaStore::Store::UrlFileStore::FinishIndex(const std::string &url)
 {
 	auto status = mDb->Delete(WriteOptions(), mCFHandles[IndexQueueCF].get(), url);
 	if (!status.ok() && !status.IsNotFound())

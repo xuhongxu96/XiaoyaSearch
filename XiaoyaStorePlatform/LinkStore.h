@@ -64,7 +64,7 @@ namespace XiaoyaStore
 			\param	links			Links of the UrlFile
 			*/
 			void SaveLinksOfUrlFile(const uint64_t urlFileId,
-				const uint64_t oldUrlFileId, std::vector<Model::Link> links);
+				const uint64_t oldUrlFileId, const std::vector<Model::Link> &links);
 
 			/**
 			Get Links by id

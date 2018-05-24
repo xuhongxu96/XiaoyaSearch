@@ -13,20 +13,22 @@ UrlFile FakeUrlFile(const std::string &url,
 	const std::string &hash = "a")
 {
 	UrlFile urlFile;
-	urlFile.Charset = "UTF-8";
-	urlFile.Content = urlFile.TextContent = "Hello, world!";
-	urlFile.FileHash = hash;
-	urlFile.FilePath = "a";
-	urlFile.HeaderCount = 1;
-	urlFile.HeaderTotalLength = 1;
-	urlFile.InLinkCount = 1;
-	urlFile.InLinkTotalLength = 1;
-	urlFile.MimeType = "text/html";
-	urlFile.PageRank = 0;
-	urlFile.PublishDate = DateTimeHelper::Now();
-	urlFile.Title = "a";
-	urlFile.Url = url;
-	urlFile.UpdateInterval = updateInterval;
+
+	urlFile.set_charset("UTF-8");
+	urlFile.set_content("Hello, world!");
+	urlFile.set_text_content("Hello, world!");
+	urlFile.set_file_hash(hash);
+	urlFile.set_file_path("a");
+	urlFile.set_header_count(1);
+	urlFile.set_header_total_length(1);
+	urlFile.set_in_link_count(1);
+	urlFile.set_in_link_total_length(1);
+	urlFile.set_mime_type("text/html");
+	urlFile.set_page_rank(0);
+	urlFile.set_publish_date(DateTimeHelper::Now());
+	urlFile.set_title("a");
+	urlFile.set_url(url);
+	urlFile.set_update_interval(updateInterval);
 
 	return urlFile;
 }
@@ -42,8 +44,8 @@ TEST(UrlFileStoreTest, TestSaveNew)
 	{
 		UrlFileStore store(config);
 
-		ASSERT_EQ(-1, store.SaveUrlFileAndGetOldId(urlFile));
-		ASSERT_EQ(1, urlFile.UrlFileId);
+		ASSERT_EQ(0, store.SaveUrlFileAndGetOldId(urlFile));
+		ASSERT_EQ(1, urlFile.urlfile_id());
 	}
 
 	{
@@ -58,7 +60,7 @@ TEST(UrlFileStoreTest, TestSaveNew)
 		for (iter->SeekToFirst(); iter->Valid(); iter->Next())
 		{
 			auto item = SerializeHelper::Deserialize<UrlFile>(iter->value().ToString());
-			ASSERT_EQ(item, urlFile);
+			ASSERT_EQ(item.SerializeAsString(), urlFile.SerializeAsString());
 		}
 	}
 }
@@ -75,11 +77,11 @@ TEST(UrlFileStoreTest, TestGetUrlFileById)
 	{
 		UrlFileStore store(config);
 
-		ASSERT_EQ(-1, store.SaveUrlFileAndGetOldId(urlFile1));
-		ASSERT_EQ(1, urlFile1.UrlFileId);
+		ASSERT_EQ(0, store.SaveUrlFileAndGetOldId(urlFile1));
+		ASSERT_EQ(1, urlFile1.urlfile_id());
 
-		ASSERT_EQ(-1, store.SaveUrlFileAndGetOldId(urlFile2));
-		ASSERT_EQ(2, urlFile2.UrlFileId);
+		ASSERT_EQ(0, store.SaveUrlFileAndGetOldId(urlFile2));
+		ASSERT_EQ(2, urlFile2.urlfile_id());
 	}
 
 	{
@@ -87,10 +89,10 @@ TEST(UrlFileStoreTest, TestGetUrlFileById)
 		UrlFile getResult;
 
 		ASSERT_TRUE(store.GetUrlFile(1, getResult));
-		ASSERT_EQ(urlFile1, getResult);
+		ASSERT_EQ(urlFile1.SerializeAsString(), getResult.SerializeAsString());
 
 		ASSERT_TRUE(store.GetUrlFile(2, getResult));
-		ASSERT_EQ(urlFile2, getResult);
+		ASSERT_EQ(urlFile2.SerializeAsString(), getResult.SerializeAsString());
 	}
 }
 
@@ -106,11 +108,11 @@ TEST(UrlFileStoreTest, TestGetUrlFileByUrl)
 	{
 		UrlFileStore store(config);
 
-		ASSERT_EQ(-1, store.SaveUrlFileAndGetOldId(urlFile1));
-		ASSERT_EQ(1, urlFile1.UrlFileId);
+		ASSERT_EQ(0, store.SaveUrlFileAndGetOldId(urlFile1));
+		ASSERT_EQ(1, urlFile1.urlfile_id());
 
-		ASSERT_EQ(-1, store.SaveUrlFileAndGetOldId(urlFile2));
-		ASSERT_EQ(2, urlFile2.UrlFileId);
+		ASSERT_EQ(0, store.SaveUrlFileAndGetOldId(urlFile2));
+		ASSERT_EQ(2, urlFile2.urlfile_id());
 	}
 
 	{
@@ -118,10 +120,10 @@ TEST(UrlFileStoreTest, TestGetUrlFileByUrl)
 		UrlFile getResult;
 
 		ASSERT_TRUE(store.GetUrlFile("http://www.a.com", getResult));
-		ASSERT_EQ(urlFile1, getResult);
+		ASSERT_EQ(urlFile1.SerializeAsString(), getResult.SerializeAsString());
 
 		ASSERT_TRUE(store.GetUrlFile("http://www.b.com", getResult));
-		ASSERT_EQ(urlFile2, getResult);
+		ASSERT_EQ(urlFile2.SerializeAsString(), getResult.SerializeAsString());
 	}
 }
 
@@ -138,14 +140,14 @@ TEST(UrlFileStoreTest, TestGetUrlFilesByHash)
 		auto urlFile2 = FakeUrlFile("http://www.b.com", DateTimeHelper::FromDays(2), "a");
 		auto urlFile3 = FakeUrlFile("http://www.c.com", DateTimeHelper::FromDays(2), "b");
 
-		ASSERT_EQ(-1, store.SaveUrlFileAndGetOldId(urlFile1));
-		ASSERT_EQ(1, urlFile1.UrlFileId);
+		ASSERT_EQ(0, store.SaveUrlFileAndGetOldId(urlFile1));
+		ASSERT_EQ(1, urlFile1.urlfile_id());
 
-		ASSERT_EQ(-1, store.SaveUrlFileAndGetOldId(urlFile2));
-		ASSERT_EQ(2, urlFile2.UrlFileId);
+		ASSERT_EQ(0, store.SaveUrlFileAndGetOldId(urlFile2));
+		ASSERT_EQ(2, urlFile2.urlfile_id());
 
-		ASSERT_EQ(-1, store.SaveUrlFileAndGetOldId(urlFile3));
-		ASSERT_EQ(3, urlFile3.UrlFileId);
+		ASSERT_EQ(0, store.SaveUrlFileAndGetOldId(urlFile3));
+		ASSERT_EQ(3, urlFile3.urlfile_id());
 	}
 
 	{
@@ -156,17 +158,17 @@ TEST(UrlFileStoreTest, TestGetUrlFilesByHash)
 		std::sort(urlFiles.begin(), urlFiles.end(),
 			[=](const UrlFile &a, const UrlFile &b)
 		{
-			return a.Url < b.Url;
+			return a.url() < b.url();
 		});
 
 		ASSERT_EQ(2, urlFiles.size());
-		ASSERT_EQ("http://www.a.com", urlFiles[0].Url);
-		ASSERT_EQ("http://www.b.com", urlFiles[1].Url);
+		ASSERT_EQ("http://www.a.com", urlFiles[0].url());
+		ASSERT_EQ("http://www.b.com", urlFiles[1].url());
 
 		urlFiles = store.GetUrlFilesByHash("b");
 
 		ASSERT_EQ(1, urlFiles.size());
-		ASSERT_EQ("http://www.c.com", urlFiles[0].Url);
+		ASSERT_EQ("http://www.c.com", urlFiles[0].url());
 	}
 }
 
@@ -181,8 +183,8 @@ TEST(UrlFileStoreTest, TestSaveAndGetOldId)
 
 		auto urlFile = FakeUrlFile("http://www.a.com", DateTimeHelper::FromDays(2));
 
-		ASSERT_EQ(-1, store.SaveUrlFileAndGetOldId(urlFile));
-		ASSERT_EQ(1, urlFile.UrlFileId);
+		ASSERT_EQ(0, store.SaveUrlFileAndGetOldId(urlFile));
+		ASSERT_EQ(1, urlFile.urlfile_id());
 	}
 
 	{
@@ -191,7 +193,7 @@ TEST(UrlFileStoreTest, TestSaveAndGetOldId)
 		auto urlFile = FakeUrlFile("http://www.a.com", DateTimeHelper::FromDays(1));
 
 		ASSERT_EQ(1, store.SaveUrlFileAndGetOldId(urlFile));
-		ASSERT_EQ(2, urlFile.UrlFileId);
+		ASSERT_EQ(2, urlFile.urlfile_id());
 	}
 }
 
@@ -208,14 +210,14 @@ TEST(UrlFileStoreTest, TestGetCount)
 		auto urlFile2 = FakeUrlFile("http://www.b.com", DateTimeHelper::FromDays(2), "a");
 		auto urlFile3 = FakeUrlFile("http://www.c.com", DateTimeHelper::FromDays(2), "b");
 
-		ASSERT_EQ(-1, store.SaveUrlFileAndGetOldId(urlFile1));
-		ASSERT_EQ(1, urlFile1.UrlFileId);
+		ASSERT_EQ(0, store.SaveUrlFileAndGetOldId(urlFile1));
+		ASSERT_EQ(1, urlFile1.urlfile_id());
 
-		ASSERT_EQ(-1, store.SaveUrlFileAndGetOldId(urlFile2));
-		ASSERT_EQ(2, urlFile2.UrlFileId);
+		ASSERT_EQ(0, store.SaveUrlFileAndGetOldId(urlFile2));
+		ASSERT_EQ(2, urlFile2.urlfile_id());
 
-		ASSERT_EQ(-1, store.SaveUrlFileAndGetOldId(urlFile3));
-		ASSERT_EQ(3, urlFile3.UrlFileId);
+		ASSERT_EQ(0, store.SaveUrlFileAndGetOldId(urlFile3));
+		ASSERT_EQ(3, urlFile3.urlfile_id());
 	}
 
 	{
@@ -238,14 +240,14 @@ TEST(UrlFileStoreTest, TestGetForIndexAndFinishIndex)
 		auto urlFile2 = FakeUrlFile("http://www.b.com", DateTimeHelper::FromDays(2), "a");
 		auto urlFile3 = FakeUrlFile("http://www.c.com", DateTimeHelper::FromDays(2), "b");
 
-		ASSERT_EQ(-1, store.SaveUrlFileAndGetOldId(urlFile1));
-		ASSERT_EQ(1, urlFile1.UrlFileId);
+		ASSERT_EQ(0, store.SaveUrlFileAndGetOldId(urlFile1));
+		ASSERT_EQ(1, urlFile1.urlfile_id());
 
-		ASSERT_EQ(-1, store.SaveUrlFileAndGetOldId(urlFile2));
-		ASSERT_EQ(2, urlFile2.UrlFileId);
+		ASSERT_EQ(0, store.SaveUrlFileAndGetOldId(urlFile2));
+		ASSERT_EQ(2, urlFile2.urlfile_id());
 
-		ASSERT_EQ(-1, store.SaveUrlFileAndGetOldId(urlFile3));
-		ASSERT_EQ(3, urlFile3.UrlFileId);
+		ASSERT_EQ(0, store.SaveUrlFileAndGetOldId(urlFile3));
+		ASSERT_EQ(3, urlFile3.urlfile_id());
 	}
 
 	{
@@ -254,25 +256,25 @@ TEST(UrlFileStoreTest, TestGetForIndexAndFinishIndex)
 		UrlFile urlFile;
 
 		ASSERT_TRUE(store.GetForIndex(urlFile));
-		ASSERT_EQ("http://www.a.com", urlFile.Url);
+		ASSERT_EQ("http://www.a.com", urlFile.url());
 
 		ASSERT_TRUE(store.GetForIndex(urlFile));
-		ASSERT_EQ("http://www.b.com", urlFile.Url);
+		ASSERT_EQ("http://www.b.com", urlFile.url());
 
-		store.FinishIndex(urlFile.Url);
+		store.FinishIndex(urlFile.url());
 
 		ASSERT_TRUE(store.GetForIndex(urlFile));
-		ASSERT_EQ("http://www.c.com", urlFile.Url);
+		ASSERT_EQ("http://www.c.com", urlFile.url());
 
 		ASSERT_FALSE(store.GetForIndex(urlFile));
 
 		auto urlFile4 = FakeUrlFile("http://www.d.com", DateTimeHelper::FromDays(2), "b");
 
-		ASSERT_EQ(-1, store.SaveUrlFileAndGetOldId(urlFile4));
-		ASSERT_EQ(4, urlFile4.UrlFileId);
+		ASSERT_EQ(0, store.SaveUrlFileAndGetOldId(urlFile4));
+		ASSERT_EQ(4, urlFile4.urlfile_id());
 
 		ASSERT_TRUE(store.GetForIndex(urlFile));
-		ASSERT_EQ("http://www.d.com", urlFile.Url);
+		ASSERT_EQ("http://www.d.com", urlFile.url());
 	}
 
 	{
@@ -281,19 +283,19 @@ TEST(UrlFileStoreTest, TestGetForIndexAndFinishIndex)
 		UrlFile urlFile;
 
 		ASSERT_TRUE(store.GetForIndex(urlFile));
-		ASSERT_EQ("http://www.a.com", urlFile.Url);
+		ASSERT_EQ("http://www.a.com", urlFile.url());
 
-		store.FinishIndex(urlFile.Url);
-
-		ASSERT_TRUE(store.GetForIndex(urlFile));
-		ASSERT_EQ("http://www.c.com", urlFile.Url);
-
-		store.FinishIndex(urlFile.Url);
+		store.FinishIndex(urlFile.url());
 
 		ASSERT_TRUE(store.GetForIndex(urlFile));
-		ASSERT_EQ("http://www.d.com", urlFile.Url);
+		ASSERT_EQ("http://www.c.com", urlFile.url());
 
-		store.FinishIndex(urlFile.Url);
+		store.FinishIndex(urlFile.url());
+
+		ASSERT_TRUE(store.GetForIndex(urlFile));
+		ASSERT_EQ("http://www.d.com", urlFile.url());
+
+		store.FinishIndex(urlFile.url());
 
 		ASSERT_FALSE(store.GetForIndex(urlFile));
 	}
@@ -322,8 +324,8 @@ TEST(UrlFileStoreTest, StressTestSave)
 		{
 			auto urlFile = FakeUrlFile("http://www.a" + std::to_string(i) + ".com",
 				DateTimeHelper::FromDays(2), std::to_string(i));
-			ASSERT_EQ(-1, store.SaveUrlFileAndGetOldId(urlFile));
-			ASSERT_EQ(i, urlFile.UrlFileId);
+			ASSERT_EQ(0, store.SaveUrlFileAndGetOldId(urlFile));
+			ASSERT_EQ(i, urlFile.urlfile_id());
 			if (i % 10 == 0)
 			{
 				std::cerr << i << std::endl;
@@ -348,8 +350,8 @@ TEST(UrlFileStoreTest, StressTestLoad)
 		{
 			auto urlFile = FakeUrlFile("http://www.a" + std::to_string(i) + ".com",
 				DateTimeHelper::FromDays(2), std::to_string(i));
-			ASSERT_EQ(-1, store.SaveUrlFileAndGetOldId(urlFile));
-			ASSERT_EQ(i, urlFile.UrlFileId);
+			ASSERT_EQ(0, store.SaveUrlFileAndGetOldId(urlFile));
+			ASSERT_EQ(i, urlFile.urlfile_id());
 
 			if (i % 10 == 0)
 			{
@@ -368,7 +370,7 @@ TEST(UrlFileStoreTest, StressTestLoad)
 		{
 			auto result = store.GetUrlFile(i, urlFile);
 			ASSERT_TRUE(result);
-			ASSERT_EQ(i, urlFile.UrlFileId);
+			ASSERT_EQ(i, urlFile.urlfile_id());
 
 			if (i % 10 == 0)
 			{
