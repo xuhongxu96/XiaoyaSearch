@@ -119,7 +119,7 @@ namespace XiaoyaStore
 
 			\param	url	Url
 			*/
-			void RemoveUrl(std::string &url);
+			void RemoveUrl(const std::string &url);
 
 			/**
 			Get the number of the urls with specific host name.
@@ -128,7 +128,7 @@ namespace XiaoyaStore
 			
 			\return The number of the urls with specific host name
 			*/
-			uint64_t GetHostCount(const std::string host);
+			uint64_t GetHostCount(const std::string &host);
 
 			/// Get ColumnFamilyDescriptors
 			static const std::vector<rocksdb::ColumnFamilyDescriptor>

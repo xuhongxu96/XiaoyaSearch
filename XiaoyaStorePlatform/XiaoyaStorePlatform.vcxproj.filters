@@ -102,6 +102,12 @@
     <ClInclude Include="rpc.pb.h">
       <Filter>Header Files\Service</Filter>
     </ClInclude>
+    <ClInclude Include="UrlFrontierItemServiceImpl.h">
+      <Filter>Header Files\Service</Filter>
+    </ClInclude>
+    <ClInclude Include="rpc.grpc.pb.h">
+      <Filter>Header Files\Service</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -151,6 +157,12 @@
     </ClCompile>
     <ClCompile Include="models.pb.cc">
       <Filter>Source Files\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="rpc.grpc.pb.cc">
+      <Filter>Source Files\Service</Filter>
+    </ClCompile>
+    <ClCompile Include="UrlFrontierItemServiceImpl.cpp">
+      <Filter>Source Files\Service</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

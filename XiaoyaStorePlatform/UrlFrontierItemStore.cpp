@@ -248,7 +248,7 @@ const bool XiaoyaStore::Store::UrlFrontierItemStore::PopUrl(std::string &url)
 	return true;
 }
 
-void XiaoyaStore::Store::UrlFrontierItemStore::RemoveUrl(std::string & url)
+void XiaoyaStore::Store::UrlFrontierItemStore::RemoveUrl(const std::string & url)
 {
 	WriteBatch batch;
 
@@ -263,7 +263,7 @@ void XiaoyaStore::Store::UrlFrontierItemStore::RemoveUrl(std::string & url)
 	}
 }
 
-uint64_t XiaoyaStore::Store::UrlFrontierItemStore::GetHostCount(const std::string host)
+uint64_t XiaoyaStore::Store::UrlFrontierItemStore::GetHostCount(const std::string &host)
 {
 	std::string data;
 	auto status = mDb->Get(ReadOptions(), mCFHandles[HostCountCF].get(), host, &data);
