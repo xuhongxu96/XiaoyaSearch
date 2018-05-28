@@ -66,6 +66,12 @@ namespace XiaoyaStore
 			\return	Is url successfully removed
 			*/
 			bool TryRemovePoppedUrl(const std::string &url, Model::UrlFrontierItem &outItem);
+			/**
+			Remove url from mUrlSet and mPoppedUrlMap
+
+			\param	url	Url
+			*/
+			void RemoveUrlInternal(const std::string &url);
 		public:
 			static const std::string DbName; //< Database name
 

@@ -19,7 +19,14 @@
 #include "../XiaoyaStorePlatform/LinkStore.h"
 #include "../XiaoyaStorePlatform/InvertedIndexStore.h"
 
+#include "../XiaoyaStorePlatform/UrlFrontierItemServiceImpl.h"
+#include "../XiaoyaStorePlatform/UrlFileServiceImpl.h"
+#include "../XiaoyaStorePlatform/PostingListServiceImpl.h"
+#include "../XiaoyaStorePlatform/LinkServiceImpl.h"
+#include "../XiaoyaStorePlatform/InvertedIndexServiceImpl.h"
+
 #include <thread>
 #include <chrono>
+#include <future>
 
 #include <boost\filesystem.hpp>

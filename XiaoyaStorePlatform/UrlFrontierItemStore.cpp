@@ -132,6 +132,14 @@ bool XiaoyaStore::Store::UrlFrontierItemStore::TryRemovePoppedUrl(const std::str
 	return false;
 }
 
+void UrlFrontierItemStore::RemoveUrlInternal(const std::string & url)
+{
+	std::unique_lock<std::shared_mutex> lock(mSharedMutexForPop);
+
+	mPoppedUrlMap.erase(url);
+	mUrlSet.erase(url);
+}
+
 UrlFrontierItemStore::UrlFrontierItemStore(StoreConfig config, bool isReadOnly)
 	: BaseStore(DbName, GetColumnFamilyDescriptors(), config, isReadOnly)
 {
@@ -261,6 +269,7 @@ void XiaoyaStore::Store::UrlFrontierItemStore::RemoveUrl(const std::string & url
 	{
 		throw StoreException(status, "UrlFrontierItemStore::RemoveUrl failed to remove url (" + url + "): " + status.ToString());
 	}
+	RemoveUrlInternal(url);
 }
 
 uint64_t XiaoyaStore::Store::UrlFrontierItemStore::GetHostCount(const std::string &host)
