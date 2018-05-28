@@ -160,6 +160,7 @@
     <ClInclude Include="ModelCompare.h" />
     <ClInclude Include="models.pb.h" />
     <ClInclude Include="PostingListOperator.h" />
+    <ClInclude Include="PostingListServiceImpl.h" />
     <ClInclude Include="PostingListStore.h" />
     <ClInclude Include="rpc.grpc.pb.h" />
     <ClInclude Include="rpc.pb.h" />
@@ -182,6 +183,7 @@
     <ClCompile Include="ModelCompare.cpp" />
     <ClCompile Include="models.pb.cc" />
     <ClCompile Include="PostingListOperator.cpp" />
+    <ClCompile Include="PostingListServiceImpl.cpp" />
     <ClCompile Include="PostingListStore.cpp" />
     <ClCompile Include="rpc.grpc.pb.cc" />
     <ClCompile Include="rpc.pb.cc" />
