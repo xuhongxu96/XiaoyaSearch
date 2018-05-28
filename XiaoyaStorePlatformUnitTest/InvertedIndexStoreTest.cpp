@@ -8,27 +8,6 @@ using namespace XiaoyaStore::Model;
 using namespace XiaoyaStore::Helper;
 using namespace rocksdb;
 
-Index FakeIndex(const uint64_t urlFileId,
-	const std::string &word)
-{
-	Index index;
-
-	index.mutable_key()->set_urlfile_id(urlFileId);
-	index.mutable_key()->set_word(word);
-
-	index.set_occurences_in_headers(std::rand() % 30);
-	index.set_occurences_in_links(std::rand() % 100);
-	index.set_occurences_in_title(std::rand() % 10);
-	index.set_weight(std::rand() / 100.0);
-	index.set_word_frequency(std::rand());
-
-	index.add_positions(1);
-	index.add_positions(2);
-	index.add_positions(3);
-
-	return index;
-}
-
 TEST(InvertedIndexStoreTest, TestSaveNew)
 {
 	DbTestHelper::DeleteDB<InvertedIndexStore>();
@@ -37,10 +16,10 @@ TEST(InvertedIndexStoreTest, TestSaveNew)
 
 	auto indices =
 	{
-		FakeIndex(1, "a"),	// 1
-		FakeIndex(1, "b"),	// 2
-		FakeIndex(1, "c"),	// 3
-		FakeIndex(1, "d"),	// 4
+		DbTestHelper::FakeIndex(1, "a"),	// 1
+		DbTestHelper::FakeIndex(1, "b"),	// 2
+		DbTestHelper::FakeIndex(1, "c"),	// 3
+		DbTestHelper::FakeIndex(1, "d"),	// 4
 	};
 
 	{
@@ -104,18 +83,18 @@ TEST(InvertedIndexStoreTest, TestSaveUpdatedIndices)
 
 	auto indices1 =
 	{
-		FakeIndex(1, "a"),	// 1
-		FakeIndex(1, "b"),	// 2
-		FakeIndex(1, "c"),	// 3
-		FakeIndex(1, "d"),	// 4
+		DbTestHelper::FakeIndex(1, "a"),	// 1
+		DbTestHelper::FakeIndex(1, "b"),	// 2
+		DbTestHelper::FakeIndex(1, "c"),	// 3
+		DbTestHelper::FakeIndex(1, "d"),	// 4
 	};
 
 	auto indices2 =
 	{
-		FakeIndex(2, "e"),	// 5
-		FakeIndex(2, "f"),	// 6
-		FakeIndex(2, "g"),	// 7
-		FakeIndex(2, "h"),	// 8
+		DbTestHelper::FakeIndex(2, "e"),	// 5
+		DbTestHelper::FakeIndex(2, "f"),	// 6
+		DbTestHelper::FakeIndex(2, "g"),	// 7
+		DbTestHelper::FakeIndex(2, "h"),	// 8
 	};
 
 	{

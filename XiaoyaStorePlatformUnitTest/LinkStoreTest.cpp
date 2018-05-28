@@ -8,17 +8,6 @@ using namespace XiaoyaStore::Model;
 using namespace XiaoyaStore::Helper;
 using namespace rocksdb;
 
-Link FakeLink(const uint64_t urlFileId,
-	const std::string &url = "http://www.a.com",
-	const std::string &text = "a")
-{
-	Link link;
-	link.set_urlfile_id(urlFileId);
-	link.set_text(text);
-	link.set_url(url);
-	return link;
-}
-
 TEST(LinkStoreTest, TestSaveLinksOfNewUrlFile)
 {
 	DbTestHelper::DeleteDB<LinkStore>();
@@ -27,14 +16,14 @@ TEST(LinkStoreTest, TestSaveLinksOfNewUrlFile)
 
 	auto links =
 	{
-		FakeLink(1, "http://www.a.com"),	// 1
-		FakeLink(1, "http://www.a.com"),	// 2
-		FakeLink(1, "http://www.a.com"),	// 3
-		FakeLink(1, "http://www.b.com"),	// 4
-		FakeLink(1, "http://www.c.com"),	// 5
-		FakeLink(1, "http://www.d.com"),	// 6
-		FakeLink(1, "http://www.d.com"),	// 7
-		FakeLink(1, "http://www.e.com"),	// 8
+		DbTestHelper::FakeLink(1, "http://www.a.com"),	// 1
+		DbTestHelper::FakeLink(1, "http://www.a.com"),	// 2
+		DbTestHelper::FakeLink(1, "http://www.a.com"),	// 3
+		DbTestHelper::FakeLink(1, "http://www.b.com"),	// 4
+		DbTestHelper::FakeLink(1, "http://www.c.com"),	// 5
+		DbTestHelper::FakeLink(1, "http://www.d.com"),	// 6
+		DbTestHelper::FakeLink(1, "http://www.d.com"),	// 7
+		DbTestHelper::FakeLink(1, "http://www.e.com"),	// 8
 	};
 
 	{
@@ -109,26 +98,26 @@ TEST(LinkStoreTest, TestSaveLinksOfUpdatedUrlFile)
 
 	auto links1 =
 	{
-		FakeLink(1, "http://www.a.com"),	// 1
-		FakeLink(1, "http://www.a.com"),	// 2
-		FakeLink(1, "http://www.a.com"),	// 3
-		FakeLink(1, "http://www.b.com"),	// 4
-		FakeLink(1, "http://www.c.com"),	// 5
-		FakeLink(1, "http://www.d.com"),	// 6
-		FakeLink(1, "http://www.d.com"),	// 7
-		FakeLink(1, "http://www.e.com"),	// 8
+		DbTestHelper::FakeLink(1, "http://www.a.com"),	// 1
+		DbTestHelper::FakeLink(1, "http://www.a.com"),	// 2
+		DbTestHelper::FakeLink(1, "http://www.a.com"),	// 3
+		DbTestHelper::FakeLink(1, "http://www.b.com"),	// 4
+		DbTestHelper::FakeLink(1, "http://www.c.com"),	// 5
+		DbTestHelper::FakeLink(1, "http://www.d.com"),	// 6
+		DbTestHelper::FakeLink(1, "http://www.d.com"),	// 7
+		DbTestHelper::FakeLink(1, "http://www.e.com"),	// 8
 	};
 
 	auto links2 =
 	{
-		FakeLink(2, "http://www.a.com"),	// 9
-		FakeLink(2, "http://www.b.com"),	// 10
-		FakeLink(2, "http://www.b.com"),	// 11
-		FakeLink(2, "http://www.b.com"),	// 12
-		FakeLink(2, "http://www.c.com"),	// 13
-		FakeLink(2, "http://www.c.com"),	// 14
-		FakeLink(2, "http://www.d.com"),	// 15
-		FakeLink(2, "http://www.d.com"),	// 16
+		DbTestHelper::FakeLink(2, "http://www.a.com"),	// 9
+		DbTestHelper::FakeLink(2, "http://www.b.com"),	// 10
+		DbTestHelper::FakeLink(2, "http://www.b.com"),	// 11
+		DbTestHelper::FakeLink(2, "http://www.b.com"),	// 12
+		DbTestHelper::FakeLink(2, "http://www.c.com"),	// 13
+		DbTestHelper::FakeLink(2, "http://www.c.com"),	// 14
+		DbTestHelper::FakeLink(2, "http://www.d.com"),	// 15
+		DbTestHelper::FakeLink(2, "http://www.d.com"),	// 16
 	};
 
 	{

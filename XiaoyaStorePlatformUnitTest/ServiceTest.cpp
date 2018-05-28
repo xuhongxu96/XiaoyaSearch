@@ -14,9 +14,8 @@ using grpc::ServerBuilder;
 using grpc::ServerContext;
 using grpc::Status;
 
-std::promise<void> exitRequested;
 
-void StartServer()
+void StartServer(std::promise<void> &exitRequested)
 {
 	auto config = DbTestHelper::InitStoreConfig();
 	UrlFrontierItemStore urlFrontierItemStore(config);
@@ -59,7 +58,8 @@ TEST(ServiceTest, TestUrlFrontierItemService)
 {
 	DbTestHelper::DeleteDB<UrlFrontierItemStore>();
 
-	std::thread serverThread(StartServer);
+	std::promise<void> exitRequested;
+	std::thread serverThread(StartServer, std::ref(exitRequested));
 
 	std::thread clientThread([]()
 	{
@@ -210,6 +210,173 @@ TEST(ServiceTest, TestUrlFrontierItemService)
 
 			ASSERT_TRUE(result.is_successful());
 			ASSERT_EQ("http://www.a.com", result.url());
+		}
+	});
+
+	clientThread.join();
+	exitRequested.set_value();
+	serverThread.join();
+}
+
+TEST(ServiceTest, TestUrlFileService)
+{
+	DbTestHelper::DeleteDB<UrlFileStore>();
+
+	std::promise<void> exitRequested;
+	std::thread serverThread(StartServer, std::ref(exitRequested));
+
+	std::thread clientThread([]()
+	{
+		auto channel = grpc::CreateChannel("localhost:50051",
+			grpc::InsecureChannelCredentials());
+		auto service = UrlFileService::NewStub(channel);
+
+		{
+			grpc::ClientContext context;
+
+			ArgUrlFile arg;
+			arg.mutable_urlfile()->CopyFrom(DbTestHelper::FakeUrlFile("http://www.a.com",
+				DateTimeHelper::FromDays(1), "a"));
+
+			ResultWithUrlFileAndOldId result;
+
+			service->SaveUrlFileAndGetOldId(&context, arg, &result);
+
+			ASSERT_TRUE(result.is_successful());
+			ASSERT_EQ(1, result.urlfile().urlfile_id());
+			ASSERT_EQ(0, result.old_urlfile_id());
+		}
+
+		{
+			grpc::ClientContext context;
+
+			ArgUrlFile arg;
+			arg.mutable_urlfile()->CopyFrom(DbTestHelper::FakeUrlFile("http://www.b.com",
+				DateTimeHelper::FromDays(1), "b"));
+
+			ResultWithUrlFileAndOldId result;
+
+			service->SaveUrlFileAndGetOldId(&context, arg, &result);
+
+			ASSERT_TRUE(result.is_successful());
+			ASSERT_EQ(2, result.urlfile().urlfile_id());
+			ASSERT_EQ(0, result.old_urlfile_id());
+		}
+		
+		{
+			grpc::ClientContext context;
+
+			ArgUrlFile arg;
+			arg.mutable_urlfile()->CopyFrom(DbTestHelper::FakeUrlFile("http://www.a.com",
+				DateTimeHelper::FromDays(1), "aa"));
+
+			ResultWithUrlFileAndOldId result;
+
+			service->SaveUrlFileAndGetOldId(&context, arg, &result);
+
+			ASSERT_TRUE(result.is_successful());
+			ASSERT_EQ(3, result.urlfile().urlfile_id());
+			ASSERT_EQ(1, result.old_urlfile_id());
+		}
+
+		{
+			grpc::ClientContext context;
+			ResultWithCount result;
+
+			service->GetCount(&context, ArgVoid(), &result);
+
+			ASSERT_TRUE(result.is_successful());
+			ASSERT_EQ(3, result.count());
+		}
+
+		{
+			grpc::ClientContext context;
+			ArgId id;
+			id.set_id(3);
+
+			ResultWithUrlFile result;
+
+			service->GetUrlFileById(&context, id, &result);
+
+			ASSERT_TRUE(result.is_successful());
+			ASSERT_EQ("http://www.a.com", result.urlfile().url());
+			ASSERT_EQ("aa", result.urlfile().file_hash());
+		}
+
+		{
+			grpc::ClientContext context;
+
+			ArgUrl url;
+			url.set_url("http://www.a.com");
+
+			ResultWithUrlFile result;
+
+			service->GetUrlFileByUrl(&context, url, &result);
+
+			ASSERT_TRUE(result.is_successful());
+			ASSERT_EQ(3, result.urlfile().urlfile_id());
+			ASSERT_EQ("aa", result.urlfile().file_hash());
+		}
+
+		{
+			grpc::ClientContext context;
+
+			ArgHash hash;
+			hash.set_hash("b");
+
+			ResultWithUrlFiles result;
+
+			service->GetUrlFilesByHash(&context, hash, &result);
+
+			ASSERT_TRUE(result.is_successful());
+			ASSERT_EQ(1, result.urlfiles_size());
+			ASSERT_EQ(2, result.urlfiles().Get(0).urlfile_id());
+			ASSERT_EQ("http://www.b.com", result.urlfiles().Get(0).url());
+		}
+
+		{
+			grpc::ClientContext context;
+
+			ResultWithUrlFile result;
+
+			service->GetForIndex(&context, ArgVoid(), &result);
+
+			ASSERT_TRUE(result.is_successful());
+			ASSERT_EQ("http://www.a.com", result.urlfile().url());
+		}
+
+		{
+			grpc::ClientContext context;
+
+			ResultWithUrlFile result;
+
+			service->GetForIndex(&context, ArgVoid(), &result);
+
+			ASSERT_TRUE(result.is_successful());
+			ASSERT_EQ("http://www.b.com", result.urlfile().url());
+		}
+
+		{
+			grpc::ClientContext context;
+
+			ResultWithUrlFile result;
+
+			service->GetForIndex(&context, ArgVoid(), &result);
+
+			ASSERT_FALSE(result.is_successful());
+		}
+
+		{
+			grpc::ClientContext context;
+
+			ArgUrl url;
+			url.set_url("http://www.a.com");
+
+			Result result;
+
+			service->FinishIndex(&context, url, &result);
+
+			ASSERT_TRUE(result.is_successful());
 		}
 	});
 

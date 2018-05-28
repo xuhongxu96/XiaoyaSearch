@@ -8,38 +8,13 @@ using namespace XiaoyaStore::Model;
 using namespace XiaoyaStore::Helper;
 using namespace rocksdb;
 
-UrlFile FakeUrlFile(const std::string &url,
-	const uint64_t updateInterval,
-	const std::string &hash = "a")
-{
-	UrlFile urlFile;
-
-	urlFile.set_charset("UTF-8");
-	urlFile.set_content("Hello, world!");
-	urlFile.set_text_content("Hello, world!");
-	urlFile.set_file_hash(hash);
-	urlFile.set_file_path("a");
-	urlFile.set_header_count(1);
-	urlFile.set_header_total_length(1);
-	urlFile.set_in_link_count(1);
-	urlFile.set_in_link_total_length(1);
-	urlFile.set_mime_type("text/html");
-	urlFile.set_page_rank(0);
-	urlFile.set_publish_date(DateTimeHelper::Now());
-	urlFile.set_title("a");
-	urlFile.set_url(url);
-	urlFile.set_update_interval(updateInterval);
-
-	return urlFile;
-}
-
 TEST(UrlFileStoreTest, TestSaveNew)
 {
 	DbTestHelper::DeleteDB<UrlFileStore>();
 
 	auto config = DbTestHelper::InitStoreConfig();
 
-	auto urlFile = FakeUrlFile("http://www.a.com", DateTimeHelper::FromDays(2));
+	auto urlFile = DbTestHelper::DbTestHelper::FakeUrlFile("http://www.a.com", DateTimeHelper::FromDays(2));
 
 	{
 		UrlFileStore store(config);
@@ -71,8 +46,8 @@ TEST(UrlFileStoreTest, TestGetUrlFileById)
 
 	auto config = DbTestHelper::InitStoreConfig();
 
-	auto urlFile1 = FakeUrlFile("http://www.a.com", DateTimeHelper::FromDays(2));
-	auto urlFile2 = FakeUrlFile("http://www.b.com", DateTimeHelper::FromDays(2));
+	auto urlFile1 = DbTestHelper::FakeUrlFile("http://www.a.com", DateTimeHelper::FromDays(2));
+	auto urlFile2 = DbTestHelper::FakeUrlFile("http://www.b.com", DateTimeHelper::FromDays(2));
 
 	{
 		UrlFileStore store(config);
@@ -102,8 +77,8 @@ TEST(UrlFileStoreTest, TestGetUrlFileByUrl)
 
 	auto config = DbTestHelper::InitStoreConfig();
 
-	auto urlFile1 = FakeUrlFile("http://www.a.com", DateTimeHelper::FromDays(2));
-	auto urlFile2 = FakeUrlFile("http://www.b.com", DateTimeHelper::FromDays(2));
+	auto urlFile1 = DbTestHelper::FakeUrlFile("http://www.a.com", DateTimeHelper::FromDays(2));
+	auto urlFile2 = DbTestHelper::FakeUrlFile("http://www.b.com", DateTimeHelper::FromDays(2));
 
 	{
 		UrlFileStore store(config);
@@ -136,9 +111,9 @@ TEST(UrlFileStoreTest, TestGetUrlFilesByHash)
 	{
 		UrlFileStore store(config);
 
-		auto urlFile1 = FakeUrlFile("http://www.a.com", DateTimeHelper::FromDays(2), "a");
-		auto urlFile2 = FakeUrlFile("http://www.b.com", DateTimeHelper::FromDays(2), "a");
-		auto urlFile3 = FakeUrlFile("http://www.c.com", DateTimeHelper::FromDays(2), "b");
+		auto urlFile1 = DbTestHelper::FakeUrlFile("http://www.a.com", DateTimeHelper::FromDays(2), "a");
+		auto urlFile2 = DbTestHelper::FakeUrlFile("http://www.b.com", DateTimeHelper::FromDays(2), "a");
+		auto urlFile3 = DbTestHelper::FakeUrlFile("http://www.c.com", DateTimeHelper::FromDays(2), "b");
 
 		ASSERT_EQ(0, store.SaveUrlFileAndGetOldId(urlFile1));
 		ASSERT_EQ(1, urlFile1.urlfile_id());
@@ -181,7 +156,7 @@ TEST(UrlFileStoreTest, TestSaveAndGetOldId)
 	{
 		UrlFileStore store(config);
 
-		auto urlFile = FakeUrlFile("http://www.a.com", DateTimeHelper::FromDays(2));
+		auto urlFile = DbTestHelper::FakeUrlFile("http://www.a.com", DateTimeHelper::FromDays(2));
 
 		ASSERT_EQ(0, store.SaveUrlFileAndGetOldId(urlFile));
 		ASSERT_EQ(1, urlFile.urlfile_id());
@@ -190,7 +165,7 @@ TEST(UrlFileStoreTest, TestSaveAndGetOldId)
 	{
 		UrlFileStore store(config);
 
-		auto urlFile = FakeUrlFile("http://www.a.com", DateTimeHelper::FromDays(1));
+		auto urlFile = DbTestHelper::FakeUrlFile("http://www.a.com", DateTimeHelper::FromDays(1));
 
 		ASSERT_EQ(1, store.SaveUrlFileAndGetOldId(urlFile));
 		ASSERT_EQ(2, urlFile.urlfile_id());
@@ -206,9 +181,9 @@ TEST(UrlFileStoreTest, TestGetCount)
 	{
 		UrlFileStore store(config);
 
-		auto urlFile1 = FakeUrlFile("http://www.a.com", DateTimeHelper::FromDays(2), "a");
-		auto urlFile2 = FakeUrlFile("http://www.b.com", DateTimeHelper::FromDays(2), "a");
-		auto urlFile3 = FakeUrlFile("http://www.c.com", DateTimeHelper::FromDays(2), "b");
+		auto urlFile1 = DbTestHelper::FakeUrlFile("http://www.a.com", DateTimeHelper::FromDays(2), "a");
+		auto urlFile2 = DbTestHelper::FakeUrlFile("http://www.b.com", DateTimeHelper::FromDays(2), "a");
+		auto urlFile3 = DbTestHelper::FakeUrlFile("http://www.c.com", DateTimeHelper::FromDays(2), "b");
 
 		ASSERT_EQ(0, store.SaveUrlFileAndGetOldId(urlFile1));
 		ASSERT_EQ(1, urlFile1.urlfile_id());
@@ -236,9 +211,9 @@ TEST(UrlFileStoreTest, TestGetForIndexAndFinishIndex)
 	{
 		UrlFileStore store(config);
 
-		auto urlFile1 = FakeUrlFile("http://www.a.com", DateTimeHelper::FromDays(2), "a");
-		auto urlFile2 = FakeUrlFile("http://www.b.com", DateTimeHelper::FromDays(2), "a");
-		auto urlFile3 = FakeUrlFile("http://www.c.com", DateTimeHelper::FromDays(2), "b");
+		auto urlFile1 = DbTestHelper::FakeUrlFile("http://www.a.com", DateTimeHelper::FromDays(2), "a");
+		auto urlFile2 = DbTestHelper::FakeUrlFile("http://www.b.com", DateTimeHelper::FromDays(2), "a");
+		auto urlFile3 = DbTestHelper::FakeUrlFile("http://www.c.com", DateTimeHelper::FromDays(2), "b");
 
 		ASSERT_EQ(0, store.SaveUrlFileAndGetOldId(urlFile1));
 		ASSERT_EQ(1, urlFile1.urlfile_id());
@@ -268,7 +243,7 @@ TEST(UrlFileStoreTest, TestGetForIndexAndFinishIndex)
 
 		ASSERT_FALSE(store.GetForIndex(urlFile));
 
-		auto urlFile4 = FakeUrlFile("http://www.d.com", DateTimeHelper::FromDays(2), "b");
+		auto urlFile4 = DbTestHelper::FakeUrlFile("http://www.d.com", DateTimeHelper::FromDays(2), "b");
 
 		ASSERT_EQ(0, store.SaveUrlFileAndGetOldId(urlFile4));
 		ASSERT_EQ(4, urlFile4.urlfile_id());
@@ -322,7 +297,7 @@ TEST(UrlFileStoreTest, StressTestSave)
 		UrlFileStore store(config);
 		for (int i = 1; i <= testCount; ++i)
 		{
-			auto urlFile = FakeUrlFile("http://www.a" + std::to_string(i) + ".com",
+			auto urlFile = DbTestHelper::FakeUrlFile("http://www.a" + std::to_string(i) + ".com",
 				DateTimeHelper::FromDays(2), std::to_string(i));
 			ASSERT_EQ(0, store.SaveUrlFileAndGetOldId(urlFile));
 			ASSERT_EQ(i, urlFile.urlfile_id());
@@ -348,7 +323,7 @@ TEST(UrlFileStoreTest, StressTestLoad)
 		UrlFileStore store(config);
 		for (int i = 1; i <= testCount; ++i)
 		{
-			auto urlFile = FakeUrlFile("http://www.a" + std::to_string(i) + ".com",
+			auto urlFile = DbTestHelper::FakeUrlFile("http://www.a" + std::to_string(i) + ".com",
 				DateTimeHelper::FromDays(2), std::to_string(i));
 			ASSERT_EQ(0, store.SaveUrlFileAndGetOldId(urlFile));
 			ASSERT_EQ(i, urlFile.urlfile_id());
