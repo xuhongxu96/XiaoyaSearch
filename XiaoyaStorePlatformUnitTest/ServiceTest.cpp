@@ -384,3 +384,96 @@ TEST(ServiceTest, TestUrlFileService)
 	exitRequested.set_value();
 	serverThread.join();
 }
+
+TEST(ServiceTest, TestPostingListService)
+{
+	DbTestHelper::DeleteDB<PostingListStore>();
+
+	std::promise<void> exitRequested;
+	std::thread serverThread(StartServer, std::ref(exitRequested));
+
+	std::thread clientThread([]()
+	{
+		auto channel = grpc::CreateChannel("localhost:50051",
+			grpc::InsecureChannelCredentials());
+		auto service = PostingListService::NewStub(channel);
+
+		{
+			grpc::ClientContext context;
+
+			ArgPostingList arg;
+			arg.mutable_postinglist()->set_word("a");
+			arg.mutable_postinglist()->set_word_frequency(1);
+			arg.mutable_postinglist()->set_document_frequency(1);
+			arg.mutable_postinglist()->set_is_add(true);
+			arg.mutable_postinglist()->add_postings(1);
+			arg.mutable_postinglist()->add_postings(2);
+
+			Result result;
+
+			service->SavePostingList(&context, arg, &result);
+
+			ASSERT_TRUE(result.is_successful());
+		}
+
+		{
+			grpc::ClientContext context;
+
+			ArgPostingList arg;
+			arg.mutable_postinglist()->set_word("a");
+			arg.mutable_postinglist()->set_word_frequency(3);
+			arg.mutable_postinglist()->set_document_frequency(2);
+			arg.mutable_postinglist()->set_is_add(true);
+			arg.mutable_postinglist()->add_postings(3);
+			arg.mutable_postinglist()->add_postings(2);
+
+			Result result;
+
+			service->SavePostingList(&context, arg, &result);
+
+			ASSERT_TRUE(result.is_successful());
+		}
+
+		{
+			grpc::ClientContext context;
+
+			ArgPostingList arg;
+			arg.mutable_postinglist()->set_word("a");
+			arg.mutable_postinglist()->set_word_frequency(2);
+			arg.mutable_postinglist()->set_document_frequency(1);
+			arg.mutable_postinglist()->set_is_add(false);
+			arg.mutable_postinglist()->add_postings(2);
+
+			Result result;
+
+			service->SavePostingList(&context, arg, &result);
+
+			ASSERT_TRUE(result.is_successful());
+		}
+
+		{
+			grpc::ClientContext context;
+
+			ArgWord word;
+			word.set_word("a");
+
+			ResultWithPostingList result;
+
+			service->GetPostingList(&context, word, &result);
+
+			ASSERT_TRUE(result.is_successful());
+			ASSERT_EQ(2, result.postinglist().word_frequency());
+			ASSERT_EQ(2, result.postinglist().document_frequency());
+
+			std::set<uint64_t> postings(result.postinglist().postings().begin(),
+				result.postinglist().postings().end());
+			ASSERT_EQ(1, postings.count(1));
+			ASSERT_EQ(0, postings.count(2));
+			ASSERT_EQ(1, postings.count(3));
+		}
+	});
+
+	clientThread.join();
+	exitRequested.set_value();
+	serverThread.join();
+}
