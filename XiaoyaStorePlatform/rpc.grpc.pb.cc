@@ -192,200 +192,200 @@ UrlFrontierItemService::Service::~Service() {
 }
 
 
-static const char* UrlFileStoreService_method_names[] = {
-  "/XiaoyaStore.Service.UrlFileStoreService/GetUrlFileById",
-  "/XiaoyaStore.Service.UrlFileStoreService/GetUrlFileByUrl",
-  "/XiaoyaStore.Service.UrlFileStoreService/GetUrlFilesByHash",
-  "/XiaoyaStore.Service.UrlFileStoreService/SaveUrlFileAndGetOldId",
-  "/XiaoyaStore.Service.UrlFileStoreService/GetCount",
-  "/XiaoyaStore.Service.UrlFileStoreService/GetForIndex",
-  "/XiaoyaStore.Service.UrlFileStoreService/FinishIndex",
+static const char* UrlFileService_method_names[] = {
+  "/XiaoyaStore.Service.UrlFileService/GetUrlFileById",
+  "/XiaoyaStore.Service.UrlFileService/GetUrlFileByUrl",
+  "/XiaoyaStore.Service.UrlFileService/GetUrlFilesByHash",
+  "/XiaoyaStore.Service.UrlFileService/SaveUrlFileAndGetOldId",
+  "/XiaoyaStore.Service.UrlFileService/GetCount",
+  "/XiaoyaStore.Service.UrlFileService/GetForIndex",
+  "/XiaoyaStore.Service.UrlFileService/FinishIndex",
 };
 
-std::unique_ptr< UrlFileStoreService::Stub> UrlFileStoreService::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {
+std::unique_ptr< UrlFileService::Stub> UrlFileService::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {
   (void)options;
-  std::unique_ptr< UrlFileStoreService::Stub> stub(new UrlFileStoreService::Stub(channel));
+  std::unique_ptr< UrlFileService::Stub> stub(new UrlFileService::Stub(channel));
   return stub;
 }
 
-UrlFileStoreService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel)
-  : channel_(channel), rpcmethod_GetUrlFileById_(UrlFileStoreService_method_names[0], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_GetUrlFileByUrl_(UrlFileStoreService_method_names[1], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_GetUrlFilesByHash_(UrlFileStoreService_method_names[2], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_SaveUrlFileAndGetOldId_(UrlFileStoreService_method_names[3], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_GetCount_(UrlFileStoreService_method_names[4], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_GetForIndex_(UrlFileStoreService_method_names[5], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_FinishIndex_(UrlFileStoreService_method_names[6], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+UrlFileService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel)
+  : channel_(channel), rpcmethod_GetUrlFileById_(UrlFileService_method_names[0], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_GetUrlFileByUrl_(UrlFileService_method_names[1], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_GetUrlFilesByHash_(UrlFileService_method_names[2], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_SaveUrlFileAndGetOldId_(UrlFileService_method_names[3], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_GetCount_(UrlFileService_method_names[4], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_GetForIndex_(UrlFileService_method_names[5], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_FinishIndex_(UrlFileService_method_names[6], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   {}
 
-::grpc::Status UrlFileStoreService::Stub::GetUrlFileById(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgId& request, ::XiaoyaStore::Service::ResultWithUrlFile* response) {
+::grpc::Status UrlFileService::Stub::GetUrlFileById(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgId& request, ::XiaoyaStore::Service::ResultWithUrlFile* response) {
   return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_GetUrlFileById_, context, request, response);
 }
 
-::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::ResultWithUrlFile>* UrlFileStoreService::Stub::AsyncGetUrlFileByIdRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgId& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::ResultWithUrlFile>* UrlFileService::Stub::AsyncGetUrlFileByIdRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgId& request, ::grpc::CompletionQueue* cq) {
   return ::grpc::internal::ClientAsyncResponseReaderFactory< ::XiaoyaStore::Service::ResultWithUrlFile>::Create(channel_.get(), cq, rpcmethod_GetUrlFileById_, context, request, true);
 }
 
-::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::ResultWithUrlFile>* UrlFileStoreService::Stub::PrepareAsyncGetUrlFileByIdRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgId& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::ResultWithUrlFile>* UrlFileService::Stub::PrepareAsyncGetUrlFileByIdRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgId& request, ::grpc::CompletionQueue* cq) {
   return ::grpc::internal::ClientAsyncResponseReaderFactory< ::XiaoyaStore::Service::ResultWithUrlFile>::Create(channel_.get(), cq, rpcmethod_GetUrlFileById_, context, request, false);
 }
 
-::grpc::Status UrlFileStoreService::Stub::GetUrlFileByUrl(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrl& request, ::XiaoyaStore::Service::ResultWithUrlFile* response) {
+::grpc::Status UrlFileService::Stub::GetUrlFileByUrl(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrl& request, ::XiaoyaStore::Service::ResultWithUrlFile* response) {
   return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_GetUrlFileByUrl_, context, request, response);
 }
 
-::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::ResultWithUrlFile>* UrlFileStoreService::Stub::AsyncGetUrlFileByUrlRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrl& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::ResultWithUrlFile>* UrlFileService::Stub::AsyncGetUrlFileByUrlRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrl& request, ::grpc::CompletionQueue* cq) {
   return ::grpc::internal::ClientAsyncResponseReaderFactory< ::XiaoyaStore::Service::ResultWithUrlFile>::Create(channel_.get(), cq, rpcmethod_GetUrlFileByUrl_, context, request, true);
 }
 
-::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::ResultWithUrlFile>* UrlFileStoreService::Stub::PrepareAsyncGetUrlFileByUrlRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrl& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::ResultWithUrlFile>* UrlFileService::Stub::PrepareAsyncGetUrlFileByUrlRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrl& request, ::grpc::CompletionQueue* cq) {
   return ::grpc::internal::ClientAsyncResponseReaderFactory< ::XiaoyaStore::Service::ResultWithUrlFile>::Create(channel_.get(), cq, rpcmethod_GetUrlFileByUrl_, context, request, false);
 }
 
-::grpc::Status UrlFileStoreService::Stub::GetUrlFilesByHash(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgHash& request, ::XiaoyaStore::Service::ResultWithUrlFiles* response) {
+::grpc::Status UrlFileService::Stub::GetUrlFilesByHash(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgHash& request, ::XiaoyaStore::Service::ResultWithUrlFiles* response) {
   return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_GetUrlFilesByHash_, context, request, response);
 }
 
-::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::ResultWithUrlFiles>* UrlFileStoreService::Stub::AsyncGetUrlFilesByHashRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgHash& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::ResultWithUrlFiles>* UrlFileService::Stub::AsyncGetUrlFilesByHashRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgHash& request, ::grpc::CompletionQueue* cq) {
   return ::grpc::internal::ClientAsyncResponseReaderFactory< ::XiaoyaStore::Service::ResultWithUrlFiles>::Create(channel_.get(), cq, rpcmethod_GetUrlFilesByHash_, context, request, true);
 }
 
-::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::ResultWithUrlFiles>* UrlFileStoreService::Stub::PrepareAsyncGetUrlFilesByHashRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgHash& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::ResultWithUrlFiles>* UrlFileService::Stub::PrepareAsyncGetUrlFilesByHashRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgHash& request, ::grpc::CompletionQueue* cq) {
   return ::grpc::internal::ClientAsyncResponseReaderFactory< ::XiaoyaStore::Service::ResultWithUrlFiles>::Create(channel_.get(), cq, rpcmethod_GetUrlFilesByHash_, context, request, false);
 }
 
-::grpc::Status UrlFileStoreService::Stub::SaveUrlFileAndGetOldId(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrlFile& request, ::XiaoyaStore::Service::ResultWithUrlFileAndOldId* response) {
+::grpc::Status UrlFileService::Stub::SaveUrlFileAndGetOldId(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrlFile& request, ::XiaoyaStore::Service::ResultWithUrlFileAndOldId* response) {
   return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_SaveUrlFileAndGetOldId_, context, request, response);
 }
 
-::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::ResultWithUrlFileAndOldId>* UrlFileStoreService::Stub::AsyncSaveUrlFileAndGetOldIdRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrlFile& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::ResultWithUrlFileAndOldId>* UrlFileService::Stub::AsyncSaveUrlFileAndGetOldIdRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrlFile& request, ::grpc::CompletionQueue* cq) {
   return ::grpc::internal::ClientAsyncResponseReaderFactory< ::XiaoyaStore::Service::ResultWithUrlFileAndOldId>::Create(channel_.get(), cq, rpcmethod_SaveUrlFileAndGetOldId_, context, request, true);
 }
 
-::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::ResultWithUrlFileAndOldId>* UrlFileStoreService::Stub::PrepareAsyncSaveUrlFileAndGetOldIdRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrlFile& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::ResultWithUrlFileAndOldId>* UrlFileService::Stub::PrepareAsyncSaveUrlFileAndGetOldIdRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrlFile& request, ::grpc::CompletionQueue* cq) {
   return ::grpc::internal::ClientAsyncResponseReaderFactory< ::XiaoyaStore::Service::ResultWithUrlFileAndOldId>::Create(channel_.get(), cq, rpcmethod_SaveUrlFileAndGetOldId_, context, request, false);
 }
 
-::grpc::Status UrlFileStoreService::Stub::GetCount(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgVoid& request, ::XiaoyaStore::Service::ResultWithCount* response) {
+::grpc::Status UrlFileService::Stub::GetCount(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgVoid& request, ::XiaoyaStore::Service::ResultWithCount* response) {
   return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_GetCount_, context, request, response);
 }
 
-::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::ResultWithCount>* UrlFileStoreService::Stub::AsyncGetCountRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgVoid& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::ResultWithCount>* UrlFileService::Stub::AsyncGetCountRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgVoid& request, ::grpc::CompletionQueue* cq) {
   return ::grpc::internal::ClientAsyncResponseReaderFactory< ::XiaoyaStore::Service::ResultWithCount>::Create(channel_.get(), cq, rpcmethod_GetCount_, context, request, true);
 }
 
-::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::ResultWithCount>* UrlFileStoreService::Stub::PrepareAsyncGetCountRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgVoid& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::ResultWithCount>* UrlFileService::Stub::PrepareAsyncGetCountRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgVoid& request, ::grpc::CompletionQueue* cq) {
   return ::grpc::internal::ClientAsyncResponseReaderFactory< ::XiaoyaStore::Service::ResultWithCount>::Create(channel_.get(), cq, rpcmethod_GetCount_, context, request, false);
 }
 
-::grpc::Status UrlFileStoreService::Stub::GetForIndex(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgVoid& request, ::XiaoyaStore::Service::ResultWithUrlFile* response) {
+::grpc::Status UrlFileService::Stub::GetForIndex(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgVoid& request, ::XiaoyaStore::Service::ResultWithUrlFile* response) {
   return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_GetForIndex_, context, request, response);
 }
 
-::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::ResultWithUrlFile>* UrlFileStoreService::Stub::AsyncGetForIndexRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgVoid& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::ResultWithUrlFile>* UrlFileService::Stub::AsyncGetForIndexRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgVoid& request, ::grpc::CompletionQueue* cq) {
   return ::grpc::internal::ClientAsyncResponseReaderFactory< ::XiaoyaStore::Service::ResultWithUrlFile>::Create(channel_.get(), cq, rpcmethod_GetForIndex_, context, request, true);
 }
 
-::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::ResultWithUrlFile>* UrlFileStoreService::Stub::PrepareAsyncGetForIndexRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgVoid& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::ResultWithUrlFile>* UrlFileService::Stub::PrepareAsyncGetForIndexRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgVoid& request, ::grpc::CompletionQueue* cq) {
   return ::grpc::internal::ClientAsyncResponseReaderFactory< ::XiaoyaStore::Service::ResultWithUrlFile>::Create(channel_.get(), cq, rpcmethod_GetForIndex_, context, request, false);
 }
 
-::grpc::Status UrlFileStoreService::Stub::FinishIndex(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrl& request, ::XiaoyaStore::Service::Result* response) {
+::grpc::Status UrlFileService::Stub::FinishIndex(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrl& request, ::XiaoyaStore::Service::Result* response) {
   return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_FinishIndex_, context, request, response);
 }
 
-::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>* UrlFileStoreService::Stub::AsyncFinishIndexRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrl& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>* UrlFileService::Stub::AsyncFinishIndexRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrl& request, ::grpc::CompletionQueue* cq) {
   return ::grpc::internal::ClientAsyncResponseReaderFactory< ::XiaoyaStore::Service::Result>::Create(channel_.get(), cq, rpcmethod_FinishIndex_, context, request, true);
 }
 
-::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>* UrlFileStoreService::Stub::PrepareAsyncFinishIndexRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrl& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>* UrlFileService::Stub::PrepareAsyncFinishIndexRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrl& request, ::grpc::CompletionQueue* cq) {
   return ::grpc::internal::ClientAsyncResponseReaderFactory< ::XiaoyaStore::Service::Result>::Create(channel_.get(), cq, rpcmethod_FinishIndex_, context, request, false);
 }
 
-UrlFileStoreService::Service::Service() {
+UrlFileService::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      UrlFileStoreService_method_names[0],
+      UrlFileService_method_names[0],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< UrlFileStoreService::Service, ::XiaoyaStore::Service::ArgId, ::XiaoyaStore::Service::ResultWithUrlFile>(
-          std::mem_fn(&UrlFileStoreService::Service::GetUrlFileById), this)));
+      new ::grpc::internal::RpcMethodHandler< UrlFileService::Service, ::XiaoyaStore::Service::ArgId, ::XiaoyaStore::Service::ResultWithUrlFile>(
+          std::mem_fn(&UrlFileService::Service::GetUrlFileById), this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      UrlFileStoreService_method_names[1],
+      UrlFileService_method_names[1],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< UrlFileStoreService::Service, ::XiaoyaStore::Service::ArgUrl, ::XiaoyaStore::Service::ResultWithUrlFile>(
-          std::mem_fn(&UrlFileStoreService::Service::GetUrlFileByUrl), this)));
+      new ::grpc::internal::RpcMethodHandler< UrlFileService::Service, ::XiaoyaStore::Service::ArgUrl, ::XiaoyaStore::Service::ResultWithUrlFile>(
+          std::mem_fn(&UrlFileService::Service::GetUrlFileByUrl), this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      UrlFileStoreService_method_names[2],
+      UrlFileService_method_names[2],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< UrlFileStoreService::Service, ::XiaoyaStore::Service::ArgHash, ::XiaoyaStore::Service::ResultWithUrlFiles>(
-          std::mem_fn(&UrlFileStoreService::Service::GetUrlFilesByHash), this)));
+      new ::grpc::internal::RpcMethodHandler< UrlFileService::Service, ::XiaoyaStore::Service::ArgHash, ::XiaoyaStore::Service::ResultWithUrlFiles>(
+          std::mem_fn(&UrlFileService::Service::GetUrlFilesByHash), this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      UrlFileStoreService_method_names[3],
+      UrlFileService_method_names[3],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< UrlFileStoreService::Service, ::XiaoyaStore::Service::ArgUrlFile, ::XiaoyaStore::Service::ResultWithUrlFileAndOldId>(
-          std::mem_fn(&UrlFileStoreService::Service::SaveUrlFileAndGetOldId), this)));
+      new ::grpc::internal::RpcMethodHandler< UrlFileService::Service, ::XiaoyaStore::Service::ArgUrlFile, ::XiaoyaStore::Service::ResultWithUrlFileAndOldId>(
+          std::mem_fn(&UrlFileService::Service::SaveUrlFileAndGetOldId), this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      UrlFileStoreService_method_names[4],
+      UrlFileService_method_names[4],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< UrlFileStoreService::Service, ::XiaoyaStore::Service::ArgVoid, ::XiaoyaStore::Service::ResultWithCount>(
-          std::mem_fn(&UrlFileStoreService::Service::GetCount), this)));
+      new ::grpc::internal::RpcMethodHandler< UrlFileService::Service, ::XiaoyaStore::Service::ArgVoid, ::XiaoyaStore::Service::ResultWithCount>(
+          std::mem_fn(&UrlFileService::Service::GetCount), this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      UrlFileStoreService_method_names[5],
+      UrlFileService_method_names[5],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< UrlFileStoreService::Service, ::XiaoyaStore::Service::ArgVoid, ::XiaoyaStore::Service::ResultWithUrlFile>(
-          std::mem_fn(&UrlFileStoreService::Service::GetForIndex), this)));
+      new ::grpc::internal::RpcMethodHandler< UrlFileService::Service, ::XiaoyaStore::Service::ArgVoid, ::XiaoyaStore::Service::ResultWithUrlFile>(
+          std::mem_fn(&UrlFileService::Service::GetForIndex), this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      UrlFileStoreService_method_names[6],
+      UrlFileService_method_names[6],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< UrlFileStoreService::Service, ::XiaoyaStore::Service::ArgUrl, ::XiaoyaStore::Service::Result>(
-          std::mem_fn(&UrlFileStoreService::Service::FinishIndex), this)));
+      new ::grpc::internal::RpcMethodHandler< UrlFileService::Service, ::XiaoyaStore::Service::ArgUrl, ::XiaoyaStore::Service::Result>(
+          std::mem_fn(&UrlFileService::Service::FinishIndex), this)));
 }
 
-UrlFileStoreService::Service::~Service() {
+UrlFileService::Service::~Service() {
 }
 
-::grpc::Status UrlFileStoreService::Service::GetUrlFileById(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgId* request, ::XiaoyaStore::Service::ResultWithUrlFile* response) {
+::grpc::Status UrlFileService::Service::GetUrlFileById(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgId* request, ::XiaoyaStore::Service::ResultWithUrlFile* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status UrlFileStoreService::Service::GetUrlFileByUrl(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgUrl* request, ::XiaoyaStore::Service::ResultWithUrlFile* response) {
+::grpc::Status UrlFileService::Service::GetUrlFileByUrl(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgUrl* request, ::XiaoyaStore::Service::ResultWithUrlFile* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status UrlFileStoreService::Service::GetUrlFilesByHash(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgHash* request, ::XiaoyaStore::Service::ResultWithUrlFiles* response) {
+::grpc::Status UrlFileService::Service::GetUrlFilesByHash(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgHash* request, ::XiaoyaStore::Service::ResultWithUrlFiles* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status UrlFileStoreService::Service::SaveUrlFileAndGetOldId(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgUrlFile* request, ::XiaoyaStore::Service::ResultWithUrlFileAndOldId* response) {
+::grpc::Status UrlFileService::Service::SaveUrlFileAndGetOldId(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgUrlFile* request, ::XiaoyaStore::Service::ResultWithUrlFileAndOldId* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status UrlFileStoreService::Service::GetCount(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgVoid* request, ::XiaoyaStore::Service::ResultWithCount* response) {
+::grpc::Status UrlFileService::Service::GetCount(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgVoid* request, ::XiaoyaStore::Service::ResultWithCount* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status UrlFileStoreService::Service::GetForIndex(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgVoid* request, ::XiaoyaStore::Service::ResultWithUrlFile* response) {
+::grpc::Status UrlFileService::Service::GetForIndex(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgVoid* request, ::XiaoyaStore::Service::ResultWithUrlFile* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status UrlFileStoreService::Service::FinishIndex(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgUrl* request, ::XiaoyaStore::Service::Result* response) {
+::grpc::Status UrlFileService::Service::FinishIndex(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgUrl* request, ::XiaoyaStore::Service::Result* response) {
   (void) context;
   (void) request;
   (void) response;

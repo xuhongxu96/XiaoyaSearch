@@ -518,10 +518,10 @@ class UrlFrontierItemService final {
   typedef WithStreamedUnaryMethod_Init<WithStreamedUnaryMethod_PushUrls<WithStreamedUnaryMethod_PushBackUrl<WithStreamedUnaryMethod_PopUrl<WithStreamedUnaryMethod_RemoveUrl<WithStreamedUnaryMethod_GetHostCount<Service > > > > > > StreamedService;
 };
 
-class UrlFileStoreService final {
+class UrlFileService final {
  public:
   static constexpr char const* service_full_name() {
-    return "XiaoyaStore.Service.UrlFileStoreService";
+    return "XiaoyaStore.Service.UrlFileService";
   }
   class StubInterface {
    public:

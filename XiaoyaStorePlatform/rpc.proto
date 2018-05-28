@@ -143,7 +143,7 @@ service UrlFrontierItemService
 	rpc GetHostCount(ArgHost) returns (ResultWithCount);
 }
 
-service UrlFileStoreService
+service UrlFileService
 {
 	rpc GetUrlFileById(ArgId) returns (ResultWithUrlFile);
 	rpc GetUrlFileByUrl(ArgUrl) returns (ResultWithUrlFile);
