@@ -935,22 +935,22 @@ void AddDescriptorsImpl() {
       "PostingList\032\033.XiaoyaStore.Service.Result"
       "\022Z\n\016GetPostingList\022\034.XiaoyaStore.Service"
       ".ArgWord\032*.XiaoyaStore.Service.ResultWit"
-      "hPostingList2\216\002\n\013LinkService\022[\n\021SaveLink"
-      "OfUrlFile\022).XiaoyaStore.Service.ArgSaveL"
-      "inkOfUrlFile\032\033.XiaoyaStore.Service.Resul"
-      "t\022N\n\013GetLinkById\022\032.XiaoyaStore.Service.A"
-      "rgId\032#.XiaoyaStore.Service.ResultWithLin"
-      "k\022R\n\rGetLinksByUrl\022\033.XiaoyaStore.Service"
-      ".ArgUrl\032$.XiaoyaStore.Service.ResultWith"
-      "Links2\317\001\n\024InvertedIndexService\022c\n\025ClearA"
-      "ndSaveIndicesOf\022-.XiaoyaStore.Service.Ar"
-      "gClearAndSaveIndicesOf\032\033.XiaoyaStore.Ser"
-      "vice.Result\022R\n\010GetIndex\022 .XiaoyaStore.Se"
-      "rvice.ArgIndexKey\032$.XiaoyaStore.Service."
-      "ResultWithIndexb\006proto3"
+      "hPostingList2\217\002\n\013LinkService\022\\\n\022SaveLink"
+      "sOfUrlFile\022).XiaoyaStore.Service.ArgSave"
+      "LinkOfUrlFile\032\033.XiaoyaStore.Service.Resu"
+      "lt\022N\n\013GetLinkById\022\032.XiaoyaStore.Service."
+      "ArgId\032#.XiaoyaStore.Service.ResultWithLi"
+      "nk\022R\n\rGetLinksByUrl\022\033.XiaoyaStore.Servic"
+      "e.ArgUrl\032$.XiaoyaStore.Service.ResultWit"
+      "hLinks2\317\001\n\024InvertedIndexService\022c\n\025Clear"
+      "AndSaveIndicesOf\022-.XiaoyaStore.Service.A"
+      "rgClearAndSaveIndicesOf\032\033.XiaoyaStore.Se"
+      "rvice.Result\022R\n\010GetIndex\022 .XiaoyaStore.S"
+      "ervice.ArgIndexKey\032$.XiaoyaStore.Service"
+      ".ResultWithIndexb\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 3263);
+      descriptor, 3264);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "rpc.proto", &protobuf_RegisterTypes);
   ::protobuf_models_2eproto::AddDescriptors();

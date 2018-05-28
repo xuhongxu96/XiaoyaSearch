@@ -162,7 +162,7 @@ service PostingListService
 
 service LinkService
 {
-	rpc SaveLinkOfUrlFile(ArgSaveLinkOfUrlFile) returns (Result);
+	rpc SaveLinksOfUrlFile(ArgSaveLinkOfUrlFile) returns (Result);
 	rpc GetLinkById(ArgId) returns (ResultWithLink);
 	rpc GetLinksByUrl(ArgUrl) returns (ResultWithLinks);
 }

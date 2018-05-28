@@ -156,6 +156,7 @@
     <ClInclude Include="DateTimeHelper.h" />
     <ClInclude Include="IdListOperator.h" />
     <ClInclude Include="InvertedIndexStore.h" />
+    <ClInclude Include="LinkServiceImpl.h" />
     <ClInclude Include="LinkStore.h" />
     <ClInclude Include="ModelCompare.h" />
     <ClInclude Include="models.pb.h" />
@@ -179,6 +180,7 @@
     <ClCompile Include="CounterOperator.cpp" />
     <ClCompile Include="IdListOperator.cpp" />
     <ClCompile Include="InvertedIndexStore.cpp" />
+    <ClCompile Include="LinkServiceImpl.cpp" />
     <ClCompile Include="LinkStore.cpp" />
     <ClCompile Include="ModelCompare.cpp" />
     <ClCompile Include="models.pb.cc" />

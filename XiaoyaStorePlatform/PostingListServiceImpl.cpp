@@ -6,7 +6,7 @@ using namespace XiaoyaStore::Service;
 using namespace XiaoyaStore::Store;
 using namespace XiaoyaStore::Model;
 
-PostingListServiceImpl::PostingListServiceImpl(Store::PostingListStore & store)
+PostingListServiceImpl::PostingListServiceImpl(PostingListStore & store)
 	:mStore(store)
 { }
 

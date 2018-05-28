@@ -465,7 +465,7 @@ PostingListService::Service::~Service() {
 
 
 static const char* LinkService_method_names[] = {
-  "/XiaoyaStore.Service.LinkService/SaveLinkOfUrlFile",
+  "/XiaoyaStore.Service.LinkService/SaveLinksOfUrlFile",
   "/XiaoyaStore.Service.LinkService/GetLinkById",
   "/XiaoyaStore.Service.LinkService/GetLinksByUrl",
 };
@@ -477,21 +477,21 @@ std::unique_ptr< LinkService::Stub> LinkService::NewStub(const std::shared_ptr< 
 }
 
 LinkService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel)
-  : channel_(channel), rpcmethod_SaveLinkOfUrlFile_(LinkService_method_names[0], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  : channel_(channel), rpcmethod_SaveLinksOfUrlFile_(LinkService_method_names[0], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_GetLinkById_(LinkService_method_names[1], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_GetLinksByUrl_(LinkService_method_names[2], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   {}
 
-::grpc::Status LinkService::Stub::SaveLinkOfUrlFile(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgSaveLinkOfUrlFile& request, ::XiaoyaStore::Service::Result* response) {
-  return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_SaveLinkOfUrlFile_, context, request, response);
+::grpc::Status LinkService::Stub::SaveLinksOfUrlFile(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgSaveLinkOfUrlFile& request, ::XiaoyaStore::Service::Result* response) {
+  return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_SaveLinksOfUrlFile_, context, request, response);
 }
 
-::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>* LinkService::Stub::AsyncSaveLinkOfUrlFileRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgSaveLinkOfUrlFile& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::XiaoyaStore::Service::Result>::Create(channel_.get(), cq, rpcmethod_SaveLinkOfUrlFile_, context, request, true);
+::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>* LinkService::Stub::AsyncSaveLinksOfUrlFileRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgSaveLinkOfUrlFile& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::XiaoyaStore::Service::Result>::Create(channel_.get(), cq, rpcmethod_SaveLinksOfUrlFile_, context, request, true);
 }
 
-::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>* LinkService::Stub::PrepareAsyncSaveLinkOfUrlFileRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgSaveLinkOfUrlFile& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::XiaoyaStore::Service::Result>::Create(channel_.get(), cq, rpcmethod_SaveLinkOfUrlFile_, context, request, false);
+::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>* LinkService::Stub::PrepareAsyncSaveLinksOfUrlFileRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgSaveLinkOfUrlFile& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::XiaoyaStore::Service::Result>::Create(channel_.get(), cq, rpcmethod_SaveLinksOfUrlFile_, context, request, false);
 }
 
 ::grpc::Status LinkService::Stub::GetLinkById(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgId& request, ::XiaoyaStore::Service::ResultWithLink* response) {
@@ -523,7 +523,7 @@ LinkService::Service::Service() {
       LinkService_method_names[0],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< LinkService::Service, ::XiaoyaStore::Service::ArgSaveLinkOfUrlFile, ::XiaoyaStore::Service::Result>(
-          std::mem_fn(&LinkService::Service::SaveLinkOfUrlFile), this)));
+          std::mem_fn(&LinkService::Service::SaveLinksOfUrlFile), this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       LinkService_method_names[1],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
@@ -539,7 +539,7 @@ LinkService::Service::Service() {
 LinkService::Service::~Service() {
 }
 
-::grpc::Status LinkService::Service::SaveLinkOfUrlFile(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgSaveLinkOfUrlFile* request, ::XiaoyaStore::Service::Result* response) {
+::grpc::Status LinkService::Service::SaveLinksOfUrlFile(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgSaveLinkOfUrlFile* request, ::XiaoyaStore::Service::Result* response) {
   (void) context;
   (void) request;
   (void) response;
