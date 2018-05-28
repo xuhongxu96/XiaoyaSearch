@@ -117,6 +117,9 @@
     <ClInclude Include="LinkServiceImpl.h">
       <Filter>Header Files\Service</Filter>
     </ClInclude>
+    <ClInclude Include="InvertedIndexServiceImpl.h">
+      <Filter>Header Files\Service</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -180,6 +183,9 @@
       <Filter>Source Files\Service</Filter>
     </ClCompile>
     <ClCompile Include="LinkServiceImpl.cpp">
+      <Filter>Source Files\Service</Filter>
+    </ClCompile>
+    <ClCompile Include="InvertedIndexServiceImpl.cpp">
       <Filter>Source Files\Service</Filter>
     </ClCompile>
   </ItemGroup>
