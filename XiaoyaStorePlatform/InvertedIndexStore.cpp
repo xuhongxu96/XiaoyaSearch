@@ -76,8 +76,9 @@ bool InvertedIndexStore::GetIndex(const IndexKey & indexKey, Index & outIndex) c
 			+ std::to_string(indexKey.urlfile_id()) + ", word: " + indexKey.word()
 			+ ")");
 	}
-	outIndex = SerializeHelper::Deserialize<Index>(data);
-	return true;
+	auto id = SerializeHelper::DeserializeUInt64(data);
+
+	return GetIndex(id, outIndex);
 }
 
 void InvertedIndexStore::ClearIndicesOf(const uint64_t urlFileId, WriteBatch &batch)
@@ -136,7 +137,7 @@ void InvertedIndexStore::ClearAndSaveIndicesOf(const uint64_t urlFileId,
 		batch.Merge(mCFHandles[UrlFileIdIndexCF].get(),
 			SerializeHelper::SerializeUInt64(urlFileId),
 			SerializeHelper::Serialize(deltaUrlFileIdIndex));
-
+		auto k = SerializeHelper::Serialize(index.key());
 		// Save IndexKey index
 		batch.Put(mCFHandles[IndexKeyCF].get(), 
 			SerializeHelper::Serialize(index.key()),

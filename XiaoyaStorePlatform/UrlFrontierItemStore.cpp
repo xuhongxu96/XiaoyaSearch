@@ -243,6 +243,14 @@ const bool XiaoyaStore::Store::UrlFrontierItemStore::PopUrl(std::string &url)
 	}
 
 	auto item = mUrlQueue.top();
+
+	if (mConfig.EnableExactPlannedTime 
+		&& item.planned_time() > DateTimeHelper::Now())
+	{
+		// Too early now
+		return false;
+	}
+
 	mUrlQueue.pop();
 
 	if (mPoppedUrlMap.count(item.url()) > 0)

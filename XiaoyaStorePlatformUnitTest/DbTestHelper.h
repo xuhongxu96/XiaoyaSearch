@@ -56,6 +56,7 @@ public:
 	{
 		XiaoyaStore::Config::StoreConfig config;
 		config.StoreDirectory = storeDir;
+		config.EnableExactPlannedTime = false;
 		return config;
 	}
 

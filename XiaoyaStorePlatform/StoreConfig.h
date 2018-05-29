@@ -8,6 +8,7 @@ namespace XiaoyaStore
 	{
 		struct StoreConfig
 		{
+			bool EnableExactPlannedTime = true;
 			std::string StoreDirectory;
 		};
 	}

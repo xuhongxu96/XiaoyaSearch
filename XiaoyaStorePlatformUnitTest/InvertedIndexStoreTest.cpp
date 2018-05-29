@@ -165,3 +165,29 @@ TEST(InvertedIndexStoreTest, TestSaveUpdatedIndices)
 		}
 	}
 }
+
+TEST(InvertedIndexStoreTest, TestSaveNewAndGetIndex)
+{
+	DbTestHelper::DeleteDB<InvertedIndexStore>();
+
+	auto config = DbTestHelper::InitStoreConfig();
+
+	auto indices =
+	{
+		DbTestHelper::FakeIndex(1, "a"),	// 1
+		DbTestHelper::FakeIndex(1, "b"),	// 2
+		DbTestHelper::FakeIndex(1, "c"),	// 3
+		DbTestHelper::FakeIndex(1, "d"),	// 4
+	};
+
+	{
+		InvertedIndexStore store(config);
+		store.ClearAndSaveIndicesOf(1, 0, indices);
+		Index result;
+		ASSERT_TRUE(store.GetIndex(1, "a", result));
+		ASSERT_EQ(1, result.index_id());
+		ASSERT_TRUE(store.GetIndex(1, "c", result));
+		ASSERT_EQ(3, result.index_id());
+		ASSERT_FALSE(store.GetIndex(1, "e", result));
+	}
+}

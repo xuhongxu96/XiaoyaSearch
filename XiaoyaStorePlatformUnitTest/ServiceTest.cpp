@@ -477,3 +477,195 @@ TEST(ServiceTest, TestPostingListService)
 	exitRequested.set_value();
 	serverThread.join();
 }
+
+TEST(ServiceTest, TestLinkService)
+{
+	DbTestHelper::DeleteDB<LinkStore>();
+
+	std::promise<void> exitRequested;
+	std::thread serverThread(StartServer, std::ref(exitRequested));
+
+	std::thread clientThread([]()
+	{
+		auto channel = grpc::CreateChannel("localhost:50051",
+			grpc::InsecureChannelCredentials());
+		auto service = LinkService::NewStub(channel);
+
+		{
+			grpc::ClientContext context;
+
+			ArgSaveLinkOfUrlFile arg;
+			arg.set_urlfile_id(1);
+			arg.set_old_urlfile_id(0);
+			arg.add_links()->CopyFrom(DbTestHelper::FakeLink(1, "http://www.a.com", "a"));
+
+			Result result;
+
+			service->SaveLinksOfUrlFile(&context, arg, &result);
+
+			ASSERT_TRUE(result.is_successful());
+		}
+
+		{
+			grpc::ClientContext context;
+
+			ArgSaveLinkOfUrlFile arg;
+			arg.set_urlfile_id(2);
+			arg.set_old_urlfile_id(0);
+			arg.add_links()->CopyFrom(DbTestHelper::FakeLink(2, "http://www.a.com", "2a"));
+
+			Result result;
+
+			service->SaveLinksOfUrlFile(&context, arg, &result);
+
+			ASSERT_TRUE(result.is_successful());
+		}
+
+		{
+			grpc::ClientContext context;
+
+			ArgSaveLinkOfUrlFile arg;
+			arg.set_urlfile_id(3);
+			arg.set_old_urlfile_id(1);
+			arg.add_links()->CopyFrom(DbTestHelper::FakeLink(3, "http://www.a.com", "3a"));
+			arg.add_links()->CopyFrom(DbTestHelper::FakeLink(3, "http://www.b.com", "b"));
+
+			Result result;
+
+			service->SaveLinksOfUrlFile(&context, arg, &result);
+
+			ASSERT_TRUE(result.is_successful());
+		}
+
+		{
+			grpc::ClientContext context;
+
+			ArgId id;
+			id.set_id(4);
+			
+			ResultWithLink result;
+
+			service->GetLinkById(&context, id, &result);
+
+			ASSERT_TRUE(result.is_successful());
+			ASSERT_EQ("http://www.b.com", result.link().url());
+			ASSERT_EQ("b", result.link().text());
+		}
+
+		{
+			grpc::ClientContext context;
+
+			ArgUrl url;
+			url.set_url("http://www.a.com");
+			
+			ResultWithLinks result;
+
+			service->GetLinksByUrl(&context, url, &result);
+
+			ASSERT_TRUE(result.is_successful());
+
+			ASSERT_EQ(2, result.links_size());
+
+			std::set<std::string> linkTextSet;
+
+			for (auto link : result.links())
+			{
+				linkTextSet.insert(link.text());
+			}
+
+			ASSERT_EQ(0, linkTextSet.count("a"));
+			ASSERT_EQ(1, linkTextSet.count("2a"));
+			ASSERT_EQ(1, linkTextSet.count("3a"));
+		}
+	});
+
+	clientThread.join();
+	exitRequested.set_value();
+	serverThread.join();
+}
+
+TEST(ServiceTest, TestInvertedIndexService)
+{
+	DbTestHelper::DeleteDB<InvertedIndexStore>();
+
+	std::promise<void> exitRequested;
+	std::thread serverThread(StartServer, std::ref(exitRequested));
+
+	std::thread clientThread([]()
+	{
+		auto channel = grpc::CreateChannel("localhost:50051",
+			grpc::InsecureChannelCredentials());
+		auto service = InvertedIndexService::NewStub(channel);
+
+		{
+			grpc::ClientContext context;
+
+			ArgClearAndSaveIndicesOf arg;
+			arg.set_urlfile_id(1);
+			arg.set_old_urlfile_id(0);
+			arg.add_indices()->CopyFrom(DbTestHelper::FakeIndex(1, "a"));
+			arg.add_indices()->CopyFrom(DbTestHelper::FakeIndex(1, "b"));
+			arg.add_indices()->CopyFrom(DbTestHelper::FakeIndex(1, "c"));
+
+			Result result;
+
+			service->ClearAndSaveIndicesOf(&context, arg, &result);
+
+			ASSERT_TRUE(result.is_successful());
+		}
+
+		{
+			grpc::ClientContext context;
+
+			ArgClearAndSaveIndicesOf arg;
+			arg.set_urlfile_id(2);
+			arg.set_old_urlfile_id(0);
+			arg.add_indices()->CopyFrom(DbTestHelper::FakeIndex(2, "a"));
+			arg.add_indices()->CopyFrom(DbTestHelper::FakeIndex(2, "b"));
+			arg.add_indices()->CopyFrom(DbTestHelper::FakeIndex(2, "c"));
+
+			Result result;
+
+			service->ClearAndSaveIndicesOf(&context, arg, &result);
+
+			ASSERT_TRUE(result.is_successful());
+		}
+		
+		{
+			grpc::ClientContext context;
+
+			ArgClearAndSaveIndicesOf arg;
+			arg.set_urlfile_id(3);
+			arg.set_old_urlfile_id(1);
+			arg.add_indices()->CopyFrom(DbTestHelper::FakeIndex(3, "b"));
+			arg.add_indices()->CopyFrom(DbTestHelper::FakeIndex(3, "c"));
+			arg.add_indices()->CopyFrom(DbTestHelper::FakeIndex(3, "d"));
+
+			Result result;
+
+			service->ClearAndSaveIndicesOf(&context, arg, &result);
+
+			ASSERT_TRUE(result.is_successful());
+		}
+
+		{
+			grpc::ClientContext context;
+
+			ArgIndexKey arg;
+			arg.set_urlfile_id(3);
+			arg.set_word("b");
+
+			ResultWithIndex result;
+
+			service->GetIndex(&context, arg, &result);
+
+			ASSERT_TRUE(result.is_successful());
+			ASSERT_EQ("b", result.index().key().word());
+			ASSERT_EQ(3, result.index().key().urlfile_id());
+		}
+	});
+
+	clientThread.join();
+	exitRequested.set_value();
+	serverThread.join();
+}

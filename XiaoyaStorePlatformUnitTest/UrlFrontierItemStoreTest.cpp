@@ -22,7 +22,7 @@ TEST(UrlFrontierItemStoreTest, TestInit)
 			"http://baidu.com",
 			"http://baidu.com/a",
 			"http://xuhongxu.com",
-		});
+			});
 	}
 
 	{
@@ -68,7 +68,7 @@ TEST(UrlFrontierItemStoreTest, TestInit)
 			"http://baidu.com",
 			"http://baidu.com/b",
 			"https://google.com",
-		});
+			});
 	}
 
 	{
@@ -125,7 +125,7 @@ TEST(UrlFrontierItemStoreTest, TestPushUrls)
 			"http://baidu.com",
 			"http://baidu.com/a",
 			"http://xuhongxu.com",
-		});
+			});
 	}
 
 	{
@@ -171,7 +171,7 @@ TEST(UrlFrontierItemStoreTest, TestPushUrls)
 			"http://baidu.com",
 			"http://baidu.com/b",
 			"https://google.com",
-		});
+			});
 	}
 
 	{
@@ -227,7 +227,7 @@ TEST(UrlFrontierItemStoreTest, TestPushBackUrl)
 		store.PushUrls({
 			"http://baidu.com",
 			"http://xuhongxu.com",
-		});
+			});
 
 		ASSERT_FALSE(store.PushBackUrl("http://baidu.com", DateTimeHelper::FromDays(1)));
 		ASSERT_FALSE(store.PushBackUrl("http://google.com", DateTimeHelper::FromDays(1)));
@@ -275,7 +275,7 @@ TEST(UrlFrontierItemStoreTest, TestRemoveUrl)
 		store.PushUrls({
 			"http://baidu.com",
 			"http://xuhongxu.com",
-		});
+			});
 
 		ASSERT_TRUE(store.PopUrl(poppedUrl));
 
@@ -313,7 +313,7 @@ TEST(UrlFrontierItemStoreTest, TestGetHostCount)
 			"http://baidu.com",
 			"http://baidu.com/a",
 			"http://xuhongxu.com",
-		});
+			});
 
 		ASSERT_EQ(2, store.GetHostCount("baidu.com"));
 		ASSERT_EQ(1, store.GetHostCount("xuhongxu.com"));
@@ -321,7 +321,7 @@ TEST(UrlFrontierItemStoreTest, TestGetHostCount)
 	}
 }
 
-TEST(UrlFrontierItemStoreTest, TestPopUrl) 
+TEST(UrlFrontierItemStoreTest, TestPopUrl)
 {
 
 	DbTestHelper::DeleteDB<UrlFrontierItemStore>();
@@ -331,12 +331,11 @@ TEST(UrlFrontierItemStoreTest, TestPopUrl)
 	// Init UrlFrontierStore with urls
 	{
 		UrlFrontierItemStore store(config);
-		store.PushUrls({
-			// PlannedTime,	Priority
+		store.PushUrls({	// PlannedTime,	Priority
 "http://baidu.com",			// t0,			0 + 0 * 10 = 0
 "http://baidu.com/a",		// t0,			1 + 1 * 10 = 11
 "http://xuhongxu.com/b",	// t0,			0 + 1 * 10 = 10
-		});
+			});
 
 		std::string url;
 
@@ -361,7 +360,7 @@ TEST(UrlFrontierItemStoreTest, TestPopUrl)
 		store.PushBackUrl("http://baidu.com", 0);	// t1,		1 + 0 * 10 = 1
 		store.PushUrls({
 			"http://xuhongxu.com",					// t1,		0 + 0 * 10 = 0
-		});
+			});
 
 		/*
 		"http://baidu.com/a",		// t0,		1 + 1 * 10 = 11
