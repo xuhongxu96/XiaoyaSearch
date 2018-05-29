@@ -1,0 +1,15 @@
+﻿using System.Collections.Generic;
+
+namespace XiaoyaStore.Store
+{
+    public interface IUrlFrontierItemStore
+    {
+        ulong GetHostCount(string host);
+        bool Init(IEnumerable<string> urls);
+        string PopUrl();
+        bool PushBackUrl(string url, ulong updateInterval, bool failed = false);
+        bool PushUrls(IEnumerable<string> urls);
+        bool RemoveUrl(string url);
+        void Dispose();
+    }
+}
