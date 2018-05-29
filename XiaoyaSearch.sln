@@ -55,10 +55,9 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "XiaoyaStorePlatform", "Xiao
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "XiaoyaStorePlatformUnitTest", "XiaoyaStorePlatformUnitTest\XiaoyaStorePlatformUnitTest.vcxproj", "{AD9B2C20-9354-4604-8550-53668396351B}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "XiaoyaStorePlatformServer", "XiaoyaStorePlatformServer\XiaoyaStorePlatformServer.vcxproj", "{EE6FCE12-59D2-4FD8-A821-A81779CC81B3}"
+EndProject
 Global
-	GlobalSection(Performance) = preSolution
-		HasPerformanceSessions = true
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|x64 = Debug|x64
@@ -377,11 +376,24 @@ Global
 		{AD9B2C20-9354-4604-8550-53668396351B}.Release|x64.Build.0 = Release|x64
 		{AD9B2C20-9354-4604-8550-53668396351B}.Release|x86.ActiveCfg = Release|Win32
 		{AD9B2C20-9354-4604-8550-53668396351B}.Release|x86.Build.0 = Release|Win32
+		{EE6FCE12-59D2-4FD8-A821-A81779CC81B3}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{EE6FCE12-59D2-4FD8-A821-A81779CC81B3}.Debug|x64.ActiveCfg = Debug|x64
+		{EE6FCE12-59D2-4FD8-A821-A81779CC81B3}.Debug|x64.Build.0 = Debug|x64
+		{EE6FCE12-59D2-4FD8-A821-A81779CC81B3}.Debug|x86.ActiveCfg = Debug|Win32
+		{EE6FCE12-59D2-4FD8-A821-A81779CC81B3}.Debug|x86.Build.0 = Debug|Win32
+		{EE6FCE12-59D2-4FD8-A821-A81779CC81B3}.Release|Any CPU.ActiveCfg = Release|Win32
+		{EE6FCE12-59D2-4FD8-A821-A81779CC81B3}.Release|x64.ActiveCfg = Release|x64
+		{EE6FCE12-59D2-4FD8-A821-A81779CC81B3}.Release|x64.Build.0 = Release|x64
+		{EE6FCE12-59D2-4FD8-A821-A81779CC81B3}.Release|x86.ActiveCfg = Release|Win32
+		{EE6FCE12-59D2-4FD8-A821-A81779CC81B3}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3EFCDF5E-DA3E-405F-80B2-8F966D25D461}
+	EndGlobalSection
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
 	EndGlobalSection
 EndGlobal
