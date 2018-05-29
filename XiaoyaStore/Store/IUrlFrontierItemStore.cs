@@ -1,8 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace XiaoyaStore.Store
 {
-    public interface IUrlFrontierItemStore
+    public interface IUrlFrontierItemStore : IDisposable
     {
         ulong GetHostCount(string host);
         bool Init(IEnumerable<string> urls);
@@ -10,6 +11,5 @@ namespace XiaoyaStore.Store
         bool PushBackUrl(string url, ulong updateInterval, bool failed = false);
         bool PushUrls(IEnumerable<string> urls);
         bool RemoveUrl(string url);
-        void Dispose();
     }
 }

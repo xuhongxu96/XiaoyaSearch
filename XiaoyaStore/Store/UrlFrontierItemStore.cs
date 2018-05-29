@@ -6,7 +6,7 @@ using XiaoyaStore.Service;
 
 namespace XiaoyaStore.Store
 {
-    public class UrlFrontierItemStore : IDisposable, IUrlFrontierItemStore
+    public class UrlFrontierItemStore : IUrlFrontierItemStore
     {
         readonly Channel channel = new Channel("127.0.0.1:50051", ChannelCredentials.Insecure);
         readonly UrlFrontierItemService.UrlFrontierItemServiceClient client;

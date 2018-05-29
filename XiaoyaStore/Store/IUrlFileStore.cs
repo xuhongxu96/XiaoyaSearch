@@ -1,9 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using XiaoyaStore.Model;
 
 namespace XiaoyaStore.Store
 {
-    public interface IUrlFileStore
+    public interface IUrlFileStore : IDisposable
     {
         bool FinishIndex(string url);
         ulong GetCount();
@@ -12,6 +13,5 @@ namespace XiaoyaStore.Store
         UrlFile GetUrlFile(ulong id);
         IList<UrlFile> GetUrlFilesByHash(string hash);
         (UrlFile urlFile, ulong oldUrlFileId) SaveUrlFileAndGetOldId(UrlFile urlFile);
-        void Dispose();
     }
 }
