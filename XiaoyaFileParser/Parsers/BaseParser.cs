@@ -16,12 +16,17 @@ namespace XiaoyaFileParser.Parsers
         protected string mCharset;
         protected string mUrl;
 
-        public void SetFile(string mimeType, string url, string charset, string filePath = null)
+        public void SetFile(string mimeType, string url, string charset, string filePath = null,
+            string content = null, string textContent = null, string title = null)
         {
             mMimeType = mimeType;
             mUrl = url;
             mCharset = charset;
             mFilePath = filePath;
+
+            mTitle = title;
+            mContent = content;
+            mTextContent = textContent;
         }
 
         protected FileParserConfig mConfig = new FileParserConfig();

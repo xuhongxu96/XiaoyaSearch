@@ -12,7 +12,8 @@ namespace XiaoyaFileParser
 {
     public class UniversalFileParser : IFileParser
     {
-        public void SetFile(string mimeType, string url, string charset, string filePath = null)
+        public void SetFile(string mimeType, string url, string charset, string filePath = null,
+            string content = null, string textContent = null, string title = null)
         {
             if (filePath != null
                     && filePath != ""
@@ -23,7 +24,7 @@ namespace XiaoyaFileParser
             }
 
             mCurrentParser = GetParser(mimeType, mConfig);
-            mCurrentParser.SetFile(mimeType, url, charset, filePath);
+            mCurrentParser.SetFile(mimeType, url, charset, filePath, content, textContent, title);
         }
 
         protected FileParserConfig mConfig = new FileParserConfig();

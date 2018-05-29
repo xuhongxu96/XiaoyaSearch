@@ -50,9 +50,9 @@ namespace XiaoyaIndexer
             {
                 try
                 {
-
                     UniversalFileParser parser = new UniversalFileParser();
-                    parser.SetFile(urlFile.MimeType, urlFile.Url, urlFile.Charset);
+                    parser.SetFile(urlFile.MimeType, urlFile.Url, urlFile.Charset, null,
+                        urlFile.Content, urlFile.TextContent, urlFile.Title);
 
 #if DEBUG
                     var time = DateTime.Now;
@@ -62,6 +62,7 @@ namespace XiaoyaIndexer
                     var links = mConfig.LinkStore.GetLinksByUrl(urlFile.Url);
                     var linkTexts = links.Select(o => o.Text).ToList();
 
+                    IList<Token> tokens = parser.GetTokensAsync(linkTexts).GetAwaiter().GetResult();
 #if DEBUG
                     Console.WriteLine("Loaded Links: " + urlFile.Url + "\n" + (DateTime.Now - time).TotalSeconds);
                     time = DateTime.Now;
@@ -81,7 +82,6 @@ namespace XiaoyaIndexer
                     time = DateTime.Now;
 #endif
 
-                    IList<Token> tokens = parser.GetTokensAsync(linkTexts).GetAwaiter().GetResult();
                     var invertedIndices = new List<Index>();
                     foreach (var token in tokens)
                     {
