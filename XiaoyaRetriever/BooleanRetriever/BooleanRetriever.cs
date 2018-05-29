@@ -18,7 +18,12 @@ namespace XiaoyaRetriever.BooleanRetriever
 
         protected IEnumerable<ulong> RetrieveWord(Word word)
         {
-            return from index in mConfig.PostingListStore.GetPostingList(word.Value).Postings
+            var postingList = mConfig.PostingListStore.GetPostingList(word.Value);
+            if (postingList == null)
+            {
+                return new List<ulong>();
+            }
+            return from index in postingList.Postings
                    select index;
         }
 

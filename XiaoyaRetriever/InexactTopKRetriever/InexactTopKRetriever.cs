@@ -26,8 +26,13 @@ namespace XiaoyaRetriever.InexactTopKRetriever
 
         protected IEnumerable<ulong> RetrieveWord(Word word)
         {
-            return mConfig.PostingListStore.GetPostingList(word.Value).Postings
-                    .OrderByDescending(id => mConfig.InvertedIndexStore.GetIndex(id, word.Value).Weight)
+            var postingList = mConfig.PostingListStore.GetPostingList(word.Value);
+            if (postingList == null)
+            {
+                return new List<ulong>();
+            }
+            return postingList.Postings
+                    .OrderByDescending(id => mConfig.InvertedIndexStore.GetIndex(id, word.Value)?.Weight ?? 0)
                     .Take(mTopK);
 
         }
