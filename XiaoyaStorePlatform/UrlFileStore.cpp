@@ -159,12 +159,18 @@ uint64_t UrlFileStore::SaveUrlFileAndGetOldId(UrlFile & urlFile)
 		// Exists old UrlFile with the same Url
 		oldUrlFileId = oldUrlFile.urlfile_id();
 
-		auto updateInterval = now - oldUrlFile.updated_at();
-
 		urlFile.set_created_at(oldUrlFile.created_at());
-		urlFile.set_update_interval(
-			static_cast<uint64_t>((oldUrlFile.update_interval() * 3.0 
-				+ updateInterval) / 4.0));
+
+		auto updateInterval = now - oldUrlFile.updated_at();
+		updateInterval = static_cast<uint64_t>((oldUrlFile.update_interval() * 3.0
+			+ updateInterval) / 4.0);
+
+		if (updateInterval < DateTimeHelper::FromHours(6))
+		{
+			updateInterval = DateTimeHelper::FromHours(6);
+		}
+		urlFile.set_update_interval(updateInterval);
+
 
 		if (oldUrlFile.title() != urlFile.title()
 			|| oldUrlFile.content() != urlFile.content())
@@ -252,7 +258,7 @@ bool UrlFileStore::GetForIndex(UrlFile &outUrlFile) const
 	{
 		return false;
 	}
-	
+
 	outUrlFile = mIndexQueue.top();
 	mIndexQueue.pop();
 
