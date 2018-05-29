@@ -6,8 +6,6 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.EntityFrameworkCore;
-using XiaoyaStore.Data;
 
 namespace XiaoyaSearchWeb
 {
@@ -25,16 +23,13 @@ namespace XiaoyaSearchWeb
         {
             services.AddMvc();
 
-            var options = new DbContextOptionsBuilder<XiaoyaSearchContext>()
-                                .UseSqlServer("Data Source=IR-PC;Initial Catalog=XiaoyaSearch;Integrated Security=True")
-                                .Options;
-            EngineOptions.IndexStatStore = new XiaoyaStore.Store.IndexStatStore(options);
-            EngineOptions.InvertedIndexStore = new XiaoyaStore.Store.InvertedIndexStore(options);
-            EngineOptions.UrlFileStore = new XiaoyaStore.Store.UrlFileStore(options);
+            EngineOptions.PostingListStore = new XiaoyaStore.Store.PostingListStore();
+            EngineOptions.InvertedIndexStore = new XiaoyaStore.Store.InvertedIndexStore();
+            EngineOptions.UrlFileStore = new XiaoyaStore.Store.UrlFileStore();
             EngineOptions.SearchEngine = new XiaoyaSearch.SearchEngine(new XiaoyaSearch.Config.SearchEngineConfig
             {
                 UrlFileStore = EngineOptions.UrlFileStore,
-                IndexStatStore = EngineOptions.IndexStatStore,
+                PostingListStore = EngineOptions.PostingListStore,
                 InvertedIndexStore = EngineOptions.InvertedIndexStore,
                 LogDirectory = @"E:\XiaoyaSearch\Logs"
             });

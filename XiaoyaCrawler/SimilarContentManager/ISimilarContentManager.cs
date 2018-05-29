@@ -4,7 +4,6 @@ using System.Text;
 using System.Threading.Tasks;
 using XiaoyaCrawler.Fetcher;
 using XiaoyaCrawler.Parser;
-using XiaoyaStore.Data.Model;
 
 namespace XiaoyaCrawler.SimilarContentManager
 {

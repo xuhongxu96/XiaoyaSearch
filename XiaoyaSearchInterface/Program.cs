@@ -1,11 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
+﻿using System;
 using System.Linq;
 using XiaoyaCommon.ArgumentParser;
 using XiaoyaNLP.Helper;
 using XiaoyaSearch;
 using XiaoyaSearch.Config;
-using XiaoyaStore.Data;
 using XiaoyaStore.Store;
 
 namespace XiaoyaSearchInterface
@@ -15,28 +13,12 @@ namespace XiaoyaSearchInterface
         static void Main(string[] args)
         {
             var arguments = Parser.ParseArguments<SearchArguments>(args);
-            DbContextOptions<XiaoyaSearchContext> options;
-
-            switch (arguments.DbType)
-            {
-                case "sqlite":
-                default:
-                    options = new DbContextOptionsBuilder<XiaoyaSearchContext>()
-                                .UseSqlite(arguments.DbConnectionString)
-                                .Options;
-                    break;
-                case "sqlserver":
-                    options = new DbContextOptionsBuilder<XiaoyaSearchContext>()
-                                .UseSqlServer(arguments.DbConnectionString)
-                                .Options;
-                    break;
-            }
 
             var config = new SearchEngineConfig
             {
-                UrlFileStore = new UrlFileStore(options),
-                InvertedIndexStore = new InvertedIndexStore(options),
-                IndexStatStore = new IndexStatStore(options),
+                UrlFileStore = new UrlFileStore(),
+                InvertedIndexStore = new InvertedIndexStore(),
+                PostingListStore = new PostingListStore(),
                 LogDirectory = arguments.LogDir,
             };
 
@@ -54,7 +36,7 @@ namespace XiaoyaSearchInterface
 
                 foreach (var result in results)
                 {
-                    var urlFile = urlFileStore.LoadById(result.UrlFileId);
+                    var urlFile = urlFileStore.GetUrlFile(result.UrlFileId);
 
                     Console.WriteLine("{0}: {1} ({2}, {3})", result.UrlFileId, urlFile.Url, result.Score, result.ProScore);
 
@@ -66,14 +48,14 @@ namespace XiaoyaSearchInterface
                     {
                         var orderPos = result.WordPositions.OrderBy(o => o.Position);
                         var minWordPos = orderPos.First();
-                        var minPos = Math.Max(minWordPos.Position - 50, 0);
+                        var minPos = (int) Math.Max(minWordPos.Position - 50, 0);
                         var maxPos = orderPos.Last();
 
                         var content = urlFile.TextContent;
 
                         Console.WriteLine("  "
                             + content.Substring(minPos,
-                            Math.Min(maxPos.Position - minPos + maxPos.Word.Length + 50, content.Length - minPos))
+                            Math.Min((int) maxPos.Position - minPos + maxPos.Word.Length + 50, content.Length - minPos))
                             .Replace("\r", "").Replace("\n", "  "));
                     }
 

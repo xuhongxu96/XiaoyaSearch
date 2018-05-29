@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using XiaoyaFileParser.Model;
 using XiaoyaFileParser.Config;
 using XiaoyaNLP.TextSegmentation;
-using XiaoyaStore.Data.Model;
 using System.Linq;
 using static XiaoyaFileParser.Model.Token;
 using XiaoyaNLP.Encoding;
@@ -115,7 +114,7 @@ namespace XiaoyaFileParser.Parsers
                     var levelDict = new Dictionary<int, int>();
                     for (int i = 1; i <= levels.Count; ++i)
                     {
-                        levelDict[levels[i]] = i;
+                        levelDict[levels[i - 1]] = i;
                     }
 
                     mContent = mContent.Length + "\n" + mContent

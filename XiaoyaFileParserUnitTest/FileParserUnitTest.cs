@@ -21,13 +21,9 @@ namespace XiaoyaFileParserUnitTest
         [TestMethod]
         public void TestDocxParser()
         {
-            var parser = new DocxFileParser
-            {
-                UrlFile = new XiaoyaStore.Data.Model.UrlFile
-                {
-                    FilePath = "a.docx",
-                }
-            };
+            var parser = new DocxFileParser();
+            parser.SetFile("application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+                "", "", "a.docx");
             var headers = parser.GetHeadersAsync().GetAwaiter().GetResult();
             foreach (var header in headers)
             {
@@ -44,13 +40,9 @@ namespace XiaoyaFileParserUnitTest
         [TestMethod]
         public void TestPptxParser()
         {
-            var parser = new PptxFileParser
-            {
-                UrlFile = new XiaoyaStore.Data.Model.UrlFile
-                {
-                    FilePath = "b.pptx",
-                }
-            };
+            var parser = new PptxFileParser();
+            parser.SetFile("application/vnd.openxmlformats-officedocument.presentationml.presentation",
+                "", "", "b.pptx");
             var headers = parser.GetHeadersAsync().GetAwaiter().GetResult();
             foreach (var header in headers)
             {

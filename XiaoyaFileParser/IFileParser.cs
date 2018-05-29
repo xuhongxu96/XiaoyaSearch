@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using XiaoyaFileParser.Model;
-using XiaoyaStore.Data.Model;
 
 namespace XiaoyaFileParser
 {

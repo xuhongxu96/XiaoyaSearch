@@ -16,7 +16,7 @@ namespace XiaoyaRanker.PositionRanker.QueryTermProximityRanker
             mConfig = config;
         }
 
-        public IEnumerable<ScoreWithWordPositions> Rank(IEnumerable<int> urlFileIds, IEnumerable<string> words)
+        public IEnumerable<ScoreWithWordPositions> Rank(IEnumerable<ulong> urlFileIds, IEnumerable<string> words)
         {
             var wordList = words.ToList();
             var wordCount = wordList.Count;
@@ -27,40 +27,40 @@ namespace XiaoyaRanker.PositionRanker.QueryTermProximityRanker
                 var wordTotalLength = 0;
                 var notExistedWordCount = 0;
 
-                var wordPositions = new List<List<int>>(wordCount);
-                List<int> bestWordPosition = null;
+                var wordPositions = new List<List<uint>>(wordCount);
+                List<uint> bestWordPosition = null;
                 var pointers = new int[wordCount];
 
                 foreach (var word in wordList)
                 {
                     var positions = mConfig.InvertedIndexStore
-                        .LoadByWordInUrlFile(id, word)?
-                        .PositionArr;
+                        .GetIndex(id, word)?
+                        .Positions;
 
                     if (positions == null || positions.Count == 0)
                     {
-                        wordPositions.Add(new List<int> { -1 });
+                        wordPositions.Add(new List<uint> { uint.MaxValue });
                         notExistedWordCount++;
                     }
                     else
                     {
-                        wordPositions.Add(positions);
+                        wordPositions.Add(positions.ToList());
                         wordTotalLength += word.Length;
                     }
                 }
 
-                var minWindowLength = -1;
+                uint minWindowLength = uint.MaxValue;
                 bool isAllEnd = false;
                 while (!isAllEnd)
                 {
-                    var wordPosition = new List<int>(wordCount);
+                    var wordPosition = new List<uint>(wordCount);
 
                     for (int i = 0; i < wordCount; ++i)
                     {
                         wordPosition.Add(wordPositions[i][pointers[i]]);
                     }
 
-                    var validWordPosition = wordPosition.Where(o => o != -1).ToList();
+                    var validWordPosition = wordPosition.Where(o => o != uint.MaxValue).ToList();
 
                     if (validWordPosition.Distinct().Count() == validWordPosition.Count
                         && validWordPosition.Count > 0)
@@ -69,7 +69,7 @@ namespace XiaoyaRanker.PositionRanker.QueryTermProximityRanker
 
                         var windowLength = validWordPosition.Max() - validWordPosition.Min();
 
-                        if (minWindowLength == -1 || minWindowLength > windowLength)
+                        if (minWindowLength == uint.MaxValue || minWindowLength > windowLength)
                         {
                             // update window length
                             minWindowLength = windowLength;
@@ -101,7 +101,7 @@ namespace XiaoyaRanker.PositionRanker.QueryTermProximityRanker
                     }
                 }
 
-                if (minWindowLength == -1)
+                if (minWindowLength == uint.MaxValue)
                 {
                     yield return new ScoreWithWordPositions
                     {

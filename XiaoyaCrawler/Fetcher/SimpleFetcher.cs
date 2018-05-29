@@ -6,7 +6,6 @@ using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using XiaoyaStore.Data.Model;
 using XiaoyaStore.Helper;
 using XiaoyaStore.Store;
 using XiaoyaCrawler.Config;
@@ -216,11 +215,11 @@ namespace XiaoyaCrawler.Fetcher
 
             return new FetchedFile
             {
-                url = url,
-                filePath = filePath,
-                charset = detectedCharset,
-                mimeType = detectedContentType,
-                fileHash = HashHelper.GetFileMd5(filePath),
+                Url = url,
+                FilePath = filePath,
+                Charset = detectedCharset,
+                MimeType = detectedContentType,
+                FileHash = HashHelper.GetFileMd5(filePath),
             };
         }
 

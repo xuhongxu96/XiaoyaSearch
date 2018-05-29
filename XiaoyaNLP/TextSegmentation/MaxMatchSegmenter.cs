@@ -51,8 +51,8 @@ namespace XiaoyaNLP.TextSegmentation
                         yield return new TextSegment
                         {
                             Word = candidate,
-                            Position = baseIndex + pointer,
-                            Length = i,
+                            Position = (uint)(baseIndex + pointer),
+                            Length = (uint)i,
                         };
                         pointer += i;
                         break;
@@ -87,8 +87,8 @@ namespace XiaoyaNLP.TextSegmentation
                         yield return new TextSegment
                         {
                             Word = subSentence,
-                            Position = index,
-                            Length = subSentence.Length,
+                            Position = (uint)index,
+                            Length = (uint)subSentence.Length,
                         };
                     }
                 }

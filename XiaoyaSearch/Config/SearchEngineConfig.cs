@@ -15,7 +15,7 @@ namespace XiaoyaSearch.Config
             = new JiebaSegmenter(false);
 
         public IUrlFileStore UrlFileStore { get; set; }
-        public IIndexStatStore IndexStatStore { get; set; }
+        public IPostingListStore PostingListStore { get; set; }
         public IInvertedIndexStore InvertedIndexStore { get; set; }
 
         public string LogDirectory { get; set; }

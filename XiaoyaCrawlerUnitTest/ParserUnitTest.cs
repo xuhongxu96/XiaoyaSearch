@@ -1,6 +1,4 @@
-﻿using Microsoft.Data.Sqlite;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -8,9 +6,8 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using XiaoyaCrawler.Config;
+using XiaoyaCrawler.Fetcher;
 using XiaoyaCrawler.Parser;
-using XiaoyaStore.Data;
-using XiaoyaStore.Data.Model;
 using XiaoyaStore.Helper;
 using XiaoyaStore.Store;
 
@@ -23,45 +20,23 @@ namespace XiaoyaCrawlerUnitTest
 
         private string logDir = Path.Combine(Path.GetTempPath(), "Logs");
         private string fetchDir = Path.Combine(Path.GetTempPath(), "Fetched");
-        private string checkPointDirectory = Path.Combine(Path.GetTempPath(), "CheckPoint");
 
-        private void InitDatabase(TestFunc func)
+        private CrawlerConfig InitConfig()
         {
-            var connection = new SqliteConnection("DataSource=:memory:");
-            connection.Open();
-
-            var options = new DbContextOptionsBuilder<XiaoyaSearchContext>()
-                .UseSqlite(connection)
-                .Options;
-
-            try
+            return new CrawlerConfig
             {
-                using (var context = new XiaoyaSearchContext(options))
-                {
-                    context.Database.EnsureCreated();
-                }
-
-                var config = new CrawlerConfig
-                {
-                    InitUrls = new List<string>(),
-                    UrlFileStore = new UrlFileStore(options),
-                    UrlFrontierItemStore = new UrlFrontierItemStore(options),
-                    LogDirectory = logDir,
-                    FetchDirectory = fetchDir,
-                };
-                var parser = new SimpleParser(config);
-                func(parser);
-            }
-            finally
-            {
-                connection.Close();
-            }
+                InitUrls = new List<string>(),
+                UrlFileStore = new UrlFileStore(),
+                UrlFrontierItemStore = new UrlFrontierItemStore(),
+                LogDirectory = logDir,
+                FetchDirectory = fetchDir,
+            };
         }
 
         [TestMethod]
         public void TestParse()
         {
-            InitDatabase(parser =>
+            var parser = new SimpleParser(InitConfig());
             {
                 var tempHtml = Path.GetTempFileName();
 
@@ -79,7 +54,7 @@ namespace XiaoyaCrawlerUnitTest
 </body>
 </html>
 ", Encoding.UTF8);
-                var urlFile = new UrlFile
+                var file = new FetchedFile
                 {
                     Url = "http://bar.foo.com/a/b/c/",
                     FilePath = tempHtml,
@@ -87,7 +62,7 @@ namespace XiaoyaCrawlerUnitTest
                     MimeType = "text/html",
                     FileHash = HashHelper.GetFileMd5(tempHtml),
                 };
-                var parseResult = parser.ParseAsync(urlFile).GetAwaiter().GetResult();
+                var parseResult = parser.ParseAsync(file).GetAwaiter().GetResult();
 
                 Assert.AreEqual(
                     Regex.Replace("hello, world! 你好,世界!百度google返回", @"\s", ""),
@@ -98,18 +73,18 @@ namespace XiaoyaCrawlerUnitTest
                 Assert.AreEqual("http://www.baidu.com/", urls[0]);
                 Assert.AreEqual("https://www.google.com/", urls[1]);
                 Assert.AreEqual("http://bar.foo.com/a/b/index.htm", urls[2]);
-            });
+            }
         }
 
         [TestMethod]
         public void TestNotSupportedType()
         {
-            InitDatabase(parser =>
+            var parser = new SimpleParser(InitConfig());
             {
                 var tempXXX = Path.GetTempFileName();
 
                 File.WriteAllText(tempXXX, "xxx", Encoding.UTF8);
-                var urlFile = new UrlFile
+                var urlFile = new FetchedFile
                 {
                     Url = "http://bar.foo.com/a/b/c/",
                     FilePath = tempXXX,
@@ -122,7 +97,7 @@ namespace XiaoyaCrawlerUnitTest
                 {
                     parser.ParseAsync(urlFile).GetAwaiter().GetResult();
                 });
-            });
+            }
         }
     }
 }

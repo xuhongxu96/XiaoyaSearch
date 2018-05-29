@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using XiaoyaFileParser.Model;
-using XiaoyaStore.Data.Model;
 
 namespace XiaoyaCrawler.UrlFilter
 {

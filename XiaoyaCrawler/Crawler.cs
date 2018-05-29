@@ -15,7 +15,7 @@ using XiaoyaCrawler.SimilarContentManager;
 using XiaoyaCrawler.UrlFilter;
 using XiaoyaCrawler.UrlFrontier;
 using XiaoyaLogger;
-using XiaoyaStore.Data.Model;
+using XiaoyaStore.Model;
 
 namespace XiaoyaCrawler
 {
@@ -69,25 +69,21 @@ namespace XiaoyaCrawler
                 FetchedFile fetchedFile = null;
                 try
                 {
-                    // Fetch Url
+                    #region Fetch Url
                     fetchedFile = mFetcher.FetchAsync(url).GetAwaiter().GetResult();
                     if (fetchedFile == null)
                     {
                         // Fetched nothing
                         // Push back this url
-                        mUrlFrontier.PushBackUrl(url, true);
+                        mUrlFrontier.PushBackUrl(url, 0, true);
                         return;
                     }
+                    #endregion
 
-                    // Parse fetched file
+                    #region Parse fetched file
                     var parseResult = mParser.ParseAsync(fetchedFile).GetAwaiter().GetResult();
-
-                    var linkList = parseResult.Links;
-                    // Filter urls
-                    foreach (var filter in mUrlFilters)
-                    {
-                        linkList = filter.Filter(linkList).ToList();
-                    }
+                    #endregion
+                    #region Judge Similar UrlFile
 #if DEBUG
                     var time = DateTime.Now;
 #endif
@@ -104,29 +100,59 @@ namespace XiaoyaCrawler
                             return;
                         }
                     }
+                    #endregion
 
-                    // TODO: Save UrlFile
+                    #region Save UrlFile
+                    var urlFile = new UrlFile
+                    {
+                        Charset = fetchedFile.Charset,
+                        Content = parseResult.Content,
+                        FileHash = fetchedFile.FileHash,
+                        FilePath = fetchedFile.FilePath,
+                        MimeType = fetchedFile.MimeType,
+                        TextContent = parseResult.TextContent,
+                        Title = parseResult.Title,
+                        Url = fetchedFile.Url,
+                    };
 
+                    ulong oldUrlFileId;
+                    (urlFile, oldUrlFileId) = mConfig.UrlFileStore.SaveUrlFileAndGetOldId(urlFile);
 #if DEBUG
                     Console.WriteLine("Saved UrlFile: " + url + "\n" + (DateTime.Now - time).TotalSeconds);
                     time = DateTime.Now;
 #endif
-
-                    // TODO: Save links
-
+                    #endregion
+                    #region Save Links
+                    var linkList = parseResult.Links;
+                    // Filter urls
+                    foreach (var filter in mUrlFilters)
+                    {
+                        linkList = filter.Filter(linkList).ToList();
+                    }
+                    mConfig.LinkStore.SaveLinksOfUrlFile(urlFile.UrlfileId, oldUrlFileId,
+                        linkList.Select(o => new Link
+                        {
+                            Text = o.Text,
+                            Url = o.Url,
+                            UrlfileId = urlFile.UrlfileId,
+                        }));
 #if DEBUG
+                    Console.WriteLine("Saved Links: " + url + "\n" + (DateTime.Now - time).TotalSeconds);
                     time = DateTime.Now;
 #endif
-                    var urls = linkList.Select(o => o.Url).Distinct();
+                    #endregion
+                    #region Push Urls
                     // Add newly-found urls
+                    var urls = linkList.Select(o => o.Url).Distinct();
                     mUrlFrontier.PushUrls(urls);
 
-                    // Push back this url
-                    mUrlFrontier.PushBackUrl(url);
+                    // Push Back This Url
+                    mUrlFrontier.PushBackUrl(url, urlFile.UpdateInterval);
 #if DEBUG
                     Console.WriteLine("Pushed Links: " + url + "\n" + (DateTime.Now - time).TotalSeconds);
                     time = DateTime.Now;
 #endif
+                    #endregion
 
                     mLogger.Log(nameof(Crawler), "End Crawl: " + url);
                 }
@@ -136,7 +162,7 @@ namespace XiaoyaCrawler
                     mErrorLogger.LogException(nameof(Crawler), "Not supported file format: " + url, e);
 
                     // Retry
-                    mUrlFrontier.PushBackUrl(url, true);
+                    mUrlFrontier.PushBackUrl(url, 0, true);
                 }
                 catch (InvalidDataException e)
                 {
@@ -144,7 +170,7 @@ namespace XiaoyaCrawler
                     mErrorLogger.LogException(nameof(Crawler), "Invalid data: " + url, e);
 
                     // Retry
-                    mUrlFrontier.PushBackUrl(url, true);
+                    mUrlFrontier.PushBackUrl(url, 0, true);
                 }
                 catch (UriFormatException e)
                 {
@@ -165,7 +191,7 @@ namespace XiaoyaCrawler
                         || e is TaskCanceledException
                     )
                 {
-                    mUrlFrontier.PushBackUrl(url);
+                    mUrlFrontier.PushBackUrl(url, 0);
                 }
                 catch (Exception e)
                 {
@@ -173,14 +199,14 @@ namespace XiaoyaCrawler
                     mErrorLogger.LogException(nameof(Crawler), "Failed to crawl url: " + url, e);
 
                     // Retry
-                    mUrlFrontier.PushBackUrl(url, true);
+                    mUrlFrontier.PushBackUrl(url, 0, true);
                 }
                 finally
                 {
                     mFetchSemaphore.Release();
-                    if (fetchedFile != null && File.Exists(fetchedFile.filePath))
+                    if (fetchedFile != null && File.Exists(fetchedFile.FilePath))
                     {
-                        File.Delete(fetchedFile.filePath);
+                        File.Delete(fetchedFile.FilePath);
                     }
                 }
             }).ContinueWith(task =>

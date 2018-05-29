@@ -8,7 +8,7 @@ namespace XiaoyaCommon.Helper
 {
     public static class ScoringHelper
     {
-        public static double TfIdf(long frequency, long documentFrequency, int documentCount)
+        public static double TfIdf(ulong frequency, ulong documentFrequency, ulong documentCount)
         {
             double idf = Math.Log(documentCount + 1) - Math.Log(documentFrequency + 1);
             return (1 + Math.Log(frequency + 0.1)) * idf;
@@ -18,17 +18,12 @@ namespace XiaoyaCommon.Helper
             string content,
             string url,
             DateTime publishDate,
-            int occurenceInTitle,
-            int occurenceInLinks,
+            uint occurenceInTitle,
+            uint occurenceInLinks,
             IEnumerable<string> linkTexts,
             string word,
-            long wordFrequencyInFile,
-            /*
-            long wordFrequency,
-            long documentFrequency,
-            int documentCount,
-            */
-            List<int> positions)
+            uint wordFrequencyInFile,
+            List<uint> positions)
         {
             if (title == null)
             {

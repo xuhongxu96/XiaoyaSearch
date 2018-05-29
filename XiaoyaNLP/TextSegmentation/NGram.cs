@@ -32,8 +32,8 @@ namespace XiaoyaNLP.TextSegmentation
                         yield return new TextSegment
                         {
                             Word = subSentence.Substring(i, mGramCount),
-                            Position = index + i,
-                            Length = mGramCount,
+                            Position = (uint)(index + i),
+                            Length = (uint)mGramCount,
                         };
                     }
                 }
@@ -42,8 +42,8 @@ namespace XiaoyaNLP.TextSegmentation
                     yield return new TextSegment
                     {
                         Word = subSentence,
-                        Position = index,
-                        Length = subSentence.Length,
+                        Position = (uint)index,
+                        Length = (uint)subSentence.Length,
                     };
                 }
 

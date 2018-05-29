@@ -11,7 +11,7 @@ namespace XiaoyaSearchWeb
     {
         public static UrlFileStore UrlFileStore { get; set; }
         public static InvertedIndexStore InvertedIndexStore { get; set; }
-        public static IndexStatStore IndexStatStore { get; set; }
+        public static IPostingListStore PostingListStore { get; set; }
 
         public static SearchEngine SearchEngine { get; set; }
     }

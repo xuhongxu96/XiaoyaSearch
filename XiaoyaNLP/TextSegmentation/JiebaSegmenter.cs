@@ -27,8 +27,8 @@ namespace XiaoyaNLP.TextSegmentation
                 yield return new TextSegment
                 {
                     Word = token.Word,
-                    Position = baseIndex + token.StartIndex,
-                    Length = token.Word.Length,
+                    Position = (uint) (baseIndex + token.StartIndex),
+                    Length = (uint) token.Word.Length,
                 };
             }
         }
@@ -59,8 +59,8 @@ namespace XiaoyaNLP.TextSegmentation
                         yield return new TextSegment
                         {
                             Word = subSentence,
-                            Position = index,
-                            Length = subSentence.Length,
+                            Position = (uint) index,
+                            Length = (uint) subSentence.Length,
                         };
                     }
                 }

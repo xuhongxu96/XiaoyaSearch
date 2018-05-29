@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using XiaoyaRetriever.Config;
-using XiaoyaStore.Data.Model;
 
 namespace XiaoyaRetriever.Expression
 {
@@ -11,8 +10,8 @@ namespace XiaoyaRetriever.Expression
     {
         public SearchExpression Operand { get; private set; }
 
-        protected long mFrequency = 1;
-        public override long DocumentFrequency => mFrequency;
+        protected ulong mFrequency = 1;
+        public override ulong DocumentFrequency => mFrequency;
 
         public override bool IsIncluded => !Operand.IsIncluded;
 
@@ -25,13 +24,12 @@ namespace XiaoyaRetriever.Expression
         {
             Operand.SetConfig(config);
 
-            mFrequency = long.MaxValue - Operand.DocumentFrequency;
+            mFrequency = ulong.MaxValue - Operand.DocumentFrequency;
         }
 
         public override bool Equals(object obj)
         {
-            var not = obj as Not;
-            return not != null &&
+            return obj is Not not &&
                    EqualityComparer<SearchExpression>.Default.Equals(Operand, not.Operand);
         }
 

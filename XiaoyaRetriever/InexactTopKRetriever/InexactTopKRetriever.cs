@@ -7,23 +7,16 @@ using XiaoyaCommon.Helper;
 using XiaoyaRetriever.Config;
 using XiaoyaRetriever.Expression;
 using XiaoyaStore.Cache;
-using XiaoyaStore.Data.Model;
 using XiaoyaStore.Helper;
 
 namespace XiaoyaRetriever.InexactTopKRetriever
 {
     public class InexactTopKRetriever : IRetriever
     {
-        protected readonly double[] WORD_WEIGHT_THRESHOLDS_FOR_TIERS = new double[] { double.MaxValue / 2, 2.5, 2.1, 1, 0 };
+        // protected readonly double[] WORD_WEIGHT_THRESHOLDS_FOR_TIERS = new double[] { double.MaxValue / 2, 2.5, 2.1, 1, 0 };
 
         protected RetrieverConfig mConfig;
         protected int mTopK;
-
-        public class CacheWord
-        {
-            public int minWeightIndex;
-            public HashSet<int> urlFileIds;
-        }
 
         public InexactTopKRetriever(RetrieverConfig config, int k = 1000)
         {
@@ -31,28 +24,30 @@ namespace XiaoyaRetriever.InexactTopKRetriever
             mTopK = k;
         }
 
-        protected IEnumerable<int> RetrieveWord(Word word, int minWeightIndex)
+        protected IEnumerable<ulong> RetrieveWord(Word word)
         {
-            return mConfig.InvertedIndexStore.LoadUrlFileIdsByWord(word.Value,
-                                    WORD_WEIGHT_THRESHOLDS_FOR_TIERS[minWeightIndex]);
+            return mConfig.PostingListStore.GetPostingList(word.Value).Postings
+                    .OrderByDescending(id => mConfig.InvertedIndexStore.GetIndex(id, word.Value).Weight)
+                    .Take(mTopK);
+
         }
 
-        protected IEnumerable<int> RetrieveNot(Not notExp, int minWeightIndex)
+        protected IEnumerable<ulong> RetrieveNot(Not notExp)
         {
-            return from position in RetrieveExpression(notExp.Operand, WORD_WEIGHT_THRESHOLDS_FOR_TIERS.Length - minWeightIndex - 1)
+            return from position in RetrieveExpression(notExp.Operand)
                    select position;
         }
 
-        protected IEnumerable<int> RetrieveAnd(And andExp, int minWeightIndex)
+        protected IEnumerable<ulong> RetrieveAnd(And andExp)
         {
-            IEnumerable<int> result = null;
+            IEnumerable<ulong> result = null;
 
             if (andExp.IsIncluded)
             {
                 // Someone is included
                 foreach (var operand in andExp.OrderBy(o => o.DocumentFrequency))
                 {
-                    var nextIndices = RetrieveExpression(operand, minWeightIndex);
+                    var nextIndices = RetrieveExpression(operand);
 
                     if (result == null)
                     {
@@ -76,7 +71,7 @@ namespace XiaoyaRetriever.InexactTopKRetriever
                 // None is included
                 foreach (var operand in andExp.OrderByDescending(o => o.DocumentFrequency))
                 {
-                    var nextIndices = RetrieveExpression(operand, minWeightIndex);
+                    var nextIndices = RetrieveExpression(operand);
 
                     if (result == null)
                     {
@@ -92,16 +87,16 @@ namespace XiaoyaRetriever.InexactTopKRetriever
         }
 
 
-        protected IEnumerable<int> RetrieveOr(Or orExp, int minWeightIndex)
+        protected IEnumerable<ulong> RetrieveOr(Or orExp)
         {
-            IEnumerable<int> result = null;
+            IEnumerable<ulong> result = null;
 
             if (orExp.IsIncluded)
             {
                 // All are included
                 foreach (var operand in orExp.OrderBy(o => o.DocumentFrequency))
                 {
-                    var nextIndices = RetrieveExpression(operand, minWeightIndex);
+                    var nextIndices = RetrieveExpression(operand);
 
                     if (result == null)
                     {
@@ -118,7 +113,7 @@ namespace XiaoyaRetriever.InexactTopKRetriever
                 // Someone is not included
                 foreach (var operand in orExp.OrderByDescending(o => o.DocumentFrequency))
                 {
-                    var nextIndices = RetrieveExpression(operand, minWeightIndex);
+                    var nextIndices = RetrieveExpression(operand);
 
                     if (result == null)
                     {
@@ -140,56 +135,25 @@ namespace XiaoyaRetriever.InexactTopKRetriever
             return result;
         }
 
-        protected IEnumerable<int> RetrieveExpression(SearchExpression expression, int minWeightIndex)
+        protected IEnumerable<ulong> RetrieveExpression(SearchExpression expression)
         {
             if (expression is Word word)
             {
-                return RetrieveWord(word, minWeightIndex);
+                return RetrieveWord(word);
             }
             else if (expression is Not notExp)
             {
-                return RetrieveNot(notExp, minWeightIndex);
+                return RetrieveNot(notExp);
             }
             else if (expression is And andExp)
             {
-                return RetrieveAnd(andExp, minWeightIndex);
+                return RetrieveAnd(andExp);
             }
             else if (expression is Or orExp)
             {
-                return RetrieveOr(orExp, minWeightIndex);
+                return RetrieveOr(orExp);
             }
             throw new NotSupportedException("Not supported search expression");
-        }
-
-        protected IEnumerable<int> RetrieveExpression(SearchExpression expression)
-        {
-            int count = 0;
-
-            // mWordCaches.Clear();
-
-            var existedResult = new HashSet<int>();
-
-            for (int tier = 1; tier < WORD_WEIGHT_THRESHOLDS_FOR_TIERS.Length; ++tier)
-            {
-                var result = RetrieveExpression(expression, tier);
-
-                foreach (var urlFileId in result)
-                {
-                    if (existedResult.Contains(urlFileId))
-                    {
-                        continue;
-                    }
-                    existedResult.Add(urlFileId);
-
-                    yield return urlFileId;
-                    ++count;
-
-                    if (count >= mTopK)
-                    {
-                        yield break;
-                    }
-                }
-            }
         }
 
         /// <summary>
@@ -197,7 +161,7 @@ namespace XiaoyaRetriever.InexactTopKRetriever
         /// </summary>
         /// <param name="expression">Search expression</param>
         /// <returns>An enumerable of UrlFile IDs</returns>
-        public IEnumerable<int> Retrieve(SearchExpression expression)
+        public IEnumerable<ulong> Retrieve(SearchExpression expression)
         {
             expression.SetConfig(mConfig);
 

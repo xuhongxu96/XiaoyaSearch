@@ -7,16 +7,14 @@ using System.Threading.Tasks;
 using XiaoyaFileParser;
 using XiaoyaFileParser.Model;
 using XiaoyaStore.Store;
-using XiaoyaStore.Data.Model;
 using XiaoyaIndexer.Config;
 using XiaoyaLogger;
 using System.IO;
-using static XiaoyaStore.Data.Model.Postings;
 using static XiaoyaFileParser.Model.Token;
 using System.Collections.Concurrent;
-using Microsoft.EntityFrameworkCore;
 using XiaoyaNLP.Encoding;
 using XiaoyaCommon.Helper;
+using XiaoyaStore.Model;
 
 namespace XiaoyaIndexer
 {
@@ -37,8 +35,6 @@ namespace XiaoyaIndexer
             mLogger = new RuntimeLogger(Path.Combine(config.LogDirectory, "Indexer.Log"), true);
             mErrorLogger = new RuntimeLogger(Path.Combine(config.LogDirectory, "Indexer Error.Log"), true);
             mConfig = config;
-
-            mConfig.UrlFileStore.RestartIndex();
         }
 
         public void WaitAll()
@@ -55,68 +51,84 @@ namespace XiaoyaIndexer
                 try
                 {
 
-                    UniversalFileParser parser = new UniversalFileParser
-                    {
-                        UrlFile = urlFile,
-                    };
+                    UniversalFileParser parser = new UniversalFileParser();
+                    parser.SetFile(urlFile.MimeType, urlFile.Url, urlFile.Charset);
 
 #if DEBUG
                     var time = DateTime.Now;
                     Console.WriteLine("Loading Links: " + urlFile.Url);
 #endif
 
-                    var links = mConfig.LinkStore.LoadByUrl(urlFile.Url);
+                    var links = mConfig.LinkStore.GetLinksByUrl(urlFile.Url);
                     var linkTexts = links.Select(o => o.Text).ToList();
 
 #if DEBUG
                     Console.WriteLine("Loaded Links: " + urlFile.Url + "\n" + (DateTime.Now - time).TotalSeconds);
                     time = DateTime.Now;
 #endif
-
-                    IList<Token> tokens = parser.GetTokensAsync(linkTexts).GetAwaiter().GetResult();
-
-                    var invertedIndices = (from token in tokens
-                                           select new Postings
-                                           {
-                                               Word = token.Word,
-                                               Positions = string.Join(",", token.Positions),
-                                               UrlFileId = urlFile.UrlFileId,
-                                               WordFrequency = token.WordFrequency,
-                                               OccurencesInTitle = token.OccurencesInTitle,
-                                               OccurencesInLinks = token.OccurencesInLinks,
-                                               OccurencesInHeaders = token.OccurencesInHeaders,
-                                               Weight = ScoringHelper.CalculateIndexWeight(urlFile.Title,
-                                                                                           urlFile.TextContent,
-                                                                                           urlFile.Url,
-                                                                                           urlFile.PublishDate,
-                                                                                           token.OccurencesInTitle,
-                                                                                           token.OccurencesInLinks,
-                                                                                           linkTexts,
-                                                                                           token.Word,
-                                                                                           token.WordFrequency,
-                                                                                           token.Positions),
-                                           }).ToList();
-
-#if DEBUG
-                    Console.WriteLine("Generated Inverted Indices: " + urlFile.Url + "\n" + (DateTime.Now - time).TotalSeconds);
-                    time = DateTime.Now;
-#endif
-
                     var headers = parser.GetHeadersAsync().GetAwaiter().GetResult();
-                    urlFile.HeaderTotalLength = headers.Sum(o => o.Text.Length);
-                    urlFile.HeaderCount = headers.Sum(o => (6 - o.Level));
+                    urlFile.HeaderTotalLength = (uint) headers.Sum(o => o.Text.Length);
+                    urlFile.HeaderCount = (uint) headers.Sum(o => (6 - o.Level));
 
-                    urlFile.LinkCount = linkTexts.Count;
-                    urlFile.LinkTotalLength = linkTexts.Sum(o => o.Length);
+                    urlFile.InLinkCount = (uint) linkTexts.Count;
+                    urlFile.InLinkTotalLength = (uint) linkTexts.Sum(o => o.Length);
 
-                    mConfig.UrlFileStore.Save(urlFile, false);
+                    ulong oldUrlFileId;
+                    (urlFile, oldUrlFileId) = mConfig.UrlFileStore.SaveUrlFileAndGetOldId(urlFile);
 
 #if DEBUG
                     Console.WriteLine("Saved Header/Link Properties: " + urlFile.Url + "\n" + (DateTime.Now - time).TotalSeconds);
                     time = DateTime.Now;
 #endif
 
-                    mConfig.InvertedIndexStore.ClearAndSaveInvertedIndices(urlFile, invertedIndices);
+                    IList<Token> tokens = parser.GetTokensAsync(linkTexts).GetAwaiter().GetResult();
+                    var invertedIndices = new List<Index>();
+                    foreach (var token in tokens)
+                    {
+                        var key = new IndexKey
+                        {
+                            Word = token.Word,
+                            UrlfileId = urlFile.UrlfileId,
+                        };
+
+                        var weight = ScoringHelper.CalculateIndexWeight(urlFile.Title,
+                                                                    urlFile.TextContent,
+                                                                    urlFile.Url,
+                                                                    DateTime.FromBinary((long)urlFile.PublishDate),
+                                                                    token.OccurencesInTitle,
+                                                                    token.OccurencesInLinks,
+                                                                    linkTexts,
+                                                                    token.Word,
+                                                                    token.WordFrequency,
+                                                                    token.Positions);
+                        var index = new Index
+                        {
+                            Key = key,
+                            WordFrequency = token.WordFrequency,
+                            OccurencesInTitle = token.OccurencesInTitle,
+                            OccurencesInLinks = token.OccurencesInLinks,
+                            OccurencesInHeaders = token.OccurencesInHeaders,
+                            Weight = weight,
+                        };
+
+                        index.Positions.AddRange(token.Positions);
+
+                        var postingList = new PostingList
+                        {
+                            Word = token.Word,
+                            WordFrequency = token.WordFrequency,
+                            DocumentFrequency = 1,
+                            IsAdd = true,
+                        };
+                        postingList.Postings.Add(urlFile.UrlfileId);
+                        mConfig.PostingListStore.SavePostingList(postingList);
+                    }
+
+#if DEBUG
+                    Console.WriteLine("Generated Inverted Indices: " + urlFile.Url + "\n" + (DateTime.Now - time).TotalSeconds);
+                    time = DateTime.Now;
+#endif
+                    mConfig.InvertedIndexStore.ClearAndSaveIndicesOf(urlFile.UrlfileId, oldUrlFileId, invertedIndices);
 
 #if DEBUG
                     Console.WriteLine("Saved Indices: " + urlFile.Url + "\n" + (DateTime.Now - time).TotalSeconds);
@@ -129,13 +141,6 @@ namespace XiaoyaIndexer
                     }
 
                     mLogger.Log(nameof(SimpleIndexer), "Indexed Url: " + urlFile.Url);
-                }
-                catch (FileNotFoundException e)
-                {
-                    mLogger.LogException(nameof(SimpleIndexer), "Missing UrlFile: " + urlFile.Url, e);
-                    mErrorLogger.LogException(nameof(SimpleIndexer), "Missing UrlFile: " + urlFile.Url, e);
-
-                    mConfig.UrlFileStore.ReCrawl(urlFile);
                 }
                 catch (Exception e)
                 {
@@ -167,7 +172,7 @@ namespace XiaoyaIndexer
                     break;
                 }
 
-                var urlFile = mConfig.UrlFileStore.LoadAnyForIndex();
+                var urlFile = mConfig.UrlFileStore.GetForIndex();
                 if (urlFile == null)
                 {
                     IsWaiting = true;

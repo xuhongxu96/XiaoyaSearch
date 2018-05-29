@@ -8,8 +8,6 @@ using XiaoyaCrawler.UrlFrontier;
 using XiaoyaCrawler.Fetcher;
 using XiaoyaCrawler.Parser;
 using XiaoyaCrawler.SimilarContentManager;
-using XiaoyaStore.Data;
-using Microsoft.EntityFrameworkCore;
 using System.IO;
 using XiaoyaCommon.ArgumentParser;
 using XiaoyaLogger;
@@ -21,30 +19,13 @@ namespace XiaoyaCrawlerInterface
         static void Main(string[] args)
         {
             var arguments = Parser.ParseArguments<CrawlerArguments>(args);
-            DbContextOptions<XiaoyaSearchContext> options;
-
-            switch (arguments.DbType)
-            {
-                case "sqlite":
-                default:
-                    options = new DbContextOptionsBuilder<XiaoyaSearchContext>()
-                                .UseSqlite(arguments.DbConnectionString)
-                                .Options;
-                    break;
-                case "sqlserver":
-                    options = new DbContextOptionsBuilder<XiaoyaSearchContext>()
-                                .UseSqlServer(arguments.DbConnectionString)
-                                .Options;
-                    break;
-            }
 
             var config = new XiaoyaCrawler.Config.CrawlerConfig
             {
                 InitUrls = arguments.InitUrl.Split(","),
-                UrlFileStore = new UrlFileStore(options, false),
-                UrlFrontierItemStore = new UrlFrontierItemStore(options, new RuntimeLogger(Path.Combine(arguments.LogDir, "Crawler.log"), true)),
-                LinkStore = new LinkStore(options, false),
-                SameUrlStore = new SameUrlStore(options),
+                UrlFileStore = new UrlFileStore(),
+                UrlFrontierItemStore = new UrlFrontierItemStore(),
+                LinkStore = new LinkStore(),
                 FetchDirectory = arguments.FetchDir,
                 LogDirectory = arguments.LogDir,
                 MaxFetchingConcurrency = int.Parse(arguments.ThreadCount),

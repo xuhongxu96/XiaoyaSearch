@@ -6,10 +6,10 @@ namespace XiaoyaCrawler.Fetcher
 {
     public class FetchedFile
     {
-        public string url;
-        public string filePath;
-        public string charset;
-        public string mimeType;
-        public string fileHash;
+        public string Url { get; set; }
+        public string FilePath { get; set; }
+        public string Charset { get; set; }
+        public string MimeType { get; set; }
+        public string FileHash { get; set; }
     }
 }

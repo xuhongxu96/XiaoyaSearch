@@ -9,7 +9,7 @@ namespace XiaoyaRanker.PositionRanker
         public class WordPosition
         {
             public string Word { get; set; }
-            public int Position { get; set; }
+            public uint Position { get; set; }
         }
         public IEnumerable<WordPosition> WordPositions { get; set; }
     }

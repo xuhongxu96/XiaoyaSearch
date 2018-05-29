@@ -5,7 +5,6 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using XiaoyaFileParser.Model;
-using XiaoyaStore.Data.Model;
 
 namespace XiaoyaCrawler.UrlFilter
 {

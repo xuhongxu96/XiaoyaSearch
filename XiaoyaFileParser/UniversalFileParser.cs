@@ -4,7 +4,6 @@ using System.Text;
 using System.Threading.Tasks;
 using XiaoyaFileParser.Model;
 using XiaoyaFileParser.Config;
-using XiaoyaStore.Data.Model;
 using System.IO;
 using XiaoyaFileParser.Parsers;
 using XiaoyaNLP.Encoding;
@@ -24,7 +23,7 @@ namespace XiaoyaFileParser
             }
 
             mCurrentParser = GetParser(mimeType, mConfig);
-            mCurrentParser.SetFile(filePath, url, charset, mimeType);
+            mCurrentParser.SetFile(mimeType, url, charset, filePath);
         }
 
         protected FileParserConfig mConfig = new FileParserConfig();

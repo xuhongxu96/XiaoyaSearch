@@ -19,16 +19,5 @@ namespace XiaoyaSearchInterface
             Required = true)]
         public string LogDir { get; set; }
 
-        [Argument("-DbType",
-            Alias = "-d",
-            DefaultValue = "sqlite",
-            Required = true)]
-        public string DbType { get; set; }
-
-        [Argument("-DbConnectionString",
-            Alias = "-c",
-            DefaultValue = "Data Source=Db/XiaoyaSearch.db",
-            Required = false)]
-        public string DbConnectionString { get; set; }
     }
 }

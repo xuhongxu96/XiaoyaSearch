@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using XiaoyaFileParser.Config;
 using XiaoyaFileParser.Model;
 using XiaoyaNLP.Helper;
-using XiaoyaStore.Data.Model;
 
 namespace XiaoyaFileParser.Parsers
 {
@@ -56,8 +55,8 @@ namespace XiaoyaFileParser.Parsers
                 {
                     Word = segment.Key,
                     Positions = segment.Select(o => o.Position).OrderBy(o => o).ToList(),
-                    Length = segment.Key.Length,
-                    WordFrequency = segment.Count(),
+                    Length = (uint) segment.Key.Length,
+                    WordFrequency = (uint) segment.Count(),
                     OccurencesInLinks = 0,
                     OccurencesInTitle = 0,
                     OccurencesInHeaders = 0,
@@ -70,19 +69,19 @@ namespace XiaoyaFileParser.Parsers
             {
                 if (wordDict.ContainsKey(segment.Key))
                 {
-                    wordDict[segment.Key].OccurencesInTitle = segment.Count();
-                    wordDict[segment.Key].WordFrequency += segment.Count();
+                    wordDict[segment.Key].OccurencesInTitle = (uint) segment.Count();
+                    wordDict[segment.Key].WordFrequency += (uint) segment.Count();
                 }
                 else
                 {
                     var token = new Token
                     {
                         Word = segment.Key,
-                        Positions = new List<int>(),
-                        Length = segment.Key.Length,
-                        WordFrequency = segment.Count(),
+                        Positions = new List<uint>(),
+                        Length = (uint) segment.Key.Length,
+                        WordFrequency = (uint) segment.Count(),
                         OccurencesInLinks = 0,
-                        OccurencesInTitle = segment.Count(),
+                        OccurencesInTitle = (uint) segment.Count(),
                         OccurencesInHeaders = 0,
                     };
                     result.Add(token);
@@ -96,19 +95,19 @@ namespace XiaoyaFileParser.Parsers
                 {
                     if (wordDict.ContainsKey(segment.Key))
                     {
-                        wordDict[segment.Key].OccurencesInHeaders = segment.Count() * (6 - header.Level);
+                        wordDict[segment.Key].OccurencesInHeaders = (uint) (segment.Count() * (6 - header.Level));
                     }
                     else
                     {
                         var token = new Token
                         {
                             Word = segment.Key,
-                            Positions = new List<int>(),
-                            Length = segment.Key.Length,
-                            WordFrequency = segment.Count(),
+                            Positions = new List<uint>(),
+                            Length = (uint) segment.Key.Length,
+                            WordFrequency = (uint) segment.Count(),
                             OccurencesInLinks = 0,
                             OccurencesInTitle = 0,
-                            OccurencesInHeaders = segment.Count() * (6 - header.Level),
+                            OccurencesInHeaders = (uint) (segment.Count() * (6 - header.Level)),
                         };
                         result.Add(token);
                         wordDict.Add(token.Word, token);
@@ -130,18 +129,18 @@ namespace XiaoyaFileParser.Parsers
                 {
                     if (wordDict.ContainsKey(segment.Key))
                     {
-                        wordDict[segment.Key].OccurencesInLinks += segment.Count();
-                        wordDict[segment.Key].WordFrequency += segment.Count();
+                        wordDict[segment.Key].OccurencesInLinks += (uint) segment.Count();
+                        wordDict[segment.Key].WordFrequency += (uint) segment.Count();
                     }
                     else
                     {
                         var token = new Token
                         {
                             Word = segment.Key,
-                            Positions = new List<int>(),
-                            Length = segment.Key.Length,
-                            WordFrequency = segment.Count(),
-                            OccurencesInLinks = segment.Count(),
+                            Positions = new List<uint>(),
+                            Length = (uint) segment.Key.Length,
+                            WordFrequency = (uint) segment.Count(),
+                            OccurencesInLinks = (uint) segment.Count(),
                             OccurencesInTitle = 0,
                             OccurencesInHeaders = 0,
                         };

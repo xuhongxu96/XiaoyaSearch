@@ -7,7 +7,7 @@ namespace XiaoyaNLP.TextSegmentation
     public class TextSegment
     {
         public string Word { get; set; }
-        public int Position { get; set; }
-        public int Length { get; set; }
+        public uint Position { get; set; }
+        public uint Length { get; set; }
     }
 }

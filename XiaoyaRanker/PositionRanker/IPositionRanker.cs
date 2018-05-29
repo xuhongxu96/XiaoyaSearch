@@ -6,7 +6,7 @@ namespace XiaoyaRanker.PositionRanker
 {
     public interface IPositionRanker
     {
-        IEnumerable<ScoreWithWordPositions> Rank(IEnumerable<int> urlFileIds, IEnumerable<string> words);
+        IEnumerable<ScoreWithWordPositions> Rank(IEnumerable<ulong> urlFileIds, IEnumerable<string> words);
     }
    
 }

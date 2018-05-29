@@ -8,7 +8,7 @@ namespace XiaoyaSearch
 {
     public class SearchResult
     {
-        public int UrlFileId { get; set; }
+        public ulong UrlFileId { get; set; }
         public Score Score { get; set; }
         public Score ProScore { get; set; }
         public IEnumerable<WordPosition> WordPositions { get; set; }

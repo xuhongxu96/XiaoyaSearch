@@ -25,7 +25,7 @@ namespace XiaoyaRanker.Ranker
             };
         }
 
-        public IEnumerable<Score> Rank(IEnumerable<int> urlFileIds, IEnumerable<string> words)
+        public IEnumerable<Score> Rank(IEnumerable<ulong> urlFileIds, IEnumerable<string> words)
         {
             var scores = new List<List<Score>>();
             foreach (var ranker in mRankers)

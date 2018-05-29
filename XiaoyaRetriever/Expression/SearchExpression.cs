@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 using XiaoyaRetriever.Config;
-using XiaoyaStore.Data.Model;
 
 namespace XiaoyaRetriever.Expression
 {
     public abstract class SearchExpression
     {
-        public abstract long DocumentFrequency { get; }
+        public abstract ulong DocumentFrequency { get; }
         public abstract bool IsIncluded { get; }
         public virtual bool IsParsedFromFreeText => false;
 

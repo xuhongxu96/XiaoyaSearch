@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using XiaoyaRetriever.Config;
-using XiaoyaStore.Data.Model;
 
 namespace XiaoyaRetriever.Expression
 {
@@ -12,8 +11,8 @@ namespace XiaoyaRetriever.Expression
     {
         protected List<SearchExpression> mOperands = new List<SearchExpression>();
 
-        protected long mFrequency = 1;
-        public override long DocumentFrequency => mFrequency;
+        protected ulong mFrequency = 1;
+        public override ulong DocumentFrequency => mFrequency;
         /// <summary>
         /// Not included only when no operand is included.
         /// </summary>
@@ -58,8 +57,7 @@ namespace XiaoyaRetriever.Expression
 
         public override bool Equals(object obj)
         {
-            var and = obj as And;
-            return and != null &&
+            return obj is And and &&
                    EqualityComparer<List<SearchExpression>>.Default.Equals(mOperands, and.mOperands);
         }
 

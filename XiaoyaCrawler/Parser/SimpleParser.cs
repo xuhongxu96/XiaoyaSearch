@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Threading.Tasks;
-using XiaoyaStore.Data.Model;
 using XiaoyaStore.Helper;
 using XiaoyaCrawler.Config;
 using XiaoyaFileParser;
@@ -35,7 +34,7 @@ namespace XiaoyaCrawler.Parser
             }
 
             IFileParser parser = new UniversalFileParser();
-            parser.SetFile(fetchedFile.mimeType, fetchedFile.url, fetchedFile.charset, fetchedFile.filePath);
+            parser.SetFile(fetchedFile.MimeType, fetchedFile.Url, fetchedFile.Charset, fetchedFile.FilePath);
 
             var content = await parser.GetContentAsync();
 

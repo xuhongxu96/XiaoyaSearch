@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using XiaoyaRetriever.Config;
 using XiaoyaRetriever.Expression;
-using XiaoyaStore.Data.Model;
 
 namespace XiaoyaRetriever.BooleanRetriever
 {
@@ -17,21 +16,21 @@ namespace XiaoyaRetriever.BooleanRetriever
             mConfig = config;
         }
 
-        protected IEnumerable<int> RetrieveWord(Word word)
+        protected IEnumerable<ulong> RetrieveWord(Word word)
         {
-            return from index in mConfig.InvertedIndexStore.LoadUrlFileIdsByWord(word.Value)
+            return from index in mConfig.PostingListStore.GetPostingList(word.Value).Postings
                    select index;
         }
 
-        protected IEnumerable<int> RetrieveNot(Not notExp)
+        protected IEnumerable<ulong> RetrieveNot(Not notExp)
         {
             return from urlFileID in RetrieveExpression(notExp.Operand)
                    select urlFileID;
         }
 
-        protected IEnumerable<int> RetrieveAnd(And andExp)
+        protected IEnumerable<ulong> RetrieveAnd(And andExp)
         {
-            IEnumerable<int> result = null;
+            IEnumerable<ulong> result = null;
 
             if (andExp.IsIncluded)
             {
@@ -78,9 +77,9 @@ namespace XiaoyaRetriever.BooleanRetriever
         }
 
 
-        protected IEnumerable<int> RetrieveOr(Or orExp)
+        protected IEnumerable<ulong> RetrieveOr(Or orExp)
         {
-            IEnumerable<int> result = null;
+            IEnumerable<ulong> result = null;
 
             if (orExp.IsIncluded)
             {
@@ -126,7 +125,7 @@ namespace XiaoyaRetriever.BooleanRetriever
             return result;
         }
 
-        protected IEnumerable<int> RetrieveExpression(SearchExpression expression)
+        protected IEnumerable<ulong> RetrieveExpression(SearchExpression expression)
         {
             if (expression is Word word)
             {
@@ -152,7 +151,7 @@ namespace XiaoyaRetriever.BooleanRetriever
         /// </summary>
         /// <param name="expression">Search expression</param>
         /// <returns>An enumerable of UrlFile IDs</returns>
-        public IEnumerable<int> Retrieve(SearchExpression expression)
+        public IEnumerable<ulong> Retrieve(SearchExpression expression)
         {
             expression.SetConfig(mConfig);
 

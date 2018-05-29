@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using XiaoyaFileParser.Config;
 using XiaoyaFileParser.Model;
 using XiaoyaNLP.Helper;
-using XiaoyaStore.Data.Model;
 
 namespace XiaoyaFileParser.Parsers
 {

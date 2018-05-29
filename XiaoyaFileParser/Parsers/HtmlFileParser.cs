@@ -5,7 +5,6 @@ using System.IO;
 using System.Threading.Tasks;
 using XiaoyaFileParser.Model;
 using XiaoyaFileParser.Config;
-using XiaoyaStore.Data.Model;
 using AngleSharp.Extensions;
 using System.Text.RegularExpressions;
 using System.Linq;

@@ -43,14 +43,14 @@ namespace XiaoyaSearch
 
             mRetriever = new InexactTopKRetriever(new RetrieverConfig
             {
-                IndexStatStore = config.IndexStatStore,
+                PostingListStore = config.PostingListStore,
                 UrlFileStore = config.UrlFileStore,
                 InvertedIndexStore = config.InvertedIndexStore,
             }, ResultSize);
 
             var rankerConfig = new RankerConfig
             {
-                IndexStatStore = config.IndexStatStore,
+                PostingListStore = config.PostingListStore,
                 UrlFileStore = config.UrlFileStore,
                 InvertedIndexStore = config.InvertedIndexStore,
             };
@@ -86,24 +86,6 @@ namespace XiaoyaSearch
             mLogger.Log(nameof(SearchEngine), session + "\tRetrieved docs " + (DateTime.Now - time).TotalMilliseconds);
             time = DateTime.Now;
 
-            Task.WaitAll(new Task[] {
-                Task.Run(() =>
-                {
-                    var innerTime = DateTime.Now;
-                    mConfig.InvertedIndexStore.CacheWordsInUrlFiles(urlFileIds, parsedQuery.Words);
-                    mLogger.Log(nameof(SearchEngine), session + "\tCached words " + (DateTime.Now - innerTime).TotalMilliseconds);
-                }),
-                Task.Run(() =>
-                {
-                    var innerTime = DateTime.Now;
-                    mConfig.UrlFileStore.CacheUrlFiles(urlFileIds);
-                    mLogger.Log(nameof(SearchEngine), session + "\tCached docs " + (DateTime.Now - innerTime).TotalMilliseconds);
-                }),
-            });
-
-            mLogger.Log(nameof(SearchEngine), session + "\tCached all " + (DateTime.Now - time).TotalMilliseconds);
-            time = DateTime.Now;
-
             var scores = mRanker.Rank(urlFileIds, parsedQuery.Words).ToList();
 
             mLogger.Log(nameof(SearchEngine), session + "\tRanked docs 1 " + (DateTime.Now - time).TotalMilliseconds);
@@ -132,7 +114,7 @@ namespace XiaoyaSearch
                 for (int j = 0; j < subResultsLength; ++j)
                 {
                     subResults[j].ProScore = proScores[j];
-                    subResults[j].WordPositions = proScores[j].WordPositions?.Where(o => o.Position != -1);
+                    subResults[j].WordPositions = proScores[j].WordPositions?.Where(o => o.Position != uint.MaxValue);
                 }
 
                 mLogger.Log(nameof(SearchEngine), session + "\tRanked docs 2 " + (DateTime.Now - time).TotalMilliseconds);

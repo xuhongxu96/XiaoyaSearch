@@ -29,13 +29,13 @@ namespace XiaoyaSearchWeb.Controllers
 
                 foreach (var result in results)
                 {
-                    var urlFile = EngineOptions.UrlFileStore.LoadById(result.UrlFileId);
+                    var urlFile = EngineOptions.UrlFileStore.GetUrlFile(result.UrlFileId);
 
                     var searchResultItem = new SearchResultItem
                     {
                         Title = urlFile.Title,
                         Url = urlFile.Url,
-                        PublishDate = urlFile.PublishDate,
+                        PublishDate = DateTime.FromBinary((long) urlFile.PublishDate),
                         Score = result.Score.Value,
                         ProScore = result.ProScore.Value,
                         ScoreDebugInfo = result.Score.ToString(),
@@ -51,13 +51,13 @@ namespace XiaoyaSearchWeb.Controllers
                     {
                         var orderPos = result.WordPositions.OrderBy(o => o.Position);
                         var minWordPos = orderPos.First();
-                        var minPos = Math.Max(minWordPos.Position - 50, 0);
+                        var minPos = (int) Math.Max(minWordPos.Position - 50, 0);
                         var maxPos = orderPos.Last();
 
                         var content = urlFile.TextContent;
 
-                        searchResultItem.Details = content.Substring(minPos,
-                            Math.Min(maxPos.Position - minPos + maxPos.Word.Length + 50, content.Length - minPos))
+                        searchResultItem.Details = content.Substring((int) minPos,
+                            Math.Min((int) maxPos.Position - minPos + maxPos.Word.Length + 50, content.Length - minPos))
                             .Replace("\r", "").Replace("\n", "  ");
                     }
 

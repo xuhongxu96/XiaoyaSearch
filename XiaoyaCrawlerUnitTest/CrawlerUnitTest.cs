@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -14,7 +13,6 @@ using XiaoyaCrawler.SimilarContentManager;
 using XiaoyaCrawler.UrlFilter;
 using XiaoyaCrawler.UrlFrontier;
 using XiaoyaLogger;
-using XiaoyaStore.Data;
 using XiaoyaStore.Store;
 
 namespace XiaoyaCrawlerUnitTest
@@ -28,48 +26,15 @@ namespace XiaoyaCrawlerUnitTest
         [TestMethod]
         public async Task TestCrawler()
         {
-            bool isDeleted = false;
-            while (!isDeleted)
-            {
-                try
-                {
-                    if (Directory.Exists(logDir))
-                        Directory.Delete(logDir, true);
-                    if (Directory.Exists(fetchDir))
-                        Directory.Delete(fetchDir, true);
-                    isDeleted = true;
-                }
-                catch (IOException)
-                {
-                    Thread.Sleep(500);
-                }
-            }
-
-            File.Delete("XiaoyaSearch.db");
-
-            var options = new DbContextOptionsBuilder<XiaoyaSearchContext>()
-                .UseSqlite("Data Source=XiaoyaSearch.db")
-                .Options;
-
-            using (var context = new XiaoyaSearchContext(options))
-            {
-                context.Database.EnsureCreated();
-                context.RemoveRange(context.UrlFiles);
-                context.RemoveRange(context.UrlFrontierItems);
-                context.RemoveRange(context.UrlHostStats);
-                context.SaveChanges();
-            }
-
             var config = new XiaoyaCrawler.Config.CrawlerConfig
             {
                 InitUrls = new List<string>
                 {
                     "http://www.bnu.edu.cn",
                 },
-                UrlFileStore = new UrlFileStore(options),
-                UrlFrontierItemStore = new UrlFrontierItemStore(options),
-                LinkStore = new LinkStore(options),
-                SameUrlStore = new SameUrlStore(options),
+                UrlFileStore = new UrlFileStore(),
+                UrlFrontierItemStore = new UrlFrontierItemStore(),
+                LinkStore = new LinkStore(),
                 FetchDirectory = fetchDir,
                 LogDirectory = logDir,
                 MaxFetchingConcurrency = 100,
@@ -94,18 +59,9 @@ namespace XiaoyaCrawlerUnitTest
                 crawler.StartAsync().GetAwaiter().GetResult();
             });
 
-            Thread.Sleep(2000);
+            Thread.Sleep(10000);
 
             await crawler.StopAsync();
-
-            var urlFileCount = 0;
-
-            using (var context = new XiaoyaSearchContext(options))
-            {
-                urlFileCount = context.UrlFiles.Count();
-                Assert.IsTrue(urlFileCount > 0);
-                Assert.IsTrue(context.UrlFrontierItems.Count() > 0);
-            }
 
             lock (RuntimeLogger.ReadLock)
             {

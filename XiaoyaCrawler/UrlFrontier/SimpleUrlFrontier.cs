@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 using XiaoyaCrawler.Config;
 using XiaoyaCrawler.UrlFrontier;
 using XiaoyaLogger;
-using XiaoyaStore.Data.Model;
 
 namespace XiaoyaCrawler.UrlFrontier
 {
@@ -25,7 +24,6 @@ namespace XiaoyaCrawler.UrlFrontier
             mLogger = new RuntimeLogger(Path.Combine(config.LogDirectory, "Crawler.log"));
             mConfig = config;
             config.UrlFrontierItemStore.Init(config.InitUrls);
-            config.UrlFrontierItemStore.RestartCrawl();
         }
 
         /// <summary>
@@ -34,16 +32,16 @@ namespace XiaoyaCrawler.UrlFrontier
         /// <returns>Url to be fetched</returns>
         public string PopUrl()
         {
-            var item = mConfig.UrlFrontierItemStore.PopUrlForCrawl();
+            var url = mConfig.UrlFrontierItemStore.PopUrl();
 
-            if (item == null)
+            if (url == null)
             {
                 return null;
             }
 
-            mLogger.Log(nameof(SimpleUrlFrontier), "Popped Url: " + item);
+            mLogger.Log(nameof(SimpleUrlFrontier), "Popped Url: " + url);
 
-            return item;
+            return url;
         }
 
         /// <summary>
@@ -60,15 +58,15 @@ namespace XiaoyaCrawler.UrlFrontier
         /// Push back a popped url
         /// </summary>
         /// <param name="url">Url</param>
-        public void PushBackUrl(string url, bool failed = false)
+        public void PushBackUrl(string url, ulong updateInterval, bool failed = false)
         {
-            mConfig.UrlFrontierItemStore.PushBack(url, failed);
+            mConfig.UrlFrontierItemStore.PushBackUrl(url, updateInterval, failed);
             mLogger.Log(nameof(SimpleUrlFrontier), "Pushed Back Url: " + url);
         }
 
         public void RemoveUrl(string url)
         {
-            mConfig.UrlFrontierItemStore.Remove(url);
+            mConfig.UrlFrontierItemStore.RemoveUrl(url);
             mLogger.Log(nameof(SimpleUrlFrontier), "Removed Url: " + url);
         }
     }

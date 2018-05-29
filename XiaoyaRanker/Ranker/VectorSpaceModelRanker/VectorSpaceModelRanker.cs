@@ -5,7 +5,6 @@ using System.Text;
 using XiaoyaCommon.Helper;
 using XiaoyaRanker.Config;
 using XiaoyaRanker.RankerDebugInfo;
-using static XiaoyaStore.Data.Model.Postings;
 
 namespace XiaoyaRanker.Ranker.VectorSpaceModelRanker
 {
@@ -22,13 +21,13 @@ namespace XiaoyaRanker.Ranker.VectorSpaceModelRanker
             mConfig = config;
         }
 
-        public IEnumerable<Score> Rank(IEnumerable<int> urlFileIds, IEnumerable<string> words)
+        public IEnumerable<Score> Rank(IEnumerable<ulong> urlFileIds, IEnumerable<string> words)
         {
-            var documentCount = mConfig.UrlFileStore.Count();
+            var documentCount = mConfig.UrlFileStore.GetCount();
 
             foreach (var urlFileId in urlFileIds)
             {
-                var urlFile = mConfig.UrlFileStore.LoadById(urlFileId);
+                var urlFile = mConfig.UrlFileStore.GetUrlFile(urlFileId);
                 if (urlFile == null)
                 {
                     yield return new Score
@@ -49,7 +48,7 @@ namespace XiaoyaRanker.Ranker.VectorSpaceModelRanker
 
                 foreach (var word in words)
                 {
-                    var urlFileIndexStat = mConfig.InvertedIndexStore.LoadByWordInUrlFile(urlFileId, word);
+                    var urlFileIndexStat = mConfig.InvertedIndexStore.GetIndex(urlFileId, word);
 
                     if (urlFileIndexStat == null)
                     {
@@ -61,8 +60,8 @@ namespace XiaoyaRanker.Ranker.VectorSpaceModelRanker
                     var wordFrequencyInHeaders = urlFileIndexStat.OccurencesInHeaders;
                     var wordFrequencyInDocument = urlFileIndexStat.WordFrequency;
 
-                    var indexStat = mConfig.IndexStatStore.LoadByWord(word);
-                    var documentFrequency = indexStat.DocumentFrequency;
+                    var postingList = mConfig.PostingListStore.GetPostingList(word);
+                    var documentFrequency = postingList.DocumentFrequency;
 
                     var wordScore = 
                         ScoringHelper.TfIdf(wordFrequencyInDocument, documentFrequency, documentCount);
@@ -77,7 +76,7 @@ namespace XiaoyaRanker.Ranker.VectorSpaceModelRanker
                         ScoringHelper.TfIdf(wordFrequencyInHeaders, documentFrequency, documentCount);
 
                     titleScore += titleWordScore * Math.Min(1, (0.3 + word.Length / titleLength));
-                    linkScore += linkWordScore / urlFile.LinkCount; // * word.Length / (1 + urlFile.LinkTotalLength);
+                    linkScore += linkWordScore / urlFile.InLinkCount; // * word.Length / (1 + urlFile.LinkTotalLength);
                     headerScore += headerWordScore; // * word.Length / (1 + urlFile.HeaderTotalLength);
                     contentScore += wordScore * Math.Min(1, (0.3 + word.Length / contentLength));
                 }

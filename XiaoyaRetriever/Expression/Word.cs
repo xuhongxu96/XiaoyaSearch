@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using XiaoyaCommon.Helper;
 using XiaoyaRetriever.Config;
-using XiaoyaStore.Data.Model;
 using XiaoyaStore.Store;
 
 namespace XiaoyaRetriever.Expression
@@ -13,10 +12,10 @@ namespace XiaoyaRetriever.Expression
     {
         public string Value { get; private set; }
 
-        protected long mFrequency = 1;
-        public override long DocumentFrequency => mFrequency;
-        protected long mWordFrequency = 1;
-        public long WordFrequency => mWordFrequency;
+        protected ulong mFrequency = 1;
+        public override ulong DocumentFrequency => mFrequency;
+        protected ulong mWordFrequency = 1;
+        public ulong WordFrequency => mWordFrequency;
 
         public override bool IsIncluded => true;
 
@@ -29,7 +28,7 @@ namespace XiaoyaRetriever.Expression
 
         public override void SetConfig(RetrieverConfig config)
         {
-            var stat = config.IndexStatStore.LoadByWord(Value);
+            var stat = config.PostingListStore.GetPostingList(Value);
             if (stat != null)
             {
                 mFrequency = stat.DocumentFrequency;

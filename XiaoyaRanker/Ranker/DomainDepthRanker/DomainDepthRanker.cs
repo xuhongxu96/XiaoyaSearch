@@ -16,11 +16,11 @@ namespace XiaoyaRanker.Ranker.DomainDepthRanker
             mConfig = config;
         }
 
-        public IEnumerable<Score> Rank(IEnumerable<int> urlFileIds, IEnumerable<string> words)
+        public IEnumerable<Score> Rank(IEnumerable<ulong> urlFileIds, IEnumerable<string> words)
         {
             foreach (var id in urlFileIds)
             {
-                var urlFile = mConfig.UrlFileStore.LoadById(id);
+                var urlFile = mConfig.UrlFileStore.GetUrlFile(id);
                 if (urlFile == null)
                 {
                     yield return new Score

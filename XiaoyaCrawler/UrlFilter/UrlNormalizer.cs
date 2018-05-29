@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Web;
 using XiaoyaFileParser.Model;
-using XiaoyaStore.Data.Model;
 
 namespace XiaoyaCrawler.UrlFilter
 {
@@ -65,10 +64,8 @@ namespace XiaoyaCrawler.UrlFilter
                     continue;
                 }
 
-                yield return new Link
+                yield return new LinkInfo
                 {
-                    LinkId = link.LinkId,
-                    UrlFileId = link.UrlFileId,
                     Text = link.Text,
                     Url = result,
                 };

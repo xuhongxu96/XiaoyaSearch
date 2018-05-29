@@ -8,7 +8,7 @@ namespace XiaoyaRetriever.Config
     public class RetrieverConfig
     {
         public IInvertedIndexStore InvertedIndexStore { get; set; }
-        public IIndexStatStore IndexStatStore { get; set; }
+        public IPostingListStore PostingListStore { get; set; }
         public IUrlFileStore UrlFileStore { get; set; }
     }
 }

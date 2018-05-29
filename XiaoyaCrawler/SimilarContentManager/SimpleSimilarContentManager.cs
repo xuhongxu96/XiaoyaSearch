@@ -7,7 +7,6 @@ using XiaoyaStore.Helper;
 using XiaoyaCrawler.Config;
 using XiaoyaCrawler.Parser;
 using XiaoyaLogger;
-using XiaoyaStore.Data.Model;
 using System.Net;
 using System.Linq;
 using XiaoyaCrawler.Fetcher;
@@ -28,17 +27,17 @@ namespace XiaoyaCrawler.SimilarContentManager
 
         public (string Url, string Content) JudgeContent(FetchedFile fetchedFile, string textContent)
         {
-            var sameFiles = mConfig.UrlFileStore.LoadByHash(fetchedFile.fileHash).ToList();
-            var host = UrlHelper.GetHost(fetchedFile.url);
+            var sameFiles = mConfig.UrlFileStore.GetUrlFilesByHash(fetchedFile.FileHash);
+            var host = UrlHelper.GetHost(fetchedFile.Url);
 
             foreach (var file in sameFiles)
             {
-                if (file.url == fetchedFile.url)
+                if (file.Url == fetchedFile.Url)
                 {
                     continue;
                 }
 
-                var currentHost = UrlHelper.GetHost(file.url);
+                var currentHost = UrlHelper.GetHost(file.Url);
 
                 bool isSameDns = false;
 
@@ -49,11 +48,11 @@ namespace XiaoyaCrawler.SimilarContentManager
                 catch (Exception)
                 { }
 
-                if (textContent == file.textContent
+                if (textContent == file.TextContent
                     && (currentHost == host || isSameDns))
                 {
-                    mLogger.Log(nameof(SimpleSimilarContentManager), $"Find Same UrlFile for {fetchedFile.url}: {file.url}");
-                    return file;
+                    mLogger.Log(nameof(SimpleSimilarContentManager), $"Find Same UrlFile for {fetchedFile.Url}: {file.Url}");
+                    return (file.Url, file.TextContent);
                 }
             }
 

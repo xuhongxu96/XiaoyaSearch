@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using XiaoyaFileParser.Model;
 using XiaoyaFileParser.Config;
 using XiaoyaNLP.TextSegmentation;
-using XiaoyaStore.Data.Model;
 using System.Linq;
 using static XiaoyaFileParser.Model.Token;
 using XiaoyaNLP.Encoding;
