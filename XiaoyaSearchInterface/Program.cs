@@ -48,14 +48,14 @@ namespace XiaoyaSearchInterface
                     {
                         var orderPos = result.WordPositions.OrderBy(o => o.Position);
                         var minWordPos = orderPos.First();
-                        var minPos = (int) Math.Max(minWordPos.Position - 50, 0);
+                        var minPos = Math.Max((int)minWordPos.Position - 50, 0);
                         var maxPos = orderPos.Last();
 
                         var content = urlFile.TextContent;
 
                         Console.WriteLine("  "
                             + content.Substring(minPos,
-                            Math.Min((int) maxPos.Position - minPos + maxPos.Word.Length + 50, content.Length - minPos))
+                            Math.Min((int)maxPos.Position - minPos + maxPos.Word.Length + 50, content.Length - minPos))
                             .Replace("\r", "").Replace("\n", "  "));
                     }
 

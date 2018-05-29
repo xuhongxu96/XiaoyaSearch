@@ -112,6 +112,7 @@ namespace XiaoyaIndexer
                         };
 
                         index.Positions.AddRange(token.Positions);
+                        invertedIndices.Add(index);
 
                         var postingList = new PostingList
                         {
