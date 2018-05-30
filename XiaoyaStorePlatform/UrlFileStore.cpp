@@ -184,16 +184,13 @@ uint64_t UrlFileStore::SaveUrlFileAndGetOldId(UrlFile & urlFile)
 			urlFile.set_updated_at(oldUrlFile.updated_at());
 		}
 
-		if (oldUrlFile.file_hash() != urlFile.file_hash())
-		{
-			// Hash changed, remove old hash index
-			IdList removingHashIndex;
-			removingHashIndex.set_is_add(false);
-			removingHashIndex.add_ids(oldUrlFile.urlfile_id());
+		// Remove old hash index
+		IdList removingHashIndex;
+		removingHashIndex.set_is_add(false);
+		removingHashIndex.add_ids(oldUrlFile.urlfile_id());
 
-			batch.Merge(mCFHandles[HashIndexCF].get(), oldUrlFile.file_hash(),
-				SerializeHelper::Serialize(removingHashIndex));
-		}
+		batch.Merge(mCFHandles[HashIndexCF].get(), oldUrlFile.file_hash(),
+			SerializeHelper::Serialize(removingHashIndex));
 
 		// Delete old UrlFile
 		batch.Delete(SerializeHelper::SerializeUInt64(oldUrlFile.urlfile_id()));

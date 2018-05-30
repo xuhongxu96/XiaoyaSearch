@@ -8,12 +8,15 @@ using System.Net;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using XiaoyaCommon.Helper;
 using XiaoyaCrawler.Config;
 using XiaoyaCrawler.Fetcher;
 using XiaoyaCrawler.Parser;
 using XiaoyaCrawler.SimilarContentManager;
 using XiaoyaCrawler.UrlFilter;
 using XiaoyaCrawler.UrlFrontier;
+using XiaoyaFileParser;
+using XiaoyaFileParser.Model;
 using XiaoyaLogger;
 using XiaoyaStore.Model;
 
@@ -60,6 +63,120 @@ namespace XiaoyaCrawler
             mErrorLogger = new RuntimeLogger(Path.Combine(config.LogDirectory, "Crawler Error.Log"), false);
         }
 
+        private FetchedFile FetchUrl(string url)
+        {
+            var fetchedFile = mFetcher.FetchAsync(url).GetAwaiter().GetResult();
+            if (fetchedFile == null)
+            {
+                // Fetched nothing
+                // Push back this url
+                mUrlFrontier.PushBackUrl(url, 0, true);
+                return null;
+            }
+            return fetchedFile;
+        }
+
+        private (UrlFile urlFile, IList<LinkInfo> links, IList<Token> tokens, List<string> inLinkTexts) ParseFetchedFile(FetchedFile fetchedFile)
+        {
+            UniversalFileParser parser = new UniversalFileParser();
+            parser.SetFile(fetchedFile.MimeType, fetchedFile.Url, fetchedFile.Charset, fetchedFile.FilePath);
+
+            var inLinks = mConfig.LinkStore.GetLinksByUrl(fetchedFile.Url);
+            var inLinkTexts = inLinks.Select(o => o.Text).ToList();
+            var content = parser.GetContentAsync().GetAwaiter().GetResult();
+            var textContent = parser.GetTextContentAsync().GetAwaiter().GetResult();
+            var title = parser.GetTitleAsync().GetAwaiter().GetResult();
+            var headers = parser.GetHeadersAsync().GetAwaiter().GetResult();
+            var links = parser.GetLinksAsync().GetAwaiter().GetResult();
+            var tokens = parser.GetTokensAsync(inLinkTexts).GetAwaiter().GetResult();
+
+            var urlFile = new UrlFile
+            {
+                Charset = fetchedFile.Charset,
+                Content = content,
+                FileHash = fetchedFile.FileHash,
+                FilePath = fetchedFile.FilePath,
+                MimeType = fetchedFile.MimeType,
+                TextContent = textContent,
+                Title = title,
+                Url = fetchedFile.Url,
+                HeaderTotalLength = (uint)headers.Sum(o => o.Text.Length),
+                HeaderCount = (uint)headers.Sum(o => (6 - o.Level)),
+                InLinkCount = (uint)inLinkTexts.Count,
+                InLinkTotalLength = (uint)inLinkTexts.Sum(o => o.Length),
+                PageRank = 0.1,
+            };
+
+            return (urlFile, links, tokens, inLinkTexts);
+        }
+
+        private string GetSameUrl(FetchedFile fetchedFile, string content)
+        {
+            lock (mSaveSyncLock)
+            {
+                // Judge if there are other files that have similar content as this
+                var (sameUrl, sameContent) = mSimilarContentJudger.JudgeContent(fetchedFile, content);
+                return sameUrl;
+            }
+        }
+
+        private IList<LinkInfo> FilterLinks(IList<LinkInfo> linkList)
+        {
+            // Filter urls
+            foreach (var filter in mUrlFilters)
+            {
+                linkList = filter.Filter(linkList).ToList();
+            }
+            return linkList;
+        }
+
+        private void SaveIndices(IList<Token> tokens, IList<string> linkTexts, UrlFile urlFile, ulong oldUrlFileId)
+        {
+            var invertedIndices = new List<Index>();
+            foreach (var token in tokens)
+            {
+                var key = new IndexKey
+                {
+                    Word = token.Word,
+                    UrlfileId = urlFile.UrlfileId,
+                };
+
+                var weight = ScoringHelper.CalculateIndexWeight(urlFile.Title,
+                                                            urlFile.TextContent,
+                                                            urlFile.Url,
+                                                            DateTime.FromBinary((long)urlFile.PublishDate),
+                                                            token.OccurencesInTitle,
+                                                            token.OccurencesInLinks,
+                                                            linkTexts,
+                                                            token.Word,
+                                                            token.WordFrequency,
+                                                            token.Positions);
+                var index = new Index
+                {
+                    Key = key,
+                    WordFrequency = token.WordFrequency,
+                    OccurencesInTitle = token.OccurencesInTitle,
+                    OccurencesInLinks = token.OccurencesInLinks,
+                    OccurencesInHeaders = token.OccurencesInHeaders,
+                    Weight = weight,
+                };
+
+                index.Positions.AddRange(token.Positions);
+                invertedIndices.Add(index);
+
+                var postingList = new PostingList
+                {
+                    Word = token.Word,
+                    WordFrequency = token.WordFrequency,
+                    DocumentFrequency = 1,
+                    IsAdd = true,
+                };
+                postingList.Postings.Add(urlFile.UrlfileId);
+                mConfig.PostingListStore.SavePostingList(postingList);
+            }
+            mConfig.InvertedIndexStore.ClearAndSaveIndicesOf(urlFile.UrlfileId, oldUrlFileId, invertedIndices);
+        }
+
         protected void FetchUrlAsync(string url)
         {
             mFetchSemaphore.Wait();
@@ -69,66 +186,28 @@ namespace XiaoyaCrawler
                 FetchedFile fetchedFile = null;
                 try
                 {
-                    #region Fetch Url
-                    fetchedFile = mFetcher.FetchAsync(url).GetAwaiter().GetResult();
+                    fetchedFile = FetchUrl(url);
                     if (fetchedFile == null)
                     {
-                        // Fetched nothing
-                        // Push back this url
-                        mUrlFrontier.PushBackUrl(url, 0, true);
                         return;
                     }
-                    #endregion
 
-                    #region Parse fetched file
-                    var parseResult = mParser.ParseAsync(fetchedFile).GetAwaiter().GetResult();
-                    #endregion
-                    #region Judge Similar UrlFile
-#if DEBUG
-                    var time = DateTime.Now;
-#endif
-                    lock (mSaveSyncLock)
+                    var (urlFile, linkList, tokens, inLinkTexts) = ParseFetchedFile(fetchedFile);
+
+                    if (GetSameUrl(fetchedFile, urlFile.Content) != null)
                     {
-                        // Judge if there are other files that have similar content as this
-                        var (sameUrl, sameContent) = mSimilarContentJudger.JudgeContent(fetchedFile, parseResult.TextContent);
-#if DEBUG
-                        Console.WriteLine("Judged Similar: " + url + "\n" + (DateTime.Now - time).TotalSeconds);
-                        time = DateTime.Now;
-#endif
-                        if (sameUrl != null)
-                        {
-                            return;
-                        }
+                        // Has same UrlFile
+                        return;
                     }
-                    #endregion
 
-                    #region Save UrlFile
-                    var urlFile = new UrlFile
-                    {
-                        Charset = fetchedFile.Charset,
-                        Content = parseResult.Content,
-                        FileHash = fetchedFile.FileHash,
-                        FilePath = fetchedFile.FilePath,
-                        MimeType = fetchedFile.MimeType,
-                        TextContent = parseResult.TextContent,
-                        Title = parseResult.Title,
-                        Url = fetchedFile.Url,
-                    };
-
+                    // Save new UrlFile
+                    // Get old id and new id
                     ulong oldUrlFileId;
                     (urlFile, oldUrlFileId) = mConfig.UrlFileStore.SaveUrlFileAndGetOldId(urlFile);
-#if DEBUG
-                    Console.WriteLine("Saved UrlFile: " + url + "\n" + (DateTime.Now - time).TotalSeconds);
-                    time = DateTime.Now;
-#endif
-                    #endregion
-                    #region Save Links
-                    var linkList = parseResult.Links;
-                    // Filter urls
-                    foreach (var filter in mUrlFilters)
-                    {
-                        linkList = filter.Filter(linkList).ToList();
-                    }
+
+                    linkList = FilterLinks(linkList);
+
+                    // Save links
                     mConfig.LinkStore.SaveLinksOfUrlFile(urlFile.UrlfileId, oldUrlFileId,
                         linkList.Select(o => new Link
                         {
@@ -136,23 +215,15 @@ namespace XiaoyaCrawler
                             Url = o.Url,
                             UrlfileId = urlFile.UrlfileId,
                         }));
-#if DEBUG
-                    Console.WriteLine("Saved Links: " + url + "\n" + (DateTime.Now - time).TotalSeconds);
-                    time = DateTime.Now;
-#endif
-                    #endregion
-                    #region Push Urls
+
+                    SaveIndices(tokens, inLinkTexts, urlFile, oldUrlFileId);
+
                     // Add newly-found urls
                     var urls = linkList.Select(o => o.Url).Distinct();
                     mUrlFrontier.PushUrls(urls);
 
                     // Push Back This Url
                     mUrlFrontier.PushBackUrl(url, urlFile.UpdateInterval);
-#if DEBUG
-                    Console.WriteLine("Pushed Links: " + url + "\n" + (DateTime.Now - time).TotalSeconds);
-                    time = DateTime.Now;
-#endif
-                    #endregion
 
                     mLogger.Log(nameof(Crawler), "End Crawl: " + url);
                 }
@@ -210,9 +281,9 @@ namespace XiaoyaCrawler
                     }
                 }
             }).ContinueWith(task =>
-                {
-                    mTasks.TryRemove(task, out bool v);
-                });
+                    {
+                        mTasks.TryRemove(task, out bool v);
+                    });
             mTasks.TryAdd(t, true);
         }
 
