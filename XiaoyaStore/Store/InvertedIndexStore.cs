@@ -16,15 +16,14 @@ namespace XiaoyaStore.Store
             client = new InvertedIndexService.InvertedIndexServiceClient(channel);
         }
 
-        public bool ClearAndSaveIndicesOf(ulong urlFileId, ulong oldUrlFileId, IEnumerable<Index> indices)
+        public bool SaveIndices(ulong urlFileId, IEnumerable<Index> indices)
         {
-            var arg = new ArgClearAndSaveIndicesOf
+            var arg = new ArgSaveIndices
             {
-                UrlfileId = urlFileId,
-                OldUrlfileId = oldUrlFileId,
+                UrlFileId = urlFileId,
             };
             arg.Indices.AddRange(indices);
-            var result = client.ClearAndSaveIndicesOf(arg);
+            var result = client.SaveIndices(arg);
             return result.IsSuccessful;
         }
 
@@ -32,7 +31,7 @@ namespace XiaoyaStore.Store
         {
             var arg = new ArgIndexKey
             {
-                UrlfileId = urlFileId,
+                UrlFileId = urlFileId,
                 Word = word,
             };
             var result = client.GetIndex(arg);
@@ -44,6 +43,16 @@ namespace XiaoyaStore.Store
             {
                 return null;
             }
+        }
+
+        public bool ClearIndices(ulong urlFileId)
+        {
+            var arg = new ArgId
+            {
+                Id = urlFileId
+            };
+            var result = client.ClearIndices(arg);
+            return result.IsSuccessful;
         }
 
         public void Dispose()

@@ -29,7 +29,5 @@ namespace XiaoyaCrawler.Config
         public IUrlFileStore UrlFileStore { get; set; }
         public IUrlFrontierItemStore UrlFrontierItemStore { get; set; }
         public ILinkStore LinkStore { get; set; }
-        public IPostingListStore PostingListStore { get; set; }
-        public IInvertedIndexStore InvertedIndexStore { get; set; }
     }
 }

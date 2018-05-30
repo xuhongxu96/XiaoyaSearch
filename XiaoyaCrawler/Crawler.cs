@@ -76,13 +76,12 @@ namespace XiaoyaCrawler
             return fetchedFile;
         }
 
-        private (UrlFile urlFile, IList<LinkInfo> links, IList<Token> tokens, List<string> inLinkTexts) ParseFetchedFile(FetchedFile fetchedFile)
+        private (UrlFile urlFile, IList<LinkInfo> links, IList<Token> tokens)
+            ParseFetchedFile(FetchedFile fetchedFile, IList<string> inLinkTexts)
         {
             UniversalFileParser parser = new UniversalFileParser();
             parser.SetFile(fetchedFile.MimeType, fetchedFile.Url, fetchedFile.Charset, fetchedFile.FilePath);
 
-            var inLinks = mConfig.LinkStore.GetLinksByUrl(fetchedFile.Url);
-            var inLinkTexts = inLinks.Select(o => o.Text).ToList();
             var content = parser.GetContentAsync().GetAwaiter().GetResult();
             var textContent = parser.GetTextContentAsync().GetAwaiter().GetResult();
             var title = parser.GetTitleAsync().GetAwaiter().GetResult();
@@ -107,7 +106,7 @@ namespace XiaoyaCrawler
                 PageRank = 0.1,
             };
 
-            return (urlFile, links, tokens, inLinkTexts);
+            return (urlFile, links, tokens);
         }
 
         private string GetSameUrl(FetchedFile fetchedFile, string content)
@@ -130,6 +129,21 @@ namespace XiaoyaCrawler
             return linkList;
         }
 
+        private IList<string> GetInLinkTexts(string url)
+        {
+            var inLinks = mConfig.LinkStore.GetLinks(url);
+
+            var removingLinks = inLinks
+                .Where(o => !mConfig.UrlFileStore.ContainsId(o.UrlFileId))
+                .ToList();
+
+            mConfig.LinkStore.RemoveLinks(removingLinks);
+
+            return inLinks
+                .Except(removingLinks)
+                .Select(o => o.Text).ToList();
+        }
+
         private void SaveIndices(IList<Token> tokens, IList<string> linkTexts, UrlFile urlFile, ulong oldUrlFileId)
         {
             var invertedIndices = new List<Index>();
@@ -138,7 +152,7 @@ namespace XiaoyaCrawler
                 var key = new IndexKey
                 {
                     Word = token.Word,
-                    UrlfileId = urlFile.UrlfileId,
+                    UrlFileId = urlFile.UrlFileId,
                 };
 
                 var weight = ScoringHelper.CalculateIndexWeight(urlFile.Title,
@@ -171,10 +185,11 @@ namespace XiaoyaCrawler
                     DocumentFrequency = 1,
                     IsAdd = true,
                 };
-                postingList.Postings.Add(urlFile.UrlfileId);
+                postingList.Postings.Add(urlFile.UrlFileId);
                 mConfig.PostingListStore.SavePostingList(postingList);
             }
-            mConfig.InvertedIndexStore.ClearAndSaveIndicesOf(urlFile.UrlfileId, oldUrlFileId, invertedIndices);
+            mConfig.InvertedIndexStore.ClearIndices(oldUrlFileId);
+            mConfig.InvertedIndexStore.SaveIndices(urlFile.UrlFileId, invertedIndices);
         }
 
         protected void FetchUrlAsync(string url)
@@ -186,36 +201,42 @@ namespace XiaoyaCrawler
                 FetchedFile fetchedFile = null;
                 try
                 {
+                    // Fetch Url
                     fetchedFile = FetchUrl(url);
                     if (fetchedFile == null)
                     {
                         return;
                     }
 
-                    var (urlFile, linkList, tokens, inLinkTexts) = ParseFetchedFile(fetchedFile);
+                    // Get InLink Texts
+                    var inLinkTexts = GetInLinkTexts(fetchedFile.Url);
+
+                    // Parse File
+                    var (urlFile, linkList, tokens) = ParseFetchedFile(fetchedFile, inLinkTexts);
 
                     if (GetSameUrl(fetchedFile, urlFile.Content) != null)
                     {
-                        // Has same UrlFile
+                        // Has Same UrlFile, Skip
                         return;
                     }
 
-                    // Save new UrlFile
-                    // Get old id and new id
+                    // Save New UrlFile
+                    // Get Old id and New id
                     ulong oldUrlFileId;
                     (urlFile, oldUrlFileId) = mConfig.UrlFileStore.SaveUrlFileAndGetOldId(urlFile);
 
+                    // Filter Links
                     linkList = FilterLinks(linkList);
 
                     // Save links
-                    mConfig.LinkStore.SaveLinksOfUrlFile(urlFile.UrlfileId, oldUrlFileId,
-                        linkList.Select(o => new Link
-                        {
-                            Text = o.Text,
-                            Url = o.Url,
-                            UrlfileId = urlFile.UrlfileId,
-                        }));
+                    mConfig.LinkStore.SaveLinks(linkList.Select(o => new Link
+                    {
+                        Text = o.Text,
+                        Url = o.Url,
+                        UrlFileId = urlFile.UrlFileId,
+                    }));
 
+                    // Save Indices
                     SaveIndices(tokens, inLinkTexts, urlFile, oldUrlFileId);
 
                     // Add newly-found urls

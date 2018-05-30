@@ -561,19 +561,12 @@ class UrlFileService final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::ResultWithCount>> PrepareAsyncGetCount(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgVoid& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::ResultWithCount>>(PrepareAsyncGetCountRaw(context, request, cq));
     }
-    virtual ::grpc::Status GetForIndex(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgVoid& request, ::XiaoyaStore::Service::ResultWithUrlFile* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::ResultWithUrlFile>> AsyncGetForIndex(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgVoid& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::ResultWithUrlFile>>(AsyncGetForIndexRaw(context, request, cq));
+    virtual ::grpc::Status ContainsId(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgId& request, ::XiaoyaStore::Service::Result* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::Result>> AsyncContainsId(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgId& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::Result>>(AsyncContainsIdRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::ResultWithUrlFile>> PrepareAsyncGetForIndex(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgVoid& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::ResultWithUrlFile>>(PrepareAsyncGetForIndexRaw(context, request, cq));
-    }
-    virtual ::grpc::Status FinishIndex(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrl& request, ::XiaoyaStore::Service::Result* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::Result>> AsyncFinishIndex(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrl& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::Result>>(AsyncFinishIndexRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::Result>> PrepareAsyncFinishIndex(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrl& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::Result>>(PrepareAsyncFinishIndexRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::Result>> PrepareAsyncContainsId(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgId& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::Result>>(PrepareAsyncContainsIdRaw(context, request, cq));
     }
   private:
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::ResultWithUrlFile>* AsyncGetUrlFileByIdRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgId& request, ::grpc::CompletionQueue* cq) = 0;
@@ -586,10 +579,8 @@ class UrlFileService final {
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::ResultWithUrlFileAndOldId>* PrepareAsyncSaveUrlFileAndGetOldIdRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrlFile& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::ResultWithCount>* AsyncGetCountRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgVoid& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::ResultWithCount>* PrepareAsyncGetCountRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgVoid& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::ResultWithUrlFile>* AsyncGetForIndexRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgVoid& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::ResultWithUrlFile>* PrepareAsyncGetForIndexRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgVoid& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::Result>* AsyncFinishIndexRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrl& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::Result>* PrepareAsyncFinishIndexRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrl& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::Result>* AsyncContainsIdRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgId& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::Result>* PrepareAsyncContainsIdRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgId& request, ::grpc::CompletionQueue* cq) = 0;
   };
   class Stub final : public StubInterface {
    public:
@@ -629,19 +620,12 @@ class UrlFileService final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::ResultWithCount>> PrepareAsyncGetCount(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgVoid& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::ResultWithCount>>(PrepareAsyncGetCountRaw(context, request, cq));
     }
-    ::grpc::Status GetForIndex(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgVoid& request, ::XiaoyaStore::Service::ResultWithUrlFile* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::ResultWithUrlFile>> AsyncGetForIndex(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgVoid& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::ResultWithUrlFile>>(AsyncGetForIndexRaw(context, request, cq));
+    ::grpc::Status ContainsId(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgId& request, ::XiaoyaStore::Service::Result* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>> AsyncContainsId(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgId& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>>(AsyncContainsIdRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::ResultWithUrlFile>> PrepareAsyncGetForIndex(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgVoid& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::ResultWithUrlFile>>(PrepareAsyncGetForIndexRaw(context, request, cq));
-    }
-    ::grpc::Status FinishIndex(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrl& request, ::XiaoyaStore::Service::Result* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>> AsyncFinishIndex(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrl& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>>(AsyncFinishIndexRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>> PrepareAsyncFinishIndex(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrl& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>>(PrepareAsyncFinishIndexRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>> PrepareAsyncContainsId(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgId& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>>(PrepareAsyncContainsIdRaw(context, request, cq));
     }
 
    private:
@@ -656,17 +640,14 @@ class UrlFileService final {
     ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::ResultWithUrlFileAndOldId>* PrepareAsyncSaveUrlFileAndGetOldIdRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrlFile& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::ResultWithCount>* AsyncGetCountRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgVoid& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::ResultWithCount>* PrepareAsyncGetCountRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgVoid& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::ResultWithUrlFile>* AsyncGetForIndexRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgVoid& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::ResultWithUrlFile>* PrepareAsyncGetForIndexRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgVoid& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>* AsyncFinishIndexRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrl& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>* PrepareAsyncFinishIndexRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrl& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>* AsyncContainsIdRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgId& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>* PrepareAsyncContainsIdRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgId& request, ::grpc::CompletionQueue* cq) override;
     const ::grpc::internal::RpcMethod rpcmethod_GetUrlFileById_;
     const ::grpc::internal::RpcMethod rpcmethod_GetUrlFileByUrl_;
     const ::grpc::internal::RpcMethod rpcmethod_GetUrlFilesByHash_;
     const ::grpc::internal::RpcMethod rpcmethod_SaveUrlFileAndGetOldId_;
     const ::grpc::internal::RpcMethod rpcmethod_GetCount_;
-    const ::grpc::internal::RpcMethod rpcmethod_GetForIndex_;
-    const ::grpc::internal::RpcMethod rpcmethod_FinishIndex_;
+    const ::grpc::internal::RpcMethod rpcmethod_ContainsId_;
   };
   static std::unique_ptr<Stub> NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
 
@@ -679,8 +660,7 @@ class UrlFileService final {
     virtual ::grpc::Status GetUrlFilesByHash(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgHash* request, ::XiaoyaStore::Service::ResultWithUrlFiles* response);
     virtual ::grpc::Status SaveUrlFileAndGetOldId(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgUrlFile* request, ::XiaoyaStore::Service::ResultWithUrlFileAndOldId* response);
     virtual ::grpc::Status GetCount(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgVoid* request, ::XiaoyaStore::Service::ResultWithCount* response);
-    virtual ::grpc::Status GetForIndex(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgVoid* request, ::XiaoyaStore::Service::ResultWithUrlFile* response);
-    virtual ::grpc::Status FinishIndex(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgUrl* request, ::XiaoyaStore::Service::Result* response);
+    virtual ::grpc::Status ContainsId(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgId* request, ::XiaoyaStore::Service::Result* response);
   };
   template <class BaseClass>
   class WithAsyncMethod_GetUrlFileById : public BaseClass {
@@ -783,46 +763,26 @@ class UrlFileService final {
     }
   };
   template <class BaseClass>
-  class WithAsyncMethod_GetForIndex : public BaseClass {
+  class WithAsyncMethod_ContainsId : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
-    WithAsyncMethod_GetForIndex() {
+    WithAsyncMethod_ContainsId() {
       ::grpc::Service::MarkMethodAsync(5);
     }
-    ~WithAsyncMethod_GetForIndex() override {
+    ~WithAsyncMethod_ContainsId() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetForIndex(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgVoid* request, ::XiaoyaStore::Service::ResultWithUrlFile* response) final override {
+    ::grpc::Status ContainsId(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgId* request, ::XiaoyaStore::Service::Result* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestGetForIndex(::grpc::ServerContext* context, ::XiaoyaStore::Service::ArgVoid* request, ::grpc::ServerAsyncResponseWriter< ::XiaoyaStore::Service::ResultWithUrlFile>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestContainsId(::grpc::ServerContext* context, ::XiaoyaStore::Service::ArgId* request, ::grpc::ServerAsyncResponseWriter< ::XiaoyaStore::Service::Result>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(5, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
-  template <class BaseClass>
-  class WithAsyncMethod_FinishIndex : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
-   public:
-    WithAsyncMethod_FinishIndex() {
-      ::grpc::Service::MarkMethodAsync(6);
-    }
-    ~WithAsyncMethod_FinishIndex() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status FinishIndex(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgUrl* request, ::XiaoyaStore::Service::Result* response) final override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestFinishIndex(::grpc::ServerContext* context, ::XiaoyaStore::Service::ArgUrl* request, ::grpc::ServerAsyncResponseWriter< ::XiaoyaStore::Service::Result>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(6, context, request, response, new_call_cq, notification_cq, tag);
-    }
-  };
-  typedef WithAsyncMethod_GetUrlFileById<WithAsyncMethod_GetUrlFileByUrl<WithAsyncMethod_GetUrlFilesByHash<WithAsyncMethod_SaveUrlFileAndGetOldId<WithAsyncMethod_GetCount<WithAsyncMethod_GetForIndex<WithAsyncMethod_FinishIndex<Service > > > > > > > AsyncService;
+  typedef WithAsyncMethod_GetUrlFileById<WithAsyncMethod_GetUrlFileByUrl<WithAsyncMethod_GetUrlFilesByHash<WithAsyncMethod_SaveUrlFileAndGetOldId<WithAsyncMethod_GetCount<WithAsyncMethod_ContainsId<Service > > > > > > AsyncService;
   template <class BaseClass>
   class WithGenericMethod_GetUrlFileById : public BaseClass {
    private:
@@ -909,35 +869,18 @@ class UrlFileService final {
     }
   };
   template <class BaseClass>
-  class WithGenericMethod_GetForIndex : public BaseClass {
+  class WithGenericMethod_ContainsId : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
-    WithGenericMethod_GetForIndex() {
+    WithGenericMethod_ContainsId() {
       ::grpc::Service::MarkMethodGeneric(5);
     }
-    ~WithGenericMethod_GetForIndex() override {
+    ~WithGenericMethod_ContainsId() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetForIndex(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgVoid* request, ::XiaoyaStore::Service::ResultWithUrlFile* response) final override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-  };
-  template <class BaseClass>
-  class WithGenericMethod_FinishIndex : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
-   public:
-    WithGenericMethod_FinishIndex() {
-      ::grpc::Service::MarkMethodGeneric(6);
-    }
-    ~WithGenericMethod_FinishIndex() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status FinishIndex(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgUrl* request, ::XiaoyaStore::Service::Result* response) final override {
+    ::grpc::Status ContainsId(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgId* request, ::XiaoyaStore::Service::Result* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1043,48 +986,28 @@ class UrlFileService final {
     virtual ::grpc::Status StreamedGetCount(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::XiaoyaStore::Service::ArgVoid,::XiaoyaStore::Service::ResultWithCount>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
-  class WithStreamedUnaryMethod_GetForIndex : public BaseClass {
+  class WithStreamedUnaryMethod_ContainsId : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
-    WithStreamedUnaryMethod_GetForIndex() {
+    WithStreamedUnaryMethod_ContainsId() {
       ::grpc::Service::MarkMethodStreamed(5,
-        new ::grpc::internal::StreamedUnaryHandler< ::XiaoyaStore::Service::ArgVoid, ::XiaoyaStore::Service::ResultWithUrlFile>(std::bind(&WithStreamedUnaryMethod_GetForIndex<BaseClass>::StreamedGetForIndex, this, std::placeholders::_1, std::placeholders::_2)));
+        new ::grpc::internal::StreamedUnaryHandler< ::XiaoyaStore::Service::ArgId, ::XiaoyaStore::Service::Result>(std::bind(&WithStreamedUnaryMethod_ContainsId<BaseClass>::StreamedContainsId, this, std::placeholders::_1, std::placeholders::_2)));
     }
-    ~WithStreamedUnaryMethod_GetForIndex() override {
+    ~WithStreamedUnaryMethod_ContainsId() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status GetForIndex(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgVoid* request, ::XiaoyaStore::Service::ResultWithUrlFile* response) final override {
+    ::grpc::Status ContainsId(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgId* request, ::XiaoyaStore::Service::Result* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedGetForIndex(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::XiaoyaStore::Service::ArgVoid,::XiaoyaStore::Service::ResultWithUrlFile>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedContainsId(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::XiaoyaStore::Service::ArgId,::XiaoyaStore::Service::Result>* server_unary_streamer) = 0;
   };
-  template <class BaseClass>
-  class WithStreamedUnaryMethod_FinishIndex : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
-   public:
-    WithStreamedUnaryMethod_FinishIndex() {
-      ::grpc::Service::MarkMethodStreamed(6,
-        new ::grpc::internal::StreamedUnaryHandler< ::XiaoyaStore::Service::ArgUrl, ::XiaoyaStore::Service::Result>(std::bind(&WithStreamedUnaryMethod_FinishIndex<BaseClass>::StreamedFinishIndex, this, std::placeholders::_1, std::placeholders::_2)));
-    }
-    ~WithStreamedUnaryMethod_FinishIndex() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable regular version of this method
-    ::grpc::Status FinishIndex(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgUrl* request, ::XiaoyaStore::Service::Result* response) final override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedFinishIndex(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::XiaoyaStore::Service::ArgUrl,::XiaoyaStore::Service::Result>* server_unary_streamer) = 0;
-  };
-  typedef WithStreamedUnaryMethod_GetUrlFileById<WithStreamedUnaryMethod_GetUrlFileByUrl<WithStreamedUnaryMethod_GetUrlFilesByHash<WithStreamedUnaryMethod_SaveUrlFileAndGetOldId<WithStreamedUnaryMethod_GetCount<WithStreamedUnaryMethod_GetForIndex<WithStreamedUnaryMethod_FinishIndex<Service > > > > > > > StreamedUnaryService;
+  typedef WithStreamedUnaryMethod_GetUrlFileById<WithStreamedUnaryMethod_GetUrlFileByUrl<WithStreamedUnaryMethod_GetUrlFilesByHash<WithStreamedUnaryMethod_SaveUrlFileAndGetOldId<WithStreamedUnaryMethod_GetCount<WithStreamedUnaryMethod_ContainsId<Service > > > > > > StreamedUnaryService;
   typedef Service SplitStreamedService;
-  typedef WithStreamedUnaryMethod_GetUrlFileById<WithStreamedUnaryMethod_GetUrlFileByUrl<WithStreamedUnaryMethod_GetUrlFilesByHash<WithStreamedUnaryMethod_SaveUrlFileAndGetOldId<WithStreamedUnaryMethod_GetCount<WithStreamedUnaryMethod_GetForIndex<WithStreamedUnaryMethod_FinishIndex<Service > > > > > > > StreamedService;
+  typedef WithStreamedUnaryMethod_GetUrlFileById<WithStreamedUnaryMethod_GetUrlFileByUrl<WithStreamedUnaryMethod_GetUrlFilesByHash<WithStreamedUnaryMethod_SaveUrlFileAndGetOldId<WithStreamedUnaryMethod_GetCount<WithStreamedUnaryMethod_ContainsId<Service > > > > > > StreamedService;
 };
 
 class PostingListService final {
@@ -1279,71 +1202,71 @@ class LinkService final {
   class StubInterface {
    public:
     virtual ~StubInterface() {}
-    virtual ::grpc::Status SaveLinksOfUrlFile(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgSaveLinkOfUrlFile& request, ::XiaoyaStore::Service::Result* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::Result>> AsyncSaveLinksOfUrlFile(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgSaveLinkOfUrlFile& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::Result>>(AsyncSaveLinksOfUrlFileRaw(context, request, cq));
+    virtual ::grpc::Status SaveLinks(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgLinks& request, ::XiaoyaStore::Service::Result* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::Result>> AsyncSaveLinks(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgLinks& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::Result>>(AsyncSaveLinksRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::Result>> PrepareAsyncSaveLinksOfUrlFile(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgSaveLinkOfUrlFile& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::Result>>(PrepareAsyncSaveLinksOfUrlFileRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::Result>> PrepareAsyncSaveLinks(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgLinks& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::Result>>(PrepareAsyncSaveLinksRaw(context, request, cq));
     }
-    virtual ::grpc::Status GetLinkById(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgId& request, ::XiaoyaStore::Service::ResultWithLink* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::ResultWithLink>> AsyncGetLinkById(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgId& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::ResultWithLink>>(AsyncGetLinkByIdRaw(context, request, cq));
+    virtual ::grpc::Status RemoveLinks(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgLinks& request, ::XiaoyaStore::Service::Result* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::Result>> AsyncRemoveLinks(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgLinks& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::Result>>(AsyncRemoveLinksRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::ResultWithLink>> PrepareAsyncGetLinkById(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgId& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::ResultWithLink>>(PrepareAsyncGetLinkByIdRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::Result>> PrepareAsyncRemoveLinks(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgLinks& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::Result>>(PrepareAsyncRemoveLinksRaw(context, request, cq));
     }
-    virtual ::grpc::Status GetLinksByUrl(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrl& request, ::XiaoyaStore::Service::ResultWithLinks* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::ResultWithLinks>> AsyncGetLinksByUrl(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrl& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::ResultWithLinks>>(AsyncGetLinksByUrlRaw(context, request, cq));
+    virtual ::grpc::Status GetLinks(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrl& request, ::XiaoyaStore::Service::ResultWithLinks* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::ResultWithLinks>> AsyncGetLinks(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrl& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::ResultWithLinks>>(AsyncGetLinksRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::ResultWithLinks>> PrepareAsyncGetLinksByUrl(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrl& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::ResultWithLinks>>(PrepareAsyncGetLinksByUrlRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::ResultWithLinks>> PrepareAsyncGetLinks(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrl& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::ResultWithLinks>>(PrepareAsyncGetLinksRaw(context, request, cq));
     }
   private:
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::Result>* AsyncSaveLinksOfUrlFileRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgSaveLinkOfUrlFile& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::Result>* PrepareAsyncSaveLinksOfUrlFileRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgSaveLinkOfUrlFile& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::ResultWithLink>* AsyncGetLinkByIdRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgId& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::ResultWithLink>* PrepareAsyncGetLinkByIdRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgId& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::ResultWithLinks>* AsyncGetLinksByUrlRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrl& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::ResultWithLinks>* PrepareAsyncGetLinksByUrlRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrl& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::Result>* AsyncSaveLinksRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgLinks& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::Result>* PrepareAsyncSaveLinksRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgLinks& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::Result>* AsyncRemoveLinksRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgLinks& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::Result>* PrepareAsyncRemoveLinksRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgLinks& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::ResultWithLinks>* AsyncGetLinksRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrl& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::ResultWithLinks>* PrepareAsyncGetLinksRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrl& request, ::grpc::CompletionQueue* cq) = 0;
   };
   class Stub final : public StubInterface {
    public:
     Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel);
-    ::grpc::Status SaveLinksOfUrlFile(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgSaveLinkOfUrlFile& request, ::XiaoyaStore::Service::Result* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>> AsyncSaveLinksOfUrlFile(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgSaveLinkOfUrlFile& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>>(AsyncSaveLinksOfUrlFileRaw(context, request, cq));
+    ::grpc::Status SaveLinks(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgLinks& request, ::XiaoyaStore::Service::Result* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>> AsyncSaveLinks(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgLinks& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>>(AsyncSaveLinksRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>> PrepareAsyncSaveLinksOfUrlFile(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgSaveLinkOfUrlFile& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>>(PrepareAsyncSaveLinksOfUrlFileRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>> PrepareAsyncSaveLinks(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgLinks& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>>(PrepareAsyncSaveLinksRaw(context, request, cq));
     }
-    ::grpc::Status GetLinkById(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgId& request, ::XiaoyaStore::Service::ResultWithLink* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::ResultWithLink>> AsyncGetLinkById(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgId& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::ResultWithLink>>(AsyncGetLinkByIdRaw(context, request, cq));
+    ::grpc::Status RemoveLinks(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgLinks& request, ::XiaoyaStore::Service::Result* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>> AsyncRemoveLinks(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgLinks& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>>(AsyncRemoveLinksRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::ResultWithLink>> PrepareAsyncGetLinkById(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgId& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::ResultWithLink>>(PrepareAsyncGetLinkByIdRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>> PrepareAsyncRemoveLinks(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgLinks& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>>(PrepareAsyncRemoveLinksRaw(context, request, cq));
     }
-    ::grpc::Status GetLinksByUrl(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrl& request, ::XiaoyaStore::Service::ResultWithLinks* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::ResultWithLinks>> AsyncGetLinksByUrl(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrl& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::ResultWithLinks>>(AsyncGetLinksByUrlRaw(context, request, cq));
+    ::grpc::Status GetLinks(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrl& request, ::XiaoyaStore::Service::ResultWithLinks* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::ResultWithLinks>> AsyncGetLinks(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrl& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::ResultWithLinks>>(AsyncGetLinksRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::ResultWithLinks>> PrepareAsyncGetLinksByUrl(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrl& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::ResultWithLinks>>(PrepareAsyncGetLinksByUrlRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::ResultWithLinks>> PrepareAsyncGetLinks(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrl& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::ResultWithLinks>>(PrepareAsyncGetLinksRaw(context, request, cq));
     }
 
    private:
     std::shared_ptr< ::grpc::ChannelInterface> channel_;
-    ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>* AsyncSaveLinksOfUrlFileRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgSaveLinkOfUrlFile& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>* PrepareAsyncSaveLinksOfUrlFileRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgSaveLinkOfUrlFile& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::ResultWithLink>* AsyncGetLinkByIdRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgId& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::ResultWithLink>* PrepareAsyncGetLinkByIdRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgId& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::ResultWithLinks>* AsyncGetLinksByUrlRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrl& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::ResultWithLinks>* PrepareAsyncGetLinksByUrlRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrl& request, ::grpc::CompletionQueue* cq) override;
-    const ::grpc::internal::RpcMethod rpcmethod_SaveLinksOfUrlFile_;
-    const ::grpc::internal::RpcMethod rpcmethod_GetLinkById_;
-    const ::grpc::internal::RpcMethod rpcmethod_GetLinksByUrl_;
+    ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>* AsyncSaveLinksRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgLinks& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>* PrepareAsyncSaveLinksRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgLinks& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>* AsyncRemoveLinksRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgLinks& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>* PrepareAsyncRemoveLinksRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgLinks& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::ResultWithLinks>* AsyncGetLinksRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrl& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::ResultWithLinks>* PrepareAsyncGetLinksRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrl& request, ::grpc::CompletionQueue* cq) override;
+    const ::grpc::internal::RpcMethod rpcmethod_SaveLinks_;
+    const ::grpc::internal::RpcMethod rpcmethod_RemoveLinks_;
+    const ::grpc::internal::RpcMethod rpcmethod_GetLinks_;
   };
   static std::unique_ptr<Stub> NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
 
@@ -1351,185 +1274,185 @@ class LinkService final {
    public:
     Service();
     virtual ~Service();
-    virtual ::grpc::Status SaveLinksOfUrlFile(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgSaveLinkOfUrlFile* request, ::XiaoyaStore::Service::Result* response);
-    virtual ::grpc::Status GetLinkById(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgId* request, ::XiaoyaStore::Service::ResultWithLink* response);
-    virtual ::grpc::Status GetLinksByUrl(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgUrl* request, ::XiaoyaStore::Service::ResultWithLinks* response);
+    virtual ::grpc::Status SaveLinks(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgLinks* request, ::XiaoyaStore::Service::Result* response);
+    virtual ::grpc::Status RemoveLinks(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgLinks* request, ::XiaoyaStore::Service::Result* response);
+    virtual ::grpc::Status GetLinks(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgUrl* request, ::XiaoyaStore::Service::ResultWithLinks* response);
   };
   template <class BaseClass>
-  class WithAsyncMethod_SaveLinksOfUrlFile : public BaseClass {
+  class WithAsyncMethod_SaveLinks : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
-    WithAsyncMethod_SaveLinksOfUrlFile() {
+    WithAsyncMethod_SaveLinks() {
       ::grpc::Service::MarkMethodAsync(0);
     }
-    ~WithAsyncMethod_SaveLinksOfUrlFile() override {
+    ~WithAsyncMethod_SaveLinks() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SaveLinksOfUrlFile(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgSaveLinkOfUrlFile* request, ::XiaoyaStore::Service::Result* response) final override {
+    ::grpc::Status SaveLinks(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgLinks* request, ::XiaoyaStore::Service::Result* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestSaveLinksOfUrlFile(::grpc::ServerContext* context, ::XiaoyaStore::Service::ArgSaveLinkOfUrlFile* request, ::grpc::ServerAsyncResponseWriter< ::XiaoyaStore::Service::Result>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestSaveLinks(::grpc::ServerContext* context, ::XiaoyaStore::Service::ArgLinks* request, ::grpc::ServerAsyncResponseWriter< ::XiaoyaStore::Service::Result>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(0, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
-  class WithAsyncMethod_GetLinkById : public BaseClass {
+  class WithAsyncMethod_RemoveLinks : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
-    WithAsyncMethod_GetLinkById() {
+    WithAsyncMethod_RemoveLinks() {
       ::grpc::Service::MarkMethodAsync(1);
     }
-    ~WithAsyncMethod_GetLinkById() override {
+    ~WithAsyncMethod_RemoveLinks() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetLinkById(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgId* request, ::XiaoyaStore::Service::ResultWithLink* response) final override {
+    ::grpc::Status RemoveLinks(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgLinks* request, ::XiaoyaStore::Service::Result* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestGetLinkById(::grpc::ServerContext* context, ::XiaoyaStore::Service::ArgId* request, ::grpc::ServerAsyncResponseWriter< ::XiaoyaStore::Service::ResultWithLink>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestRemoveLinks(::grpc::ServerContext* context, ::XiaoyaStore::Service::ArgLinks* request, ::grpc::ServerAsyncResponseWriter< ::XiaoyaStore::Service::Result>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(1, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
-  class WithAsyncMethod_GetLinksByUrl : public BaseClass {
+  class WithAsyncMethod_GetLinks : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
-    WithAsyncMethod_GetLinksByUrl() {
+    WithAsyncMethod_GetLinks() {
       ::grpc::Service::MarkMethodAsync(2);
     }
-    ~WithAsyncMethod_GetLinksByUrl() override {
+    ~WithAsyncMethod_GetLinks() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetLinksByUrl(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgUrl* request, ::XiaoyaStore::Service::ResultWithLinks* response) final override {
+    ::grpc::Status GetLinks(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgUrl* request, ::XiaoyaStore::Service::ResultWithLinks* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestGetLinksByUrl(::grpc::ServerContext* context, ::XiaoyaStore::Service::ArgUrl* request, ::grpc::ServerAsyncResponseWriter< ::XiaoyaStore::Service::ResultWithLinks>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestGetLinks(::grpc::ServerContext* context, ::XiaoyaStore::Service::ArgUrl* request, ::grpc::ServerAsyncResponseWriter< ::XiaoyaStore::Service::ResultWithLinks>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(2, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
-  typedef WithAsyncMethod_SaveLinksOfUrlFile<WithAsyncMethod_GetLinkById<WithAsyncMethod_GetLinksByUrl<Service > > > AsyncService;
+  typedef WithAsyncMethod_SaveLinks<WithAsyncMethod_RemoveLinks<WithAsyncMethod_GetLinks<Service > > > AsyncService;
   template <class BaseClass>
-  class WithGenericMethod_SaveLinksOfUrlFile : public BaseClass {
+  class WithGenericMethod_SaveLinks : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
-    WithGenericMethod_SaveLinksOfUrlFile() {
+    WithGenericMethod_SaveLinks() {
       ::grpc::Service::MarkMethodGeneric(0);
     }
-    ~WithGenericMethod_SaveLinksOfUrlFile() override {
+    ~WithGenericMethod_SaveLinks() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SaveLinksOfUrlFile(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgSaveLinkOfUrlFile* request, ::XiaoyaStore::Service::Result* response) final override {
+    ::grpc::Status SaveLinks(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgLinks* request, ::XiaoyaStore::Service::Result* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
   };
   template <class BaseClass>
-  class WithGenericMethod_GetLinkById : public BaseClass {
+  class WithGenericMethod_RemoveLinks : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
-    WithGenericMethod_GetLinkById() {
+    WithGenericMethod_RemoveLinks() {
       ::grpc::Service::MarkMethodGeneric(1);
     }
-    ~WithGenericMethod_GetLinkById() override {
+    ~WithGenericMethod_RemoveLinks() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetLinkById(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgId* request, ::XiaoyaStore::Service::ResultWithLink* response) final override {
+    ::grpc::Status RemoveLinks(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgLinks* request, ::XiaoyaStore::Service::Result* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
   };
   template <class BaseClass>
-  class WithGenericMethod_GetLinksByUrl : public BaseClass {
+  class WithGenericMethod_GetLinks : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
-    WithGenericMethod_GetLinksByUrl() {
+    WithGenericMethod_GetLinks() {
       ::grpc::Service::MarkMethodGeneric(2);
     }
-    ~WithGenericMethod_GetLinksByUrl() override {
+    ~WithGenericMethod_GetLinks() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetLinksByUrl(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgUrl* request, ::XiaoyaStore::Service::ResultWithLinks* response) final override {
+    ::grpc::Status GetLinks(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgUrl* request, ::XiaoyaStore::Service::ResultWithLinks* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
   };
   template <class BaseClass>
-  class WithStreamedUnaryMethod_SaveLinksOfUrlFile : public BaseClass {
+  class WithStreamedUnaryMethod_SaveLinks : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
-    WithStreamedUnaryMethod_SaveLinksOfUrlFile() {
+    WithStreamedUnaryMethod_SaveLinks() {
       ::grpc::Service::MarkMethodStreamed(0,
-        new ::grpc::internal::StreamedUnaryHandler< ::XiaoyaStore::Service::ArgSaveLinkOfUrlFile, ::XiaoyaStore::Service::Result>(std::bind(&WithStreamedUnaryMethod_SaveLinksOfUrlFile<BaseClass>::StreamedSaveLinksOfUrlFile, this, std::placeholders::_1, std::placeholders::_2)));
+        new ::grpc::internal::StreamedUnaryHandler< ::XiaoyaStore::Service::ArgLinks, ::XiaoyaStore::Service::Result>(std::bind(&WithStreamedUnaryMethod_SaveLinks<BaseClass>::StreamedSaveLinks, this, std::placeholders::_1, std::placeholders::_2)));
     }
-    ~WithStreamedUnaryMethod_SaveLinksOfUrlFile() override {
+    ~WithStreamedUnaryMethod_SaveLinks() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status SaveLinksOfUrlFile(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgSaveLinkOfUrlFile* request, ::XiaoyaStore::Service::Result* response) final override {
+    ::grpc::Status SaveLinks(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgLinks* request, ::XiaoyaStore::Service::Result* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedSaveLinksOfUrlFile(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::XiaoyaStore::Service::ArgSaveLinkOfUrlFile,::XiaoyaStore::Service::Result>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedSaveLinks(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::XiaoyaStore::Service::ArgLinks,::XiaoyaStore::Service::Result>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
-  class WithStreamedUnaryMethod_GetLinkById : public BaseClass {
+  class WithStreamedUnaryMethod_RemoveLinks : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
-    WithStreamedUnaryMethod_GetLinkById() {
+    WithStreamedUnaryMethod_RemoveLinks() {
       ::grpc::Service::MarkMethodStreamed(1,
-        new ::grpc::internal::StreamedUnaryHandler< ::XiaoyaStore::Service::ArgId, ::XiaoyaStore::Service::ResultWithLink>(std::bind(&WithStreamedUnaryMethod_GetLinkById<BaseClass>::StreamedGetLinkById, this, std::placeholders::_1, std::placeholders::_2)));
+        new ::grpc::internal::StreamedUnaryHandler< ::XiaoyaStore::Service::ArgLinks, ::XiaoyaStore::Service::Result>(std::bind(&WithStreamedUnaryMethod_RemoveLinks<BaseClass>::StreamedRemoveLinks, this, std::placeholders::_1, std::placeholders::_2)));
     }
-    ~WithStreamedUnaryMethod_GetLinkById() override {
+    ~WithStreamedUnaryMethod_RemoveLinks() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status GetLinkById(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgId* request, ::XiaoyaStore::Service::ResultWithLink* response) final override {
+    ::grpc::Status RemoveLinks(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgLinks* request, ::XiaoyaStore::Service::Result* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedGetLinkById(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::XiaoyaStore::Service::ArgId,::XiaoyaStore::Service::ResultWithLink>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedRemoveLinks(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::XiaoyaStore::Service::ArgLinks,::XiaoyaStore::Service::Result>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
-  class WithStreamedUnaryMethod_GetLinksByUrl : public BaseClass {
+  class WithStreamedUnaryMethod_GetLinks : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
-    WithStreamedUnaryMethod_GetLinksByUrl() {
+    WithStreamedUnaryMethod_GetLinks() {
       ::grpc::Service::MarkMethodStreamed(2,
-        new ::grpc::internal::StreamedUnaryHandler< ::XiaoyaStore::Service::ArgUrl, ::XiaoyaStore::Service::ResultWithLinks>(std::bind(&WithStreamedUnaryMethod_GetLinksByUrl<BaseClass>::StreamedGetLinksByUrl, this, std::placeholders::_1, std::placeholders::_2)));
+        new ::grpc::internal::StreamedUnaryHandler< ::XiaoyaStore::Service::ArgUrl, ::XiaoyaStore::Service::ResultWithLinks>(std::bind(&WithStreamedUnaryMethod_GetLinks<BaseClass>::StreamedGetLinks, this, std::placeholders::_1, std::placeholders::_2)));
     }
-    ~WithStreamedUnaryMethod_GetLinksByUrl() override {
+    ~WithStreamedUnaryMethod_GetLinks() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status GetLinksByUrl(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgUrl* request, ::XiaoyaStore::Service::ResultWithLinks* response) final override {
+    ::grpc::Status GetLinks(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgUrl* request, ::XiaoyaStore::Service::ResultWithLinks* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedGetLinksByUrl(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::XiaoyaStore::Service::ArgUrl,::XiaoyaStore::Service::ResultWithLinks>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedGetLinks(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::XiaoyaStore::Service::ArgUrl,::XiaoyaStore::Service::ResultWithLinks>* server_unary_streamer) = 0;
   };
-  typedef WithStreamedUnaryMethod_SaveLinksOfUrlFile<WithStreamedUnaryMethod_GetLinkById<WithStreamedUnaryMethod_GetLinksByUrl<Service > > > StreamedUnaryService;
+  typedef WithStreamedUnaryMethod_SaveLinks<WithStreamedUnaryMethod_RemoveLinks<WithStreamedUnaryMethod_GetLinks<Service > > > StreamedUnaryService;
   typedef Service SplitStreamedService;
-  typedef WithStreamedUnaryMethod_SaveLinksOfUrlFile<WithStreamedUnaryMethod_GetLinkById<WithStreamedUnaryMethod_GetLinksByUrl<Service > > > StreamedService;
+  typedef WithStreamedUnaryMethod_SaveLinks<WithStreamedUnaryMethod_RemoveLinks<WithStreamedUnaryMethod_GetLinks<Service > > > StreamedService;
 };
 
 class InvertedIndexService final {
@@ -1540,12 +1463,19 @@ class InvertedIndexService final {
   class StubInterface {
    public:
     virtual ~StubInterface() {}
-    virtual ::grpc::Status ClearAndSaveIndicesOf(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgClearAndSaveIndicesOf& request, ::XiaoyaStore::Service::Result* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::Result>> AsyncClearAndSaveIndicesOf(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgClearAndSaveIndicesOf& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::Result>>(AsyncClearAndSaveIndicesOfRaw(context, request, cq));
+    virtual ::grpc::Status ClearIndices(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgId& request, ::XiaoyaStore::Service::Result* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::Result>> AsyncClearIndices(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgId& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::Result>>(AsyncClearIndicesRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::Result>> PrepareAsyncClearAndSaveIndicesOf(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgClearAndSaveIndicesOf& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::Result>>(PrepareAsyncClearAndSaveIndicesOfRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::Result>> PrepareAsyncClearIndices(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgId& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::Result>>(PrepareAsyncClearIndicesRaw(context, request, cq));
+    }
+    virtual ::grpc::Status SaveIndices(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgSaveIndices& request, ::XiaoyaStore::Service::Result* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::Result>> AsyncSaveIndices(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgSaveIndices& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::Result>>(AsyncSaveIndicesRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::Result>> PrepareAsyncSaveIndices(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgSaveIndices& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::Result>>(PrepareAsyncSaveIndicesRaw(context, request, cq));
     }
     virtual ::grpc::Status GetIndex(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgIndexKey& request, ::XiaoyaStore::Service::ResultWithIndex* response) = 0;
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::ResultWithIndex>> AsyncGetIndex(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgIndexKey& request, ::grpc::CompletionQueue* cq) {
@@ -1555,20 +1485,29 @@ class InvertedIndexService final {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::ResultWithIndex>>(PrepareAsyncGetIndexRaw(context, request, cq));
     }
   private:
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::Result>* AsyncClearAndSaveIndicesOfRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgClearAndSaveIndicesOf& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::Result>* PrepareAsyncClearAndSaveIndicesOfRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgClearAndSaveIndicesOf& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::Result>* AsyncClearIndicesRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgId& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::Result>* PrepareAsyncClearIndicesRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgId& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::Result>* AsyncSaveIndicesRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgSaveIndices& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::Result>* PrepareAsyncSaveIndicesRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgSaveIndices& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::ResultWithIndex>* AsyncGetIndexRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgIndexKey& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::ResultWithIndex>* PrepareAsyncGetIndexRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgIndexKey& request, ::grpc::CompletionQueue* cq) = 0;
   };
   class Stub final : public StubInterface {
    public:
     Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel);
-    ::grpc::Status ClearAndSaveIndicesOf(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgClearAndSaveIndicesOf& request, ::XiaoyaStore::Service::Result* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>> AsyncClearAndSaveIndicesOf(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgClearAndSaveIndicesOf& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>>(AsyncClearAndSaveIndicesOfRaw(context, request, cq));
+    ::grpc::Status ClearIndices(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgId& request, ::XiaoyaStore::Service::Result* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>> AsyncClearIndices(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgId& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>>(AsyncClearIndicesRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>> PrepareAsyncClearAndSaveIndicesOf(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgClearAndSaveIndicesOf& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>>(PrepareAsyncClearAndSaveIndicesOfRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>> PrepareAsyncClearIndices(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgId& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>>(PrepareAsyncClearIndicesRaw(context, request, cq));
+    }
+    ::grpc::Status SaveIndices(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgSaveIndices& request, ::XiaoyaStore::Service::Result* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>> AsyncSaveIndices(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgSaveIndices& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>>(AsyncSaveIndicesRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>> PrepareAsyncSaveIndices(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgSaveIndices& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>>(PrepareAsyncSaveIndicesRaw(context, request, cq));
     }
     ::grpc::Status GetIndex(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgIndexKey& request, ::XiaoyaStore::Service::ResultWithIndex* response) override;
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::ResultWithIndex>> AsyncGetIndex(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgIndexKey& request, ::grpc::CompletionQueue* cq) {
@@ -1580,11 +1519,14 @@ class InvertedIndexService final {
 
    private:
     std::shared_ptr< ::grpc::ChannelInterface> channel_;
-    ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>* AsyncClearAndSaveIndicesOfRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgClearAndSaveIndicesOf& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>* PrepareAsyncClearAndSaveIndicesOfRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgClearAndSaveIndicesOf& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>* AsyncClearIndicesRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgId& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>* PrepareAsyncClearIndicesRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgId& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>* AsyncSaveIndicesRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgSaveIndices& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>* PrepareAsyncSaveIndicesRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgSaveIndices& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::ResultWithIndex>* AsyncGetIndexRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgIndexKey& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::ResultWithIndex>* PrepareAsyncGetIndexRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgIndexKey& request, ::grpc::CompletionQueue* cq) override;
-    const ::grpc::internal::RpcMethod rpcmethod_ClearAndSaveIndicesOf_;
+    const ::grpc::internal::RpcMethod rpcmethod_ClearIndices_;
+    const ::grpc::internal::RpcMethod rpcmethod_SaveIndices_;
     const ::grpc::internal::RpcMethod rpcmethod_GetIndex_;
   };
   static std::unique_ptr<Stub> NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
@@ -1593,27 +1535,48 @@ class InvertedIndexService final {
    public:
     Service();
     virtual ~Service();
-    virtual ::grpc::Status ClearAndSaveIndicesOf(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgClearAndSaveIndicesOf* request, ::XiaoyaStore::Service::Result* response);
+    virtual ::grpc::Status ClearIndices(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgId* request, ::XiaoyaStore::Service::Result* response);
+    virtual ::grpc::Status SaveIndices(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgSaveIndices* request, ::XiaoyaStore::Service::Result* response);
     virtual ::grpc::Status GetIndex(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgIndexKey* request, ::XiaoyaStore::Service::ResultWithIndex* response);
   };
   template <class BaseClass>
-  class WithAsyncMethod_ClearAndSaveIndicesOf : public BaseClass {
+  class WithAsyncMethod_ClearIndices : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
-    WithAsyncMethod_ClearAndSaveIndicesOf() {
+    WithAsyncMethod_ClearIndices() {
       ::grpc::Service::MarkMethodAsync(0);
     }
-    ~WithAsyncMethod_ClearAndSaveIndicesOf() override {
+    ~WithAsyncMethod_ClearIndices() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status ClearAndSaveIndicesOf(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgClearAndSaveIndicesOf* request, ::XiaoyaStore::Service::Result* response) final override {
+    ::grpc::Status ClearIndices(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgId* request, ::XiaoyaStore::Service::Result* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestClearAndSaveIndicesOf(::grpc::ServerContext* context, ::XiaoyaStore::Service::ArgClearAndSaveIndicesOf* request, ::grpc::ServerAsyncResponseWriter< ::XiaoyaStore::Service::Result>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestClearIndices(::grpc::ServerContext* context, ::XiaoyaStore::Service::ArgId* request, ::grpc::ServerAsyncResponseWriter< ::XiaoyaStore::Service::Result>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(0, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithAsyncMethod_SaveIndices : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithAsyncMethod_SaveIndices() {
+      ::grpc::Service::MarkMethodAsync(1);
+    }
+    ~WithAsyncMethod_SaveIndices() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status SaveIndices(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgSaveIndices* request, ::XiaoyaStore::Service::Result* response) final override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestSaveIndices(::grpc::ServerContext* context, ::XiaoyaStore::Service::ArgSaveIndices* request, ::grpc::ServerAsyncResponseWriter< ::XiaoyaStore::Service::Result>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(1, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -1622,7 +1585,7 @@ class InvertedIndexService final {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithAsyncMethod_GetIndex() {
-      ::grpc::Service::MarkMethodAsync(1);
+      ::grpc::Service::MarkMethodAsync(2);
     }
     ~WithAsyncMethod_GetIndex() override {
       BaseClassMustBeDerivedFromService(this);
@@ -1633,23 +1596,40 @@ class InvertedIndexService final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestGetIndex(::grpc::ServerContext* context, ::XiaoyaStore::Service::ArgIndexKey* request, ::grpc::ServerAsyncResponseWriter< ::XiaoyaStore::Service::ResultWithIndex>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(1, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(2, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
-  typedef WithAsyncMethod_ClearAndSaveIndicesOf<WithAsyncMethod_GetIndex<Service > > AsyncService;
+  typedef WithAsyncMethod_ClearIndices<WithAsyncMethod_SaveIndices<WithAsyncMethod_GetIndex<Service > > > AsyncService;
   template <class BaseClass>
-  class WithGenericMethod_ClearAndSaveIndicesOf : public BaseClass {
+  class WithGenericMethod_ClearIndices : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
-    WithGenericMethod_ClearAndSaveIndicesOf() {
+    WithGenericMethod_ClearIndices() {
       ::grpc::Service::MarkMethodGeneric(0);
     }
-    ~WithGenericMethod_ClearAndSaveIndicesOf() override {
+    ~WithGenericMethod_ClearIndices() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status ClearAndSaveIndicesOf(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgClearAndSaveIndicesOf* request, ::XiaoyaStore::Service::Result* response) final override {
+    ::grpc::Status ClearIndices(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgId* request, ::XiaoyaStore::Service::Result* response) final override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithGenericMethod_SaveIndices : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithGenericMethod_SaveIndices() {
+      ::grpc::Service::MarkMethodGeneric(1);
+    }
+    ~WithGenericMethod_SaveIndices() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status SaveIndices(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgSaveIndices* request, ::XiaoyaStore::Service::Result* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1660,7 +1640,7 @@ class InvertedIndexService final {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithGenericMethod_GetIndex() {
-      ::grpc::Service::MarkMethodGeneric(1);
+      ::grpc::Service::MarkMethodGeneric(2);
     }
     ~WithGenericMethod_GetIndex() override {
       BaseClassMustBeDerivedFromService(this);
@@ -1672,24 +1652,44 @@ class InvertedIndexService final {
     }
   };
   template <class BaseClass>
-  class WithStreamedUnaryMethod_ClearAndSaveIndicesOf : public BaseClass {
+  class WithStreamedUnaryMethod_ClearIndices : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
-    WithStreamedUnaryMethod_ClearAndSaveIndicesOf() {
+    WithStreamedUnaryMethod_ClearIndices() {
       ::grpc::Service::MarkMethodStreamed(0,
-        new ::grpc::internal::StreamedUnaryHandler< ::XiaoyaStore::Service::ArgClearAndSaveIndicesOf, ::XiaoyaStore::Service::Result>(std::bind(&WithStreamedUnaryMethod_ClearAndSaveIndicesOf<BaseClass>::StreamedClearAndSaveIndicesOf, this, std::placeholders::_1, std::placeholders::_2)));
+        new ::grpc::internal::StreamedUnaryHandler< ::XiaoyaStore::Service::ArgId, ::XiaoyaStore::Service::Result>(std::bind(&WithStreamedUnaryMethod_ClearIndices<BaseClass>::StreamedClearIndices, this, std::placeholders::_1, std::placeholders::_2)));
     }
-    ~WithStreamedUnaryMethod_ClearAndSaveIndicesOf() override {
+    ~WithStreamedUnaryMethod_ClearIndices() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status ClearAndSaveIndicesOf(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgClearAndSaveIndicesOf* request, ::XiaoyaStore::Service::Result* response) final override {
+    ::grpc::Status ClearIndices(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgId* request, ::XiaoyaStore::Service::Result* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedClearAndSaveIndicesOf(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::XiaoyaStore::Service::ArgClearAndSaveIndicesOf,::XiaoyaStore::Service::Result>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedClearIndices(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::XiaoyaStore::Service::ArgId,::XiaoyaStore::Service::Result>* server_unary_streamer) = 0;
+  };
+  template <class BaseClass>
+  class WithStreamedUnaryMethod_SaveIndices : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithStreamedUnaryMethod_SaveIndices() {
+      ::grpc::Service::MarkMethodStreamed(1,
+        new ::grpc::internal::StreamedUnaryHandler< ::XiaoyaStore::Service::ArgSaveIndices, ::XiaoyaStore::Service::Result>(std::bind(&WithStreamedUnaryMethod_SaveIndices<BaseClass>::StreamedSaveIndices, this, std::placeholders::_1, std::placeholders::_2)));
+    }
+    ~WithStreamedUnaryMethod_SaveIndices() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable regular version of this method
+    ::grpc::Status SaveIndices(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgSaveIndices* request, ::XiaoyaStore::Service::Result* response) final override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    // replace default version of method with streamed unary
+    virtual ::grpc::Status StreamedSaveIndices(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::XiaoyaStore::Service::ArgSaveIndices,::XiaoyaStore::Service::Result>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_GetIndex : public BaseClass {
@@ -1697,7 +1697,7 @@ class InvertedIndexService final {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithStreamedUnaryMethod_GetIndex() {
-      ::grpc::Service::MarkMethodStreamed(1,
+      ::grpc::Service::MarkMethodStreamed(2,
         new ::grpc::internal::StreamedUnaryHandler< ::XiaoyaStore::Service::ArgIndexKey, ::XiaoyaStore::Service::ResultWithIndex>(std::bind(&WithStreamedUnaryMethod_GetIndex<BaseClass>::StreamedGetIndex, this, std::placeholders::_1, std::placeholders::_2)));
     }
     ~WithStreamedUnaryMethod_GetIndex() override {
@@ -1711,9 +1711,9 @@ class InvertedIndexService final {
     // replace default version of method with streamed unary
     virtual ::grpc::Status StreamedGetIndex(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::XiaoyaStore::Service::ArgIndexKey,::XiaoyaStore::Service::ResultWithIndex>* server_unary_streamer) = 0;
   };
-  typedef WithStreamedUnaryMethod_ClearAndSaveIndicesOf<WithStreamedUnaryMethod_GetIndex<Service > > StreamedUnaryService;
+  typedef WithStreamedUnaryMethod_ClearIndices<WithStreamedUnaryMethod_SaveIndices<WithStreamedUnaryMethod_GetIndex<Service > > > StreamedUnaryService;
   typedef Service SplitStreamedService;
-  typedef WithStreamedUnaryMethod_ClearAndSaveIndicesOf<WithStreamedUnaryMethod_GetIndex<Service > > StreamedService;
+  typedef WithStreamedUnaryMethod_ClearIndices<WithStreamedUnaryMethod_SaveIndices<WithStreamedUnaryMethod_GetIndex<Service > > > StreamedService;
 };
 
 }  // namespace Service

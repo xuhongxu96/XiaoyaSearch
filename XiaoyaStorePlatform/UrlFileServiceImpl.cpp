@@ -14,7 +14,7 @@ Status UrlFileServiceImpl::GetUrlFileById(ServerContext * context,
 	const ArgId * request, ResultWithUrlFile * response)
 {
 	response->set_is_successful(
-		mStore.GetUrlFile(request->id(), *response->mutable_urlfile())
+		mStore.GetUrlFile(request->id(), *response->mutable_url_file())
 	);
 	return Status::OK;
 }
@@ -23,7 +23,7 @@ Status UrlFileServiceImpl::GetUrlFileByUrl(ServerContext * context,
 	const ArgUrl * request, ResultWithUrlFile * response)
 {
 	response->set_is_successful(
-		mStore.GetUrlFile(request->url(), *response->mutable_urlfile())
+		mStore.GetUrlFile(request->url(), *response->mutable_url_file())
 	);
 	return Status::OK;
 }
@@ -33,7 +33,7 @@ Status UrlFileServiceImpl::GetUrlFilesByHash(ServerContext * context,
 {
 	auto urlFiles = mStore.GetUrlFilesByHash(request->hash());
 
-	*response->mutable_urlfiles() 
+	*response->mutable_url_files() 
 		= ::google::protobuf::RepeatedPtrField<UrlFile>(urlFiles.begin(), urlFiles.end());
 	response->set_is_successful(true);
 
@@ -43,9 +43,9 @@ Status UrlFileServiceImpl::GetUrlFilesByHash(ServerContext * context,
 Status UrlFileServiceImpl::SaveUrlFileAndGetOldId(ServerContext * context,
 	const ArgUrlFile * request, ResultWithUrlFileAndOldId * response)
 {
-	response->mutable_urlfile()->CopyFrom(request->urlfile());
-	response->set_old_urlfile_id(
-		mStore.SaveUrlFileAndGetOldId(*response->mutable_urlfile())
+	response->mutable_url_file()->CopyFrom(request->url_file());
+	response->set_old_url_file_id(
+		mStore.SaveUrlFileAndGetOldId(*response->mutable_url_file())
 	);
 	response->set_is_successful(true);
 
@@ -63,21 +63,11 @@ Status UrlFileServiceImpl::GetCount(ServerContext * context,
 	return Status::OK;
 }
 
-Status UrlFileServiceImpl::GetForIndex(ServerContext * context,
-	const ArgVoid * request, ResultWithUrlFile * response)
+Status UrlFileServiceImpl::ContainsId(ServerContext * context,
+	const ArgId * request, Result * response)
 {
 	response->set_is_successful(
-		mStore.GetForIndex(*response->mutable_urlfile())
+		mStore.ContainsId(request->id())
 	);
-	
-	return Status::OK;
-}
-
-Status UrlFileServiceImpl::FinishIndex(ServerContext * context,
-	const ArgUrl * request, Result * response)
-{
-	mStore.FinishIndex(request->url());
-	response->set_is_successful(true);
-
 	return Status::OK;
 }

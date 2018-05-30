@@ -90,7 +90,7 @@ public:
 		const std::string &text = "a")
 	{
 		XiaoyaStore::Model::Link link;
-		link.set_urlfile_id(urlFileId);
+		link.set_url_file_id(urlFileId);
 		link.set_text(text);
 		link.set_url(url);
 		return link;
@@ -101,7 +101,7 @@ public:
 	{
 		XiaoyaStore::Model::Index index;
 
-		index.mutable_key()->set_urlfile_id(urlFileId);
+		index.mutable_key()->set_url_file_id(urlFileId);
 		index.mutable_key()->set_word(word);
 
 		index.set_occurences_in_headers(std::rand() % 30);

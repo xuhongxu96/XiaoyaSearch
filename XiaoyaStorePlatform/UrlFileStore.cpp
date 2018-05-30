@@ -16,36 +16,11 @@ const std::string UrlFileStore::DbName = "UrlFileStore";
 
 const std::string UrlFileStore::MetaMaxUrlFileId = "MaxUrlFileId";
 
-const std::string UrlFileStore::IndexQueueCFName = "index_queue";
-const size_t UrlFileStore::IndexQueueCF = 1;
-
 const std::string UrlFileStore::UrlIndexCFName = "url_index";
-const size_t UrlFileStore::UrlIndexCF = 2;
+const size_t UrlFileStore::UrlIndexCF = 1;
 
 const std::string UrlFileStore::HashIndexCFName = "hash_index";
-const size_t UrlFileStore::HashIndexCF = 3;
-
-void XiaoyaStore::Store::UrlFileStore::LoadIndexQueue()
-{
-	std::unique_ptr<Iterator> iter(mDb->NewIterator(ReadOptions(), mCFHandles[IndexQueueCF].get()));
-
-	for (iter->SeekToFirst(); iter->Valid(); iter->Next())
-	{
-		auto id = SerializeHelper::DeserializeUInt64(iter->value().ToString());
-		UrlFile urlFile;
-		if (GetUrlFile(id, urlFile))
-		{
-			AddToIndexQueue(urlFile);
-		}
-	}
-}
-
-void XiaoyaStore::Store::UrlFileStore::AddToIndexQueue(Model::UrlFile & urlFile)
-{
-	std::unique_lock<std::shared_mutex> lock(mIndexQueueMutex);
-
-	mIndexQueue.push(urlFile);
-}
+const size_t UrlFileStore::HashIndexCF = 2;
 
 uint64_t UrlFileStore::GetMaxUrlFileId() const
 {
@@ -71,9 +46,7 @@ bool UrlFileStore::GetUrlFileIdListByHash(const std::string &hash, IdList &outId
 
 UrlFileStore::UrlFileStore(StoreConfig config, bool isReadOnly)
 	: CounterBaseStore(DbName, GetColumnFamilyDescriptors(), config, isReadOnly)
-{
-	LoadIndexQueue();
-}
+{ }
 
 bool UrlFileStore::GetUrlFile(const uint64_t urlFileId, UrlFile &outUrlFile) const
 {
@@ -157,7 +130,7 @@ uint64_t UrlFileStore::SaveUrlFileAndGetOldId(UrlFile & urlFile)
 	if (GetUrlFile(urlFile.url(), oldUrlFile))
 	{
 		// Exists old UrlFile with the same Url
-		oldUrlFileId = oldUrlFile.urlfile_id();
+		oldUrlFileId = oldUrlFile.url_file_id();
 
 		urlFile.set_created_at(oldUrlFile.created_at());
 
@@ -187,13 +160,13 @@ uint64_t UrlFileStore::SaveUrlFileAndGetOldId(UrlFile & urlFile)
 		// Remove old hash index
 		IdList removingHashIndex;
 		removingHashIndex.set_is_add(false);
-		removingHashIndex.add_ids(oldUrlFile.urlfile_id());
+		removingHashIndex.add_ids(oldUrlFile.url_file_id());
 
 		batch.Merge(mCFHandles[HashIndexCF].get(), oldUrlFile.file_hash(),
 			SerializeHelper::Serialize(removingHashIndex));
 
 		// Delete old UrlFile
-		batch.Delete(SerializeHelper::SerializeUInt64(oldUrlFile.urlfile_id()));
+		batch.Delete(SerializeHelper::SerializeUInt64(oldUrlFile.url_file_id()));
 	}
 	else
 	{
@@ -209,7 +182,7 @@ uint64_t UrlFileStore::SaveUrlFileAndGetOldId(UrlFile & urlFile)
 
 	// Assign new id
 	auto id = GetAndUpdateValue(MetaMaxUrlFileId, 1) + 1;
-	urlFile.set_urlfile_id(id);
+	urlFile.set_url_file_id(id);
 	auto idData = SerializeHelper::SerializeUInt64(id);
 
 	// Overwrite url index
@@ -226,13 +199,6 @@ uint64_t UrlFileStore::SaveUrlFileAndGetOldId(UrlFile & urlFile)
 	// Add new UrlFile
 	batch.Put(idData, SerializeHelper::Serialize(urlFile));
 
-	if (willAddToIndexQueue)
-	{
-		// Add to IndexQueue
-		batch.Put(mCFHandles[IndexQueueCF].get(), urlFile.url(), idData);
-		AddToIndexQueue(urlFile);
-	}
-
 	auto status = mDb->Write(WriteOptions(), &batch);
 	if (!status.ok())
 	{
@@ -248,28 +214,15 @@ uint64_t UrlFileStore::GetCount() const
 	return GetMaxUrlFileId();
 }
 
-bool UrlFileStore::GetForIndex(UrlFile &outUrlFile) const
+bool UrlFileStore::ContainsId(const uint64_t id)
 {
-	std::shared_lock<std::shared_mutex> lock(mIndexQueueMutex);
-	if (mIndexQueue.empty())
-	{
-		return false;
-	}
-
-	outUrlFile = mIndexQueue.top();
-	mIndexQueue.pop();
-
-	return true;
-}
-
-void XiaoyaStore::Store::UrlFileStore::FinishIndex(const std::string &url)
-{
-	auto status = mDb->Delete(WriteOptions(), mCFHandles[IndexQueueCF].get(), url);
-	if (!status.ok() && !status.IsNotFound())
+	auto status = mDb->Get(ReadOptions(), SerializeHelper::SerializeUInt64(id), &std::string());
+	if (!status.ok())
 	{
 		throw StoreException(status,
-			"UrlFileStore::FinishIndex failed to remove url: " + url);
+			"UrlFileStore::ContainId failed to get: " + std::to_string(id));
 	}
+	return !status.IsNotFound();
 }
 
 const std::vector<rocksdb::ColumnFamilyDescriptor>
@@ -282,7 +235,6 @@ UrlFileStore::GetColumnFamilyDescriptors()
 	return std::move(std::vector<ColumnFamilyDescriptor>
 	{
 		ColumnFamilyDescriptor(BaseStore::DefaultCFName, ColumnFamilyOptions()),
-			ColumnFamilyDescriptor(IndexQueueCFName, idListOptions),
 			ColumnFamilyDescriptor(UrlIndexCFName, idListOptions),
 			ColumnFamilyDescriptor(HashIndexCFName, idListOptions),
 	});

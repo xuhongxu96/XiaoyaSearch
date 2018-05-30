@@ -20,9 +20,6 @@
     <ClCompile Include="InvertedIndexStoreTest.cpp">
       <Filter>Tests</Filter>
     </ClCompile>
-    <ClCompile Include="ServiceTest.cpp">
-      <Filter>Tests</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />

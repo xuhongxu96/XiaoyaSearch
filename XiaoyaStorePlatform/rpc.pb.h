@@ -83,10 +83,10 @@ void InitDefaultsArgPushBackUrlImpl();
 void InitDefaultsArgPushBackUrl();
 void InitDefaultsArgPostingListImpl();
 void InitDefaultsArgPostingList();
-void InitDefaultsArgSaveLinkOfUrlFileImpl();
-void InitDefaultsArgSaveLinkOfUrlFile();
-void InitDefaultsArgClearAndSaveIndicesOfImpl();
-void InitDefaultsArgClearAndSaveIndicesOf();
+void InitDefaultsArgLinksImpl();
+void InitDefaultsArgLinks();
+void InitDefaultsArgSaveIndicesImpl();
+void InitDefaultsArgSaveIndices();
 void InitDefaultsArgIndexKeyImpl();
 void InitDefaultsArgIndexKey();
 inline void InitDefaults() {
@@ -110,16 +110,13 @@ inline void InitDefaults() {
   InitDefaultsArgUrlFile();
   InitDefaultsArgPushBackUrl();
   InitDefaultsArgPostingList();
-  InitDefaultsArgSaveLinkOfUrlFile();
-  InitDefaultsArgClearAndSaveIndicesOf();
+  InitDefaultsArgLinks();
+  InitDefaultsArgSaveIndices();
   InitDefaultsArgIndexKey();
 }
 }  // namespace protobuf_rpc_2eproto
 namespace XiaoyaStore {
 namespace Service {
-class ArgClearAndSaveIndicesOf;
-class ArgClearAndSaveIndicesOfDefaultTypeInternal;
-extern ArgClearAndSaveIndicesOfDefaultTypeInternal _ArgClearAndSaveIndicesOf_default_instance_;
 class ArgHash;
 class ArgHashDefaultTypeInternal;
 extern ArgHashDefaultTypeInternal _ArgHash_default_instance_;
@@ -132,15 +129,18 @@ extern ArgIdDefaultTypeInternal _ArgId_default_instance_;
 class ArgIndexKey;
 class ArgIndexKeyDefaultTypeInternal;
 extern ArgIndexKeyDefaultTypeInternal _ArgIndexKey_default_instance_;
+class ArgLinks;
+class ArgLinksDefaultTypeInternal;
+extern ArgLinksDefaultTypeInternal _ArgLinks_default_instance_;
 class ArgPostingList;
 class ArgPostingListDefaultTypeInternal;
 extern ArgPostingListDefaultTypeInternal _ArgPostingList_default_instance_;
 class ArgPushBackUrl;
 class ArgPushBackUrlDefaultTypeInternal;
 extern ArgPushBackUrlDefaultTypeInternal _ArgPushBackUrl_default_instance_;
-class ArgSaveLinkOfUrlFile;
-class ArgSaveLinkOfUrlFileDefaultTypeInternal;
-extern ArgSaveLinkOfUrlFileDefaultTypeInternal _ArgSaveLinkOfUrlFile_default_instance_;
+class ArgSaveIndices;
+class ArgSaveIndicesDefaultTypeInternal;
+extern ArgSaveIndicesDefaultTypeInternal _ArgSaveIndices_default_instance_;
 class ArgUrl;
 class ArgUrlDefaultTypeInternal;
 extern ArgUrlDefaultTypeInternal _ArgUrl_default_instance_;
@@ -594,14 +594,14 @@ class ResultWithUrlFile : public ::google::protobuf::Message /* @@protoc_inserti
 
   // accessors -------------------------------------------------------
 
-  // .XiaoyaStore.Model.UrlFile urlfile = 2;
-  bool has_urlfile() const;
-  void clear_urlfile();
-  static const int kUrlfileFieldNumber = 2;
-  const ::XiaoyaStore::Model::UrlFile& urlfile() const;
-  ::XiaoyaStore::Model::UrlFile* release_urlfile();
-  ::XiaoyaStore::Model::UrlFile* mutable_urlfile();
-  void set_allocated_urlfile(::XiaoyaStore::Model::UrlFile* urlfile);
+  // .XiaoyaStore.Model.UrlFile url_file = 2;
+  bool has_url_file() const;
+  void clear_url_file();
+  static const int kUrlFileFieldNumber = 2;
+  const ::XiaoyaStore::Model::UrlFile& url_file() const;
+  ::XiaoyaStore::Model::UrlFile* release_url_file();
+  ::XiaoyaStore::Model::UrlFile* mutable_url_file();
+  void set_allocated_url_file(::XiaoyaStore::Model::UrlFile* url_file);
 
   // bool is_successful = 1;
   void clear_is_successful();
@@ -613,7 +613,7 @@ class ResultWithUrlFile : public ::google::protobuf::Message /* @@protoc_inserti
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::XiaoyaStore::Model::UrlFile* urlfile_;
+  ::XiaoyaStore::Model::UrlFile* url_file_;
   bool is_successful_;
   mutable int _cached_size_;
   friend struct ::protobuf_rpc_2eproto::TableStruct;
@@ -703,17 +703,17 @@ class ResultWithUrlFiles : public ::google::protobuf::Message /* @@protoc_insert
 
   // accessors -------------------------------------------------------
 
-  // repeated .XiaoyaStore.Model.UrlFile urlfiles = 2;
-  int urlfiles_size() const;
-  void clear_urlfiles();
-  static const int kUrlfilesFieldNumber = 2;
-  const ::XiaoyaStore::Model::UrlFile& urlfiles(int index) const;
-  ::XiaoyaStore::Model::UrlFile* mutable_urlfiles(int index);
-  ::XiaoyaStore::Model::UrlFile* add_urlfiles();
+  // repeated .XiaoyaStore.Model.UrlFile url_files = 2;
+  int url_files_size() const;
+  void clear_url_files();
+  static const int kUrlFilesFieldNumber = 2;
+  const ::XiaoyaStore::Model::UrlFile& url_files(int index) const;
+  ::XiaoyaStore::Model::UrlFile* mutable_url_files(int index);
+  ::XiaoyaStore::Model::UrlFile* add_url_files();
   ::google::protobuf::RepeatedPtrField< ::XiaoyaStore::Model::UrlFile >*
-      mutable_urlfiles();
+      mutable_url_files();
   const ::google::protobuf::RepeatedPtrField< ::XiaoyaStore::Model::UrlFile >&
-      urlfiles() const;
+      url_files() const;
 
   // bool is_successful = 1;
   void clear_is_successful();
@@ -725,7 +725,7 @@ class ResultWithUrlFiles : public ::google::protobuf::Message /* @@protoc_insert
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::RepeatedPtrField< ::XiaoyaStore::Model::UrlFile > urlfiles_;
+  ::google::protobuf::RepeatedPtrField< ::XiaoyaStore::Model::UrlFile > url_files_;
   bool is_successful_;
   mutable int _cached_size_;
   friend struct ::protobuf_rpc_2eproto::TableStruct;
@@ -815,20 +815,20 @@ class ResultWithUrlFileAndOldId : public ::google::protobuf::Message /* @@protoc
 
   // accessors -------------------------------------------------------
 
-  // .XiaoyaStore.Model.UrlFile urlfile = 3;
-  bool has_urlfile() const;
-  void clear_urlfile();
-  static const int kUrlfileFieldNumber = 3;
-  const ::XiaoyaStore::Model::UrlFile& urlfile() const;
-  ::XiaoyaStore::Model::UrlFile* release_urlfile();
-  ::XiaoyaStore::Model::UrlFile* mutable_urlfile();
-  void set_allocated_urlfile(::XiaoyaStore::Model::UrlFile* urlfile);
+  // .XiaoyaStore.Model.UrlFile url_file = 3;
+  bool has_url_file() const;
+  void clear_url_file();
+  static const int kUrlFileFieldNumber = 3;
+  const ::XiaoyaStore::Model::UrlFile& url_file() const;
+  ::XiaoyaStore::Model::UrlFile* release_url_file();
+  ::XiaoyaStore::Model::UrlFile* mutable_url_file();
+  void set_allocated_url_file(::XiaoyaStore::Model::UrlFile* url_file);
 
-  // uint64 old_urlfile_id = 2;
-  void clear_old_urlfile_id();
-  static const int kOldUrlfileIdFieldNumber = 2;
-  ::google::protobuf::uint64 old_urlfile_id() const;
-  void set_old_urlfile_id(::google::protobuf::uint64 value);
+  // uint64 old_url_file_id = 2;
+  void clear_old_url_file_id();
+  static const int kOldUrlFileIdFieldNumber = 2;
+  ::google::protobuf::uint64 old_url_file_id() const;
+  void set_old_url_file_id(::google::protobuf::uint64 value);
 
   // bool is_successful = 1;
   void clear_is_successful();
@@ -840,8 +840,8 @@ class ResultWithUrlFileAndOldId : public ::google::protobuf::Message /* @@protoc
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::XiaoyaStore::Model::UrlFile* urlfile_;
-  ::google::protobuf::uint64 old_urlfile_id_;
+  ::XiaoyaStore::Model::UrlFile* url_file_;
+  ::google::protobuf::uint64 old_url_file_id_;
   bool is_successful_;
   mutable int _cached_size_;
   friend struct ::protobuf_rpc_2eproto::TableStruct;
@@ -2104,20 +2104,20 @@ class ArgUrlFile : public ::google::protobuf::Message /* @@protoc_insertion_poin
 
   // accessors -------------------------------------------------------
 
-  // .XiaoyaStore.Model.UrlFile urlfile = 1;
-  bool has_urlfile() const;
-  void clear_urlfile();
-  static const int kUrlfileFieldNumber = 1;
-  const ::XiaoyaStore::Model::UrlFile& urlfile() const;
-  ::XiaoyaStore::Model::UrlFile* release_urlfile();
-  ::XiaoyaStore::Model::UrlFile* mutable_urlfile();
-  void set_allocated_urlfile(::XiaoyaStore::Model::UrlFile* urlfile);
+  // .XiaoyaStore.Model.UrlFile url_file = 1;
+  bool has_url_file() const;
+  void clear_url_file();
+  static const int kUrlFileFieldNumber = 1;
+  const ::XiaoyaStore::Model::UrlFile& url_file() const;
+  ::XiaoyaStore::Model::UrlFile* release_url_file();
+  ::XiaoyaStore::Model::UrlFile* mutable_url_file();
+  void set_allocated_url_file(::XiaoyaStore::Model::UrlFile* url_file);
 
   // @@protoc_insertion_point(class_scope:XiaoyaStore.Service.ArgUrlFile)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::XiaoyaStore::Model::UrlFile* urlfile_;
+  ::XiaoyaStore::Model::UrlFile* url_file_;
   mutable int _cached_size_;
   friend struct ::protobuf_rpc_2eproto::TableStruct;
   friend void ::protobuf_rpc_2eproto::InitDefaultsArgUrlFileImpl();
@@ -2347,24 +2347,24 @@ class ArgPostingList : public ::google::protobuf::Message /* @@protoc_insertion_
 };
 // -------------------------------------------------------------------
 
-class ArgSaveLinkOfUrlFile : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:XiaoyaStore.Service.ArgSaveLinkOfUrlFile) */ {
+class ArgLinks : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:XiaoyaStore.Service.ArgLinks) */ {
  public:
-  ArgSaveLinkOfUrlFile();
-  virtual ~ArgSaveLinkOfUrlFile();
+  ArgLinks();
+  virtual ~ArgLinks();
 
-  ArgSaveLinkOfUrlFile(const ArgSaveLinkOfUrlFile& from);
+  ArgLinks(const ArgLinks& from);
 
-  inline ArgSaveLinkOfUrlFile& operator=(const ArgSaveLinkOfUrlFile& from) {
+  inline ArgLinks& operator=(const ArgLinks& from) {
     CopyFrom(from);
     return *this;
   }
   #if LANG_CXX11
-  ArgSaveLinkOfUrlFile(ArgSaveLinkOfUrlFile&& from) noexcept
-    : ArgSaveLinkOfUrlFile() {
+  ArgLinks(ArgLinks&& from) noexcept
+    : ArgLinks() {
     *this = ::std::move(from);
   }
 
-  inline ArgSaveLinkOfUrlFile& operator=(ArgSaveLinkOfUrlFile&& from) noexcept {
+  inline ArgLinks& operator=(ArgLinks&& from) noexcept {
     if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
       if (this != &from) InternalSwap(&from);
     } else {
@@ -2374,30 +2374,30 @@ class ArgSaveLinkOfUrlFile : public ::google::protobuf::Message /* @@protoc_inse
   }
   #endif
   static const ::google::protobuf::Descriptor* descriptor();
-  static const ArgSaveLinkOfUrlFile& default_instance();
+  static const ArgLinks& default_instance();
 
   static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const ArgSaveLinkOfUrlFile* internal_default_instance() {
-    return reinterpret_cast<const ArgSaveLinkOfUrlFile*>(
-               &_ArgSaveLinkOfUrlFile_default_instance_);
+  static inline const ArgLinks* internal_default_instance() {
+    return reinterpret_cast<const ArgLinks*>(
+               &_ArgLinks_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
     20;
 
-  void Swap(ArgSaveLinkOfUrlFile* other);
-  friend void swap(ArgSaveLinkOfUrlFile& a, ArgSaveLinkOfUrlFile& b) {
+  void Swap(ArgLinks* other);
+  friend void swap(ArgLinks& a, ArgLinks& b) {
     a.Swap(&b);
   }
 
   // implements Message ----------------------------------------------
 
-  inline ArgSaveLinkOfUrlFile* New() const PROTOBUF_FINAL { return New(NULL); }
+  inline ArgLinks* New() const PROTOBUF_FINAL { return New(NULL); }
 
-  ArgSaveLinkOfUrlFile* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  ArgLinks* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
   void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
   void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
-  void CopyFrom(const ArgSaveLinkOfUrlFile& from);
-  void MergeFrom(const ArgSaveLinkOfUrlFile& from);
+  void CopyFrom(const ArgLinks& from);
+  void MergeFrom(const ArgLinks& from);
   void Clear() PROTOBUF_FINAL;
   bool IsInitialized() const PROTOBUF_FINAL;
 
@@ -2413,7 +2413,7 @@ class ArgSaveLinkOfUrlFile : public ::google::protobuf::Message /* @@protoc_inse
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const PROTOBUF_FINAL;
-  void InternalSwap(ArgSaveLinkOfUrlFile* other);
+  void InternalSwap(ArgLinks* other);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
     return NULL;
@@ -2429,10 +2429,10 @@ class ArgSaveLinkOfUrlFile : public ::google::protobuf::Message /* @@protoc_inse
 
   // accessors -------------------------------------------------------
 
-  // repeated .XiaoyaStore.Model.Link links = 3;
+  // repeated .XiaoyaStore.Model.Link links = 1;
   int links_size() const;
   void clear_links();
-  static const int kLinksFieldNumber = 3;
+  static const int kLinksFieldNumber = 1;
   const ::XiaoyaStore::Model::Link& links(int index) const;
   ::XiaoyaStore::Model::Link* mutable_links(int index);
   ::XiaoyaStore::Model::Link* add_links();
@@ -2441,49 +2441,35 @@ class ArgSaveLinkOfUrlFile : public ::google::protobuf::Message /* @@protoc_inse
   const ::google::protobuf::RepeatedPtrField< ::XiaoyaStore::Model::Link >&
       links() const;
 
-  // uint64 urlfile_id = 1;
-  void clear_urlfile_id();
-  static const int kUrlfileIdFieldNumber = 1;
-  ::google::protobuf::uint64 urlfile_id() const;
-  void set_urlfile_id(::google::protobuf::uint64 value);
-
-  // uint64 old_urlfile_id = 2;
-  void clear_old_urlfile_id();
-  static const int kOldUrlfileIdFieldNumber = 2;
-  ::google::protobuf::uint64 old_urlfile_id() const;
-  void set_old_urlfile_id(::google::protobuf::uint64 value);
-
-  // @@protoc_insertion_point(class_scope:XiaoyaStore.Service.ArgSaveLinkOfUrlFile)
+  // @@protoc_insertion_point(class_scope:XiaoyaStore.Service.ArgLinks)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::RepeatedPtrField< ::XiaoyaStore::Model::Link > links_;
-  ::google::protobuf::uint64 urlfile_id_;
-  ::google::protobuf::uint64 old_urlfile_id_;
   mutable int _cached_size_;
   friend struct ::protobuf_rpc_2eproto::TableStruct;
-  friend void ::protobuf_rpc_2eproto::InitDefaultsArgSaveLinkOfUrlFileImpl();
+  friend void ::protobuf_rpc_2eproto::InitDefaultsArgLinksImpl();
 };
 // -------------------------------------------------------------------
 
-class ArgClearAndSaveIndicesOf : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:XiaoyaStore.Service.ArgClearAndSaveIndicesOf) */ {
+class ArgSaveIndices : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:XiaoyaStore.Service.ArgSaveIndices) */ {
  public:
-  ArgClearAndSaveIndicesOf();
-  virtual ~ArgClearAndSaveIndicesOf();
+  ArgSaveIndices();
+  virtual ~ArgSaveIndices();
 
-  ArgClearAndSaveIndicesOf(const ArgClearAndSaveIndicesOf& from);
+  ArgSaveIndices(const ArgSaveIndices& from);
 
-  inline ArgClearAndSaveIndicesOf& operator=(const ArgClearAndSaveIndicesOf& from) {
+  inline ArgSaveIndices& operator=(const ArgSaveIndices& from) {
     CopyFrom(from);
     return *this;
   }
   #if LANG_CXX11
-  ArgClearAndSaveIndicesOf(ArgClearAndSaveIndicesOf&& from) noexcept
-    : ArgClearAndSaveIndicesOf() {
+  ArgSaveIndices(ArgSaveIndices&& from) noexcept
+    : ArgSaveIndices() {
     *this = ::std::move(from);
   }
 
-  inline ArgClearAndSaveIndicesOf& operator=(ArgClearAndSaveIndicesOf&& from) noexcept {
+  inline ArgSaveIndices& operator=(ArgSaveIndices&& from) noexcept {
     if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
       if (this != &from) InternalSwap(&from);
     } else {
@@ -2493,30 +2479,30 @@ class ArgClearAndSaveIndicesOf : public ::google::protobuf::Message /* @@protoc_
   }
   #endif
   static const ::google::protobuf::Descriptor* descriptor();
-  static const ArgClearAndSaveIndicesOf& default_instance();
+  static const ArgSaveIndices& default_instance();
 
   static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const ArgClearAndSaveIndicesOf* internal_default_instance() {
-    return reinterpret_cast<const ArgClearAndSaveIndicesOf*>(
-               &_ArgClearAndSaveIndicesOf_default_instance_);
+  static inline const ArgSaveIndices* internal_default_instance() {
+    return reinterpret_cast<const ArgSaveIndices*>(
+               &_ArgSaveIndices_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
     21;
 
-  void Swap(ArgClearAndSaveIndicesOf* other);
-  friend void swap(ArgClearAndSaveIndicesOf& a, ArgClearAndSaveIndicesOf& b) {
+  void Swap(ArgSaveIndices* other);
+  friend void swap(ArgSaveIndices& a, ArgSaveIndices& b) {
     a.Swap(&b);
   }
 
   // implements Message ----------------------------------------------
 
-  inline ArgClearAndSaveIndicesOf* New() const PROTOBUF_FINAL { return New(NULL); }
+  inline ArgSaveIndices* New() const PROTOBUF_FINAL { return New(NULL); }
 
-  ArgClearAndSaveIndicesOf* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  ArgSaveIndices* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
   void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
   void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
-  void CopyFrom(const ArgClearAndSaveIndicesOf& from);
-  void MergeFrom(const ArgClearAndSaveIndicesOf& from);
+  void CopyFrom(const ArgSaveIndices& from);
+  void MergeFrom(const ArgSaveIndices& from);
   void Clear() PROTOBUF_FINAL;
   bool IsInitialized() const PROTOBUF_FINAL;
 
@@ -2532,7 +2518,7 @@ class ArgClearAndSaveIndicesOf : public ::google::protobuf::Message /* @@protoc_
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const PROTOBUF_FINAL;
-  void InternalSwap(ArgClearAndSaveIndicesOf* other);
+  void InternalSwap(ArgSaveIndices* other);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
     return NULL;
@@ -2548,10 +2534,10 @@ class ArgClearAndSaveIndicesOf : public ::google::protobuf::Message /* @@protoc_
 
   // accessors -------------------------------------------------------
 
-  // repeated .XiaoyaStore.Model.Index indices = 3;
+  // repeated .XiaoyaStore.Model.Index indices = 2;
   int indices_size() const;
   void clear_indices();
-  static const int kIndicesFieldNumber = 3;
+  static const int kIndicesFieldNumber = 2;
   const ::XiaoyaStore::Model::Index& indices(int index) const;
   ::XiaoyaStore::Model::Index* mutable_indices(int index);
   ::XiaoyaStore::Model::Index* add_indices();
@@ -2560,28 +2546,21 @@ class ArgClearAndSaveIndicesOf : public ::google::protobuf::Message /* @@protoc_
   const ::google::protobuf::RepeatedPtrField< ::XiaoyaStore::Model::Index >&
       indices() const;
 
-  // uint64 urlfile_id = 1;
-  void clear_urlfile_id();
-  static const int kUrlfileIdFieldNumber = 1;
-  ::google::protobuf::uint64 urlfile_id() const;
-  void set_urlfile_id(::google::protobuf::uint64 value);
+  // uint64 url_file_id = 1;
+  void clear_url_file_id();
+  static const int kUrlFileIdFieldNumber = 1;
+  ::google::protobuf::uint64 url_file_id() const;
+  void set_url_file_id(::google::protobuf::uint64 value);
 
-  // uint64 old_urlfile_id = 2;
-  void clear_old_urlfile_id();
-  static const int kOldUrlfileIdFieldNumber = 2;
-  ::google::protobuf::uint64 old_urlfile_id() const;
-  void set_old_urlfile_id(::google::protobuf::uint64 value);
-
-  // @@protoc_insertion_point(class_scope:XiaoyaStore.Service.ArgClearAndSaveIndicesOf)
+  // @@protoc_insertion_point(class_scope:XiaoyaStore.Service.ArgSaveIndices)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::RepeatedPtrField< ::XiaoyaStore::Model::Index > indices_;
-  ::google::protobuf::uint64 urlfile_id_;
-  ::google::protobuf::uint64 old_urlfile_id_;
+  ::google::protobuf::uint64 url_file_id_;
   mutable int _cached_size_;
   friend struct ::protobuf_rpc_2eproto::TableStruct;
-  friend void ::protobuf_rpc_2eproto::InitDefaultsArgClearAndSaveIndicesOfImpl();
+  friend void ::protobuf_rpc_2eproto::InitDefaultsArgSaveIndicesImpl();
 };
 // -------------------------------------------------------------------
 
@@ -2681,18 +2660,18 @@ class ArgIndexKey : public ::google::protobuf::Message /* @@protoc_insertion_poi
   ::std::string* release_word();
   void set_allocated_word(::std::string* word);
 
-  // uint64 urlfile_id = 1;
-  void clear_urlfile_id();
-  static const int kUrlfileIdFieldNumber = 1;
-  ::google::protobuf::uint64 urlfile_id() const;
-  void set_urlfile_id(::google::protobuf::uint64 value);
+  // uint64 url_file_id = 1;
+  void clear_url_file_id();
+  static const int kUrlFileIdFieldNumber = 1;
+  ::google::protobuf::uint64 url_file_id() const;
+  void set_url_file_id(::google::protobuf::uint64 value);
 
   // @@protoc_insertion_point(class_scope:XiaoyaStore.Service.ArgIndexKey)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::ArenaStringPtr word_;
-  ::google::protobuf::uint64 urlfile_id_;
+  ::google::protobuf::uint64 url_file_id_;
   mutable int _cached_size_;
   friend struct ::protobuf_rpc_2eproto::TableStruct;
   friend void ::protobuf_rpc_2eproto::InitDefaultsArgIndexKeyImpl();
@@ -2843,48 +2822,48 @@ inline void ResultWithUrlFile::set_is_successful(bool value) {
   // @@protoc_insertion_point(field_set:XiaoyaStore.Service.ResultWithUrlFile.is_successful)
 }
 
-// .XiaoyaStore.Model.UrlFile urlfile = 2;
-inline bool ResultWithUrlFile::has_urlfile() const {
-  return this != internal_default_instance() && urlfile_ != NULL;
+// .XiaoyaStore.Model.UrlFile url_file = 2;
+inline bool ResultWithUrlFile::has_url_file() const {
+  return this != internal_default_instance() && url_file_ != NULL;
 }
-inline const ::XiaoyaStore::Model::UrlFile& ResultWithUrlFile::urlfile() const {
-  const ::XiaoyaStore::Model::UrlFile* p = urlfile_;
-  // @@protoc_insertion_point(field_get:XiaoyaStore.Service.ResultWithUrlFile.urlfile)
+inline const ::XiaoyaStore::Model::UrlFile& ResultWithUrlFile::url_file() const {
+  const ::XiaoyaStore::Model::UrlFile* p = url_file_;
+  // @@protoc_insertion_point(field_get:XiaoyaStore.Service.ResultWithUrlFile.url_file)
   return p != NULL ? *p : *reinterpret_cast<const ::XiaoyaStore::Model::UrlFile*>(
       &::XiaoyaStore::Model::_UrlFile_default_instance_);
 }
-inline ::XiaoyaStore::Model::UrlFile* ResultWithUrlFile::release_urlfile() {
-  // @@protoc_insertion_point(field_release:XiaoyaStore.Service.ResultWithUrlFile.urlfile)
+inline ::XiaoyaStore::Model::UrlFile* ResultWithUrlFile::release_url_file() {
+  // @@protoc_insertion_point(field_release:XiaoyaStore.Service.ResultWithUrlFile.url_file)
   
-  ::XiaoyaStore::Model::UrlFile* temp = urlfile_;
-  urlfile_ = NULL;
+  ::XiaoyaStore::Model::UrlFile* temp = url_file_;
+  url_file_ = NULL;
   return temp;
 }
-inline ::XiaoyaStore::Model::UrlFile* ResultWithUrlFile::mutable_urlfile() {
+inline ::XiaoyaStore::Model::UrlFile* ResultWithUrlFile::mutable_url_file() {
   
-  if (urlfile_ == NULL) {
-    urlfile_ = new ::XiaoyaStore::Model::UrlFile;
+  if (url_file_ == NULL) {
+    url_file_ = new ::XiaoyaStore::Model::UrlFile;
   }
-  // @@protoc_insertion_point(field_mutable:XiaoyaStore.Service.ResultWithUrlFile.urlfile)
-  return urlfile_;
+  // @@protoc_insertion_point(field_mutable:XiaoyaStore.Service.ResultWithUrlFile.url_file)
+  return url_file_;
 }
-inline void ResultWithUrlFile::set_allocated_urlfile(::XiaoyaStore::Model::UrlFile* urlfile) {
+inline void ResultWithUrlFile::set_allocated_url_file(::XiaoyaStore::Model::UrlFile* url_file) {
   ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
   if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(urlfile_);
+    delete reinterpret_cast< ::google::protobuf::MessageLite*>(url_file_);
   }
-  if (urlfile) {
+  if (url_file) {
     ::google::protobuf::Arena* submessage_arena = NULL;
     if (message_arena != submessage_arena) {
-      urlfile = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, urlfile, submessage_arena);
+      url_file = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, url_file, submessage_arena);
     }
     
   } else {
     
   }
-  urlfile_ = urlfile;
-  // @@protoc_insertion_point(field_set_allocated:XiaoyaStore.Service.ResultWithUrlFile.urlfile)
+  url_file_ = url_file;
+  // @@protoc_insertion_point(field_set_allocated:XiaoyaStore.Service.ResultWithUrlFile.url_file)
 }
 
 // -------------------------------------------------------------------
@@ -2905,31 +2884,31 @@ inline void ResultWithUrlFiles::set_is_successful(bool value) {
   // @@protoc_insertion_point(field_set:XiaoyaStore.Service.ResultWithUrlFiles.is_successful)
 }
 
-// repeated .XiaoyaStore.Model.UrlFile urlfiles = 2;
-inline int ResultWithUrlFiles::urlfiles_size() const {
-  return urlfiles_.size();
+// repeated .XiaoyaStore.Model.UrlFile url_files = 2;
+inline int ResultWithUrlFiles::url_files_size() const {
+  return url_files_.size();
 }
-inline const ::XiaoyaStore::Model::UrlFile& ResultWithUrlFiles::urlfiles(int index) const {
-  // @@protoc_insertion_point(field_get:XiaoyaStore.Service.ResultWithUrlFiles.urlfiles)
-  return urlfiles_.Get(index);
+inline const ::XiaoyaStore::Model::UrlFile& ResultWithUrlFiles::url_files(int index) const {
+  // @@protoc_insertion_point(field_get:XiaoyaStore.Service.ResultWithUrlFiles.url_files)
+  return url_files_.Get(index);
 }
-inline ::XiaoyaStore::Model::UrlFile* ResultWithUrlFiles::mutable_urlfiles(int index) {
-  // @@protoc_insertion_point(field_mutable:XiaoyaStore.Service.ResultWithUrlFiles.urlfiles)
-  return urlfiles_.Mutable(index);
+inline ::XiaoyaStore::Model::UrlFile* ResultWithUrlFiles::mutable_url_files(int index) {
+  // @@protoc_insertion_point(field_mutable:XiaoyaStore.Service.ResultWithUrlFiles.url_files)
+  return url_files_.Mutable(index);
 }
-inline ::XiaoyaStore::Model::UrlFile* ResultWithUrlFiles::add_urlfiles() {
-  // @@protoc_insertion_point(field_add:XiaoyaStore.Service.ResultWithUrlFiles.urlfiles)
-  return urlfiles_.Add();
+inline ::XiaoyaStore::Model::UrlFile* ResultWithUrlFiles::add_url_files() {
+  // @@protoc_insertion_point(field_add:XiaoyaStore.Service.ResultWithUrlFiles.url_files)
+  return url_files_.Add();
 }
 inline ::google::protobuf::RepeatedPtrField< ::XiaoyaStore::Model::UrlFile >*
-ResultWithUrlFiles::mutable_urlfiles() {
-  // @@protoc_insertion_point(field_mutable_list:XiaoyaStore.Service.ResultWithUrlFiles.urlfiles)
-  return &urlfiles_;
+ResultWithUrlFiles::mutable_url_files() {
+  // @@protoc_insertion_point(field_mutable_list:XiaoyaStore.Service.ResultWithUrlFiles.url_files)
+  return &url_files_;
 }
 inline const ::google::protobuf::RepeatedPtrField< ::XiaoyaStore::Model::UrlFile >&
-ResultWithUrlFiles::urlfiles() const {
-  // @@protoc_insertion_point(field_list:XiaoyaStore.Service.ResultWithUrlFiles.urlfiles)
-  return urlfiles_;
+ResultWithUrlFiles::url_files() const {
+  // @@protoc_insertion_point(field_list:XiaoyaStore.Service.ResultWithUrlFiles.url_files)
+  return url_files_;
 }
 
 // -------------------------------------------------------------------
@@ -2950,62 +2929,62 @@ inline void ResultWithUrlFileAndOldId::set_is_successful(bool value) {
   // @@protoc_insertion_point(field_set:XiaoyaStore.Service.ResultWithUrlFileAndOldId.is_successful)
 }
 
-// uint64 old_urlfile_id = 2;
-inline void ResultWithUrlFileAndOldId::clear_old_urlfile_id() {
-  old_urlfile_id_ = GOOGLE_ULONGLONG(0);
+// uint64 old_url_file_id = 2;
+inline void ResultWithUrlFileAndOldId::clear_old_url_file_id() {
+  old_url_file_id_ = GOOGLE_ULONGLONG(0);
 }
-inline ::google::protobuf::uint64 ResultWithUrlFileAndOldId::old_urlfile_id() const {
-  // @@protoc_insertion_point(field_get:XiaoyaStore.Service.ResultWithUrlFileAndOldId.old_urlfile_id)
-  return old_urlfile_id_;
+inline ::google::protobuf::uint64 ResultWithUrlFileAndOldId::old_url_file_id() const {
+  // @@protoc_insertion_point(field_get:XiaoyaStore.Service.ResultWithUrlFileAndOldId.old_url_file_id)
+  return old_url_file_id_;
 }
-inline void ResultWithUrlFileAndOldId::set_old_urlfile_id(::google::protobuf::uint64 value) {
+inline void ResultWithUrlFileAndOldId::set_old_url_file_id(::google::protobuf::uint64 value) {
   
-  old_urlfile_id_ = value;
-  // @@protoc_insertion_point(field_set:XiaoyaStore.Service.ResultWithUrlFileAndOldId.old_urlfile_id)
+  old_url_file_id_ = value;
+  // @@protoc_insertion_point(field_set:XiaoyaStore.Service.ResultWithUrlFileAndOldId.old_url_file_id)
 }
 
-// .XiaoyaStore.Model.UrlFile urlfile = 3;
-inline bool ResultWithUrlFileAndOldId::has_urlfile() const {
-  return this != internal_default_instance() && urlfile_ != NULL;
+// .XiaoyaStore.Model.UrlFile url_file = 3;
+inline bool ResultWithUrlFileAndOldId::has_url_file() const {
+  return this != internal_default_instance() && url_file_ != NULL;
 }
-inline const ::XiaoyaStore::Model::UrlFile& ResultWithUrlFileAndOldId::urlfile() const {
-  const ::XiaoyaStore::Model::UrlFile* p = urlfile_;
-  // @@protoc_insertion_point(field_get:XiaoyaStore.Service.ResultWithUrlFileAndOldId.urlfile)
+inline const ::XiaoyaStore::Model::UrlFile& ResultWithUrlFileAndOldId::url_file() const {
+  const ::XiaoyaStore::Model::UrlFile* p = url_file_;
+  // @@protoc_insertion_point(field_get:XiaoyaStore.Service.ResultWithUrlFileAndOldId.url_file)
   return p != NULL ? *p : *reinterpret_cast<const ::XiaoyaStore::Model::UrlFile*>(
       &::XiaoyaStore::Model::_UrlFile_default_instance_);
 }
-inline ::XiaoyaStore::Model::UrlFile* ResultWithUrlFileAndOldId::release_urlfile() {
-  // @@protoc_insertion_point(field_release:XiaoyaStore.Service.ResultWithUrlFileAndOldId.urlfile)
+inline ::XiaoyaStore::Model::UrlFile* ResultWithUrlFileAndOldId::release_url_file() {
+  // @@protoc_insertion_point(field_release:XiaoyaStore.Service.ResultWithUrlFileAndOldId.url_file)
   
-  ::XiaoyaStore::Model::UrlFile* temp = urlfile_;
-  urlfile_ = NULL;
+  ::XiaoyaStore::Model::UrlFile* temp = url_file_;
+  url_file_ = NULL;
   return temp;
 }
-inline ::XiaoyaStore::Model::UrlFile* ResultWithUrlFileAndOldId::mutable_urlfile() {
+inline ::XiaoyaStore::Model::UrlFile* ResultWithUrlFileAndOldId::mutable_url_file() {
   
-  if (urlfile_ == NULL) {
-    urlfile_ = new ::XiaoyaStore::Model::UrlFile;
+  if (url_file_ == NULL) {
+    url_file_ = new ::XiaoyaStore::Model::UrlFile;
   }
-  // @@protoc_insertion_point(field_mutable:XiaoyaStore.Service.ResultWithUrlFileAndOldId.urlfile)
-  return urlfile_;
+  // @@protoc_insertion_point(field_mutable:XiaoyaStore.Service.ResultWithUrlFileAndOldId.url_file)
+  return url_file_;
 }
-inline void ResultWithUrlFileAndOldId::set_allocated_urlfile(::XiaoyaStore::Model::UrlFile* urlfile) {
+inline void ResultWithUrlFileAndOldId::set_allocated_url_file(::XiaoyaStore::Model::UrlFile* url_file) {
   ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
   if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(urlfile_);
+    delete reinterpret_cast< ::google::protobuf::MessageLite*>(url_file_);
   }
-  if (urlfile) {
+  if (url_file) {
     ::google::protobuf::Arena* submessage_arena = NULL;
     if (message_arena != submessage_arena) {
-      urlfile = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, urlfile, submessage_arena);
+      url_file = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, url_file, submessage_arena);
     }
     
   } else {
     
   }
-  urlfile_ = urlfile;
-  // @@protoc_insertion_point(field_set_allocated:XiaoyaStore.Service.ResultWithUrlFileAndOldId.urlfile)
+  url_file_ = url_file;
+  // @@protoc_insertion_point(field_set_allocated:XiaoyaStore.Service.ResultWithUrlFileAndOldId.url_file)
 }
 
 // -------------------------------------------------------------------
@@ -3566,48 +3545,48 @@ ArgUrls::mutable_urls() {
 
 // ArgUrlFile
 
-// .XiaoyaStore.Model.UrlFile urlfile = 1;
-inline bool ArgUrlFile::has_urlfile() const {
-  return this != internal_default_instance() && urlfile_ != NULL;
+// .XiaoyaStore.Model.UrlFile url_file = 1;
+inline bool ArgUrlFile::has_url_file() const {
+  return this != internal_default_instance() && url_file_ != NULL;
 }
-inline const ::XiaoyaStore::Model::UrlFile& ArgUrlFile::urlfile() const {
-  const ::XiaoyaStore::Model::UrlFile* p = urlfile_;
-  // @@protoc_insertion_point(field_get:XiaoyaStore.Service.ArgUrlFile.urlfile)
+inline const ::XiaoyaStore::Model::UrlFile& ArgUrlFile::url_file() const {
+  const ::XiaoyaStore::Model::UrlFile* p = url_file_;
+  // @@protoc_insertion_point(field_get:XiaoyaStore.Service.ArgUrlFile.url_file)
   return p != NULL ? *p : *reinterpret_cast<const ::XiaoyaStore::Model::UrlFile*>(
       &::XiaoyaStore::Model::_UrlFile_default_instance_);
 }
-inline ::XiaoyaStore::Model::UrlFile* ArgUrlFile::release_urlfile() {
-  // @@protoc_insertion_point(field_release:XiaoyaStore.Service.ArgUrlFile.urlfile)
+inline ::XiaoyaStore::Model::UrlFile* ArgUrlFile::release_url_file() {
+  // @@protoc_insertion_point(field_release:XiaoyaStore.Service.ArgUrlFile.url_file)
   
-  ::XiaoyaStore::Model::UrlFile* temp = urlfile_;
-  urlfile_ = NULL;
+  ::XiaoyaStore::Model::UrlFile* temp = url_file_;
+  url_file_ = NULL;
   return temp;
 }
-inline ::XiaoyaStore::Model::UrlFile* ArgUrlFile::mutable_urlfile() {
+inline ::XiaoyaStore::Model::UrlFile* ArgUrlFile::mutable_url_file() {
   
-  if (urlfile_ == NULL) {
-    urlfile_ = new ::XiaoyaStore::Model::UrlFile;
+  if (url_file_ == NULL) {
+    url_file_ = new ::XiaoyaStore::Model::UrlFile;
   }
-  // @@protoc_insertion_point(field_mutable:XiaoyaStore.Service.ArgUrlFile.urlfile)
-  return urlfile_;
+  // @@protoc_insertion_point(field_mutable:XiaoyaStore.Service.ArgUrlFile.url_file)
+  return url_file_;
 }
-inline void ArgUrlFile::set_allocated_urlfile(::XiaoyaStore::Model::UrlFile* urlfile) {
+inline void ArgUrlFile::set_allocated_url_file(::XiaoyaStore::Model::UrlFile* url_file) {
   ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
   if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(urlfile_);
+    delete reinterpret_cast< ::google::protobuf::MessageLite*>(url_file_);
   }
-  if (urlfile) {
+  if (url_file) {
     ::google::protobuf::Arena* submessage_arena = NULL;
     if (message_arena != submessage_arena) {
-      urlfile = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, urlfile, submessage_arena);
+      url_file = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, url_file, submessage_arena);
     }
     
   } else {
     
   }
-  urlfile_ = urlfile;
-  // @@protoc_insertion_point(field_set_allocated:XiaoyaStore.Service.ArgUrlFile.urlfile)
+  url_file_ = url_file;
+  // @@protoc_insertion_point(field_set_allocated:XiaoyaStore.Service.ArgUrlFile.url_file)
 }
 
 // -------------------------------------------------------------------
@@ -3745,119 +3724,77 @@ inline void ArgPostingList::set_allocated_postinglist(::XiaoyaStore::Model::Post
 
 // -------------------------------------------------------------------
 
-// ArgSaveLinkOfUrlFile
+// ArgLinks
 
-// uint64 urlfile_id = 1;
-inline void ArgSaveLinkOfUrlFile::clear_urlfile_id() {
-  urlfile_id_ = GOOGLE_ULONGLONG(0);
-}
-inline ::google::protobuf::uint64 ArgSaveLinkOfUrlFile::urlfile_id() const {
-  // @@protoc_insertion_point(field_get:XiaoyaStore.Service.ArgSaveLinkOfUrlFile.urlfile_id)
-  return urlfile_id_;
-}
-inline void ArgSaveLinkOfUrlFile::set_urlfile_id(::google::protobuf::uint64 value) {
-  
-  urlfile_id_ = value;
-  // @@protoc_insertion_point(field_set:XiaoyaStore.Service.ArgSaveLinkOfUrlFile.urlfile_id)
-}
-
-// uint64 old_urlfile_id = 2;
-inline void ArgSaveLinkOfUrlFile::clear_old_urlfile_id() {
-  old_urlfile_id_ = GOOGLE_ULONGLONG(0);
-}
-inline ::google::protobuf::uint64 ArgSaveLinkOfUrlFile::old_urlfile_id() const {
-  // @@protoc_insertion_point(field_get:XiaoyaStore.Service.ArgSaveLinkOfUrlFile.old_urlfile_id)
-  return old_urlfile_id_;
-}
-inline void ArgSaveLinkOfUrlFile::set_old_urlfile_id(::google::protobuf::uint64 value) {
-  
-  old_urlfile_id_ = value;
-  // @@protoc_insertion_point(field_set:XiaoyaStore.Service.ArgSaveLinkOfUrlFile.old_urlfile_id)
-}
-
-// repeated .XiaoyaStore.Model.Link links = 3;
-inline int ArgSaveLinkOfUrlFile::links_size() const {
+// repeated .XiaoyaStore.Model.Link links = 1;
+inline int ArgLinks::links_size() const {
   return links_.size();
 }
-inline const ::XiaoyaStore::Model::Link& ArgSaveLinkOfUrlFile::links(int index) const {
-  // @@protoc_insertion_point(field_get:XiaoyaStore.Service.ArgSaveLinkOfUrlFile.links)
+inline const ::XiaoyaStore::Model::Link& ArgLinks::links(int index) const {
+  // @@protoc_insertion_point(field_get:XiaoyaStore.Service.ArgLinks.links)
   return links_.Get(index);
 }
-inline ::XiaoyaStore::Model::Link* ArgSaveLinkOfUrlFile::mutable_links(int index) {
-  // @@protoc_insertion_point(field_mutable:XiaoyaStore.Service.ArgSaveLinkOfUrlFile.links)
+inline ::XiaoyaStore::Model::Link* ArgLinks::mutable_links(int index) {
+  // @@protoc_insertion_point(field_mutable:XiaoyaStore.Service.ArgLinks.links)
   return links_.Mutable(index);
 }
-inline ::XiaoyaStore::Model::Link* ArgSaveLinkOfUrlFile::add_links() {
-  // @@protoc_insertion_point(field_add:XiaoyaStore.Service.ArgSaveLinkOfUrlFile.links)
+inline ::XiaoyaStore::Model::Link* ArgLinks::add_links() {
+  // @@protoc_insertion_point(field_add:XiaoyaStore.Service.ArgLinks.links)
   return links_.Add();
 }
 inline ::google::protobuf::RepeatedPtrField< ::XiaoyaStore::Model::Link >*
-ArgSaveLinkOfUrlFile::mutable_links() {
-  // @@protoc_insertion_point(field_mutable_list:XiaoyaStore.Service.ArgSaveLinkOfUrlFile.links)
+ArgLinks::mutable_links() {
+  // @@protoc_insertion_point(field_mutable_list:XiaoyaStore.Service.ArgLinks.links)
   return &links_;
 }
 inline const ::google::protobuf::RepeatedPtrField< ::XiaoyaStore::Model::Link >&
-ArgSaveLinkOfUrlFile::links() const {
-  // @@protoc_insertion_point(field_list:XiaoyaStore.Service.ArgSaveLinkOfUrlFile.links)
+ArgLinks::links() const {
+  // @@protoc_insertion_point(field_list:XiaoyaStore.Service.ArgLinks.links)
   return links_;
 }
 
 // -------------------------------------------------------------------
 
-// ArgClearAndSaveIndicesOf
+// ArgSaveIndices
 
-// uint64 urlfile_id = 1;
-inline void ArgClearAndSaveIndicesOf::clear_urlfile_id() {
-  urlfile_id_ = GOOGLE_ULONGLONG(0);
+// uint64 url_file_id = 1;
+inline void ArgSaveIndices::clear_url_file_id() {
+  url_file_id_ = GOOGLE_ULONGLONG(0);
 }
-inline ::google::protobuf::uint64 ArgClearAndSaveIndicesOf::urlfile_id() const {
-  // @@protoc_insertion_point(field_get:XiaoyaStore.Service.ArgClearAndSaveIndicesOf.urlfile_id)
-  return urlfile_id_;
+inline ::google::protobuf::uint64 ArgSaveIndices::url_file_id() const {
+  // @@protoc_insertion_point(field_get:XiaoyaStore.Service.ArgSaveIndices.url_file_id)
+  return url_file_id_;
 }
-inline void ArgClearAndSaveIndicesOf::set_urlfile_id(::google::protobuf::uint64 value) {
+inline void ArgSaveIndices::set_url_file_id(::google::protobuf::uint64 value) {
   
-  urlfile_id_ = value;
-  // @@protoc_insertion_point(field_set:XiaoyaStore.Service.ArgClearAndSaveIndicesOf.urlfile_id)
+  url_file_id_ = value;
+  // @@protoc_insertion_point(field_set:XiaoyaStore.Service.ArgSaveIndices.url_file_id)
 }
 
-// uint64 old_urlfile_id = 2;
-inline void ArgClearAndSaveIndicesOf::clear_old_urlfile_id() {
-  old_urlfile_id_ = GOOGLE_ULONGLONG(0);
-}
-inline ::google::protobuf::uint64 ArgClearAndSaveIndicesOf::old_urlfile_id() const {
-  // @@protoc_insertion_point(field_get:XiaoyaStore.Service.ArgClearAndSaveIndicesOf.old_urlfile_id)
-  return old_urlfile_id_;
-}
-inline void ArgClearAndSaveIndicesOf::set_old_urlfile_id(::google::protobuf::uint64 value) {
-  
-  old_urlfile_id_ = value;
-  // @@protoc_insertion_point(field_set:XiaoyaStore.Service.ArgClearAndSaveIndicesOf.old_urlfile_id)
-}
-
-// repeated .XiaoyaStore.Model.Index indices = 3;
-inline int ArgClearAndSaveIndicesOf::indices_size() const {
+// repeated .XiaoyaStore.Model.Index indices = 2;
+inline int ArgSaveIndices::indices_size() const {
   return indices_.size();
 }
-inline const ::XiaoyaStore::Model::Index& ArgClearAndSaveIndicesOf::indices(int index) const {
-  // @@protoc_insertion_point(field_get:XiaoyaStore.Service.ArgClearAndSaveIndicesOf.indices)
+inline const ::XiaoyaStore::Model::Index& ArgSaveIndices::indices(int index) const {
+  // @@protoc_insertion_point(field_get:XiaoyaStore.Service.ArgSaveIndices.indices)
   return indices_.Get(index);
 }
-inline ::XiaoyaStore::Model::Index* ArgClearAndSaveIndicesOf::mutable_indices(int index) {
-  // @@protoc_insertion_point(field_mutable:XiaoyaStore.Service.ArgClearAndSaveIndicesOf.indices)
+inline ::XiaoyaStore::Model::Index* ArgSaveIndices::mutable_indices(int index) {
+  // @@protoc_insertion_point(field_mutable:XiaoyaStore.Service.ArgSaveIndices.indices)
   return indices_.Mutable(index);
 }
-inline ::XiaoyaStore::Model::Index* ArgClearAndSaveIndicesOf::add_indices() {
-  // @@protoc_insertion_point(field_add:XiaoyaStore.Service.ArgClearAndSaveIndicesOf.indices)
+inline ::XiaoyaStore::Model::Index* ArgSaveIndices::add_indices() {
+  // @@protoc_insertion_point(field_add:XiaoyaStore.Service.ArgSaveIndices.indices)
   return indices_.Add();
 }
 inline ::google::protobuf::RepeatedPtrField< ::XiaoyaStore::Model::Index >*
-ArgClearAndSaveIndicesOf::mutable_indices() {
-  // @@protoc_insertion_point(field_mutable_list:XiaoyaStore.Service.ArgClearAndSaveIndicesOf.indices)
+ArgSaveIndices::mutable_indices() {
+  // @@protoc_insertion_point(field_mutable_list:XiaoyaStore.Service.ArgSaveIndices.indices)
   return &indices_;
 }
 inline const ::google::protobuf::RepeatedPtrField< ::XiaoyaStore::Model::Index >&
-ArgClearAndSaveIndicesOf::indices() const {
-  // @@protoc_insertion_point(field_list:XiaoyaStore.Service.ArgClearAndSaveIndicesOf.indices)
+ArgSaveIndices::indices() const {
+  // @@protoc_insertion_point(field_list:XiaoyaStore.Service.ArgSaveIndices.indices)
   return indices_;
 }
 
@@ -3865,18 +3802,18 @@ ArgClearAndSaveIndicesOf::indices() const {
 
 // ArgIndexKey
 
-// uint64 urlfile_id = 1;
-inline void ArgIndexKey::clear_urlfile_id() {
-  urlfile_id_ = GOOGLE_ULONGLONG(0);
+// uint64 url_file_id = 1;
+inline void ArgIndexKey::clear_url_file_id() {
+  url_file_id_ = GOOGLE_ULONGLONG(0);
 }
-inline ::google::protobuf::uint64 ArgIndexKey::urlfile_id() const {
-  // @@protoc_insertion_point(field_get:XiaoyaStore.Service.ArgIndexKey.urlfile_id)
-  return urlfile_id_;
+inline ::google::protobuf::uint64 ArgIndexKey::url_file_id() const {
+  // @@protoc_insertion_point(field_get:XiaoyaStore.Service.ArgIndexKey.url_file_id)
+  return url_file_id_;
 }
-inline void ArgIndexKey::set_urlfile_id(::google::protobuf::uint64 value) {
+inline void ArgIndexKey::set_url_file_id(::google::protobuf::uint64 value) {
   
-  urlfile_id_ = value;
-  // @@protoc_insertion_point(field_set:XiaoyaStore.Service.ArgIndexKey.urlfile_id)
+  url_file_id_ = value;
+  // @@protoc_insertion_point(field_set:XiaoyaStore.Service.ArgIndexKey.url_file_id)
 }
 
 // string word = 2;

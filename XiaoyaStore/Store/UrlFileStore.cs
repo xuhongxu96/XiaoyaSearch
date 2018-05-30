@@ -25,7 +25,7 @@ namespace XiaoyaStore.Store
             var result = client.GetUrlFileById(arg);
             if (result.IsSuccessful)
             {
-                return result.Urlfile;
+                return result.UrlFile;
             }
             else
             {
@@ -42,7 +42,7 @@ namespace XiaoyaStore.Store
             var result = client.GetUrlFileByUrl(arg);
             if (result.IsSuccessful)
             {
-                return result.Urlfile;
+                return result.UrlFile;
             }
             else
             {
@@ -59,7 +59,7 @@ namespace XiaoyaStore.Store
             var result = client.GetUrlFilesByHash(arg);
             if (result.IsSuccessful)
             {
-                return result.Urlfiles;
+                return result.UrlFiles;
             }
             else
             {
@@ -71,12 +71,12 @@ namespace XiaoyaStore.Store
         {
             var arg = new ArgUrlFile
             {
-                Urlfile = urlFile
+                UrlFile = urlFile
             };
             var result = client.SaveUrlFileAndGetOldId(arg);
             if (result.IsSuccessful)
             {
-                return (result.Urlfile, result.OldUrlfileId);
+                return (result.UrlFile, result.OldUrlFileId);
             }
             else
             {
@@ -97,26 +97,13 @@ namespace XiaoyaStore.Store
             }
         }
 
-        public UrlFile GetForIndex()
+        public bool ContainsId(ulong id)
         {
-            var result = client.GetForIndex(new ArgVoid());
-            if (result.IsSuccessful)
+            var arg = new ArgId
             {
-                return result.Urlfile;
-            }
-            else
-            {
-                return null;
-            }
-        }
-
-        public bool FinishIndex(string url)
-        {
-            var arg = new ArgUrl
-            {
-                Url = url
+                Id = id
             };
-            var result = client.FinishIndex(arg);
+            var result = client.ContainsId(arg);
             return result.IsSuccessful;
         }
 

@@ -6,8 +6,8 @@ namespace XiaoyaStore.Store
 {
     public interface ILinkStore : IDisposable
     {
-        Link GetLink(ulong id);
-        IList<Link> GetLinksByUrl(string url);
-        bool SaveLinksOfUrlFile(ulong urlFileId, ulong oldUrlFileId, IEnumerable<Link> links);
+        IList<Link> GetLinks(string url);
+        bool SaveLinks(IEnumerable<Link> links);
+        bool RemoveLinks(IEnumerable<Link> links);
     }
 }

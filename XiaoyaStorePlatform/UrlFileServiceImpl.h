@@ -18,8 +18,7 @@ namespace XiaoyaStore
 			::grpc::Status GetUrlFilesByHash(::grpc::ServerContext* context, const ArgHash* request, ResultWithUrlFiles* response) override;
 			::grpc::Status SaveUrlFileAndGetOldId(::grpc::ServerContext* context, const ArgUrlFile* request, ResultWithUrlFileAndOldId* response) override;
 			::grpc::Status GetCount(::grpc::ServerContext* context, const ArgVoid* request, ResultWithCount* response) override;
-			::grpc::Status GetForIndex(::grpc::ServerContext* context, const ArgVoid* request, ResultWithUrlFile* response) override;
-			::grpc::Status FinishIndex(::grpc::ServerContext* context, const ArgUrl* request, Result* response) override;
+			::grpc::Status ContainsId(::grpc::ServerContext* context, const ArgId* request, Result* response) override;
 		};
 	}
 }

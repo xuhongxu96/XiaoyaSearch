@@ -12,23 +12,6 @@ namespace XiaoyaStore
 		class UrlFileStore
 			: private CounterBaseStore
 		{
-			/// Mutex for Index Queue
-			mutable std::shared_mutex mIndexQueueMutex;
-
-			/// Index Priority Queue (Order by UrlFile.UpdatedAt ASC)
-			mutable std::priority_queue<Model::UrlFile, std::vector<Model::UrlFile>
-				, Model::ModelCompare> mIndexQueue;
-
-			/// Load index queue from database
-			void LoadIndexQueue();
-
-			/**
-			Add UrlFile to index queue
-
-			\param	urlFile	UrlFile to be added
-			*/
-			void AddToIndexQueue(Model::UrlFile &urlFile);
-
 			/**
 			Get max id of UrlFile
 
@@ -48,9 +31,6 @@ namespace XiaoyaStore
 			static const std::string DbName; //< Database name
 
 			static const std::string MetaMaxUrlFileId; //< MaxUrlFileId meta name
-
-			static const std::string IndexQueueCFName; //< Name of index_queue ColumnFamily
-			static const size_t IndexQueueCF; //< Handle index of index_queue ColumnFamily
 
 			static const std::string UrlIndexCFName; //< Name of url_index ColumnFamily
 			static const size_t UrlIndexCF; //< Handle index of url_index ColumnFamily
@@ -110,19 +90,12 @@ namespace XiaoyaStore
 			uint64_t GetCount() const;
 
 			/**
-			Get a UrlFile for index
+			Is specific Id valid
 
-			\param	urlFile	Output UrlFile
-			\return	Return true if any UrlFile is 
+			\param	id	Id of UrlFile
+			\return	Is specific UrlFile a valid UrlFile (i.e. not replaced or removed)
 			*/
-			bool GetForIndex(Model::UrlFile &outUrlFile) const;
-
-			/**
-			Finish indexing a UrlFile
-
-			\param	urlFile	Url of indexed UrlFile
-			*/
-			void FinishIndex(const std::string &url);
+			bool ContainsId(const uint64_t id);
 
 			/// Get ColumnFamilyDescriptors
 			static const std::vector<rocksdb::ColumnFamilyDescriptor>

@@ -6,7 +6,8 @@ namespace XiaoyaStore.Store
 {
     public interface IInvertedIndexStore : IDisposable
     {
-        bool ClearAndSaveIndicesOf(ulong urlFileId, ulong oldUrlFileId, IEnumerable<Index> indices);
+        bool ClearIndices(ulong urlFileId);
+        bool SaveIndices(ulong urlFileId, IEnumerable<Index> indices);
         Index GetIndex(ulong urlFileId, string word);
     }
 }

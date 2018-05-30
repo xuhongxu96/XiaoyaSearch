@@ -12,8 +12,9 @@ namespace XiaoyaStore
 			Store::InvertedIndexStore &mStore;
 		public:
 			InvertedIndexServiceImpl(Store::InvertedIndexStore &store);
-			::grpc::Status ClearAndSaveIndicesOf(::grpc::ServerContext* context, const ArgClearAndSaveIndicesOf* request, Result* response);
-			::grpc::Status GetIndex(::grpc::ServerContext* context, const ArgIndexKey* request, ResultWithIndex* response);
+			::grpc::Status ClearIndices(::grpc::ServerContext* context, const ArgId* request, Result* response) override;
+			::grpc::Status SaveIndices(::grpc::ServerContext* context, const ArgSaveIndices* request, Result* response) override;
+			::grpc::Status GetIndex(::grpc::ServerContext* context, const ArgIndexKey* request, ResultWithIndex* response) override;
 		};
 	}
 }

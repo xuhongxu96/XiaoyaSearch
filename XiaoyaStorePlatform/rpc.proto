@@ -24,20 +24,20 @@ message ResultWithCount
 message ResultWithUrlFile
 {
 	bool is_successful = 1;
-	XiaoyaStore.Model.UrlFile urlfile = 2;
+	XiaoyaStore.Model.UrlFile url_file = 2;
 }
 
 message ResultWithUrlFiles
 {
 	bool is_successful = 1;
-	repeated XiaoyaStore.Model.UrlFile urlfiles = 2;
+	repeated XiaoyaStore.Model.UrlFile url_files = 2;
 }
 
 message ResultWithUrlFileAndOldId
 {
 	bool is_successful = 1;
-	uint64 old_urlfile_id = 2;
-	XiaoyaStore.Model.UrlFile urlfile = 3;
+	uint64 old_url_file_id = 2;
+	XiaoyaStore.Model.UrlFile url_file = 3;
 }
 
 message ResultWithPostingList
@@ -98,7 +98,7 @@ message ArgUrls
 
 message ArgUrlFile
 {
-	XiaoyaStore.Model.UrlFile urlfile = 1;
+	XiaoyaStore.Model.UrlFile url_file = 1;
 }
 
 message ArgPushBackUrl
@@ -113,23 +113,20 @@ message ArgPostingList
 	XiaoyaStore.Model.PostingList postinglist = 1;
 }
 
-message ArgSaveLinkOfUrlFile
+message ArgLinks
 {
-	uint64 urlfile_id = 1;
-	uint64 old_urlfile_id = 2;
-	repeated XiaoyaStore.Model.Link links = 3;
+	repeated XiaoyaStore.Model.Link links = 1;
 }
 
-message ArgClearAndSaveIndicesOf
+message ArgSaveIndices
 {
-	uint64 urlfile_id = 1;
-	uint64 old_urlfile_id = 2;
-	repeated XiaoyaStore.Model.Index indices = 3;
+	uint64 url_file_id = 1;
+	repeated XiaoyaStore.Model.Index indices = 2;
 }
 
 message ArgIndexKey
 {
-	uint64 urlfile_id = 1;
+	uint64 url_file_id = 1;
 	string word = 2;
 }
 
@@ -150,8 +147,7 @@ service UrlFileService
 	rpc GetUrlFilesByHash(ArgHash) returns (ResultWithUrlFiles);
 	rpc SaveUrlFileAndGetOldId(ArgUrlFile) returns (ResultWithUrlFileAndOldId);
 	rpc GetCount(ArgVoid) returns (ResultWithCount);
-	rpc GetForIndex(ArgVoid) returns (ResultWithUrlFile);
-	rpc FinishIndex(ArgUrl) returns (Result);
+	rpc ContainsId(ArgId) returns (Result);
 }
 
 service PostingListService
@@ -162,13 +158,14 @@ service PostingListService
 
 service LinkService
 {
-	rpc SaveLinksOfUrlFile(ArgSaveLinkOfUrlFile) returns (Result);
-	rpc GetLinkById(ArgId) returns (ResultWithLink);
-	rpc GetLinksByUrl(ArgUrl) returns (ResultWithLinks);
+	rpc SaveLinks(ArgLinks) returns (Result);
+	rpc RemoveLinks(ArgLinks) returns (Result);
+	rpc GetLinks(ArgUrl) returns (ResultWithLinks);
 }
 
 service InvertedIndexService
 {
-	rpc ClearAndSaveIndicesOf(ArgClearAndSaveIndicesOf) returns (Result);
+	rpc ClearIndices(ArgId) returns (Result);
+	rpc SaveIndices(ArgSaveIndices) returns (Result);
 	rpc GetIndex(ArgIndexKey) returns (ResultWithIndex);
 }

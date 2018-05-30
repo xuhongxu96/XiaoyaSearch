@@ -120,6 +120,9 @@
     <ClInclude Include="InvertedIndexServiceImpl.h">
       <Filter>Header Files\Service</Filter>
     </ClInclude>
+    <ClInclude Include="GenericSetOperator.h">
+      <Filter>Header Files\Store\MergeOperator</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">

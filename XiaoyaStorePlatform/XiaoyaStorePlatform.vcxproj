@@ -154,6 +154,7 @@
     <ClInclude Include="BaseStore.h" />
     <ClInclude Include="CounterOperator.h" />
     <ClInclude Include="DateTimeHelper.h" />
+    <ClInclude Include="GenericSetOperator.h" />
     <ClInclude Include="IdListOperator.h" />
     <ClInclude Include="InvertedIndexServiceImpl.h" />
     <ClInclude Include="InvertedIndexStore.h" />

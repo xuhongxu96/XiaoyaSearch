@@ -24,7 +24,7 @@ TEST(InvertedIndexStoreTest, TestSaveNew)
 
 	{
 		InvertedIndexStore store(config);
-		store.ClearAndSaveIndicesOf(1, 0, indices);
+		store.SaveIndices(1, indices);
 	}
 
 	{
@@ -48,30 +48,11 @@ TEST(InvertedIndexStoreTest, TestSaveNew)
 		ASSERT_EQ(1, items.count("d"));
 		ASSERT_EQ(0, items.count("e"));
 
-		{
-			std::string data;
-			IndexKey indexKey;
-			indexKey.set_urlfile_id(1);
-			indexKey.set_word("d");
-			db->Get(ReadOptions(), handles[InvertedIndexStore::IndexKeyCF].get(),
-				SerializeHelper::Serialize(indexKey), &data);
-			ASSERT_EQ(4, SerializeHelper::DeserializeUInt64(data));
-		}
-
-		{
-			std::string data;
-			db->Get(ReadOptions(), handles[InvertedIndexStore::UrlFileIdIndexCF].get(),
-				SerializeHelper::SerializeUInt64(1), &data);
-			auto idList = SerializeHelper::Deserialize<IdList>(data);
-			ASSERT_EQ(4, idList.ids_size());
-
-			std::set<uint64_t> idSet(idList.ids().begin(), idList.ids().end());
-
-			for (uint64_t i = 1; i <= 4; ++i)
-			{
-				ASSERT_EQ(1, idSet.count(i));
-			}
-		}
+		std::string data;
+		db->Get(ReadOptions(), handles[InvertedIndexStore::UrlFileIdIndexCF].get(),
+			SerializeHelper::SerializeUInt64(1), &data);
+		auto keys = SerializeHelper::Deserialize<IndexKeys>(data);
+		ASSERT_EQ(4, keys.items_size());
 	}
 }
 
@@ -99,8 +80,9 @@ TEST(InvertedIndexStoreTest, TestSaveUpdatedIndices)
 
 	{
 		InvertedIndexStore store(config);
-		store.ClearAndSaveIndicesOf(1, 0, indices1);
-		store.ClearAndSaveIndicesOf(2, 1, indices2);
+		store.SaveIndices(1, indices1);
+		store.ClearIndices(1);
+		store.SaveIndices(2, indices2);
 	}
 
 	{
@@ -129,22 +111,6 @@ TEST(InvertedIndexStoreTest, TestSaveUpdatedIndices)
 
 		{
 			std::string data;
-			IndexKey indexKey;
-			indexKey.set_urlfile_id(1);
-			indexKey.set_word("a");
-			auto status = db->Get(ReadOptions(), handles[InvertedIndexStore::IndexKeyCF].get(),
-				SerializeHelper::Serialize(indexKey), &data);
-			ASSERT_TRUE(status.IsNotFound());
-
-			indexKey.set_urlfile_id(2);
-			indexKey.set_word("e");
-			db->Get(ReadOptions(), handles[InvertedIndexStore::IndexKeyCF].get(),
-				SerializeHelper::Serialize(indexKey), &data);
-			ASSERT_EQ(5, SerializeHelper::DeserializeUInt64(data));
-		}
-
-		{
-			std::string data;
 
 			auto status = db->Get(ReadOptions(), handles[InvertedIndexStore::UrlFileIdIndexCF].get(),
 				SerializeHelper::SerializeUInt64(1), &data);
@@ -154,14 +120,8 @@ TEST(InvertedIndexStoreTest, TestSaveUpdatedIndices)
 				SerializeHelper::SerializeUInt64(2), &data);
 
 			auto idList = SerializeHelper::Deserialize<IdList>(data);
-			ASSERT_EQ(4, idList.ids_size());
-
-			std::set<uint64_t> idSet(idList.ids().begin(), idList.ids().end());
-
-			for (uint64_t i = 5; i <= 8; ++i)
-			{
-				ASSERT_EQ(1, idSet.count(i));
-			}
+			auto keys = SerializeHelper::Deserialize<IndexKeys>(data);
+			ASSERT_EQ(4, keys.items_size());
 		}
 	}
 }
@@ -182,12 +142,10 @@ TEST(InvertedIndexStoreTest, TestSaveNewAndGetIndex)
 
 	{
 		InvertedIndexStore store(config);
-		store.ClearAndSaveIndicesOf(1, 0, indices);
+		store.SaveIndices(1, indices);
 		Index result;
 		ASSERT_TRUE(store.GetIndex(1, "a", result));
-		ASSERT_EQ(1, result.index_id());
 		ASSERT_TRUE(store.GetIndex(1, "c", result));
-		ASSERT_EQ(3, result.index_id());
 		ASSERT_FALSE(store.GetIndex(1, "e", result));
 	}
 }

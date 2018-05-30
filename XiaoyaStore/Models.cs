@@ -24,39 +24,44 @@ namespace XiaoyaStore.Model {
     static ModelsReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cgxtb2RlbHMucHJvdG8SEVhpYW95YVN0b3JlLk1vZGVsIpgBCg9VcmxGcm9u",
+            "Cgxtb2RlbHMucHJvdG8SEVhpYW95YVN0b3JlLk1vZGVsIpkBCg9VcmxGcm9u",
             "dGllckl0ZW0SCwoDdXJsGAEgASgJEhQKDHBsYW5uZWRfdGltZRgCIAEoBBIQ",
-            "Cghwcmlvcml0eRgDIAEoBBIUCgxmYWlsZWRfdGltZXMYBCABKA0SEgoKdXJs",
-            "ZmlsZV9pZBgFIAEoBBISCgp1cGRhdGVkX2F0GAYgASgEEhIKCmNyZWF0ZWRf",
-            "YXQYByABKAQicQoLUG9zdGluZ0xpc3QSDAoEd29yZBgBIAEoCRIWCg53b3Jk",
-            "X2ZyZXF1ZW5jeRgCIAEoBBIaChJkb2N1bWVudF9mcmVxdWVuY3kYAyABKAQS",
-            "EAoIcG9zdGluZ3MYBCADKAQSDgoGaXNfYWRkGAUgASgIIiwKCEluZGV4S2V5",
-            "EhIKCnVybGZpbGVfaWQYASABKAQSDAoEd29yZBgCIAEoCSLXAQoFSW5kZXgS",
-            "EAoIaW5kZXhfaWQYASABKAQSKAoDa2V5GAIgASgLMhsuWGlhb3lhU3RvcmUu",
-            "TW9kZWwuSW5kZXhLZXkSFgoOd29yZF9mcmVxdWVuY3kYAyABKA0SDgoGd2Vp",
-            "Z2h0GAQgASgBEhsKE29jY3VyZW5jZXNfaW5fdGl0bGUYBSABKA0SGwoTb2Nj",
-            "dXJlbmNlc19pbl9saW5rcxgGIAEoDRIdChVvY2N1cmVuY2VzX2luX2hlYWRl",
-            "cnMYByABKA0SEQoJcG9zaXRpb25zGAggAygNIvwCCgdVcmxGaWxlEhIKCnVy",
-            "bGZpbGVfaWQYASABKAQSCwoDdXJsGAIgASgJEg0KBXRpdGxlGAMgASgJEhEK",
-            "CWZpbGVfcGF0aBgEIAEoCRIRCglmaWxlX2hhc2gYBSABKAkSDwoHY29udGVu",
-            "dBgGIAEoCRIUCgx0ZXh0X2NvbnRlbnQYByABKAkSDwoHY2hhcnNldBgIIAEo",
-            "CRIRCgltaW1lX3R5cGUYCSABKAkSEQoJcGFnZV9yYW5rGAogASgBEhUKDWlu",
-            "X2xpbmtfY291bnQYCyABKA0SHAoUaW5fbGlua190b3RhbF9sZW5ndGgYDCAB",
-            "KA0SFAoMaGVhZGVyX2NvdW50GA0gASgNEhsKE2hlYWRlcl90b3RhbF9sZW5n",
-            "dGgYDiABKA0SFAoMcHVibGlzaF9kYXRlGA8gASgEEhcKD3VwZGF0ZV9pbnRl",
-            "cnZhbBgQIAEoBBISCgp1cGRhdGVkX2F0GBEgASgEEhIKCmNyZWF0ZWRfYXQY",
-            "EiABKAQiRgoETGluaxIPCgdsaW5rX2lkGAEgASgEEhIKCnVybGZpbGVfaWQY",
-            "AiABKAQSCwoDdXJsGAMgASgJEgwKBHRleHQYBCABKAkiJQoGSWRMaXN0EgsK",
-            "A2lkcxgBIAMoBBIOCgZpc19hZGQYAiABKAhiBnByb3RvMw=="));
+            "Cghwcmlvcml0eRgDIAEoBBIUCgxmYWlsZWRfdGltZXMYBCABKA0SEwoLdXJs",
+            "X2ZpbGVfaWQYBSABKAQSEgoKdXBkYXRlZF9hdBgGIAEoBBISCgpjcmVhdGVk",
+            "X2F0GAcgASgEInEKC1Bvc3RpbmdMaXN0EgwKBHdvcmQYASABKAkSFgoOd29y",
+            "ZF9mcmVxdWVuY3kYAiABKAQSGgoSZG9jdW1lbnRfZnJlcXVlbmN5GAMgASgE",
+            "EhAKCHBvc3RpbmdzGAQgAygEEg4KBmlzX2FkZBgFIAEoCCItCghJbmRleEtl",
+            "eRITCgt1cmxfZmlsZV9pZBgBIAEoBBIMCgR3b3JkGAIgASgJIjcKCUluZGV4",
+            "S2V5cxIqCgVpdGVtcxgBIAMoCzIbLlhpYW95YVN0b3JlLk1vZGVsLkluZGV4",
+            "S2V5ItIBCgVJbmRleBIoCgNrZXkYASABKAsyGy5YaWFveWFTdG9yZS5Nb2Rl",
+            "bC5JbmRleEtleRILCgN1cmwYAiABKAkSFgoOd29yZF9mcmVxdWVuY3kYAyAB",
+            "KA0SDgoGd2VpZ2h0GAQgASgBEhsKE29jY3VyZW5jZXNfaW5fdGl0bGUYBSAB",
+            "KA0SGwoTb2NjdXJlbmNlc19pbl9saW5rcxgGIAEoDRIdChVvY2N1cmVuY2Vz",
+            "X2luX2hlYWRlcnMYByABKA0SEQoJcG9zaXRpb25zGAggAygNIv0CCgdVcmxG",
+            "aWxlEhMKC3VybF9maWxlX2lkGAEgASgEEgsKA3VybBgCIAEoCRINCgV0aXRs",
+            "ZRgDIAEoCRIRCglmaWxlX3BhdGgYBCABKAkSEQoJZmlsZV9oYXNoGAUgASgJ",
+            "Eg8KB2NvbnRlbnQYBiABKAkSFAoMdGV4dF9jb250ZW50GAcgASgJEg8KB2No",
+            "YXJzZXQYCCABKAkSEQoJbWltZV90eXBlGAkgASgJEhEKCXBhZ2VfcmFuaxgK",
+            "IAEoARIVCg1pbl9saW5rX2NvdW50GAsgASgNEhwKFGluX2xpbmtfdG90YWxf",
+            "bGVuZ3RoGAwgASgNEhQKDGhlYWRlcl9jb3VudBgNIAEoDRIbChNoZWFkZXJf",
+            "dG90YWxfbGVuZ3RoGA4gASgNEhQKDHB1Ymxpc2hfZGF0ZRgPIAEoBBIXCg91",
+            "cGRhdGVfaW50ZXJ2YWwYECABKAQSEgoKdXBkYXRlZF9hdBgRIAEoBBISCgpj",
+            "cmVhdGVkX2F0GBIgASgEIjYKBExpbmsSEwoLdXJsX2ZpbGVfaWQYAiABKAQS",
+            "CwoDdXJsGAMgASgJEgwKBHRleHQYBCABKAkiPwoFTGlua3MSJgoFaXRlbXMY",
+            "ASADKAsyFy5YaWFveWFTdG9yZS5Nb2RlbC5MaW5rEg4KBmlzX2FkZBgCIAEo",
+            "CCIlCgZJZExpc3QSCwoDaWRzGAEgAygEEg4KBmlzX2FkZBgCIAEoCGIGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::XiaoyaStore.Model.UrlFrontierItem), global::XiaoyaStore.Model.UrlFrontierItem.Parser, new[]{ "Url", "PlannedTime", "Priority", "FailedTimes", "UrlfileId", "UpdatedAt", "CreatedAt" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::XiaoyaStore.Model.UrlFrontierItem), global::XiaoyaStore.Model.UrlFrontierItem.Parser, new[]{ "Url", "PlannedTime", "Priority", "FailedTimes", "UrlFileId", "UpdatedAt", "CreatedAt" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::XiaoyaStore.Model.PostingList), global::XiaoyaStore.Model.PostingList.Parser, new[]{ "Word", "WordFrequency", "DocumentFrequency", "Postings", "IsAdd" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::XiaoyaStore.Model.IndexKey), global::XiaoyaStore.Model.IndexKey.Parser, new[]{ "UrlfileId", "Word" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::XiaoyaStore.Model.Index), global::XiaoyaStore.Model.Index.Parser, new[]{ "IndexId", "Key", "WordFrequency", "Weight", "OccurencesInTitle", "OccurencesInLinks", "OccurencesInHeaders", "Positions" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::XiaoyaStore.Model.UrlFile), global::XiaoyaStore.Model.UrlFile.Parser, new[]{ "UrlfileId", "Url", "Title", "FilePath", "FileHash", "Content", "TextContent", "Charset", "MimeType", "PageRank", "InLinkCount", "InLinkTotalLength", "HeaderCount", "HeaderTotalLength", "PublishDate", "UpdateInterval", "UpdatedAt", "CreatedAt" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::XiaoyaStore.Model.Link), global::XiaoyaStore.Model.Link.Parser, new[]{ "LinkId", "UrlfileId", "Url", "Text" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::XiaoyaStore.Model.IndexKey), global::XiaoyaStore.Model.IndexKey.Parser, new[]{ "UrlFileId", "Word" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::XiaoyaStore.Model.IndexKeys), global::XiaoyaStore.Model.IndexKeys.Parser, new[]{ "Items" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::XiaoyaStore.Model.Index), global::XiaoyaStore.Model.Index.Parser, new[]{ "Key", "Url", "WordFrequency", "Weight", "OccurencesInTitle", "OccurencesInLinks", "OccurencesInHeaders", "Positions" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::XiaoyaStore.Model.UrlFile), global::XiaoyaStore.Model.UrlFile.Parser, new[]{ "UrlFileId", "Url", "Title", "FilePath", "FileHash", "Content", "TextContent", "Charset", "MimeType", "PageRank", "InLinkCount", "InLinkTotalLength", "HeaderCount", "HeaderTotalLength", "PublishDate", "UpdateInterval", "UpdatedAt", "CreatedAt" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::XiaoyaStore.Model.Link), global::XiaoyaStore.Model.Link.Parser, new[]{ "UrlFileId", "Url", "Text" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::XiaoyaStore.Model.Links), global::XiaoyaStore.Model.Links.Parser, new[]{ "Items", "IsAdd" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::XiaoyaStore.Model.IdList), global::XiaoyaStore.Model.IdList.Parser, new[]{ "Ids", "IsAdd" }, null, null, null)
           }));
     }
@@ -93,7 +98,7 @@ namespace XiaoyaStore.Model {
       plannedTime_ = other.plannedTime_;
       priority_ = other.priority_;
       failedTimes_ = other.failedTimes_;
-      urlfileId_ = other.urlfileId_;
+      urlFileId_ = other.urlFileId_;
       updatedAt_ = other.updatedAt_;
       createdAt_ = other.createdAt_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -148,14 +153,14 @@ namespace XiaoyaStore.Model {
       }
     }
 
-    /// <summary>Field number for the "urlfile_id" field.</summary>
-    public const int UrlfileIdFieldNumber = 5;
-    private ulong urlfileId_;
+    /// <summary>Field number for the "url_file_id" field.</summary>
+    public const int UrlFileIdFieldNumber = 5;
+    private ulong urlFileId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ulong UrlfileId {
-      get { return urlfileId_; }
+    public ulong UrlFileId {
+      get { return urlFileId_; }
       set {
-        urlfileId_ = value;
+        urlFileId_ = value;
       }
     }
 
@@ -198,7 +203,7 @@ namespace XiaoyaStore.Model {
       if (PlannedTime != other.PlannedTime) return false;
       if (Priority != other.Priority) return false;
       if (FailedTimes != other.FailedTimes) return false;
-      if (UrlfileId != other.UrlfileId) return false;
+      if (UrlFileId != other.UrlFileId) return false;
       if (UpdatedAt != other.UpdatedAt) return false;
       if (CreatedAt != other.CreatedAt) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -211,7 +216,7 @@ namespace XiaoyaStore.Model {
       if (PlannedTime != 0UL) hash ^= PlannedTime.GetHashCode();
       if (Priority != 0UL) hash ^= Priority.GetHashCode();
       if (FailedTimes != 0) hash ^= FailedTimes.GetHashCode();
-      if (UrlfileId != 0UL) hash ^= UrlfileId.GetHashCode();
+      if (UrlFileId != 0UL) hash ^= UrlFileId.GetHashCode();
       if (UpdatedAt != 0UL) hash ^= UpdatedAt.GetHashCode();
       if (CreatedAt != 0UL) hash ^= CreatedAt.GetHashCode();
       if (_unknownFields != null) {
@@ -243,9 +248,9 @@ namespace XiaoyaStore.Model {
         output.WriteRawTag(32);
         output.WriteUInt32(FailedTimes);
       }
-      if (UrlfileId != 0UL) {
+      if (UrlFileId != 0UL) {
         output.WriteRawTag(40);
-        output.WriteUInt64(UrlfileId);
+        output.WriteUInt64(UrlFileId);
       }
       if (UpdatedAt != 0UL) {
         output.WriteRawTag(48);
@@ -275,8 +280,8 @@ namespace XiaoyaStore.Model {
       if (FailedTimes != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FailedTimes);
       }
-      if (UrlfileId != 0UL) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(UrlfileId);
+      if (UrlFileId != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(UrlFileId);
       }
       if (UpdatedAt != 0UL) {
         size += 1 + pb::CodedOutputStream.ComputeUInt64Size(UpdatedAt);
@@ -307,8 +312,8 @@ namespace XiaoyaStore.Model {
       if (other.FailedTimes != 0) {
         FailedTimes = other.FailedTimes;
       }
-      if (other.UrlfileId != 0UL) {
-        UrlfileId = other.UrlfileId;
+      if (other.UrlFileId != 0UL) {
+        UrlFileId = other.UrlFileId;
       }
       if (other.UpdatedAt != 0UL) {
         UpdatedAt = other.UpdatedAt;
@@ -344,7 +349,7 @@ namespace XiaoyaStore.Model {
             break;
           }
           case 40: {
-            UrlfileId = input.ReadUInt64();
+            UrlFileId = input.ReadUInt64();
             break;
           }
           case 48: {
@@ -620,7 +625,7 @@ namespace XiaoyaStore.Model {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public IndexKey(IndexKey other) : this() {
-      urlfileId_ = other.urlfileId_;
+      urlFileId_ = other.urlFileId_;
       word_ = other.word_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -630,14 +635,14 @@ namespace XiaoyaStore.Model {
       return new IndexKey(this);
     }
 
-    /// <summary>Field number for the "urlfile_id" field.</summary>
-    public const int UrlfileIdFieldNumber = 1;
-    private ulong urlfileId_;
+    /// <summary>Field number for the "url_file_id" field.</summary>
+    public const int UrlFileIdFieldNumber = 1;
+    private ulong urlFileId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ulong UrlfileId {
-      get { return urlfileId_; }
+    public ulong UrlFileId {
+      get { return urlFileId_; }
       set {
-        urlfileId_ = value;
+        urlFileId_ = value;
       }
     }
 
@@ -665,7 +670,7 @@ namespace XiaoyaStore.Model {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (UrlfileId != other.UrlfileId) return false;
+      if (UrlFileId != other.UrlFileId) return false;
       if (Word != other.Word) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -673,7 +678,7 @@ namespace XiaoyaStore.Model {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (UrlfileId != 0UL) hash ^= UrlfileId.GetHashCode();
+      if (UrlFileId != 0UL) hash ^= UrlFileId.GetHashCode();
       if (Word.Length != 0) hash ^= Word.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -688,9 +693,9 @@ namespace XiaoyaStore.Model {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (UrlfileId != 0UL) {
+      if (UrlFileId != 0UL) {
         output.WriteRawTag(8);
-        output.WriteUInt64(UrlfileId);
+        output.WriteUInt64(UrlFileId);
       }
       if (Word.Length != 0) {
         output.WriteRawTag(18);
@@ -704,8 +709,8 @@ namespace XiaoyaStore.Model {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (UrlfileId != 0UL) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(UrlfileId);
+      if (UrlFileId != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(UrlFileId);
       }
       if (Word.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Word);
@@ -721,8 +726,8 @@ namespace XiaoyaStore.Model {
       if (other == null) {
         return;
       }
-      if (other.UrlfileId != 0UL) {
-        UrlfileId = other.UrlfileId;
+      if (other.UrlFileId != 0UL) {
+        UrlFileId = other.UrlFileId;
       }
       if (other.Word.Length != 0) {
         Word = other.Word;
@@ -739,11 +744,132 @@ namespace XiaoyaStore.Model {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            UrlfileId = input.ReadUInt64();
+            UrlFileId = input.ReadUInt64();
             break;
           }
           case 18: {
             Word = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class IndexKeys : pb::IMessage<IndexKeys> {
+    private static readonly pb::MessageParser<IndexKeys> _parser = new pb::MessageParser<IndexKeys>(() => new IndexKeys());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<IndexKeys> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::XiaoyaStore.Model.ModelsReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public IndexKeys() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public IndexKeys(IndexKeys other) : this() {
+      items_ = other.items_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public IndexKeys Clone() {
+      return new IndexKeys(this);
+    }
+
+    /// <summary>Field number for the "items" field.</summary>
+    public const int ItemsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::XiaoyaStore.Model.IndexKey> _repeated_items_codec
+        = pb::FieldCodec.ForMessage(10, global::XiaoyaStore.Model.IndexKey.Parser);
+    private readonly pbc::RepeatedField<global::XiaoyaStore.Model.IndexKey> items_ = new pbc::RepeatedField<global::XiaoyaStore.Model.IndexKey>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::XiaoyaStore.Model.IndexKey> Items {
+      get { return items_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as IndexKeys);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(IndexKeys other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!items_.Equals(other.items_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= items_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      items_.WriteTo(output, _repeated_items_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += items_.CalculateSize(_repeated_items_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(IndexKeys other) {
+      if (other == null) {
+        return;
+      }
+      items_.Add(other.items_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            items_.AddEntriesFrom(input, _repeated_items_codec);
             break;
           }
         }
@@ -760,7 +886,7 @@ namespace XiaoyaStore.Model {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::XiaoyaStore.Model.ModelsReflection.Descriptor.MessageTypes[3]; }
+      get { return global::XiaoyaStore.Model.ModelsReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -777,8 +903,8 @@ namespace XiaoyaStore.Model {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Index(Index other) : this() {
-      indexId_ = other.indexId_;
       Key = other.key_ != null ? other.Key.Clone() : null;
+      url_ = other.url_;
       wordFrequency_ = other.wordFrequency_;
       weight_ = other.weight_;
       occurencesInTitle_ = other.occurencesInTitle_;
@@ -793,25 +919,25 @@ namespace XiaoyaStore.Model {
       return new Index(this);
     }
 
-    /// <summary>Field number for the "index_id" field.</summary>
-    public const int IndexIdFieldNumber = 1;
-    private ulong indexId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ulong IndexId {
-      get { return indexId_; }
-      set {
-        indexId_ = value;
-      }
-    }
-
     /// <summary>Field number for the "key" field.</summary>
-    public const int KeyFieldNumber = 2;
+    public const int KeyFieldNumber = 1;
     private global::XiaoyaStore.Model.IndexKey key_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::XiaoyaStore.Model.IndexKey Key {
       get { return key_; }
       set {
         key_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "url" field.</summary>
+    public const int UrlFieldNumber = 2;
+    private string url_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Url {
+      get { return url_; }
+      set {
+        url_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -893,8 +1019,8 @@ namespace XiaoyaStore.Model {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (IndexId != other.IndexId) return false;
       if (!object.Equals(Key, other.Key)) return false;
+      if (Url != other.Url) return false;
       if (WordFrequency != other.WordFrequency) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Weight, other.Weight)) return false;
       if (OccurencesInTitle != other.OccurencesInTitle) return false;
@@ -907,8 +1033,8 @@ namespace XiaoyaStore.Model {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (IndexId != 0UL) hash ^= IndexId.GetHashCode();
       if (key_ != null) hash ^= Key.GetHashCode();
+      if (Url.Length != 0) hash ^= Url.GetHashCode();
       if (WordFrequency != 0) hash ^= WordFrequency.GetHashCode();
       if (Weight != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Weight);
       if (OccurencesInTitle != 0) hash ^= OccurencesInTitle.GetHashCode();
@@ -928,13 +1054,13 @@ namespace XiaoyaStore.Model {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (IndexId != 0UL) {
-        output.WriteRawTag(8);
-        output.WriteUInt64(IndexId);
-      }
       if (key_ != null) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(10);
         output.WriteMessage(Key);
+      }
+      if (Url.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Url);
       }
       if (WordFrequency != 0) {
         output.WriteRawTag(24);
@@ -965,11 +1091,11 @@ namespace XiaoyaStore.Model {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (IndexId != 0UL) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(IndexId);
-      }
       if (key_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Key);
+      }
+      if (Url.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Url);
       }
       if (WordFrequency != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(WordFrequency);
@@ -998,14 +1124,14 @@ namespace XiaoyaStore.Model {
       if (other == null) {
         return;
       }
-      if (other.IndexId != 0UL) {
-        IndexId = other.IndexId;
-      }
       if (other.key_ != null) {
         if (key_ == null) {
           key_ = new global::XiaoyaStore.Model.IndexKey();
         }
         Key.MergeFrom(other.Key);
+      }
+      if (other.Url.Length != 0) {
+        Url = other.Url;
       }
       if (other.WordFrequency != 0) {
         WordFrequency = other.WordFrequency;
@@ -1034,15 +1160,15 @@ namespace XiaoyaStore.Model {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            IndexId = input.ReadUInt64();
-            break;
-          }
-          case 18: {
+          case 10: {
             if (key_ == null) {
               key_ = new global::XiaoyaStore.Model.IndexKey();
             }
             input.ReadMessage(key_);
+            break;
+          }
+          case 18: {
+            Url = input.ReadString();
             break;
           }
           case 24: {
@@ -1084,7 +1210,7 @@ namespace XiaoyaStore.Model {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::XiaoyaStore.Model.ModelsReflection.Descriptor.MessageTypes[4]; }
+      get { return global::XiaoyaStore.Model.ModelsReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1101,7 +1227,7 @@ namespace XiaoyaStore.Model {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public UrlFile(UrlFile other) : this() {
-      urlfileId_ = other.urlfileId_;
+      urlFileId_ = other.urlFileId_;
       url_ = other.url_;
       title_ = other.title_;
       filePath_ = other.filePath_;
@@ -1127,14 +1253,14 @@ namespace XiaoyaStore.Model {
       return new UrlFile(this);
     }
 
-    /// <summary>Field number for the "urlfile_id" field.</summary>
-    public const int UrlfileIdFieldNumber = 1;
-    private ulong urlfileId_;
+    /// <summary>Field number for the "url_file_id" field.</summary>
+    public const int UrlFileIdFieldNumber = 1;
+    private ulong urlFileId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ulong UrlfileId {
-      get { return urlfileId_; }
+    public ulong UrlFileId {
+      get { return urlFileId_; }
       set {
-        urlfileId_ = value;
+        urlFileId_ = value;
       }
     }
 
@@ -1338,7 +1464,7 @@ namespace XiaoyaStore.Model {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (UrlfileId != other.UrlfileId) return false;
+      if (UrlFileId != other.UrlFileId) return false;
       if (Url != other.Url) return false;
       if (Title != other.Title) return false;
       if (FilePath != other.FilePath) return false;
@@ -1362,7 +1488,7 @@ namespace XiaoyaStore.Model {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (UrlfileId != 0UL) hash ^= UrlfileId.GetHashCode();
+      if (UrlFileId != 0UL) hash ^= UrlFileId.GetHashCode();
       if (Url.Length != 0) hash ^= Url.GetHashCode();
       if (Title.Length != 0) hash ^= Title.GetHashCode();
       if (FilePath.Length != 0) hash ^= FilePath.GetHashCode();
@@ -1393,9 +1519,9 @@ namespace XiaoyaStore.Model {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (UrlfileId != 0UL) {
+      if (UrlFileId != 0UL) {
         output.WriteRawTag(8);
-        output.WriteUInt64(UrlfileId);
+        output.WriteUInt64(UrlFileId);
       }
       if (Url.Length != 0) {
         output.WriteRawTag(18);
@@ -1473,8 +1599,8 @@ namespace XiaoyaStore.Model {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (UrlfileId != 0UL) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(UrlfileId);
+      if (UrlFileId != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(UrlFileId);
       }
       if (Url.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Url);
@@ -1538,8 +1664,8 @@ namespace XiaoyaStore.Model {
       if (other == null) {
         return;
       }
-      if (other.UrlfileId != 0UL) {
-        UrlfileId = other.UrlfileId;
+      if (other.UrlFileId != 0UL) {
+        UrlFileId = other.UrlFileId;
       }
       if (other.Url.Length != 0) {
         Url = other.Url;
@@ -1604,7 +1730,7 @@ namespace XiaoyaStore.Model {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            UrlfileId = input.ReadUInt64();
+            UrlFileId = input.ReadUInt64();
             break;
           }
           case 18: {
@@ -1689,7 +1815,7 @@ namespace XiaoyaStore.Model {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::XiaoyaStore.Model.ModelsReflection.Descriptor.MessageTypes[5]; }
+      get { return global::XiaoyaStore.Model.ModelsReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1706,8 +1832,7 @@ namespace XiaoyaStore.Model {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Link(Link other) : this() {
-      linkId_ = other.linkId_;
-      urlfileId_ = other.urlfileId_;
+      urlFileId_ = other.urlFileId_;
       url_ = other.url_;
       text_ = other.text_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -1718,25 +1843,14 @@ namespace XiaoyaStore.Model {
       return new Link(this);
     }
 
-    /// <summary>Field number for the "link_id" field.</summary>
-    public const int LinkIdFieldNumber = 1;
-    private ulong linkId_;
+    /// <summary>Field number for the "url_file_id" field.</summary>
+    public const int UrlFileIdFieldNumber = 2;
+    private ulong urlFileId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ulong LinkId {
-      get { return linkId_; }
+    public ulong UrlFileId {
+      get { return urlFileId_; }
       set {
-        linkId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "urlfile_id" field.</summary>
-    public const int UrlfileIdFieldNumber = 2;
-    private ulong urlfileId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ulong UrlfileId {
-      get { return urlfileId_; }
-      set {
-        urlfileId_ = value;
+        urlFileId_ = value;
       }
     }
 
@@ -1775,8 +1889,7 @@ namespace XiaoyaStore.Model {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (LinkId != other.LinkId) return false;
-      if (UrlfileId != other.UrlfileId) return false;
+      if (UrlFileId != other.UrlFileId) return false;
       if (Url != other.Url) return false;
       if (Text != other.Text) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -1785,8 +1898,7 @@ namespace XiaoyaStore.Model {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (LinkId != 0UL) hash ^= LinkId.GetHashCode();
-      if (UrlfileId != 0UL) hash ^= UrlfileId.GetHashCode();
+      if (UrlFileId != 0UL) hash ^= UrlFileId.GetHashCode();
       if (Url.Length != 0) hash ^= Url.GetHashCode();
       if (Text.Length != 0) hash ^= Text.GetHashCode();
       if (_unknownFields != null) {
@@ -1802,13 +1914,9 @@ namespace XiaoyaStore.Model {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (LinkId != 0UL) {
-        output.WriteRawTag(8);
-        output.WriteUInt64(LinkId);
-      }
-      if (UrlfileId != 0UL) {
+      if (UrlFileId != 0UL) {
         output.WriteRawTag(16);
-        output.WriteUInt64(UrlfileId);
+        output.WriteUInt64(UrlFileId);
       }
       if (Url.Length != 0) {
         output.WriteRawTag(26);
@@ -1826,11 +1934,8 @@ namespace XiaoyaStore.Model {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (LinkId != 0UL) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(LinkId);
-      }
-      if (UrlfileId != 0UL) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(UrlfileId);
+      if (UrlFileId != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(UrlFileId);
       }
       if (Url.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Url);
@@ -1849,11 +1954,8 @@ namespace XiaoyaStore.Model {
       if (other == null) {
         return;
       }
-      if (other.LinkId != 0UL) {
-        LinkId = other.LinkId;
-      }
-      if (other.UrlfileId != 0UL) {
-        UrlfileId = other.UrlfileId;
+      if (other.UrlFileId != 0UL) {
+        UrlFileId = other.UrlFileId;
       }
       if (other.Url.Length != 0) {
         Url = other.Url;
@@ -1872,12 +1974,8 @@ namespace XiaoyaStore.Model {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            LinkId = input.ReadUInt64();
-            break;
-          }
           case 16: {
-            UrlfileId = input.ReadUInt64();
+            UrlFileId = input.ReadUInt64();
             break;
           }
           case 26: {
@@ -1894,6 +1992,155 @@ namespace XiaoyaStore.Model {
 
   }
 
+  public sealed partial class Links : pb::IMessage<Links> {
+    private static readonly pb::MessageParser<Links> _parser = new pb::MessageParser<Links>(() => new Links());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<Links> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::XiaoyaStore.Model.ModelsReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Links() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Links(Links other) : this() {
+      items_ = other.items_.Clone();
+      isAdd_ = other.isAdd_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Links Clone() {
+      return new Links(this);
+    }
+
+    /// <summary>Field number for the "items" field.</summary>
+    public const int ItemsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::XiaoyaStore.Model.Link> _repeated_items_codec
+        = pb::FieldCodec.ForMessage(10, global::XiaoyaStore.Model.Link.Parser);
+    private readonly pbc::RepeatedField<global::XiaoyaStore.Model.Link> items_ = new pbc::RepeatedField<global::XiaoyaStore.Model.Link>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::XiaoyaStore.Model.Link> Items {
+      get { return items_; }
+    }
+
+    /// <summary>Field number for the "is_add" field.</summary>
+    public const int IsAddFieldNumber = 2;
+    private bool isAdd_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool IsAdd {
+      get { return isAdd_; }
+      set {
+        isAdd_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as Links);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(Links other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!items_.Equals(other.items_)) return false;
+      if (IsAdd != other.IsAdd) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= items_.GetHashCode();
+      if (IsAdd != false) hash ^= IsAdd.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      items_.WriteTo(output, _repeated_items_codec);
+      if (IsAdd != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(IsAdd);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += items_.CalculateSize(_repeated_items_codec);
+      if (IsAdd != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(Links other) {
+      if (other == null) {
+        return;
+      }
+      items_.Add(other.items_);
+      if (other.IsAdd != false) {
+        IsAdd = other.IsAdd;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            items_.AddEntriesFrom(input, _repeated_items_codec);
+            break;
+          }
+          case 16: {
+            IsAdd = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
   public sealed partial class IdList : pb::IMessage<IdList> {
     private static readonly pb::MessageParser<IdList> _parser = new pb::MessageParser<IdList>(() => new IdList());
     private pb::UnknownFieldSet _unknownFields;
@@ -1902,7 +2149,7 @@ namespace XiaoyaStore.Model {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::XiaoyaStore.Model.ModelsReflection.Descriptor.MessageTypes[6]; }
+      get { return global::XiaoyaStore.Model.ModelsReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
