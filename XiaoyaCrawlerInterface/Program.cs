@@ -26,6 +26,8 @@ namespace XiaoyaCrawlerInterface
                 UrlFileStore = new UrlFileStore(),
                 UrlFrontierItemStore = new UrlFrontierItemStore(),
                 LinkStore = new LinkStore(),
+                PostingListStore = new PostingListStore(),
+                InvertedIndexStore = new InvertedIndexStore(),
                 FetchDirectory = arguments.FetchDir,
                 LogDirectory = arguments.LogDir,
                 MaxFetchingConcurrency = int.Parse(arguments.ThreadCount),
