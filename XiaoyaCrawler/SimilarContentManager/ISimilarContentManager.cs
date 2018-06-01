@@ -13,6 +13,6 @@ namespace XiaoyaCrawler.SimilarContentManager
     /// </summary>
     public interface ISimilarContentManager
     {
-        (string Url, string Content) JudgeContent(FetchedFile fetchedFile, string textContent);
+        (string Url, string Content) JudgeContent(FetchedFile fetchedFile, string content);
     }
 }

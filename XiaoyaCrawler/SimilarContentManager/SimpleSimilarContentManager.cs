@@ -15,7 +15,6 @@ namespace XiaoyaCrawler.SimilarContentManager
 {
     public class SimpleSimilarContentManager : ISimilarContentManager
     {
-
         protected CrawlerConfig mConfig;
         protected RuntimeLogger mLogger;
 
@@ -25,7 +24,7 @@ namespace XiaoyaCrawler.SimilarContentManager
             mConfig = config;
         }
 
-        public (string Url, string Content) JudgeContent(FetchedFile fetchedFile, string textContent)
+        public (string Url, string Content) JudgeContent(FetchedFile fetchedFile, string content)
         {
             var sameFiles = mConfig.UrlFileStore.GetUrlFilesByHash(fetchedFile.FileHash);
             var host = UrlHelper.GetHost(fetchedFile.Url);
@@ -48,11 +47,11 @@ namespace XiaoyaCrawler.SimilarContentManager
                 catch (Exception)
                 { }
 
-                if (textContent == file.TextContent
+                if (content == file.Content
                     && (currentHost == host || isSameDns))
                 {
                     mLogger.Log(nameof(SimpleSimilarContentManager), $"Find Same UrlFile for {fetchedFile.Url}: {file.Url}");
-                    return (file.Url, file.TextContent);
+                    return (file.Url, file.Content);
                 }
             }
 

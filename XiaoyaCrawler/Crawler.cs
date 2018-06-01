@@ -34,9 +34,12 @@ namespace XiaoyaCrawler
         protected List<IUrlFilter> mUrlFilters;
         protected CancellationTokenSource mCancellationTokenSource;
 
+        protected Dictionary<string, string> mContentUrlDict
+            = new Dictionary<string, string>();
+        protected readonly object mContentUrlDictSyncLock = new object();
+
         private SemaphoreSlim mFetchSemaphore;
-        private object mStatusSyncLock = new object();
-        private object mSaveSyncLock = new object();
+        private readonly object mStatusSyncLock = new object();
         private ConcurrentDictionary<Task, bool> mTasks = new ConcurrentDictionary<Task, bool>();
 
         /// <summary>
@@ -111,12 +114,22 @@ namespace XiaoyaCrawler
 
         private string GetSameUrl(FetchedFile fetchedFile, string content)
         {
-            lock (mSaveSyncLock)
+            // Judge if there are other files that have similar content as this
+            var (sameUrl, sameContent) = mSimilarContentJudger.JudgeContent(fetchedFile, content);
+
+            lock (mContentUrlDictSyncLock)
             {
-                // Judge if there are other files that have similar content as this
-                var (sameUrl, sameContent) = mSimilarContentJudger.JudgeContent(fetchedFile, content);
-                return sameUrl;
+                if (mContentUrlDict.ContainsKey(content))
+                {
+                    return mContentUrlDict[content];
+                }
+                if (sameUrl == null)
+                {
+                    mContentUrlDict.Add(content, fetchedFile.Url);
+                }
             }
+
+            return sameUrl;
         }
 
         private IList<LinkInfo> FilterLinks(IList<LinkInfo> linkList)
@@ -214,6 +227,7 @@ namespace XiaoyaCrawler
                     // Parse File
                     var (urlFile, linkList, tokens) = ParseFetchedFile(fetchedFile, inLinkTexts);
 
+
                     if (GetSameUrl(fetchedFile, urlFile.Content) != null)
                     {
                         // Has Same UrlFile, Skip
@@ -224,6 +238,11 @@ namespace XiaoyaCrawler
                     // Get Old id and New id
                     ulong oldUrlFileId;
                     (urlFile, oldUrlFileId) = mConfig.UrlFileStore.SaveUrlFileAndGetOldId(urlFile);
+
+                    lock (mContentUrlDictSyncLock)
+                    {
+                        mContentUrlDict.Remove(urlFile.Content);
+                    }
 
                     // Filter Links
                     linkList = FilterLinks(linkList);
