@@ -108,14 +108,16 @@ message ArgPushBackUrl
 	bool failed = 3;
 }
 
-message ArgPostingList
+message ArgSavePostingLists
 {
-	XiaoyaStore.Model.PostingList postinglist = 1;
+	uint64 url_file_id = 1;
+	repeated XiaoyaStore.Model.PostingList posting_list = 2;
 }
 
-message ArgLinks
+message ArgSaveLinks
 {
-	repeated XiaoyaStore.Model.Link links = 1;
+	uint64 url_file_id = 1;
+	repeated XiaoyaStore.Model.Link links = 2;
 }
 
 message ArgSaveIndices
@@ -152,14 +154,15 @@ service UrlFileService
 
 service PostingListService
 {
-	rpc SavePostingList(ArgPostingList) returns (Result);
+	rpc SavePostingLists(ArgSavePostingLists) returns (Result);
+	rpc ClearPostingLists(ArgId) returns (Result);
 	rpc GetPostingList(ArgWord) returns (ResultWithPostingList);
 }
 
 service LinkService
 {
-	rpc SaveLinks(ArgLinks) returns (Result);
-	rpc RemoveLinks(ArgLinks) returns (Result);
+	rpc SaveLinks(ArgSaveLinks) returns (Result);
+	rpc ClearLinks(ArgId) returns (Result);
 	rpc GetLinks(ArgUrl) returns (ResultWithLinks);
 }
 

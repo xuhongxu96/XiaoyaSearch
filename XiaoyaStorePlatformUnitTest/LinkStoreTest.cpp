@@ -28,7 +28,7 @@ TEST(LinkStoreTest, TestSaveLinksOfNewUrlFile)
 
 	{
 		LinkStore store(config);
-		store.SaveLinks(links);
+		store.SaveLinks(1, links);
 	}
 
 	{
@@ -96,8 +96,9 @@ TEST(LinkStoreTest, TestSaveLinksOfUpdatedUrlFile)
 
 	{
 		LinkStore store(config);
-		store.SaveLinks(links1);
-		store.SaveLinks(links2);
+		store.SaveLinks(1, links1);
+		store.ClearLinks(1);
+		store.SaveLinks(2, links2);
 	}
 
 	{
@@ -125,11 +126,11 @@ TEST(LinkStoreTest, TestSaveLinksOfUpdatedUrlFile)
 			}
 		}
 
-		ASSERT_EQ(4, items["http://www.a.com"]);
-		ASSERT_EQ(4, items["http://www.b.com"]);
-		ASSERT_EQ(3, items["http://www.c.com"]);
-		ASSERT_EQ(4, items["http://www.d.com"]);
-		ASSERT_EQ(1, items.count("http://www.e.com"));
+		ASSERT_EQ(1, items["http://www.a.com"]);
+		ASSERT_EQ(3, items["http://www.b.com"]);
+		ASSERT_EQ(2, items["http://www.c.com"]);
+		ASSERT_EQ(2, items["http://www.d.com"]);
+		ASSERT_EQ(0, items.count("http://www.e.com"));
 	}
 }
 

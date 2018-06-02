@@ -32,7 +32,8 @@ namespace XiaoyaRetriever.InexactTopKRetriever
                 return new List<ulong>();
             }
             return postingList.Postings
-                    .OrderByDescending(id => mConfig.InvertedIndexStore.GetIndex(id, word.Value)?.Weight ?? 0)
+                    .OrderByDescending(o => o.Weight)
+                    .Select(o => o.UrlFileId)
                     .Take(mTopK);
 
         }

@@ -12,8 +12,8 @@ namespace XiaoyaStore
 			Store::LinkStore &mStore;
 		public:
 			LinkServiceImpl(Store::LinkStore &store);
-			::grpc::Status SaveLinks(::grpc::ServerContext* context, const ArgLinks* request, Result* response) override;
-			::grpc::Status RemoveLinks(::grpc::ServerContext* context, const ArgLinks* request, Result* response) override;
+			::grpc::Status SaveLinks(::grpc::ServerContext* context, const ArgSaveLinks* request, Result* response) override;
+			::grpc::Status ClearLinks(::grpc::ServerContext* context, const ArgId* request, Result* response) override;
 			::grpc::Status GetLinks(::grpc::ServerContext* context, const ArgUrl* request, ResultWithLinks* response) override;
 		};
 	}

@@ -10,10 +10,19 @@ PostingListServiceImpl::PostingListServiceImpl(PostingListStore & store)
 	:mStore(store)
 { }
 
-Status PostingListServiceImpl::SavePostingList(ServerContext * context,
-	const ArgPostingList * request, Result * response)
+Status PostingListServiceImpl::SavePostingLists(ServerContext * context,
+	const ArgSavePostingLists * request, Result * response)
 {
-	mStore.SavePostingList(request->postinglist());
+	mStore.SavePostingLists(request->url_file_id(),
+		std::vector<PostingList>(request->posting_list().begin(), request->posting_list().end()));
+	response->set_is_successful(true);
+
+	return Status::OK;
+}
+Status PostingListServiceImpl::ClearPostingLists(ServerContext* context,
+	const ArgId* request, Result* response)
+{
+	mStore.ClearPostingLists(request->id());
 	response->set_is_successful(true);
 
 	return Status::OK;

@@ -8,9 +8,6 @@
     <ClCompile Include="LinkStoreTest.cpp">
       <Filter>Tests</Filter>
     </ClCompile>
-    <ClCompile Include="PostingListStoreTest.cpp">
-      <Filter>Tests</Filter>
-    </ClCompile>
     <ClCompile Include="UrlFileStoreTest.cpp">
       <Filter>Tests</Filter>
     </ClCompile>

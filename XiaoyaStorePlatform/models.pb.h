@@ -36,7 +36,7 @@ namespace protobuf_models_2eproto {
 struct TableStruct {
   static const ::google::protobuf::internal::ParseTableField entries[];
   static const ::google::protobuf::internal::AuxillaryParseTableField aux[];
-  static const ::google::protobuf::internal::ParseTable schema[9];
+  static const ::google::protobuf::internal::ParseTable schema[11];
   static const ::google::protobuf::internal::FieldMetadata field_metadata[];
   static const ::google::protobuf::internal::SerializationTable serialization_table[];
   static const ::google::protobuf::uint32 offsets[];
@@ -44,8 +44,12 @@ struct TableStruct {
 void AddDescriptors();
 void InitDefaultsUrlFrontierItemImpl();
 void InitDefaultsUrlFrontierItem();
+void InitDefaultsPostingImpl();
+void InitDefaultsPosting();
 void InitDefaultsPostingListImpl();
 void InitDefaultsPostingList();
+void InitDefaultsPostingListsImpl();
+void InitDefaultsPostingLists();
 void InitDefaultsIndexKeyImpl();
 void InitDefaultsIndexKey();
 void InitDefaultsIndexKeysImpl();
@@ -62,7 +66,9 @@ void InitDefaultsIdListImpl();
 void InitDefaultsIdList();
 inline void InitDefaults() {
   InitDefaultsUrlFrontierItem();
+  InitDefaultsPosting();
   InitDefaultsPostingList();
+  InitDefaultsPostingLists();
   InitDefaultsIndexKey();
   InitDefaultsIndexKeys();
   InitDefaultsIndex();
@@ -92,9 +98,15 @@ extern LinkDefaultTypeInternal _Link_default_instance_;
 class Links;
 class LinksDefaultTypeInternal;
 extern LinksDefaultTypeInternal _Links_default_instance_;
+class Posting;
+class PostingDefaultTypeInternal;
+extern PostingDefaultTypeInternal _Posting_default_instance_;
 class PostingList;
 class PostingListDefaultTypeInternal;
 extern PostingListDefaultTypeInternal _PostingList_default_instance_;
+class PostingLists;
+class PostingListsDefaultTypeInternal;
+extern PostingListsDefaultTypeInternal _PostingLists_default_instance_;
 class UrlFile;
 class UrlFileDefaultTypeInternal;
 extern UrlFileDefaultTypeInternal _UrlFile_default_instance_;
@@ -257,6 +269,112 @@ class UrlFrontierItem : public ::google::protobuf::Message /* @@protoc_insertion
 };
 // -------------------------------------------------------------------
 
+class Posting : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:XiaoyaStore.Model.Posting) */ {
+ public:
+  Posting();
+  virtual ~Posting();
+
+  Posting(const Posting& from);
+
+  inline Posting& operator=(const Posting& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  Posting(Posting&& from) noexcept
+    : Posting() {
+    *this = ::std::move(from);
+  }
+
+  inline Posting& operator=(Posting&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const Posting& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const Posting* internal_default_instance() {
+    return reinterpret_cast<const Posting*>(
+               &_Posting_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    1;
+
+  void Swap(Posting* other);
+  friend void swap(Posting& a, Posting& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Posting* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  Posting* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const Posting& from);
+  void MergeFrom(const Posting& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(Posting* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // uint64 url_file_id = 1;
+  void clear_url_file_id();
+  static const int kUrlFileIdFieldNumber = 1;
+  ::google::protobuf::uint64 url_file_id() const;
+  void set_url_file_id(::google::protobuf::uint64 value);
+
+  // double weight = 2;
+  void clear_weight();
+  static const int kWeightFieldNumber = 2;
+  double weight() const;
+  void set_weight(double value);
+
+  // @@protoc_insertion_point(class_scope:XiaoyaStore.Model.Posting)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::uint64 url_file_id_;
+  double weight_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_models_2eproto::TableStruct;
+  friend void ::protobuf_models_2eproto::InitDefaultsPostingImpl();
+};
+// -------------------------------------------------------------------
+
 class PostingList : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:XiaoyaStore.Model.PostingList) */ {
  public:
   PostingList();
@@ -292,7 +410,7 @@ class PostingList : public ::google::protobuf::Message /* @@protoc_insertion_poi
                &_PostingList_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    1;
+    2;
 
   void Swap(PostingList* other);
   friend void swap(PostingList& a, PostingList& b) {
@@ -339,17 +457,17 @@ class PostingList : public ::google::protobuf::Message /* @@protoc_insertion_poi
 
   // accessors -------------------------------------------------------
 
-  // repeated uint64 postings = 4;
+  // repeated .XiaoyaStore.Model.Posting postings = 4;
   int postings_size() const;
   void clear_postings();
   static const int kPostingsFieldNumber = 4;
-  ::google::protobuf::uint64 postings(int index) const;
-  void set_postings(int index, ::google::protobuf::uint64 value);
-  void add_postings(::google::protobuf::uint64 value);
-  const ::google::protobuf::RepeatedField< ::google::protobuf::uint64 >&
-      postings() const;
-  ::google::protobuf::RepeatedField< ::google::protobuf::uint64 >*
+  const ::XiaoyaStore::Model::Posting& postings(int index) const;
+  ::XiaoyaStore::Model::Posting* mutable_postings(int index);
+  ::XiaoyaStore::Model::Posting* add_postings();
+  ::google::protobuf::RepeatedPtrField< ::XiaoyaStore::Model::Posting >*
       mutable_postings();
+  const ::google::protobuf::RepeatedPtrField< ::XiaoyaStore::Model::Posting >&
+      postings() const;
 
   // string word = 1;
   void clear_word();
@@ -387,8 +505,7 @@ class PostingList : public ::google::protobuf::Message /* @@protoc_insertion_poi
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::RepeatedField< ::google::protobuf::uint64 > postings_;
-  mutable int _postings_cached_byte_size_;
+  ::google::protobuf::RepeatedPtrField< ::XiaoyaStore::Model::Posting > postings_;
   ::google::protobuf::internal::ArenaStringPtr word_;
   ::google::protobuf::uint64 word_frequency_;
   ::google::protobuf::uint64 document_frequency_;
@@ -396,6 +513,111 @@ class PostingList : public ::google::protobuf::Message /* @@protoc_insertion_poi
   mutable int _cached_size_;
   friend struct ::protobuf_models_2eproto::TableStruct;
   friend void ::protobuf_models_2eproto::InitDefaultsPostingListImpl();
+};
+// -------------------------------------------------------------------
+
+class PostingLists : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:XiaoyaStore.Model.PostingLists) */ {
+ public:
+  PostingLists();
+  virtual ~PostingLists();
+
+  PostingLists(const PostingLists& from);
+
+  inline PostingLists& operator=(const PostingLists& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  PostingLists(PostingLists&& from) noexcept
+    : PostingLists() {
+    *this = ::std::move(from);
+  }
+
+  inline PostingLists& operator=(PostingLists&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const PostingLists& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const PostingLists* internal_default_instance() {
+    return reinterpret_cast<const PostingLists*>(
+               &_PostingLists_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    3;
+
+  void Swap(PostingLists* other);
+  friend void swap(PostingLists& a, PostingLists& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline PostingLists* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  PostingLists* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const PostingLists& from);
+  void MergeFrom(const PostingLists& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(PostingLists* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // repeated .XiaoyaStore.Model.PostingList items = 1;
+  int items_size() const;
+  void clear_items();
+  static const int kItemsFieldNumber = 1;
+  const ::XiaoyaStore::Model::PostingList& items(int index) const;
+  ::XiaoyaStore::Model::PostingList* mutable_items(int index);
+  ::XiaoyaStore::Model::PostingList* add_items();
+  ::google::protobuf::RepeatedPtrField< ::XiaoyaStore::Model::PostingList >*
+      mutable_items();
+  const ::google::protobuf::RepeatedPtrField< ::XiaoyaStore::Model::PostingList >&
+      items() const;
+
+  // @@protoc_insertion_point(class_scope:XiaoyaStore.Model.PostingLists)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::RepeatedPtrField< ::XiaoyaStore::Model::PostingList > items_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_models_2eproto::TableStruct;
+  friend void ::protobuf_models_2eproto::InitDefaultsPostingListsImpl();
 };
 // -------------------------------------------------------------------
 
@@ -434,7 +656,7 @@ class IndexKey : public ::google::protobuf::Message /* @@protoc_insertion_point(
                &_IndexKey_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    2;
+    4;
 
   void Swap(IndexKey* other);
   friend void swap(IndexKey& a, IndexKey& b) {
@@ -548,7 +770,7 @@ class IndexKeys : public ::google::protobuf::Message /* @@protoc_insertion_point
                &_IndexKeys_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    3;
+    5;
 
   void Swap(IndexKeys* other);
   friend void swap(IndexKeys& a, IndexKeys& b) {
@@ -653,7 +875,7 @@ class Index : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
                &_Index_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    4;
+    6;
 
   void Swap(Index* other);
   friend void swap(Index& a, Index& b) {
@@ -819,7 +1041,7 @@ class UrlFile : public ::google::protobuf::Message /* @@protoc_insertion_point(c
                &_UrlFile_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    5;
+    7;
 
   void Swap(UrlFile* other);
   friend void swap(UrlFile& a, UrlFile& b) {
@@ -1101,7 +1323,7 @@ class Link : public ::google::protobuf::Message /* @@protoc_insertion_point(clas
                &_Link_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    6;
+    8;
 
   void Swap(Link* other);
   friend void swap(Link& a, Link& b) {
@@ -1230,7 +1452,7 @@ class Links : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
                &_Links_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    7;
+    9;
 
   void Swap(Links* other);
   friend void swap(Links& a, Links& b) {
@@ -1342,7 +1564,7 @@ class IdList : public ::google::protobuf::Message /* @@protoc_insertion_point(cl
                &_IdList_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    8;
+    10;
 
   void Swap(IdList* other);
   friend void swap(IdList& a, IdList& b) {
@@ -1568,6 +1790,38 @@ inline void UrlFrontierItem::set_created_at(::google::protobuf::uint64 value) {
 
 // -------------------------------------------------------------------
 
+// Posting
+
+// uint64 url_file_id = 1;
+inline void Posting::clear_url_file_id() {
+  url_file_id_ = GOOGLE_ULONGLONG(0);
+}
+inline ::google::protobuf::uint64 Posting::url_file_id() const {
+  // @@protoc_insertion_point(field_get:XiaoyaStore.Model.Posting.url_file_id)
+  return url_file_id_;
+}
+inline void Posting::set_url_file_id(::google::protobuf::uint64 value) {
+  
+  url_file_id_ = value;
+  // @@protoc_insertion_point(field_set:XiaoyaStore.Model.Posting.url_file_id)
+}
+
+// double weight = 2;
+inline void Posting::clear_weight() {
+  weight_ = 0;
+}
+inline double Posting::weight() const {
+  // @@protoc_insertion_point(field_get:XiaoyaStore.Model.Posting.weight)
+  return weight_;
+}
+inline void Posting::set_weight(double value) {
+  
+  weight_ = value;
+  // @@protoc_insertion_point(field_set:XiaoyaStore.Model.Posting.weight)
+}
+
+// -------------------------------------------------------------------
+
 // PostingList
 
 // string word = 1;
@@ -1651,34 +1905,34 @@ inline void PostingList::set_document_frequency(::google::protobuf::uint64 value
   // @@protoc_insertion_point(field_set:XiaoyaStore.Model.PostingList.document_frequency)
 }
 
-// repeated uint64 postings = 4;
+// repeated .XiaoyaStore.Model.Posting postings = 4;
 inline int PostingList::postings_size() const {
   return postings_.size();
 }
 inline void PostingList::clear_postings() {
   postings_.Clear();
 }
-inline ::google::protobuf::uint64 PostingList::postings(int index) const {
+inline const ::XiaoyaStore::Model::Posting& PostingList::postings(int index) const {
   // @@protoc_insertion_point(field_get:XiaoyaStore.Model.PostingList.postings)
   return postings_.Get(index);
 }
-inline void PostingList::set_postings(int index, ::google::protobuf::uint64 value) {
-  postings_.Set(index, value);
-  // @@protoc_insertion_point(field_set:XiaoyaStore.Model.PostingList.postings)
+inline ::XiaoyaStore::Model::Posting* PostingList::mutable_postings(int index) {
+  // @@protoc_insertion_point(field_mutable:XiaoyaStore.Model.PostingList.postings)
+  return postings_.Mutable(index);
 }
-inline void PostingList::add_postings(::google::protobuf::uint64 value) {
-  postings_.Add(value);
+inline ::XiaoyaStore::Model::Posting* PostingList::add_postings() {
   // @@protoc_insertion_point(field_add:XiaoyaStore.Model.PostingList.postings)
+  return postings_.Add();
 }
-inline const ::google::protobuf::RepeatedField< ::google::protobuf::uint64 >&
-PostingList::postings() const {
-  // @@protoc_insertion_point(field_list:XiaoyaStore.Model.PostingList.postings)
-  return postings_;
-}
-inline ::google::protobuf::RepeatedField< ::google::protobuf::uint64 >*
+inline ::google::protobuf::RepeatedPtrField< ::XiaoyaStore::Model::Posting >*
 PostingList::mutable_postings() {
   // @@protoc_insertion_point(field_mutable_list:XiaoyaStore.Model.PostingList.postings)
   return &postings_;
+}
+inline const ::google::protobuf::RepeatedPtrField< ::XiaoyaStore::Model::Posting >&
+PostingList::postings() const {
+  // @@protoc_insertion_point(field_list:XiaoyaStore.Model.PostingList.postings)
+  return postings_;
 }
 
 // bool is_add = 5;
@@ -1693,6 +1947,40 @@ inline void PostingList::set_is_add(bool value) {
   
   is_add_ = value;
   // @@protoc_insertion_point(field_set:XiaoyaStore.Model.PostingList.is_add)
+}
+
+// -------------------------------------------------------------------
+
+// PostingLists
+
+// repeated .XiaoyaStore.Model.PostingList items = 1;
+inline int PostingLists::items_size() const {
+  return items_.size();
+}
+inline void PostingLists::clear_items() {
+  items_.Clear();
+}
+inline const ::XiaoyaStore::Model::PostingList& PostingLists::items(int index) const {
+  // @@protoc_insertion_point(field_get:XiaoyaStore.Model.PostingLists.items)
+  return items_.Get(index);
+}
+inline ::XiaoyaStore::Model::PostingList* PostingLists::mutable_items(int index) {
+  // @@protoc_insertion_point(field_mutable:XiaoyaStore.Model.PostingLists.items)
+  return items_.Mutable(index);
+}
+inline ::XiaoyaStore::Model::PostingList* PostingLists::add_items() {
+  // @@protoc_insertion_point(field_add:XiaoyaStore.Model.PostingLists.items)
+  return items_.Add();
+}
+inline ::google::protobuf::RepeatedPtrField< ::XiaoyaStore::Model::PostingList >*
+PostingLists::mutable_items() {
+  // @@protoc_insertion_point(field_mutable_list:XiaoyaStore.Model.PostingLists.items)
+  return &items_;
+}
+inline const ::google::protobuf::RepeatedPtrField< ::XiaoyaStore::Model::PostingList >&
+PostingLists::items() const {
+  // @@protoc_insertion_point(field_list:XiaoyaStore.Model.PostingLists.items)
+  return items_;
 }
 
 // -------------------------------------------------------------------
@@ -2798,6 +3086,10 @@ inline void IdList::set_is_add(bool value) {
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

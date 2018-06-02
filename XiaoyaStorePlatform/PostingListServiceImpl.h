@@ -12,7 +12,8 @@ namespace XiaoyaStore
 			Store::PostingListStore &mStore;
 		public:
 			PostingListServiceImpl(Store::PostingListStore &store);
-			::grpc::Status SavePostingList(::grpc::ServerContext* context, const ArgPostingList* request, Result* response) override;
+			::grpc::Status SavePostingLists(::grpc::ServerContext* context, const ArgSavePostingLists* request, Result* response) override;
+			::grpc::Status ClearPostingLists(::grpc::ServerContext* context, const ArgId* request, Result* response) override;
 			::grpc::Status GetPostingList(::grpc::ServerContext* context, const ArgWord* request, ResultWithPostingList* response) override;
 		};
 	}

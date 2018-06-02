@@ -13,6 +13,8 @@ namespace XiaoyaStore
 		public:
 			static const std::string DbName; //< Database name
 
+			static const std::string UrlFileIdIndexCFName; //< Name of url_file_id_index ColumnFamily
+			static const size_t UrlFileIdIndexCF; //< Handle index of url_file_id_index ColumnFamily
 			/**
 			Constructor
 
@@ -23,16 +25,25 @@ namespace XiaoyaStore
 				bool isReadOnly = false);
 
 			/**
-			Save posting list by specific delta posting list,
+			Save posting lists by specific delta posting lists,
 			PostingList.IsAdd indicates whether you want to add or 
 			remove the deltaPostingList from the original 
 			posting list of the same word.
-			WordFrequency and DocumentFrequency will always be added up 
-			regardless of PostingList.IsAdd, so you may set them to negative numbers.
+			WordFrequency and DocumentFrequency will be also added or 
+			removed per PostingList.IsAdd.
 
-			\param	deltaPostingList	Delta change of PostingList
+			\param	urlFileId			Id of UrlFile
+			\param	deltaPostingLists	A list of delta change of PostingList
 			*/
-			void SavePostingList(const Model::PostingList &deltaPostingList);
+			void SavePostingLists(const uint64_t urlFileId, 
+				const std::vector<Model::PostingList> &deltaPostingLists);
+
+			/**
+			Clear posting lists of specific UrlFile
+
+			\param	urlFileId	Id of UrlFile
+			*/
+			void ClearPostingLists(const uint64_t urlFileId);
 
 			/**
 			Get PostingList by word

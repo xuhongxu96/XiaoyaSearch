@@ -12,6 +12,9 @@ namespace XiaoyaStore
 		{
 		public:
 			static const std::string DbName; //< Database name
+
+			static const std::string UrlFileIdIndexCFName; //< Name of url_file_id_index ColumnFamily
+			static const size_t UrlFileIdIndexCF; //< Handle index of url_file_id_index ColumnFamily
 			/**
 			Constructor
 
@@ -22,18 +25,20 @@ namespace XiaoyaStore
 				bool isReadOnly = false);
 
 			/**
-			Save links
+			Save links for specific UrlFile
 
+			\param	urlFileId		Id of UrlFile
 			\param	links			Links of the UrlFile
 			*/
-			void SaveLinks(const std::vector<Model::Link> &links);
+			void SaveLinks(const uint64_t urlFileId, 
+				const std::vector<Model::Link> &links);
 
 			/**
-			Remove links
+			Clear links of specific UrlFile
 
-			\param	links			Links of the UrlFile
+			\param	urlFileId	Id of UrlFile
 			*/
-			void RemoveLinks(const std::vector<Model::Link> &links);
+			void ClearLinks(const uint64_t urlFileId);
 
 			/**
 			Get Links by url

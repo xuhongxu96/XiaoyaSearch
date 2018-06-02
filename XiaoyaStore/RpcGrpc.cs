@@ -489,16 +489,24 @@ namespace XiaoyaStore.Service {
   {
     static readonly string __ServiceName = "XiaoyaStore.Service.PostingListService";
 
-    static readonly grpc::Marshaller<global::XiaoyaStore.Service.ArgPostingList> __Marshaller_ArgPostingList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::XiaoyaStore.Service.ArgPostingList.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::XiaoyaStore.Service.ArgSavePostingLists> __Marshaller_ArgSavePostingLists = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::XiaoyaStore.Service.ArgSavePostingLists.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::XiaoyaStore.Service.Result> __Marshaller_Result = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::XiaoyaStore.Service.Result.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::XiaoyaStore.Service.ArgId> __Marshaller_ArgId = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::XiaoyaStore.Service.ArgId.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::XiaoyaStore.Service.ArgWord> __Marshaller_ArgWord = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::XiaoyaStore.Service.ArgWord.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::XiaoyaStore.Service.ResultWithPostingList> __Marshaller_ResultWithPostingList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::XiaoyaStore.Service.ResultWithPostingList.Parser.ParseFrom);
 
-    static readonly grpc::Method<global::XiaoyaStore.Service.ArgPostingList, global::XiaoyaStore.Service.Result> __Method_SavePostingList = new grpc::Method<global::XiaoyaStore.Service.ArgPostingList, global::XiaoyaStore.Service.Result>(
+    static readonly grpc::Method<global::XiaoyaStore.Service.ArgSavePostingLists, global::XiaoyaStore.Service.Result> __Method_SavePostingLists = new grpc::Method<global::XiaoyaStore.Service.ArgSavePostingLists, global::XiaoyaStore.Service.Result>(
         grpc::MethodType.Unary,
         __ServiceName,
-        "SavePostingList",
-        __Marshaller_ArgPostingList,
+        "SavePostingLists",
+        __Marshaller_ArgSavePostingLists,
+        __Marshaller_Result);
+
+    static readonly grpc::Method<global::XiaoyaStore.Service.ArgId, global::XiaoyaStore.Service.Result> __Method_ClearPostingLists = new grpc::Method<global::XiaoyaStore.Service.ArgId, global::XiaoyaStore.Service.Result>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ClearPostingLists",
+        __Marshaller_ArgId,
         __Marshaller_Result);
 
     static readonly grpc::Method<global::XiaoyaStore.Service.ArgWord, global::XiaoyaStore.Service.ResultWithPostingList> __Method_GetPostingList = new grpc::Method<global::XiaoyaStore.Service.ArgWord, global::XiaoyaStore.Service.ResultWithPostingList>(
@@ -517,7 +525,12 @@ namespace XiaoyaStore.Service {
     /// <summary>Base class for server-side implementations of PostingListService</summary>
     public abstract partial class PostingListServiceBase
     {
-      public virtual global::System.Threading.Tasks.Task<global::XiaoyaStore.Service.Result> SavePostingList(global::XiaoyaStore.Service.ArgPostingList request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::XiaoyaStore.Service.Result> SavePostingLists(global::XiaoyaStore.Service.ArgSavePostingLists request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::XiaoyaStore.Service.Result> ClearPostingLists(global::XiaoyaStore.Service.ArgId request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -552,21 +565,37 @@ namespace XiaoyaStore.Service {
       {
       }
 
-      public virtual global::XiaoyaStore.Service.Result SavePostingList(global::XiaoyaStore.Service.ArgPostingList request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::XiaoyaStore.Service.Result SavePostingLists(global::XiaoyaStore.Service.ArgSavePostingLists request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return SavePostingList(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return SavePostingLists(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::XiaoyaStore.Service.Result SavePostingList(global::XiaoyaStore.Service.ArgPostingList request, grpc::CallOptions options)
+      public virtual global::XiaoyaStore.Service.Result SavePostingLists(global::XiaoyaStore.Service.ArgSavePostingLists request, grpc::CallOptions options)
       {
-        return CallInvoker.BlockingUnaryCall(__Method_SavePostingList, null, options, request);
+        return CallInvoker.BlockingUnaryCall(__Method_SavePostingLists, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::XiaoyaStore.Service.Result> SavePostingListAsync(global::XiaoyaStore.Service.ArgPostingList request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::XiaoyaStore.Service.Result> SavePostingListsAsync(global::XiaoyaStore.Service.ArgSavePostingLists request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return SavePostingListAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return SavePostingListsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::XiaoyaStore.Service.Result> SavePostingListAsync(global::XiaoyaStore.Service.ArgPostingList request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::XiaoyaStore.Service.Result> SavePostingListsAsync(global::XiaoyaStore.Service.ArgSavePostingLists request, grpc::CallOptions options)
       {
-        return CallInvoker.AsyncUnaryCall(__Method_SavePostingList, null, options, request);
+        return CallInvoker.AsyncUnaryCall(__Method_SavePostingLists, null, options, request);
+      }
+      public virtual global::XiaoyaStore.Service.Result ClearPostingLists(global::XiaoyaStore.Service.ArgId request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return ClearPostingLists(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::XiaoyaStore.Service.Result ClearPostingLists(global::XiaoyaStore.Service.ArgId request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ClearPostingLists, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::XiaoyaStore.Service.Result> ClearPostingListsAsync(global::XiaoyaStore.Service.ArgId request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return ClearPostingListsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::XiaoyaStore.Service.Result> ClearPostingListsAsync(global::XiaoyaStore.Service.ArgId request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ClearPostingLists, null, options, request);
       }
       public virtual global::XiaoyaStore.Service.ResultWithPostingList GetPostingList(global::XiaoyaStore.Service.ArgWord request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
@@ -596,7 +625,8 @@ namespace XiaoyaStore.Service {
     public static grpc::ServerServiceDefinition BindService(PostingListServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_SavePostingList, serviceImpl.SavePostingList)
+          .AddMethod(__Method_SavePostingLists, serviceImpl.SavePostingLists)
+          .AddMethod(__Method_ClearPostingLists, serviceImpl.ClearPostingLists)
           .AddMethod(__Method_GetPostingList, serviceImpl.GetPostingList).Build();
     }
 
@@ -605,23 +635,24 @@ namespace XiaoyaStore.Service {
   {
     static readonly string __ServiceName = "XiaoyaStore.Service.LinkService";
 
-    static readonly grpc::Marshaller<global::XiaoyaStore.Service.ArgLinks> __Marshaller_ArgLinks = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::XiaoyaStore.Service.ArgLinks.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::XiaoyaStore.Service.ArgSaveLinks> __Marshaller_ArgSaveLinks = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::XiaoyaStore.Service.ArgSaveLinks.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::XiaoyaStore.Service.Result> __Marshaller_Result = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::XiaoyaStore.Service.Result.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::XiaoyaStore.Service.ArgId> __Marshaller_ArgId = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::XiaoyaStore.Service.ArgId.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::XiaoyaStore.Service.ArgUrl> __Marshaller_ArgUrl = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::XiaoyaStore.Service.ArgUrl.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::XiaoyaStore.Service.ResultWithLinks> __Marshaller_ResultWithLinks = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::XiaoyaStore.Service.ResultWithLinks.Parser.ParseFrom);
 
-    static readonly grpc::Method<global::XiaoyaStore.Service.ArgLinks, global::XiaoyaStore.Service.Result> __Method_SaveLinks = new grpc::Method<global::XiaoyaStore.Service.ArgLinks, global::XiaoyaStore.Service.Result>(
+    static readonly grpc::Method<global::XiaoyaStore.Service.ArgSaveLinks, global::XiaoyaStore.Service.Result> __Method_SaveLinks = new grpc::Method<global::XiaoyaStore.Service.ArgSaveLinks, global::XiaoyaStore.Service.Result>(
         grpc::MethodType.Unary,
         __ServiceName,
         "SaveLinks",
-        __Marshaller_ArgLinks,
+        __Marshaller_ArgSaveLinks,
         __Marshaller_Result);
 
-    static readonly grpc::Method<global::XiaoyaStore.Service.ArgLinks, global::XiaoyaStore.Service.Result> __Method_RemoveLinks = new grpc::Method<global::XiaoyaStore.Service.ArgLinks, global::XiaoyaStore.Service.Result>(
+    static readonly grpc::Method<global::XiaoyaStore.Service.ArgId, global::XiaoyaStore.Service.Result> __Method_ClearLinks = new grpc::Method<global::XiaoyaStore.Service.ArgId, global::XiaoyaStore.Service.Result>(
         grpc::MethodType.Unary,
         __ServiceName,
-        "RemoveLinks",
-        __Marshaller_ArgLinks,
+        "ClearLinks",
+        __Marshaller_ArgId,
         __Marshaller_Result);
 
     static readonly grpc::Method<global::XiaoyaStore.Service.ArgUrl, global::XiaoyaStore.Service.ResultWithLinks> __Method_GetLinks = new grpc::Method<global::XiaoyaStore.Service.ArgUrl, global::XiaoyaStore.Service.ResultWithLinks>(
@@ -640,12 +671,12 @@ namespace XiaoyaStore.Service {
     /// <summary>Base class for server-side implementations of LinkService</summary>
     public abstract partial class LinkServiceBase
     {
-      public virtual global::System.Threading.Tasks.Task<global::XiaoyaStore.Service.Result> SaveLinks(global::XiaoyaStore.Service.ArgLinks request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::XiaoyaStore.Service.Result> SaveLinks(global::XiaoyaStore.Service.ArgSaveLinks request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task<global::XiaoyaStore.Service.Result> RemoveLinks(global::XiaoyaStore.Service.ArgLinks request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::XiaoyaStore.Service.Result> ClearLinks(global::XiaoyaStore.Service.ArgId request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -680,37 +711,37 @@ namespace XiaoyaStore.Service {
       {
       }
 
-      public virtual global::XiaoyaStore.Service.Result SaveLinks(global::XiaoyaStore.Service.ArgLinks request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::XiaoyaStore.Service.Result SaveLinks(global::XiaoyaStore.Service.ArgSaveLinks request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return SaveLinks(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::XiaoyaStore.Service.Result SaveLinks(global::XiaoyaStore.Service.ArgLinks request, grpc::CallOptions options)
+      public virtual global::XiaoyaStore.Service.Result SaveLinks(global::XiaoyaStore.Service.ArgSaveLinks request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_SaveLinks, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::XiaoyaStore.Service.Result> SaveLinksAsync(global::XiaoyaStore.Service.ArgLinks request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::XiaoyaStore.Service.Result> SaveLinksAsync(global::XiaoyaStore.Service.ArgSaveLinks request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return SaveLinksAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::XiaoyaStore.Service.Result> SaveLinksAsync(global::XiaoyaStore.Service.ArgLinks request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::XiaoyaStore.Service.Result> SaveLinksAsync(global::XiaoyaStore.Service.ArgSaveLinks request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_SaveLinks, null, options, request);
       }
-      public virtual global::XiaoyaStore.Service.Result RemoveLinks(global::XiaoyaStore.Service.ArgLinks request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::XiaoyaStore.Service.Result ClearLinks(global::XiaoyaStore.Service.ArgId request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return RemoveLinks(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return ClearLinks(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::XiaoyaStore.Service.Result RemoveLinks(global::XiaoyaStore.Service.ArgLinks request, grpc::CallOptions options)
+      public virtual global::XiaoyaStore.Service.Result ClearLinks(global::XiaoyaStore.Service.ArgId request, grpc::CallOptions options)
       {
-        return CallInvoker.BlockingUnaryCall(__Method_RemoveLinks, null, options, request);
+        return CallInvoker.BlockingUnaryCall(__Method_ClearLinks, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::XiaoyaStore.Service.Result> RemoveLinksAsync(global::XiaoyaStore.Service.ArgLinks request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::XiaoyaStore.Service.Result> ClearLinksAsync(global::XiaoyaStore.Service.ArgId request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return RemoveLinksAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return ClearLinksAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::XiaoyaStore.Service.Result> RemoveLinksAsync(global::XiaoyaStore.Service.ArgLinks request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::XiaoyaStore.Service.Result> ClearLinksAsync(global::XiaoyaStore.Service.ArgId request, grpc::CallOptions options)
       {
-        return CallInvoker.AsyncUnaryCall(__Method_RemoveLinks, null, options, request);
+        return CallInvoker.AsyncUnaryCall(__Method_ClearLinks, null, options, request);
       }
       public virtual global::XiaoyaStore.Service.ResultWithLinks GetLinks(global::XiaoyaStore.Service.ArgUrl request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
@@ -741,7 +772,7 @@ namespace XiaoyaStore.Service {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_SaveLinks, serviceImpl.SaveLinks)
-          .AddMethod(__Method_RemoveLinks, serviceImpl.RemoveLinks)
+          .AddMethod(__Method_ClearLinks, serviceImpl.ClearLinks)
           .AddMethod(__Method_GetLinks, serviceImpl.GetLinks).Build();
     }
 

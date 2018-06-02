@@ -16,6 +16,12 @@ message UrlFrontierItem
 	uint64 created_at = 7;
 }
 
+message Posting
+{
+	uint64 url_file_id = 1;
+	double weight = 2;
+}
+
 message PostingList
 {
 	string word = 1;
@@ -23,8 +29,13 @@ message PostingList
 	uint64 word_frequency = 2;
 	uint64 document_frequency = 3;
 
-	repeated uint64 postings = 4;
+	repeated Posting postings = 4;
 	bool is_add = 5;
+}
+
+message PostingLists
+{
+	repeated PostingList items = 1;
 }
 
 message IndexKey

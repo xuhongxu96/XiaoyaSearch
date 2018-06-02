@@ -28,34 +28,39 @@ namespace XiaoyaStore.Model {
             "dGllckl0ZW0SCwoDdXJsGAEgASgJEhQKDHBsYW5uZWRfdGltZRgCIAEoBBIQ",
             "Cghwcmlvcml0eRgDIAEoBBIUCgxmYWlsZWRfdGltZXMYBCABKA0SEwoLdXJs",
             "X2ZpbGVfaWQYBSABKAQSEgoKdXBkYXRlZF9hdBgGIAEoBBISCgpjcmVhdGVk",
-            "X2F0GAcgASgEInEKC1Bvc3RpbmdMaXN0EgwKBHdvcmQYASABKAkSFgoOd29y",
-            "ZF9mcmVxdWVuY3kYAiABKAQSGgoSZG9jdW1lbnRfZnJlcXVlbmN5GAMgASgE",
-            "EhAKCHBvc3RpbmdzGAQgAygEEg4KBmlzX2FkZBgFIAEoCCItCghJbmRleEtl",
-            "eRITCgt1cmxfZmlsZV9pZBgBIAEoBBIMCgR3b3JkGAIgASgJIjcKCUluZGV4",
-            "S2V5cxIqCgVpdGVtcxgBIAMoCzIbLlhpYW95YVN0b3JlLk1vZGVsLkluZGV4",
-            "S2V5ItIBCgVJbmRleBIoCgNrZXkYASABKAsyGy5YaWFveWFTdG9yZS5Nb2Rl",
-            "bC5JbmRleEtleRILCgN1cmwYAiABKAkSFgoOd29yZF9mcmVxdWVuY3kYAyAB",
-            "KA0SDgoGd2VpZ2h0GAQgASgBEhsKE29jY3VyZW5jZXNfaW5fdGl0bGUYBSAB",
-            "KA0SGwoTb2NjdXJlbmNlc19pbl9saW5rcxgGIAEoDRIdChVvY2N1cmVuY2Vz",
-            "X2luX2hlYWRlcnMYByABKA0SEQoJcG9zaXRpb25zGAggAygNIv0CCgdVcmxG",
-            "aWxlEhMKC3VybF9maWxlX2lkGAEgASgEEgsKA3VybBgCIAEoCRINCgV0aXRs",
-            "ZRgDIAEoCRIRCglmaWxlX3BhdGgYBCABKAkSEQoJZmlsZV9oYXNoGAUgASgJ",
-            "Eg8KB2NvbnRlbnQYBiABKAkSFAoMdGV4dF9jb250ZW50GAcgASgJEg8KB2No",
-            "YXJzZXQYCCABKAkSEQoJbWltZV90eXBlGAkgASgJEhEKCXBhZ2VfcmFuaxgK",
-            "IAEoARIVCg1pbl9saW5rX2NvdW50GAsgASgNEhwKFGluX2xpbmtfdG90YWxf",
-            "bGVuZ3RoGAwgASgNEhQKDGhlYWRlcl9jb3VudBgNIAEoDRIbChNoZWFkZXJf",
-            "dG90YWxfbGVuZ3RoGA4gASgNEhQKDHB1Ymxpc2hfZGF0ZRgPIAEoBBIXCg91",
-            "cGRhdGVfaW50ZXJ2YWwYECABKAQSEgoKdXBkYXRlZF9hdBgRIAEoBBISCgpj",
-            "cmVhdGVkX2F0GBIgASgEIjYKBExpbmsSEwoLdXJsX2ZpbGVfaWQYAiABKAQS",
-            "CwoDdXJsGAMgASgJEgwKBHRleHQYBCABKAkiPwoFTGlua3MSJgoFaXRlbXMY",
-            "ASADKAsyFy5YaWFveWFTdG9yZS5Nb2RlbC5MaW5rEg4KBmlzX2FkZBgCIAEo",
-            "CCIlCgZJZExpc3QSCwoDaWRzGAEgAygEEg4KBmlzX2FkZBgCIAEoCGIGcHJv",
-            "dG8z"));
+            "X2F0GAcgASgEIi4KB1Bvc3RpbmcSEwoLdXJsX2ZpbGVfaWQYASABKAQSDgoG",
+            "d2VpZ2h0GAIgASgBIo0BCgtQb3N0aW5nTGlzdBIMCgR3b3JkGAEgASgJEhYK",
+            "DndvcmRfZnJlcXVlbmN5GAIgASgEEhoKEmRvY3VtZW50X2ZyZXF1ZW5jeRgD",
+            "IAEoBBIsCghwb3N0aW5ncxgEIAMoCzIaLlhpYW95YVN0b3JlLk1vZGVsLlBv",
+            "c3RpbmcSDgoGaXNfYWRkGAUgASgIIj0KDFBvc3RpbmdMaXN0cxItCgVpdGVt",
+            "cxgBIAMoCzIeLlhpYW95YVN0b3JlLk1vZGVsLlBvc3RpbmdMaXN0Ii0KCElu",
+            "ZGV4S2V5EhMKC3VybF9maWxlX2lkGAEgASgEEgwKBHdvcmQYAiABKAkiNwoJ",
+            "SW5kZXhLZXlzEioKBWl0ZW1zGAEgAygLMhsuWGlhb3lhU3RvcmUuTW9kZWwu",
+            "SW5kZXhLZXki0gEKBUluZGV4EigKA2tleRgBIAEoCzIbLlhpYW95YVN0b3Jl",
+            "Lk1vZGVsLkluZGV4S2V5EgsKA3VybBgCIAEoCRIWCg53b3JkX2ZyZXF1ZW5j",
+            "eRgDIAEoDRIOCgZ3ZWlnaHQYBCABKAESGwoTb2NjdXJlbmNlc19pbl90aXRs",
+            "ZRgFIAEoDRIbChNvY2N1cmVuY2VzX2luX2xpbmtzGAYgASgNEh0KFW9jY3Vy",
+            "ZW5jZXNfaW5faGVhZGVycxgHIAEoDRIRCglwb3NpdGlvbnMYCCADKA0i/QIK",
+            "B1VybEZpbGUSEwoLdXJsX2ZpbGVfaWQYASABKAQSCwoDdXJsGAIgASgJEg0K",
+            "BXRpdGxlGAMgASgJEhEKCWZpbGVfcGF0aBgEIAEoCRIRCglmaWxlX2hhc2gY",
+            "BSABKAkSDwoHY29udGVudBgGIAEoCRIUCgx0ZXh0X2NvbnRlbnQYByABKAkS",
+            "DwoHY2hhcnNldBgIIAEoCRIRCgltaW1lX3R5cGUYCSABKAkSEQoJcGFnZV9y",
+            "YW5rGAogASgBEhUKDWluX2xpbmtfY291bnQYCyABKA0SHAoUaW5fbGlua190",
+            "b3RhbF9sZW5ndGgYDCABKA0SFAoMaGVhZGVyX2NvdW50GA0gASgNEhsKE2hl",
+            "YWRlcl90b3RhbF9sZW5ndGgYDiABKA0SFAoMcHVibGlzaF9kYXRlGA8gASgE",
+            "EhcKD3VwZGF0ZV9pbnRlcnZhbBgQIAEoBBISCgp1cGRhdGVkX2F0GBEgASgE",
+            "EhIKCmNyZWF0ZWRfYXQYEiABKAQiNgoETGluaxITCgt1cmxfZmlsZV9pZBgC",
+            "IAEoBBILCgN1cmwYAyABKAkSDAoEdGV4dBgEIAEoCSI/CgVMaW5rcxImCgVp",
+            "dGVtcxgBIAMoCzIXLlhpYW95YVN0b3JlLk1vZGVsLkxpbmsSDgoGaXNfYWRk",
+            "GAIgASgIIiUKBklkTGlzdBILCgNpZHMYASADKAQSDgoGaXNfYWRkGAIgASgI",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::XiaoyaStore.Model.UrlFrontierItem), global::XiaoyaStore.Model.UrlFrontierItem.Parser, new[]{ "Url", "PlannedTime", "Priority", "FailedTimes", "UrlFileId", "UpdatedAt", "CreatedAt" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::XiaoyaStore.Model.Posting), global::XiaoyaStore.Model.Posting.Parser, new[]{ "UrlFileId", "Weight" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::XiaoyaStore.Model.PostingList), global::XiaoyaStore.Model.PostingList.Parser, new[]{ "Word", "WordFrequency", "DocumentFrequency", "Postings", "IsAdd" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::XiaoyaStore.Model.PostingLists), global::XiaoyaStore.Model.PostingLists.Parser, new[]{ "Items" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::XiaoyaStore.Model.IndexKey), global::XiaoyaStore.Model.IndexKey.Parser, new[]{ "UrlFileId", "Word" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::XiaoyaStore.Model.IndexKeys), global::XiaoyaStore.Model.IndexKeys.Parser, new[]{ "Items" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::XiaoyaStore.Model.Index), global::XiaoyaStore.Model.Index.Parser, new[]{ "Key", "Url", "WordFrequency", "Weight", "OccurencesInTitle", "OccurencesInLinks", "OccurencesInHeaders", "Positions" }, null, null, null),
@@ -366,6 +371,163 @@ namespace XiaoyaStore.Model {
 
   }
 
+  public sealed partial class Posting : pb::IMessage<Posting> {
+    private static readonly pb::MessageParser<Posting> _parser = new pb::MessageParser<Posting>(() => new Posting());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<Posting> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::XiaoyaStore.Model.ModelsReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Posting() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Posting(Posting other) : this() {
+      urlFileId_ = other.urlFileId_;
+      weight_ = other.weight_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Posting Clone() {
+      return new Posting(this);
+    }
+
+    /// <summary>Field number for the "url_file_id" field.</summary>
+    public const int UrlFileIdFieldNumber = 1;
+    private ulong urlFileId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ulong UrlFileId {
+      get { return urlFileId_; }
+      set {
+        urlFileId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "weight" field.</summary>
+    public const int WeightFieldNumber = 2;
+    private double weight_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public double Weight {
+      get { return weight_; }
+      set {
+        weight_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as Posting);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(Posting other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (UrlFileId != other.UrlFileId) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Weight, other.Weight)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (UrlFileId != 0UL) hash ^= UrlFileId.GetHashCode();
+      if (Weight != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Weight);
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (UrlFileId != 0UL) {
+        output.WriteRawTag(8);
+        output.WriteUInt64(UrlFileId);
+      }
+      if (Weight != 0D) {
+        output.WriteRawTag(17);
+        output.WriteDouble(Weight);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (UrlFileId != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(UrlFileId);
+      }
+      if (Weight != 0D) {
+        size += 1 + 8;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(Posting other) {
+      if (other == null) {
+        return;
+      }
+      if (other.UrlFileId != 0UL) {
+        UrlFileId = other.UrlFileId;
+      }
+      if (other.Weight != 0D) {
+        Weight = other.Weight;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            UrlFileId = input.ReadUInt64();
+            break;
+          }
+          case 17: {
+            Weight = input.ReadDouble();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
   public sealed partial class PostingList : pb::IMessage<PostingList> {
     private static readonly pb::MessageParser<PostingList> _parser = new pb::MessageParser<PostingList>(() => new PostingList());
     private pb::UnknownFieldSet _unknownFields;
@@ -374,7 +536,7 @@ namespace XiaoyaStore.Model {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::XiaoyaStore.Model.ModelsReflection.Descriptor.MessageTypes[1]; }
+      get { return global::XiaoyaStore.Model.ModelsReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -439,11 +601,11 @@ namespace XiaoyaStore.Model {
 
     /// <summary>Field number for the "postings" field.</summary>
     public const int PostingsFieldNumber = 4;
-    private static readonly pb::FieldCodec<ulong> _repeated_postings_codec
-        = pb::FieldCodec.ForUInt64(34);
-    private readonly pbc::RepeatedField<ulong> postings_ = new pbc::RepeatedField<ulong>();
+    private static readonly pb::FieldCodec<global::XiaoyaStore.Model.Posting> _repeated_postings_codec
+        = pb::FieldCodec.ForMessage(34, global::XiaoyaStore.Model.Posting.Parser);
+    private readonly pbc::RepeatedField<global::XiaoyaStore.Model.Posting> postings_ = new pbc::RepeatedField<global::XiaoyaStore.Model.Posting>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<ulong> Postings {
+    public pbc::RepeatedField<global::XiaoyaStore.Model.Posting> Postings {
       get { return postings_; }
     }
 
@@ -585,13 +747,133 @@ namespace XiaoyaStore.Model {
             DocumentFrequency = input.ReadUInt64();
             break;
           }
-          case 34:
-          case 32: {
+          case 34: {
             postings_.AddEntriesFrom(input, _repeated_postings_codec);
             break;
           }
           case 40: {
             IsAdd = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class PostingLists : pb::IMessage<PostingLists> {
+    private static readonly pb::MessageParser<PostingLists> _parser = new pb::MessageParser<PostingLists>(() => new PostingLists());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<PostingLists> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::XiaoyaStore.Model.ModelsReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PostingLists() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PostingLists(PostingLists other) : this() {
+      items_ = other.items_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PostingLists Clone() {
+      return new PostingLists(this);
+    }
+
+    /// <summary>Field number for the "items" field.</summary>
+    public const int ItemsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::XiaoyaStore.Model.PostingList> _repeated_items_codec
+        = pb::FieldCodec.ForMessage(10, global::XiaoyaStore.Model.PostingList.Parser);
+    private readonly pbc::RepeatedField<global::XiaoyaStore.Model.PostingList> items_ = new pbc::RepeatedField<global::XiaoyaStore.Model.PostingList>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::XiaoyaStore.Model.PostingList> Items {
+      get { return items_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as PostingLists);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(PostingLists other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!items_.Equals(other.items_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= items_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      items_.WriteTo(output, _repeated_items_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += items_.CalculateSize(_repeated_items_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(PostingLists other) {
+      if (other == null) {
+        return;
+      }
+      items_.Add(other.items_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            items_.AddEntriesFrom(input, _repeated_items_codec);
             break;
           }
         }
@@ -608,7 +890,7 @@ namespace XiaoyaStore.Model {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::XiaoyaStore.Model.ModelsReflection.Descriptor.MessageTypes[2]; }
+      get { return global::XiaoyaStore.Model.ModelsReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -765,7 +1047,7 @@ namespace XiaoyaStore.Model {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::XiaoyaStore.Model.ModelsReflection.Descriptor.MessageTypes[3]; }
+      get { return global::XiaoyaStore.Model.ModelsReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -886,7 +1168,7 @@ namespace XiaoyaStore.Model {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::XiaoyaStore.Model.ModelsReflection.Descriptor.MessageTypes[4]; }
+      get { return global::XiaoyaStore.Model.ModelsReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1210,7 +1492,7 @@ namespace XiaoyaStore.Model {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::XiaoyaStore.Model.ModelsReflection.Descriptor.MessageTypes[5]; }
+      get { return global::XiaoyaStore.Model.ModelsReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1815,7 +2097,7 @@ namespace XiaoyaStore.Model {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::XiaoyaStore.Model.ModelsReflection.Descriptor.MessageTypes[6]; }
+      get { return global::XiaoyaStore.Model.ModelsReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2000,7 +2282,7 @@ namespace XiaoyaStore.Model {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::XiaoyaStore.Model.ModelsReflection.Descriptor.MessageTypes[7]; }
+      get { return global::XiaoyaStore.Model.ModelsReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2149,7 +2431,7 @@ namespace XiaoyaStore.Model {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::XiaoyaStore.Model.ModelsReflection.Descriptor.MessageTypes[8]; }
+      get { return global::XiaoyaStore.Model.ModelsReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

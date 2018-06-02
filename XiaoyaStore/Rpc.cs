@@ -49,51 +49,54 @@ namespace XiaoyaStore.Service {
             "ASADKAkiOgoKQXJnVXJsRmlsZRIsCgh1cmxfZmlsZRgBIAEoCzIaLlhpYW95",
             "YVN0b3JlLk1vZGVsLlVybEZpbGUiRgoOQXJnUHVzaEJhY2tVcmwSCwoDdXJs",
             "GAEgASgJEhcKD3VwZGF0ZV9pbnRlcnZhbBgCIAEoBBIOCgZmYWlsZWQYAyAB",
-            "KAgiRQoOQXJnUG9zdGluZ0xpc3QSMwoLcG9zdGluZ2xpc3QYASABKAsyHi5Y",
-            "aWFveWFTdG9yZS5Nb2RlbC5Qb3N0aW5nTGlzdCIyCghBcmdMaW5rcxImCgVs",
-            "aW5rcxgBIAMoCzIXLlhpYW95YVN0b3JlLk1vZGVsLkxpbmsiUAoOQXJnU2F2",
-            "ZUluZGljZXMSEwoLdXJsX2ZpbGVfaWQYASABKAQSKQoHaW5kaWNlcxgCIAMo",
-            "CzIYLlhpYW95YVN0b3JlLk1vZGVsLkluZGV4IjAKC0FyZ0luZGV4S2V5EhMK",
-            "C3VybF9maWxlX2lkGAEgASgEEgwKBHdvcmQYAiABKAky2gMKFlVybEZyb250",
-            "aWVySXRlbVNlcnZpY2USQQoESW5pdBIcLlhpYW95YVN0b3JlLlNlcnZpY2Uu",
-            "QXJnVXJscxobLlhpYW95YVN0b3JlLlNlcnZpY2UuUmVzdWx0EkUKCFB1c2hV",
-            "cmxzEhwuWGlhb3lhU3RvcmUuU2VydmljZS5BcmdVcmxzGhsuWGlhb3lhU3Rv",
-            "cmUuU2VydmljZS5SZXN1bHQSTwoLUHVzaEJhY2tVcmwSIy5YaWFveWFTdG9y",
-            "ZS5TZXJ2aWNlLkFyZ1B1c2hCYWNrVXJsGhsuWGlhb3lhU3RvcmUuU2Vydmlj",
-            "ZS5SZXN1bHQSSgoGUG9wVXJsEhwuWGlhb3lhU3RvcmUuU2VydmljZS5BcmdW",
-            "b2lkGiIuWGlhb3lhU3RvcmUuU2VydmljZS5SZXN1bHRXaXRoVXJsEkUKCVJl",
-            "bW92ZVVybBIbLlhpYW95YVN0b3JlLlNlcnZpY2UuQXJnVXJsGhsuWGlhb3lh",
-            "U3RvcmUuU2VydmljZS5SZXN1bHQSUgoMR2V0SG9zdENvdW50EhwuWGlhb3lh",
-            "U3RvcmUuU2VydmljZS5BcmdIb3N0GiQuWGlhb3lhU3RvcmUuU2VydmljZS5S",
-            "ZXN1bHRXaXRoQ291bnQynAQKDlVybEZpbGVTZXJ2aWNlElQKDkdldFVybEZp",
-            "bGVCeUlkEhouWGlhb3lhU3RvcmUuU2VydmljZS5BcmdJZBomLlhpYW95YVN0",
-            "b3JlLlNlcnZpY2UuUmVzdWx0V2l0aFVybEZpbGUSVgoPR2V0VXJsRmlsZUJ5",
-            "VXJsEhsuWGlhb3lhU3RvcmUuU2VydmljZS5BcmdVcmwaJi5YaWFveWFTdG9y",
-            "ZS5TZXJ2aWNlLlJlc3VsdFdpdGhVcmxGaWxlEloKEUdldFVybEZpbGVzQnlI",
-            "YXNoEhwuWGlhb3lhU3RvcmUuU2VydmljZS5BcmdIYXNoGicuWGlhb3lhU3Rv",
-            "cmUuU2VydmljZS5SZXN1bHRXaXRoVXJsRmlsZXMSaQoWU2F2ZVVybEZpbGVB",
-            "bmRHZXRPbGRJZBIfLlhpYW95YVN0b3JlLlNlcnZpY2UuQXJnVXJsRmlsZRou",
-            "LlhpYW95YVN0b3JlLlNlcnZpY2UuUmVzdWx0V2l0aFVybEZpbGVBbmRPbGRJ",
-            "ZBJOCghHZXRDb3VudBIcLlhpYW95YVN0b3JlLlNlcnZpY2UuQXJnVm9pZBok",
-            "LlhpYW95YVN0b3JlLlNlcnZpY2UuUmVzdWx0V2l0aENvdW50EkUKCkNvbnRh",
-            "aW5zSWQSGi5YaWFveWFTdG9yZS5TZXJ2aWNlLkFyZ0lkGhsuWGlhb3lhU3Rv",
-            "cmUuU2VydmljZS5SZXN1bHQyxQEKElBvc3RpbmdMaXN0U2VydmljZRJTCg9T",
-            "YXZlUG9zdGluZ0xpc3QSIy5YaWFveWFTdG9yZS5TZXJ2aWNlLkFyZ1Bvc3Rp",
-            "bmdMaXN0GhsuWGlhb3lhU3RvcmUuU2VydmljZS5SZXN1bHQSWgoOR2V0UG9z",
-            "dGluZ0xpc3QSHC5YaWFveWFTdG9yZS5TZXJ2aWNlLkFyZ1dvcmQaKi5YaWFv",
-            "eWFTdG9yZS5TZXJ2aWNlLlJlc3VsdFdpdGhQb3N0aW5nTGlzdDLwAQoLTGlu",
-            "a1NlcnZpY2USRwoJU2F2ZUxpbmtzEh0uWGlhb3lhU3RvcmUuU2VydmljZS5B",
-            "cmdMaW5rcxobLlhpYW95YVN0b3JlLlNlcnZpY2UuUmVzdWx0EkkKC1JlbW92",
-            "ZUxpbmtzEh0uWGlhb3lhU3RvcmUuU2VydmljZS5BcmdMaW5rcxobLlhpYW95",
-            "YVN0b3JlLlNlcnZpY2UuUmVzdWx0Ek0KCEdldExpbmtzEhsuWGlhb3lhU3Rv",
-            "cmUuU2VydmljZS5BcmdVcmwaJC5YaWFveWFTdG9yZS5TZXJ2aWNlLlJlc3Vs",
-            "dFdpdGhMaW5rczKEAgoUSW52ZXJ0ZWRJbmRleFNlcnZpY2USRwoMQ2xlYXJJ",
-            "bmRpY2VzEhouWGlhb3lhU3RvcmUuU2VydmljZS5BcmdJZBobLlhpYW95YVN0",
-            "b3JlLlNlcnZpY2UuUmVzdWx0Ek8KC1NhdmVJbmRpY2VzEiMuWGlhb3lhU3Rv",
-            "cmUuU2VydmljZS5BcmdTYXZlSW5kaWNlcxobLlhpYW95YVN0b3JlLlNlcnZp",
-            "Y2UuUmVzdWx0ElIKCEdldEluZGV4EiAuWGlhb3lhU3RvcmUuU2VydmljZS5B",
-            "cmdJbmRleEtleRokLlhpYW95YVN0b3JlLlNlcnZpY2UuUmVzdWx0V2l0aElu",
-            "ZGV4YgZwcm90bzM="));
+            "KAgiYAoTQXJnU2F2ZVBvc3RpbmdMaXN0cxITCgt1cmxfZmlsZV9pZBgBIAEo",
+            "BBI0Cgxwb3N0aW5nX2xpc3QYAiADKAsyHi5YaWFveWFTdG9yZS5Nb2RlbC5Q",
+            "b3N0aW5nTGlzdCJLCgxBcmdTYXZlTGlua3MSEwoLdXJsX2ZpbGVfaWQYASAB",
+            "KAQSJgoFbGlua3MYAiADKAsyFy5YaWFveWFTdG9yZS5Nb2RlbC5MaW5rIlAK",
+            "DkFyZ1NhdmVJbmRpY2VzEhMKC3VybF9maWxlX2lkGAEgASgEEikKB2luZGlj",
+            "ZXMYAiADKAsyGC5YaWFveWFTdG9yZS5Nb2RlbC5JbmRleCIwCgtBcmdJbmRl",
+            "eEtleRITCgt1cmxfZmlsZV9pZBgBIAEoBBIMCgR3b3JkGAIgASgJMtoDChZV",
+            "cmxGcm9udGllckl0ZW1TZXJ2aWNlEkEKBEluaXQSHC5YaWFveWFTdG9yZS5T",
+            "ZXJ2aWNlLkFyZ1VybHMaGy5YaWFveWFTdG9yZS5TZXJ2aWNlLlJlc3VsdBJF",
+            "CghQdXNoVXJscxIcLlhpYW95YVN0b3JlLlNlcnZpY2UuQXJnVXJscxobLlhp",
+            "YW95YVN0b3JlLlNlcnZpY2UuUmVzdWx0Ek8KC1B1c2hCYWNrVXJsEiMuWGlh",
+            "b3lhU3RvcmUuU2VydmljZS5BcmdQdXNoQmFja1VybBobLlhpYW95YVN0b3Jl",
+            "LlNlcnZpY2UuUmVzdWx0EkoKBlBvcFVybBIcLlhpYW95YVN0b3JlLlNlcnZp",
+            "Y2UuQXJnVm9pZBoiLlhpYW95YVN0b3JlLlNlcnZpY2UuUmVzdWx0V2l0aFVy",
+            "bBJFCglSZW1vdmVVcmwSGy5YaWFveWFTdG9yZS5TZXJ2aWNlLkFyZ1VybBob",
+            "LlhpYW95YVN0b3JlLlNlcnZpY2UuUmVzdWx0ElIKDEdldEhvc3RDb3VudBIc",
+            "LlhpYW95YVN0b3JlLlNlcnZpY2UuQXJnSG9zdBokLlhpYW95YVN0b3JlLlNl",
+            "cnZpY2UuUmVzdWx0V2l0aENvdW50MpwECg5VcmxGaWxlU2VydmljZRJUCg5H",
+            "ZXRVcmxGaWxlQnlJZBIaLlhpYW95YVN0b3JlLlNlcnZpY2UuQXJnSWQaJi5Y",
+            "aWFveWFTdG9yZS5TZXJ2aWNlLlJlc3VsdFdpdGhVcmxGaWxlElYKD0dldFVy",
+            "bEZpbGVCeVVybBIbLlhpYW95YVN0b3JlLlNlcnZpY2UuQXJnVXJsGiYuWGlh",
+            "b3lhU3RvcmUuU2VydmljZS5SZXN1bHRXaXRoVXJsRmlsZRJaChFHZXRVcmxG",
+            "aWxlc0J5SGFzaBIcLlhpYW95YVN0b3JlLlNlcnZpY2UuQXJnSGFzaBonLlhp",
+            "YW95YVN0b3JlLlNlcnZpY2UuUmVzdWx0V2l0aFVybEZpbGVzEmkKFlNhdmVV",
+            "cmxGaWxlQW5kR2V0T2xkSWQSHy5YaWFveWFTdG9yZS5TZXJ2aWNlLkFyZ1Vy",
+            "bEZpbGUaLi5YaWFveWFTdG9yZS5TZXJ2aWNlLlJlc3VsdFdpdGhVcmxGaWxl",
+            "QW5kT2xkSWQSTgoIR2V0Q291bnQSHC5YaWFveWFTdG9yZS5TZXJ2aWNlLkFy",
+            "Z1ZvaWQaJC5YaWFveWFTdG9yZS5TZXJ2aWNlLlJlc3VsdFdpdGhDb3VudBJF",
+            "CgpDb250YWluc0lkEhouWGlhb3lhU3RvcmUuU2VydmljZS5BcmdJZBobLlhp",
+            "YW95YVN0b3JlLlNlcnZpY2UuUmVzdWx0MpkCChJQb3N0aW5nTGlzdFNlcnZp",
+            "Y2USWQoQU2F2ZVBvc3RpbmdMaXN0cxIoLlhpYW95YVN0b3JlLlNlcnZpY2Uu",
+            "QXJnU2F2ZVBvc3RpbmdMaXN0cxobLlhpYW95YVN0b3JlLlNlcnZpY2UuUmVz",
+            "dWx0EkwKEUNsZWFyUG9zdGluZ0xpc3RzEhouWGlhb3lhU3RvcmUuU2Vydmlj",
+            "ZS5BcmdJZBobLlhpYW95YVN0b3JlLlNlcnZpY2UuUmVzdWx0EloKDkdldFBv",
+            "c3RpbmdMaXN0EhwuWGlhb3lhU3RvcmUuU2VydmljZS5BcmdXb3JkGiouWGlh",
+            "b3lhU3RvcmUuU2VydmljZS5SZXN1bHRXaXRoUG9zdGluZ0xpc3Qy8AEKC0xp",
+            "bmtTZXJ2aWNlEksKCVNhdmVMaW5rcxIhLlhpYW95YVN0b3JlLlNlcnZpY2Uu",
+            "QXJnU2F2ZUxpbmtzGhsuWGlhb3lhU3RvcmUuU2VydmljZS5SZXN1bHQSRQoK",
+            "Q2xlYXJMaW5rcxIaLlhpYW95YVN0b3JlLlNlcnZpY2UuQXJnSWQaGy5YaWFv",
+            "eWFTdG9yZS5TZXJ2aWNlLlJlc3VsdBJNCghHZXRMaW5rcxIbLlhpYW95YVN0",
+            "b3JlLlNlcnZpY2UuQXJnVXJsGiQuWGlhb3lhU3RvcmUuU2VydmljZS5SZXN1",
+            "bHRXaXRoTGlua3MyhAIKFEludmVydGVkSW5kZXhTZXJ2aWNlEkcKDENsZWFy",
+            "SW5kaWNlcxIaLlhpYW95YVN0b3JlLlNlcnZpY2UuQXJnSWQaGy5YaWFveWFT",
+            "dG9yZS5TZXJ2aWNlLlJlc3VsdBJPCgtTYXZlSW5kaWNlcxIjLlhpYW95YVN0",
+            "b3JlLlNlcnZpY2UuQXJnU2F2ZUluZGljZXMaGy5YaWFveWFTdG9yZS5TZXJ2",
+            "aWNlLlJlc3VsdBJSCghHZXRJbmRleBIgLlhpYW95YVN0b3JlLlNlcnZpY2Uu",
+            "QXJnSW5kZXhLZXkaJC5YaWFveWFTdG9yZS5TZXJ2aWNlLlJlc3VsdFdpdGhJ",
+            "bmRleGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::XiaoyaStore.Model.ModelsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -116,8 +119,8 @@ namespace XiaoyaStore.Service {
             new pbr::GeneratedClrTypeInfo(typeof(global::XiaoyaStore.Service.ArgUrls), global::XiaoyaStore.Service.ArgUrls.Parser, new[]{ "Urls" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::XiaoyaStore.Service.ArgUrlFile), global::XiaoyaStore.Service.ArgUrlFile.Parser, new[]{ "UrlFile" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::XiaoyaStore.Service.ArgPushBackUrl), global::XiaoyaStore.Service.ArgPushBackUrl.Parser, new[]{ "Url", "UpdateInterval", "Failed" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::XiaoyaStore.Service.ArgPostingList), global::XiaoyaStore.Service.ArgPostingList.Parser, new[]{ "Postinglist" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::XiaoyaStore.Service.ArgLinks), global::XiaoyaStore.Service.ArgLinks.Parser, new[]{ "Links" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::XiaoyaStore.Service.ArgSavePostingLists), global::XiaoyaStore.Service.ArgSavePostingLists.Parser, new[]{ "UrlFileId", "PostingList" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::XiaoyaStore.Service.ArgSaveLinks), global::XiaoyaStore.Service.ArgSaveLinks.Parser, new[]{ "UrlFileId", "Links" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::XiaoyaStore.Service.ArgSaveIndices), global::XiaoyaStore.Service.ArgSaveIndices.Parser, new[]{ "UrlFileId", "Indices" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::XiaoyaStore.Service.ArgIndexKey), global::XiaoyaStore.Service.ArgIndexKey.Parser, new[]{ "UrlFileId", "Word" }, null, null, null)
           }));
@@ -2897,11 +2900,11 @@ namespace XiaoyaStore.Service {
 
   }
 
-  public sealed partial class ArgPostingList : pb::IMessage<ArgPostingList> {
-    private static readonly pb::MessageParser<ArgPostingList> _parser = new pb::MessageParser<ArgPostingList>(() => new ArgPostingList());
+  public sealed partial class ArgSavePostingLists : pb::IMessage<ArgSavePostingLists> {
+    private static readonly pb::MessageParser<ArgSavePostingLists> _parser = new pb::MessageParser<ArgSavePostingLists>(() => new ArgSavePostingLists());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<ArgPostingList> Parser { get { return _parser; } }
+    public static pb::MessageParser<ArgSavePostingLists> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
@@ -2914,55 +2917,68 @@ namespace XiaoyaStore.Service {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ArgPostingList() {
+    public ArgSavePostingLists() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ArgPostingList(ArgPostingList other) : this() {
-      Postinglist = other.postinglist_ != null ? other.Postinglist.Clone() : null;
+    public ArgSavePostingLists(ArgSavePostingLists other) : this() {
+      urlFileId_ = other.urlFileId_;
+      postingList_ = other.postingList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ArgPostingList Clone() {
-      return new ArgPostingList(this);
+    public ArgSavePostingLists Clone() {
+      return new ArgSavePostingLists(this);
     }
 
-    /// <summary>Field number for the "postinglist" field.</summary>
-    public const int PostinglistFieldNumber = 1;
-    private global::XiaoyaStore.Model.PostingList postinglist_;
+    /// <summary>Field number for the "url_file_id" field.</summary>
+    public const int UrlFileIdFieldNumber = 1;
+    private ulong urlFileId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::XiaoyaStore.Model.PostingList Postinglist {
-      get { return postinglist_; }
+    public ulong UrlFileId {
+      get { return urlFileId_; }
       set {
-        postinglist_ = value;
+        urlFileId_ = value;
       }
+    }
+
+    /// <summary>Field number for the "posting_list" field.</summary>
+    public const int PostingListFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::XiaoyaStore.Model.PostingList> _repeated_postingList_codec
+        = pb::FieldCodec.ForMessage(18, global::XiaoyaStore.Model.PostingList.Parser);
+    private readonly pbc::RepeatedField<global::XiaoyaStore.Model.PostingList> postingList_ = new pbc::RepeatedField<global::XiaoyaStore.Model.PostingList>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::XiaoyaStore.Model.PostingList> PostingList {
+      get { return postingList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as ArgPostingList);
+      return Equals(other as ArgSavePostingLists);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(ArgPostingList other) {
+    public bool Equals(ArgSavePostingLists other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(Postinglist, other.Postinglist)) return false;
+      if (UrlFileId != other.UrlFileId) return false;
+      if(!postingList_.Equals(other.postingList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (postinglist_ != null) hash ^= Postinglist.GetHashCode();
+      if (UrlFileId != 0UL) hash ^= UrlFileId.GetHashCode();
+      hash ^= postingList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2976,10 +2992,11 @@ namespace XiaoyaStore.Service {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (postinglist_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(Postinglist);
+      if (UrlFileId != 0UL) {
+        output.WriteRawTag(8);
+        output.WriteUInt64(UrlFileId);
       }
+      postingList_.WriteTo(output, _repeated_postingList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2988,9 +3005,10 @@ namespace XiaoyaStore.Service {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (postinglist_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Postinglist);
+      if (UrlFileId != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(UrlFileId);
       }
+      size += postingList_.CalculateSize(_repeated_postingList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2998,16 +3016,14 @@ namespace XiaoyaStore.Service {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(ArgPostingList other) {
+    public void MergeFrom(ArgSavePostingLists other) {
       if (other == null) {
         return;
       }
-      if (other.postinglist_ != null) {
-        if (postinglist_ == null) {
-          postinglist_ = new global::XiaoyaStore.Model.PostingList();
-        }
-        Postinglist.MergeFrom(other.Postinglist);
+      if (other.UrlFileId != 0UL) {
+        UrlFileId = other.UrlFileId;
       }
+      postingList_.Add(other.postingList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -3019,11 +3035,12 @@ namespace XiaoyaStore.Service {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            if (postinglist_ == null) {
-              postinglist_ = new global::XiaoyaStore.Model.PostingList();
-            }
-            input.ReadMessage(postinglist_);
+          case 8: {
+            UrlFileId = input.ReadUInt64();
+            break;
+          }
+          case 18: {
+            postingList_.AddEntriesFrom(input, _repeated_postingList_codec);
             break;
           }
         }
@@ -3032,11 +3049,11 @@ namespace XiaoyaStore.Service {
 
   }
 
-  public sealed partial class ArgLinks : pb::IMessage<ArgLinks> {
-    private static readonly pb::MessageParser<ArgLinks> _parser = new pb::MessageParser<ArgLinks>(() => new ArgLinks());
+  public sealed partial class ArgSaveLinks : pb::IMessage<ArgSaveLinks> {
+    private static readonly pb::MessageParser<ArgSaveLinks> _parser = new pb::MessageParser<ArgSaveLinks>(() => new ArgSaveLinks());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<ArgLinks> Parser { get { return _parser; } }
+    public static pb::MessageParser<ArgSaveLinks> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
@@ -3049,27 +3066,39 @@ namespace XiaoyaStore.Service {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ArgLinks() {
+    public ArgSaveLinks() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ArgLinks(ArgLinks other) : this() {
+    public ArgSaveLinks(ArgSaveLinks other) : this() {
+      urlFileId_ = other.urlFileId_;
       links_ = other.links_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ArgLinks Clone() {
-      return new ArgLinks(this);
+    public ArgSaveLinks Clone() {
+      return new ArgSaveLinks(this);
+    }
+
+    /// <summary>Field number for the "url_file_id" field.</summary>
+    public const int UrlFileIdFieldNumber = 1;
+    private ulong urlFileId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ulong UrlFileId {
+      get { return urlFileId_; }
+      set {
+        urlFileId_ = value;
+      }
     }
 
     /// <summary>Field number for the "links" field.</summary>
-    public const int LinksFieldNumber = 1;
+    public const int LinksFieldNumber = 2;
     private static readonly pb::FieldCodec<global::XiaoyaStore.Model.Link> _repeated_links_codec
-        = pb::FieldCodec.ForMessage(10, global::XiaoyaStore.Model.Link.Parser);
+        = pb::FieldCodec.ForMessage(18, global::XiaoyaStore.Model.Link.Parser);
     private readonly pbc::RepeatedField<global::XiaoyaStore.Model.Link> links_ = new pbc::RepeatedField<global::XiaoyaStore.Model.Link>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::XiaoyaStore.Model.Link> Links {
@@ -3078,17 +3107,18 @@ namespace XiaoyaStore.Service {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as ArgLinks);
+      return Equals(other as ArgSaveLinks);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(ArgLinks other) {
+    public bool Equals(ArgSaveLinks other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (UrlFileId != other.UrlFileId) return false;
       if(!links_.Equals(other.links_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -3096,6 +3126,7 @@ namespace XiaoyaStore.Service {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
+      if (UrlFileId != 0UL) hash ^= UrlFileId.GetHashCode();
       hash ^= links_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -3110,6 +3141,10 @@ namespace XiaoyaStore.Service {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+      if (UrlFileId != 0UL) {
+        output.WriteRawTag(8);
+        output.WriteUInt64(UrlFileId);
+      }
       links_.WriteTo(output, _repeated_links_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -3119,6 +3154,9 @@ namespace XiaoyaStore.Service {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
+      if (UrlFileId != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(UrlFileId);
+      }
       size += links_.CalculateSize(_repeated_links_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3127,9 +3165,12 @@ namespace XiaoyaStore.Service {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(ArgLinks other) {
+    public void MergeFrom(ArgSaveLinks other) {
       if (other == null) {
         return;
+      }
+      if (other.UrlFileId != 0UL) {
+        UrlFileId = other.UrlFileId;
       }
       links_.Add(other.links_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -3143,7 +3184,11 @@ namespace XiaoyaStore.Service {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
+          case 8: {
+            UrlFileId = input.ReadUInt64();
+            break;
+          }
+          case 18: {
             links_.AddEntriesFrom(input, _repeated_links_codec);
             break;
           }

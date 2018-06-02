@@ -16,13 +16,24 @@ namespace XiaoyaStore.Store
             client = new PostingListService.PostingListServiceClient(channel);
         }
 
-        public bool SavePostingList(PostingList postingList)
+        public bool SavePostingLists(ulong urlFileId, IEnumerable<PostingList> postingLists)
         {
-            var arg = new ArgPostingList
+            var arg = new ArgSavePostingLists
             {
-                Postinglist = postingList
+                UrlFileId = urlFileId
             };
-            var result = client.SavePostingList(arg);
+            arg.PostingList.AddRange(postingLists);
+            var result = client.SavePostingLists(arg);
+            return result.IsSuccessful;
+        }
+
+        public bool ClearPostingLists(ulong urlFileId)
+        {
+            var arg = new ArgId
+            {
+                Id = urlFileId
+            };
+            var result = client.ClearPostingLists(arg);
             return result.IsSuccessful;
         }
 

@@ -10,19 +10,19 @@ LinkServiceImpl::LinkServiceImpl(LinkStore & store)
 	: mStore(store)
 { }
 
-::grpc::Status LinkServiceImpl::SaveLinks(::grpc::ServerContext * context, const ArgLinks * request, Result * response)
+::grpc::Status LinkServiceImpl::SaveLinks(::grpc::ServerContext * context, const ArgSaveLinks * request, Result * response)
 {
-	mStore.SaveLinks(std::vector<Link>(request->links().begin(),
-		request->links().end()));
+	mStore.SaveLinks(request->url_file_id(),
+		std::vector<Link>(request->links().begin(),
+			request->links().end()));
 	response->set_is_successful(true);
 
 	return Status::OK;
 }
 
-::grpc::Status LinkServiceImpl::RemoveLinks(::grpc::ServerContext * context, const ArgLinks * request, Result * response)
+::grpc::Status LinkServiceImpl::ClearLinks(::grpc::ServerContext * context, const ArgId * request, Result * response)
 {
-	mStore.RemoveLinks(std::vector<Link>(request->links().begin(),
-		request->links().end()));
+	mStore.ClearLinks(request->id());
 	response->set_is_successful(true);
 
 	return Status::OK;
@@ -34,6 +34,6 @@ LinkServiceImpl::LinkServiceImpl(LinkStore & store)
 	*response->mutable_links()
 		= ::google::protobuf::RepeatedPtrField<Link>(links.begin(), links.end());
 	response->set_is_successful(true);
-	
+
 	return Status::OK;
 }

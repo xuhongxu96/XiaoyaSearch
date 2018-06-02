@@ -16,22 +16,27 @@ namespace XiaoyaStore.Store
             client = new LinkService.LinkServiceClient(channel);
         }
 
-        public bool RemoveLinks(IEnumerable<Link> links)
+        public bool ClearLinks(ulong urlFileId)
         {
-            var arg = new ArgLinks();
-            arg.Links.AddRange(links);
-            var result = client.RemoveLinks(arg);
+            var arg = new ArgId
+            {
+                Id = urlFileId
+            };
+            var result = client.ClearLinks(arg);
             return result.IsSuccessful;
         }
 
-        public bool SaveLinks(IEnumerable<Link> links)
+        public bool SaveLinks(ulong urlFileId, IEnumerable<Link> links)
         {
-            var arg = new ArgLinks();
+            var arg = new ArgSaveLinks
+            {
+                UrlFileId = urlFileId
+            };
             arg.Links.AddRange(links);
             var result = client.SaveLinks(arg);
             return result.IsSuccessful;
         }
-        
+
         public IList<Link> GetLinks(string url)
         {
             var arg = new ArgUrl

@@ -10,7 +10,7 @@ using namespace XiaoyaStore::Helper;
 bool PostingListOperator::FullMergeV2(const MergeOperationInput & merge_in,
 	MergeOperationOutput * merge_out) const
 {
-	std::set<uint64_t> postingSet;
+	std::set<Posting, ModelCompare> postingSet;
 	uint64_t wordFrequency = 0, documentFrequency = 0;
 	std::string word;
 	if (merge_in.existing_value != nullptr)
@@ -35,13 +35,10 @@ bool PostingListOperator::FullMergeV2(const MergeOperationInput & merge_in,
 		}
 		else
 		{
-			std::set<uint64_t> result;
-			std::set_difference(postingSet.begin(),
-				postingSet.end(),
-				delta.postings().begin(),
-				delta.postings().end(),
-				std::inserter(result, result.end()));
-			postingSet.swap(result);
+			for (auto item : delta.postings())
+			{
+				postingSet.erase(item);
+			}
 
 			wordFrequency -= delta.word_frequency();
 			documentFrequency -= delta.document_frequency();
@@ -65,7 +62,7 @@ bool PostingListOperator::FullMergeV2(const MergeOperationInput & merge_in,
 	PostingList result;
 	result.set_is_add(true);
 	*result.mutable_postings()
-		= ::google::protobuf::RepeatedField<google::protobuf::uint64>(
+		= ::google::protobuf::RepeatedPtrField<Posting>(
 			postingSet.begin(), postingSet.end());
 	result.set_word_frequency(wordFrequency);
 	result.set_document_frequency(documentFrequency);

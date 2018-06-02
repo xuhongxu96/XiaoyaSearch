@@ -117,16 +117,16 @@ class ArgPushBackUrlDefaultTypeInternal {
   ::google::protobuf::internal::ExplicitlyConstructed<ArgPushBackUrl>
       _instance;
 } _ArgPushBackUrl_default_instance_;
-class ArgPostingListDefaultTypeInternal {
+class ArgSavePostingListsDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<ArgPostingList>
+  ::google::protobuf::internal::ExplicitlyConstructed<ArgSavePostingLists>
       _instance;
-} _ArgPostingList_default_instance_;
-class ArgLinksDefaultTypeInternal {
+} _ArgSavePostingLists_default_instance_;
+class ArgSaveLinksDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<ArgLinks>
+  ::google::protobuf::internal::ExplicitlyConstructed<ArgSaveLinks>
       _instance;
-} _ArgLinks_default_instance_;
+} _ArgSaveLinks_default_instance_;
 class ArgSaveIndicesDefaultTypeInternal {
  public:
   ::google::protobuf::internal::ExplicitlyConstructed<ArgSaveIndices>
@@ -547,7 +547,7 @@ void InitDefaultsArgPushBackUrl() {
   ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsArgPushBackUrlImpl);
 }
 
-void InitDefaultsArgPostingListImpl() {
+void InitDefaultsArgSavePostingListsImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
 #ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
@@ -557,19 +557,19 @@ void InitDefaultsArgPostingListImpl() {
 #endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_models_2eproto::InitDefaultsPostingList();
   {
-    void* ptr = &::XiaoyaStore::Service::_ArgPostingList_default_instance_;
-    new (ptr) ::XiaoyaStore::Service::ArgPostingList();
+    void* ptr = &::XiaoyaStore::Service::_ArgSavePostingLists_default_instance_;
+    new (ptr) ::XiaoyaStore::Service::ArgSavePostingLists();
     ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::XiaoyaStore::Service::ArgPostingList::InitAsDefaultInstance();
+  ::XiaoyaStore::Service::ArgSavePostingLists::InitAsDefaultInstance();
 }
 
-void InitDefaultsArgPostingList() {
+void InitDefaultsArgSavePostingLists() {
   static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsArgPostingListImpl);
+  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsArgSavePostingListsImpl);
 }
 
-void InitDefaultsArgLinksImpl() {
+void InitDefaultsArgSaveLinksImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
 #ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
@@ -579,16 +579,16 @@ void InitDefaultsArgLinksImpl() {
 #endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_models_2eproto::InitDefaultsLink();
   {
-    void* ptr = &::XiaoyaStore::Service::_ArgLinks_default_instance_;
-    new (ptr) ::XiaoyaStore::Service::ArgLinks();
+    void* ptr = &::XiaoyaStore::Service::_ArgSaveLinks_default_instance_;
+    new (ptr) ::XiaoyaStore::Service::ArgSaveLinks();
     ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::XiaoyaStore::Service::ArgLinks::InitAsDefaultInstance();
+  ::XiaoyaStore::Service::ArgSaveLinks::InitAsDefaultInstance();
 }
 
-void InitDefaultsArgLinks() {
+void InitDefaultsArgSaveLinks() {
   static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsArgLinksImpl);
+  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsArgSaveLinksImpl);
 }
 
 void InitDefaultsArgSaveIndicesImpl() {
@@ -763,17 +763,19 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::XiaoyaStore::Service::ArgPushBackUrl, update_interval_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::XiaoyaStore::Service::ArgPushBackUrl, failed_),
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::XiaoyaStore::Service::ArgPostingList, _internal_metadata_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::XiaoyaStore::Service::ArgSavePostingLists, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::XiaoyaStore::Service::ArgPostingList, postinglist_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::XiaoyaStore::Service::ArgSavePostingLists, url_file_id_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::XiaoyaStore::Service::ArgSavePostingLists, posting_list_),
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::XiaoyaStore::Service::ArgLinks, _internal_metadata_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::XiaoyaStore::Service::ArgSaveLinks, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::XiaoyaStore::Service::ArgLinks, links_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::XiaoyaStore::Service::ArgSaveLinks, url_file_id_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::XiaoyaStore::Service::ArgSaveLinks, links_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::XiaoyaStore::Service::ArgSaveIndices, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -809,10 +811,10 @@ static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROT
   { 105, -1, sizeof(::XiaoyaStore::Service::ArgUrls)},
   { 111, -1, sizeof(::XiaoyaStore::Service::ArgUrlFile)},
   { 117, -1, sizeof(::XiaoyaStore::Service::ArgPushBackUrl)},
-  { 125, -1, sizeof(::XiaoyaStore::Service::ArgPostingList)},
-  { 131, -1, sizeof(::XiaoyaStore::Service::ArgLinks)},
-  { 137, -1, sizeof(::XiaoyaStore::Service::ArgSaveIndices)},
-  { 144, -1, sizeof(::XiaoyaStore::Service::ArgIndexKey)},
+  { 125, -1, sizeof(::XiaoyaStore::Service::ArgSavePostingLists)},
+  { 132, -1, sizeof(::XiaoyaStore::Service::ArgSaveLinks)},
+  { 139, -1, sizeof(::XiaoyaStore::Service::ArgSaveIndices)},
+  { 146, -1, sizeof(::XiaoyaStore::Service::ArgIndexKey)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -835,8 +837,8 @@ static ::google::protobuf::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::google::protobuf::Message*>(&::XiaoyaStore::Service::_ArgUrls_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::XiaoyaStore::Service::_ArgUrlFile_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::XiaoyaStore::Service::_ArgPushBackUrl_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::XiaoyaStore::Service::_ArgPostingList_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::XiaoyaStore::Service::_ArgLinks_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::XiaoyaStore::Service::_ArgSavePostingLists_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::XiaoyaStore::Service::_ArgSaveLinks_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::XiaoyaStore::Service::_ArgSaveIndices_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::XiaoyaStore::Service::_ArgIndexKey_default_instance_),
 };
@@ -891,59 +893,63 @@ void AddDescriptorsImpl() {
       "rgUrlFile\022,\n\010url_file\030\001 \001(\0132\032.XiaoyaStor"
       "e.Model.UrlFile\"F\n\016ArgPushBackUrl\022\013\n\003url"
       "\030\001 \001(\t\022\027\n\017update_interval\030\002 \001(\004\022\016\n\006faile"
-      "d\030\003 \001(\010\"E\n\016ArgPostingList\0223\n\013postinglist"
-      "\030\001 \001(\0132\036.XiaoyaStore.Model.PostingList\"2"
-      "\n\010ArgLinks\022&\n\005links\030\001 \003(\0132\027.XiaoyaStore."
-      "Model.Link\"P\n\016ArgSaveIndices\022\023\n\013url_file"
-      "_id\030\001 \001(\004\022)\n\007indices\030\002 \003(\0132\030.XiaoyaStore"
-      ".Model.Index\"0\n\013ArgIndexKey\022\023\n\013url_file_"
-      "id\030\001 \001(\004\022\014\n\004word\030\002 \001(\t2\332\003\n\026UrlFrontierIt"
-      "emService\022A\n\004Init\022\034.XiaoyaStore.Service."
-      "ArgUrls\032\033.XiaoyaStore.Service.Result\022E\n\010"
-      "PushUrls\022\034.XiaoyaStore.Service.ArgUrls\032\033"
-      ".XiaoyaStore.Service.Result\022O\n\013PushBackU"
-      "rl\022#.XiaoyaStore.Service.ArgPushBackUrl\032"
-      "\033.XiaoyaStore.Service.Result\022J\n\006PopUrl\022\034"
-      ".XiaoyaStore.Service.ArgVoid\032\".XiaoyaSto"
-      "re.Service.ResultWithUrl\022E\n\tRemoveUrl\022\033."
-      "XiaoyaStore.Service.ArgUrl\032\033.XiaoyaStore"
-      ".Service.Result\022R\n\014GetHostCount\022\034.Xiaoya"
-      "Store.Service.ArgHost\032$.XiaoyaStore.Serv"
-      "ice.ResultWithCount2\234\004\n\016UrlFileService\022T"
-      "\n\016GetUrlFileById\022\032.XiaoyaStore.Service.A"
-      "rgId\032&.XiaoyaStore.Service.ResultWithUrl"
-      "File\022V\n\017GetUrlFileByUrl\022\033.XiaoyaStore.Se"
-      "rvice.ArgUrl\032&.XiaoyaStore.Service.Resul"
-      "tWithUrlFile\022Z\n\021GetUrlFilesByHash\022\034.Xiao"
-      "yaStore.Service.ArgHash\032\'.XiaoyaStore.Se"
-      "rvice.ResultWithUrlFiles\022i\n\026SaveUrlFileA"
-      "ndGetOldId\022\037.XiaoyaStore.Service.ArgUrlF"
-      "ile\032..XiaoyaStore.Service.ResultWithUrlF"
-      "ileAndOldId\022N\n\010GetCount\022\034.XiaoyaStore.Se"
-      "rvice.ArgVoid\032$.XiaoyaStore.Service.Resu"
-      "ltWithCount\022E\n\nContainsId\022\032.XiaoyaStore."
-      "Service.ArgId\032\033.XiaoyaStore.Service.Resu"
-      "lt2\305\001\n\022PostingListService\022S\n\017SavePosting"
-      "List\022#.XiaoyaStore.Service.ArgPostingLis"
-      "t\032\033.XiaoyaStore.Service.Result\022Z\n\016GetPos"
-      "tingList\022\034.XiaoyaStore.Service.ArgWord\032*"
-      ".XiaoyaStore.Service.ResultWithPostingLi"
-      "st2\360\001\n\013LinkService\022G\n\tSaveLinks\022\035.Xiaoya"
-      "Store.Service.ArgLinks\032\033.XiaoyaStore.Ser"
-      "vice.Result\022I\n\013RemoveLinks\022\035.XiaoyaStore"
-      ".Service.ArgLinks\032\033.XiaoyaStore.Service."
-      "Result\022M\n\010GetLinks\022\033.XiaoyaStore.Service"
-      ".ArgUrl\032$.XiaoyaStore.Service.ResultWith"
-      "Links2\204\002\n\024InvertedIndexService\022G\n\014ClearI"
-      "ndices\022\032.XiaoyaStore.Service.ArgId\032\033.Xia"
-      "oyaStore.Service.Result\022O\n\013SaveIndices\022#"
-      ".XiaoyaStore.Service.ArgSaveIndices\032\033.Xi"
-      "aoyaStore.Service.Result\022R\n\010GetIndex\022 .X"
-      "iaoyaStore.Service.ArgIndexKey\032$.XiaoyaS"
-      "tore.Service.ResultWithIndexb\006proto3"
+      "d\030\003 \001(\010\"`\n\023ArgSavePostingLists\022\023\n\013url_fi"
+      "le_id\030\001 \001(\004\0224\n\014posting_list\030\002 \003(\0132\036.Xiao"
+      "yaStore.Model.PostingList\"K\n\014ArgSaveLink"
+      "s\022\023\n\013url_file_id\030\001 \001(\004\022&\n\005links\030\002 \003(\0132\027."
+      "XiaoyaStore.Model.Link\"P\n\016ArgSaveIndices"
+      "\022\023\n\013url_file_id\030\001 \001(\004\022)\n\007indices\030\002 \003(\0132\030"
+      ".XiaoyaStore.Model.Index\"0\n\013ArgIndexKey\022"
+      "\023\n\013url_file_id\030\001 \001(\004\022\014\n\004word\030\002 \001(\t2\332\003\n\026U"
+      "rlFrontierItemService\022A\n\004Init\022\034.XiaoyaSt"
+      "ore.Service.ArgUrls\032\033.XiaoyaStore.Servic"
+      "e.Result\022E\n\010PushUrls\022\034.XiaoyaStore.Servi"
+      "ce.ArgUrls\032\033.XiaoyaStore.Service.Result\022"
+      "O\n\013PushBackUrl\022#.XiaoyaStore.Service.Arg"
+      "PushBackUrl\032\033.XiaoyaStore.Service.Result"
+      "\022J\n\006PopUrl\022\034.XiaoyaStore.Service.ArgVoid"
+      "\032\".XiaoyaStore.Service.ResultWithUrl\022E\n\t"
+      "RemoveUrl\022\033.XiaoyaStore.Service.ArgUrl\032\033"
+      ".XiaoyaStore.Service.Result\022R\n\014GetHostCo"
+      "unt\022\034.XiaoyaStore.Service.ArgHost\032$.Xiao"
+      "yaStore.Service.ResultWithCount2\234\004\n\016UrlF"
+      "ileService\022T\n\016GetUrlFileById\022\032.XiaoyaSto"
+      "re.Service.ArgId\032&.XiaoyaStore.Service.R"
+      "esultWithUrlFile\022V\n\017GetUrlFileByUrl\022\033.Xi"
+      "aoyaStore.Service.ArgUrl\032&.XiaoyaStore.S"
+      "ervice.ResultWithUrlFile\022Z\n\021GetUrlFilesB"
+      "yHash\022\034.XiaoyaStore.Service.ArgHash\032\'.Xi"
+      "aoyaStore.Service.ResultWithUrlFiles\022i\n\026"
+      "SaveUrlFileAndGetOldId\022\037.XiaoyaStore.Ser"
+      "vice.ArgUrlFile\032..XiaoyaStore.Service.Re"
+      "sultWithUrlFileAndOldId\022N\n\010GetCount\022\034.Xi"
+      "aoyaStore.Service.ArgVoid\032$.XiaoyaStore."
+      "Service.ResultWithCount\022E\n\nContainsId\022\032."
+      "XiaoyaStore.Service.ArgId\032\033.XiaoyaStore."
+      "Service.Result2\231\002\n\022PostingListService\022Y\n"
+      "\020SavePostingLists\022(.XiaoyaStore.Service."
+      "ArgSavePostingLists\032\033.XiaoyaStore.Servic"
+      "e.Result\022L\n\021ClearPostingLists\022\032.XiaoyaSt"
+      "ore.Service.ArgId\032\033.XiaoyaStore.Service."
+      "Result\022Z\n\016GetPostingList\022\034.XiaoyaStore.S"
+      "ervice.ArgWord\032*.XiaoyaStore.Service.Res"
+      "ultWithPostingList2\360\001\n\013LinkService\022K\n\tSa"
+      "veLinks\022!.XiaoyaStore.Service.ArgSaveLin"
+      "ks\032\033.XiaoyaStore.Service.Result\022E\n\nClear"
+      "Links\022\032.XiaoyaStore.Service.ArgId\032\033.Xiao"
+      "yaStore.Service.Result\022M\n\010GetLinks\022\033.Xia"
+      "oyaStore.Service.ArgUrl\032$.XiaoyaStore.Se"
+      "rvice.ResultWithLinks2\204\002\n\024InvertedIndexS"
+      "ervice\022G\n\014ClearIndices\022\032.XiaoyaStore.Ser"
+      "vice.ArgId\032\033.XiaoyaStore.Service.Result\022"
+      "O\n\013SaveIndices\022#.XiaoyaStore.Service.Arg"
+      "SaveIndices\032\033.XiaoyaStore.Service.Result"
+      "\022R\n\010GetIndex\022 .XiaoyaStore.Service.ArgIn"
+      "dexKey\032$.XiaoyaStore.Service.ResultWithI"
+      "ndexb\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 3116);
+      descriptor, 3252);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "rpc.proto", &protobuf_RegisterTypes);
   ::protobuf_models_2eproto::AddDescriptors();
@@ -6134,107 +6140,110 @@ void ArgPushBackUrl::InternalSwap(ArgPushBackUrl* other) {
 
 // ===================================================================
 
-void ArgPostingList::InitAsDefaultInstance() {
-  ::XiaoyaStore::Service::_ArgPostingList_default_instance_._instance.get_mutable()->postinglist_ = const_cast< ::XiaoyaStore::Model::PostingList*>(
-      ::XiaoyaStore::Model::PostingList::internal_default_instance());
+void ArgSavePostingLists::InitAsDefaultInstance() {
 }
-void ArgPostingList::clear_postinglist() {
-  if (GetArenaNoVirtual() == NULL && postinglist_ != NULL) {
-    delete postinglist_;
-  }
-  postinglist_ = NULL;
+void ArgSavePostingLists::clear_posting_list() {
+  posting_list_.Clear();
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int ArgPostingList::kPostinglistFieldNumber;
+const int ArgSavePostingLists::kUrlFileIdFieldNumber;
+const int ArgSavePostingLists::kPostingListFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
-ArgPostingList::ArgPostingList()
+ArgSavePostingLists::ArgSavePostingLists()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
   if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsArgPostingList();
+    ::protobuf_rpc_2eproto::InitDefaultsArgSavePostingLists();
   }
   SharedCtor();
-  // @@protoc_insertion_point(constructor:XiaoyaStore.Service.ArgPostingList)
+  // @@protoc_insertion_point(constructor:XiaoyaStore.Service.ArgSavePostingLists)
 }
-ArgPostingList::ArgPostingList(const ArgPostingList& from)
+ArgSavePostingLists::ArgSavePostingLists(const ArgSavePostingLists& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL),
+      posting_list_(from.posting_list_),
       _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_postinglist()) {
-    postinglist_ = new ::XiaoyaStore::Model::PostingList(*from.postinglist_);
-  } else {
-    postinglist_ = NULL;
-  }
-  // @@protoc_insertion_point(copy_constructor:XiaoyaStore.Service.ArgPostingList)
+  url_file_id_ = from.url_file_id_;
+  // @@protoc_insertion_point(copy_constructor:XiaoyaStore.Service.ArgSavePostingLists)
 }
 
-void ArgPostingList::SharedCtor() {
-  postinglist_ = NULL;
+void ArgSavePostingLists::SharedCtor() {
+  url_file_id_ = GOOGLE_ULONGLONG(0);
   _cached_size_ = 0;
 }
 
-ArgPostingList::~ArgPostingList() {
-  // @@protoc_insertion_point(destructor:XiaoyaStore.Service.ArgPostingList)
+ArgSavePostingLists::~ArgSavePostingLists() {
+  // @@protoc_insertion_point(destructor:XiaoyaStore.Service.ArgSavePostingLists)
   SharedDtor();
 }
 
-void ArgPostingList::SharedDtor() {
-  if (this != internal_default_instance()) delete postinglist_;
+void ArgSavePostingLists::SharedDtor() {
 }
 
-void ArgPostingList::SetCachedSize(int size) const {
+void ArgSavePostingLists::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = size;
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
-const ::google::protobuf::Descriptor* ArgPostingList::descriptor() {
+const ::google::protobuf::Descriptor* ArgSavePostingLists::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
   return ::protobuf_rpc_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
-const ArgPostingList& ArgPostingList::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsArgPostingList();
+const ArgSavePostingLists& ArgSavePostingLists::default_instance() {
+  ::protobuf_rpc_2eproto::InitDefaultsArgSavePostingLists();
   return *internal_default_instance();
 }
 
-ArgPostingList* ArgPostingList::New(::google::protobuf::Arena* arena) const {
-  ArgPostingList* n = new ArgPostingList;
+ArgSavePostingLists* ArgSavePostingLists::New(::google::protobuf::Arena* arena) const {
+  ArgSavePostingLists* n = new ArgSavePostingLists;
   if (arena != NULL) {
     arena->Own(n);
   }
   return n;
 }
 
-void ArgPostingList::Clear() {
-// @@protoc_insertion_point(message_clear_start:XiaoyaStore.Service.ArgPostingList)
+void ArgSavePostingLists::Clear() {
+// @@protoc_insertion_point(message_clear_start:XiaoyaStore.Service.ArgSavePostingLists)
   ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaNoVirtual() == NULL && postinglist_ != NULL) {
-    delete postinglist_;
-  }
-  postinglist_ = NULL;
+  posting_list_.Clear();
+  url_file_id_ = GOOGLE_ULONGLONG(0);
   _internal_metadata_.Clear();
 }
 
-bool ArgPostingList::MergePartialFromCodedStream(
+bool ArgSavePostingLists::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:XiaoyaStore.Service.ArgPostingList)
+  // @@protoc_insertion_point(parse_start:XiaoyaStore.Service.ArgSavePostingLists)
   for (;;) {
     ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .XiaoyaStore.Model.PostingList postinglist = 1;
+      // uint64 url_file_id = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_postinglist()));
+            static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_UINT64>(
+                 input, &url_file_id_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // repeated .XiaoyaStore.Model.PostingList posting_list = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(input, add_posting_list()));
         } else {
           goto handle_unusual;
         }
@@ -6253,57 +6262,69 @@ bool ArgPostingList::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:XiaoyaStore.Service.ArgPostingList)
+  // @@protoc_insertion_point(parse_success:XiaoyaStore.Service.ArgSavePostingLists)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:XiaoyaStore.Service.ArgPostingList)
+  // @@protoc_insertion_point(parse_failure:XiaoyaStore.Service.ArgSavePostingLists)
   return false;
 #undef DO_
 }
 
-void ArgPostingList::SerializeWithCachedSizes(
+void ArgSavePostingLists::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:XiaoyaStore.Service.ArgPostingList)
+  // @@protoc_insertion_point(serialize_start:XiaoyaStore.Service.ArgSavePostingLists)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .XiaoyaStore.Model.PostingList postinglist = 1;
-  if (this->has_postinglist()) {
+  // uint64 url_file_id = 1;
+  if (this->url_file_id() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt64(1, this->url_file_id(), output);
+  }
+
+  // repeated .XiaoyaStore.Model.PostingList posting_list = 2;
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->posting_list_size()); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, *this->postinglist_, output);
+      2, this->posting_list(static_cast<int>(i)), output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
   }
-  // @@protoc_insertion_point(serialize_end:XiaoyaStore.Service.ArgPostingList)
+  // @@protoc_insertion_point(serialize_end:XiaoyaStore.Service.ArgSavePostingLists)
 }
 
-::google::protobuf::uint8* ArgPostingList::InternalSerializeWithCachedSizesToArray(
+::google::protobuf::uint8* ArgSavePostingLists::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
   (void)deterministic; // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:XiaoyaStore.Service.ArgPostingList)
+  // @@protoc_insertion_point(serialize_to_array_start:XiaoyaStore.Service.ArgSavePostingLists)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .XiaoyaStore.Model.PostingList postinglist = 1;
-  if (this->has_postinglist()) {
+  // uint64 url_file_id = 1;
+  if (this->url_file_id() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt64ToArray(1, this->url_file_id(), target);
+  }
+
+  // repeated .XiaoyaStore.Model.PostingList posting_list = 2;
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->posting_list_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        1, *this->postinglist_, deterministic, target);
+        2, this->posting_list(static_cast<int>(i)), deterministic, target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:XiaoyaStore.Service.ArgPostingList)
+  // @@protoc_insertion_point(serialize_to_array_end:XiaoyaStore.Service.ArgSavePostingLists)
   return target;
 }
 
-size_t ArgPostingList::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:XiaoyaStore.Service.ArgPostingList)
+size_t ArgSavePostingLists::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:XiaoyaStore.Service.ArgSavePostingLists)
   size_t total_size = 0;
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -6311,11 +6332,22 @@ size_t ArgPostingList::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // .XiaoyaStore.Model.PostingList postinglist = 1;
-  if (this->has_postinglist()) {
+  // repeated .XiaoyaStore.Model.PostingList posting_list = 2;
+  {
+    unsigned int count = static_cast<unsigned int>(this->posting_list_size());
+    total_size += 1UL * count;
+    for (unsigned int i = 0; i < count; i++) {
+      total_size +=
+        ::google::protobuf::internal::WireFormatLite::MessageSize(
+          this->posting_list(static_cast<int>(i)));
+    }
+  }
+
+  // uint64 url_file_id = 1;
+  if (this->url_file_id() != 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->postinglist_);
+      ::google::protobuf::internal::WireFormatLite::UInt64Size(
+        this->url_file_id());
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
@@ -6325,63 +6357,65 @@ size_t ArgPostingList::ByteSizeLong() const {
   return total_size;
 }
 
-void ArgPostingList::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:XiaoyaStore.Service.ArgPostingList)
+void ArgSavePostingLists::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:XiaoyaStore.Service.ArgSavePostingLists)
   GOOGLE_DCHECK_NE(&from, this);
-  const ArgPostingList* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const ArgPostingList>(
+  const ArgSavePostingLists* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const ArgSavePostingLists>(
           &from);
   if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:XiaoyaStore.Service.ArgPostingList)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:XiaoyaStore.Service.ArgSavePostingLists)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:XiaoyaStore.Service.ArgPostingList)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:XiaoyaStore.Service.ArgSavePostingLists)
     MergeFrom(*source);
   }
 }
 
-void ArgPostingList::MergeFrom(const ArgPostingList& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:XiaoyaStore.Service.ArgPostingList)
+void ArgSavePostingLists::MergeFrom(const ArgSavePostingLists& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:XiaoyaStore.Service.ArgSavePostingLists)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_postinglist()) {
-    mutable_postinglist()->::XiaoyaStore::Model::PostingList::MergeFrom(from.postinglist());
+  posting_list_.MergeFrom(from.posting_list_);
+  if (from.url_file_id() != 0) {
+    set_url_file_id(from.url_file_id());
   }
 }
 
-void ArgPostingList::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:XiaoyaStore.Service.ArgPostingList)
+void ArgSavePostingLists::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:XiaoyaStore.Service.ArgSavePostingLists)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-void ArgPostingList::CopyFrom(const ArgPostingList& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:XiaoyaStore.Service.ArgPostingList)
+void ArgSavePostingLists::CopyFrom(const ArgSavePostingLists& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:XiaoyaStore.Service.ArgSavePostingLists)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool ArgPostingList::IsInitialized() const {
+bool ArgSavePostingLists::IsInitialized() const {
   return true;
 }
 
-void ArgPostingList::Swap(ArgPostingList* other) {
+void ArgSavePostingLists::Swap(ArgSavePostingLists* other) {
   if (other == this) return;
   InternalSwap(other);
 }
-void ArgPostingList::InternalSwap(ArgPostingList* other) {
+void ArgSavePostingLists::InternalSwap(ArgSavePostingLists* other) {
   using std::swap;
-  swap(postinglist_, other->postinglist_);
+  posting_list_.InternalSwap(&other->posting_list_);
+  swap(url_file_id_, other->url_file_id_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(_cached_size_, other->_cached_size_);
 }
 
-::google::protobuf::Metadata ArgPostingList::GetMetadata() const {
+::google::protobuf::Metadata ArgSavePostingLists::GetMetadata() const {
   protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
   return ::protobuf_rpc_2eproto::file_level_metadata[kIndexInFileMessages];
 }
@@ -6389,91 +6423,109 @@ void ArgPostingList::InternalSwap(ArgPostingList* other) {
 
 // ===================================================================
 
-void ArgLinks::InitAsDefaultInstance() {
+void ArgSaveLinks::InitAsDefaultInstance() {
 }
-void ArgLinks::clear_links() {
+void ArgSaveLinks::clear_links() {
   links_.Clear();
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int ArgLinks::kLinksFieldNumber;
+const int ArgSaveLinks::kUrlFileIdFieldNumber;
+const int ArgSaveLinks::kLinksFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
-ArgLinks::ArgLinks()
+ArgSaveLinks::ArgSaveLinks()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
   if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsArgLinks();
+    ::protobuf_rpc_2eproto::InitDefaultsArgSaveLinks();
   }
   SharedCtor();
-  // @@protoc_insertion_point(constructor:XiaoyaStore.Service.ArgLinks)
+  // @@protoc_insertion_point(constructor:XiaoyaStore.Service.ArgSaveLinks)
 }
-ArgLinks::ArgLinks(const ArgLinks& from)
+ArgSaveLinks::ArgSaveLinks(const ArgSaveLinks& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL),
       links_(from.links_),
       _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  // @@protoc_insertion_point(copy_constructor:XiaoyaStore.Service.ArgLinks)
+  url_file_id_ = from.url_file_id_;
+  // @@protoc_insertion_point(copy_constructor:XiaoyaStore.Service.ArgSaveLinks)
 }
 
-void ArgLinks::SharedCtor() {
+void ArgSaveLinks::SharedCtor() {
+  url_file_id_ = GOOGLE_ULONGLONG(0);
   _cached_size_ = 0;
 }
 
-ArgLinks::~ArgLinks() {
-  // @@protoc_insertion_point(destructor:XiaoyaStore.Service.ArgLinks)
+ArgSaveLinks::~ArgSaveLinks() {
+  // @@protoc_insertion_point(destructor:XiaoyaStore.Service.ArgSaveLinks)
   SharedDtor();
 }
 
-void ArgLinks::SharedDtor() {
+void ArgSaveLinks::SharedDtor() {
 }
 
-void ArgLinks::SetCachedSize(int size) const {
+void ArgSaveLinks::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = size;
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
-const ::google::protobuf::Descriptor* ArgLinks::descriptor() {
+const ::google::protobuf::Descriptor* ArgSaveLinks::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
   return ::protobuf_rpc_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
-const ArgLinks& ArgLinks::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsArgLinks();
+const ArgSaveLinks& ArgSaveLinks::default_instance() {
+  ::protobuf_rpc_2eproto::InitDefaultsArgSaveLinks();
   return *internal_default_instance();
 }
 
-ArgLinks* ArgLinks::New(::google::protobuf::Arena* arena) const {
-  ArgLinks* n = new ArgLinks;
+ArgSaveLinks* ArgSaveLinks::New(::google::protobuf::Arena* arena) const {
+  ArgSaveLinks* n = new ArgSaveLinks;
   if (arena != NULL) {
     arena->Own(n);
   }
   return n;
 }
 
-void ArgLinks::Clear() {
-// @@protoc_insertion_point(message_clear_start:XiaoyaStore.Service.ArgLinks)
+void ArgSaveLinks::Clear() {
+// @@protoc_insertion_point(message_clear_start:XiaoyaStore.Service.ArgSaveLinks)
   ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   links_.Clear();
+  url_file_id_ = GOOGLE_ULONGLONG(0);
   _internal_metadata_.Clear();
 }
 
-bool ArgLinks::MergePartialFromCodedStream(
+bool ArgSaveLinks::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:XiaoyaStore.Service.ArgLinks)
+  // @@protoc_insertion_point(parse_start:XiaoyaStore.Service.ArgSaveLinks)
   for (;;) {
     ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // repeated .XiaoyaStore.Model.Link links = 1;
+      // uint64 url_file_id = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
+            static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_UINT64>(
+                 input, &url_file_id_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // repeated .XiaoyaStore.Model.Link links = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(input, add_links()));
         } else {
           goto handle_unusual;
@@ -6493,59 +6545,69 @@ bool ArgLinks::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:XiaoyaStore.Service.ArgLinks)
+  // @@protoc_insertion_point(parse_success:XiaoyaStore.Service.ArgSaveLinks)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:XiaoyaStore.Service.ArgLinks)
+  // @@protoc_insertion_point(parse_failure:XiaoyaStore.Service.ArgSaveLinks)
   return false;
 #undef DO_
 }
 
-void ArgLinks::SerializeWithCachedSizes(
+void ArgSaveLinks::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:XiaoyaStore.Service.ArgLinks)
+  // @@protoc_insertion_point(serialize_start:XiaoyaStore.Service.ArgSaveLinks)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated .XiaoyaStore.Model.Link links = 1;
+  // uint64 url_file_id = 1;
+  if (this->url_file_id() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt64(1, this->url_file_id(), output);
+  }
+
+  // repeated .XiaoyaStore.Model.Link links = 2;
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->links_size()); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, this->links(static_cast<int>(i)), output);
+      2, this->links(static_cast<int>(i)), output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
   }
-  // @@protoc_insertion_point(serialize_end:XiaoyaStore.Service.ArgLinks)
+  // @@protoc_insertion_point(serialize_end:XiaoyaStore.Service.ArgSaveLinks)
 }
 
-::google::protobuf::uint8* ArgLinks::InternalSerializeWithCachedSizesToArray(
+::google::protobuf::uint8* ArgSaveLinks::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
   (void)deterministic; // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:XiaoyaStore.Service.ArgLinks)
+  // @@protoc_insertion_point(serialize_to_array_start:XiaoyaStore.Service.ArgSaveLinks)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated .XiaoyaStore.Model.Link links = 1;
+  // uint64 url_file_id = 1;
+  if (this->url_file_id() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt64ToArray(1, this->url_file_id(), target);
+  }
+
+  // repeated .XiaoyaStore.Model.Link links = 2;
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->links_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        1, this->links(static_cast<int>(i)), deterministic, target);
+        2, this->links(static_cast<int>(i)), deterministic, target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:XiaoyaStore.Service.ArgLinks)
+  // @@protoc_insertion_point(serialize_to_array_end:XiaoyaStore.Service.ArgSaveLinks)
   return target;
 }
 
-size_t ArgLinks::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:XiaoyaStore.Service.ArgLinks)
+size_t ArgSaveLinks::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:XiaoyaStore.Service.ArgSaveLinks)
   size_t total_size = 0;
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -6553,7 +6615,7 @@ size_t ArgLinks::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // repeated .XiaoyaStore.Model.Link links = 1;
+  // repeated .XiaoyaStore.Model.Link links = 2;
   {
     unsigned int count = static_cast<unsigned int>(this->links_size());
     total_size += 1UL * count;
@@ -6564,6 +6626,13 @@ size_t ArgLinks::ByteSizeLong() const {
     }
   }
 
+  // uint64 url_file_id = 1;
+  if (this->url_file_id() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::UInt64Size(
+        this->url_file_id());
+  }
+
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = cached_size;
@@ -6571,61 +6640,65 @@ size_t ArgLinks::ByteSizeLong() const {
   return total_size;
 }
 
-void ArgLinks::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:XiaoyaStore.Service.ArgLinks)
+void ArgSaveLinks::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:XiaoyaStore.Service.ArgSaveLinks)
   GOOGLE_DCHECK_NE(&from, this);
-  const ArgLinks* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const ArgLinks>(
+  const ArgSaveLinks* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const ArgSaveLinks>(
           &from);
   if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:XiaoyaStore.Service.ArgLinks)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:XiaoyaStore.Service.ArgSaveLinks)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:XiaoyaStore.Service.ArgLinks)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:XiaoyaStore.Service.ArgSaveLinks)
     MergeFrom(*source);
   }
 }
 
-void ArgLinks::MergeFrom(const ArgLinks& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:XiaoyaStore.Service.ArgLinks)
+void ArgSaveLinks::MergeFrom(const ArgSaveLinks& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:XiaoyaStore.Service.ArgSaveLinks)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   links_.MergeFrom(from.links_);
+  if (from.url_file_id() != 0) {
+    set_url_file_id(from.url_file_id());
+  }
 }
 
-void ArgLinks::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:XiaoyaStore.Service.ArgLinks)
+void ArgSaveLinks::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:XiaoyaStore.Service.ArgSaveLinks)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-void ArgLinks::CopyFrom(const ArgLinks& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:XiaoyaStore.Service.ArgLinks)
+void ArgSaveLinks::CopyFrom(const ArgSaveLinks& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:XiaoyaStore.Service.ArgSaveLinks)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool ArgLinks::IsInitialized() const {
+bool ArgSaveLinks::IsInitialized() const {
   return true;
 }
 
-void ArgLinks::Swap(ArgLinks* other) {
+void ArgSaveLinks::Swap(ArgSaveLinks* other) {
   if (other == this) return;
   InternalSwap(other);
 }
-void ArgLinks::InternalSwap(ArgLinks* other) {
+void ArgSaveLinks::InternalSwap(ArgSaveLinks* other) {
   using std::swap;
   links_.InternalSwap(&other->links_);
+  swap(url_file_id_, other->url_file_id_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(_cached_size_, other->_cached_size_);
 }
 
-::google::protobuf::Metadata ArgLinks::GetMetadata() const {
+::google::protobuf::Metadata ArgSaveLinks::GetMetadata() const {
   protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
   return ::protobuf_rpc_2eproto::file_level_metadata[kIndexInFileMessages];
 }

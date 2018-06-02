@@ -13,6 +13,8 @@ namespace XiaoyaStore
 			bool operator() (const UrlFile &item1, const UrlFile &item2) const;
 
 			bool operator() (const Link &item1, const Link &item2) const;
+
+			bool operator() (const Posting &item1, const Posting &item2) const;
 		};
 	}
 }

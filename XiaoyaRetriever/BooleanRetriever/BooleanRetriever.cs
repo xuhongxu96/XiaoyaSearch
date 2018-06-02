@@ -24,7 +24,7 @@ namespace XiaoyaRetriever.BooleanRetriever
                 return new List<ulong>();
             }
             return from index in postingList.Postings
-                   select index;
+                   select index.UrlFileId;
         }
 
         protected IEnumerable<ulong> RetrieveNot(Not notExp)

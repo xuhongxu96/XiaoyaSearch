@@ -146,20 +146,15 @@ namespace XiaoyaCrawler
         {
             var inLinks = mConfig.LinkStore.GetLinks(url);
 
-            var removingLinks = inLinks
-                .Where(o => !mConfig.UrlFileStore.ContainsId(o.UrlFileId))
-                .ToList();
-
-            mConfig.LinkStore.RemoveLinks(removingLinks);
-
             return inLinks
-                .Except(removingLinks)
                 .Select(o => o.Text).ToList();
         }
 
         private void SaveIndices(IList<Token> tokens, IList<string> linkTexts, UrlFile urlFile, ulong oldUrlFileId)
         {
             var invertedIndices = new List<Index>();
+            var postingLists = new List<PostingList>();
+
             foreach (var token in tokens)
             {
                 var key = new IndexKey
@@ -187,8 +182,8 @@ namespace XiaoyaCrawler
                     OccurencesInHeaders = token.OccurencesInHeaders,
                     Weight = weight,
                 };
-
                 index.Positions.AddRange(token.Positions);
+
                 invertedIndices.Add(index);
 
                 var postingList = new PostingList
@@ -198,10 +193,16 @@ namespace XiaoyaCrawler
                     DocumentFrequency = 1,
                     IsAdd = true,
                 };
-                postingList.Postings.Add(urlFile.UrlFileId);
-                mConfig.PostingListStore.SavePostingList(postingList);
+                var posting = new Posting
+                {
+                    UrlFileId = urlFile.UrlFileId,
+                    Weight = weight,
+                };
+                postingList.Postings.Add(posting);
+
+                postingLists.Add(postingList);
             }
-            mConfig.InvertedIndexStore.ClearIndices(oldUrlFileId);
+            mConfig.PostingListStore.SavePostingLists(urlFile.UrlFileId, postingLists);
             mConfig.InvertedIndexStore.SaveIndices(urlFile.UrlFileId, invertedIndices);
         }
 
@@ -239,6 +240,14 @@ namespace XiaoyaCrawler
                     ulong oldUrlFileId;
                     (urlFile, oldUrlFileId) = mConfig.UrlFileStore.SaveUrlFileAndGetOldId(urlFile);
 
+                    // Clear old data
+                    if (oldUrlFileId != 0)
+                    {
+                        mConfig.PostingListStore.ClearPostingLists(oldUrlFileId);
+                        mConfig.InvertedIndexStore.ClearIndices(oldUrlFileId);
+                        mConfig.LinkStore.ClearLinks(oldUrlFileId);
+                    }
+
                     lock (mContentUrlDictSyncLock)
                     {
                         mContentUrlDict.Remove(urlFile.Content);
@@ -248,12 +257,13 @@ namespace XiaoyaCrawler
                     linkList = FilterLinks(linkList);
 
                     // Save links
-                    mConfig.LinkStore.SaveLinks(linkList.Select(o => new Link
-                    {
-                        Text = o.Text,
-                        Url = o.Url,
-                        UrlFileId = urlFile.UrlFileId,
-                    }));
+                    mConfig.LinkStore.SaveLinks(urlFile.UrlFileId,
+                        linkList.Select(o => new Link
+                        {
+                            Text = o.Text,
+                            Url = o.Url,
+                            UrlFileId = urlFile.UrlFileId,
+                        }));
 
                     // Save Indices
                     SaveIndices(tokens, inLinkTexts, urlFile, oldUrlFileId);

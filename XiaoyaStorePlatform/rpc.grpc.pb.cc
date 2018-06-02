@@ -368,7 +368,8 @@ UrlFileService::Service::~Service() {
 
 
 static const char* PostingListService_method_names[] = {
-  "/XiaoyaStore.Service.PostingListService/SavePostingList",
+  "/XiaoyaStore.Service.PostingListService/SavePostingLists",
+  "/XiaoyaStore.Service.PostingListService/ClearPostingLists",
   "/XiaoyaStore.Service.PostingListService/GetPostingList",
 };
 
@@ -379,20 +380,33 @@ std::unique_ptr< PostingListService::Stub> PostingListService::NewStub(const std
 }
 
 PostingListService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel)
-  : channel_(channel), rpcmethod_SavePostingList_(PostingListService_method_names[0], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_GetPostingList_(PostingListService_method_names[1], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  : channel_(channel), rpcmethod_SavePostingLists_(PostingListService_method_names[0], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_ClearPostingLists_(PostingListService_method_names[1], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_GetPostingList_(PostingListService_method_names[2], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   {}
 
-::grpc::Status PostingListService::Stub::SavePostingList(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgPostingList& request, ::XiaoyaStore::Service::Result* response) {
-  return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_SavePostingList_, context, request, response);
+::grpc::Status PostingListService::Stub::SavePostingLists(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgSavePostingLists& request, ::XiaoyaStore::Service::Result* response) {
+  return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_SavePostingLists_, context, request, response);
 }
 
-::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>* PostingListService::Stub::AsyncSavePostingListRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgPostingList& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::XiaoyaStore::Service::Result>::Create(channel_.get(), cq, rpcmethod_SavePostingList_, context, request, true);
+::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>* PostingListService::Stub::AsyncSavePostingListsRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgSavePostingLists& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::XiaoyaStore::Service::Result>::Create(channel_.get(), cq, rpcmethod_SavePostingLists_, context, request, true);
 }
 
-::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>* PostingListService::Stub::PrepareAsyncSavePostingListRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgPostingList& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::XiaoyaStore::Service::Result>::Create(channel_.get(), cq, rpcmethod_SavePostingList_, context, request, false);
+::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>* PostingListService::Stub::PrepareAsyncSavePostingListsRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgSavePostingLists& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::XiaoyaStore::Service::Result>::Create(channel_.get(), cq, rpcmethod_SavePostingLists_, context, request, false);
+}
+
+::grpc::Status PostingListService::Stub::ClearPostingLists(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgId& request, ::XiaoyaStore::Service::Result* response) {
+  return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_ClearPostingLists_, context, request, response);
+}
+
+::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>* PostingListService::Stub::AsyncClearPostingListsRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgId& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::XiaoyaStore::Service::Result>::Create(channel_.get(), cq, rpcmethod_ClearPostingLists_, context, request, true);
+}
+
+::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>* PostingListService::Stub::PrepareAsyncClearPostingListsRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgId& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::XiaoyaStore::Service::Result>::Create(channel_.get(), cq, rpcmethod_ClearPostingLists_, context, request, false);
 }
 
 ::grpc::Status PostingListService::Stub::GetPostingList(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgWord& request, ::XiaoyaStore::Service::ResultWithPostingList* response) {
@@ -411,10 +425,15 @@ PostingListService::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       PostingListService_method_names[0],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< PostingListService::Service, ::XiaoyaStore::Service::ArgPostingList, ::XiaoyaStore::Service::Result>(
-          std::mem_fn(&PostingListService::Service::SavePostingList), this)));
+      new ::grpc::internal::RpcMethodHandler< PostingListService::Service, ::XiaoyaStore::Service::ArgSavePostingLists, ::XiaoyaStore::Service::Result>(
+          std::mem_fn(&PostingListService::Service::SavePostingLists), this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       PostingListService_method_names[1],
+      ::grpc::internal::RpcMethod::NORMAL_RPC,
+      new ::grpc::internal::RpcMethodHandler< PostingListService::Service, ::XiaoyaStore::Service::ArgId, ::XiaoyaStore::Service::Result>(
+          std::mem_fn(&PostingListService::Service::ClearPostingLists), this)));
+  AddMethod(new ::grpc::internal::RpcServiceMethod(
+      PostingListService_method_names[2],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< PostingListService::Service, ::XiaoyaStore::Service::ArgWord, ::XiaoyaStore::Service::ResultWithPostingList>(
           std::mem_fn(&PostingListService::Service::GetPostingList), this)));
@@ -423,7 +442,14 @@ PostingListService::Service::Service() {
 PostingListService::Service::~Service() {
 }
 
-::grpc::Status PostingListService::Service::SavePostingList(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgPostingList* request, ::XiaoyaStore::Service::Result* response) {
+::grpc::Status PostingListService::Service::SavePostingLists(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgSavePostingLists* request, ::XiaoyaStore::Service::Result* response) {
+  (void) context;
+  (void) request;
+  (void) response;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+::grpc::Status PostingListService::Service::ClearPostingLists(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgId* request, ::XiaoyaStore::Service::Result* response) {
   (void) context;
   (void) request;
   (void) response;
@@ -440,7 +466,7 @@ PostingListService::Service::~Service() {
 
 static const char* LinkService_method_names[] = {
   "/XiaoyaStore.Service.LinkService/SaveLinks",
-  "/XiaoyaStore.Service.LinkService/RemoveLinks",
+  "/XiaoyaStore.Service.LinkService/ClearLinks",
   "/XiaoyaStore.Service.LinkService/GetLinks",
 };
 
@@ -452,32 +478,32 @@ std::unique_ptr< LinkService::Stub> LinkService::NewStub(const std::shared_ptr< 
 
 LinkService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel)
   : channel_(channel), rpcmethod_SaveLinks_(LinkService_method_names[0], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_RemoveLinks_(LinkService_method_names[1], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_ClearLinks_(LinkService_method_names[1], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_GetLinks_(LinkService_method_names[2], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   {}
 
-::grpc::Status LinkService::Stub::SaveLinks(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgLinks& request, ::XiaoyaStore::Service::Result* response) {
+::grpc::Status LinkService::Stub::SaveLinks(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgSaveLinks& request, ::XiaoyaStore::Service::Result* response) {
   return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_SaveLinks_, context, request, response);
 }
 
-::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>* LinkService::Stub::AsyncSaveLinksRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgLinks& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>* LinkService::Stub::AsyncSaveLinksRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgSaveLinks& request, ::grpc::CompletionQueue* cq) {
   return ::grpc::internal::ClientAsyncResponseReaderFactory< ::XiaoyaStore::Service::Result>::Create(channel_.get(), cq, rpcmethod_SaveLinks_, context, request, true);
 }
 
-::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>* LinkService::Stub::PrepareAsyncSaveLinksRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgLinks& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>* LinkService::Stub::PrepareAsyncSaveLinksRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgSaveLinks& request, ::grpc::CompletionQueue* cq) {
   return ::grpc::internal::ClientAsyncResponseReaderFactory< ::XiaoyaStore::Service::Result>::Create(channel_.get(), cq, rpcmethod_SaveLinks_, context, request, false);
 }
 
-::grpc::Status LinkService::Stub::RemoveLinks(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgLinks& request, ::XiaoyaStore::Service::Result* response) {
-  return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_RemoveLinks_, context, request, response);
+::grpc::Status LinkService::Stub::ClearLinks(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgId& request, ::XiaoyaStore::Service::Result* response) {
+  return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_ClearLinks_, context, request, response);
 }
 
-::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>* LinkService::Stub::AsyncRemoveLinksRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgLinks& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::XiaoyaStore::Service::Result>::Create(channel_.get(), cq, rpcmethod_RemoveLinks_, context, request, true);
+::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>* LinkService::Stub::AsyncClearLinksRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgId& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::XiaoyaStore::Service::Result>::Create(channel_.get(), cq, rpcmethod_ClearLinks_, context, request, true);
 }
 
-::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>* LinkService::Stub::PrepareAsyncRemoveLinksRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgLinks& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::XiaoyaStore::Service::Result>::Create(channel_.get(), cq, rpcmethod_RemoveLinks_, context, request, false);
+::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>* LinkService::Stub::PrepareAsyncClearLinksRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgId& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::XiaoyaStore::Service::Result>::Create(channel_.get(), cq, rpcmethod_ClearLinks_, context, request, false);
 }
 
 ::grpc::Status LinkService::Stub::GetLinks(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrl& request, ::XiaoyaStore::Service::ResultWithLinks* response) {
@@ -496,13 +522,13 @@ LinkService::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       LinkService_method_names[0],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< LinkService::Service, ::XiaoyaStore::Service::ArgLinks, ::XiaoyaStore::Service::Result>(
+      new ::grpc::internal::RpcMethodHandler< LinkService::Service, ::XiaoyaStore::Service::ArgSaveLinks, ::XiaoyaStore::Service::Result>(
           std::mem_fn(&LinkService::Service::SaveLinks), this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       LinkService_method_names[1],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< LinkService::Service, ::XiaoyaStore::Service::ArgLinks, ::XiaoyaStore::Service::Result>(
-          std::mem_fn(&LinkService::Service::RemoveLinks), this)));
+      new ::grpc::internal::RpcMethodHandler< LinkService::Service, ::XiaoyaStore::Service::ArgId, ::XiaoyaStore::Service::Result>(
+          std::mem_fn(&LinkService::Service::ClearLinks), this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       LinkService_method_names[2],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
@@ -513,14 +539,14 @@ LinkService::Service::Service() {
 LinkService::Service::~Service() {
 }
 
-::grpc::Status LinkService::Service::SaveLinks(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgLinks* request, ::XiaoyaStore::Service::Result* response) {
+::grpc::Status LinkService::Service::SaveLinks(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgSaveLinks* request, ::XiaoyaStore::Service::Result* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status LinkService::Service::RemoveLinks(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgLinks* request, ::XiaoyaStore::Service::Result* response) {
+::grpc::Status LinkService::Service::ClearLinks(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgId* request, ::XiaoyaStore::Service::Result* response) {
   (void) context;
   (void) request;
   (void) response;
