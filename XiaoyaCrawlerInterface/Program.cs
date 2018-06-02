@@ -50,7 +50,6 @@ namespace XiaoyaCrawlerInterface
                 config,
                 new SimpleUrlFrontier(config),
                 new SimpleFetcher(config),
-                new SimpleParser(config),
                 new SimpleSimilarContentManager(config),
                 urlFilters
             );

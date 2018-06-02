@@ -29,7 +29,6 @@ namespace XiaoyaCrawler
         protected CrawlerConfig mConfig;
         protected IUrlFrontier mUrlFrontier;
         protected IFetcher mFetcher;
-        protected IParser mParser;
         protected ISimilarContentManager mSimilarContentJudger;
         protected List<IUrlFilter> mUrlFilters;
         protected CancellationTokenSource mCancellationTokenSource;
@@ -51,7 +50,6 @@ namespace XiaoyaCrawler
         public Crawler(CrawlerConfig config,
             IUrlFrontier urlFrontier,
             IFetcher fetcher,
-            IParser parser,
             ISimilarContentManager similarContentManager,
             List<IUrlFilter> urlFilters)
         {
@@ -59,7 +57,6 @@ namespace XiaoyaCrawler
             Status = CrawlerStatus.STOPPED;
             mUrlFrontier = urlFrontier;
             mFetcher = fetcher;
-            mParser = parser;
             mSimilarContentJudger = similarContentManager;
             mUrlFilters = urlFilters;
             mLogger = new RuntimeLogger(Path.Combine(config.LogDirectory, "Crawler.Log"), true);

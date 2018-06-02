@@ -4,19 +4,24 @@ Xiaoya Search is a simple search engine for LAN, which provides clear interface 
 
 Xiaoya Search mainly aims at educational use, and doesn't support distributed crawling and indexing, which means the proficiency may be not as good as expected.
 
+Currently, Xiaoya Search will load all urls to crawl into memory, so it cannot support large-scale crawling now.
+
 However, it is sufficient for a small LAN, such as campus network. 
 
 My initial goal is to deploy this search engine in Beijing Normal University.
+
+## Dependencies
+
+Xiaoya Search uses: `boost`, `rocksdb`, `protobuf` and `uriparser`.
 
 ## Structure
 
 - XiaoyaCommon  
   Including some common algorithms and functions
 - XiaoyaCrawler  
-  A multi-thread continuous crawler
-    - UrlFrontier
+  A multi-thread continuous crawler and indexer
+	- UrlFrontier
 	- Fetcher
-	- Parser
 	- SimilarContentManager
 	- UrlFilter (To confine urls within the specific LAN domain)
 - XiaoyaCrawlerInterface  
@@ -27,9 +32,6 @@ My initial goal is to deploy this search engine in Beijing Normal University.
 		- TextFileParser
 		- HtmlFileParser
 		- PdfFileParser
-- XiaoyaIndexer
-- XiaoyaIndexerInterface  
-  Commandline interface for XiaoyaIndexer
 - XiaoyaNLP
   NLP library
 	- TextSegmentation
@@ -49,14 +51,12 @@ My initial goal is to deploy this search engine in Beijing Normal University.
 	  Manage urls in UrlFrontier
 	- UrlFileStore  
 	  Manage fetched web content
-    - SameUrlStore
-	  Manage Urls that point to same file
+	- PostingListStore
+	  Manage postings of words
 	- InvertedIndexStore  
-	  Manage Inverted Indices and their frequency and weight (tf-idf)
-	- IndexStatStore  
-	  Manage word frequency and document frequency of words in inverted index
-	- LinkStore
-		Manage links in UrlFiles
+	  Manage Inverted Indices and their other props
+	- LinkStore  
+	  Manage links of UrlFiles
 - XiaoyaLogger  
   A concurrent logger
 
@@ -65,7 +65,7 @@ My initial goal is to deploy this search engine in Beijing Normal University.
 Line count is calculated by: 
 
 ``` shell
-git ls-files *.cs | xargs wc -l > linecount.txt
+git ls-files *.{cs,cpp,h} | xargs wc -l > linecount.txt
 ```
 
   ---
