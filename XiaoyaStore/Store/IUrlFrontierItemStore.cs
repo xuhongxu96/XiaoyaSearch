@@ -7,6 +7,7 @@ namespace XiaoyaStore.Store
     {
         ulong GetHostCount(string host);
         bool Init(IEnumerable<string> urls);
+        bool Reload();
         string PopUrl();
         bool PushBackUrl(string url, ulong updateInterval, bool failed = false);
         bool PushUrls(IEnumerable<string> urls);

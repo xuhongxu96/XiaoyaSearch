@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using XiaoyaStore.Helper;
 using XiaoyaCrawler.Config;
-using XiaoyaCrawler.Parser;
 using XiaoyaLogger;
 using System.Net;
 using System.Linq;

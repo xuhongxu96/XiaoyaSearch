@@ -8,7 +8,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using XiaoyaCrawler;
 using XiaoyaCrawler.Fetcher;
-using XiaoyaCrawler.Parser;
 using XiaoyaCrawler.SimilarContentManager;
 using XiaoyaCrawler.UrlFilter;
 using XiaoyaCrawler.UrlFrontier;
@@ -49,7 +48,6 @@ namespace XiaoyaCrawlerUnitTest
                 config,
                 new SimpleUrlFrontier(config),
                 new SimpleFetcher(config),
-                new SimpleParser(config),
                 new SimpleSimilarContentManager(config),
                 urlFilters
             );

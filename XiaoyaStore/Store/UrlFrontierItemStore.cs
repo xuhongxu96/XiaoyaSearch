@@ -24,6 +24,11 @@ namespace XiaoyaStore.Store
             return result.IsSuccessful;
         }
 
+        public bool Reload()
+        {
+            var result = client.Reload(new ArgVoid());
+            return result.IsSuccessful;
+        }
         public bool PushUrls(IEnumerable<string> urls)
         {
             var arg = new ArgUrls();

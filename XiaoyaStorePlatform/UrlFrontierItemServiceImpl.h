@@ -14,6 +14,7 @@ namespace XiaoyaStore
 			UrlFrontierItemServiceImpl(Store::UrlFrontierItemStore &store);
 
 			::grpc::Status Init(::grpc::ServerContext* context, const ArgUrls* request, Result* response) override;
+			::grpc::Status Reload(::grpc::ServerContext* context, const ArgVoid* request, Result* response) override;
 			::grpc::Status PushUrls(::grpc::ServerContext* context, const ArgUrls* request, Result* response) override;
 			::grpc::Status PushBackUrl(::grpc::ServerContext* context, const ArgPushBackUrl* request, Result* response) override;
 			::grpc::Status PopUrl(::grpc::ServerContext* context, const ArgVoid* request, ResultWithUrl* response) override;

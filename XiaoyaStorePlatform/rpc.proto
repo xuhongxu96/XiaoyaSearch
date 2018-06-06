@@ -135,6 +135,7 @@ message ArgIndexKey
 service UrlFrontierItemService
 {
 	rpc Init(ArgUrls) returns (Result);
+	rpc Reload(ArgVoid) returns (Result);
 	rpc PushUrls(ArgUrls) returns (Result);
 	rpc PushBackUrl(ArgPushBackUrl) returns (Result);
 	rpc PopUrl(ArgVoid) returns (ResultWithUrl);

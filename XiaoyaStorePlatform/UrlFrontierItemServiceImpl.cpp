@@ -18,6 +18,15 @@ Status UrlFrontierItemServiceImpl::Init(ServerContext * context,
 	return Status::OK;
 }
 
+Status UrlFrontierItemServiceImpl::Reload(ServerContext * context,
+	const ArgVoid * request, Result * response)
+{
+	mStore.ReloadUrlFrontierItems();
+	response->set_is_successful(true);
+
+	return Status::OK;
+}
+
 Status UrlFrontierItemServiceImpl::PushUrls(ServerContext * context,
 	const ArgUrls * request, Result * response)
 {

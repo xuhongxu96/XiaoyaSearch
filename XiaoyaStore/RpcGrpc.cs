@@ -17,8 +17,8 @@ namespace XiaoyaStore.Service {
 
     static readonly grpc::Marshaller<global::XiaoyaStore.Service.ArgUrls> __Marshaller_ArgUrls = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::XiaoyaStore.Service.ArgUrls.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::XiaoyaStore.Service.Result> __Marshaller_Result = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::XiaoyaStore.Service.Result.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::XiaoyaStore.Service.ArgPushBackUrl> __Marshaller_ArgPushBackUrl = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::XiaoyaStore.Service.ArgPushBackUrl.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::XiaoyaStore.Service.ArgVoid> __Marshaller_ArgVoid = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::XiaoyaStore.Service.ArgVoid.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::XiaoyaStore.Service.ArgPushBackUrl> __Marshaller_ArgPushBackUrl = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::XiaoyaStore.Service.ArgPushBackUrl.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::XiaoyaStore.Service.ResultWithUrl> __Marshaller_ResultWithUrl = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::XiaoyaStore.Service.ResultWithUrl.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::XiaoyaStore.Service.ArgUrl> __Marshaller_ArgUrl = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::XiaoyaStore.Service.ArgUrl.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::XiaoyaStore.Service.ArgHost> __Marshaller_ArgHost = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::XiaoyaStore.Service.ArgHost.Parser.ParseFrom);
@@ -29,6 +29,13 @@ namespace XiaoyaStore.Service {
         __ServiceName,
         "Init",
         __Marshaller_ArgUrls,
+        __Marshaller_Result);
+
+    static readonly grpc::Method<global::XiaoyaStore.Service.ArgVoid, global::XiaoyaStore.Service.Result> __Method_Reload = new grpc::Method<global::XiaoyaStore.Service.ArgVoid, global::XiaoyaStore.Service.Result>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "Reload",
+        __Marshaller_ArgVoid,
         __Marshaller_Result);
 
     static readonly grpc::Method<global::XiaoyaStore.Service.ArgUrls, global::XiaoyaStore.Service.Result> __Method_PushUrls = new grpc::Method<global::XiaoyaStore.Service.ArgUrls, global::XiaoyaStore.Service.Result>(
@@ -76,6 +83,11 @@ namespace XiaoyaStore.Service {
     public abstract partial class UrlFrontierItemServiceBase
     {
       public virtual global::System.Threading.Tasks.Task<global::XiaoyaStore.Service.Result> Init(global::XiaoyaStore.Service.ArgUrls request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::XiaoyaStore.Service.Result> Reload(global::XiaoyaStore.Service.ArgVoid request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -145,6 +157,22 @@ namespace XiaoyaStore.Service {
       public virtual grpc::AsyncUnaryCall<global::XiaoyaStore.Service.Result> InitAsync(global::XiaoyaStore.Service.ArgUrls request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_Init, null, options, request);
+      }
+      public virtual global::XiaoyaStore.Service.Result Reload(global::XiaoyaStore.Service.ArgVoid request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return Reload(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::XiaoyaStore.Service.Result Reload(global::XiaoyaStore.Service.ArgVoid request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_Reload, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::XiaoyaStore.Service.Result> ReloadAsync(global::XiaoyaStore.Service.ArgVoid request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return ReloadAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::XiaoyaStore.Service.Result> ReloadAsync(global::XiaoyaStore.Service.ArgVoid request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_Reload, null, options, request);
       }
       public virtual global::XiaoyaStore.Service.Result PushUrls(global::XiaoyaStore.Service.ArgUrls request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
@@ -239,6 +267,7 @@ namespace XiaoyaStore.Service {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_Init, serviceImpl.Init)
+          .AddMethod(__Method_Reload, serviceImpl.Reload)
           .AddMethod(__Method_PushUrls, serviceImpl.PushUrls)
           .AddMethod(__Method_PushBackUrl, serviceImpl.PushBackUrl)
           .AddMethod(__Method_PopUrl, serviceImpl.PopUrl)

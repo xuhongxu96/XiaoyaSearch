@@ -23,6 +23,7 @@ namespace XiaoyaCrawler.UrlFrontier
         {
             mLogger = new RuntimeLogger(Path.Combine(config.LogDirectory, "Crawler.log"));
             mConfig = config;
+            config.UrlFrontierItemStore.Reload();
             config.UrlFrontierItemStore.Init(config.InitUrls);
         }
 

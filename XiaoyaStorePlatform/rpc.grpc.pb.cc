@@ -19,6 +19,7 @@ namespace Service {
 
 static const char* UrlFrontierItemService_method_names[] = {
   "/XiaoyaStore.Service.UrlFrontierItemService/Init",
+  "/XiaoyaStore.Service.UrlFrontierItemService/Reload",
   "/XiaoyaStore.Service.UrlFrontierItemService/PushUrls",
   "/XiaoyaStore.Service.UrlFrontierItemService/PushBackUrl",
   "/XiaoyaStore.Service.UrlFrontierItemService/PopUrl",
@@ -34,11 +35,12 @@ std::unique_ptr< UrlFrontierItemService::Stub> UrlFrontierItemService::NewStub(c
 
 UrlFrontierItemService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel)
   : channel_(channel), rpcmethod_Init_(UrlFrontierItemService_method_names[0], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_PushUrls_(UrlFrontierItemService_method_names[1], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_PushBackUrl_(UrlFrontierItemService_method_names[2], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_PopUrl_(UrlFrontierItemService_method_names[3], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_RemoveUrl_(UrlFrontierItemService_method_names[4], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_GetHostCount_(UrlFrontierItemService_method_names[5], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_Reload_(UrlFrontierItemService_method_names[1], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_PushUrls_(UrlFrontierItemService_method_names[2], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_PushBackUrl_(UrlFrontierItemService_method_names[3], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_PopUrl_(UrlFrontierItemService_method_names[4], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_RemoveUrl_(UrlFrontierItemService_method_names[5], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_GetHostCount_(UrlFrontierItemService_method_names[6], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   {}
 
 ::grpc::Status UrlFrontierItemService::Stub::Init(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrls& request, ::XiaoyaStore::Service::Result* response) {
@@ -51,6 +53,18 @@ UrlFrontierItemService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterfa
 
 ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>* UrlFrontierItemService::Stub::PrepareAsyncInitRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrls& request, ::grpc::CompletionQueue* cq) {
   return ::grpc::internal::ClientAsyncResponseReaderFactory< ::XiaoyaStore::Service::Result>::Create(channel_.get(), cq, rpcmethod_Init_, context, request, false);
+}
+
+::grpc::Status UrlFrontierItemService::Stub::Reload(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgVoid& request, ::XiaoyaStore::Service::Result* response) {
+  return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_Reload_, context, request, response);
+}
+
+::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>* UrlFrontierItemService::Stub::AsyncReloadRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgVoid& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::XiaoyaStore::Service::Result>::Create(channel_.get(), cq, rpcmethod_Reload_, context, request, true);
+}
+
+::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>* UrlFrontierItemService::Stub::PrepareAsyncReloadRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgVoid& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::XiaoyaStore::Service::Result>::Create(channel_.get(), cq, rpcmethod_Reload_, context, request, false);
 }
 
 ::grpc::Status UrlFrontierItemService::Stub::PushUrls(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrls& request, ::XiaoyaStore::Service::Result* response) {
@@ -122,25 +136,30 @@ UrlFrontierItemService::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       UrlFrontierItemService_method_names[1],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
+      new ::grpc::internal::RpcMethodHandler< UrlFrontierItemService::Service, ::XiaoyaStore::Service::ArgVoid, ::XiaoyaStore::Service::Result>(
+          std::mem_fn(&UrlFrontierItemService::Service::Reload), this)));
+  AddMethod(new ::grpc::internal::RpcServiceMethod(
+      UrlFrontierItemService_method_names[2],
+      ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< UrlFrontierItemService::Service, ::XiaoyaStore::Service::ArgUrls, ::XiaoyaStore::Service::Result>(
           std::mem_fn(&UrlFrontierItemService::Service::PushUrls), this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      UrlFrontierItemService_method_names[2],
+      UrlFrontierItemService_method_names[3],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< UrlFrontierItemService::Service, ::XiaoyaStore::Service::ArgPushBackUrl, ::XiaoyaStore::Service::Result>(
           std::mem_fn(&UrlFrontierItemService::Service::PushBackUrl), this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      UrlFrontierItemService_method_names[3],
+      UrlFrontierItemService_method_names[4],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< UrlFrontierItemService::Service, ::XiaoyaStore::Service::ArgVoid, ::XiaoyaStore::Service::ResultWithUrl>(
           std::mem_fn(&UrlFrontierItemService::Service::PopUrl), this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      UrlFrontierItemService_method_names[4],
+      UrlFrontierItemService_method_names[5],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< UrlFrontierItemService::Service, ::XiaoyaStore::Service::ArgUrl, ::XiaoyaStore::Service::Result>(
           std::mem_fn(&UrlFrontierItemService::Service::RemoveUrl), this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      UrlFrontierItemService_method_names[5],
+      UrlFrontierItemService_method_names[6],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< UrlFrontierItemService::Service, ::XiaoyaStore::Service::ArgHost, ::XiaoyaStore::Service::ResultWithCount>(
           std::mem_fn(&UrlFrontierItemService::Service::GetHostCount), this)));
@@ -150,6 +169,13 @@ UrlFrontierItemService::Service::~Service() {
 }
 
 ::grpc::Status UrlFrontierItemService::Service::Init(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgUrls* request, ::XiaoyaStore::Service::Result* response) {
+  (void) context;
+  (void) request;
+  (void) response;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+::grpc::Status UrlFrontierItemService::Service::Reload(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgVoid* request, ::XiaoyaStore::Service::Result* response) {
   (void) context;
   (void) request;
   (void) response;

@@ -41,6 +41,13 @@ class UrlFrontierItemService final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::Result>> PrepareAsyncInit(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrls& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::Result>>(PrepareAsyncInitRaw(context, request, cq));
     }
+    virtual ::grpc::Status Reload(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgVoid& request, ::XiaoyaStore::Service::Result* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::Result>> AsyncReload(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgVoid& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::Result>>(AsyncReloadRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::Result>> PrepareAsyncReload(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgVoid& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::Result>>(PrepareAsyncReloadRaw(context, request, cq));
+    }
     virtual ::grpc::Status PushUrls(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrls& request, ::XiaoyaStore::Service::Result* response) = 0;
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::Result>> AsyncPushUrls(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrls& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::Result>>(AsyncPushUrlsRaw(context, request, cq));
@@ -79,6 +86,8 @@ class UrlFrontierItemService final {
   private:
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::Result>* AsyncInitRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrls& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::Result>* PrepareAsyncInitRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrls& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::Result>* AsyncReloadRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgVoid& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::Result>* PrepareAsyncReloadRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgVoid& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::Result>* AsyncPushUrlsRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrls& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::Result>* PrepareAsyncPushUrlsRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrls& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::XiaoyaStore::Service::Result>* AsyncPushBackUrlRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgPushBackUrl& request, ::grpc::CompletionQueue* cq) = 0;
@@ -99,6 +108,13 @@ class UrlFrontierItemService final {
     }
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>> PrepareAsyncInit(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrls& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>>(PrepareAsyncInitRaw(context, request, cq));
+    }
+    ::grpc::Status Reload(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgVoid& request, ::XiaoyaStore::Service::Result* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>> AsyncReload(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgVoid& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>>(AsyncReloadRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>> PrepareAsyncReload(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgVoid& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>>(PrepareAsyncReloadRaw(context, request, cq));
     }
     ::grpc::Status PushUrls(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrls& request, ::XiaoyaStore::Service::Result* response) override;
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>> AsyncPushUrls(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrls& request, ::grpc::CompletionQueue* cq) {
@@ -140,6 +156,8 @@ class UrlFrontierItemService final {
     std::shared_ptr< ::grpc::ChannelInterface> channel_;
     ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>* AsyncInitRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrls& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>* PrepareAsyncInitRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrls& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>* AsyncReloadRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgVoid& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>* PrepareAsyncReloadRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgVoid& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>* AsyncPushUrlsRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrls& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>* PrepareAsyncPushUrlsRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgUrls& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::Result>* AsyncPushBackUrlRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgPushBackUrl& request, ::grpc::CompletionQueue* cq) override;
@@ -151,6 +169,7 @@ class UrlFrontierItemService final {
     ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::ResultWithCount>* AsyncGetHostCountRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgHost& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::XiaoyaStore::Service::ResultWithCount>* PrepareAsyncGetHostCountRaw(::grpc::ClientContext* context, const ::XiaoyaStore::Service::ArgHost& request, ::grpc::CompletionQueue* cq) override;
     const ::grpc::internal::RpcMethod rpcmethod_Init_;
+    const ::grpc::internal::RpcMethod rpcmethod_Reload_;
     const ::grpc::internal::RpcMethod rpcmethod_PushUrls_;
     const ::grpc::internal::RpcMethod rpcmethod_PushBackUrl_;
     const ::grpc::internal::RpcMethod rpcmethod_PopUrl_;
@@ -164,6 +183,7 @@ class UrlFrontierItemService final {
     Service();
     virtual ~Service();
     virtual ::grpc::Status Init(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgUrls* request, ::XiaoyaStore::Service::Result* response);
+    virtual ::grpc::Status Reload(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgVoid* request, ::XiaoyaStore::Service::Result* response);
     virtual ::grpc::Status PushUrls(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgUrls* request, ::XiaoyaStore::Service::Result* response);
     virtual ::grpc::Status PushBackUrl(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgPushBackUrl* request, ::XiaoyaStore::Service::Result* response);
     virtual ::grpc::Status PopUrl(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgVoid* request, ::XiaoyaStore::Service::ResultWithUrl* response);
@@ -191,12 +211,32 @@ class UrlFrontierItemService final {
     }
   };
   template <class BaseClass>
+  class WithAsyncMethod_Reload : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithAsyncMethod_Reload() {
+      ::grpc::Service::MarkMethodAsync(1);
+    }
+    ~WithAsyncMethod_Reload() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status Reload(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgVoid* request, ::XiaoyaStore::Service::Result* response) final override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestReload(::grpc::ServerContext* context, ::XiaoyaStore::Service::ArgVoid* request, ::grpc::ServerAsyncResponseWriter< ::XiaoyaStore::Service::Result>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(1, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
   class WithAsyncMethod_PushUrls : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithAsyncMethod_PushUrls() {
-      ::grpc::Service::MarkMethodAsync(1);
+      ::grpc::Service::MarkMethodAsync(2);
     }
     ~WithAsyncMethod_PushUrls() override {
       BaseClassMustBeDerivedFromService(this);
@@ -207,7 +247,7 @@ class UrlFrontierItemService final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestPushUrls(::grpc::ServerContext* context, ::XiaoyaStore::Service::ArgUrls* request, ::grpc::ServerAsyncResponseWriter< ::XiaoyaStore::Service::Result>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(1, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(2, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -216,7 +256,7 @@ class UrlFrontierItemService final {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithAsyncMethod_PushBackUrl() {
-      ::grpc::Service::MarkMethodAsync(2);
+      ::grpc::Service::MarkMethodAsync(3);
     }
     ~WithAsyncMethod_PushBackUrl() override {
       BaseClassMustBeDerivedFromService(this);
@@ -227,7 +267,7 @@ class UrlFrontierItemService final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestPushBackUrl(::grpc::ServerContext* context, ::XiaoyaStore::Service::ArgPushBackUrl* request, ::grpc::ServerAsyncResponseWriter< ::XiaoyaStore::Service::Result>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(2, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(3, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -236,7 +276,7 @@ class UrlFrontierItemService final {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithAsyncMethod_PopUrl() {
-      ::grpc::Service::MarkMethodAsync(3);
+      ::grpc::Service::MarkMethodAsync(4);
     }
     ~WithAsyncMethod_PopUrl() override {
       BaseClassMustBeDerivedFromService(this);
@@ -247,7 +287,7 @@ class UrlFrontierItemService final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestPopUrl(::grpc::ServerContext* context, ::XiaoyaStore::Service::ArgVoid* request, ::grpc::ServerAsyncResponseWriter< ::XiaoyaStore::Service::ResultWithUrl>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(3, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(4, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -256,7 +296,7 @@ class UrlFrontierItemService final {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithAsyncMethod_RemoveUrl() {
-      ::grpc::Service::MarkMethodAsync(4);
+      ::grpc::Service::MarkMethodAsync(5);
     }
     ~WithAsyncMethod_RemoveUrl() override {
       BaseClassMustBeDerivedFromService(this);
@@ -267,7 +307,7 @@ class UrlFrontierItemService final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestRemoveUrl(::grpc::ServerContext* context, ::XiaoyaStore::Service::ArgUrl* request, ::grpc::ServerAsyncResponseWriter< ::XiaoyaStore::Service::Result>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(4, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(5, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -276,7 +316,7 @@ class UrlFrontierItemService final {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithAsyncMethod_GetHostCount() {
-      ::grpc::Service::MarkMethodAsync(5);
+      ::grpc::Service::MarkMethodAsync(6);
     }
     ~WithAsyncMethod_GetHostCount() override {
       BaseClassMustBeDerivedFromService(this);
@@ -287,10 +327,10 @@ class UrlFrontierItemService final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestGetHostCount(::grpc::ServerContext* context, ::XiaoyaStore::Service::ArgHost* request, ::grpc::ServerAsyncResponseWriter< ::XiaoyaStore::Service::ResultWithCount>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(5, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(6, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
-  typedef WithAsyncMethod_Init<WithAsyncMethod_PushUrls<WithAsyncMethod_PushBackUrl<WithAsyncMethod_PopUrl<WithAsyncMethod_RemoveUrl<WithAsyncMethod_GetHostCount<Service > > > > > > AsyncService;
+  typedef WithAsyncMethod_Init<WithAsyncMethod_Reload<WithAsyncMethod_PushUrls<WithAsyncMethod_PushBackUrl<WithAsyncMethod_PopUrl<WithAsyncMethod_RemoveUrl<WithAsyncMethod_GetHostCount<Service > > > > > > > AsyncService;
   template <class BaseClass>
   class WithGenericMethod_Init : public BaseClass {
    private:
@@ -309,12 +349,29 @@ class UrlFrontierItemService final {
     }
   };
   template <class BaseClass>
+  class WithGenericMethod_Reload : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithGenericMethod_Reload() {
+      ::grpc::Service::MarkMethodGeneric(1);
+    }
+    ~WithGenericMethod_Reload() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status Reload(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgVoid* request, ::XiaoyaStore::Service::Result* response) final override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
   class WithGenericMethod_PushUrls : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithGenericMethod_PushUrls() {
-      ::grpc::Service::MarkMethodGeneric(1);
+      ::grpc::Service::MarkMethodGeneric(2);
     }
     ~WithGenericMethod_PushUrls() override {
       BaseClassMustBeDerivedFromService(this);
@@ -331,7 +388,7 @@ class UrlFrontierItemService final {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithGenericMethod_PushBackUrl() {
-      ::grpc::Service::MarkMethodGeneric(2);
+      ::grpc::Service::MarkMethodGeneric(3);
     }
     ~WithGenericMethod_PushBackUrl() override {
       BaseClassMustBeDerivedFromService(this);
@@ -348,7 +405,7 @@ class UrlFrontierItemService final {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithGenericMethod_PopUrl() {
-      ::grpc::Service::MarkMethodGeneric(3);
+      ::grpc::Service::MarkMethodGeneric(4);
     }
     ~WithGenericMethod_PopUrl() override {
       BaseClassMustBeDerivedFromService(this);
@@ -365,7 +422,7 @@ class UrlFrontierItemService final {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithGenericMethod_RemoveUrl() {
-      ::grpc::Service::MarkMethodGeneric(4);
+      ::grpc::Service::MarkMethodGeneric(5);
     }
     ~WithGenericMethod_RemoveUrl() override {
       BaseClassMustBeDerivedFromService(this);
@@ -382,7 +439,7 @@ class UrlFrontierItemService final {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithGenericMethod_GetHostCount() {
-      ::grpc::Service::MarkMethodGeneric(5);
+      ::grpc::Service::MarkMethodGeneric(6);
     }
     ~WithGenericMethod_GetHostCount() override {
       BaseClassMustBeDerivedFromService(this);
@@ -414,12 +471,32 @@ class UrlFrontierItemService final {
     virtual ::grpc::Status StreamedInit(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::XiaoyaStore::Service::ArgUrls,::XiaoyaStore::Service::Result>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
+  class WithStreamedUnaryMethod_Reload : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithStreamedUnaryMethod_Reload() {
+      ::grpc::Service::MarkMethodStreamed(1,
+        new ::grpc::internal::StreamedUnaryHandler< ::XiaoyaStore::Service::ArgVoid, ::XiaoyaStore::Service::Result>(std::bind(&WithStreamedUnaryMethod_Reload<BaseClass>::StreamedReload, this, std::placeholders::_1, std::placeholders::_2)));
+    }
+    ~WithStreamedUnaryMethod_Reload() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable regular version of this method
+    ::grpc::Status Reload(::grpc::ServerContext* context, const ::XiaoyaStore::Service::ArgVoid* request, ::XiaoyaStore::Service::Result* response) final override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    // replace default version of method with streamed unary
+    virtual ::grpc::Status StreamedReload(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::XiaoyaStore::Service::ArgVoid,::XiaoyaStore::Service::Result>* server_unary_streamer) = 0;
+  };
+  template <class BaseClass>
   class WithStreamedUnaryMethod_PushUrls : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithStreamedUnaryMethod_PushUrls() {
-      ::grpc::Service::MarkMethodStreamed(1,
+      ::grpc::Service::MarkMethodStreamed(2,
         new ::grpc::internal::StreamedUnaryHandler< ::XiaoyaStore::Service::ArgUrls, ::XiaoyaStore::Service::Result>(std::bind(&WithStreamedUnaryMethod_PushUrls<BaseClass>::StreamedPushUrls, this, std::placeholders::_1, std::placeholders::_2)));
     }
     ~WithStreamedUnaryMethod_PushUrls() override {
@@ -439,7 +516,7 @@ class UrlFrontierItemService final {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithStreamedUnaryMethod_PushBackUrl() {
-      ::grpc::Service::MarkMethodStreamed(2,
+      ::grpc::Service::MarkMethodStreamed(3,
         new ::grpc::internal::StreamedUnaryHandler< ::XiaoyaStore::Service::ArgPushBackUrl, ::XiaoyaStore::Service::Result>(std::bind(&WithStreamedUnaryMethod_PushBackUrl<BaseClass>::StreamedPushBackUrl, this, std::placeholders::_1, std::placeholders::_2)));
     }
     ~WithStreamedUnaryMethod_PushBackUrl() override {
@@ -459,7 +536,7 @@ class UrlFrontierItemService final {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithStreamedUnaryMethod_PopUrl() {
-      ::grpc::Service::MarkMethodStreamed(3,
+      ::grpc::Service::MarkMethodStreamed(4,
         new ::grpc::internal::StreamedUnaryHandler< ::XiaoyaStore::Service::ArgVoid, ::XiaoyaStore::Service::ResultWithUrl>(std::bind(&WithStreamedUnaryMethod_PopUrl<BaseClass>::StreamedPopUrl, this, std::placeholders::_1, std::placeholders::_2)));
     }
     ~WithStreamedUnaryMethod_PopUrl() override {
@@ -479,7 +556,7 @@ class UrlFrontierItemService final {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithStreamedUnaryMethod_RemoveUrl() {
-      ::grpc::Service::MarkMethodStreamed(4,
+      ::grpc::Service::MarkMethodStreamed(5,
         new ::grpc::internal::StreamedUnaryHandler< ::XiaoyaStore::Service::ArgUrl, ::XiaoyaStore::Service::Result>(std::bind(&WithStreamedUnaryMethod_RemoveUrl<BaseClass>::StreamedRemoveUrl, this, std::placeholders::_1, std::placeholders::_2)));
     }
     ~WithStreamedUnaryMethod_RemoveUrl() override {
@@ -499,7 +576,7 @@ class UrlFrontierItemService final {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithStreamedUnaryMethod_GetHostCount() {
-      ::grpc::Service::MarkMethodStreamed(5,
+      ::grpc::Service::MarkMethodStreamed(6,
         new ::grpc::internal::StreamedUnaryHandler< ::XiaoyaStore::Service::ArgHost, ::XiaoyaStore::Service::ResultWithCount>(std::bind(&WithStreamedUnaryMethod_GetHostCount<BaseClass>::StreamedGetHostCount, this, std::placeholders::_1, std::placeholders::_2)));
     }
     ~WithStreamedUnaryMethod_GetHostCount() override {
@@ -513,9 +590,9 @@ class UrlFrontierItemService final {
     // replace default version of method with streamed unary
     virtual ::grpc::Status StreamedGetHostCount(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::XiaoyaStore::Service::ArgHost,::XiaoyaStore::Service::ResultWithCount>* server_unary_streamer) = 0;
   };
-  typedef WithStreamedUnaryMethod_Init<WithStreamedUnaryMethod_PushUrls<WithStreamedUnaryMethod_PushBackUrl<WithStreamedUnaryMethod_PopUrl<WithStreamedUnaryMethod_RemoveUrl<WithStreamedUnaryMethod_GetHostCount<Service > > > > > > StreamedUnaryService;
+  typedef WithStreamedUnaryMethod_Init<WithStreamedUnaryMethod_Reload<WithStreamedUnaryMethod_PushUrls<WithStreamedUnaryMethod_PushBackUrl<WithStreamedUnaryMethod_PopUrl<WithStreamedUnaryMethod_RemoveUrl<WithStreamedUnaryMethod_GetHostCount<Service > > > > > > > StreamedUnaryService;
   typedef Service SplitStreamedService;
-  typedef WithStreamedUnaryMethod_Init<WithStreamedUnaryMethod_PushUrls<WithStreamedUnaryMethod_PushBackUrl<WithStreamedUnaryMethod_PopUrl<WithStreamedUnaryMethod_RemoveUrl<WithStreamedUnaryMethod_GetHostCount<Service > > > > > > StreamedService;
+  typedef WithStreamedUnaryMethod_Init<WithStreamedUnaryMethod_Reload<WithStreamedUnaryMethod_PushUrls<WithStreamedUnaryMethod_PushBackUrl<WithStreamedUnaryMethod_PopUrl<WithStreamedUnaryMethod_RemoveUrl<WithStreamedUnaryMethod_GetHostCount<Service > > > > > > > StreamedService;
 };
 
 class UrlFileService final {

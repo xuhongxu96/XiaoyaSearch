@@ -30,14 +30,22 @@ UrlFrontierItemStore::GetColumnFamilyDescriptors()
 	});
 }
 
-void UrlFrontierItemStore::LoadUrlFrontierItems()
+void UrlFrontierItemStore::ReloadUrlFrontierItems()
 {
 	std::unique_ptr<Iterator> iter(mDb->NewIterator(ReadOptions()));
 	for (iter->SeekToFirst(); iter->Valid(); iter->Next())
 	{
 		auto item = SerializeHelper::Deserialize<UrlFrontierItem>(iter->value().ToString());
-
-		AddToQueue(item);
+		if (!HasUrl(item.url())
+			|| IsPopped(item.url()))
+		{
+			AddToQueue(item);
+		}
+	}
+	// Clear PoppedUrlMap
+	{
+		std::shared_lock<std::shared_mutex> lock(mSharedMutexForPop);
+		mPoppedUrlMap.clear();
 	}
 }
 
@@ -70,8 +78,8 @@ void UrlFrontierItemStore::SaveNewItem(UrlFrontierItem &item)
 
 	if (!status.ok())
 	{
-		throw StoreException(status, 
-			"UrlFrontierItemStore::SaveNewItem failed to save new item (" 
+		throw StoreException(status,
+			"UrlFrontierItemStore::SaveNewItem failed to save new item ("
 			+ item.url() + "): " + status.ToString());
 	}
 }
@@ -82,7 +90,7 @@ void XiaoyaStore::Store::UrlFrontierItemStore::UpdateItem(Model::UrlFrontierItem
 	auto status = mDb->Put(WriteOptions(), item.url(), data);
 	if (!status.ok())
 	{
-		throw StoreException(status, 
+		throw StoreException(status,
 			"UrlFrontierItemStore::UpdateItem failed to update item ("
 			+ item.url() + "): " + status.ToString());
 	}
@@ -101,13 +109,6 @@ bool XiaoyaStore::Store::UrlFrontierItemStore::HasUrl(const std::string & url) c
 	std::shared_lock<std::shared_mutex> lock(mSharedMutexForQueue);
 
 	return mUrlSet.count(url) > 0;
-}
-
-bool XiaoyaStore::Store::UrlFrontierItemStore::HasUrlOrIsPopped(const std::string & url) const
-{
-	std::shared_lock<std::shared_mutex> lock(mSharedMutexForPop);
-
-	return mUrlSet.count(url) > 0 || mPoppedUrlMap.count(url) > 0;
 }
 
 bool XiaoyaStore::Store::UrlFrontierItemStore::IsPopped(const std::string & url) const
@@ -142,9 +143,7 @@ void UrlFrontierItemStore::RemoveUrlInternal(const std::string & url)
 
 UrlFrontierItemStore::UrlFrontierItemStore(StoreConfig config, bool isReadOnly)
 	: BaseStore(DbName, GetColumnFamilyDescriptors(), config, isReadOnly)
-{
-	LoadUrlFrontierItems();
-}
+{ }
 
 void UrlFrontierItemStore::Init(const std::vector<std::string>& urls)
 {
@@ -167,7 +166,7 @@ void UrlFrontierItemStore::PushUrls(const std::vector<std::string>& urls)
 {
 	for (auto url : urls)
 	{
-		if (HasUrlOrIsPopped(url))
+		if (HasUrl(url))
 		{
 			// Already exists or is popped, skip
 			continue;
@@ -244,7 +243,7 @@ const bool XiaoyaStore::Store::UrlFrontierItemStore::PopUrl(std::string &url)
 
 	auto item = mUrlQueue.top();
 
-	if (mConfig.EnableExactPlannedTime 
+	if (mConfig.EnableExactPlannedTime
 		&& item.planned_time() > DateTimeHelper::Now())
 	{
 		// Too early now

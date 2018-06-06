@@ -11,7 +11,6 @@ using System.Threading.Tasks;
 using XiaoyaCommon.Helper;
 using XiaoyaCrawler.Config;
 using XiaoyaCrawler.Fetcher;
-using XiaoyaCrawler.Parser;
 using XiaoyaCrawler.SimilarContentManager;
 using XiaoyaCrawler.UrlFilter;
 using XiaoyaCrawler.UrlFrontier;

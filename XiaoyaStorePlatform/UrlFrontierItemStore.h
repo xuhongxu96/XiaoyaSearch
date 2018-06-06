@@ -27,9 +27,6 @@ namespace XiaoyaStore
 			std::unordered_map<std::string, 
 				Model::UrlFrontierItem> mPoppedUrlMap;
 
-			/// Load UrlFrontierItems from database
-			void LoadUrlFrontierItems();
-
 			Model::UrlFrontierItem CreateItem(const std::string &url) const;
 
 			/**
@@ -53,8 +50,6 @@ namespace XiaoyaStore
 
 			/// Is url in mUrlSet
 			bool HasUrl(const std::string &url) const;
-			/// Is url in mUrlSet or is popped (i.e. in mPoppedUrlMap)
-			bool HasUrlOrIsPopped(const std::string &url) const;
 			/// Is url popped (i.e. in mPoppedUrlMap)
 			bool IsPopped(const std::string &url) const;
 			/**
@@ -94,6 +89,8 @@ namespace XiaoyaStore
 			\param	urls	Initial urls
 			*/
 			void Init(const std::vector<std::string> &urls);
+			/// Load UrlFrontierItems from database
+			void ReloadUrlFrontierItems();
 			/**
 			Push new urls into UrlFrontier. Already existed urls will be ignored.
 

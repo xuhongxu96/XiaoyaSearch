@@ -6,7 +6,6 @@ using XiaoyaCrawler;
 using XiaoyaCrawler.UrlFilter;
 using XiaoyaCrawler.UrlFrontier;
 using XiaoyaCrawler.Fetcher;
-using XiaoyaCrawler.Parser;
 using XiaoyaCrawler.SimilarContentManager;
 using System.IO;
 using XiaoyaCommon.ArgumentParser;

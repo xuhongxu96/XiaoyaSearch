@@ -1,10 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
     <Filter Include="Header Files">
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
@@ -16,14 +12,8 @@
     <Filter Include="Header Files\Store">
       <UniqueIdentifier>{6c732a9b-c222-4377-89d7-e21b90482423}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Store">
-      <UniqueIdentifier>{51632d93-f27d-4c5e-964d-b030a6c7a8b4}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\Model">
       <UniqueIdentifier>{2b08e446-9495-4942-9bfa-e5e03a2c0761}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Model">
-      <UniqueIdentifier>{a509a290-6508-46ba-b54e-3782b66671d5}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\Config">
       <UniqueIdentifier>{20d0a0d9-09c2-4bf1-87ce-4092169ab9c8}</UniqueIdentifier>
@@ -37,11 +27,21 @@
     <Filter Include="Header Files\Store\MergeOperator">
       <UniqueIdentifier>{1fd6d0e2-3929-4df0-b53a-1c9e8cb41595}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Service">
+      <UniqueIdentifier>{f63fbfec-fe7c-4f18-ba01-ed9e9ea69fad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Store">
+      <UniqueIdentifier>{51632d93-f27d-4c5e-964d-b030a6c7a8b4}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Source Files\Store\MergeOperator">
       <UniqueIdentifier>{0db7c143-546b-4729-8ea5-97958c769fb7}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Service">
-      <UniqueIdentifier>{f63fbfec-fe7c-4f18-ba01-ed9e9ea69fad}</UniqueIdentifier>
+    <Filter Include="Source Files\Model">
+      <UniqueIdentifier>{a509a290-6508-46ba-b54e-3782b66671d5}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\Service">
       <UniqueIdentifier>{68a3cf97-dde5-46bd-a2ab-56a29d068dcc}</UniqueIdentifier>
