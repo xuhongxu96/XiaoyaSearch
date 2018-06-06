@@ -133,6 +133,9 @@ namespace XiaoyaStore
 			*/
 			uint64_t GetHostCount(const std::string &host);
 
+			std::vector<Model::UrlFrontierItem> PeekTopUrlFrontierItems(unsigned count);
+			std::set<std::pair<uint64_t, std::string>> GetHosts();
+
 			/// Get ColumnFamilyDescriptors
 			static const std::vector<rocksdb::ColumnFamilyDescriptor>
 				GetColumnFamilyDescriptors();

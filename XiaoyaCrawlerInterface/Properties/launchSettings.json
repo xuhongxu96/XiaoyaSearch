@@ -2,7 +2,7 @@
   "profiles": {
     "XiaoyaCrawlerInterface": {
       "commandName": "Project",
-      "commandLineArgs": "-i http://www.bnu.edu.cn/,http://oiegg.com,http://wxy.bnu.edu.cn/xstd/wxyzs/ -f D:\\XiaoyaSearch\\Fetched -LogDir D:\\XiaoyaSearch\\Logs -t 100"
+      "commandLineArgs": "-i https://oiegg.com,http://www.bnu.edu.cn/,http://wxy.bnu.edu.cn/xstd/wxyzs/ -f D:\\XiaoyaSearch\\Fetched -LogDir D:\\XiaoyaSearch\\Logs -t 200"
     }
   }
 }

@@ -293,3 +293,40 @@ uint64_t XiaoyaStore::Store::UrlFrontierItemStore::GetHostCount(const std::strin
 	}
 	return SerializeHelper::DeserializeUInt64(data);
 }
+
+std::vector<UrlFrontierItem> UrlFrontierItemStore::PeekTopUrlFrontierItems(unsigned count)
+{
+	std::unique_lock<std::shared_mutex> lock(mSharedMutexForQueue);
+
+	std::vector<UrlFrontierItem> result;
+	result.reserve(count);
+
+	for (unsigned i = 0; i < count && !mUrlQueue.empty(); ++i)
+	{
+		result.push_back(std::move(mUrlQueue.top()));
+		mUrlQueue.pop();
+	}
+
+	for (auto item : result)
+	{
+		mUrlQueue.push(item);
+	}
+
+	return result;
+}
+
+std::set<std::pair<uint64_t, std::string>> XiaoyaStore::Store::UrlFrontierItemStore::GetHosts()
+{
+	std::set<std::pair<uint64_t, std::string>> result;
+
+	std::unique_ptr<Iterator> iter(mDb->NewIterator(ReadOptions(), mCFHandles[HostCountCF].get()));
+	for (iter->SeekToFirst(); iter->Valid(); iter->Next())
+	{
+		result.insert(std::make_pair(
+			SerializeHelper::DeserializeUInt64(iter->value().ToString()),
+			iter->key().ToString()
+		));
+	}
+
+	return result;
+}

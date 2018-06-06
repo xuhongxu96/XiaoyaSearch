@@ -35,7 +35,6 @@ namespace XiaoyaRetriever.InexactTopKRetriever
                     .OrderByDescending(o => o.Weight)
                     .Select(o => o.UrlFileId)
                     .Take(mTopK);
-
         }
 
         protected IEnumerable<ulong> RetrieveNot(Not notExp)

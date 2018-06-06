@@ -17,6 +17,7 @@ TEST(UrlFrontierItemStoreTest, TestInit)
 	// Init UrlFrontierStore with urls
 	{
 		UrlFrontierItemStore store(config);
+		store.ReloadUrlFrontierItems();
 		store.Init({
 			"http://baidu.com",
 			"http://baidu.com",
@@ -64,6 +65,7 @@ TEST(UrlFrontierItemStoreTest, TestInit)
 	// 2nd Init UrlFrontierStore with urls
 	{
 		UrlFrontierItemStore store(config);
+		store.ReloadUrlFrontierItems();
 		store.Init({
 			"http://baidu.com",
 			"http://baidu.com/b",
@@ -120,6 +122,7 @@ TEST(UrlFrontierItemStoreTest, TestPushUrls)
 	// Push Urls
 	{
 		UrlFrontierItemStore store(config);
+		store.ReloadUrlFrontierItems();
 		store.PushUrls({
 			"http://baidu.com",
 			"http://baidu.com",
@@ -167,6 +170,7 @@ TEST(UrlFrontierItemStoreTest, TestPushUrls)
 	// 2nd PushUrls
 	{
 		UrlFrontierItemStore store(config);
+		store.ReloadUrlFrontierItems();
 		store.PushUrls({
 			"http://baidu.com",
 			"http://baidu.com/b",
@@ -224,6 +228,7 @@ TEST(UrlFrontierItemStoreTest, TestPushBackUrl)
 
 	{
 		UrlFrontierItemStore store(config);
+		store.ReloadUrlFrontierItems();
 		store.PushUrls({
 			"http://baidu.com",
 			"http://xuhongxu.com",
@@ -272,6 +277,7 @@ TEST(UrlFrontierItemStoreTest, TestRemoveUrl)
 
 	{
 		UrlFrontierItemStore store(config);
+		store.ReloadUrlFrontierItems();
 		store.PushUrls({
 			"http://baidu.com",
 			"http://xuhongxu.com",
@@ -309,6 +315,7 @@ TEST(UrlFrontierItemStoreTest, TestGetHostCount)
 	// Init UrlFrontierStore with urls
 	{
 		UrlFrontierItemStore store(config);
+		store.ReloadUrlFrontierItems();
 		store.Init({
 			"http://baidu.com",
 			"http://baidu.com/a",
@@ -331,6 +338,7 @@ TEST(UrlFrontierItemStoreTest, TestPopUrl)
 	// Init UrlFrontierStore with urls
 	{
 		UrlFrontierItemStore store(config);
+		store.ReloadUrlFrontierItems();
 		store.PushUrls({	// PlannedTime,	Priority
 "http://baidu.com",			// t0,			0 + 0 * 10 = 0
 "http://baidu.com/a",		// t0,			1 + 1 * 10 = 11

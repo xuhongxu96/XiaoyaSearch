@@ -52,7 +52,7 @@ namespace XiaoyaCrawler.UrlFrontier
         public void PushUrls(IEnumerable<string> urls)
         {
             mConfig.UrlFrontierItemStore.PushUrls(urls);
-            mLogger.Log(nameof(SimpleUrlFrontier), "Pushed Urls");
+            // mLogger.Log(nameof(SimpleUrlFrontier), "Pushed Urls:\n\n\t" + string.Join("\n\t", urls) + "\n");
         }
 
         /// <summary>
