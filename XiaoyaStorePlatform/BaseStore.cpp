@@ -1,11 +1,13 @@
 #include "stdafx.h"
 #include "BaseStore.h"
+#include "StoreException.h"
 
 namespace fs = boost::filesystem;
 
 using namespace rocksdb;
 using namespace XiaoyaStore::Config;
 using namespace XiaoyaStore::Store;
+using namespace XiaoyaStore::Exception;
 
 const std::string BaseStore::DefaultCFName = "default";
 const size_t BaseStore::DefaultCF = 0;
@@ -20,15 +22,22 @@ void BaseStore::OpenDb(const std::vector<rocksdb::ColumnFamilyDescriptor> &colum
 	// Unmanaged pointers to get values from API call
 	DB* db;
 	std::vector<ColumnFamilyHandle*> handles;
+	
+	Status status;
 
 	// Open RocksDB
 	if (mIsReadOnly)
 	{
-		DB::OpenForReadOnly(options, mDbPath, columnFamilyDescriptors, &handles, &db);
+		status = DB::OpenForReadOnly(options, mDbPath, columnFamilyDescriptors, &handles, &db);
 	}
 	else
 	{
-		auto status = DB::Open(options, mDbPath, columnFamilyDescriptors, &handles, &db);
+		status = DB::Open(options, mDbPath, columnFamilyDescriptors, &handles, &db);
+	}
+
+	if (db == nullptr)
+	{
+		throw StoreException(status, "Failed to open db: " + mDbPath);
 	}
 
 	// Manage pointers using std::unique_ptr
