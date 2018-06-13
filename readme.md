@@ -47,11 +47,11 @@ Xiaoya Search uses: `boost`, `rocksdb`, `protobuf`, `grpc` and `uriparser`.
 	- DomainDepthRanker
 - XiaoyaQueryParser  
   Parse free-text query to SearchExpression for XiaoyaRetriever
-- XiaoyaSearch  
+- XiaoyaSearch   
   Execute searching workflow (Query Parse -> Retrieve -> Rank -> Represent)
-- XiaoyaSearchInterface
+- XiaoyaSearchInterface  
   Commandline interface for XiaoyaSearch
-- XiaoyaSearchWeb
+- XiaoyaSearchWeb  
   Web interface for XiaoyaSearch
 - XiaoyaStore
 	- UrlFrontierItemStore  
@@ -64,10 +64,10 @@ Xiaoya Search uses: `boost`, `rocksdb`, `protobuf`, `grpc` and `uriparser`.
 	  Manage Inverted Indices and their other props
 	- LinkStore   
 	  Manage links of UrlFiles
-- XiaoyaStorePlatform (C++)
+- XiaoyaStorePlatform (C++)  
   Core store procedure implemented in C++ equipped with `rocksdb`   
   Provides RPC interface for XiaoyaStore (C#) using `grpc`
-- XiaoyaStorePlatformInterface (C++)
+- XiaoyaStorePlatformInterface (C++)  
   Commandline interface for XiaoyaStorePlatform
 - XiaoyaLogger  
   A concurrent logger
