@@ -55,7 +55,7 @@ UrlFrontierItem UrlFrontierItemStore::CreateItem(const std::string & url) const
 
 	UrlFrontierItem item;
 	item.set_url(url);
-	item.set_planned_time(now);
+	item.set_planned_time(0);
 	item.set_failed_times(0);
 	item.set_updated_at(now);
 	item.set_created_at(now);

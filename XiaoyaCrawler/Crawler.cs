@@ -90,6 +90,7 @@ namespace XiaoyaCrawler
 
             var urlFile = new UrlFile
             {
+                PublishDate = (ulong)parser.GetPublishDateAsync().GetAwaiter().GetResult().ToBinary(),
                 Charset = fetchedFile.Charset,
                 Content = content,
                 FileHash = fetchedFile.FileHash,

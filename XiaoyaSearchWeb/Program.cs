@@ -21,7 +21,7 @@ namespace XiaoyaSearchWeb
             WebHost.CreateDefaultBuilder(args.Skip(1).ToArray())
                 .UseUrls(new string[]
                 {
-                    "http://*:" + args[0],
+                    "http://*:" + (args.Length > 0 ? args[0] : "8080"),
                 })
                 .UseStartup<Startup>()
                 .Build();

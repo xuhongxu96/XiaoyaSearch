@@ -3,8 +3,8 @@
 
 bool XiaoyaStore::Model::ModelCompare::operator()(const UrlFrontierItem &item1, const UrlFrontierItem &item2) const
 {
-	auto key1 = std::make_tuple(item1.planned_time() / 2000, item1.priority(), item1.planned_time());
-	auto key2 = std::make_tuple(item2.planned_time() / 2000, item2.priority(), item2.planned_time());
+	auto key1 = std::make_tuple(item1.planned_time() / 60000, item1.priority(), item1.planned_time());
+	auto key2 = std::make_tuple(item2.planned_time() / 60000, item2.priority(), item2.planned_time());
 	return key1 > key2;
 }
 

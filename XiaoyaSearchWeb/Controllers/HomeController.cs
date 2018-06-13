@@ -51,7 +51,7 @@ namespace XiaoyaSearchWeb.Controllers
                     {
                         var orderPos = result.WordPositions.OrderBy(o => o.Position);
                         var minWordPos = orderPos.First();
-                        var minPos = (int) Math.Max(minWordPos.Position - 50, 0);
+                        var minPos = Math.Max((int) minWordPos.Position - 50, 0);
                         var maxPos = orderPos.Last();
 
                         var content = urlFile.TextContent;
