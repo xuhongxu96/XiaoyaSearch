@@ -32,11 +32,11 @@ Just run `vcpkg install boost rocksdb protobuf grpc uriparser`.
 
 1. Run `XiaoyaStorePlatform (.exe)` first, it'll create database files in the same directory.  
    It's written in C++, so you can just double click it to run.
-2. Run `XiaoyaCrawlerInterface (.dll)` to crawl and index webpages (Set parameters as you need)
+2. Run `XiaoyaCrawlerInterface (.dll)` to crawl and index webpages (Set parameters as you need)  
    It's .NET program, so you should execute it using dotnet command or directly in Visual Studio.
-3. Run `XiaoyaSearchInterface (.dll)` to search webpages (Set parameters as you need)
+3. Run `XiaoyaSearchInterface (.dll)` to search webpages (Set parameters as you need)  
    It's .NET program, so you should execute it using dotnet command or directly in Visual Studio.
-4. Run `XiaoyaSearchWeb (.dll)` to host web interface of XiaoyaSearch (Set parameters as you need)
+4. Run `XiaoyaSearchWeb (.dll)` to host web interface of XiaoyaSearch (Set parameters as you need)  
    It's ASP.NET program, so you should execute it using dotnet command or directly in Visual Studio.
 
 ## Structure
