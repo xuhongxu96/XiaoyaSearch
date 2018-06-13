@@ -12,7 +12,7 @@ My initial goal is to deploy this search engine in Beijing Normal University.
 
 ## Dependencies
 
-Xiaoya Search uses: `boost`, `rocksdb`, `protobuf` and `uriparser`.
+Xiaoya Search uses: `boost`, `rocksdb`, `protobuf`, `grpc` and `uriparser`.
 
 ## Structure
 
@@ -34,8 +34,9 @@ Xiaoya Search uses: `boost`, `rocksdb`, `protobuf` and `uriparser`.
 		- PdfFileParser
 - XiaoyaNLP
   NLP library
-	- TextSegmentation
+	- Text Segmentation
 	- Encoding Detector
+	- Word Stemmer
 - XiaoyaRetriever
 	- BooleanRetriever
 	- InexactTopKRetriever
@@ -46,17 +47,28 @@ Xiaoya Search uses: `boost`, `rocksdb`, `protobuf` and `uriparser`.
 	- DomainDepthRanker
 - XiaoyaQueryParser  
   Parse free-text query to SearchExpression for XiaoyaRetriever
+- XiaoyaSearch  
+  Execute searching workflow (Query Parse -> Retrieve -> Rank -> Represent)
+- XiaoyaSearchInterface
+  Commandline interface for XiaoyaSearch
+- XiaoyaSearchWeb
+  Web interface for XiaoyaSearch
 - XiaoyaStore
 	- UrlFrontierItemStore  
 	  Manage urls in UrlFrontier
 	- UrlFileStore  
 	  Manage fetched web content
-	- PostingListStore
+	- PostingListStore   
 	  Manage postings of words
 	- InvertedIndexStore  
 	  Manage Inverted Indices and their other props
-	- LinkStore  
+	- LinkStore   
 	  Manage links of UrlFiles
+- XiaoyaStorePlatform (C++)
+  Core store procedure implemented in C++ equipped with `rocksdb`   
+  Provides RPC interface for XiaoyaStore (C#) using `grpc`
+- XiaoyaStorePlatformInterface (C++)
+  Commandline interface for XiaoyaStorePlatform
 - XiaoyaLogger  
   A concurrent logger
 

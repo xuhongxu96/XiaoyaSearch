@@ -15,18 +15,17 @@
      18 XiaoyaCrawler/Fetcher/IFetcher.cs
     241 XiaoyaCrawler/Fetcher/SimpleFetcher.cs
      19 XiaoyaCrawler/ICrawler.cs
-     18 XiaoyaCrawler/SimilarContentManager/ISimilarContentManager.cs
-     61 XiaoyaCrawler/SimilarContentManager/SimpleSimilarContentManager.cs
+     17 XiaoyaCrawler/SimilarContentManager/ISimilarContentManager.cs
+     60 XiaoyaCrawler/SimilarContentManager/SimpleSimilarContentManager.cs
      38 XiaoyaCrawler/UrlFilter/DomainUrlFilter.cs
      22 XiaoyaCrawler/UrlFilter/IUrlFilter.cs
      76 XiaoyaCrawler/UrlFilter/UrlNormalizer.cs
      12 XiaoyaCrawler/UrlFrontier/IUrlFrontier.cs
-     73 XiaoyaCrawler/UrlFrontier/SimpleUrlFrontier.cs
+     74 XiaoyaCrawler/UrlFrontier/SimpleUrlFrontier.cs
      34 XiaoyaCrawlerInterface/CrawlerArguments.cs
-     60 XiaoyaCrawlerInterface/Program.cs
-     94 XiaoyaCrawlerUnitTest/CrawlerUnitTest.cs
+     59 XiaoyaCrawlerInterface/Program.cs
+     92 XiaoyaCrawlerUnitTest/CrawlerUnitTest.cs
      83 XiaoyaCrawlerUnitTest/FetcherUnitTest.cs
-    103 XiaoyaCrawlerUnitTest/ParserUnitTest.cs
      54 XiaoyaCrawlerUnitTest/UrlFilterUnitTest.cs
      13 XiaoyaFileParser/Config/FileParserConfig.cs
      21 XiaoyaFileParser/IFileParser.cs
@@ -143,7 +142,7 @@
      21 XiaoyaRetriever/Expression/SearchExpression.cs
      52 XiaoyaRetriever/Expression/Word.cs
       9 XiaoyaRetriever/IRetriever.cs
-    185 XiaoyaRetriever/InexactTopKRetriever/InexactTopKRetriever.cs
+    184 XiaoyaRetriever/InexactTopKRetriever/InexactTopKRetriever.cs
      23 XiaoyaSearch/Config/SearchEngineConfig.cs
     130 XiaoyaSearch/SearchEngine.cs
      16 XiaoyaSearch/SearchResult.cs
@@ -159,19 +158,19 @@
      65 XiaoyaStore/Cache/ComparableLRUCache.cs
     163 XiaoyaStore/Cache/LRUCache.cs
    2580 XiaoyaStore/Models.cs
-   3511 XiaoyaStore/Rpc.cs
-    927 XiaoyaStore/RpcGrpc.cs
+   3512 XiaoyaStore/Rpc.cs
+    956 XiaoyaStore/RpcGrpc.cs
      12 XiaoyaStore/Store/IInvertedIndexStore.cs
      12 XiaoyaStore/Store/ILinkStore.cs
      12 XiaoyaStore/Store/IPostingListStore.cs
      15 XiaoyaStore/Store/IUrlFileStore.cs
-     14 XiaoyaStore/Store/IUrlFrontierItemStore.cs
+     15 XiaoyaStore/Store/IUrlFrontierItemStore.cs
      71 XiaoyaStore/Store/InvertedIndexStore.cs
      70 XiaoyaStore/Store/LinkStore.cs
      70 XiaoyaStore/Store/PostingListStore.cs
     123 XiaoyaStore/Store/UrlFileStore.cs
-    101 XiaoyaStore/Store/UrlFrontierItemStore.cs
-     70 XiaoyaStorePlatform/BaseStore.cpp
+    106 XiaoyaStore/Store/UrlFrontierItemStore.cs
+     79 XiaoyaStorePlatform/BaseStore.cpp
      56 XiaoyaStorePlatform/BaseStore.h
     114 XiaoyaStorePlatform/CounterBaseStore.cpp
     102 XiaoyaStorePlatform/CounterBaseStore.h
@@ -204,31 +203,29 @@
      24 XiaoyaStorePlatform/UrlFileServiceImpl.h
     241 XiaoyaStorePlatform/UrlFileStore.cpp
     105 XiaoyaStorePlatform/UrlFileStore.h
-     69 XiaoyaStorePlatform/UrlFrontierItemServiceImpl.cpp
-     23 XiaoyaStorePlatform/UrlFrontierItemServiceImpl.h
-    296 XiaoyaStorePlatform/UrlFrontierItemStore.cpp
+     78 XiaoyaStorePlatform/UrlFrontierItemServiceImpl.cpp
+     24 XiaoyaStorePlatform/UrlFrontierItemServiceImpl.h
+    332 XiaoyaStorePlatform/UrlFrontierItemStore.cpp
     143 XiaoyaStorePlatform/UrlFrontierItemStore.h
      52 XiaoyaStorePlatform/UrlHelper.h
      10 XiaoyaStorePlatform/XiaoyaStorePlatform.cpp
    3117 XiaoyaStorePlatform/models.pb.h
-    114 XiaoyaStorePlatform/models.proto
-   1800 XiaoyaStorePlatform/rpc.grpc.pb.h
+   1877 XiaoyaStorePlatform/rpc.grpc.pb.h
    3955 XiaoyaStorePlatform/rpc.pb.h
-    173 XiaoyaStorePlatform/rpc.proto
       8 XiaoyaStorePlatform/stdafx.cpp
      56 XiaoyaStorePlatform/stdafx.h
       8 XiaoyaStorePlatform/targetver.h
-     74 XiaoyaStorePlatformServer/XiaoyaStorePlatformServer.cpp
+    116 XiaoyaStorePlatformServer/XiaoyaStorePlatformServer.cpp
       8 XiaoyaStorePlatformServer/stdafx.cpp
-     35 XiaoyaStorePlatformServer/stdafx.h
+     37 XiaoyaStorePlatformServer/stdafx.h
       8 XiaoyaStorePlatformServer/targetver.h
       3 XiaoyaStorePlatformUnitTest/DbTestHelper.cpp
     118 XiaoyaStorePlatformUnitTest/DbTestHelper.h
     151 XiaoyaStorePlatformUnitTest/InvertedIndexStoreTest.cpp
     136 XiaoyaStorePlatformUnitTest/LinkStoreTest.cpp
     275 XiaoyaStorePlatformUnitTest/UrlFileStoreTest.cpp
-    385 XiaoyaStorePlatformUnitTest/UrlFrontierItemStoreTest.cpp
+    393 XiaoyaStorePlatformUnitTest/UrlFrontierItemStoreTest.cpp
       6 XiaoyaStorePlatformUnitTest/pch.cpp
      33 XiaoyaStorePlatformUnitTest/pch.h
      76 XiaoyaStoreUnitTest/LRUCacheUnitTest.cs
-  36227 total
+  36052 total
